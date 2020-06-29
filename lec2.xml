@@ -1,0 +1,536 @@
+<?xml version="1.0"?>
+<document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
+  <course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030">
+    <keywords slide="all" environ="course" chapter="" course="Math 1030">
+      <keyword chapter="" slide="all">Higher Dimensions</keyword>
+      <keyword chapter="" slide="all">Singular Case</keyword>
+    </keywords>
+    <title environment="title" chapter_type="" wbtag="course" scope="course" course="Math 1030" chapter="" section="" subsection="" subsubsection="" serial="" slide="">Math 1030</title>
+    <slides environment="" chapter_type="">
+      <slide environment="" chapter_type="" canon_num="1" scope="course" course="Math 1030" title="Math 1030" id="s1" slide="1" chapter="" section="" subsection="" subsubsection="" chapter_title="" section_title="">
+        <title environment="title" chapter_type="" wbtag="course" scope="course" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="1">Math 1030</title>
+        <keywords slide="1" environ="slide" chapter="" course="Math 1030"/>
+        <setchapter course="Math 1030" chapter="" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="setchapter" argument="2"/>
+      </slide>
+    </slides>
+    <chapter environment="" chapter_type="Chapter" type="Chapter" wbtag="chapter" num="2" title="Geometric interpretation of linear equations and vector spaces" course="Math 1030" serial="2">
+      <keywords slide="all" environ="chapter" chapter="2" course="Math 1030">
+        <keyword chapter="2" slide="all">Higher Dimensions</keyword>
+        <keyword chapter="2" slide="all">Singular Case</keyword>
+      </keywords>
+      <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="Math 1030" chapter="2" section="" subsection="" subsubsection="" serial="2" slide="">Geometric interpretation of linear equations and vector spaces</title>
+      <slides environment="" chapter_type="">
+        <slide environment="" chapter_type="Chapter" canon_num="2" scope="chapter" id="s2" slide="2" course="Math 1030" chapter="2" section="" subsection="" subsubsection="" chapter_title="Geometric interpretation of linear equations and vector spaces" section_title="">
+          <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="2">Geometric interpretation of linear equations and vector spaces</title>
+          <keywords slide="2" environ="slide" chapter="2" course="Math 1030"/>
+          <paragraphs course="Math 1030" chapter="2" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> $
+\newcommand{\R}{\mathbf{R}}
+\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\ol}{\overline}
+\newcommand{\mat}[4]{\begin{bmatrix} {#1} &amp; {#2} \\ {#3} &amp; {#4}\end{bmatrix}}
+\newcommand{\vvec}[2]{\begin{bmatrix}{#1} \\ {#2} \end{bmatrix}}
+\newcommand{\hvec}[2]{\begin{bmatrix}{#1} &amp; {#2} \end{bmatrix}}
+\newcommand{\e}{\varepsilon}
+$ </paragraphs>
+        </slide>
+      </slides>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Intersections between Lines and Planes" course="Math 1030" chapter="2" num="1" serial="2.1">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="2" section="1" subsection="" subsubsection="" serial="2.1" slide="">
+          <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="" subsubsection="" environment="title"/>
+          <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Intersections between Lines and Planes</paragraphs>
+          <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="" subsubsection="" environment="title"/>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="3" scope="section" id="s3" slide="3" course="Math 1030" chapter="2" section="1" subsection="" subsubsection="" chapter_title="Geometric interpretation of linear equations and vector spaces" section_title="Intersections between Lines and Planes">
+            <keywords slide="3" environ="slide" chapter="2" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="2" section="1" subsection="" subsubsection="" serial="" slide="3">
+              <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="" subsubsection="" environment="title"/>
+              <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Intersections between Lines and Planes</paragraphs>
+              <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="" subsubsection="" environment="title"/>
+            </title>
+          </slide>
+        </slides>
+        <subsection environment="" chapter_type="" type="Section" wbtag="subsection" title="Two Dimensions" course="Math 1030" chapter="2" section="1" num="1" serial="2.1.1">
+          <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="Math 1030" chapter="2" section="1" subsection="" subsubsection="" serial="2.1.1" slide="">
+            <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="" subsubsection="" environment="title"/>
+            <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Two Dimensions</paragraphs>
+            <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="" subsubsection="" environment="title"/>
+          </title>
+          <slides environment="" chapter_type="">
+            <slide environment="" chapter_type="Chapter" canon_num="4" scope="subsection" id="s4" slide="4" course="Math 1030" chapter="2" section="1" subsection="1" subsubsection="" chapter_title="Geometric interpretation of linear equations and vector spaces" section_title="Intersections between Lines and Planes">
+              <keywords slide="4" environ="slide" chapter="2" course="Math 1030"/>
+              <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="Math 1030" chapter="2" section="1" subsection="1" subsubsection="" serial="" slide="4">
+                <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="1" subsubsection="" environment="title"/>
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="1" subsubsection="" environment="title" wbtag="paragraphs">Two Dimensions</paragraphs>
+                <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="1" subsubsection="" environment="title"/>
+              </title>
+              <statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="1" md5="ca98f8b1720f6874b0a1620d15c7f0ec" course="Math 1030" chapter="2" slide="4" item="2.1">
+                <label course="Math 1030" chapter="2" chapter_type="" section="1" subsection="1" subsubsection="" environment="statement" wbtag="label" name="ex:1" type="Example"/>
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs"> Solve the equations:
+\[
+\begin{cases}
+2x-3y=-5,\\ x+y=5.
+\end{cases}
+\] </paragraphs>
+                <newcol course="Math 1030" chapter="2" chapter_type="" section="1" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> There are two variables and we can draw these equations in a (2-dimensional) plane.
+Each (linear) equation represented by a straight line.
+For the line that corresponds to $2x-3y=-5$, it passes through the point $(0,5/3)$ (take $x=0$ and one gets $y=5/3$) and another the point $(-5/2,0)$. Hence it is determined.
+Similarly, the second straight line is the one passes through the points $(0,5)$ and $(5.0)$. </paragraphs>
+                  <figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="1" md5="a1262a1d468ea44ca57c3d81868576c4" course="Math 1030" chapter="2" slide="4" item="2.1">
+                    <iframe xmlns="http://www.w3.org/1999/xhtml" src="https://www.desmos.com/calculator/ivgmstarrz?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder="0" environment="figure"/>
+                    <caption environment="figure" chapter_type="Chapter" course="Math 1030" chapter="2" section="1" subsection="1" subsubsection="" slide="4" item="1">Intersection between lines</caption>
+                  </figure>
+                  <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> The solution of the two equations corresponds to the unique intersection $(2,3)$
+between the two straight lines.</paragraphs>
+                  <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="1" subsubsection="" environment="newcol"/>
+                </newcol>
+              </statement>
+            </slide>
+            <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="5" id="s5" slide="5" course="Math 1030" chapter="2" section="1" subsection="1" subsubsection="" chapter_title="Geometric interpretation of linear equations and vector spaces" section_title="Intersections between Lines and Planes">
+              <keywords slide="5" environ="slide" chapter="2" course="Math 1030"/>
+              <statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="2" md5="ba24213847bf076ddc300a968972fa75" course="Math 1030" chapter="2" slide="5" item="2.2">
+                <label course="Math 1030" chapter="2" chapter_type="" section="1" subsection="1" subsubsection="" environment="statement" wbtag="label" name="ex:2" type="Example"/>
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs"> The following system of equations has no solution.
+\[
+\begin{cases}
+2x-3y=-5,\\ 2x-3y=0.
+\end{cases}
+\] </paragraphs>
+                <newcol course="Math 1030" chapter="2" chapter_type="" section="1" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
+                  <figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="2" md5="0a7ee084f7cc7c34764bd258a058f8d0" course="Math 1030" chapter="2" slide="5" item="2.2">
+                    <iframe xmlns="http://www.w3.org/1999/xhtml" src="https://www.desmos.com/calculator/fuhvpsxixz?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder="0" environment="figure"/>
+                    <caption environment="figure" chapter_type="Chapter" course="Math 1030" chapter="2" section="1" subsection="1" subsubsection="" slide="5" item="2">Parallel lines</caption>
+                  </figure>
+                  <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> This is because the corresponding lines are parallel to each other
+and there is no intersections. </paragraphs>
+                </newcol>
+              </statement>
+              <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="1" subsubsection="" environment=""/>
+              <statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="3" md5="1ed679ca9df46ec3595b84557e40e727" course="Math 1030" chapter="2" slide="5" item="2.3">
+                <label course="Math 1030" chapter="2" chapter_type="" section="1" subsection="1" subsubsection="" environment="statement" wbtag="label" name="ex:3" type="Example"/>
+                <newcol course="Math 1030" chapter="2" chapter_type="" section="1" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> How about the system of equations:
+\[\begin{cases}
+2x-3y=-5,\\2x-3y=-5.
+\end{cases}\]
+Here, there are infinite solutions:
+For any real number $t$,
+\[
+(x,y)=(t,\frac{2t+5}{3})
+\]
+is a solution.
+The two lines coincide and their intersection is just the whole line. </paragraphs>
+                </newcol>
+              </statement>
+              <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="1" subsubsection="" environment=""/>
+            </slide>
+          </slides>
+        </subsection>
+        <subsection environment="" chapter_type="" type="Section" wbtag="subsection" title="Three Dimensions" course="Math 1030" chapter="2" section="1" num="2" serial="2.1.2">
+          <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="Math 1030" chapter="2" section="1" subsection="" subsubsection="" serial="2.1.2" slide="">
+            <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="" subsubsection="" environment="title"/>
+            <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Three Dimensions</paragraphs>
+            <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="" subsubsection="" environment="title"/>
+          </title>
+          <slides environment="" chapter_type="">
+            <slide environment="" chapter_type="Chapter" canon_num="6" scope="subsection" id="s6" slide="6" course="Math 1030" chapter="2" section="1" subsection="2" subsubsection="" chapter_title="Geometric interpretation of linear equations and vector spaces" section_title="Intersections between Lines and Planes">
+              <keywords slide="6" environ="slide" chapter="2" course="Math 1030"/>
+              <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="Math 1030" chapter="2" section="1" subsection="2" subsubsection="" serial="" slide="6">
+                <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="title"/>
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="title" wbtag="paragraphs">Three Dimensions</paragraphs>
+                <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="title"/>
+              </title>
+              <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment=""/>
+              <statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="4" md5="482581b1878caffa54800cac24dd42c6" course="Math 1030" chapter="2" slide="6" item="2.4">
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="statement" wbtag="paragraphs"> Solve the equations:
+\[
+\begin{cases}
+2x+3y+3z=3,\\ 2x-y+0z=0.
+\end{cases}
+\] </paragraphs>
+                <newcol course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="newcol" wbtag="newcol">
+                  <figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="3" md5="4ac8373edb353377e44ccedba1839ec5" course="Math 1030" chapter="2" slide="6" item="2.3">
+                    <label course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="figure" wbtag="label" name="fig:3d" type="Figure"/>
+                    <caption environment="figure" chapter_type="Chapter" course="Math 1030" chapter="2" section="1" subsection="2" subsubsection="" slide="6" item="3">Intersection of planes</caption>
+                    <iframe xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:700px" frameborder="0" src="https://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&amp;zscale=0&amp;domain=2&amp;numsamples=20&amp;autozscale=1&amp;showaxes=1&amp;centeredaxes=1&amp;xmin=-2&amp;xmax=2&amp;ymin=-2&amp;ymax=2&amp;zmin=-10&amp;zmax=10&amp;xticks=5&amp;yticks=9&amp;zticks=10&amp;equations[0]='1%20-%20(2%2F3)x%20-%20y'&amp;colors[0]='6cb8d9'&amp;alphas[0]=0.9&amp;equations[1]='s%2C%202s%2C%20t'&amp;sdomain[1]='-1,1'&amp;tdomain[1]='-2,3'&amp;colors[1]='d998b7'&amp;alphas[1]=0.9&amp;rotationMatrix=[-0.35,-0.08,0.93,0,0.93,-0.18,0.33,0,0.14,0.99,0.14,0,0,0,0,1]&amp;dimensions=[600,600]" environment="figure"/>
+                  </figure>
+                  <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="newcol"/>
+                  <collapse course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> There are three variables and we work in 3-dimensional space.
+Each (linear) equation corresponds to a plane.
+For instance, the ones above correspond to the blue and red planes
+in the figure above.</paragraphs>
+                    <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="newcol"/>
+                    <collapse course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> Their intersection is the thick straight line,
+where the points on it can be expressed as
+\[
+\left\{\left(\frac{3-3t}{8},\frac{3-3t}{4},t\right)\mid t\in\mathbb{R}\right\}.
+\] </paragraphs>
+                    </collapse>
+                  </collapse>
+                </newcol>
+              </statement>
+              <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment=""/>
+            </slide>
+            <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="7" id="s7" slide="7" course="Math 1030" chapter="2" section="1" subsection="2" subsubsection="" chapter_title="Geometric interpretation of linear equations and vector spaces" section_title="Intersections between Lines and Planes">
+              <keywords slide="7" environ="slide" chapter="2" course="Math 1030"/>
+              <statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="5" md5="7472c6c13069fe8b7df814d93085f310" course="Math 1030" chapter="2" slide="7" item="2.5">
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="statement" wbtag="paragraphs"> The following system of equations has no solutions, since the corresponding planes are parallel.
+\[\begin{cases}
+2x-y+0z=2,\\ 2x-y+0z=0.
+\end{cases}\] </paragraphs>
+                <newcol course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="newcol" wbtag="newcol">
+                  <figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="4" md5="258584217cdde9fbee74fe1580fe2c3b" course="Math 1030" chapter="2" slide="7" item="2.4">
+                    <iframe xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:700px" frameborder="0" src="https://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&amp;zscale=0&amp;domain=1&amp;numsamples=20&amp;autozscale=1&amp;showaxes=1&amp;centeredaxes=1&amp;xmin=-1&amp;xmax=1&amp;ymin=-1&amp;ymax=1&amp;zmin=-10&amp;zmax=10&amp;xticks=5&amp;yticks=9&amp;zticks=10&amp;equations[0]='s%2C%202s%2C%20t'&amp;sdomain[0]='-1,1'&amp;tdomain[0]='-1,1'&amp;colors[0]='d998b7'&amp;alphas[0]=0.9&amp;equations[1]='s%2C%202s%20-%202%2C%20t'&amp;sdomain[1]='-1,1'&amp;tdomain[1]='-1,1'&amp;colors[1]='1dd1d9'&amp;alphas[1]=0.9&amp;rotationMatrix=[-0.76,-0.4,0.52,0,0.66,-0.31,0.7,0,-0.12,0.87,0.49,0,0,0,0,1]&amp;dimensions=[600,600]" environment="figure"/>
+                    <caption environment="figure" chapter_type="Chapter" course="Math 1030" chapter="2" section="1" subsection="2" subsubsection="" slide="7" item="4">Parallel Planes</caption>
+                  </figure>
+                </newcol>
+              </statement>
+            </slide>
+            <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="8" id="s8" slide="8" course="Math 1030" chapter="2" section="1" subsection="2" subsubsection="" chapter_title="Geometric interpretation of linear equations and vector spaces" section_title="Intersections between Lines and Planes">
+              <keywords slide="8" environ="slide" chapter="2" course="Math 1030">
+                <keyword chapter="2" slide="8">Higher Dimensions</keyword>
+                <keyword chapter="2" slide="8">Singular Case</keyword>
+              </keywords>
+              <statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="6" title="Singular Case" md5="5642089d08d2ec1ddd9bdf412f12c59d" course="Math 1030" chapter="2" slide="8" item="2.6">
+                <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="2" section="1" subsection="2" subsubsection="" serial="" slide="8">Singular Case</title>
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that there are three (linear) equations with three variables
+that corresponds to three distinguish planes.
+If they do not share a unique intersection,
+then either they share no intersections or they intersection is a line.
+More precisely, there are five cases: </paragraphs>
+                <col_ol course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="col_ol" wbtag="col_ol">
+                  <col_li course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="col_ol" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="col_ol" wbtag="paragraphs"> All three planes are parallel to each other.
+We shall illustrate this by the following picture. </paragraphs>
+                    <figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="5" md5="57411825e60a4814ec1a2ece2f6d0eb0" course="Math 1030" chapter="2" slide="8" item="2.5">
+                      <caption environment="figure" chapter_type="Chapter" course="Math 1030" chapter="2" section="1" subsection="2" subsubsection="" slide="8" item="5"/>
+                      <center xmlns="http://www.w3.org/1999/xhtml" environment="center">
+                        <script type="text/tikz" environment="center">\begin{tikzpicture}[rotate=0,scale=1,arrow/.style={-&gt;,&gt;=stealth,thick}]\draw[red, thick](0,3)--(1,0)(1,3)--(2,0)(2,3)--(3,0);\end{tikzpicture}
+</script>
+                      </center>
+                    </figure>
+                  </col_li>
+                  <col_li course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="col_ol" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="col_ol" wbtag="paragraphs"> Only two planes are parallel to each other. </paragraphs>
+                    <figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="6" md5="a94311f46435507be48bad96ee36f3e7" course="Math 1030" chapter="2" slide="8" item="2.6">
+                      <caption environment="figure" chapter_type="Chapter" course="Math 1030" chapter="2" section="1" subsection="2" subsubsection="" slide="8" item="6"/>
+                      <center xmlns="http://www.w3.org/1999/xhtml" environment="center">
+                        <script type="text/tikz" environment="center">
+\begin{tikzpicture}[rotate=0,scale=1,arrow/.style={-&gt;,&gt;=stealth,thick}]
+\draw[red, thick](0,3)--(1,0)   (1,3)--(2,0);
+\draw[blue, thick](-1,0)--(3,3);
+\end{tikzpicture}
+</script>
+                      </center>
+                    </figure>
+                  </col_li>
+                  <col_li course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="col_ol" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="col_ol" wbtag="paragraphs"> The intersection of each pair of planes is a line and
+three such lines are parallel to each other. </paragraphs>
+                    <figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="7" md5="a2d67bb1732a5969636180f5df2b6042" course="Math 1030" chapter="2" slide="8" item="2.7">
+                      <caption environment="figure" chapter_type="Chapter" course="Math 1030" chapter="2" section="1" subsection="2" subsubsection="" slide="8" item="7"/>
+                      <center xmlns="http://www.w3.org/1999/xhtml" environment="center">
+                        <script type="text/tikz" environment="center">
+\begin{tikzpicture}[rotate=0,scale=1,arrow/.style={-&gt;,&gt;=stealth,thick}]
+\draw[blue, thick](90+10:2)--(-30-10:2)
+(90-10:2)--(210+10:2)
+(-30+10:2)--(210-10:2);
+\end{tikzpicture}
+</script>
+                      </center>
+                    </figure>
+                  </col_li>
+                  <col_li course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="col_ol" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="col_ol" wbtag="paragraphs"> Their intersection is a line. </paragraphs>
+                    <figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="8" md5="f6a22723c9ecbbe22f1382faaed67e65" course="Math 1030" chapter="2" slide="8" item="2.8">
+                      <caption environment="figure" chapter_type="Chapter" course="Math 1030" chapter="2" section="1" subsection="2" subsubsection="" slide="8" item="8"/>
+                      <center xmlns="http://www.w3.org/1999/xhtml" environment="center">
+                        <script type="text/tikz" environment="center">
+\begin{tikzpicture}[rotate=0,scale=1,arrow/.style={-&gt;,&gt;=stealth,thick}]
+\draw[blue, thick](90+30:2)--(-30-30:2)
+(90-30:2)--(210+30:2)
+(-30+30:2)--(210-30:2);
+\end{tikzpicture}
+</script>
+                      </center>
+                    </figure>
+                  </col_li>
+                  <col_li course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="col_ol" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="col_ol" wbtag="paragraphs"> Their intersection is a point, e.g. the xy-plane, yz-plane and zx-plane intersect at $(0,0,0)$. </paragraphs>
+                    <figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="9" md5="69d32ea9dac5a3fac3c0a5a42bd195c4" course="Math 1030" chapter="2" slide="8" item="2.9">
+                      <caption environment="figure" chapter_type="Chapter" course="Math 1030" chapter="2" section="1" subsection="2" subsubsection="" slide="8" item="9"/>
+                      <center xmlns="http://www.w3.org/1999/xhtml" environment="center">
+                        <script type="text/tikz" environment="center">
+\begin{tikzpicture}[scale=3,arrow/.style={-&gt;,&gt;=stealth,thick}]
+\filldraw[draw=red,fill=red!20]
+(0,0,0)--(0,1.2,0)--(0,1.2,1.2)--(0,0,1.2)-- cycle;
+\filldraw[draw=blue,fill=blue!20]
+(1.7,0,0)--(1.7,1.2,0)--(0,1.2,0)--(0,0,0)-- cycle;
+\filldraw[draw=yellow,fill=yellow!20]
+(1.7,0,0)--(1.7,0,1.2)--(0,0,1.2)--(0,0,0)-- cycle;
+\filldraw[draw=red,fill=red!20]
+(0,0,0)--(0,1.2,0)--(0,1.2,1.2)--(0,0,1.2)-- cycle;
+\draw[thin,-&gt;] (0,0,0) -- (1.7,0,0) node[anchor=north east]{$x$};
+\draw[thin,-&gt;] (0,0,0) -- (0,1.2,0) node[anchor=north west]{$y$};
+\draw[thin,-&gt;] (0,0,0) -- (0,0,1.2) node[anchor=south]{$z$}
+(0,0,0)node[left]{$(0,0,0)$};
+\end{tikzpicture}
+</script>
+                      </center>
+                    </figure>
+                  </col_li>
+                </col_ol>
+              </statement>
+              <substatement environment="substatement" chapter_type="" type="Remark" wbtag="remark" md5="6d6d7bd53a6f314d062fc4fee39a2ecb" course="Math 1030" chapter="2" slide="8">
+                <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="substatement"/>
+                <h5 xmlns="http://www.w3.org/1999/xhtml" environment="substatement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="substatement" wbtag="paragraphs">Higher Dimensions</paragraphs>
+                </h5>
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="substatement" wbtag="paragraphs"> How does this row picture extend into $n$ dimensions? The $n$ equations will contain
+$n$ unknowns. The first equation still determines a plane. It is no longer a two dimensional
+plane in 3-space; somehow it has dimension $n-1$. It must be flat and
+extremely thin within $n$-dimensional space, although it would look solid to us.</paragraphs>
+                <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="substatement"/>
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="substatement" wbtag="paragraphs">If time is the fourth dimension, then the plane t = 0 cuts through four-dimensional
+space and produces the three-dimensional universe we live in (or rather, the universe as
+it was at $t =0$). Another plane is $z=0$, which is also three-dimensional; it is the ordinary
+$x-y$ plane taken over all time. Those three-dimensional planes will intersect! They share
+the ordinary $x-y$ plane at $t = 0$. We are down to two dimensions, and the next plane
+leaves a line. Finally a fourth plane leaves a single point. It is the intersection point of 4
+planes in 4 dimensions, and it solves the 4 underlying equations.</paragraphs>
+                <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="substatement"/>
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment="substatement" wbtag="paragraphs">I will be in trouble if that example from relativity goes any further. The point is that
+linear algebra can operate with any number of equations. The first equation produces an
+$(n-1)$-dimensional plane in $n$ dimensions, The second plane intersects it (we hope) in
+a smaller set of dimension $n-2$. Assuming all goes well, every new plane (every new
+equation) reduces the dimension by one. At the end, when all $n$ planes are accounted
+for, the intersection has dimension zero. It is a point, it lies on all the planes, and its
+coordinates satisfy all $n$ equations. It is the solution! </paragraphs>
+              </substatement>
+              <newline course="Math 1030" chapter="2" chapter_type="" section="1" subsection="2" subsubsection="" environment=""/>
+            </slide>
+          </slides>
+        </subsection>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Column Pictures Vector Point of View" course="Math 1030" chapter="2" num="2" serial="2.2">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="2" section="2" subsection="" subsubsection="" serial="2.2" slide="">
+          <newline course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="title"/>
+          <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Column Pictures: Vector Point of View</paragraphs>
+          <newline course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="title"/>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="9" scope="section" id="s9" slide="9" course="Math 1030" chapter="2" section="2" subsection="" subsubsection="" chapter_title="Geometric interpretation of linear equations and vector spaces" section_title="Column Pictures Vector Point of View">
+            <keywords slide="9" environ="slide" chapter="2" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="2" section="2" subsection="" subsubsection="" serial="" slide="9">
+              <newline course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="title"/>
+              <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Column Pictures: Vector Point of View</paragraphs>
+              <newline course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="title"/>
+            </title>
+            <strong xmlns="http://www.w3.org/1999/xhtml" environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">Skipped. Can be discussed after introducing column vectors.</paragraphs>
+            </strong>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="7" md5="1ffe5129ab59e9d19a1cf43ac1803661" course="Math 1030" chapter="2" slide="9" item="2.7">
+              <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Back to the equations in </paragraphs>
+              <ref environment="statement" chapter_type="" label="ex:1" wbtag="ref" course="Math 1030" chapter="2" slide="9">
+                <title>UNDEFINED</title>
+              </ref>
+              <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">, which can be written
+in a single vector form equation:
+\[
+x\vvec{2}{1}+y\vvec{-3}{1}=\vvec{-5}{5}=b.
+\] </paragraphs>
+              <newcol course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The problem expressed this way is to find the combination of the column vectors on the left side that
+produces the vector $b$ on the right side.
+Note that the vector $b$ is in fact identified with the pint whose coordinates are $-5$ and $5$.
+In this case, we look for the combination of $\vvec{2}{1}$ (red vector)
+and $\vvec{-3}{1}$ (blue vector) to produce $\vvec{-5}{5}$ (black vector),
+cf. Figure  </paragraphs>
+                <ref environment="newcol" chapter_type="" label="fig:vec" wbtag="ref" course="Math 1030" chapter="2" slide="9">
+                  <title>UNDEFINED</title>
+                </ref>
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">.</paragraphs>
+                <newline course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                <figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="10" md5="cb1cd3ce2ad1cea677e52b801f8ae446" course="Math 1030" chapter="2" slide="9" item="2.10">
+                  <label course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="figure" wbtag="label" name="fig:vec" type="Figure"/>
+                  <caption environment="figure" chapter_type="Chapter" course="Math 1030" chapter="2" section="2" subsection="" subsubsection="" slide="9" item="10">Combinations of vectors</caption>
+                  <div xmlns="http://www.w3.org/1999/xhtml" class="image" environment="figure">
+                    <img src="content/math1030/fig_vec_com.png" environment="figure"/>
+                  </div>
+                </figure>
+              </newcol>
+            </statement>
+            <newline course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="Math 1030" chapter="2" section="2" subsection="" subsubsection="" chapter_title="Geometric interpretation of linear equations and vector spaces" section_title="Column Pictures Vector Point of View">
+            <keywords slide="10" environ="slide" chapter="2" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="8" md5="4085dfbf24168b3bee71e4cee4f35557" course="Math 1030" chapter="2" slide="10" item="2.8">
+              <newcol course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> In  </paragraphs>
+                <ref environment="newcol" chapter_type="" label="ex:2" wbtag="ref" course="Math 1030" chapter="2" slide="10">
+                  <title>UNDEFINED</title>
+                </ref>
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and  </paragraphs>
+                <ref environment="newcol" chapter_type="" label="ex:3" wbtag="ref" course="Math 1030" chapter="2" slide="10">
+                  <title>UNDEFINED</title>
+                </ref>
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">,
+the corresponding equations are
+\[
+x\vvec{2}{2}+y\vvec{-3}{-3}=\vvec{-5}{0}.
+\]
+and
+\[
+x\vvec{2}{2}+y\vvec{-3}{-3}=\vvec{-5}{-5},
+\]
+respectively.
+The two vectors colinear.
+When the target vector is not colinear with them, there is no solution ( </paragraphs>
+                <ref environment="newcol" chapter_type="" label="ex:2" wbtag="ref" course="Math 1030" chapter="2" slide="10">
+                  <title>UNDEFINED</title>
+                </ref>
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">)
+and when the target vector is colinear with them,
+there are infinitely many solutions (</paragraphs>
+                <ref environment="newcol" chapter_type="" label="ex:3" wbtag="ref" course="Math 1030" chapter="2" slide="10">
+                  <title>UNDEFINED</title>
+                </ref>
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">). </paragraphs>
+                <figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="11" md5="79cb9b17d3db0fbdde6457fceb5867ca" course="Math 1030" chapter="2" slide="10" item="2.11">
+                  <caption environment="figure" chapter_type="Chapter" course="Math 1030" chapter="2" section="2" subsection="" subsubsection="" slide="10" item="11"/>
+                  <center xmlns="http://www.w3.org/1999/xhtml" environment="center">
+                    <script type="text/tikz" environment="center">
+\begin{tikzpicture}[domain=0:4,scale=.8,arrow/.style={-&gt;,&gt;=stealth,thick}]
+\draw[ultra thick,-&gt;] (-3,-3)to(-5,-5) node[below] {(-5,-5)};
+\draw[very thin,dashed,color=gray] (-5.5,-5.5) grid (3.5,3.5);
+\draw[thin,-&gt;] (-5,0) -- (3,0) node[right] {$x$};
+\draw[thin,-&gt;] (0,-5) -- (0,3) node[above] {$y$};
+\draw[red,very thick,-&gt;] (0,0)to(2,2) node[above] {(2,2)};
+\draw[blue,very thick,-&gt;] (0,0)to(-3,-3) node[right] {(-3,-3)};
+\draw[ultra thick,-&gt;] (0,0)to(-5,0) node[above] {(-5,0)};
+\end{tikzpicture}
+</script>
+                  </center>
+                </figure>
+                <newline course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </statement>
+            <newline course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="9" md5="5d98010234643a3e3394a4ecff939d41" course="Math 1030" chapter="2" slide="10" item="2.9">
+              <newcol course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let us check a 'trivial' 3-dimensional case.
+\[x\begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix}+
+y\begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix}+
+z\begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix}=
+\begin{bmatrix}3 \\ 5 \\ 4\end{bmatrix}.
+\]</paragraphs>
+                <newline course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="12" md5="f8a1093ddf3e203b04d7f6f409d860bc" course="Math 1030" chapter="2" slide="10" item="2.12">
+                    <label course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="figure" wbtag="label" name="fig:cube" type="Figure"/>
+                    <caption environment="figure" chapter_type="Chapter" course="Math 1030" chapter="2" section="2" subsection="" subsubsection="" slide="10" item="12">Vectors in 3 Dimensions</caption>
+                    <center xmlns="http://www.w3.org/1999/xhtml" environment="center">
+                      <img src="content/math1030/fig_cube.png" environment="center"/>
+                    </center>
+                  </figure>
+                  <newline course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> One sees that the solution is $x=3, y=4,z=5$,
+which corresponds to the scaling of the red vectors so that
+the sum of the rescaled vectors is the blue vector in </paragraphs>
+                    <ref environment="newcol" chapter_type="" label="fig:cube" wbtag="ref" course="Math 1030" chapter="2" slide="10">
+                      <title>UNDEFINED</title>
+                    </ref>
+                    <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">.
+More precisely, we have multiplication by scalars
+\[
+%    \text{\bf{}}:
+3\begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix}=\begin{bmatrix}3 \\ 0 \\ 0\end{bmatrix},\quad
+4\begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix}=\begin{bmatrix}0 \\ 4 \\ 0\end{bmatrix},\quad
+5\begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix}=\begin{bmatrix}0 \\ 0 \\ 5\end{bmatrix},
+\]
+and the vector addition
+\[\begin{bmatrix}3 \\ 0 \\ 0\end{bmatrix}+
+\begin{bmatrix}0 \\ 4 \\ 0\end{bmatrix}+
+\begin{bmatrix}0 \\ 0 \\ 5\end{bmatrix}=
+\begin{bmatrix}3 \\ 5 \\ 4\end{bmatrix}.
+\] </paragraphs>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+            <newline course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="10" md5="a2f100dcd329cdbcc0851b23f0c8162e" course="Math 1030" chapter="2" slide="10" item="2.10">
+              <newcol course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let us see a non-trivial case.
+\[x\begin{bmatrix}2 \\ 4 \\ -2\end{bmatrix}+
+y\begin{bmatrix}1 \\ -6 \\ 7\end{bmatrix}+
+z\begin{bmatrix}1 \\ 0 \\ 2\end{bmatrix}=
+\begin{bmatrix}5 \\ -2 \\ 9\end{bmatrix}.
+\]
+The corresponding vectors are pictured as follows:</paragraphs>
+                <newline course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                <figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="13" course="Math 1030" chapter="2" slide="10" item="2.13">
+                  <caption environment="figure" chapter_type="Chapter" course="Math 1030" chapter="2" section="2" subsection="" subsubsection="" slide="10" item="13"/>
+                  <label course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="figure" wbtag="label" name="fig:cube_nontrivial" type="Figure"/>
+                  <center xmlns="http://www.w3.org/1999/xhtml" environment="center">
+                    <image xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="center" data-src="content/math1030/fig_cube_nontrivial.png" wbtag="image"/>
+                    <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="center"/>
+                  </center>
+                </figure>
+              </newcol>
+            </statement>
+            <newline course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="11" md5="501d58136b9466f61f69284dba191012" course="Math 1030" chapter="2" slide="10" item="2.11">
+              <newcol course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose that there are three (linear) equations with three variables.
+In the column picture, what it happens to the singular case.
+So we have three vectors and try to combine them to produce vector $b$.</paragraphs>
+                <newline course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">When the three column vectors are in the same plane $P$
+any combination of them falls into $P$.
+For instance, the vectors in the following equation are in the plane
+$2x+3y+3z=0$.
+\[x\begin{bmatrix}\frac{3}{2} \\ -1 \\ 0\end{bmatrix}+
+y\begin{bmatrix}0 \\ 1 \\ -1\end{bmatrix}+
+z\begin{bmatrix}\frac{3}{2} \\ 0 \\ -1\end{bmatrix}=
+b.\]
+Then there are two cases:</paragraphs>
+                <newline course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                <itemize course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="itemize" wbtag="itemize">
+                  <item course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="itemize" wbtag="item">
+                    <strong xmlns="http://www.w3.org/1999/xhtml" environment="itemize">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="itemize" wbtag="paragraphs">No solution:</paragraphs>
+                    </strong>
+                    <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="itemize" wbtag="paragraphs"> When
+$$b=b_0=\begin{bmatrix}0\\1\\1\end{bmatrix}$$
+is not in $P$, then there is no solution.</paragraphs>
+                    <newline course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="itemize"/>
+                  </item>
+                  <item course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="itemize" wbtag="item">
+                    <strong xmlns="http://www.w3.org/1999/xhtml" environment="itemize">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="itemize" wbtag="paragraphs">Infinite solution:</paragraphs>
+                    </strong>
+                    <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="itemize" wbtag="paragraphs"> When $$b=b_\infty=\begin{bmatrix}3\\ -1\\ -1\end{bmatrix}$$
+is in $P$, it may have infinite solution. </paragraphs>
+                  </item>
+                </itemize>
+              </newcol>
+            </statement>
+            <newline course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
+            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="483c9ddf9f5d87708e9d6e8df3488c88" course="Math 1030" chapter="2" slide="10">
+              <newcol course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="2" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> In general, if the $n$ planes have no point in common,
+or infinitely many points, then the corresponding $n$
+columns lie in the same plane. </paragraphs>
+              </newcol>
+            </substatement>
+          </slide>
+        </slides>
+      </section>
+    </chapter>
+  </course>
+</document>

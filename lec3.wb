@@ -1,0 +1,169 @@
+@course{Math 1030}
+@setchapter{3}
+@chapter{System of linear equations}
+The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at http://linear.ups.edu/download.html Print version can be downloaded at http://linear.ups.edu/download/fcla-3.50-print.pdf
+
+
+<h5 class="notkw">Reference.</h5>
+Beezer, Ver 3.5 Sect SSLE (print version p7 - p14)
+@section{
+Introduction
+}
+@defn
+@title{ (System of Linear Equations).}
+A <b>system of linear equations</b> is a collection of $m$ equations in the variables $x_{1},\,x_{2},\,x_{3},\ldots,x_{n}$ of the form:
+\begin{align*}
+a_{11}x_1+a_{12}x_2+a_{13}x_3+\dots+a_{1n}x_n&=b_1\\
+a_{21}x_1+a_{22}x_2+a_{23}x_3+\dots+a_{2n}x_n&=b_2\\
+a_{31}x_1+a_{32}x_2+a_{33}x_3+\dots+a_{3n}x_n&=b_3\\
+&\vdots\\
+a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\dots+a_{mn}x_n&=b_m
+\end{align*}
+where $a_{ij}$, $b_{i}$ and $x_{j}$, $1\leq i\leq m$, $1\leq j\leq n$, are real numbers.
+@end
+@defn
+$(s_{1},s_{2},\ldots,s_{n})$ is a <b>solution</b> of a system of linear equations in $n$ variables if every equation in the system is valid for $x_1 = s_1, x_2 = s_2, \ldots, x_n = s_n$.
+The <b>solution set</b> of a linear system of equations is the set consisting of all solutions to the system, and nothing more.
+@end
+@slide
+@eg
+The following system of linear equations
+\begin{align*}
+x_1+2x_2+ x_4&= 7\\
+x_1+x_2+x_3-x_4&=3\\
+3x_1+x_2+5x_3-7x_4&=1
+\end{align*}
+can be rewritten as:
+
+@newcol
+\begin{align*}
+1x_1+2x_2 + 0 x_3 + 1x_4&= 7\\
+1x_1+1x_2+1x_3-1x_4&=3\\
+3x_1+1x_2+5x_3-7x_4&=1
+\end{align*}
+So it is a system of linear equations, with $n=4$ variables and $m=3$ equations. Also,
+\begin{align*}
+a_{11}&=1 & a_{12}&=2 & a_{13}&=0 & a_{14}&=1 & b_{1}&=7\\
+a_{21}&=1 & a_{22}&=1 & a_{23}&=1 & a_{24}&=-1 & b_{2}&=3\\
+a_{31}&=3 & a_{32}&=1 & a_{33}&=5 & a_{34}&=-7 & b_{3}&=1
+\end{align*}One solution is given by $x_{1}=-2$, $x_{2}=4$, $x_{3}=2$, $x_{4}=1$. In fact, from the previous lecture this system of equations has infinitely many solutions.
+
+The solution set may be descrbied as follows:
+
+@col
+\[
+\{(-1-2a+3b,\,4+a-2b,\,a,\,b)\,|\,a,b \in \mathbb{R}\}.
+\]
+@endcol
+@end
+@section{
+Possibilities for Solution Sets
+}
+@eg
+@enumerate
+@item
+The following system of linear equations has <b>only one solution</b>.
+\begin{align*}
+2x_1+3x_2&=3\\
+x_1-x_2&=4
+\end{align*}
+The solution set is $(x_{1},x_{2})=(3,-1)$
+@item
+@newcol
+The following system of linear equations has <b>infinite many solutions</b>.
+\begin{align*}
+2x_1+3x_2&=3\\
+4x_1+6x_2&=6
+\end{align*}
+The solution set is $\{(x_{1},x_{2})=(t,\frac{3-2t}{3})\}$, where $t$ is any real number.
+@endcol
+@item
+@newcol
+The following system of linear equations has <b>no solutions</b>.
+\begin{align*}
+2x_1+3x_2&=3\\
+4x_1+6x_2&=10
+\end{align*}
+The solution set is empty.
+@endcol
+@endenumerate
+@end
+@thm
+@newcol
+A system of linear equations can have (1) a unique solution or (2) infinitely many solutions
+or (3) no solutions.
+@endcol
+@end
+@remark
+@newcol
+For example it is impossible for a system of     linear equation to have exactly $2$ solutions.
+@endcol
+@end
+
+
+@section{
+Equivalent Systems and Equation Operations
+}
+@defn
+@title{Equivalent Systems}
+Two systems of linear equations are <b>equivalent</b> if their solution sets are equal.
+@end
+@defn
+@title{Equation Operations}
+@label{EO}
+@newcol
+Given a system of linear equations, the following three operations will transform the system into a different one, and each operation is known as an
+<b>equation operation</b>:
+@ol
+@li
+Swap the locations of two equations in the list of equations.
+@li
+Multiply each term of an equation by a nonzero quantity.
+@li
+Multiply each term of one equation by some quantity, and add these terms to a second equation, on both sides of the equality.
+@endol
+@endcol
+@end
+@eg
+@newcol
+The following two systems equations are equivalent:
+\[\begin{cases}2x_{1}+3x_{2}=3\\
+x_{1}-x_{2}=4\end{cases}\]
+and
+\[\begin{cases}5x_{2}=-5\\
+x_{1}-x_{2}=4\end{cases}\]
+@col
+In fact, the second system of linear equations is obtained by applying operation 3 on equation 1 (namley, replace equation 1 with equation 1 - 2 $\times$ equation 2).
+@endcol
+@end
+@thm
+@title{Equation Operations Preserve Solution Sets}
+@label{EOPSS}
+If we apply one of the three equation operations of Definition          @ref{EO} to a system of linear equations, then the original system and the transformed system are equivalent.
+@end
+@proof
+@title{(Sketch)}
+@newcol
+Let $S$ be a system of linear equations and $S^{\prime}$ be another system of linear equations obtained by applying equation operations on $S$.
+
+
+Let $(x_{1},\ldots,x_{n})$ be a solution for $S$. Because $S^{\prime}$ is obtained by equation operations on $S$,
+
+
+@col
+it is obvious that $(x_{1},\ldots,x_{n})$ is also a solution for $S^{\prime}$. Conversely, suppose that $(x_{1},\ldots,x_{n})$ is a solution for $S^{\prime}$.
+Note that the reverse of the equation operations are also equation operations.
+
+
+@col
+Reversing the equation operators on $S$, we can show that $S$ can be obtained by equation operations on $S^{\prime}$. So $(x_{1},\ldots,x_{n})$ is also a solution for $S$.
+
+
+@col
+Hence $S$ and $S^{\prime}$ have the same solution set.
+
+
+@col
+For details, See Beezer, Theorem EOPSS (Ver 3.5, print version p. 10).
+@endcol
+@end

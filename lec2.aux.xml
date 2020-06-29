@@ -1,0 +1,228 @@
+<root xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" environment="" wbmd5="a4e3e5db93523cca12954c5ba27ca9fe"><course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030"><title environment="title" chapter_type="" wbtag="course" scope="course">Math 1030</title><slides environment="" chapter_type=""><slide environment="" chapter_type="" canon_num="1" scope="course" course="Math 1030" title="Math 1030"><setchapter environment="" chapter_type="" wbtag="setchapter" argument="2"/></slide></slides><chapter environment="" chapter_type="Chapter" type="Chapter" wbtag="chapter" num="2" title="Geometric interpretation of linear equations and vector spaces"><title environment="title" chapter_type="" wbtag="chapter" scope="chapter">Geometric interpretation of linear equations and vector spaces</title><slides environment="" chapter_type=""><slide environment="" chapter_type="" canon_num="2" scope="chapter"><paragraphs environment="" chapter_type="" wbtag="paragraphs"> $
+\newcommand{\R}{\mathbf{R}}
+\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\ol}{\overline}
+\newcommand{\mat}[4]{\begin{bmatrix} {#1} &amp; {#2} \\ {#3} &amp; {#4}\end{bmatrix}}
+\newcommand{\vvec}[2]{\begin{bmatrix}{#1} \\ {#2} \end{bmatrix}}
+\newcommand{\hvec}[2]{\begin{bmatrix}{#1} &amp; {#2} \end{bmatrix}}
+\newcommand{\e}{\varepsilon}
+$ </paragraphs></slide></slides><section environment="" chapter_type="" type="Section" wbtag="section" title="Intersections between Lines and Planes"><slides environment="" chapter_type=""><slide environment="" chapter_type="" canon_num="3" scope="section"><title environment="title" chapter_type="" wbtag="title"><newline environment="title" chapter_type=""/><paragraphs environment="title" chapter_type="" wbtag="paragraphs">Intersections between Lines and Planes</paragraphs><newline environment="title" chapter_type=""/></title></slide></slides><subsection environment="" chapter_type="" type="Section" wbtag="subsection" title="Two Dimensions"><slides environment="" chapter_type=""><slide environment="" chapter_type="" canon_num="4" scope="subsection"><title environment="title" chapter_type="" wbtag="title"><newline environment="title" chapter_type=""/><paragraphs environment="title" chapter_type="" wbtag="paragraphs">Two Dimensions</paragraphs><newline environment="title" chapter_type=""/></title><statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="1" md5="ca98f8b1720f6874b0a1620d15c7f0ec"><label environment="statement" chapter_type="" wbtag="label" name="ex:1" type="Example"/><paragraphs environment="statement" chapter_type="" wbtag="paragraphs"> Solve the equations:
+\[
+\begin{cases}
+2x-3y=-5,\\ x+y=5.
+\end{cases}
+\] </paragraphs><newcol environment="newcol" chapter_type="" wbtag="newcol"><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs"> There are two variables and we can draw these equations in a (2-dimensional) plane.
+Each (linear) equation represented by a straight line.
+For the line that corresponds to $2x-3y=-5$, it passes through the point $(0,5/3)$ (take $x=0$ and one gets $y=5/3$) and another the point $(-5/2,0)$. Hence it is determined.
+Similarly, the second straight line is the one passes through the points $(0,5)$ and $(5.0)$. </paragraphs><figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="1" md5="a1262a1d468ea44ca57c3d81868576c4"><iframe xmlns="http://www.w3.org/1999/xhtml" src="https://www.desmos.com/calculator/ivgmstarrz?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder="0" environment="figure"></iframe><caption environment="figure" chapter_type="" xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">Intersection between lines</caption></figure><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs"> The solution of the two equations corresponds to the unique intersection $(2,3)$
+between the two straight lines.</paragraphs><newline environment="newcol" chapter_type=""/></newcol></statement></slide><slide environment="" chapter_type="" wbtag="slide" canon_num="5"><statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="2" md5="ba24213847bf076ddc300a968972fa75"><label environment="statement" chapter_type="" wbtag="label" name="ex:2" type="Example"/><paragraphs environment="statement" chapter_type="" wbtag="paragraphs"> The following system of equations has no solution.
+\[
+\begin{cases}
+2x-3y=-5,\\ 2x-3y=0.
+\end{cases}
+\] </paragraphs><newcol environment="newcol" chapter_type="" wbtag="newcol"><figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="2" md5="0a7ee084f7cc7c34764bd258a058f8d0"><iframe xmlns="http://www.w3.org/1999/xhtml" src="https://www.desmos.com/calculator/fuhvpsxixz?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder="0" environment="figure"></iframe><caption environment="figure" chapter_type="" xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">Parallel lines</caption></figure><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs"> This is because the corresponding lines are parallel to each other
+and there is no intersections. </paragraphs></newcol></statement><newline environment="" chapter_type=""/><statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="3" md5="1ed679ca9df46ec3595b84557e40e727"><label environment="statement" chapter_type="" wbtag="label" name="ex:3" type="Example"/><newcol environment="newcol" chapter_type="" wbtag="newcol"><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs"> How about the system of equations:
+\[\begin{cases}
+2x-3y=-5,\\2x-3y=-5.
+\end{cases}\]
+Here, there are infinite solutions:
+For any real number $t$,
+\[
+(x,y)=(t,\frac{2t+5}{3})
+\]
+is a solution.
+The two lines coincide and their intersection is just the whole line. </paragraphs></newcol></statement><newline environment="" chapter_type=""/></slide></slides></subsection><subsection environment="" chapter_type="" type="Section" wbtag="subsection" title="Three Dimensions"><slides environment="" chapter_type=""><slide environment="" chapter_type="" canon_num="6" scope="subsection"><title environment="title" chapter_type="" wbtag="title"><newline environment="title" chapter_type=""/><paragraphs environment="title" chapter_type="" wbtag="paragraphs">Three Dimensions</paragraphs><newline environment="title" chapter_type=""/></title><newline environment="" chapter_type=""/><statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="4" md5="482581b1878caffa54800cac24dd42c6"><paragraphs environment="statement" chapter_type="" wbtag="paragraphs"> Solve the equations:
+\[
+\begin{cases}
+2x+3y+3z=3,\\ 2x-y+0z=0.
+\end{cases}
+\] </paragraphs><newcol environment="newcol" chapter_type="" wbtag="newcol"><figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="3" md5="4ac8373edb353377e44ccedba1839ec5"><label environment="figure" chapter_type="" wbtag="label" name="fig:3d" type="Figure"/><caption environment="figure" chapter_type="">Intersection of planes</caption><iframe xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:700px" frameborder="0" src="https://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&amp;zscale=0&amp;domain=2&amp;numsamples=20&amp;autozscale=1&amp;showaxes=1&amp;centeredaxes=1&amp;xmin=-2&amp;xmax=2&amp;ymin=-2&amp;ymax=2&amp;zmin=-10&amp;zmax=10&amp;xticks=5&amp;yticks=9&amp;zticks=10&amp;equations[0]='1%20-%20(2%2F3)x%20-%20y'&amp;colors[0]='6cb8d9'&amp;alphas[0]=0.9&amp;equations[1]='s%2C%202s%2C%20t'&amp;sdomain[1]='-1,1'&amp;tdomain[1]='-2,3'&amp;colors[1]='d998b7'&amp;alphas[1]=0.9&amp;rotationMatrix=[-0.35,-0.08,0.93,0,0.93,-0.18,0.33,0,0.14,0.99,0.14,0,0,0,0,1]&amp;dimensions=[600,600]" environment="figure"></iframe></figure><newline environment="newcol" chapter_type="" xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach"/><collapse environment="newcol" chapter_type="" wbtag="collapse"><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs"> There are three variables and we work in 3-dimensional space.
+Each (linear) equation corresponds to a plane.
+For instance, the ones above correspond to the blue and red planes
+in the figure above.</paragraphs><newline environment="newcol" chapter_type=""/><collapse environment="newcol" chapter_type="" wbtag="collapse"><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs"> Their intersection is the thick straight line,
+where the points on it can be expressed as
+\[
+\left\{\left(\frac{3-3t}{8},\frac{3-3t}{4},t\right)\mid t\in\mathbb{R}\right\}.
+\] </paragraphs></collapse></collapse></newcol></statement><newline environment="" chapter_type=""/></slide><slide environment="" chapter_type="" wbtag="slide" canon_num="7"><statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="5" md5="7472c6c13069fe8b7df814d93085f310"><paragraphs environment="statement" chapter_type="" wbtag="paragraphs"> The following system of equations has no solutions, since the corresponding planes are parallel.
+\[\begin{cases}
+2x-y+0z=2,\\ 2x-y+0z=0.
+\end{cases}\] </paragraphs><newcol environment="newcol" chapter_type="" wbtag="newcol"><figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="4" md5="258584217cdde9fbee74fe1580fe2c3b"><iframe xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:700px" frameborder="0" src="https://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&amp;zscale=0&amp;domain=1&amp;numsamples=20&amp;autozscale=1&amp;showaxes=1&amp;centeredaxes=1&amp;xmin=-1&amp;xmax=1&amp;ymin=-1&amp;ymax=1&amp;zmin=-10&amp;zmax=10&amp;xticks=5&amp;yticks=9&amp;zticks=10&amp;equations[0]='s%2C%202s%2C%20t'&amp;sdomain[0]='-1,1'&amp;tdomain[0]='-1,1'&amp;colors[0]='d998b7'&amp;alphas[0]=0.9&amp;equations[1]='s%2C%202s%20-%202%2C%20t'&amp;sdomain[1]='-1,1'&amp;tdomain[1]='-1,1'&amp;colors[1]='1dd1d9'&amp;alphas[1]=0.9&amp;rotationMatrix=[-0.76,-0.4,0.52,0,0.66,-0.31,0.7,0,-0.12,0.87,0.49,0,0,0,0,1]&amp;dimensions=[600,600]" environment="figure"></iframe><caption environment="figure" chapter_type="" xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">Parallel Planes</caption></figure></newcol></statement></slide><slide environment="" chapter_type="" wbtag="slide" canon_num="8"><statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="6" title="Singular Case" md5="5642089d08d2ec1ddd9bdf412f12c59d"><title environment="title" chapter_type="" wbtag="statement">Singular Case</title><paragraphs environment="statement" chapter_type="" wbtag="paragraphs"> Suppose that there are three (linear) equations with three variables
+that corresponds to three distinguish planes.
+If they do not share a unique intersection,
+then either they share no intersections or they intersection is a line.
+More precisely, there are five cases: </paragraphs><col_ol environment="col_ol" chapter_type="" wbtag="col_ol"><col_li environment="col_ol" chapter_type="" wbtag="col_li"><paragraphs environment="col_ol" chapter_type="" wbtag="paragraphs"> All three planes are parallel to each other.
+We shall illustrate this by the following picture. </paragraphs><figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="5" md5="57411825e60a4814ec1a2ece2f6d0eb0"><caption environment="figure" chapter_type=""/><center xmlns="http://www.w3.org/1999/xhtml" environment="center"><script type="text/tikz" environment="center">\begin{tikzpicture}[rotate=0,scale=1,arrow/.style={-&gt;,&gt;=stealth,thick}]\draw[red, thick](0,3)--(1,0)(1,3)--(2,0)(2,3)--(3,0);\end{tikzpicture}
+</script></center></figure></col_li><col_li environment="col_ol" chapter_type="" wbtag="col_li" xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach"><paragraphs environment="col_ol" chapter_type="" wbtag="paragraphs"> Only two planes are parallel to each other. </paragraphs><figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="6" md5="a94311f46435507be48bad96ee36f3e7"><caption environment="figure" chapter_type=""/><center xmlns="http://www.w3.org/1999/xhtml" environment="center"><script type="text/tikz" environment="center">
+\begin{tikzpicture}[rotate=0,scale=1,arrow/.style={-&gt;,&gt;=stealth,thick}]
+\draw[red, thick](0,3)--(1,0)   (1,3)--(2,0);
+\draw[blue, thick](-1,0)--(3,3);
+\end{tikzpicture}
+</script></center></figure></col_li><col_li environment="col_ol" chapter_type="" wbtag="col_li" xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach"><paragraphs environment="col_ol" chapter_type="" wbtag="paragraphs"> The intersection of each pair of planes is a line and
+three such lines are parallel to each other. </paragraphs><figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="7" md5="a2d67bb1732a5969636180f5df2b6042"><caption environment="figure" chapter_type=""/><center xmlns="http://www.w3.org/1999/xhtml" environment="center"><script type="text/tikz" environment="center">
+\begin{tikzpicture}[rotate=0,scale=1,arrow/.style={-&gt;,&gt;=stealth,thick}]
+\draw[blue, thick](90+10:2)--(-30-10:2)
+(90-10:2)--(210+10:2)
+(-30+10:2)--(210-10:2);
+\end{tikzpicture}
+</script></center></figure></col_li><col_li environment="col_ol" chapter_type="" wbtag="col_li" xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach"><paragraphs environment="col_ol" chapter_type="" wbtag="paragraphs"> Their intersection is a line. </paragraphs><figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="8" md5="f6a22723c9ecbbe22f1382faaed67e65"><caption environment="figure" chapter_type=""/><center xmlns="http://www.w3.org/1999/xhtml" environment="center"><script type="text/tikz" environment="center">
+\begin{tikzpicture}[rotate=0,scale=1,arrow/.style={-&gt;,&gt;=stealth,thick}]
+\draw[blue, thick](90+30:2)--(-30-30:2)
+(90-30:2)--(210+30:2)
+(-30+30:2)--(210-30:2);
+\end{tikzpicture}
+</script></center></figure></col_li><col_li environment="col_ol" chapter_type="" wbtag="col_li" xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach"><paragraphs environment="col_ol" chapter_type="" wbtag="paragraphs"> Their intersection is a point, e.g. the xy-plane, yz-plane and zx-plane intersect at $(0,0,0)$. </paragraphs><figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="9" md5="69d32ea9dac5a3fac3c0a5a42bd195c4"><caption environment="figure" chapter_type=""/><center xmlns="http://www.w3.org/1999/xhtml" environment="center"><script type="text/tikz" environment="center">
+\begin{tikzpicture}[scale=3,arrow/.style={-&gt;,&gt;=stealth,thick}]
+\filldraw[draw=red,fill=red!20]
+(0,0,0)--(0,1.2,0)--(0,1.2,1.2)--(0,0,1.2)-- cycle;
+\filldraw[draw=blue,fill=blue!20]
+(1.7,0,0)--(1.7,1.2,0)--(0,1.2,0)--(0,0,0)-- cycle;
+\filldraw[draw=yellow,fill=yellow!20]
+(1.7,0,0)--(1.7,0,1.2)--(0,0,1.2)--(0,0,0)-- cycle;
+\filldraw[draw=red,fill=red!20]
+(0,0,0)--(0,1.2,0)--(0,1.2,1.2)--(0,0,1.2)-- cycle;
+\draw[thin,-&gt;] (0,0,0) -- (1.7,0,0) node[anchor=north east]{$x$};
+\draw[thin,-&gt;] (0,0,0) -- (0,1.2,0) node[anchor=north west]{$y$};
+\draw[thin,-&gt;] (0,0,0) -- (0,0,1.2) node[anchor=south]{$z$}
+(0,0,0)node[left]{$(0,0,0)$};
+\end{tikzpicture}
+</script></center></figure></col_li></col_ol></statement><substatement environment="substatement" chapter_type="" type="Remark" wbtag="remark" md5="6d6d7bd53a6f314d062fc4fee39a2ecb" xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach"><newline environment="substatement" chapter_type=""/><h5 xmlns="http://www.w3.org/1999/xhtml" environment="substatement"><paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" environment="substatement" chapter_type="" wbtag="paragraphs">Higher Dimensions</paragraphs></h5><paragraphs environment="substatement" chapter_type="" wbtag="paragraphs"> How does this row picture extend into $n$ dimensions? The $n$ equations will contain
+$n$ unknowns. The first equation still determines a plane. It is no longer a two dimensional
+plane in 3-space; somehow it has dimension $n-1$. It must be flat and
+extremely thin within $n$-dimensional space, although it would look solid to us.</paragraphs><newline environment="substatement" chapter_type=""/><paragraphs environment="substatement" chapter_type="" wbtag="paragraphs">If time is the fourth dimension, then the plane t = 0 cuts through four-dimensional
+space and produces the three-dimensional universe we live in (or rather, the universe as
+it was at $t =0$). Another plane is $z=0$, which is also three-dimensional; it is the ordinary
+$x-y$ plane taken over all time. Those three-dimensional planes will intersect! They share
+the ordinary $x-y$ plane at $t = 0$. We are down to two dimensions, and the next plane
+leaves a line. Finally a fourth plane leaves a single point. It is the intersection point of 4
+planes in 4 dimensions, and it solves the 4 underlying equations.</paragraphs><newline environment="substatement" chapter_type=""/><paragraphs environment="substatement" chapter_type="" wbtag="paragraphs">I will be in trouble if that example from relativity goes any further. The point is that
+linear algebra can operate with any number of equations. The first equation produces an
+$(n-1)$-dimensional plane in $n$ dimensions, The second plane intersects it (we hope) in
+a smaller set of dimension $n-2$. Assuming all goes well, every new plane (every new
+equation) reduces the dimension by one. At the end, when all $n$ planes are accounted
+for, the intersection has dimension zero. It is a point, it lies on all the planes, and its
+coordinates satisfy all $n$ equations. It is the solution! </paragraphs></substatement><newline environment="" chapter_type=""/></slide></slides></subsection></section><section environment="" chapter_type="" type="Section" wbtag="section" title="Column Pictures Vector Point of View"><slides environment="" chapter_type=""><slide environment="" chapter_type="" canon_num="9" scope="section"><title environment="title" chapter_type="" wbtag="title"><newline environment="title" chapter_type=""/><paragraphs environment="title" chapter_type="" wbtag="paragraphs">Column Pictures: Vector Point of View</paragraphs><newline environment="title" chapter_type=""/></title><strong xmlns="http://www.w3.org/1999/xhtml" environment=""><paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" environment="" chapter_type="" wbtag="paragraphs">Skipped. Can be discussed after introducing column vectors.</paragraphs></strong><statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="7" md5="1ffe5129ab59e9d19a1cf43ac1803661"><paragraphs environment="statement" chapter_type="" wbtag="paragraphs"> Back to the equations in </paragraphs><ref environment="statement" chapter_type="" label="ex:1" wbtag="ref"/><paragraphs environment="statement" chapter_type="" wbtag="paragraphs">, which can be written
+in a single vector form equation:
+\[
+x\vvec{2}{1}+y\vvec{-3}{1}=\vvec{-5}{5}=b.
+\] </paragraphs><newcol environment="newcol" chapter_type="" wbtag="newcol"><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs"> The problem expressed this way is to find the combination of the column vectors on the left side that
+produces the vector $b$ on the right side.
+Note that the vector $b$ is in fact identified with the pint whose coordinates are $-5$ and $5$.
+In this case, we look for the combination of $\vvec{2}{1}$ (red vector)
+and $\vvec{-3}{1}$ (blue vector) to produce $\vvec{-5}{5}$ (black vector),
+cf. Figure  </paragraphs><ref environment="newcol" chapter_type="" label="fig:vec" wbtag="ref"/><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs">.</paragraphs><newline environment="newcol" chapter_type=""/><figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="10" md5="cb1cd3ce2ad1cea677e52b801f8ae446"><label environment="figure" chapter_type="" wbtag="label" name="fig:vec" type="Figure"/><caption environment="figure" chapter_type="">Combinations of vectors</caption><div xmlns="http://www.w3.org/1999/xhtml" class="image" environment="figure"><img src="content/math1030/fig_vec_com.png" environment="figure"/></div></figure></newcol></statement><newline environment="" chapter_type="" xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach"/></slide><slide environment="" chapter_type="" wbtag="slide" canon_num="10"><statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="8" md5="4085dfbf24168b3bee71e4cee4f35557"><newcol environment="newcol" chapter_type="" wbtag="newcol"><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs"> In  </paragraphs><ref environment="newcol" chapter_type="" label="ex:2" wbtag="ref"/><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs"> and  </paragraphs><ref environment="newcol" chapter_type="" label="ex:3" wbtag="ref"/><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs">,
+the corresponding equations are
+\[
+x\vvec{2}{2}+y\vvec{-3}{-3}=\vvec{-5}{0}.
+\]
+and
+\[
+x\vvec{2}{2}+y\vvec{-3}{-3}=\vvec{-5}{-5},
+\]
+respectively.
+The two vectors colinear.
+When the target vector is not colinear with them, there is no solution ( </paragraphs><ref environment="newcol" chapter_type="" label="ex:2" wbtag="ref"/><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs">)
+and when the target vector is colinear with them,
+there are infinitely many solutions (</paragraphs><ref environment="newcol" chapter_type="" label="ex:3" wbtag="ref"/><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs">). </paragraphs><figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="11" md5="79cb9b17d3db0fbdde6457fceb5867ca"><caption environment="figure" chapter_type=""/><center xmlns="http://www.w3.org/1999/xhtml" environment="center"><script type="text/tikz" environment="center">
+\begin{tikzpicture}[domain=0:4,scale=.8,arrow/.style={-&gt;,&gt;=stealth,thick}]
+\draw[ultra thick,-&gt;] (-3,-3)to(-5,-5) node[below] {(-5,-5)};
+\draw[very thin,dashed,color=gray] (-5.5,-5.5) grid (3.5,3.5);
+\draw[thin,-&gt;] (-5,0) -- (3,0) node[right] {$x$};
+\draw[thin,-&gt;] (0,-5) -- (0,3) node[above] {$y$};
+\draw[red,very thick,-&gt;] (0,0)to(2,2) node[above] {(2,2)};
+\draw[blue,very thick,-&gt;] (0,0)to(-3,-3) node[right] {(-3,-3)};
+\draw[ultra thick,-&gt;] (0,0)to(-5,0) node[above] {(-5,0)};
+\end{tikzpicture}
+</script></center></figure><newline environment="newcol" chapter_type="" xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach"/></newcol></statement><newline environment="" chapter_type=""/><statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="9" md5="5d98010234643a3e3394a4ecff939d41"><newcol environment="newcol" chapter_type="" wbtag="newcol"><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs"> Let us check a 'trivial' 3-dimensional case.
+\[x\begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix}+
+y\begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix}+
+z\begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix}=
+\begin{bmatrix}3 \\ 5 \\ 4\end{bmatrix}.
+\]</paragraphs><newline environment="newcol" chapter_type=""/><collapse environment="newcol" chapter_type="" wbtag="collapse"><figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="12" md5="f8a1093ddf3e203b04d7f6f409d860bc"><label environment="figure" chapter_type="" wbtag="label" name="fig:cube" type="Figure"/><caption environment="figure" chapter_type="">Vectors in 3 Dimensions</caption><center xmlns="http://www.w3.org/1999/xhtml" environment="center"><img src="content/math1030/fig_cube.png" environment="center"/></center></figure><newline environment="newcol" chapter_type="" xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach"/><collapse environment="newcol" chapter_type="" wbtag="collapse"><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs"> One sees that the solution is $x=3, y=4,z=5$,
+which corresponds to the scaling of the red vectors so that
+the sum of the rescaled vectors is the blue vector in </paragraphs><ref environment="newcol" chapter_type="" label="fig:cube" wbtag="ref"/><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs">.
+More precisely, we have multiplication by scalars
+\[
+%    \text{\bf{}}:
+3\begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix}=\begin{bmatrix}3 \\ 0 \\ 0\end{bmatrix},\quad
+4\begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix}=\begin{bmatrix}0 \\ 4 \\ 0\end{bmatrix},\quad
+5\begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix}=\begin{bmatrix}0 \\ 0 \\ 5\end{bmatrix},
+\]
+and the vector addition
+\[\begin{bmatrix}3 \\ 0 \\ 0\end{bmatrix}+
+\begin{bmatrix}0 \\ 4 \\ 0\end{bmatrix}+
+\begin{bmatrix}0 \\ 0 \\ 5\end{bmatrix}=
+\begin{bmatrix}3 \\ 5 \\ 4\end{bmatrix}.
+\] </paragraphs></collapse></collapse></newcol></statement><newline environment="" chapter_type=""/><statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="10" md5="a2f100dcd329cdbcc0851b23f0c8162e"><newcol environment="newcol" chapter_type="" wbtag="newcol"><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs"> Let us see a non-trivial case.
+\[x\begin{bmatrix}2 \\ 4 \\ -2\end{bmatrix}+
+y\begin{bmatrix}1 \\ -6 \\ 7\end{bmatrix}+
+z\begin{bmatrix}1 \\ 0 \\ 2\end{bmatrix}=
+\begin{bmatrix}5 \\ -2 \\ 9\end{bmatrix}.
+\]
+The corresponding vectors are pictured as follows:</paragraphs><newline environment="newcol" chapter_type=""/><figure environment="figure" chapter_type="" wbtag="figure" type="Figure" num="13"><caption environment="figure" chapter_type=""/><label environment="figure" chapter_type="" wbtag="label" name="fig:cube_nontrivial" type="Figure"/><center xmlns="http://www.w3.org/1999/xhtml" environment="center"><image xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" environment="center" chapter_type="" data-src="content/math1030/fig_cube_nontrivial.png" wbtag="image"></image><newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" environment="center" chapter_type=""></newline></center></figure></newcol></statement><newline environment="" chapter_type=""/><statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="11" md5="501d58136b9466f61f69284dba191012"><newcol environment="newcol" chapter_type="" wbtag="newcol"><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs"> Suppose that there are three (linear) equations with three variables.
+In the column picture, what it happens to the singular case.
+So we have three vectors and try to combine them to produce vector $b$.</paragraphs><newline environment="newcol" chapter_type=""/><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs">When the three column vectors are in the same plane $P$
+any combination of them falls into $P$.
+For instance, the vectors in the following equation are in the plane
+$2x+3y+3z=0$.
+\[x\begin{bmatrix}\frac{3}{2} \\ -1 \\ 0\end{bmatrix}+
+y\begin{bmatrix}0 \\ 1 \\ -1\end{bmatrix}+
+z\begin{bmatrix}\frac{3}{2} \\ 0 \\ -1\end{bmatrix}=
+b.\]
+Then there are two cases:</paragraphs><newline environment="newcol" chapter_type=""/><itemize environment="itemize" chapter_type="" wbtag="itemize"><item environment="itemize" chapter_type="" wbtag="item"><strong xmlns="http://www.w3.org/1999/xhtml" environment="itemize"><paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" environment="itemize" chapter_type="" wbtag="paragraphs">No solution:</paragraphs></strong><paragraphs environment="itemize" chapter_type="" wbtag="paragraphs"> When
+$$b=b_0=\begin{bmatrix}0\\1\\1\end{bmatrix}$$
+is not in $P$, then there is no solution.</paragraphs><newline environment="itemize" chapter_type=""/></item><item environment="itemize" chapter_type="" wbtag="item"><strong xmlns="http://www.w3.org/1999/xhtml" environment="itemize"><paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" environment="itemize" chapter_type="" wbtag="paragraphs">Infinite solution:</paragraphs></strong><paragraphs environment="itemize" chapter_type="" wbtag="paragraphs"> When $$b=b_\infty=\begin{bmatrix}3\\ -1\\ -1\end{bmatrix}$$
+is in $P$, it may have infinite solution. </paragraphs></item></itemize></newcol></statement><newline environment="" chapter_type=""/><substatement environment="substatement" chapter_type="" type="Remark" wbtag="remark" md5="483c9ddf9f5d87708e9d6e8df3488c88"><newcol environment="newcol" chapter_type="" wbtag="newcol"><paragraphs environment="newcol" chapter_type="" wbtag="paragraphs"> In general, if the $n$ planes have no point in common,
+or infinitely many points, then the corresponding $n$
+columns lie in the same plane. </paragraphs></newcol></substatement></slide></slides></section></chapter></course><index xmlns="http://www.math.cuhk.edu.hk/~pschan/elephas_index">
+    <entry md5="e05f03a153c037dda34d0d9271255645" item="1.1" slide="3" chapter="1" course="MATH 1030" num="1" wbtag="eg" type="Example" chapter_type="Chapter" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c">
+      <branch item="1.1" slide="3" chapter="1" course="MATH 1030" md5="e05f03a153c037dda34d0d9271255645" num="1" wbtag="eg" type="Example" chapter_type="Chapter" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c"/>
+    </entry>
+    <entry md5="1f481128acf016648786a4c5c7107bbe" slide="3" chapter="1" course="MATH 1030" wbtag="sol" type="Solution" chapter_type="Chapter" environment="substatement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c">
+      <branch slide="3" chapter="1" course="MATH 1030" md5="1f481128acf016648786a4c5c7107bbe" wbtag="sol" type="Solution" chapter_type="Chapter" environment="substatement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c"/>
+    </entry>
+    <entry md5="ab6efe948a924f1ab4876b4bb8278108" item="1.2" slide="4" chapter="1" course="MATH 1030" num="2" wbtag="eg" type="Example" chapter_type="Chapter" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c">
+      <branch item="1.2" slide="4" chapter="1" course="MATH 1030" md5="ab6efe948a924f1ab4876b4bb8278108" num="2" wbtag="eg" type="Example" chapter_type="Chapter" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c"/>
+    </entry>
+    <entry md5="902490b20fc8496037015e9634ea1a23" item="1.3" slide="4" chapter="1" course="MATH 1030" num="3" wbtag="eg" type="Example" chapter_type="Chapter" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c">
+      <branch item="1.3" slide="4" chapter="1" course="MATH 1030" md5="902490b20fc8496037015e9634ea1a23" num="3" wbtag="eg" type="Example" chapter_type="Chapter" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c"/>
+    </entry>
+    <entry md5="c0978a5b47c33086e0c55378e9e6d9bd" item="1.4" slide="6" chapter="1" course="MATH 1030" num="4" wbtag="eg" type="Example" chapter_type="" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c">
+      <branch item="1.4" slide="6" chapter="1" course="MATH 1030" md5="c0978a5b47c33086e0c55378e9e6d9bd" num="4" wbtag="eg" type="Example" chapter_type="" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c"/>
+    </entry>
+    <entry md5="96de9389dca667727e5ee220f94d456b" slide="6" chapter="1" course="MATH 1030" wbtag="remark" type="Remark" chapter_type="" environment="substatement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c">
+      <branch slide="6" chapter="1" course="MATH 1030" md5="96de9389dca667727e5ee220f94d456b" wbtag="remark" type="Remark" chapter_type="" environment="substatement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c"/>
+    </entry>
+    <entry md5="de814b8113f364aaf2f1850642fc0c9f" item="1.5" slide="7" chapter="1" course="MATH 1030" num="5" wbtag="eg" type="Example" chapter_type="" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c">
+      <branch item="1.5" slide="7" chapter="1" course="MATH 1030" md5="de814b8113f364aaf2f1850642fc0c9f" num="5" wbtag="eg" type="Example" chapter_type="" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c"/>
+    </entry>
+    <entry md5="340adadda21a12c6d241f5149471dcf9" slide="7" chapter="1" course="MATH 1030" wbtag="remark" type="Remark" chapter_type="" environment="substatement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c">
+      <branch slide="7" chapter="1" course="MATH 1030" md5="340adadda21a12c6d241f5149471dcf9" wbtag="remark" type="Remark" chapter_type="" environment="substatement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c"/>
+    </entry>
+    <entry md5="1b371e06004d09ae1d723d41f7f76612" item="1.6" slide="9" chapter="1" course="MATH 1030" num="6" wbtag="eg" type="Example" chapter_type="" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c">
+      <branch item="1.6" slide="9" chapter="1" course="MATH 1030" md5="1b371e06004d09ae1d723d41f7f76612" num="6" wbtag="eg" type="Example" chapter_type="" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c"/>
+    </entry>
+    <entry md5="60f7320d5ebfe0d66a893c04ac2e3bc0" item="1.7" slide="10" chapter="1" course="MATH 1030" num="7" wbtag="eg" type="Example" chapter_type="" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c">
+      <branch item="1.7" slide="10" chapter="1" course="MATH 1030" md5="60f7320d5ebfe0d66a893c04ac2e3bc0" num="7" wbtag="eg" type="Example" chapter_type="" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c"/>
+    </entry>
+    <entry md5="bab56abc382edc1829bb73afed2cc561" slide="10" chapter="1" course="MATH 1030" wbtag="remark" type="Remark" chapter_type="" environment="substatement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c">
+      <branch slide="10" chapter="1" course="MATH 1030" md5="bab56abc382edc1829bb73afed2cc561" wbtag="remark" type="Remark" chapter_type="" environment="substatement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c"/>
+    </entry>
+    <entry md5="97e586851589f1a25f029fe5739592d6" item="1.8" slide="11" chapter="1" course="MATH 1030" num="8" wbtag="eg" type="Example" chapter_type="Chapter" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c">
+      <branch item="1.8" slide="11" chapter="1" course="MATH 1030" md5="97e586851589f1a25f029fe5739592d6" num="8" wbtag="eg" type="Example" chapter_type="Chapter" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c"/>
+    </entry>
+    <entry md5="c80d4b93749104c199f19d39e0ba900a" item="1.9" slide="12" chapter="1" course="MATH 1030" num="9" wbtag="eg" type="Example" chapter_type="Chapter" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c">
+      <branch item="1.9" slide="12" chapter="1" course="MATH 1030" md5="c80d4b93749104c199f19d39e0ba900a" num="9" wbtag="eg" type="Example" chapter_type="Chapter" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c"/>
+    </entry>
+    <entry md5="622ecea1cde9099bd77067aa715ff5cc" item="1.10" slide="13" chapter="1" course="MATH 1030" num="10" wbtag="eg" type="Example" chapter_type="Chapter" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c">
+      <branch item="1.10" slide="13" chapter="1" course="MATH 1030" md5="622ecea1cde9099bd77067aa715ff5cc" num="10" wbtag="eg" type="Example" chapter_type="Chapter" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c"/>
+    </entry>
+    <entry md5="540ab3f62927ff3ef5f81892e26b2bf5" item="1.11" slide="14" chapter="1" course="MATH 1030" num="11" wbtag="eg" type="Example" chapter_type="Chapter" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c">
+      <branch item="1.11" slide="14" chapter="1" course="MATH 1030" md5="540ab3f62927ff3ef5f81892e26b2bf5" num="11" wbtag="eg" type="Example" chapter_type="Chapter" environment="statement" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c"/>
+    </entry>
+    <section serial="1.1" num="1" chapter="1" course="MATH 1030" title="Introduction" wbtag="section" type="Section" chapter_type="" environment="" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c">
+      <label serial="1.1" num="1" chapter="1" course="MATH 1030" title="Introduction" wbtag="label" type="Section" chapter_type="" environment="" filename="lec1.xml" file_md5="644ed559306624c29c47823e175cfc0c" section="1" subsection="" subsubsection="" name="ex2"/>
+      <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="1" section="1" subsection="" subsubsection="" serial="1.1" slide="">
+          <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="1" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Introduction</paragraphs>
+        </title>
+    </section>
+  </index></root>

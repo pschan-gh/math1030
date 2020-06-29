@@ -1,0 +1,830 @@
+@course{Math 1030}
+@setchapter{14}
+@chapter{Column and Row Space}
+<h5 class="notkw">Reference.</h5>
+<ul>
+<li>
+Beezer, Ver 3.5 Section CRS (print version p167-178)
+</li>
+</ul>
+
+<h5 class="notkw">Exercise.</h5>
+Exercises with solutions can be downloaded at
+@href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf}
+(Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$)
+Section CRS p.66-71 C20, C30-C35, M10, M20, M21, T40, T41, T45.
+@section{Column Spaces and Systems of Equations}
+@slide
+@defn
+@title{Column Space of a Matrix}
+@label{CSM}
+Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$. Then the <b>column space</b> of $A$, written $\mathcal{C}\!\left(A\right)$, is the subset of ${\mathbb{R}}^{m}$ containing all linear combinations of the columns of $A$,
+\begin{align*}
+\displaystyle \mathcal{C}\!\left(A\right)=\left< \left\{\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}\right\}\right>
+\end{align*}
+@end
+@slide
+@thm
+@title{Column Spaces and Consistent Systems}
+@label{CSCS}
+Suppose $A$ is an $m\times n$ matrix and $\mathbf{b}$ is a vector of size $m$.
+Then $\mathbf{b}\in\mathcal{C}\!\left(A\right)$ if and only if $\mathcal{LS}({A},{\mathbf{b}})$ is consistent.
+@end
+@proof
+@col
+($\Rightarrow$) Suppose $\mathbf{b}\in\mathcal{C}\!\left(A\right)$. Then we can write $\mathbf{b}$ as some linear combination of the columns of $A$. Then by @ref{RCLS} we can use the scalars from this linear combination to form a solution to $\mathcal{LS}({A},{\mathbf{b}})$, so this system is consistent.
+
+
+($\Leftarrow$) If $\mathcal{LS}({A},{\mathbf{b}})$ is consistent, there is a solution that may be used with @ref{RCLS} to write $\mathbf{b}$ as a linear combination of the columns of $A$. This qualifies $\mathbf{b}$ for membership in $\mathcal{C}\!\left(A\right)$.
+@qed
+@end
+This theorem tells us that asking if the system $\mathcal{LS}({A},{\mathbf{b}})$ is consistent is exactly the same question as asking if $\mathbf{b}$ is in the column space of $A$. Or equivalently, it tells us that the column space of the matrix $A$ is precisely those vectors of constants, $\mathbf{b}$, that can be paired with $A$ to create a system of linear equations $\mathcal{LS}({A},{\mathbf{b}})$ that is consistent.
+
+@col
+We can form the chain of equivalences
+\begin{align*}
+\displaystyle\mathbf{b}\in\mathcal{C}\!\left(A\right)\iff\mathcal{LS}({A},{\mathbf{b}})\text{ is consistent}\iff A\mathbf{x}=\mathbf{b}\text{ for some }\mathbf{x}
+\end{align*}
+@col
+Thus, an alternative (and popular) definition of the column space of an $m\times n$ matrix $A$ is
+\begin{align*}
+\displaystyle\mathcal{C}\!\left(A\right)&\displaystyle=\left\{\left.\mathbf{y}\in{\mathbb{R}}^{m}\,\right|\,\mathbf{y}=A\mathbf{x}\text{ for some }\mathbf{x}\in{\mathbb{R}}^{n}\right\}=\left\{\left.A\mathbf{x}\,\right|\,\mathbf{x}\in{\mathbb{R}}^{n}\right\}\subseteq{\mathbb{R}}^{m}
+\end{align*}
+@slide
+@eg
+Consider the column space of the $3\times 4$ matrix $A$,
+\begin{align*}
+\displaystyle A=\begin{bmatrix}3&2&1&-4\\
+-1&1&-2&3\\
+2&-4&6&-8\end{bmatrix}
+\end{align*}
+@col
+Show that $\mathbf{v}=\begin{bmatrix}18\\
+-6\\
+12\end{bmatrix}$ is in the column space of $A$, $\mathbf{v}\in\mathcal{C}\!\left(A\right)$.
+The above theorem says that we need to check the consistency of $\mathcal{LS}({A},{v})$.
+From the augmented matrix and row-reduce,
+\begin{align*}
+\displaystyle \begin{bmatrix}3&2&1&-4&18\\
+-1&1&-2&3&-6\\
+2&-4&6&-8&12\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&1&-2&6\\
+0&\boxed{1}&-1&1&0\\
+0&0&0&0&0\end{bmatrix}
+\end{align*}
+@col
+Since the last column is not a pivot column, so the system is consistent and hence $v\in\mathcal{C}\!\left(A\right)$.
+In fact, we have
+\begin{align*}
+\displaystyle \mathbf{v}=6\mathbf{A}_{1}.
+\end{align*}
+@col
+Next we show that $\mathbf{w}=\begin{bmatrix}2\\
+1\\
+-3\end{bmatrix}$ is not in the column space of $A$, $\mathbf{w}\not\in\mathcal{C}\!\left(A\right)$.
+The above theorem says that we need to check the consistency of $\mathcal{LS}({A},{v})$.
+From the augmented matrix and row-reduce,
+\begin{align*}
+\displaystyle \begin{bmatrix}3&2&1&-4&2\\
+-1&1&-2&3&1\\
+2&-4&6&-8&-3\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&1&-2&0\\
+0&\boxed{1}&-1&1&0\\
+0&0&0&0&\boxed{1}\end{bmatrix}
+\end{align*}
+@col
+Since the final column is a pivot column, the system is inconsistent and therefore $\mathbf{w}\not\in\mathcal{C}\!\left(A\right)$.
+@end
+The next two examples illustrate the main idea of describing $\mathcal{C}\!\left(A\right)$.
+@slide
+@eg
+<b>Describe $\mathcal{C}\!\left(A\right)$ as a null space</b>
+
+Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&2&7&1&-1\\
+1&1&3&1&0\\
+3&2&5&-1&9\\
+1&-1&-5&2&0\end{bmatrix}.
+\end{align*}
+@col
+Find $\mathcal{C}\!\left(A\right)$. Let’s determine if $\mathbf{v}=\begin{bmatrix}v_{1}\\
+\vdots\\
+v_{4}\end{bmatrix}\in\left< S\right>$.
+
+@col
+Applying Gauss-Jordan elimination to the augmented matrix
+\begin{align*}
+\displaystyle \begin{bmatrix}1&2&7&1&-1&v_{1}\\
+1&1&3&1&0&v_{2}\\
+3&2&5&-1&9&v_{3}\\
+1&-1&-5&2&0&v_{4}\end{bmatrix},
+\end{align*}
+@col
+we obtain
+\begin{align*}
+\displaystyle \begin{bmatrix}1&0&-1&0&3&-3v_{1}+5v_{2}-v_{4}\\
+0&1&4&0&-1&v_{1}-v_{2}\\
+0&0&0&1&-2&2v_{1}-3v_{2}+v_{4}\\
+0&0&0&0&0&9v_{1}-16v_{2}+v_{3}+4v_{4}\\
+\end{bmatrix}
+\end{align*}
+@col
+If $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$, the above is a RREF. The last column is not a pivot columns. So $\mathbf{v}\in\left< S\right>$. If $9v_{1}-16v_{2}+v_{3}+4v_{4}\neq 0$, the equation corresponding to the last row is
+\begin{align*}
+\displaystyle 9v_{1}-16v_{2}+v_{3}+4v_{4}=0.
+\end{align*}
+@col
+So the corresponding system of linear equations is inconsistent. So $\mathbf{v}\in\left< S\right>$. Hence $\mathbf{v}\in\left< S\right>$ if and only if $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$. Therefore
+\begin{align*}
+\displaystyle \mathcal{C}\!\left(A\right)={\mathcal{N}}\!\left([9\,\,-16\,\,1\,\,4]\right).
+\end{align*}
+@end
+@slide
+@eg
+<b>Describe $\mathcal{C}\!\left(A\right)$ by basis</b>
+
+Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&4&0&-1&0&7&-9\\
+2&8&-1&3&9&-13&7\\
+0&0&2&-3&-4&12&-8\\
+-1&-4&2&4&8&-31&37\end{bmatrix},
+\end{align*}
+@col
+find $\mathcal{C}\!\left(A\right)$.
+\begin{align*}
+\displaystyle A\xrightarrow{\text{RREF}}B=\begin{bmatrix}\boxed{1}&4&0&0&2&1&-3\\
+0&0&\boxed{1}&0&1&-3&5\\
+0&0&0&\boxed{1}&2&-6&6\\
+0&0&0&0&0&0&0\end{bmatrix}.
+\end{align*}
+@col
+The indexes of the pivot columns are $D=\left\{1,3,4\right\}$.
+Hence $\mathcal{C}\!\left(A\right)=\left< A\right>=\left< \left\{\mathbf{A}_{1},\mathbf{A}_{3},\mathbf{A}_{4}\right\}\right>$.
+@end
+@section{
+Column Space Spanned by Original Columns}
+@label{CSSOC}
+So we have a foolproof, automated procedure for determining membership in $\mathcal{C}\!\left(A\right)$. While this works just fine a vector at a time, we would like to have a more useful description of the set $\mathcal{C}\!\left(A\right)$ as a whole. The next example will preview the first of two fundamental results about the column space of a matrix.
+@slide
+@eg
+Consider the $5\times 7$ matrix $A$,
+\begin{align*}
+\displaystyle \begin{bmatrix}2&4&1&-1&1&4&4\\
+1&2&1&0&2&4&7\\
+0&0&1&4&1&8&7\\
+1&2&-1&2&1&9&6\\
+-2&-4&1&3&-1&-2&-2\end{bmatrix}
+\end{align*}
+@col
+The column space of $A$ is
+\begin{align*}
+\displaystyle \mathcal{C}\!\left(A\right)=\left< \left\{\begin{bmatrix}2\\
+1\\
+0\\
+1\\
+-2\end{bmatrix},\,\begin{bmatrix}4\\
+2\\
+0\\
+2\\
+-4\end{bmatrix},\,\begin{bmatrix}1\\
+1\\
+1\\
+-1\\
+1\end{bmatrix},\,\begin{bmatrix}-1\\
+0\\
+4\\
+2\\
+3\end{bmatrix},\,\begin{bmatrix}1\\
+2\\
+1\\
+1\\
+-1\end{bmatrix},\,\begin{bmatrix}4\\
+4\\
+8\\
+9\\
+-2\end{bmatrix},\,\begin{bmatrix}4\\
+7\\
+7\\
+6\\
+-2\end{bmatrix}\right\}\right>
+\end{align*}
+@col
+While this is a concise description of an infinite set, we might be able to describe the span with fewer than seven vectors. Now we row-reduce,
+\begin{align*}
+\displaystyle \begin{bmatrix}2&4&1&-1&1&4&4\\
+1&2&1&0&2&4&7\\
+0&0&1&4&1&8&7\\
+1&2&-1&2&1&9&6\\
+-2&-4&1&3&-1&-2&-2\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&2&0&0&0&3&1\\
+0&0&\boxed{1}&0&0&-1&0\\
+0&0&0&\boxed{1}&0&2&1\\
+0&0&0&0&\boxed{1}&1&3\\
+0&0&0&0&0&0&0\end{bmatrix}
+\end{align*}
+@col
+The pivot columns are $D=\left\{1,\,3,\,4,\,5\right\}$, so we can create the set
+\begin{align*}
+\displaystyle T=\left\{\begin{bmatrix}2\\
+1\\
+0\\
+1\\
+-2\end{bmatrix},\,\begin{bmatrix}1\\
+1\\
+1\\
+-1\\
+1\end{bmatrix},\,\begin{bmatrix}-1\\
+0\\
+4\\
+2\\
+3\end{bmatrix},\,\begin{bmatrix}1\\
+2\\
+1\\
+1\\
+-1\end{bmatrix}\right\}
+\end{align*}
+@col
+and know that $\mathcal{C}\!\left(A\right)=\left< T\right>$ and $T$ is a linearly independent set of columns from the set of columns of $A$.
+@end
+@slide
+The following theorem is a direct consequence of @ref{BS}:
+@thm
+@title{Basis of the Column Space}
+@label{BCS}
+@col
+Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$, and $B$ is a row-equivalent matrix in reduced row-echelon form with $r$ pivot columns. Let $D=\left\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\right\}$ be the set of indices for the pivot columns of $B$.
+Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ldots,\,\mathbf{A}_{d_{r}}\right\}$. Then
+<ol class="ltx_enumerate">
+<li class="ltx_item">
+$T$ is a linearly independent set.
+</li>
+<li class="ltx_item">
+$\mathcal{C}\!\left(A\right)=\left< T\right>$.
+</li>
+</ol>
+@end
+@section{
+Column Space of a Nonsingular Matrix}
+@slide
+@thm
+@title{Column Space of a Nonsingular Matrix}
+Suppose $A$ is a square matrix of size $n$. Then $A$ is nonsingular if and only if $\mathcal{C}\!\left(A\right)={\mathbb{R}}^{n}$.
+@end
+@proof
+@col
+See @ref{thm:ANSRM}.
+@qed
+@end
+@slide
+@eg
+Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}0&1&2&3\\
+-1&1&2&1\\
+0&1&0&2\\
+1&1&1&4\\
+\end{bmatrix}.
+\end{align*}
+@col
+We can show that $A$ is nonsingular as $A\xrightarrow{\text{RREF}}I_{4}$.
+So $\mathcal{C}\!\left(A\right)={\mathbb{R}}^{4}$.
+@end
+@section{
+Row Space of a Matrix}
+<!--
+@slide
+@def
+Let $n$ be a positive integer.
+A <b>row vector</b> or size $n$ is an array of real numbers of the form:
+\[
+\left(v_1, v_2, \ldots, v_n\right),\quad v_i \in \mathbb{R}.
+\]
+In the context of this course, it is perfectly reasonable to view a row vector
+as simply a $1 \times n$ matrix.
+
+@col
+In fact,
+the standard laws of addition and scalar multiplication on row vectors
+of size $n$ are those defined for $1 \times n$ matrices (see @ref{MEASM}).
+That is:
+\begin{multline*}
+\left(v_1 , v_2 , \ldots , v_n\right) + \left(w_1, w_2, \ldots, w_n\right)
+= \left(v_1 + w_1, v_2 + w_2, \ldots, v_n + w_n\right),\\
+ \quad v_i, w_i \in \mathbb{R};
+\end{multline*}
+\[
+\alpha\left(v_1, v_2, \ldots, v_n\right)
+=
+\left(\alpha v_1, \alpha v_2, \ldots, \alpha v_n\right), \quad v_i, \alpha \in \mathbb{R}.
+\]
+@col
+For any fixed positive integer $n$,
+by @ref{fb1ac45c60c8c59135e7173658dededc} the set of all row vectors of size $n$
+is a vector space under the laws of addition and scalar multiplication defined above.
+@end
+@slide
+-->
+@defn
+@title{Row Space of a Matrix}
+Suppose $A$ is an $m\times n$ matrix.
+The <b>row space</b> of $A$,
+$\mathcal{R}\!\left(A\right)$ is column space $\mathcal{C}\left(A^t\right)$ of $A^t$.
+@end
+
+Informally, the row space is the set of all linear combinations of the rows of $A$. However, we write the rows as column vectors, thus the necessity of using the transpose to make the rows into columns. Additionally, with the row space defined in terms of the column space, all of the previous results of this section can be applied to row spaces.
+
+@col
+Notice that if $A$ is a rectangular $m\times n$ matrix, then $\mathcal{C}\!\left(A\right)\subseteq{\mathbb{R}}^{m}$, while $\mathcal{R}\!\left(A\right)\subseteq{\mathbb{R}}^{n}$ and the two sets are not comparable since they do not even hold objects of the same type. However, when $A$ is square of size $n$, both $\mathcal{C}\!\left(A\right)$ and $\mathcal{R}\!\left(A\right)$ are subsets of ${\mathbb{R}}^{n}$, though usually the sets will not be equal.
+@slide
+@eg
+Find $\mathcal{R}\!\left(A\right)$ for
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&4&0&-1&0&7&-9\\
+2&8&-1&3&9&-13&7\\
+0&0&2&-3&-4&12&-8\\
+-1&-4&2&4&8&-31&37\end{bmatrix}.
+\end{align*}
+@col
+To build the row space, we transpose the matrix,
+\begin{align*}
+\displaystyle A^{t}=\begin{bmatrix}1&2&0&-1\\
+4&8&0&-4\\
+0&-1&2&2\\
+-1&3&-3&4\\
+0&9&-4&8\\
+7&-13&12&-31\\
+-9&7&-8&37\end{bmatrix}
+\end{align*}
+@col
+Then the columns of this matrix are used in a span to build the row space,
+\begin{align*}
+\displaystyle \mathcal{R}\!\left(A\right)=\mathcal{C}\!\left(A^{t}\right)=\left< \left\{\begin{bmatrix}1\\
+4\\
+0\\
+-1\\
+0\\
+7\\
+-9\end{bmatrix},\,\begin{bmatrix}2\\
+8\\
+-1\\
+3\\
+9\\
+-13\\
+7\end{bmatrix},\,\begin{bmatrix}0\\
+0\\
+2\\
+-3\\
+-4\\
+12\\
+-8\end{bmatrix},\,\begin{bmatrix}-1\\
+-4\\
+2\\
+4\\
+8\\
+-31\\
+37\end{bmatrix}\right\}\right>.
+\end{align*}
+@col
+First, row-reduce $A^{t}$,
+\begin{align*}
+\displaystyle \begin{bmatrix}\boxed{1}&0&0&-\frac{31}{7}\\
+0&\boxed{1}&0&\frac{12}{7}\\
+0&0&\boxed{1}&\frac{13}{7}\\
+0&0&0&0\\
+0&0&0&0\\
+0&0&0&0\\
+0&0&0&0\end{bmatrix}.
+\end{align*}
+@col
+Since the pivot columns have indices $D=\left\{1,\,2,\,3\right\}$, the column space of $A^{t}$ can be spanned by just the first three columns of $A^{t}$,
+\begin{align*}
+\displaystyle \mathcal{R}\!\left(A\right)=\mathcal{C}\!\left(A^{t}\right)=\left< \left\{\begin{bmatrix}1\\
+4\\
+0\\
+-1\\
+0\\
+7\\
+-9\end{bmatrix},\,\begin{bmatrix}2\\
+8\\
+-1\\
+3\\
+9\\
+-13\\
+7\end{bmatrix},\,\begin{bmatrix}0\\
+0\\
+2\\
+-3\\
+-4\\
+12\\
+-8\end{bmatrix}\right\}\right>.
+\end{align*}
+@end
+@slide
+@thm
+@title{Row-Equivalent Matrices have Equal Row Spaces}
+@label{REMRS}
+Suppose $A$ and $B$ are row-equivalent matrices. Then $\mathcal{R}\!\left(A\right)=\mathcal{R}\!\left(B\right)$.
+@end
+@proof
+@col
+Observe that if $B$ is obtained from $A$ via a row operation of the type
+$R_i \leftrightarrow R_j$,
+then the rows of $B$ are the same as the rows of $A$,
+and hence the columns of $B^t$ are still the same as the columns of $A^t$,
+only with the order changed.  Hence,
+\[
+\mathcal{R}(B) = \mathcal{C}\left(B^t\right) = \mathcal{C}\left(A^t\right) = \mathcal{R}(A).
+\]
+
+@col
+If $B$ is obtained from $A$ via a row operation of the type $\alpha R_i$ ($\alpha \neq 0$),
+then the $i$-th column of $B^t$ is equal to $\alpha$ times the $i$-th column of $A^t$,
+and the other columns remain the same as those of $A^t$ with the corresponding indices.
+
+In paricular, the $i$-th column of $B^t$ is a linear combination of the columns of $A^t$.
+
+@col
+Hence, the columns of $B^t$ all lie in $\mathcal{C}(A^t)$, which in turn implies that:
+\[
+\mathcal{R}(B) = \mathcal{C}\left(B^t\right) \subseteq \mathcal{C}\left(A^t\right) = \mathcal{R}(A).
+\]
+@col
+On the other hand, if $B$ is obtained from $A$ via $\alpha R_i$, then $A$ is obtained
+from $B$ via $\left(\frac{1}{\alpha}\right) R_i$.  So, by the same argument as before we have:
+\[
+\mathcal{R}(A) = \mathcal{C}\left(A^t\right) \subseteq \mathcal{C}\left(B^t\right) = \mathcal{R}(B).
+\]
+Hence, $\mathcal{R}(B) = \mathcal{R}(A)$.
+
+@col
+If $B$ is obtained from $A$ via a row operation of the type $\alpha R_i + R_j$,
+then:
+\[
+\left[B^t\right]_j = \alpha\left[A^t\right]_i + \left[A^t\right]_j,
+\]
+and the other columns of $B^t$ remain the same as those of $A^t$
+with the corresponding indices.
+
+In paricular, the $i$-th column of $B^t$ is a linear combination of the columns of $A^t$.
+
+@col
+Hence, the columns of $B^t$ all lie in $\mathcal{C}(A^t)$, which in turn implies that:
+\[
+\mathcal{R}(B) = \mathcal{C}\left(B^t\right) \subseteq \mathcal{C}\left(A^t\right) = \mathcal{R}(A).
+\]
+@col
+On the other hand, if $B$ is obtained from $A$ via $\alpha R_i + R_j$, then $A$ is obtained
+from $B$ via $(-\alpha) R_i + R_j$.  So, by the same argument as before we have:
+\[
+\mathcal{R}(A) = \mathcal{C}\left(A^t\right) \subseteq \mathcal{C}(B^t) = \mathcal{R}(B).
+\]
+Hence, $\mathcal{R}(B) = \mathcal{R}(A)$.
+
+@col
+We now see that the row space of a matrix remains unchanged after any application
+of a row operation.
+
+Hence, $\mathcal{R}(B) = \mathcal{R}(A)$ if $B$ is row-equivalent to $A$,
+since by the definition of row-equivalence (@ref{dacc247eacab6b0b430f64f7de449ebe}) $B$ is obtained by $A$ via a series
+of row operations.
+@end
+<!--
+@proof
+@col
+Two matrices are row-equivalent if one can be obtained from another by a sequence of (possibly many) row operations. We will prove the theorem for two matrices that differ by a single row operation, and then this result can be applied repeatedly to get the full statement of the theorem. The row spaces of $A$ and $B$ are spans of the columns of their transposes. For each row operation we perform on a matrix, we can define an analogous operation on the columns. Perhaps we should call these <b>column operations</b>. Instead, we will still call them row operations, but we will apply them to the columns of the transposes.
+
+@col
+Refer to the columns of $A^{t}$ and $B^{t}$ as $\mathbf{A}_{i}$ and $\mathbf{B}_{i}$, $1\leq i\leq m$. The row operation that switches rows will just switch columns of the transposed matrices. This will have no effect on the possible linear combinations formed by the columns.
+
+@col
+Suppose that $B^{t}$ is formed from $A^{t}$ by multiplying column $\mathbf{A}_{t}$ by $\alpha\neq 0$. In other words, $\mathbf{B}_{t}=\alpha\mathbf{A}_{t}$, and $\mathbf{B}_{i}=\mathbf{A}_{i}$ for all $i\neq t$. We need to establish that two sets are equal, $\mathcal{C}\!\left(A^{t}\right)=\mathcal{C}\!\left(B^{t}\right)$. We will take a generic element of one and show that it is contained in the other.
+\begin{align*}
+\displaystyle\beta_{1}\mathbf{B}_{1}+&\displaystyle\beta_{2}\mathbf{B}_{2}+\beta_{3}\mathbf{B}_{3}+\cdots+\beta_{t}\mathbf{B}_{t}+\cdots+\beta_{m}\mathbf{B}_{m} \\
+&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\beta_{3}\mathbf{A}_{3}+\cdots+\beta_{t}\left(\alpha\mathbf{A}_{t}\right)+\cdots+\beta_{m}\mathbf{A}_{m} \\
+&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\beta_{3}\mathbf{A}_{3}+\cdots+\left(\alpha\beta_{t}\right)\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m}
+\end{align*}
+@col
+says that $\mathcal{C}\!\left(B^{t}\right)\subseteq\mathcal{C}\!\left(A^{t}\right)$. Similarly,
+\begin{align*}
+\displaystyle\gamma_{1}\mathbf{A}_{1}+&\displaystyle\gamma_{2}\mathbf{A}_{2}+\gamma_{3}\mathbf{A}_{3}+\cdots+\gamma_{t}\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
+&\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\gamma_{3}\mathbf{A}_{3}+\cdots+\left(\frac{\gamma_{t}}{\alpha}\alpha\right)\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
+&\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\gamma_{3}\mathbf{A}_{3}+\cdots+\frac{\gamma_{t}}{\alpha}\left(\alpha\mathbf{A}_{t}\right)+\cdots+\gamma_{m}\mathbf{A}_{m} \\
+&\displaystyle=\gamma_{1}\mathbf{B}_{1}+\gamma_{2}\mathbf{B}_{2}+\gamma_{3}\mathbf{B}_{3}+\cdots+\frac{\gamma_{t}}{\alpha}\mathbf{B}_{t}+\cdots+\gamma_{m}\mathbf{B}_{m}
+\end{align*}
+@col
+says that $\mathcal{C}\!\left(A^{t}\right)\subseteq\mathcal{C}\!\left(B^{t}\right)$. So $\mathcal{R}\!\left(A\right)=\mathcal{C}\!\left(A^{t}\right)=\mathcal{C}\!\left(B^{t}\right)=\mathcal{R}\!\left(B\right)$ when a single row operation of the second type is performed.
+
+@col
+Suppose now that $B^{t}$ is formed from $A^{t}$ by replacing $\mathbf{A}_{t}$ with $\alpha\mathbf{A}_{s}+\mathbf{A}_{t}$ for some $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $s\neq t$. In other words, $\mathbf{B}_{t}=\alpha\mathbf{A}_{s}+\mathbf{A}_{t}$, and $\mathbf{B}_{i}=\mathbf{A}_{i}$ for $i\neq t$.
+\begin{align*}
+\displaystyle\beta_{1}\mathbf{B}_{1}+&\displaystyle\beta_{2}\mathbf{B}_{2}+\cdots+\beta_{s}\mathbf{B}_{s}+\cdots+\beta_{t}\mathbf{B}_{t}+\cdots+\beta_{m}\mathbf{B}_{m} \\
+&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\beta_{s}\mathbf{A}_{s}+\cdots+\beta_{t}\left(\alpha\mathbf{A}_{s}+\mathbf{A}_{t}\right)+\cdots+\beta_{m}\mathbf{A}_{m} \\
+&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\beta_{s}\mathbf{A}_{s}+\cdots+\left(\beta_{t}\alpha\right)\mathbf{A}_{s}+\beta_{t}\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m} \\
+&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\beta_{s}\mathbf{A}_{s}+\left(\beta_{t}\alpha\right)\mathbf{A}_{s}+\cdots+\beta_{t}\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m} \\
+&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\left(\beta_{s}+\beta_{t}\alpha\right)\mathbf{A}_{s}+\cdots+\beta_{t}\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m}
+\end{align*}
+@col
+says that $\mathcal{C}\!\left(B^{t}\right)\subseteq\mathcal{C}\!\left(A^{t}\right)$. Similarly,
+\begin{align*}
+\displaystyle\gamma_{1}&\displaystyle\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\cdots+\gamma_{s}\mathbf{A}_{s}+\cdots+\gamma_{t}\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
+&\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\cdots+\gamma_{s}\mathbf{A}_{s}+\cdots+\left(-\alpha\gamma_{t}\mathbf{A}_{s}+\alpha\gamma_{t}\mathbf{A}_{s}\right)+\gamma_{t}\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
+&\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\cdots+\left(-\alpha\gamma_{t}+\gamma_{s}\right)\mathbf{A}_{s}+\cdots+\gamma_{t}\left(\alpha\mathbf{A}_{s}+\mathbf{A}_{t}\right)+\cdots+\gamma_{m}\mathbf{A}_{m} \\
+&\displaystyle=\gamma_{1}\mathbf{B}_{1}+\gamma_{2}\mathbf{B}_{2}+\cdots+\left(-\alpha\gamma_{t}+\gamma_{s}\right)\mathbf{B}_{s}+\cdots+\gamma_{t}\mathbf{B}_{t}+\cdots+\gamma_{m}\mathbf{B}_{m}
+\end{align*}
+@col
+says that $\mathcal{C}\!\left(A^{t}\right)\subseteq\mathcal{C}\!\left(B^{t}\right)$. So $\mathcal{R}\!\left(A\right)=\mathcal{C}\!\left(A^{t}\right)=\mathcal{C}\!\left(B^{t}\right)=\mathcal{R}\!\left(B\right)$ when a single row operation of the third type is performed.
+
+@col
+So the row space of a matrix is preserved by each row operation, and hence row spaces of row-equivalent matrices are equal sets.
+@qed
+@end
+-->
+@slide
+@eg
+<b>Row spaces of two row-equivalent matrices</b>
+
+The matrices
+\begin{align*}
+\displaystyle A&\displaystyle=\begin{bmatrix}2&-1&3&4\\
+5&2&-2&3\\
+1&1&0&6\end{bmatrix}&\displaystyle B&\displaystyle=\begin{bmatrix}1&1&0&6\\
+3&0&-2&-9\\
+2&-1&3&4\end{bmatrix}
+\end{align*}
+@col
+are row-equivalent via a sequence of two row operations.
+
+Hence by the above theorem
+\begin{align*}
+\displaystyle \mathcal{R}\!\left(A\right)=\left< \left\{\begin{bmatrix}2\\
+-1\\
+3\\
+4\end{bmatrix},\,\begin{bmatrix}5\\
+2\\
+-2\\
+3\end{bmatrix},\,\begin{bmatrix}1\\
+1\\
+0\\
+6\end{bmatrix}\right\}\right>=\left< \left\{\begin{bmatrix}1\\
+1\\
+0\\
+6\end{bmatrix},\,\begin{bmatrix}3\\
+0\\
+-2\\
+-9\end{bmatrix},\,\begin{bmatrix}2\\
+-1\\
+3\\
+4\end{bmatrix}\right\}\right>=\mathcal{R}\!\left(B\right)
+\end{align*}
+@end
+@slide
+@thm
+@title{Basis for the Row Space}
+@label{BRS}
+Suppose that $A$ is a matrix and $B$ is a row-equivalent matrix in reduced row-echelon form. Let $S$ be the set of nonzero columns of $B^{t}$. Then
+<ol class="ltx_enumerate">
+<li class="ltx_item">
+$\mathcal{R}\!\left(A\right)=\left< S\right>$.
+</li>
+<li class="ltx_item">
+$S$ is a linearly independent set.
+</li>
+</ol>
+@end
+@proof
+@col
+From Theorem    @ref{REMRS}. we know that $\mathcal{R}\!\left(A\right)=\mathcal{R}\!\left(B\right)$. If $B$ has any zero rows, these are columns of $B^{t}$ that are the zero vector. We can safely toss out the zero vector in the span construction, since it can be recreated from the nonzero vectors by a linear combination where all the scalars are zero. So $\mathcal{R}\!\left(A\right)=\left< S\right>$.
+
+@col
+Suppose $B$ has $r$ nonzero rows and let $D=\left\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\right\}$ denote the indices of the pivot columns of $B$. Denote the $r$ column vectors of $B^{t}$, the vectors in $S$, as $\mathbf{B}_{1},\,\mathbf{B}_{2},\,\mathbf{B}_{3},\,\ldots,\,\mathbf{B}_{r}$. To show that $S$ is linearly independent, start with a relation of linear dependence
+\begin{align*}
+\displaystyle \alpha_{1}\mathbf{B}_{1}+\alpha_{2}\mathbf{B}_{2}+\alpha_{3}\mathbf{B}_{3}+\cdots+\alpha_{r}\mathbf{B}_{r}=\mathbf{0}
+\end{align*}
+@col
+Now consider this vector equality in location $d_{i}$. Since $B$ is in reduced row-echelon form, the entries of column $d_{i}$ of $B$ are all zero, except for a leading 1 in row $i$. Thus, in $B^{t}$, row $d_{i}$ is all zeros, excepting a 1 in column $i$. So, for $1\leq i\leq r$,
+\begin{align*}
+\displaystyle 0&\displaystyle=\left[\mathbf{0}\right]_{d_{i}} \\
+&\displaystyle=\left[\alpha_{1}\mathbf{B}_{1}+\alpha_{2}\mathbf{B}_{2}+\alpha_{3}\mathbf{B}_{3}+\cdots+\alpha_{r}\mathbf{B}_{r}\right]_{d_{i}} \\
+&\displaystyle=\left[\alpha_{1}\mathbf{B}_{1}\right]_{d_{i}}+\left[\alpha_{2}\mathbf{B}_{2}\right]_{d_{i}}+\left[\alpha_{3}\mathbf{B}_{3}\right]_{d_{i}}+\cdots+\left[\alpha_{r}\mathbf{B}_{r}\right]_{d_{i}} \\
+&\displaystyle=\alpha_{1}\left[\mathbf{B}_{1}\right]_{d_{i}}+\alpha_{2}\left[\mathbf{B}_{2}\right]_{d_{i}}+\alpha_{3}\left[\mathbf{B}_{3}\right]_{d_{i}}+\cdots+\alpha_{r}\left[\mathbf{B}_{r}\right]_{d_{i}} \\
+&\displaystyle=\alpha_{1}(0)+\alpha_{2}(0)+\alpha_{3}(0)+\cdots+\alpha_{i}(1)+\cdots+\alpha_{r}(0) \\
+&\displaystyle=\alpha_{i}
+\end{align*}
+@col
+So we conclude that $\alpha_{i}=0$ for all $1\leq i\leq r$, establishing the linear independence of $S$.
+@qed
+@end
+@slide
+@eg
+<b>Improving a span</b>
+
+Suppose in the course of analyzing a matrix (its column space, its null space, its ...) we encounter the following set of vectors, described by a span
+\begin{align*}
+\displaystyle X=\left< \left\{\begin{bmatrix}1\\
+2\\
+1\\
+6\\
+6\end{bmatrix},\,\begin{bmatrix}3\\
+-1\\
+2\\
+-1\\
+6\end{bmatrix},\,\begin{bmatrix}1\\
+-1\\
+0\\
+-1\\
+-2\end{bmatrix},\,\begin{bmatrix}-3\\
+2\\
+-3\\
+6\\
+-10\end{bmatrix}\right\}\right>
+\end{align*}
+@col
+Let $A$ be the matrix whose rows are the vectors in $X$, so by design $X=\mathcal{R}\!\left(A\right)$,
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&2&1&6&6\\
+3&-1&2&-1&6\\
+1&-1&0&-1&-2\\
+-3&2&-3&6&-10\end{bmatrix}
+\end{align*}
+@col
+Row-reduce $A$ to form a row-equivalent matrix in reduced row-echelon form,
+\begin{align*}
+\displaystyle B=\begin{bmatrix}\boxed{1}&0&0&2&-1\\
+0&\boxed{1}&0&3&1\\
+0&0&\boxed{1}&-2&5\\
+0&0&0&0&0\end{bmatrix}
+\end{align*}
+@col
+Then the above theorem says we can grab the nonzero columns of $B^{t}$ and write
+\begin{align*}
+\displaystyle X=\mathcal{R}\!\left(A\right)=\mathcal{R}\!\left(B\right)=\left< \left\{\begin{bmatrix}1\\
+0\\
+0\\
+2\\
+-1\end{bmatrix},\,\begin{bmatrix}0\\
+1\\
+0\\
+3\\
+1\end{bmatrix},\,\begin{bmatrix}0\\
+0\\
+1\\
+-2\\
+5\end{bmatrix}\right\}\right>
+\end{align*}
+@col
+These three vectors provide a much-improved description of $X$. There are fewer vectors, and the pattern of zeros and ones in the first three entries makes it easier to determine membership in $X$.
+@end
+@slide
+@thm
+@title{Column Space, Row Space, Transpose}
+@label{CSRST}
+Suppose $A$ is a matrix. Then $\mathcal{C}\!\left(A\right)=\mathcal{R}\!\left(A^{t}\right)$.
+@end
+@proof
+@col
+\begin{align*}
+\displaystyle \mathcal{C}\!\left(A\right)=\mathcal{C}\!\left(\left(A^{t}\right)^{t}\right)=\mathcal{R}\!\left(A^{t}\right)
+\end{align*}
+@qed
+@end
+@slide
+@eg
+<b>Column space from row operations</b>
+
+Find the column space of $A$ in @ref{cb807061818215f8c700c6df6edc1229}.
+
+<strong>Method 1</strong>
+@col
+\begin{align*}
+\displaystyle A\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&4&0&0&2&1&-3\\
+0&0&\boxed{1}&0&1&-3&5\\
+0&0&0&\boxed{1}&2&-6&6\\
+0&0&0&0&0&0&0\end{bmatrix}
+\end{align*}
+@col
+Let
+\begin{align*}
+\displaystyle T=\left\{\mathbf{A}_{1},\mathbf{A}_{3},\mathbf{A}_{4}\right\}=\left\{\begin{bmatrix}1\\
+2\\
+0\\
+-1\end{bmatrix},\begin{bmatrix}0\\
+-1\\
+2\\
+2\end{bmatrix},\begin{bmatrix}-1\\
+3\\
+-3\\
+4\end{bmatrix}\right\}.
+\end{align*}
+@col
+Then $T$ is linear independent and $\mathcal{C}\!\left(A\right)=\left< T\right>$.
+@endcol
+
+<strong>Method 2</strong>
+@col
+The transpose of $A$ is
+\begin{align*}
+\displaystyle \begin{bmatrix}1&2&0&-1\\
+4&8&0&-4\\
+0&-1&2&2\\
+-1&3&-3&4\\
+0&9&-4&8\\
+7&-13&12&-31\\
+-9&7&-8&37\end{bmatrix}.
+\end{align*}
+@col
+Row-reduced this becomes,
+\begin{align*}
+\displaystyle \begin{bmatrix}\boxed{1}&0&0&-\frac{31}{7}\\
+0&\boxed{1}&0&\frac{12}{7}\\
+0&0&\boxed{1}&\frac{13}{7}\\
+0&0&0&0\\
+0&0&0&0\\
+0&0&0&0\\
+0&0&0&0\end{bmatrix}.
+\end{align*}
+@col
+Now, using Theorem    @ref{CSRST} and Theorem    @ref{BRS},
+\begin{align*}
+\displaystyle \mathcal{C}\!\left(A\right)=\mathcal{R}\!\left(A^{t}\right)=\left< \left\{\begin{bmatrix}1\\
+0\\
+0\\
+-\frac{31}{7}\end{bmatrix},\,\begin{bmatrix}0\\
+1\\
+0\\
+\frac{12}{7}\end{bmatrix},\,\begin{bmatrix}0\\
+0\\
+1\\
+\frac{13}{7}\end{bmatrix}\right\}\right>.
+\end{align*}
+@col
+This is a very nice description of the column space. Fewer vectors than the 7 involved in the definition, and the pattern of the zeros and ones in the first 3 slots can be used to advantage. For example,
+let’s check if
+\begin{align*}
+\displaystyle \mathbf{b}=\begin{bmatrix}3\\
+9\\
+1\\
+4\end{bmatrix}
+\end{align*}
+is in $\mathcal{C}\!\left(A\right)$ or not.
+
+@col
+If it is, then
+\begin{align*}
+\displaystyle \mathbf{b}=\begin{bmatrix}3\\
+9\\
+1\\
+4\end{bmatrix}=x\begin{bmatrix}1\\
+0\\
+0\\
+-\frac{31}{7}\end{bmatrix}+y\begin{bmatrix}0\\
+1\\
+0\\
+\frac{12}{7}\end{bmatrix}+z\begin{bmatrix}0\\
+0\\
+1\\
+\frac{13}{7}\end{bmatrix}=\begin{bmatrix}x\\
+y\\
+z\\
+-\frac{31}{7}x+\frac{12}{7}y+\frac{13}{7}z\end{bmatrix}.
+\end{align*}
+@col
+From the first three coordinate $x=3,y=9,z=1$. Let’s check the last coordinate:
+\begin{align*}
+\displaystyle -\frac{31}{7}\times 3+\frac{12}{7}\times 9+\frac{13}{7}\times 1=4.
+\end{align*}
+@col
+So
+\begin{align*}
+\displaystyle \mathbf{b}=\begin{bmatrix}3\\
+9\\
+1\\
+4\end{bmatrix}=3\begin{bmatrix}1\\
+0\\
+0\\
+-\frac{31}{7}\end{bmatrix}+9\begin{bmatrix}0\\
+1\\
+0\\
+\frac{12}{7}\end{bmatrix}+1\begin{bmatrix}0\\
+0\\
+1\\
+\frac{13}{7}\end{bmatrix}
+\end{align*}
+@col
+and hence $\mathbf{b}\in\mathcal{C}\!\left(A\right)$.
+@end
+
+@remark
+@col
+Both methods describe algorithms to find bases
+(i.e., linear independent set the generate the column space)
+for the column space.
+Here are the differences.
+<ol class="ltx_enumerate">
+<li class="ltx_item">
+In method 1, we find a subset of columns that forms a basis.
+However in method 2, the basis is not a subset of columns.
+</li>
+<li class="ltx_item">
+Given a vector $\mathbf{b}\in\mathcal{C}\!\left(A\right)$, it is easier to express it as a linear combination of the basis given by method 2.
+</li>
+</ol>
+@end

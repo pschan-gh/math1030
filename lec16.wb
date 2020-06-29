@@ -1,0 +1,488 @@
+@course{Math 1030}
+@setchapter{16}
+@chapter{Linear transformations and change of basis}
+
+<b>Skip this lecture</b>
+
+<b>Warning</b>: the note is for reference only. It may contain typos. Read at your own risk. The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at http://linear.ups.edu/download.html.The print version can be downloaded at http://linear.ups.edu/download/fcla-3.50-print.pdf.
+
+<h5 class="notkw">Reference.</h5>
+Beezer, Ver 3.5 Section VR.
+
+@section{Matrices as linear transformation}
+
+Let $A\in M_{mn}$, $\mathbf{v}\in{\mathbb{R}}^{n}$. Then $A\mathbf{v}\in{\mathbb{R}}^{m}$. We can define define a map, denoted by $L_{A}$ (stand for left multiplying), defined as
+\begin{align*}
+\displaystyle L_{A}:{\mathbb{R}}^{n}\rightarrow{\mathbb{R}}^{m}.
+\end{align*}
+\begin{align*}
+\displaystyle L_{A}(\mathbf{v})=A\mathbf{v}.
+\end{align*}
+@slide
+@eg
+Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&2&3\\
+4&5&6\end{bmatrix}.
+\end{align*}
+@newcol
+Then $L_{A}$ is a map from ${\mathbb{R}}^{3}\rightarrow{\mathbb{R}}^{2}$. Define by
+\begin{align*}
+\displaystyle L_{A}(\begin{bmatrix}x\\
+y\\
+z\end{bmatrix})=\begin{bmatrix}x+2y+3z\\
+4x+5y+6z\end{bmatrix}.
+\end{align*}
+@endcol
+@end
+@newcol
+The map $L_{A}$ has the following properties:
+
+@endcol
+@slide
+@prop
+For $\mathbf{v},\mathbf{u}\in{\mathbb{R}}^{n}$, $\alpha\in{\mathbb{R}}^{\hbox{}}$
+
+<ol class="ltx_enumerate">
+<li class="ltx_item">
+$L_{A}(\mathbf{v}+\mathbf{u})=L_{A}(\mathbf{v})+L_{A}(\mathbf{u})$
+</li>
+<li class="ltx_item">
+$L_{A}(\alpha\mathbf{v})=\alpha L_{A}(\mathbf{v})$.
+</li>
+
+</ol>
+@end
+@proof
+@newcol
+<ol class="ltx_enumerate">
+<li class="ltx_item">
+$L_{A}(\mathbf{v}+\mathbf{u})=A(\mathbf{v}+\mathbf{u})=A\mathbf{v}+A\mathbf{u}=L_{A}(\mathbf{v})+L_{A}(\mathbf{u})$
+</li>
+<li class="ltx_item">
+$L_{A}(\alpha\mathbf{v})=A(\alpha\mathbf{v})=\alpha A(\mathbf{v})=\alpha L_{A}(\mathbf{v})$.
+</li>
+
+</ol>
+
+@qed
+@endcol
+@end
+@slide
+@defn
+Let $V,W$ be vector spaces (you can think of $V$ as subspace of ${\mathbb{R}}^{a}$ and $W$ as subspace of ${\mathbb{R}}^{b}$),
+$T:V\rightarrow W$.
+Then $T$ is said to be a linear transformation if for $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{u}\in W$.
+
+<ol class="ltx_enumerate">
+<li class="ltx_item">
+$T(\mathbf{v}+\mathbf{u})=T(\mathbf{v})+T(\mathbf{u})$
+</li>
+<li class="ltx_item">
+$T(\alpha\mathbf{v})=\alpha T(\mathbf{v})$.
+</li>
+
+</ol>
+@end
+@section{Geometric interpretation of some linear transformations}
+
+In below we regard $\begin{bmatrix}x\\
+y\end{bmatrix}$ as the point $(x,y)$ in the $xy$-plane.
+@slide
+@eg
+<b>Rotation</b>
+
+@newcol
+Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}\cos\theta&-\sin\theta\\
+\sin\theta&\cos\theta\end{bmatrix}.
+\end{align*}
+@col
+Then $L_{A}$ is $\theta$ degree anticlockwise rotation.
+@endcol
+@end
+@eg
+<b>Reflection</b>
+
+@newcol
+Let $c$ be a real number,
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&0\\
+0&-1\end{bmatrix}\,\,\,(\text{resp.}A=\begin{bmatrix}-1&0\\
+0&1\end{bmatrix})
+\end{align*}
+@col
+Then $L_{A}$ is a reflection through the $x$-axis (resp. $y$-axis).
+@endcol
+@end
+@eg
+<b>Stretching</b>
+
+@newcol
+Let $c$ be real number, then
+\begin{align*}
+\displaystyle A=\begin{bmatrix}k&0\\
+0&1\end{bmatrix}\,\,\,(\text{resp.}A=\begin{bmatrix}1&0\\
+0&k\end{bmatrix})
+\end{align*}
+@col
+Then $L_{A}$ is a stretching of $x$-axis (resp. $y$-axis) by a factor of $k$.
+@endcol
+@end
+@section{Coordinate vector and change of basis}
+
+Let $V$ be a vector space(you can think of it as a subspace of ${\mathbb{R}}^{n}$). Let $B=\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\}$ be a basis for $V$. Recall the following theorem
+
+@slide
+@thm
+Let $\mathbf{v}\in V$ and if
+\begin{align*}
+\displaystyle \mathbf{v}=\alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k},\,\,\alpha_{i}\in{\mathbb{R}}^{\hbox{}}&
+\end{align*}
+then $\alpha_{1},\cdots,\alpha_{k}$ are unique, i.e.
+\begin{align*}
+\displaystyle \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k}=\beta_{1}\mathbf{v}_{1}+\cdots+\beta_{k}\mathbf{v}_{k},&
+\end{align*}
+then
+\begin{align*}
+\displaystyle \alpha_{i}=\beta_{i},\,\,\,i=1,\ldots,k.
+\end{align*}
+@end
+@proof
+@newcol
+If (  @ref{vlin2}) is true, then
+\begin{align*}
+\displaystyle (\alpha_{1}-\beta_{1})\mathbf{v}_{1}+\cdots+(\alpha_{k}-\beta_{k})\mathbf{v}_{k}=\mathbf{0}.
+\end{align*}
+@col
+Because $S$ is a basis, it is linearly independent. Therefore
+\begin{align*}
+\displaystyle \alpha_{i}-\beta_{i}=0.
+\end{align*}
+@col
+Hence
+\begin{align*}
+\displaystyle \alpha_{i}=\beta_{i}.
+\end{align*}
+@qed
+@endcol
+@end
+@newcol
+By the theorem, using notation in (  @ref{vlin}), we can define
+\begin{align*}
+\displaystyle \rho_{B}(\mathbf{v})=\begin{bmatrix}\alpha_{1}\\
+\alpha_{2}\\
+\vdots\\
+\alpha_{k}\end{bmatrix}.
+\end{align*}
+@endcol
+@slide
+@eg
+Let $V={\mathbb{R}}^{3}$, $B=\{\mathbf{e}_{1},\mathbf{e}_{2},\mathbf{e}_{3}\}$.
+Then
+\begin{align*}
+\displaystyle \mathbf{v}=\begin{bmatrix}x\\
+y\\
+z\end{bmatrix}=x\mathbf{e}_{1}+y\mathbf{e}_{2}+z\mathbf{e}_{3}.
+\end{align*}
+@newcol
+Hence
+\begin{align*}
+\displaystyle \rho_{B}(\mathbf{v})=\begin{bmatrix}x\\
+y\\
+z\end{bmatrix}.
+\end{align*}
+@endcol
+@end
+@eg
+Generally if $V={\mathbb{R}}^{n}$, $B=\{\mathbf{e}_{1},\ldots,\mathbf{e}_{n}\}$, then
+\begin{align*}
+\displaystyle \rho_{B}(\mathbf{v})=\mathbf{v}.
+\end{align*}
+@end
+@eg
+Let $V={\mathbb{R}}^{3}$,
+\begin{align*}
+\displaystyle B=\{\mathbf{v}_{1}=\begin{bmatrix}1\\
+1\\
+0\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}1\\
+1\\
+1\end{bmatrix},\mathbf{v}_{3}=\begin{bmatrix}1\\
+2\\
+3\end{bmatrix}\}.
+\end{align*}
+@newcol
+We can show that $B$ is linearly independent (exercise). Hence $B$ is a basis for $V$.
+Let
+\begin{align*}
+\displaystyle \mathbf{u}=\begin{bmatrix}3\\
+4\\
+3\end{bmatrix}.
+\end{align*}
+@col
+Find $\rho_{B}(\mathbf{u})$. To find $\rho_{B}(\mathbf{u})$, we compute the coefficient
+\begin{align*}
+\displaystyle \mathbf{u}=x_{1}\mathbf{v}_{1}+x_{2}\mathbf{v}_{2}+x_{3}\mathbf{v}_{3},
+\end{align*}
+i.e.
+\begin{align*}
+\displaystyle x_{1}+x_{2}+x_{3}&\displaystyle=3 \\
+\displaystyle x_{1}+x+2+2x_{3}&\displaystyle=4 \\
+\displaystyle x+2+3x_{3}&\displaystyle=3
+\end{align*}
+@col
+Solve the system of linear equations, we have $x_{1}=2$, $x_{2}=0$, $x_{3}=1$. Hence
+\begin{align*}
+\displaystyle \rho_{B}(\mathbf{u})=\begin{bmatrix}x_{1}\\
+x_{2}\\
+x_{3}\end{bmatrix}=\begin{bmatrix}2\\
+0\\
+1\end{bmatrix}.
+\end{align*}
+@endcol
+@end
+@eg
+Let
+\begin{align*}
+\displaystyle B=\{\mathbf{v}_{1}=\begin{bmatrix}1\\
+2\\
+3\\
+4\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}1\\
+-1\\
+1\\
+-1\end{bmatrix},\mathbf{v}_{3}=\begin{bmatrix}-1\\
+1\\
+2\\
+2\end{bmatrix}.\}.
+\end{align*}
+@newcol
+Let
+\begin{align*}
+\displaystyle \mathbf{u}=\begin{bmatrix}0\\
+3\\
+11\\
+8\end{bmatrix}.
+\end{align*}
+<ol class="ltx_enumerate">
+<li class="ltx_item">
+Show that $\mathbf{u}\in\left<B\right>$.
+</li>
+<li class="ltx_item">
+Hence find $\rho_{B}(\mathbf{u})$.
+</li>
+
+</ol>
+
+@col
+Find the solution of $\mathbf{u}=x_{1}\mathbf{v}_{1}+x_{2}\mathbf{v}_{2}+x_{3}\mathbf{v}_{3}$:
+\begin{align*}
+\displaystyle x_{1}+x_{2}-x_{3}&\displaystyle=0 \\
+\displaystyle 2x_{1}-x_{2}+x_{3}&\displaystyle=3 \\
+\displaystyle 3x_{1}+x_{2}+2x_{3}&\displaystyle=11 \\
+\displaystyle 4x_{1}-x_{2}+2x_{3}&\displaystyle=8
+\end{align*}
+@col
+We find solution $x_{1}=1,x_{2}=2,x_{3}=3$. Hence
+\begin{align*}
+\displaystyle \rho_{B}(\mathbf{u})=\begin{bmatrix}1\\
+2\\
+3\end{bmatrix}.
+\end{align*}
+@endcol
+@end
+@section{Change of basis}
+
+Let $V$ be a vector space(you can think of it as a subspace of ${\mathbb{R}}^{n}$). Let $B=\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\}$ be a basis for $V$
+and $B^{\prime}=\{\mathbf{v}^{\prime}_{1},\ldots,\mathbf{v}^{\prime}_{k}\}$ be another basis for $V$. For $\mathbf{v}\in V$. We want to find the relation between $\rho_{B}(\mathbf{v})$ and $\rho_{B^{\prime}}(\mathbf{v})$.
+
+@newcol
+Let
+\begin{align*}
+\displaystyle \mathbf{v}_{i}=a_{1i}\mathbf{v}^{\prime}_{1}+a_{2i}\mathbf{v}^{\prime}_{2}+\cdots+a_{ki}\mathbf{v}^{\prime}_{k},&
+\end{align*}
+i.e.
+\begin{align*}
+\displaystyle \rho_{B^{\prime}}(\mathbf{v}_{i})=\begin{bmatrix}a_{1i}\\
+a_{2i}\\
+\vdots\\
+a_{ki}\end{bmatrix}.
+\end{align*}
+@col
+Define the <b>change-of-basis matrix from $S$ to $S^{\prime}$</b> as
+\begin{align*}
+\displaystyle C_{{B},{B^{\prime}}}=[\rho_{B^{\prime}}(\mathbf{v}_{1})|\rho_{B^{\prime}}(\mathbf{v}_{2})|\cdots|\rho_{B^{\prime}}(\mathbf{v}_{k})]=\begin{bmatrix}a_{11}&a_{12}&\cdots&a_{1k}\\
+a_{21}&a_{22}&\cdots&a_{2k}\\
+\vdots&\vdots&\vdots&\vdots\\
+a_{k1}&a_{k2}&\cdots&a_{kk}\end{bmatrix}.
+\end{align*}
+@endcol
+@slide
+@thm
+For $\mathbf{v}\in V$,
+\begin{align*}
+\displaystyle \rho_{B^{\prime}}(\mathbf{v})=C_{{B},{B^{\prime}}}\rho_{B}(\mathbf{v}).
+\end{align*}
+@end
+@proof
+@newcol
+Let
+\begin{align*}
+\displaystyle \rho_{B}(\mathbf{v})=\begin{bmatrix}\alpha_{1}\\
+\alpha_{2}\\
+\vdots\\
+\alpha_{k}\end{bmatrix},\,\rho_{B^{\prime}}(\mathbf{v})=\begin{bmatrix}\alpha^{\prime}_{1}\\
+\alpha^{\prime}_{2}\\
+\vdots\\
+\alpha^{\prime}_{k}\end{bmatrix},
+\end{align*}
+i.e.
+\begin{align*}
+\displaystyle\mathbf{v}&\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\cdots+\alpha_{k}\mathbf{v}_{k} \\
+&\displaystyle=\alpha^{\prime}_{1}\mathbf{v}^{\prime}_{1}+\alpha^{\prime}_{2}\mathbf{v}^{\prime}_{2}+\cdots+\alpha^{\prime}_{k}\mathbf{v}^{\prime}_{k}.
+\end{align*}
+@col
+By   @ref{vv'},
+\begin{align*}
+\displaystyle\mathbf{v}&\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\cdots+\alpha_{k}\mathbf{v}_{k} \\
+&\displaystyle=\alpha_{1}(a_{11}\mathbf{v}^{\prime}_{1}+a_{21}\mathbf{v}^{\prime}_{2}+\cdots+a_{k1}\mathbf{v}^{\prime}_{k}) \\
+&\displaystyle+\alpha_{2}(a_{12}\mathbf{v}^{\prime}_{1}+a_{22}\mathbf{v}^{\prime}_{2}+\cdots+a_{k2}\mathbf{v}^{\prime}_{k}) \\
+&\displaystyle+\cdots \\
+&\displaystyle+\alpha_{2}(a_{1k}\mathbf{v}^{\prime}_{1}+a_{2k}\mathbf{v}^{\prime}_{2}+\cdots+a_{kk}\mathbf{v}^{\prime}_{k}) \\
+&\displaystyle=(a_{11}\alpha_{1}+a_{12}\alpha_{2}+\cdots+a_{1k}\alpha_{k})\mathbf{v}^{\prime}_{1} \\
+&\displaystyle+(a_{21}\alpha_{1}+a_{22}\alpha_{2}+\cdots+a_{2k}\alpha_{k})\mathbf{v}^{\prime}_{2} \\
+&\displaystyle+\cdots \\
+&\displaystyle+(a_{k1}\alpha_{1}+a_{k2}\alpha_{2}+\cdots+a_{kk}\alpha_{k})\mathbf{v}^{\prime}_{2}
+\end{align*}
+@col
+Thus
+\begin{align*}
+\displaystyle \rho_{B^{\prime}}(\mathbf{v})=\begin{bmatrix}\alpha^{\prime}_{1}\\
+\alpha^{\prime}_{2}\\
+\vdots\\
+\alpha^{\prime}_{k}\end{bmatrix}=\begin{bmatrix}a_{11}\alpha_{1}+a_{12}\alpha_{2}+\cdots+a_{1k}\alpha_{k}\\
+a_{21}\alpha_{1}+a_{22}\alpha_{2}+\cdots+a_{2k}\alpha_{k}\\
+\vdots\\
+a_{k1}\alpha_{1}+a_{k2}\alpha_{2}+\cdots+a_{kk}\alpha_{k}\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle =\begin{bmatrix}a_{11}&a_{12}&\cdots&a_{1k}\\
+a_{21}&a_{22}&\cdots&a_{2k}\\
+\vdots&\vdots&\vdots&\vdots\\
+a_{k1}&a_{k2}&\cdots&a_{kk}\end{bmatrix}\begin{bmatrix}\alpha_{1}\\
+\alpha_{2}\\
+\vdots\\
+\alpha_{k}\end{bmatrix}=C_{{B},{B^{\prime}}}\rho_{B}(\mathbf{v})
+\end{align*}
+@qed
+@endcol
+@end
+@slide
+@eg
+In example 7,
+let $V={\mathbb{R}}^{3}$,
+\begin{align*}
+\displaystyle B=\{\mathbf{v}_{1}=\begin{bmatrix}1\\
+1\\
+0\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}1\\
+1\\
+1\end{bmatrix},\mathbf{v}_{3}=\begin{bmatrix}1\\
+2\\
+3\end{bmatrix}\},
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{u}=\begin{bmatrix}3\\
+4\\
+3\end{bmatrix}.
+\end{align*}
+@newcol
+Then
+\begin{align*}
+\displaystyle \rho_{B}(\mathbf{u})=\begin{bmatrix}2\\
+0\\
+1\end{bmatrix}.
+\end{align*}
+\begin{align*}
+\displaystyle B^{\prime}=\{\mathbf{v}^{\prime}_{1}=\begin{bmatrix}0\\
+0\\
+1\end{bmatrix},\mathbf{v}^{\prime}_{2}=\begin{bmatrix}1\\
+0\\
+1\end{bmatrix},\mathbf{v}^{\prime}_{3}=\begin{bmatrix}1\\
+1\\
+-1\end{bmatrix}\}.
+\end{align*}
+@col
+Then
+\begin{align*}
+\displaystyle\mathbf{v}_{1}&\displaystyle=\mathbf{v}^{\prime}_{1}+\mathbf{v}^{\prime}_{3} \\
+\displaystyle\mathbf{v}_{2}&\displaystyle=2\mathbf{v}^{\prime}_{1}+\mathbf{v}^{\prime}_{3} \\
+\displaystyle\mathbf{v}_{3}&\displaystyle=6\mathbf{v}^{\prime}_{1}-\mathbf{v}^{\prime}_{2}+2\mathbf{v}^{\prime}_{3}.
+\end{align*}
+@col
+Then
+\begin{align*}
+\displaystyle C_{{B},{B^{\prime}}}=\begin{bmatrix}1&2&6\\
+0&0&-1\\
+1&1&2\end{bmatrix}
+\end{align*}
+@col
+So
+\begin{align*}
+\displaystyle \rho_{B^{\prime}}(\mathbf{u})=C_{{B},{B^{\prime}}}\rho_{B}(\mathbf{u})=\begin{bmatrix}1&2&6\\
+0&0&-1\\
+1&1&2\end{bmatrix}\begin{bmatrix}2\\
+0\\
+1\end{bmatrix}=\begin{bmatrix}8\\
+-1\\
+4\end{bmatrix}.
+\end{align*}
+@col
+Verification:
+\begin{align*}
+\displaystyle \mathbf{u}=8\mathbf{v}^{\prime}_{1}-\mathbf{v}^{\prime}_{2}+4\mathbf{v}^{\prime}_{3},
+\end{align*}
+i.e.
+\begin{align*}
+\displaystyle \begin{bmatrix}3\\
+4\\
+3\end{bmatrix}=8\begin{bmatrix}0\\
+0\\
+1\end{bmatrix}-\begin{bmatrix}1\\
+0\\
+1\end{bmatrix}+4\begin{bmatrix}1\\
+1\\
+-1\end{bmatrix}.
+\end{align*}
+@endcol
+@end
+@section{Similar matrices}
+
+In this section, we will give the motivation of <b>similar matrices</b>.
+Let $V={\mathbb{R}}^{n}$, $B=\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\}$ be a basis for $V$.
+Let $B^{\prime}=\{\mathbf{e}_{1},\ldots,\mathbf{e}_{n}\}$. Let $Q=C_{{B},{B^{\prime}}}$.
+Then for any $\mathbf{v}\in V$,
+\begin{align*}
+\displaystyle \rho_{B^{\prime}}(\mathbf{v})=C_{{B},{B^{\prime}}}\rho_{B}(\mathbf{v})
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{v}=Q\rho_{B}(\mathbf{v}).
+\end{align*}
+@newcol
+Let $\mathbf{w}=L_{A}(\mathbf{v})=A\mathbf{v}$. Then
+\begin{align*}
+\displaystyle \rho_{B^{\prime}}(\mathbf{w})=\rho_{B^{\prime}}(A\mathbf{v})
+\end{align*}
+\begin{align*}
+\displaystyle \rho_{B^{\prime}}(\mathbf{w})=A\mathbf{v}=A\rho_{B^{\prime}}(\mathbf{v})
+\end{align*}
+\begin{align*}
+\displaystyle Q\rho_{B}(\mathbf{w})=AQ\rho_{B}(\mathbf{v}).
+\end{align*}
+\begin{align*}
+\displaystyle \rho_{B}(\mathbf{w})=Q^{-1}AQ\rho_{B}(\mathbf{v}).
+\end{align*}
+@col
+So we say that two matrices $A_{1},A_{2}$ are similar if there exists an invertible matrix $Q$ such that $Q^{-1}A_{1}Q=A_{2}$.
+More details will be given in lecture 19.
+
+@endcol

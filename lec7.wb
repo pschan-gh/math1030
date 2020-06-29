@@ -1,0 +1,520 @@
+@course{Math 1030}
+@setchapter{7}
+@chapter{Types of Solution Sets}
+
+<h5 class="notkw">Reference.</h5>
+Beezer, Ver 3.5 Subsection TTS (print version p35 - p41)
+
+<h5 class="notkw">Exercise.</h5>
+Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf
+Section TSS (p.13 - 18) C21-28, T11, T20, T40, T41.
+@section{
+Introduction
+}
+We will now be more careful about analyzing the reduced row-echelon form derived from the augmented matrix of a system of linear equations.
+In particular, we will see how to systematically handle the situation when we have infinitely many solutions to a system, and we will prove that every system of linear equations has either zero, one or infinitely many solutions.
+With these tools, we will be able to routinely solve any linear system.
+@section{
+Consistent Systems
+}
+@label{CS}
+A system of linear equations is <b>consistent</b>
+if it has at least one solution. Otherwise, the system is called <b>inconsistent</b>.
+@eg
+@newcol
+@enumerate
+@item
+The system of linear equations
+\begin{align*}
+2x_1 + 3x_2 &= 3 \\
+x_1 - x_2 &= 4
+\end{align*}
+is consistent because it has solution $(x_{1},x_{2})=(1,-3)$.
+@item
+The system of linear equations
+\begin{align*}
+2x_1+3x_2&=3\\
+4x_1+6x_2&=6
+\end{align*}
+is consistent because has infinite many solutions: $\{(t,\frac{3-2t}{3})\,|\,t\text{ real number}\}$.
+@item
+The system of linear equations
+\begin{align*}
+2x_1+3x_2&=3\\
+4x_1+6x_2&=10
+\end{align*}
+is inconsistent because it has no solution.
+@endenumerate
+@endcol
+@end
+<strong>Notation Recall</strong>:
+@newcol
+Let $A$ be a reduced row echelon form.
+@enumerate
+@item
+The number of non-zero rows is called the <b>rank</b> of $A$ and is denoted by $r$.
+@item
+The set of the column indexes for the pivot columns is denoted by
+\[D=\{(d_{1},d_{2},d_{3},\ldots,d_{r})\,|\,d_{1} < d_{2} < d_{3} < \cdots < d_{r}.\}\]
+@item
+The set of column indexes that are not pivot columns is denoted by
+\[F=\{(f_{1},f_{2},f_{3},\ldots,f_{n-r})\,|\,f_{1} < f_{2} < f_{3}< \cdots < f_{n-r}.\}\]
+@endenumerate
+@slide
+@eg
+@label{RREFN}
+Reduced row-echelon form notation
+For the $5\times 9$ matrix
+\[\displaystyle B=\begin{bmatrix}\boxed{1}&5&0&0&2&8&0&5&-1\\
+0&0&\boxed{1}&0&4&7&0&2&0\\
+0&0&0&\boxed{1}&3&9&0&3&-6\\
+0&0&0&0&0&0&\boxed{1}&4&2\\
+0&0&0&0&0&0&0&0&0\end{bmatrix}\]
+in reduced row-echelon form we have:
+
+@col
+\begin{align*}
+r&=4\\
+d_1&=1
+&
+d_2&=3
+&
+d_3&=4
+&
+d_4&=7\\
+f_1&=2
+&
+f_2&=5
+&
+f_3&=6
+&
+f_4&=8
+&
+f_5&=9
+\end{align*}
+@col
+Notice that the sets
+\[\displaystyle D=\{d_{1},\,d_{2},\,d_{3},\,d_{4}\}=\{1,\,3,\,4,\,7\}\]
+have nothing in common and together account for all of the columns of $B$.
+@end
+@slide
+@eg
+@label{ISSI}
+Describe the infinite solution set of the following system of linear equations
+with $m=4$ equations in $n=7$ variables.
+\begin{align*}
+x_1 +4x_2  - x_4  + 7x_6 - 9x_7 &= 3\\
+2x_1 + 8x_2 - x_3 + 3x_4 + 9x_5 - 13x_6 + 7x_7 &= 9\\
+ 2x_3 -3x_4 -4x_5 +12x_6 -8x_7 &= 1\\
+-x_1  - 4x_2 + 2x_3 +4x_4 + 8x_5 - 31x_6 + 37x_7 &= 4
+\end{align*}
+@col
+This system has a $4\times 8$ augmented matrix
+\[\left[\begin{array}[]{ccccccc|c}1&4&0&-1&0&7&-9&3\\
+2&8&-1&3&9&-13&7&9\\
+0&0&2&-3&-4&12&-8&1\\
+-1&-4&2&4&8&-31&37&4\end{array}\right]\]
+The matrix is row-equivalent to the following matrix reduced row-echelon form
+(<strong>exercise</strong>: check this)
+
+@col
+\[\left[\begin{array}[]{ccccccc|c}\boxed{1}&4&0&0&2&1&-3&4\\
+0&0&\boxed{1}&0&1&-3&5&2\\
+0&0&0&\boxed{1}&2&-6&6&1\\
+0&0&0&0&0&0&0&0\end{array}\right]\]
+So we find that $r=3$ and
+\[\displaystyle D=\{d_{1},\,d_{2},\,d_{3}\}=\{1,\,3,\,4\}\]
+Let $i$ denote any one of the $r=3$ nonzero rows. Then the index $d_{i}$ is a pivot column. It will be easy in this case to use the equation represented by row $i$ to write an expression for the variable $x_{d_{i}}$. It will be a linear function of the variables $x_{f_{1}},\,x_{f_{2}},\,x_{f_{3}},\,x_{f_{4}}$
+
+@col
+\begin{align*}
+(i=1)& & x_{d_1}&=x_1=4-4x_2-2x_5-x_6+3x_7\\
+(i=2)& & x_{d_2}&=x_3=2-x_5+3x_6-5x_7\\
+(i=3)& & x_{d_3}&=x_4=1-2x_5+6x_6-6x_7
+\end{align*}
+@col
+Each element of the set $F=\{f_{1},\,f_{2},\,f_{3},\,f_{4},\,f_{5}\}=\{2,\,5,\,6,\,7,\,8\}$ is the index of a variable, except for $f_{5}=8$. We refer to $x_{f_{1}}=x_{2}$, $x_{f_{2}}=x_{5}$, $x_{f_{3}}=x_{6}$ and $x_{f_{4}}=x_{7}$ as <b>free</b> (or <b>independent</b>) variables since they are allowed to assume any possible combination of values that we can imagine and we can continue on to build a solution to the system by solving individual equations for the values of the other (<b>dependent</b>) variables.
+
+@col
+Each element of the set $D=\{d_{1},\,d_{2},\,d_{3}\}=\{1,\,3,\,4\}$ is the index of a variable. We refer to the variables $x_{d_{1}}=x_{1}$, $x_{d_{2}}=x_{3}$ and $x_{d_{3}}=x_{4}$ as <b>dependent</b> variables since they depend on the independent variables. More precisely, for each possible choice of values for the independent variables we get exactly one set of values for the dependent variables that combine to form a solution of the system.
+
+@col
+To express the solutions as a set, we write
+\begin{equation}\left\{\left.\begin{bmatrix}
+4-4x_{2}-2x_{5}-x_{6}+3x_{7}\\
+x_{2}\\
+2-x_{5}+3x_{6}-5x_{7}\\
+1-2x_{5}+6x_{6}-6x_{7}\\
+x_{5}\\
+x_{6}\\
+x_{7}\end{bmatrix}\,\right|\,x_{2},\,x_{5},\,x_{6},\,x_{7}\in \mathbb{R}\right\}
+\end{equation}
+or equivalently:
+\[
+\left\{
+\left.
+\colvector{4\\0\\2\\1\\0\\0\\0}
++
+x_2\colvector{-4\\1\\0\\0\\0\\0\\0}
++
+x_5\colvector{-2\\ 0\\ -1\\ -2\\ 1\\ 0\\ 0}
++
+x_6\colvector{-1\\ 0\\ 3\\ 6\\ 0\\ 1\\ 0}
++
+x_7\colvector{3\\ 0\\ -5\\ -6\\ 0\\ 0\\ 1}
+\,\right|\,
+x_2, x_5, x_6, x_7 \in \mathbb{R}
+\right\}
+\]
+@col
+The condition that $x_{2},\,x_{5},\,x_{6},\,x_{7}$ are real numbers is how we specify that the variables $x_{2},\,x_{5},\,x_{6},\,x_{7}$ are <strong>free</strong> to assume any possible values.
+
+@col
+This systematic approach to solving a system of equations will allow us to create a precise description of the solution set for any consistent system once we have found the reduced row-echelon form of the augmented matrix. It will work just as well when the set of free variables is empty and we get just a single solution.
+@end
+@slide
+@defn
+@title{Independent and Dependent Variables}
+@label{IDV}
+Suppose $A$ is the augmented matrix of a consistent system of linear equations and $B$ is a row-equivalent matrix in reduced row-echelon form.
+Suppose $j$ is the index of a pivot column of $B$. Then the variable $x_{j}$ is <strong>dependent</strong>.
+A variable that is not dependent is called <strong>independent</strong> or <strong>free</strong>.
+@keyword{dependent variable}
+@keyword{independent variable}
+@keyword{free variable}
+@end
+@eg
+@label{FDV}
+<b>Free and dependent variables</b>
+
+@col
+Consider the system of five equations in five variables,
+\begin{align*}
+ x_1  - x_2  -2 x_3 +  x_4 + 11 x_5 &= 13 \\
+x_1 - x_2 +  x_3+  x_4 + 5 x_5 &= 16 \\
+ 2 x_1  -2 x_2       +  x_4 + 10 x_5 &= 21 \\
+ 2 x_1  -2 x_2  - x_3 + 3 x_4 + 20 x_5 &= 38 \\
+ 2 x_1  -2 x_ 2 +  x_3 +  x_4 + 8 x_ 5&= 22
+\end{align*}
+whose augmented matrix row-reduces to:
+
+@col
+\begin{equation}
+    \left[\begin{array}[]{ccccc|c}\boxed{1}&-1&0&0&3&6\\
+    0&0&\boxed{1}&0&-2&1\\
+    0&0&0&\boxed{1}&4&9\\
+    0&0&0&0&0&0\\
+    0&0&0&0&0&0\end{array}\right]
+\end{equation}
+@col
+Columns 1, 3 and 4 are pivot columns, so $D=\{1,\,3,\,4\}$. From this we know that the variables $x_{1}$, $x_{3}$ and $x_{4}$ will be dependent variables, and each of the $r=3$ nonzero rows of the row-reduced matrix will yield an expression for one of these three variables. The set $F$ is all the remaining column indices, $F=\{2,\,5,\,6\}$. The column index $6$ in $F$ means that the final column is not a pivot column, and thus the system is consistent (see the next theorem). The remaining indices in $F$ indicate free variables, so $x_{2}$ and $x_{5}$ (the remaining variables) are our free variables. The resulting three equations that describe our solution set are then,
+
+@col
+\begin{align*}
+(x_{d_1}=x_1)& & x_1&=6+x_2-3x_5\\
+(x_{d_2}=x_3)& & x_3&=1+2x_5\\
+(x_{d_3}=x_4)& & x_4&=9-4x_5
+\end{align*}
+@col
+Make sure you understand where these three equations came from, and notice how the location of the pivot columns determined the variables on the left-hand side of each equation. We can compactly describe the solution set as,
+\begin{equation}
+    S=\left\{\left.\begin{bmatrix}6+x_{2}-3x_{5}\\
+    x_{2}\\
+    1+2x_{5}\\
+    9-4x_{5}\\
+    x_{5}\end{bmatrix}\,\right|\,x_{2},\,x_{5}\text{ real numbers}\right\}
+\end{equation}
+@col
+Notice how we express the freedom for $x_{2}$ and $x_{5}$: $x_{2},\,x_{5}\text{ real numbers}$.
+@end
+@slide
+@thm
+@title{Recognizing Consistency of a Linear System}
+@label{RCLS}
+Suppose $A$ is the augmented matrix of a system of linear equations with $n$ variables. Suppose also that $B$ is a row-equivalent matrix in reduced row-echelon form with $r$ nonzero rows.
+@ul
+@li
+Then the system of equations is <b>inconsistent</b> if and only if column $n+1$ (i.e., the last column) of $B$ is a pivot column.
+@li
+Equivalently a system is <b>consistent</b> if and only if column $n+1$ is not a pivot column of $B$.
+@li
+Another way of expressing the theorem is to say that
+a system of linear equations is <b>consistent</b>
+if and only if the last <b>non-zero row</b> is not $(0,0,\ldots,0,1)$.
+@endul
+@end
+@proof
+@col
+(sketch, for details, see Beezer, Ver 3.5 print version p.38, proof of theorem RCLS, you can skip the proof in the textbook)
+If the last column vector of $B$ is a pivot column, then $B$ is in the form of:
+
+@col
+\[\begin{bmatrix}
+1 & \cdots & 0 & \cdots & 0 & \cdots & * & 0\\
+  &        & 1 & \cdots & 0 & \cdots & * & 0\\
+  &        &   &        & 1 & \cdots & * & 0\\
+\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
+0 & \cdots & 0 & \cdots & 0 & \cdots & 0 &1\\
+0 & \cdots & 0 & \cdots & 0 & \cdots & 0 &0\\
+&&&&&&&
+\end{bmatrix}\]
+For the system of linear equations with the above augmented matrix, the $r+1$-st equation (i.e. the last non-zero equation) is
+\[0=1.\]
+So the system of linear equations has no solution.
+Conversely, if the last column vector is not a pivot column vector, then $B$ is in the form of:
+
+@col
+\[\begin{bmatrix}
+1 & \cdots & 0 & \cdots & 0 & \cdots & 0 & \cdots\\
+  &        & 1 & \cdots & 0 & \cdots & 0 & \cdots\\
+  &        &   &        & 1 & \cdots & 0 & \cdots\\
+\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
+0 & \cdots & 0 & \cdots & 0 & \cdots & 1 & \cdots\\
+0 & \cdots & 0 & \cdots & 0 & \cdots & 0 &0\\
+&&&&&&&
+\end{bmatrix}\]
+For the system of equations with the above augmented matrix,
+we can move the variables corresponding to the non-pivot columns (i.e., $x_{f_{1}},x_{f_{2}},\ldots$) to the right hand side of the equations and therefore solve the equations.
+Hence it is consistent.
+Note that $x_{f_{1}},x_{f_{2}},\ldots$ are free variables.
+@qed
+@end
+@slide
+@eg
+Determine if the following system of linear equation is consistent.
+\begin{align*}
+x_1+x_2+2 x_3+3 x_4+2 x_5+5 x_6 &=1 \\
+2 x_1+2 x_2+3 x_3-x_4 &=1 \\
+3 x_1+3 x_2+5 x_3+x_4+x_5-2 x_6 &=3 \\
+x_4+x_5+7 x_6 &=0
+\end{align*}
+@col
+The augmented matrix is
+\[\left[\begin{array}[]{cccccc|c}1&1&2&3&2&5&1\\
+2&2&3&-1&0&0&1\\
+3&3&5&1&1&-2&3\\
+0&0&0&1&1&7&-1\\
+\end{array}\right]\]
+@col
+The reduced row echelon form is
+\[\left[\begin{array}[]{cccccc|c}1&1&0&0&5&62&0\\
+0&0&1&0&-3&-39&0\\
+0&0&0&1&1&7&0\\
+0&0&0&0&0&0&1\\
+\end{array}\right]\]
+@col
+The last column is a pivot column. So the system is inconsistent.
+@end
+@eg
+@col
+Determine if the following system of linear equation is consistent.
+\begin{align*}
+x_1+x_2+2 x_3+3 x_4+2 x_5+5 x_6 &=1 \\
+2 x_1+2 x_2+3 x_3-x_4 &=1 \\
+3 x_1+3 x_2+5 x_3+x_4+x_5-2 x_6 &=3 \\
+x_4+x_5+7 x_6 &=-1
+\end{align*}
+@col
+The augmented matrix is
+\[\left[\begin{array}[]{cccccc|c}1&1&2&3&2&5&1\\
+2&2&3&-1&0&0&1\\
+3&3&5&1&1&-2&3\\
+0&0&0&1&1&7&-1\\
+\end{array}\right]\]
+@col
+The reduced row echelon form is
+\[\left[\begin{array}[]{cccccc|c}1&1&0&0&5&62&-12\\
+0&0&1&0&-3&-39&8\\
+0&0&0&1&1&7&-1\\
+0&0&0&0&0&0&0\\
+\end{array}\right]\]
+@col
+The last column is not a pivot column. So the system is consistent.
+@end
+@slide
+@thm
+@title{Consistent Systems, $r$ and $n$}
+@label{CSRN}
+Suppose $A$ is the augmented matrix of a consistent system of linear equations with $n$ variables. Suppose also that $B$ is a row-equivalent matrix in reduced row-echelon form with $r$ pivot columns. Then $r\leq n$. If $r=n$, then the system has a unique solution, and if $r < n$, then the system has infinitely many solutions.
+@end
+@proof
+@col
+This theorem contains three implications that we must establish.
+Notice first that $B$ has $n+1$ columns, so there can be at most $n+1$ pivot columns, i.e., $r\leq n+1$.
+If $r=n+1$, then every column of $B$ is a pivot column, and in particular, the last column is a pivot column.
+So the previous theorem tells us that the system is inconsistent, contrary to our hypothesis. We are left with $r\leq n$.
+
+
+When $r=n$, we find $n-r=0$ free variables (i.e., $F=\{n+1\}$) and the only solution is given by setting the $n$ variables to the the first $n$ entries of column $n+1$ of $B$.
+When $r < n$, we have $n-r > 0$ free variables. Choose one free variable and set all the other free variables to zero. Now, set the chosen free variable to any fixed value. It is possible to then determine the values of the dependent variables to create a solution to the system. By setting the chosen free variable to different values, in this manner we can create infinitely many solutions.
+@qed
+@end
+@section{
+Free variables
+}
+@label{FV}
+The next theorem simply states a conclusion from the final paragraph of the previous proof, allowing us to state explicitly the number of free variables for a consistent system.
+@thm
+@title{Free Variables for Consistent Systems}
+@label{FVCS}
+Suppose $A$ is the augmented matrix of a consistent system of linear equations with $n$ variables. Suppose also that $B$ is a row-equivalent matrix in reduced row-echelon form with $r$ rows that are not completely zeros. Then the solution set can be described with $n-r$ free variables.
+@end
+@slide
+@eg
+@enumerate
+@item
+System of linear equations with $n=3$, $m=3$.
+
+@col
+\begin{align*}
+x_1 -x_2 +2x_3 & =1\\
+2x_1+ x_2 + x_3 & =8\\
+x_1 + x_2 & =5
+\end{align*}
+Augmented matrix
+\[\left[\begin{array}[]{ccc|c}1&-1&2&1\\
+2&1&1&8\\
+1&1&0&5\end{array}\right]\]
+The reduced row echelon form of the augmented matrix.
+\[\left[\begin{array}[]{ccc|c}\boxed{1}&0&1&3\\
+0&\boxed{1}&-1&2\\
+0&0&0&0\end{array}\right]\]
+The last column is not a pivot column. So the system of linear equations is consistent. $r=2$, there are $3-2$ free variables. In fact $D=\{1,2\}$, $F=\{3\}$. $x_{1},x_{2}$ are dependent variables, $x_{3}$ is a free variables.
+\begin{align*}
+x_1 &= 3-x_3 \\
+x_2 &= 2+x_3
+\end{align*}
+<hr/>
+@item
+System of linear equations with $n=3,m=3$.
+
+@col
+\begin{align*}
+-7x_1 -6 x_2 - 12x_3 &=-33\\
+ 5x_1  + 5x_2 + 7x_3 &=24\\
+ x_1 +4x_3 &=5
+\end{align*}
+Augmented matrix
+\[\left[\begin{array}[]{ccc|c}-7&-6&-12&-33\\
+5&5&7&24\\
+1&0&4&5\end{array}\right]\]
+The reduced row echelon form of the augmented matrix.
+\[\left[\begin{array}[]{ccc|c}\boxed{1}&0&0&-3\\
+0&\boxed{1}&0&5\\
+0&0&\boxed{1}&2\end{array}\right]\]
+The last column is not a pivot column. So the system of linear equations is consistent. $r=3$, there are $3-3=0$ free variables. So the solution is unique. In fact
+In fact
+\begin{align*}
+x_1 &= -3 \\
+x_2 &= 5 \\
+x_3 &= 2
+\end{align*}
+<hr/>
+@item
+System of linear equations with $n=2$, $m=5$.
+
+@col
+\begin{align*}
+2x_1  + 3x_2  &= 6 \\
+-x_1 + 4x_2  &=  -14 \\
+3x_1 +10x_2  &=  -2  \\
+3x_1 - x_2  &=  20  \\
+6x_1 + 9x_2  &=  18
+\end{align*}
+Augmented matrix
+\[\left[\begin{array}[]{cc|c}2&3&6\\
+-1&4&-14\\
+3&10&-2\\
+3&-1&20\\
+6&9&18\end{array}\right]\]
+The reduced row echelon form of the augmented matrix.
+\[\left[\begin{array}[]{cc|c}\boxed{1}&0&6\\
+0&\boxed{1}&-2\\
+0&0&0\\
+0&0&0\\
+0&0&0\end{array}\right]\]
+The last column is not a pivot column. So the system of linear equations is consistent. $r = 2$, there are $2-2=0$ free variables. So the solution is unique. In fact
+\[\displaystyle x_{1}=6\]
+\[\displaystyle x_{2}=-2\]
+<hr/>
+@item
+System of linear equations with $n=4,m=3$.
+
+@col
+\begin{align*}
+2x_1  + x_2 + 7x_3 - 7x_4 &= 2 \\
+-3x_1 + 4x_2 -5x_3 - 6x_4 &=  3 \\
+x_1 +x_2 + 4x_3 - 5x_4 &=  2
+\end{align*}
+Augmented matrix
+\[\left[\begin{array}[]{cccc|c}2&1&7&-7&2\\
+-3&4&-5&-6&3\\
+1&1&4&-5&2\end{array}\right]\]
+The reduced row echelon form of the augmented matrix.
+\[\left[\begin{array}[]{cccc|c}\boxed{1}&0&3&-2&0\\
+0&\boxed{1}&1&-3&0\\
+0&0&0&0&\boxed{1}\end{array}\right]\]
+The last column is a pivot column. Hence the system of linear equations is inconsistent. It has no solution.
+<hr/>
+@endenumerate
+@end
+@slide
+@thm
+@title{Possible Solution Sets for Linear Systems}
+@label{PSSLS}
+A system of linear equations has no solutions, a unique solution or infinitely many solutions.
+@end
+@proof
+@col
+If the system is inconsistent, that it has no solutions.Suppose the system is consistent. If it has $0$ free variable, it has a unique solution.
+If it has $\geq 1$ free variables, it has infinite many solutions.
+@qed
+@end
+@thm
+@title{Consistent, More Variables than Equations, Infinite solutions}
+@label{CMVEI}
+@col
+Suppose a consistent system of linear equations has $m$ equations in $n$ variables. If $n>m$, then the system has infinitely many solutions.
+@end
+@proof
+@col
+Suppose that the augmented matrix of the system of equations is row-equivalent to $B$, a matrix in reduced row-echelon form with $r$ nonzero rows.
+Because $B$ has $m$ rows in total, the number of nonzero rows is less than or equal to $m$. In other words, $r\leq m$.
+Follow this with the hypothesis that $n>m$ and we find that the system has a solution set described by at least one free variable because
+\[n-r\geq n-m>0.\]
+A consistent system with free variables will have an infinite number of solutions, as given by Theorem        @ref{CSRN}.
+@qed
+@end
+<!-- @slide -->
+<!-- @eg -->
+<!-- \begin{align*} -->
+<!-- 2x_1  + x_2 + 7x_3 - 7x_4 &= 8 \\ -->
+<!-- -3x_1 + 4x_2 -5x_3 - 6x_4 &=  -12 \\ -->
+<!-- x_1 +x_2 + 4x_3 - 5x_4 &=  4 -->
+<!-- \end{align*} -->
+<!-- Because $n=4$, $m=3$ and $n>m$. Hence it is consistent and has infinitely many solutions by the above theorem. -->
+<!-- @end -->
+@slide
+These theorems give us the procedures and implications that allow us to completely solve any system of linear equations. The main computational tool is using row operations to convert an augmented matrix into reduced row-echelon form. Here is a broad outline of how we would instruct a computer to solve a system of linear equations.
+<h5>Steps of Solving a System of Linear Equations.</h5>
+@enumerate
+@item
+@col
+Represent a system of linear equations in $n$ variables by an augmented matrix.
+@item
+@col
+Convert the matrix to a row-equivalent matrix in reduced row-echelon form using the procedure given in lecture 3 Theorem 2.
+Identify the location of the pivot columns, and the rank $r$.
+@item
+@col
+If column $n+1$ is a pivot column, then the system is inconsistent.
+@item
+@col
+If column $n+1$ is not a pivot column, there are two possibilities:
+@enumerate
+@item
+$r=n$ and the solution is unique. It can be read off directly from the entries in rows 1 through $n$ of column $n+1$.
+@item
+$r < n$ and there are infinitely many solutions. we can describe the solution sets by the free variables.
+@endenumerate
+@endenumerate

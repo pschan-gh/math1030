@@ -1,0 +1,539 @@
+@course{MATH 1030}
+@setchapter{1}
+@chapter{Technique of solving system of linear equations}
+
+<h5 class='notkw'>Reference:</h5>
+@enumerate
+@item
+Gilbert Strang, <i>Linear Algebra and Its Applications</i>. Section 1.3.
+@item
+Robert A. Beezer, <i>A First Course in Linear Algebra</i>. Section <a target="_blank" href="http://linear.ups.edu/html/section-SSLE.html">Solving Systems of Linear Equations</a>.
+@endenumerate
+
+
+@section{Introduction}
+@label{ex2}
+In this section we give examples of systems of linear equations and solve one example.
+@eg
+Solve the system of equations:
+\begin{eqnarray}
+\label{eq:eg2-1}
+2x_{1}+3x_{2}&=3\\
+\label{eq:eg2-2}
+x_{1}-x_{2}&=4\\
+\end{eqnarray}
+@end
+@sol
+@newcol
+Adding Equation $\eqref{eq:eg2-1}$ to $-2$ $\times$
+Equation $\eqref{eq:eg2-2}$ gives:
+\[
+5x_{2}=-5.
+\]
+So $x_{2}=-1$. Substituting $x_{2}=-1$ into Equation $\eqref{eq:eg2-1}$ gives
+\[
+2x_{1}+3(-1)=3
+\]
+Hence, $x_{1}=3$ and $x_{2}=-1$ is a solution.
+
+@col
+Indeed:
+\[2(3)+3(-1)=3\]
+\[(3)-(-1)=4.\]
+In fact, it is the unique solution.
+@endcol
+@end
+@slide
+<strong>Main goal</strong>: One of the main goals of this course is to solve systems of linear equations with more variables and more equations.
+@eg
+\begin{align*}
+\displaystyle x_{1}+2x_{2}+2x_{3}&=4\\
+\displaystyle x_{1}+3x_{2}+3x_{3}&=5\\
+\displaystyle 2x_{1}+6x_{2}+5x_{3}&=6
+\end{align*}
+@end
+@eg
+\begin{align*}
+\displaystyle x_{1}+2x_{2}+x_{4}&=7\\
+\displaystyle x_{1}+x_{2}+x_{3}-x_{4}&=3\\
+\displaystyle 3x_{1}+x_{2}+5x_{3}-7x_{4}&=1
+\end{align*}
+@end
+@section{System of linear equations of two unknowns}
+You should all be very familiar with the procedure of solving a system equations of two unknowns.
+@subsection{Substitution}
+@eg
+\begin{equation}\label{v2sube1}3x+4y=2\end{equation}
+\begin{equation}\label{v2sube2}4x+5y=3\end{equation}
+Use $\eqref{v2sube2}$, we can solve for $y$ in terms of $x$:
+\begin{equation}\label{v2sube3}y=\frac{3}{5}-\frac{4}{5}x.\end{equation}
+Substitution this into $\eqref{v2sube1}$:
+
+
+\[3x+4(\frac{3}{5}-\frac{4}{5}x)=2\]
+\[\frac{12}{5}-\frac{x}{5}=2\]
+\[x=2.\]
+Substituting $x=2$ into $\eqref{v2sube3}$, we can solve for $y$:
+\[y=\frac{3}{5}-\frac{4}{5}\times 2=-1.\]
+So the solution is $x=2$, $y=-1$.
+@end
+
+
+@remark @col
+There are other ways to use substitution, for example
+@enumerate
+@item
+Solve $x$ by $\eqref{v2sube2}$ in terms of $y$ and substitute it into $\eqref{v2sube1}$
+@item
+Solve $y$ by $\eqref{v2sube1}$ in terms of $x$ and substitute it into $\eqref{v2sube2}$
+@item
+Solve $x$ by $\eqref{v2sube1}$ in terms of $y$ and substitute it into $\eqref{v2sube2}$
+@endenumerate
+But you <strong>cannot</strong> get the solution by
+@enumerate
+@item
+Solve $y$ by $\eqref{v2sube2}$ in terms of $x$ and substitute it into $\eqref{v2sube2}$ (No substitution back to the original equation)
+@item
+Solve $y$ by $\eqref{v2sube1}$ in terms of $x$ and substitute it into $\eqref{v2sube1}$
+
+@item
+Solve $x$ by $\eqref{v2sube2}$ in terms of $y$ and substitute it into $\eqref{v2sube2}$
+@item
+Solve $x$ by $\eqref{v2sube1}$ in terms of $y$ and substitute it into $\eqref{v2sube1}$
+@endenumerate
+@end
+
+@subsection{Elimination}
+@eg
+Again, let’s solve the system of linear equations from the previous example.
+\begin{equation}\label{v2elime1}3x+4y=2\end{equation}
+\begin{equation}\label{v2elime2}4x+5y=3\end{equation}
+Consider $\eqref{v2elime1}-\frac{3}{4}\eqref{v2elime2}$.
+
+
+\begin{align*}
+   & 3x & + & 4y & = & 2 \\
+-)\quad & 3x & + & \frac{15}4 y & = & \frac{9}4 \\
+\hline
+     &   &  & \frac{1}{4} y &= &-\frac{1}{4}
+\end{align*}
+Thus $y=-1$. Substituting it into $\eqref{v2elime1}$:
+\[3x+4(-1)=2\]
+\[x=2.\]
+So we obtain the solution $x=2$, $y=-1$.
+@end
+
+
+@remark
+@enumerate
+@item
+The number $\frac{3}{4}$ is so chosen such that the coefficient of $x$ is eliminated.
+@item
+At some point, we still need to use substitution to get the solution.
+@endenumerate
+@end
+
+
+@section{System of linear equations of three unknowns}
+<strong>Cold joke</strong>
+@col
+There were two men trying to decide what to do for a living. They
+went to see a counselor, and he decided that they had good problem
+solving skills.
+He tried a test to narrow the area of specialty. He put each man in a
+room with a stove, a table, and a pot of water on the table. He said
+”Boil the water”. Both men moved the pot from the table to the stove
+and turned on the burner to boil the water. Next, he put them into a
+room with a stove, a table, and a pot of water on the floor. Again,
+he said ”Boil the water”. The first man put the pot on the stove and
+turned on the burner. The counselor told him to be an Engineer,
+because he could solve each problem individually. The second man
+moved the pot from the floor to the table, and then moved the pot from
+the table to the stove and turned on the burner. The counselor told
+him to be a mathematician because he <strong>reduced the problem to a
+previously solved problem</strong>.
+
+
+@subsection{Substitution}
+@eg
+Solve the following system of linear equations
+\begin{equation}\label{v3sube1}x+2y+2z=4\end{equation}
+\begin{equation}\label{v3sube2}x+3y+3z=5\end{equation}
+\begin{equation}\label{v3sube3}2x+6y+5z=6\end{equation}
+
+@col
+Find $x$ in terms of $y,z$ by $\eqref{v3sube1}$ :
+\begin{equation}\label{v3sube4}x=4-2y-2z.\end{equation}
+Substituting $\eqref{v3sube4}$ into $\eqref{v3sube2}$, we obtain
+\[(4-2y-2z)+3y+3z=5\]
+i.e.,
+\begin{equation}
+\label{v3sube5}y+z=1.
+\end{equation}
+@col
+Substituting $\eqref{v3sube4}$ into $\eqref{v3sube3}$, we obtain
+\[2(4-2y-2z)+6y+5z=6,\]
+i.e.,
+\begin{equation}\label{v3sube6}2y+z=-2\end{equation}
+The equations are reduced to solving a linear system of equations with two unknowns:
+\[
+\begin{cases}
+y+z=1\\
+2y+z=-2
+\end{cases}
+\]
+@col
+Solve $y$ in terms of $z$ by $\eqref{v3sube5}$:
+\begin{equation}\label{v3sube7}y=1-z\end{equation}
+Then substitute $y=1-z$ into $\eqref{v3sube6}$:
+\[2(1-z)+z=-2\]
+i.e.
+\[
+z=4.
+\]
+@col
+By $\eqref{v3sube7}$
+\[y=1-z=-3.\]
+Substitute $y=-3$, $z=4$ into $\eqref{v3sube4}$,
+\[x=4-2y-2z=4-2\times(-3)-2\times 4=2.\]
+Hence $x=2,y=-3,z=4$ is a solution.
+@end
+@subsection{Elimination}
+Using substitution all the way to solve linear equations is not the best way. Instead, we can use elimination to simplify the system of linear equations first.
+@eg
+We solve the following system by a sequence of equation operations.
+\[\displaystyle x+2y+2z=4 \tag{1}\]
+\[\displaystyle x+3y+3z=5 \tag{2}\]
+\[\displaystyle 2x+6y+5z=6 \tag{3}\]
+@col
+$-1$ times equation 1, add to equation 2:
+\[\displaystyle x+2y+2z=4\]
+\[\displaystyle 0x+1y+1z=1\]
+\[\displaystyle 2x+6y+5z=6\]
+@col
+$-2$ times equation 1, add to equation 3:
+\[\displaystyle x+2y+2z=4\]
+\[\displaystyle 0x+1y+1z=1\]
+\[\displaystyle 0x+2y+1z=-2\]
+@col
+$-2$ times equation 2, add to equation 3:
+\[\displaystyle x+2y+2z=4\]
+\[\displaystyle 0x+1y+1z=1\]
+\[\displaystyle 0x+0y-1z=-4\]
+@col
+$-1$ times equation 3:
+\[\displaystyle x+2y+2z=4\]
+\[\displaystyle 0x+1y+1z=1\]
+\[\displaystyle 0x+0y+1z=4\]
+which can be written more clearly as:
+
+@col
+\[\displaystyle x+2y+2z=4\]
+\[\displaystyle y+z=1\]
+\[\displaystyle z=4\]
+@col
+The third equation requires that $z=4$ to be true. Making this substitution into equation 2 we arrive at $y=-3$, and finally, substituting these values of $y$ and $z$ into the first equation, we find that $x=2$.
+@end
+@remark
+We can add several more eliminations to solve $x,y,z$ without substitution:
+\[\displaystyle x+2y+2z=4\]
+\[\displaystyle 0x+1y+1z=1\]
+\[\displaystyle 0x+0y+1z=4\]
+$-1$ times equation 3, add to equation 2 and $-2$ times equation 3, add to equation 1
+\[\displaystyle x+2y+0z=-4\]
+\[\displaystyle 0x+1y+0z=-3\]
+\[\displaystyle 0x+0y+1z=4\]
+$-2$ times equation 2, add to equation 1
+\[\displaystyle x+0y+0z=2\]
+\[\displaystyle 0x+1y+0z=-3\]
+\[\displaystyle 0x+0y+1z=4\]
+So $x=2,y=-3,z=4$ is a solution.
+@end
+@section{More Examples}
+@eg
+Solve:
+\begin{align}
+\displaystyle x_{1}-5x_{2}+3x_{3}&=1 \tag{1}\\
+\displaystyle 2x_{1}-4x_{2}+x_{3}&=0 \tag{2}\\
+\displaystyle x_{1}+x_{2}-2x_{3}&=-1 \tag{3}
+\end{align}
+@col
+$-2$ times equation 1, add to equation 2:
+\begin{align*}
+x_1 - 5x_2 +  3x_3 &= 1 \\
+0x_1  + 6x_2 -5 x_3 &= -2 \\
+x_1 + x_2 -2x_3  &= -1
+\end{align*}
+@col
+$-1$ times equation 1, add to equation 3:
+\begin{align*}
+x_1 - 5x_2 +  3x_3 &= 1 \\
+0x_1+ 6x_2 -5 x_3 &= -2 \\
+0x_1+ 6x_2 -5x_3  &= -2
+\end{align*}
+@col
+$-1$ times equation 2, add to equation 3:
+\begin{align*}
+x_1 - 5x_2 +  3x_3 &= 1 \\
+0x_1+ 6x_2 -5 x_3 &= -2 \\
+0x_1+0x_2+0x_3 &= 0
+\end{align*}
+$\frac{5}{6}$ times equation 2, add to equation 1:
+\begin{align*}
+x_1 +0x_2 -\frac{7}{6}x_3 &= -\frac{2}{3} \\
+0x_1+ 6x_2 -5 x_3 &= -2 \\
+0x_1+0x_2+0x_3 &= 0
+\end{align*}
+@col
+We can express $x_{1},x_{2}$ in terms of $x_{3}$:
+\[\displaystyle x_{1}=-\frac{2}{3}+\frac{7}{6}x_{3}\]
+\[\displaystyle x_{2}=-\frac{1}{3}+\frac{5}{6}x_{3}\]
+@col
+The solution set is:
+\[\{(-\frac{2}{3}+\frac{7}{6}a,-\frac{1}{3}+\frac{5}{6}a,a)\,|\,a\text{ real numbers}.\}\]
+@end
+@slide
+@eg
+Solve:
+\begin{align*}
+x_1 - 5x_2 +  3x_3 &= 1 \\
+2x_1 - 4x_2 + x_3 &= 0 \\
+x_1 + x_2 -2x_3  &= -2
+\end{align*}
+@col
+$-2$ times equation 1, add to equation 2:
+\begin{align*}
+x_1 - 5x_2 +  3x_3 &= 1 \\
+0x_1+6x_2 -5 x_3 &= -2 \\
+x_1 + x_2 -2x_3  &= -2
+\end{align*}
+@col
+$-1$ times equation 1, add to equation 3:
+\begin{align*}
+x_1 - 5x_2 +  3x_3 &= 1 \\
+0x_1+6x_2 -5 x_3 &= -2 \\
+0x_1+6x_2 -5x_3  &= -3
+\end{align*}
+@col
+$-1$ times equation 2, add to equation 3:
+\begin{align*}
+x_1 - 5x_2 +  3x_3 &= 1 \\
+0x_1+6x_2 -5 x_3 &= -2 \\
+0x_1+0x_2+0x_3 &= -1
+\end{align*}
+@col
+The last equation, $0=-1$ has no solution. So the system of linear equations has no solution.
+@end
+@slide
+@eg
+Solve:
+\begin{align*}
+x_1+2x_2 +0x_3+ x_4&= 7\\
+x_1+x_2+x_3-x_4&=3\\
+3x_1+x_2+5x_3-7x_4&=1
+\end{align*}
+@col
+$-1$ times equation 1, add to equation 2:
+\begin{align*}
+x_1+2x_2 +0x_3+ x_4&= 7\\
+0x_1-x_2+x_3-2x_4&=-4\\
+3x_1+x_2+5x_3-7x_4&=1
+\end{align*}
+@col
+$-3$ times equation 1, add to equation 3:
+\begin{align*}
+x_1+2x_2 +0x_3+ x_4&= 7\\
+0x_1-x_2+x_3-2x_4&=-4\\
+0x_1-5x_2+5x_3-10x_4&=-20
+\end{align*}
+@col
+$-5$ times equation 2, add to equation 3:
+\begin{align*}
+x_1+2x_2 +0x_3+ x_4&= 7\\
+0x_1-x_2+x_3-2x_4&=-4\\
+0x_1+0x_2+0x_3+0x_4&=0
+\end{align*}
+@col
+$-1$ times equation 2:
+\begin{align*}
+x_1+2x_2 +0x_3+ x_4&= 7\\
+0x_1+x_2-x_3+2x_4&=4\\
+0x_1+0x_2+0x_3+0x_4&=0
+\end{align*}
+@col
+$-2$ times equation 2, add to equation 1:
+\begin{align*}
+x_1+0x_2 +2x_3-3x_4&= -1\\
+0x_1+x_2-x_3+2x_4&=4\\
+0x_1+0x_2+0x_3+0x_4&=0
+\end{align*}
+which can be written more clearly as:
+
+@col
+\begin{align*}
+x_1+2x_3 - 3x_4&= -1\\
+x_2-x_3+2x_4&=4\\
+0&=0
+\end{align*}
+@col
+The last equation $0=0$ is always true, so we can ignore it and only consider the first two equations. We can analyze the second equation without consideration of the variable $x_{1}$. It would appear that there is considerable latitude in how we can choose $x_{2}$, $x_{3}$, $x_{4}$ and make this equation true. Let us choose $x_{3}$ and $x_{4}$ to be <strong>anything</strong> we please, say $x_{3}=a$ and $x_{4}=b$.
+
+@col
+Now we can take these arbitrary values for $x_{3}$ and $x_{4}$, substitute them in equation 1, to obtain
+\[x_{1}+2a-3b=-1\]
+\[x_{1}=-1-2a+3b\]
+@col
+Similarly, equation 2 becomes
+\[x_{2}-a+2b=4\]
+\[x_{2}=4+a-2b\]
+@col
+So our arbitrary choices of values for $x_{3}$ and $x_{4}$ ($a$ and $b$) translate into specific values of $x_{1}$ and $x_{2}$.
+
+@col
+Now we can easily and quickly find many more (infinitely more). Suppose we choose $a=5$ and $b=-2$, then we compute
+\[\displaystyle x_{1}=-1-2(5)+3(-2)=-17\]
+\[\displaystyle x_{2}=4+5-2(-2)=13\]
+@col
+and you can verify that $(x_{1},\,x_{2},\,x_{3},\,x_{4})=(-17,\,13,\,5,\,-2)$ makes all three equations true. The entire solution set is written as
+\[\{(-1-2a+3b,\,4+a-2b,\,a,\,b)\,|\,a,b\text{ real numbers}\}.\]
+@end
+@slide
+@eg
+Solve the following system of linear equations:
+\[
+\begin{alignedat}{6}
+& {} {} &  x_2 & {}+{} & x_3 & {}+{} & 2x_4   & {}+{} & 2x_5 &{}={} & 2 \\
+x_1 & {}+{} &  2x_2 & {}+{} & 3x_3 & {}+{} & 2x_4 &  {}+{}&  3x_5&{}={} & 4 \\
+-2x_1 & {}-{} &  x_2 & {}-{} & 3x_3 & {}+{} & 3x_4 & {}+{} &  x_5   &{}={} & 3
+\end{alignedat}
+\]
+@col
+Swap equation 1 and equation 2:
+\[
+\begin{alignedat}{6}
+x_1 & {}+{} &  2x_2 & {}+{} & 3x_3 & {}+{} & 2x_4 &  {}+{}&  3x_5&{}={} & 4 \\
+& {} {} &  x_2 & {}+{} & x_3 & {}+{} & 2x_4   & {}+{} & 2x_5 &{}={} & 2 \\
+-2x_1 & {}-{} &  x_2 & {}-{} & 3x_3 & {}+{} & 3x_4 & {}+{} &  x_5   &{}={} & 3
+\end{alignedat}
+\]
+@col
+2 times equation 1, and add it to equation 3:
+\[
+\begin{alignedat}{6}
+x_1 & {}+{} &  2x_2 & {}+{} & 3x_3 & {}+{} & 2x_4 &  {}+{}&  3x_5&{}={} & 4 \\
+& {} {} &  x_2 & {}+{} & x_3 & {}+{} & 2x_4   & {}+{} & 2x_5 &{}={} & 2 \\
+& {} {} & 3x_2 & {}+{} & 3x_3 & {}+{} & 7x_4 &  {}+{} &7x_5     &{}={} & 11
+\end{alignedat}
+\]
+@col
+-3 times equation 2 and add it to equation 3:
+\[
+\begin{alignedat}{6}
+x_1 & {}+{} &  2x_2 & {}+{} & 3x_3 & {}+{} & 2x_4 &  {}+{}&  3x_5&{}={} & 4 \\
+& {} {} &  x_2 & {}+{} & x_3 & {}+{} & 2x_4   & {}+{} & 2x_5 &{}={} & 2 \\
+& {} {} &     & {}  {} &     & {} {} & x_4 &  {}+{}  & x_5 &{}={} & 5
+\end{alignedat}
+\]
+@col
+Now the system of linear equations looks like an ”inverted stair”.
+We can then solve the system of linear equations by substitution.
+(A better method well be given later.)
+
+@col
+By the last equation:
+\[x_{4}=5-x_{5}.\]
+Solve $x_{2}$ in terms of other variables by equation 2:
+\[\displaystyle x_{2}=2-x_{3}-2x_{4}-2x_{5}\]
+\[\displaystyle=2-x_{3}-2(5-x_{5})-2x_{5}\]
+\[\displaystyle=-8-x_{3}\]
+@col
+Solve $x_{1}$ in terms of other variables by equation 1:
+\[\displaystyle x_{1}=4-2x_{2}-3x_{3}-2x_{4}-3x_{5}\]
+\[\displaystyle=4-2(-8-x_{3})-3x_{3}-2(5-x_{5})-3x_{5}\]
+\[\displaystyle=10-x_{3}-x_{5}.\]
+$x_{3},x_{5}$ can be taken as any values.
+
+@col
+Set $x_{3}=a$, $x_{5}=b$, the solution set can be given by
+\[\{(10-a-b,-8-a,a,5-b,b)\,|\,a,b\text{ real numbers}\}.\]
+@col
+<strong>A better method:</strong>
+Instead of subsitution, we could use more elimination:
+\[
+\begin{alignedat}{6}
+x_1 & {}+{} &  2x_2 & {}+{} & 3x_3 & {}+{} & 2x_4 &  {}+{}&  3x_5&{}={} & 4 \\
+& {} {} &  x_2 & {}+{} & x_3 & {}+{} & 2x_4   & {}+{} & 2x_5 &{}={} & 2 \\
+& {} {} &     & {}  {} &     & {} {} & x_4 &  {}+{}  & x_5 &{}={} & 5
+\end{alignedat}
+\]
+@col
+-2 times equation 3 and add it to equation 2:
+\[
+\begin{alignedat}{6}
+x_1 & {}+{} &  2x_2 & {}+{} & 3x_3 & {}+{} & 2x_4 &  {}+{}&  3x_5&{}={} & 4 \\
+& {} {} &  x_2 & {}+{} & x_3 & {} {} &   & {} {} &  &{}={} & -8 \\
+& {} {} &     & {}  {} &     & {} {} & x_4 &  {}+{}  & x_5 &{}={} & 5
+\end{alignedat}
+\]
+@col
+-2 times equation 3 and add it to equation 1:
+\[
+\begin{alignedat}{6}
+x_1 & {}+{} &  2x_2 & {}+{} & 3x_3 & {}+{} &     &  {}+{}&  x_5&{}={} & -6 \\
+& {} {} &  x_2 & {}+{} & x_3 & {} {} &   & {} {} &  &{}={} & -8 \\
+& {} {} &     & {}  {} &     & {} {} & x_4 &  {}+{}  & x_5 &{}={} & 5
+\end{alignedat}
+\]
+@col
+-2 times equation 2 and add it to equation 1:
+\[
+\begin{alignedat}{6}
+x_1 & {}+{} &      & {}+{} & x_3 & {} {} &     &  {}+{}&  x_5&{}={} &10 \\
+& {} {} &  x_2 & {}+{} & x_3 & {} {} &   & {} {} &  &{}={} & -8 \\
+& {} {} &     & {}  {} &     & {} {} & x_4 &  {}+{}  & x_5 &{}={} & 5
+\end{alignedat}
+\]
+@col
+Notice the following:
+@enumerate
+@item
+@newcol
+The system of equations looks like an ”inverted” stairs.
+@endcol
+@item
+@newcol
+The leftmost variables in the equations are $x_{1}$, $x_{2}$ and $x_{4}$.
+@endcol
+@item
+@newcol
+Only the first equation has variable $x_{1}$.
+@endcol
+@item
+@newcol
+Only the second equation has variable $x_{2}$.
+@endcol
+@item
+@newcol
+Only the third equation has variable $x_{4}$.
+@endcol
+@endenumerate
+@col
+Move $x_{3},x_{5}$ to another side.
+\begin{align*}
+ x_1 &= 10-x_3-x_5\\
+ x_2 &= -8-x_3\\
+ x_4 &= 5-x_5
+\end{align*}
+The right hand sides have $x_{3},x_{5}$ as variables only and $x_{3},x_{5}$ can be taken as any values.
+Set $x_{3}=a$, $x_{5}=b$, the solution set can be given by
+\[\{(10-a-b,-8-a,a,5-b,b)\,|\,a,b\text{ real numbers}\}.\]
+@end
+@section{Some Observations}
+@ul
+@li
+Some systems of linear equations have exactly one solution.
+@li
+Some systems of linear equations have no solution.
+@li
+Some systems of linear equations have infinite many solutions. The solutions can be expressed in terms of 1 or 2 (or even more) variables.
+@endul

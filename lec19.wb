@@ -1,0 +1,1803 @@
+@course{Math 1030}
+@setchapter{19}
+@chapter{Eigenvalues and Eigenvectors}
+
+<h5 class="notkw">Reference.</h5>
+Beezer, Ver 3.5 Subsection EEM (print version p283-285), Subsection CEE and ECEE (print version p289-297)
+
+<h5 class="notkw">Exercise.</h5>
+Exercises with solutions can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf}
+
+(Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$)Section EE, p103-108, all except C22, M60. Note that for the questions regarding diagonalizability, use our method instead of the method in the solution manual.
+
+@section{Eigenvalues and Eigenvectors of a Matrix}
+@defn
+@title{Eigenvalues and Eigenvectors of a Matrix}
+@label{EEM}
+Suppose that $A$ is a square matrix of size $n$, $\mathbf{x}$ a non-zero vector in ${\mathbb{R}}^{n}$, and $\lambda$ a scalar in ${\mathbb{R}}^{\hbox{}}$. We say $\mathbf{x}$ is an <b>eigenvector</b> of $A$ with <b>eigenvalue</b> $\lambda$ if
+\begin{align*}
+\displaystyle A\mathbf{x}=\lambda\mathbf{x}.
+\end{align*}
+@end
+@slide
+@eg
+Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}2&1&1\\
+1&2&1\\
+1&1&2\end{bmatrix}
+\end{align*}
+and let
+\begin{align*}
+\displaystyle \mathbf{u}=\begin{bmatrix}1\\
+1\\
+1\end{bmatrix},\,\,\mathbf{v}=\begin{bmatrix}1\\
+-1\\
+0\end{bmatrix},\,\,\mathbf{w}=\begin{bmatrix}1\\
+0\\
+-1\end{bmatrix}.
+\end{align*}
+@newcol
+Then
+\begin{align*}
+\displaystyle A\mathbf{u}=\begin{bmatrix}4\\
+4\\
+4\end{bmatrix}=4\mathbf{u},\,\,A\mathbf{v}=\begin{bmatrix}1\\
+-1\\
+0\end{bmatrix}=1\mathbf{v},\,\,A\mathbf{w}=\begin{bmatrix}1\\
+0\\
+-1\end{bmatrix}=1\mathbf{w}.
+\end{align*}
+@col
+So $\mathbf{u}$ is an eigenvector of $A$ with eigenvalue $4$,
+$\mathbf{v}$ is an eigenvector of $A$ with eigenvalue $1$, and
+$\mathbf{w}$ is an eigenvector $A$ with eigenvalue $1$. Now let $\mathbf{x}=100\mathbf{u}$. Then
+\begin{align*}
+\displaystyle A\mathbf{x}=100A\mathbf{u}=400\mathbf{u}=4\mathbf{x}.
+\end{align*}
+@col
+So $\mathbf{x}$ is an eigenvector of $A$ with eigenvalue $4$.Next let $\mathbf{y}=\mathbf{v}+\mathbf{w}$, then
+\begin{align*}
+\displaystyle A\mathbf{y}=A\mathbf{v}+A\mathbf{w}=\mathbf{v}+\mathbf{w}=1\mathbf{y}.
+\end{align*}
+@col
+So $\mathbf{y}$ is an eigenvector of $A$ with eigenvalue $1$. Finally, let $\mathbf{z}=\mathbf{u}+\mathbf{v}=\begin{bmatrix}2\\
+0\\
+1\end{bmatrix}$. Then
+\begin{align*}
+\displaystyle A\mathbf{z}=4\mathbf{u}+\mathbf{v}=\begin{bmatrix}5\\
+3\\
+4\end{bmatrix}
+\end{align*}
+is not a scalar multiple of $\mathbf{z}$. So $\mathbf{z}$ is not an eigenvector.
+This shows that sum of eigenvectors need not be an eigenvector.
+@endcol
+@end
+@eg
+@label{eg:example3}
+Consider the matrix
+\begin{align*}
+\displaystyle A=\begin{bmatrix}204&98&-26&-10\\
+-280&-134&36&14\\
+716&348&-90&-36\\
+-472&-232&60&28\end{bmatrix}
+\end{align*}
+and the vectors
+\begin{align*}
+\displaystyle\mathbf{x}=\begin{bmatrix}1\\
+-1\\
+2\\
+5\end{bmatrix}&\displaystyle\mathbf{y}=\begin{bmatrix}-3\\
+4\\
+-10\\
+4\end{bmatrix}&\displaystyle\mathbf{z}=\begin{bmatrix}-3\\
+7\\
+0\\
+8\end{bmatrix}&\displaystyle\mathbf{w}=\begin{bmatrix}1\\
+-1\\
+4\\
+0\end{bmatrix}.
+\end{align*}
+@newcol
+Then
+\begin{align*}
+\displaystyle A\mathbf{x}=\begin{bmatrix}204&98&-26&-10\\
+-280&-134&36&14\\
+716&348&-90&-36\\
+-472&-232&60&28\end{bmatrix}\begin{bmatrix}1\\
+-1\\
+2\\
+5\end{bmatrix}=\begin{bmatrix}4\\
+-4\\
+8\\
+20\end{bmatrix}=4\begin{bmatrix}1\\
+-1\\
+2\\
+5\end{bmatrix}=4\mathbf{x}
+\end{align*}
+so that $\mathbf{x}$ is an eigenvector of $A$ with eigenvalue $\lambda=4$.
+
+@col
+Also,
+\begin{align*}
+\displaystyle A\mathbf{y}=\begin{bmatrix}204&98&-26&-10\\
+-280&-134&36&14\\
+716&348&-90&-36\\
+-472&-232&60&28\end{bmatrix}\begin{bmatrix}-3\\
+4\\
+-10\\
+4\end{bmatrix}=\begin{bmatrix}0\\
+0\\
+0\\
+0\end{bmatrix}=0\begin{bmatrix}-3\\
+4\\
+-10\\
+4\end{bmatrix}=0\mathbf{y}
+\end{align*}
+so that $\mathbf{y}$ is an eigenvector of $A$ with eigenvalue $\lambda=0$.
+
+@col
+Also,
+\begin{align*}
+\displaystyle A\mathbf{z}=\begin{bmatrix}204&98&-26&-10\\
+-280&-134&36&14\\
+716&348&-90&-36\\
+-472&-232&60&28\end{bmatrix}\begin{bmatrix}-3\\
+7\\
+0\\
+8\end{bmatrix}=\begin{bmatrix}-6\\
+14\\
+0\\
+16\end{bmatrix}=2\begin{bmatrix}-3\\
+7\\
+0\\
+8\end{bmatrix}=2\mathbf{z}
+\end{align*}
+so that $\mathbf{z}$ is an eigenvector of $A$ with eigenvalue $\lambda=2$.
+
+@col
+Finally,
+\begin{align*}
+\displaystyle A\mathbf{w}=\begin{bmatrix}204&98&-26&-10\\
+-280&-134&36&14\\
+716&348&-90&-36\\
+-472&-232&60&28\end{bmatrix}\begin{bmatrix}1\\
+-1\\
+4\\
+0\end{bmatrix}=\begin{bmatrix}2\\
+-2\\
+8\\
+0\end{bmatrix}=2\begin{bmatrix}1\\
+-1\\
+4\\
+0\end{bmatrix}=2\mathbf{w}
+\end{align*}
+so that $\mathbf{w}$ is an eigenvector of $A$ with eigenvalue $\lambda=2$.
+
+@col
+We have demonstrated four eigenvectors of $A$. Are there more? Yes, any nonzero scalar multiple of an eigenvector is again an eigenvector. In this example, setting $\mathbf{u}=30\mathbf{x}$, we have
+\begin{align*}
+\displaystyle A\mathbf{u}=A(30\mathbf{x})=30A\mathbf{x}=30(4\mathbf{x})=4(30\mathbf{x})=4\mathbf{u}
+\end{align*}
+so that $\mathbf{u}$ is also an eigenvector of $A$ with the same eigenvalue, $\lambda=4$.
+
+@col
+The vectors $\mathbf{z}$ and $\mathbf{w}$ are both eigenvectors of $A$ for the same eigenvalue $\lambda=2$, yet this is not as simple as the two vectors just being scalar multiples of each other (they are not). Look what happens when we add them together, forming $\mathbf{v}=\mathbf{z}+\mathbf{w}$, which we then multiply by $A$:
+\begin{align*}
+\displaystyle A\mathbf{v}=A(\mathbf{z}+\mathbf{w})=A\mathbf{z}+A\mathbf{w}
+\end{align*}
+\begin{align*}
+\displaystyle =2\mathbf{z}+2\mathbf{w}=2(\mathbf{z}+\mathbf{w})=2\mathbf{v}.
+\end{align*}
+@col
+Hence, $\mathbf{v}$ is also an eigenvector of $A$ with eigenvalue $\lambda=2$. It would appear that the set of eigenvectors that are associated with a fixed eigenvalue is closed under the vector space operations of ${\mathbb{R}}^{n}$.
+
+@col
+The vector $\mathbf{y}$ is an eigenvector of $A$ for the eigenvalue $\lambda=0$,
+so $A\mathbf{y}=0\mathbf{y}=\mathbf{0}$. But this also means that $\mathbf{y}\in{\mathcal{N}}\!\left(A\right)$. There would appear to be a connection here also.
+@endcol
+@end
+@section{Existence of Eigenvalues and Eigenvectors}
+
+Observe that
+\begin{align*}
+\displaystyle A\mathbf{x}=\lambda\mathbf{x}\iff A\mathbf{x}-\lambda I_{n}\mathbf{x}=\mathbf{0}\iff\left(A-\lambda I_{n}\right)\mathbf{x}=\mathbf{0}.
+\end{align*}
+@newcol
+So, any eigenvector $x$ with eigenvalue $\lambda$ is a nonzero element of the null space of $A-\lambda I_{n}$. In particular, the matrix $A-\lambda I_{n}$ is necessarily singular, therefore having zero determinant. These ideas motivate the following definition and example.
+
+@endcol
+@slide
+@defn
+@title{Characteristic Polynomial}
+Suppose that $A$ is a square matrix of size $n$. Then the <b>characteristic polynomial</b> of $A$ is the polynomial $p_{A}\left(x\right)$ defined by
+\begin{align*}
+\displaystyle p_{A}\left(x\right)=\det\left(A-xI_{n}\right)
+\end{align*}
+@end
+@slide
+@eg
+Consider
+\begin{align*}
+\displaystyle F=\begin{bmatrix}-13&-8&-4\\
+12&7&4\\
+24&16&7\end{bmatrix}.
+\end{align*}
+@newcol
+We compute
+\begin{align*}
+\displaystyle p_{F}\left(x\right)&\displaystyle=\det\left(F-xI_{3}\right) \\
+&\displaystyle=\begin{vmatrix}-13-x&-8&-4\\
+12&7-x&4\\
+24&16&7-x\end{vmatrix} \\
+&\displaystyle=(-13-x)\begin{vmatrix}7-x&4\\
+16&7-x\end{vmatrix}+(-8)(-1)\begin{vmatrix}12&4\\
+24&7-x\end{vmatrix} \\
+&\displaystyle\quad\quad+(-4)\begin{vmatrix}12&7-x\\
+24&16\end{vmatrix} \\
+&\displaystyle=(-13-x)((7-x)(7-x)-4(16)) \\
+&\displaystyle\quad\quad+(-8)(-1)(12(7-x)-4(24)) \\
+&\displaystyle\quad\quad+(-4)(12(16)-(7-x)(24)) \\
+&\displaystyle=3+5x+x^{2}-x^{3} \\
+&\displaystyle=-(x-3)(x+1)^{2}.
+\end{align*}
+@endcol
+@end
+@newcol
+The characteristic polynomial is our main computational tool for finding eigenvalues, and will sometimes be used to aid us in determining the properties of eigenvalues.
+
+@endcol
+@slide
+@thm
+@title{Eigenvalues of a Matrix are Roots of Characteristic Polynomials}
+Suppose that $A$ is a square matrix.
+Then $\lambda$ is an eigenvalue of $A$ if and only if $p_{A}\left(\lambda\right)=0$.
+@end
+@proof
+@newcol
+We have the following equivalences:
+
+$\lambda$ is an eigenvalue of $A$ $\iff$ there exists $\mathbf{x}\neq\mathbf{0}$ so that $A\mathbf{x}=\lambda\mathbf{x}$ $\iff$ there exists $\mathbf{x}\neq\mathbf{0}$ so that $A\mathbf{x}-\lambda\mathbf{x}=\mathbf{0}$ $\iff$ there exists $\mathbf{x}\neq\mathbf{0}$ so that $A\mathbf{x}-\lambda I_{n}\mathbf{x}=\mathbf{0}$ $\iff$ there exists $\mathbf{x}\neq\mathbf{0}$ so that $(A-\lambda I_{n})\mathbf{x}=\mathbf{0}$ $\iff$ $A-\lambda I_{n}$ is singular $\iff$ $p_{A}\left(\lambda\right)=\det\left(A-\lambda I_{n}\right)=0$.
+@qed
+@endcol
+@end
+@slide
+@thm
+@title{Degree of the Characteristic Polynomial}
+@label{DCP}
+Suppose that $A$ is a square matrix of size $n$. Then the characteristic polynomial $p_{A}\left(x\right)$ has degree $n$.
+@end
+@proof
+@newcol
+You can skip the proof. The following briefly explains why the theorem is true. It is not a rigorous proof.We have
+\begin{align*}
+\displaystyle p_{A}\left(x\right)=\begin{vmatrix}a_{11}-x&a_{12}&\cdots&a_{1n}\\
+a_{21}&a_{22}-x&\cdots&a_{2n}\\
+\vdots&\vdots&\vdots&\vdots\\
+a_{n1}&a_{n2}&\cdots&a_{nn}-x\end{vmatrix}.
+\end{align*}
+@col
+The determinant is a sum of products of entries of $A-xI_{n}$, and all such products have degree at most $n-1$, except the product of the diagonal entries,
+\begin{align*}
+\displaystyle (a_{11}-x)(a_{22}-x)\cdots(a_{nn}-x),
+\end{align*}
+which has degree $n$. <b>Remark</b>: We can also see that the leading coefficient is $(-1)^{n}$.
+@qed
+@endcol
+@end
+@slide
+@eg
+@label{eg:example4}
+In @ref{eg:example3}, we found the characteristic polynomial of
+\begin{align*}
+\displaystyle F=\begin{bmatrix}-13&-8&-4\\
+12&7&4\\
+24&16&7\end{bmatrix}
+\end{align*}
+to be $p_{F}\left(x\right)=-(x-3)(x+1)^{2}$. Being written in factored form, we can simply read off its roots; they are $x=3$ and $x=-1$. By the previous theorem, $\lambda=3$ and $\lambda=-1$ are both eigenvalues of $F$. Moreover, these are the only eigenvalues of $F$.
+@end
+@slide
+@defn
+@title{Eigenspace of a Matrix}
+Suppose that $A$ is a square matrix and $\lambda$ is an eigenvalue of $A$.
+Then the <b>eigenspace</b> of $A$ for $\lambda$, denoted by ${\mathcal{E}}_{A}\left(\lambda\right)$, is the set of all eigenvectors of $A$ with eigenvalue $\lambda$, together with the zero vector.
+@end
+@slide
+@thm
+@title{Eigenspace of a Matrix is a Null Space}
+Suppose that $A$ is a square matrix of size $n$ and $\lambda$ is an eigenvalue of $A$. Then
+\begin{align*}
+\displaystyle {\mathcal{E}}_{A}\left(\lambda\right)={\mathcal{N}}\!\left(A-\lambda I_{n}\right).
+\end{align*}
+@end
+@proof
+@newcol
+First, notice that $\mathbf{0}\in{\mathcal{E}}_{A}\left(\lambda\right)$ (by definition) and $\mathbf{0}\in{\mathcal{N}}\!\left(A-\lambda I_{n}\right)$.
+Now consider any nonzero vector $\mathbf{x}\in{\mathbb{R}}^{n}$,$\mathbf{x}\in{\mathcal{E}}_{A}\left(\lambda\right)\iff A\mathbf{x}=\lambda\mathbf{x}$$\iff A\mathbf{x}-\lambda\mathbf{x}=\mathbf{0}$ $\iff A\mathbf{x}-\lambda I_{n}\mathbf{x}=\mathbf{0}$$\iff\left(A-\lambda I_{n}\right)\mathbf{x}=\mathbf{0}$$\iff\mathbf{x}\in{\mathcal{N}}\!\left(A-\lambda I_{n}\right)$.
+
+@col
+This completes the proof.
+@qed
+@endcol
+@end
+@slide
+@thm
+@title{Eigenspace for a Matrix is a Subspace}
+Suppose that $A$ is a square matrix of size $n$ and $\lambda$ is an eigenvalue of $A$.
+Then the eigenspace ${\mathcal{E}}_{A}\left(\lambda\right)$ is a subspace of the vector space ${\mathbb{R}}^{n}$.
+@end
+@proof
+@newcol
+This holds because:
+\[
+{\mathcal{E}}_{A}\left(\lambda\right)={\mathcal{N}}\!\left(A-\lambda I_{n}\right),
+\]
+and the null space of any $m \times n$ matrix is a subspace of $\mathbb{R}^n$.
+@qed
+@endcol
+@end
+@slide
+@eg
+@ref{eg:example3} and @ref{eg:example4}
+describe the characteristic polynomial and eigenvalues of the $3\times 3$ matrix
+\begin{align*}
+\displaystyle F=\begin{bmatrix}-13&-8&-4\\
+12&7&4\\
+24&16&7\end{bmatrix}.
+\end{align*}
+@newcol
+We will now take each eigenvalue in turn and compute its eigenspace. To do this, we row-reduce the matrix
+$F-\lambda I_{3}$ in order to find all solutions to the homogeneous system $F-\lambda I_{3}\mathbf{x}=\mathbf{0}$. We then express the eigenspace ${\mathcal{E}}_{F}\left(\lambda\right)$ as the nullspace of $F-\lambda I_{3}$. Then we can write the nullspace as the span of a basis.
+
+@col
+\begin{align*}
+\displaystyle\lambda&\displaystyle=3:&\displaystyle F-3I_{3}&\displaystyle=\begin{bmatrix}-16&-8&-4\\
+12&4&4\\
+24&16&4\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&\frac{1}{2}\\
+0&\boxed{1}&-\frac{1}{2}\\
+0&0&0\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle{\mathcal{E}}_{F}\left(3\right)&\displaystyle={\mathcal{N}}\!\left(F-3I_{3}\right)=\left< \left\{\begin{bmatrix}-\frac{1}{2}\\
+\frac{1}{2}\\
+1\end{bmatrix}\right\}\right>=\left< \left\{\begin{bmatrix}-1\\
+1\\
+2\end{bmatrix}\right\}\right>
+\end{align*}
+@col
+\begin{align*}
+\displaystyle\lambda&\displaystyle=-1:&\displaystyle F+1I_{3}&\displaystyle=\begin{bmatrix}-12&-8&-4\\
+12&8&4\\
+24&16&8\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&\frac{2}{3}&\frac{1}{3}\\
+0&0&0\\
+0&0&0\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle{\mathcal{E}}_{F}\left(-1\right)&\displaystyle={\mathcal{N}}\!\left(F+1I_{3}\right)=\left< \left\{\begin{bmatrix}-\frac{2}{3}\\
+1\\
+0\end{bmatrix},\,\begin{bmatrix}-\frac{1}{3}\\
+0\\
+1\end{bmatrix}\right\}\right>=\left< \left\{\begin{bmatrix}-2\\
+3\\
+0\end{bmatrix},\,\begin{bmatrix}-1\\
+0\\
+3\end{bmatrix}\right\}\right>
+\end{align*}
+@col
+Eigenspaces in hand, we can easily compute eigenvectors by forming nontrivial linear combinations of the basis vectors describing each eigenspace. In particular, notice that we can pretty up our basis vectors by using scalar multiples to clear out fractions.
+@endcol
+@end
+@section{Examples of Computing Eigenvalues and Eigenvectors}
+@eg
+@label{eg:B}
+@label{eg:example6}
+Consider the matrix
+\begin{align*}
+\displaystyle B=\begin{bmatrix}-2&1&-2&-4\\
+12&1&4&9\\
+6&5&-2&-4\\
+3&-4&5&10\end{bmatrix}.
+\end{align*}
+@newcol
+Then
+\begin{align*}
+\displaystyle p_{B}\left(x\right)=8-20x+18x^{2}-7x^{3}+x^{4}=(x-1)(x-2)^{3}.
+\end{align*}
+@col
+So the eigenvalues are $\lambda=1,\,2$.
+Computing eigenvectors, we find
+\begin{align*}
+\displaystyle\lambda&\displaystyle=1:&\displaystyle B-1I_{4}&\displaystyle=\begin{bmatrix}-3&1&-2&-4\\
+12&0&4&9\\
+6&5&-3&-4\\
+3&-4&5&9\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&\frac{1}{3}&0\\
+0&\boxed{1}&-1&0\\
+0&0&0&\boxed{1}\\
+0&0&0&0\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle{\mathcal{E}}_{B}\left(1\right)&\displaystyle={\mathcal{N}}\!\left(B-1I_{4}\right)=\left< \left\{\begin{bmatrix}-\frac{1}{3}\\
+1\\
+1\\
+0\end{bmatrix}\right\}\right>=\left< \left\{\begin{bmatrix}-1\\
+3\\
+3\\
+0\end{bmatrix}\right\}\right>
+\end{align*}
+\begin{align*}
+\displaystyle\lambda&\displaystyle=2:&\displaystyle B-2I_{4}&\displaystyle=\begin{bmatrix}-4&1&-2&-4\\
+12&-1&4&9\\
+6&5&-4&-4\\
+3&-4&5&8\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&1/2\\
+0&\boxed{1}&0&-1\\
+0&0&\boxed{1}&1/2\\
+0&0&0&0\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle{\mathcal{E}}_{B}\left(2\right)&\displaystyle={\mathcal{N}}\!\left(B-2I_{4}\right)=\left< \left\{\begin{bmatrix}-\frac{1}{2}\\
+1\\
+-\frac{1}{2}\\
+1\end{bmatrix}\right\}\right>=\left< \left\{\begin{bmatrix}-1\\
+2\\
+-1\\
+2\end{bmatrix}\right\}\right>
+\end{align*}
+@endcol
+@end
+@eg
+@label{C}
+@label{eg:example7}
+Consider the matrix
+\begin{align*}
+\displaystyle C=\begin{bmatrix}1&0&1&1\\
+0&1&1&1\\
+1&1&1&0\\
+1&1&0&1\end{bmatrix}.
+\end{align*}
+@newcol
+Then
+\begin{align*}
+\displaystyle p_{C}\left(x\right)=-3+4x+2x^{2}-4x^{3}+x^{4}=(x-3)(x-1)^{2}(x+1).
+\end{align*}
+@col
+So the eigenvalues are $\lambda=3,\,1,\,-1$.
+Computing eigenvectors, we find
+\begin{align*}
+\displaystyle\lambda&\displaystyle=3:&\displaystyle C-3I_{4}&\displaystyle=\begin{bmatrix}-2&0&1&1\\
+0&-2&1&1\\
+1&1&-2&0\\
+1&1&0&-2\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&-1\\
+0&\boxed{1}&0&-1\\
+0&0&\boxed{1}&-1\\
+0&0&0&0\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle{\mathcal{E}}_{C}\left(3\right)&\displaystyle={\mathcal{N}}\!\left(C-3I_{4}\right)=\left< \left\{\begin{bmatrix}1\\
+1\\
+1\\
+1\end{bmatrix}\right\}\right>
+\end{align*}
+\begin{align*}
+\displaystyle\lambda&\displaystyle=1:&\displaystyle C-1I_{4}&\displaystyle=\begin{bmatrix}0&0&1&1\\
+0&0&1&1\\
+1&1&0&0\\
+1&1&0&0\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&1&0&0\\
+0&0&\boxed{1}&1\\
+0&0&0&0\\
+0&0&0&0\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle{\mathcal{E}}_{C}\left(1\right)&\displaystyle={\mathcal{N}}\!\left(C-1I_{4}\right)=\left< \left\{\begin{bmatrix}-1\\
+1\\
+0\\
+0\end{bmatrix},\,\begin{bmatrix}0\\
+0\\
+-1\\
+1\end{bmatrix}\right\}\right>
+\end{align*}
+\begin{align*}
+\displaystyle\lambda&\displaystyle=-1:&\displaystyle C+1I_{4}&\displaystyle=\begin{bmatrix}2&0&1&1\\
+0&2&1&1\\
+1&1&2&0\\
+1&1&0&2\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&1\\
+0&\boxed{1}&0&1\\
+0&0&\boxed{1}&-1\\
+0&0&0&0\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle{\mathcal{E}}_{C}\left(-1\right)&\displaystyle={\mathcal{N}}\!\left(C+1I_{4}\right)=\left< \left\{\begin{bmatrix}-1\\
+-1\\
+1\\
+1\end{bmatrix}\right\}\right>
+\end{align*}
+@endcol
+@end
+@eg
+@label{E}
+@label{eg:example8}
+Consider the matrix
+\begin{align*}
+\displaystyle E=\begin{bmatrix}29&14&2&6&-9\\
+-47&-22&-1&-11&13\\
+19&10&5&4&-8\\
+-19&-10&-3&-2&8\\
+7&4&3&1&-3\end{bmatrix}.
+\end{align*}
+@newcol
+Then
+\begin{align*}
+\displaystyle p_{E}\left(x\right)=-16+16x+8x^{2}-16x^{3}+7x^{4}-x^{5}=-(x-2)^{4}(x+1).
+\end{align*}
+@col
+So the eigenvalues are $\lambda=2,\,-1$. Computing eigenvectors, we find
+\begin{align*}
+\displaystyle\lambda&\displaystyle=2: \\
+\displaystyle E-2I_{5}&\displaystyle=\begin{bmatrix}27&14&2&6&-9\\
+-47&-24&-1&-11&13\\
+19&10&3&4&-8\\
+-19&-10&-3&-4&8\\
+7&4&3&1&-5\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&1&0\\
+0&\boxed{1}&0&-\frac{3}{2}&-\frac{1}{2}\\
+0&0&\boxed{1}&0&-1\\
+0&0&0&0&0\\
+0&0&0&0&0\end{bmatrix} \\
+\displaystyle{\mathcal{E}}_{E}\left(2\right)&\displaystyle={\mathcal{N}}\!\left(E-2I_{5}\right)=\left< \left\{\begin{bmatrix}-1\\
+\frac{3}{2}\\
+0\\
+1\\
+0\end{bmatrix},\,\begin{bmatrix}0\\
+\frac{1}{2}\\
+1\\
+0\\
+1\end{bmatrix}\right\}\right>=\left< \left\{\begin{bmatrix}-2\\
+3\\
+0\\
+2\\
+0\end{bmatrix},\,\begin{bmatrix}0\\
+1\\
+2\\
+0\\
+2\end{bmatrix}\right\}\right> \\
+\displaystyle\lambda&\displaystyle=-1: \\
+\displaystyle E+1I_{5}&\displaystyle=\begin{bmatrix}30&14&2&6&-9\\
+-47&-21&-1&-11&13\\
+19&10&6&4&-8\\
+-19&-10&-3&-1&8\\
+7&4&3&1&-2\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&2&0\\
+0&\boxed{1}&0&-4&0\\
+0&0&\boxed{1}&1&0\\
+0&0&0&0&\boxed{1}\\
+0&0&0&0&0\end{bmatrix} \\
+\displaystyle{\mathcal{E}}_{E}\left(-1\right)&\displaystyle={\mathcal{N}}\!\left(E+1I_{5}\right)=\left< \left\{\begin{bmatrix}-2\\
+4\\
+-1\\
+1\\
+0\end{bmatrix}\right\}\right>
+\end{align*}
+@endcol
+@end
+@eg
+@label{H}
+Consider the matrix
+\begin{align*}
+\displaystyle H=\begin{bmatrix}15&18&-8&6&-5\\
+5&3&1&-1&-3\\
+0&-4&5&-4&-2\\
+-43&-46&17&-14&15\\
+26&30&-12&8&-10\end{bmatrix}.
+\end{align*}
+@newcol
+Then
+\begin{align*}
+\displaystyle p_{H}\left(x\right)=-6x+x^{2}+7x^{3}-x^{4}-x^{5}=x(x-2)(x-1)(x+1)(x+3).
+\end{align*}
+@col
+So the eigenvalues are $\lambda=2,\,1,\,0,\,-1,\,-3$.
+
+@col
+Computing eigenvectors, we find
+\begin{align*}
+\displaystyle\lambda&\displaystyle=2: \\
+&\displaystyle H-2I_{5}=\begin{bmatrix}13&18&-8&6&-5\\
+5&1&1&-1&-3\\
+0&-4&3&-4&-2\\
+-43&-46&17&-16&15\\
+26&30&-12&8&-12\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&0&-1\\
+0&\boxed{1}&0&0&1\\
+0&0&\boxed{1}&0&2\\
+0&0&0&\boxed{1}&1\\
+0&0&0&0&0\end{bmatrix} \\
+&\displaystyle{\mathcal{E}}_{H}\left(2\right)={\mathcal{N}}\!\left(H-2I_{5}\right)=\left< \left\{\begin{bmatrix}1\\
+-1\\
+-2\\
+-1\\
+1\end{bmatrix}\right\}\right>
+\end{align*}
+\begin{align*}
+\displaystyle\lambda&\displaystyle=1: \\
+&\displaystyle H-1I_{5}=\begin{bmatrix}14&18&-8&6&-5\\
+5&2&1&-1&-3\\
+0&-4&4&-4&-2\\
+-43&-46&17&-15&15\\
+26&30&-12&8&-11\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&0&-\frac{1}{2}\\
+0&\boxed{1}&0&0&0\\
+0&0&\boxed{1}&0&\frac{1}{2}\\
+0&0&0&\boxed{1}&1\\
+0&0&0&0&0\end{bmatrix} \\
+&\displaystyle{\mathcal{E}}_{H}\left(1\right)={\mathcal{N}}\!\left(H-1I_{5}\right)=\left< \left\{\begin{bmatrix}\frac{1}{2}\\
+0\\
+-\frac{1}{2}\\
+-1\\
+1\end{bmatrix}\right\}\right>=\left< \left\{\begin{bmatrix}1\\
+0\\
+-1\\
+-2\\
+2\end{bmatrix}\right\}\right>
+\end{align*}
+\begin{align*}
+\displaystyle\lambda&\displaystyle=0: \\
+&\displaystyle H-0I_{5}=\begin{bmatrix}15&18&-8&6&-5\\
+5&3&1&-1&-3\\
+0&-4&5&-4&-2\\
+-43&-46&17&-14&15\\
+26&30&-12&8&-10\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&0&1\\
+0&\boxed{1}&0&0&-2\\
+0&0&\boxed{1}&0&-2\\
+0&0&0&\boxed{1}&0\\
+0&0&0&0&0\end{bmatrix} \\
+&\displaystyle{\mathcal{E}}_{H}\left(0\right)={\mathcal{N}}\!\left(H-0I_{5}\right)=\left< \left\{\begin{bmatrix}-1\\
+2\\
+2\\
+0\\
+1\end{bmatrix}\right\}\right>
+\end{align*}
+\begin{align*}
+\displaystyle\lambda&\displaystyle=-1: \\
+&\displaystyle H+1I_{5}=\begin{bmatrix}16&18&-8&6&-5\\
+5&4&1&-1&-3\\
+0&-4&6&-4&-2\\
+-43&-46&17&-13&15\\
+26&30&-12&8&-9\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&0&-1/2\\
+0&\boxed{1}&0&0&0\\
+0&0&\boxed{1}&0&0\\
+0&0&0&\boxed{1}&1/2\\
+0&0&0&0&0\end{bmatrix} \\
+&\displaystyle{\mathcal{E}}_{H}\left(-1\right)={\mathcal{N}}\!\left(H+1I_{5}\right)=\left< \left\{\begin{bmatrix}\frac{1}{2}\\
+0\\
+0\\
+-\frac{1}{2}\\
+1\end{bmatrix}\right\}\right>=\left< \left\{\begin{bmatrix}1\\
+0\\
+0\\
+-1\\
+2\end{bmatrix}\right\}\right>
+\end{align*}
+\begin{align*}
+\displaystyle\lambda&\displaystyle=-3: \\
+&\displaystyle H+3I_{5}=\begin{bmatrix}18&18&-8&6&-5\\
+5&6&1&-1&-3\\
+0&-4&8&-4&-2\\
+-43&-46&17&-11&15\\
+26&30&-12&8&-7\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&0&-1\\
+0&\boxed{1}&0&0&\frac{1}{2}\\
+0&0&\boxed{1}&0&1\\
+0&0&0&\boxed{1}&2\\
+0&0&0&0&0\end{bmatrix} \\
+&\displaystyle{\mathcal{E}}_{H}\left(-3\right)={\mathcal{N}}\!\left(H+3I_{5}\right)=\left< \left\{\begin{bmatrix}1\\
+-\frac{1}{2}\\
+-1\\
+-2\\
+1\end{bmatrix}\right\}\right>=\left< \left\{\begin{bmatrix}-2\\
+1\\
+2\\
+4\\
+-2\end{bmatrix}\right\}\right>
+\end{align*}
+@endcol
+@end
+@section{Similar Matrices}
+@defn
+@title{Similar Matrices}
+@label{SIM}
+Suppose that $A$ and $B$ are square matrices of size $n$. Then $A$ and $B$ are <b>similar</b> if there exists a nonsingular matrix of size $n$, $S$, such that $A=S^{-1}BS$.
+We will also say $A$ is similar to $B$ via $S$.
+Finally, we will refer to $S^{-1}BS$ as a <b>similarity transformation</b> when we want to emphasize the way that $S$ changes $B$.
+@end
+@slide
+@eg
+Define
+\begin{align*}
+\displaystyle B&=\begin{bmatrix}-5&-7\\
+4&6\end{bmatrix}\\
+\displaystyle S&=\begin{bmatrix}1&2\\
+2&3\end{bmatrix}.
+\end{align*}
+@newcol
+Check that $S$ is nonsingular and then compute
+\begin{align*}
+\displaystyle A=S^{-1}BS \\
+\displaystyle=\begin{bmatrix}-3&2\\
+2&-1\\
+\end{bmatrix}\begin{bmatrix}-5&-7\\
+4&6\end{bmatrix}\begin{bmatrix}1&2\\
+2&3\end{bmatrix} \\
+\displaystyle=\begin{bmatrix}89&145\\
+-54&-88\\
+\end{bmatrix}.
+\end{align*}
+@col
+It follows that $A$ and $B$ are similar.
+@endcol
+@end
+@eg
+Define
+\begin{align*}
+\displaystyle B&=\begin{bmatrix}-4&1&-3&-2&2\\
+1&2&-1&3&-2\\
+-4&1&3&2&2\\
+-3&4&-2&-1&-3\\
+3&1&-1&1&-4\end{bmatrix}\\
+\displaystyle S&=\begin{bmatrix}1&2&-1&1&1\\
+0&1&-1&-2&-1\\
+1&3&-1&1&1\\
+-2&-3&3&1&-2\\
+1&3&-1&2&1\\
+\end{bmatrix}.
+\end{align*}
+@newcol
+Check that $S$ is nonsingular and then compute
+\begin{align*}
+\displaystyle A=S^{-1}BS \\
+\displaystyle=\begin{bmatrix}10&1&0&2&-5\\
+-1&0&1&0&0\\
+3&0&2&1&-3\\
+0&0&-1&0&1\\
+-4&-1&1&-1&1\end{bmatrix}\begin{bmatrix}-4&1&-3&-2&2\\
+1&2&-1&3&-2\\
+-4&1&3&2&2\\
+-3&4&-2&-1&-3\\
+3&1&-1&1&-4\end{bmatrix}\begin{bmatrix}1&2&-1&1&1\\
+0&1&-1&-2&-1\\
+1&3&-1&1&1\\
+-2&-3&3&1&-2\\
+1&3&-1&2&1\end{bmatrix} \\
+\displaystyle=\begin{bmatrix}-10&-27&-29&-80&-25\\
+-2&6&6&10&-2\\
+-3&11&-9&-14&-9\\
+-1&-13&0&-10&-1\\
+11&35&6&49&19\end{bmatrix}.
+\end{align*}
+@col
+This shows that $A$ and $B$ are similar.
+@endcol
+@end
+@eg
+Define
+\begin{align*}
+\displaystyle B=\begin{bmatrix}-13&-8&-4\\
+12&7&4\\
+24&16&7\end{bmatrix}\\
+\displaystyle S=\begin{bmatrix}1&1&2\\
+-2&-1&-3\\
+1&-2&0\end{bmatrix}.
+\end{align*}
+@newcol
+Check that $S$ is nonsingular and then compute
+\begin{align*}
+\displaystyle A&\displaystyle=S^{-1}BS \\
+&\displaystyle=\begin{bmatrix}-6&-4&-1\\
+-3&-2&-1\\
+5&3&1\end{bmatrix}\begin{bmatrix}-13&-8&-4\\
+12&7&4\\
+24&16&7\end{bmatrix}\begin{bmatrix}1&1&2\\
+-2&-1&-3\\
+1&-2&0\end{bmatrix} \\
+&\displaystyle=\begin{bmatrix}-1&0&0\\
+0&3&0\\
+0&0&-1\end{bmatrix}.
+\end{align*}
+@endcol
+@end
+@slide
+@thm
+@title{Similarity is an Equivalence Relation}
+@label{SER}
+Suppose that $A$, $B$ and $C$ are square matrices of size $n$. Then
+
+<ol class="ltx_enumerate">
+<li class="ltx_item">
+$A$ is similar to $A$. (Reflexive)
+</li>
+<li class="ltx_item">
+If $A$ is similar to $B$, then $B$ is similar to $A$. (Symmetric)
+</li>
+<li class="ltx_item">
+If $A$ is similar to $B$ and $B$ is similar to $C$, then $A$ is similar to $C$. (Transitive)
+</li>
+
+</ol>
+@end
+@proof
+@newcol
+To see that $A$ is similar to $A$, we need only demonstrate a nonsingular matrix that effects a similarity transformation of $A$ to $A$. We can take $I_{n}$, which is nonsingular and satisfies $I_{n}^{-1}AI_{n}=I_{n}AI_{n}=A$.
+
+@col
+If we assume that $A$ is similar to $B$, then we know there exists is a nonsingular matrix $S$ so that $A=S^{-1}BS$.
+But then $S^{-1}$ is invertible and therefore nonsingular. So
+\begin{align*}
+\displaystyle (S^{-1})^{-1}A(S^{-1})=SAS^{-1}=SS^{-1}BSS^{-1}
+\end{align*}
+\begin{align*}
+\displaystyle =\left(SS^{-1}\right)B\left(SS^{-1}\right)=I_{n}BI_{n}=B
+\end{align*}
+and we see that $B$ is similar to $A$.
+
+@col
+Assume that $A$ is similar to $B$ and that $B$ is similar to $C$. This gives us the existence of nonsingular matrices, $S$ and $R$, such that $A=S^{-1}BS$ and $B=R^{-1}CR$. Since $S$ and $R$ are invertible, so too is $RS$, which has inverse $S^{-1}R^{-1}$. Then we compute
+\begin{align*}
+\displaystyle (RS)^{-1}C(RS)=S^{-1}R^{-1}CRS=S^{-1}\left(R^{-1}CR\right)S
+\end{align*}
+\begin{align*}
+\displaystyle =S^{-1}BS=A
+\end{align*}
+so $A$ is similar to $C$ via the nonsingular matrix $RS$.
+@qed
+@endcol
+@end
+@slide
+@thm
+@title{Similar Matrices have Equal Eigenvalues}
+@label{SMEE}
+Suppose that $A$ and $B$ are similar matrices. Then the characteristic polynomials of $A$ and $B$ are equal, that is, $p_{A}\left(x\right)=p_{B}\left(x\right)$.
+@end
+@proof
+@newcol
+Let $n$ denote the size of $A$ and $B$. Since $A$ and $B$ are similar, there exists a nonsingular matrix $S$, such that $A=S^{-1}BS$.
+Then
+@steps
+\begin{align*}
+\displaystyle p_{A}\left(x\right)
+&= \det\left(A-xI_{n}\right)
+\\&
+@nstep{=\det\left(S^{-1}BS-xI_{n}\right)}
+\\&
+@nstep{=\det\left(S^{-1}BS-xS^{-1}I_{n}S\right)}
+\\&
+@nstep{=\det\left(S^{-1}BS-S^{-1}xI_{n}S\right)}
+\\&
+@nstep{=\det\left(S^{-1}\left(B-xI_{n}\right)S\right)}
+\\&
+@nstep{=\det\left(S^{-1}\right)\det\left(B-xI_{n}\right)\det\left(S\right)}
+\\&
+@nstep{=\det\left(S^{-1}\right)\det\left(S\right)\det\left(B-xI_{n}\right)}
+\\&
+@nstep{=\det\left(S^{-1}S\right)\det\left(B xI_{n}\right)}
+\\&
+@nstep{=\det\left(I_{n}\right)\det\left(B-xI_{n}\right)}
+\\&
+@nstep{=1\det\left(B-xI_{n}\right)}
+\\&
+@nstep{=p_{B}\left(x\right).}
+\end{align*}
+@endsteps
+@qed
+@endcol
+@end
+@slide
+@eg
+We claim that the matrices
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&2\\
+3&4\end{bmatrix},\,\,B=\begin{bmatrix}1&2\\
+0&4\end{bmatrix}
+\end{align*}
+are not similar.
+
+@col
+To show this, we compute
+\begin{align*}
+\displaystyle p_{A}\left(x\right)=\begin{vmatrix}1-x&2\\
+3&4-x\end{vmatrix}=(1-x)(4-x)-6=x^{2}-5x-2
+\end{align*}
+and
+\begin{align*}
+\displaystyle p_{B}\left(x\right)=\begin{vmatrix}1-x&2\\
+0&4-x\end{vmatrix}=(1-x)(4-x)=x^{2}-5x+4.
+\end{align*}
+@newcol
+Because $p_{A}\left(x\right)\neq p_{B}\left(x\right)$, we conclude that $A$ and $B$ are not similar.
+@endcol
+@end
+@eg
+<b>Same characteristic polynomial, but not similar</b>
+
+@newcol
+Define
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&1\\
+0&1\end{bmatrix}\qquad B=\begin{bmatrix}1&0\\
+0&1\end{bmatrix}.
+\end{align*}
+@col
+We have
+\begin{align*}
+\displaystyle p_{A}\left(x\right)=p_{B}\left(x\right)=1-2x+x^{2}=(x-1)^{2},
+\end{align*}
+so that $A$ and $B$ have equal characteristic polynomials. If the converse of the above theorem were true, then $A$ and $B$ would be similar. Suppose this is the case. More precisely, suppose there exists is a nonsingular matrix $S$ so that $A=S^{-1}BS$. Then
+\begin{align*}
+\displaystyle A=S^{-1}BS=S^{-1}I_{2}S=S^{-1}S=I_{2}
+\end{align*}
+@col
+Clearly $A\neq I_{2}$. This contradiction tells us that the converse of the above theorem is false.
+@endcol
+@end
+@section{Diagonalizability}
+
+Good things happen when a matrix is similar to a diagonal matrix. For example, the eigenvalues of the matrix are the entries on the diagonal of the diagonal matrix. It is also much simpler matter to compute high powers of the matrix. Diagonalizable matrices are also of interest in more abstract settings. Here are the relevant definitions, then our main theorem for this section.
+
+@slide
+@defn
+@title{Diagonal Matrix}
+@label{DIM}
+Suppose that $A$ is a square matrix ofh size $n$. Then $A$ is a <b>diagonal matrix</b> if $\left[A\right]_{ij}=0$ whenever $i\neq j$, i.e.
+\begin{align*}
+\displaystyle A=\begin{bmatrix}\lambda_{1}&0&0&\cdots&0\\
+0&\lambda_{2}&0&\cdots&0\\
+0&0&\lambda_{3}&\cdots&0\\
+\vdots&\vdots&\vdots&\ddots&0\\
+0&0&0&\cdots&\lambda_{n}\end{bmatrix}.
+\end{align*}
+@newcol
+We will often denote such a matrix $A$ by $\operatorname{diag}(\lambda_{1},\lambda_{2},\ldots,\lambda_{n})$.
+@endcol
+@end
+@slide
+@defn
+@title{Diagonalizable Matrix}
+@label{DZM}
+Suppose that $A$ is a square matrix. Then $A$ is <b>diagonalizable</b> if $A$ is similar to a diagonal matrix, i.e, there exists an invertible matrix
+$S$ and real numbers $\lambda_{1},\lambda_{2},\ldots,\lambda_{n}$ such that
+\begin{align*}
+\displaystyle S^{-1}AS=\operatorname{diag}(\lambda_{1},\lambda_{2},\ldots,\lambda_{n}).
+\end{align*}
+@end
+@slide
+@eg
+Let
+\begin{align*}
+\displaystyle B=\begin{bmatrix}-7&-6&-12\\
+5&5&7\\
+1&0&4\end{bmatrix}.
+\end{align*}
+@newcol
+This matrix is similar to a diagonal matrix, as can be seen by the following computation with the nonsingular matrix $S$:
+\begin{align*}
+\displaystyle S^{-1}BS=\begin{bmatrix}-5&-3&-2\\
+3&2&1\\
+1&1&1\end{bmatrix}^{-1}\begin{bmatrix}-7&-6&-12\\
+5&5&7\\
+1&0&4\end{bmatrix}\begin{bmatrix}-5&-3&-2\\
+3&2&1\\
+1&1&1\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle =\begin{bmatrix}-1&-1&-1\\
+2&3&1\\
+-1&-2&1\end{bmatrix}\begin{bmatrix}-7&-6&-12\\
+5&5&7\\
+1&0&4\end{bmatrix}\begin{bmatrix}-5&-3&-2\\
+3&2&1\\
+1&1&1\end{bmatrix}=\begin{bmatrix}-1&0&0\\
+0&1&0\\
+0&0&2\end{bmatrix}.
+\end{align*}
+@endcol
+@end
+@slide
+@thm
+@title{Diagonalization Characterization}
+@label{DC}
+Suppose that $A$ is a square matrix of size $n$. Then $A$ is diagonalizable if and only if there exists a linearly independent set $T$ that contains $n$ eigenvectors of $A$.
+@end
+@proof
+
+($\Rightarrow$)
+@newcol
+Suppose that $A$ is diagonalizable. Then there exists an invertible matrix $S$ and real numbers $\lambda_{1},\ldots,\lambda_{n}$ such that
+\begin{align*}
+\displaystyle S^{-1}AS=\operatorname{diag}(\lambda_{1},\ldots,\lambda_{n}).
+\end{align*}
+@col
+Let $\mathbf{S}_{i}$ be column $i$ of $S$.
+Let $T$ be the columns of $S$. Because $S$ is invertible (nonsingular), the columns of $S$ are linearly independent.
+Also
+\begin{align*}
+\displaystyle S^{-1}AS=\operatorname{diag}(\lambda_{1},\ldots,\lambda_{n}).
+\end{align*}
+@col
+So
+\begin{align*}
+\displaystyle AS=S\operatorname{diag}(\lambda_{1},\ldots,\lambda_{n})
+\end{align*}
+or equivalently
+\begin{align*}
+\displaystyle [A\mathbf{S}_{1}|A\mathbf{S}_{2}|\cdots|A\mathbf{S}_{n}]=[\lambda_{1}\mathbf{S}_{1}|\lambda_{2}\mathbf{S}_{2}|\cdots|\lambda_{n}\mathbf{S}_{n}].
+\end{align*}
+@col
+Hence, for $1\leq i\leq n$, we have:
+\begin{align*}
+\displaystyle A\mathbf{S}_{i}=\lambda_{i}\mathbf{S}_{i}.
+\end{align*}
+@col
+Obviously $\mathbf{S}_{i}\neq\mathbf{0}$, because $S$ is nonsingular. So $\mathbf{S}_{i}$ is an eigenvector with eigenvalue $\lambda_{i}$.
+Hence $T$ is a linearly independent set consisting of eigenvectors of $A$.
+@endcol
+
+($\Leftarrow$)
+@newcol
+Suppose that $T=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\right\}$ is a linearly independent set consisting of eigenvectors of $A$
+with eigenvalues $\lambda_{1},\ldots,\lambda_{n}$, i.e. $A\mathbf{v}_{i}=\lambda_{i}\mathbf{v}_{i}$ for $i=1,\ldots,n$.
+Let $D=\operatorname{diag}(\lambda_{1},\ldots,\lambda_{n})$.
+Let
+\begin{align*}
+\displaystyle S=[\mathbf{v}_{1}|\mathbf{v}_{2}|\cdots|\mathbf{v}_{n}].
+\end{align*}
+@col
+Because $T$ is linearly independent, $S$ is invertible. Similarly to the above computation, we compute:
+\begin{align*}
+\displaystyle AS=[A\mathbf{v}_{1}|A\mathbf{v}_{2}|\cdots|A\mathbf{v}_{n}]=[\lambda_{1}\mathbf{v}_{1}|\lambda_{2}\mathbf{v}_{2}|\cdots|\lambda_{n}\mathbf{v}_{n}]=SD.
+\end{align*}
+@col
+So
+\begin{align*}
+\displaystyle S^{-1}AS=S^{-1}SD=D.
+\end{align*}
+@col
+Therefore $A$ is diagonalizable.
+@endcol
+@qed
+@end
+@remark
+@col
+Notice that the proof is constructive. To diagonalize a matrix, we need only locate $n$ linearly independent eigenvectors. Then we can construct a nonsingular matrix $S$, using the eigenvectors as columns, with the property that $S^{-1}AS$ is a diagonal matrix ($D$). The entries on the diagonal of $D$ will be the eigenvalues of the eigenvectors used to create $S$, in the same order as the eigenvectors appear in $S$. We illustrate this by <b>diagonalizing</b> some matrices.
+@end
+@slide
+@eg
+Consider the matrix
+\begin{align*}
+\displaystyle F=\begin{bmatrix}-13&-8&-4\\
+12&7&4\\
+24&16&7\end{bmatrix}
+\end{align*}
+from previous examples. The eigenvalues and eigenspaces of $F$’s are
+\begin{align*}
+\displaystyle\lambda&\displaystyle=3&\displaystyle{\mathcal{E}}_{F}\left(3\right)&\displaystyle=\left< \left\{\begin{bmatrix}-\frac{1}{2}\\
+\frac{1}{2}\\
+1\end{bmatrix}\right\}\right> \\
+\displaystyle\lambda&\displaystyle=-1&\displaystyle{\mathcal{E}}_{F}\left(-1\right)&\displaystyle=\left< \left\{\begin{bmatrix}-\frac{2}{3}\\
+1\\
+0\end{bmatrix},\,\begin{bmatrix}-\frac{1}{3}\\
+0\\
+1\end{bmatrix}\right\}\right>
+\end{align*}
+@newcol
+Define the matrix $S$ to be the $3\times 3$ matrix whose columns are the three basis vectors in the eigenspaces for $F$:
+\begin{align*}
+\displaystyle S=\begin{bmatrix}-\frac{1}{2}&-\frac{2}{3}&-\frac{1}{3}\\
+\frac{1}{2}&1&0\\
+1&0&1\end{bmatrix}
+\end{align*}
+@col
+Check that $S$ is nonsingular (row-reduces to the identity matrix, or has a nonzero determinant).
+
+<strong>Remark</strong>: After we introduce Theorem @ref{diagcond}, you don’t need to check that $S$ is nonsingular. See examples below).
+
+@col
+The three columns of $S$ are a linearly independent set. By Theorem @ref{DC} we now know that $F$ is diagonalizable. Furthermore, the construction in the proof of Theorem @ref{DC}
+tells us that $S^{-1}FS=\operatorname{diag}(3,-1,-1)$. Let us check this directly:
+\begin{align*}
+\displaystyle S^{-1}FS&\displaystyle=\begin{bmatrix}-\frac{1}{2}&-\frac{2}{3}&-\frac{1}{3}\\
+\frac{1}{2}&1&0\\
+1&0&1\end{bmatrix}^{-1}\begin{bmatrix}-13&-8&-4\\
+12&7&4\\
+24&16&7\end{bmatrix}\begin{bmatrix}-\frac{1}{2}&-\frac{2}{3}&-\frac{1}{3}\\
+\frac{1}{2}&1&0\\
+1&0&1\end{bmatrix} \\
+&\displaystyle=\begin{bmatrix}6&4&2\\
+-3&-1&-1\\
+-6&-4&-1\end{bmatrix}\begin{bmatrix}-13&-8&-4\\
+12&7&4\\
+24&16&7\end{bmatrix}\begin{bmatrix}-\frac{1}{2}&-\frac{2}{3}&-\frac{1}{3}\\
+\frac{1}{2}&1&0\\
+1&0&1\end{bmatrix} \\
+&\displaystyle=\begin{bmatrix}3&0&0\\
+0&-1&0\\
+0&0&-1\end{bmatrix}.
+\end{align*}
+@endcol
+@end
+@slide
+@thm
+@label{diagcond}
+Suppose that $A$ is a square matrix of size $n$. Suppose that $\lambda_{1},\ldots,\lambda_{k}$ are all of the distinct eigenvalues of $A$. Then $A$ is diagonalizable if and only if
+\begin{align}
+\label{diagconde}
+\displaystyle \sum_{i=1}^{k}\dim{\mathcal{E}}_{A}\left(\lambda_{i}\right)=\dim{\mathcal{E}}_{A}\left(\lambda_{1}\right)+\cdots+\dim{\mathcal{E}}_{A}\left(\lambda_{k}\right)=n.&
+\end{align}
+@newcol
+Suppose that the above condition is satisfies by $A$ and let $T_{i}=\left\{\mathbf{v}_{i1},\,\mathbf{v}_{i2},\,\mathbf{v}_{i3},\,\ldots,\,\mathbf{v}_{id_{i}}\right\}$ be a basis for the eigenspace of $\lambda_{i}$, ${\mathcal{E}}_{A}\left(\lambda_{i}\right)$, for each $1\leq i\leq k$
+and let $d_{i}=\dim{\mathcal{E}}_{A}\left(\lambda_{i}\right)$. Then
+\begin{align*}
+\displaystyle T=T_{1}\cup T_{2}\cup T_{3}\cup\cdots\cup T_{k}
+\end{align*}
+is a set of linearly independent eigenvectors for $A$ with size $n$. By Theorem @ref{DC}, let $S$ be a square matrix whose $i$-th column is the $i$-th vector of the set $T$, i.e.
+\begin{align*}
+\displaystyle S=[\mathbf{v}_{11}|\cdots|\mathbf{v}_{1d_{1}}|\mathbf{v}_{21}|\cdots|\mathbf{v}_{2d_{2}}|\cdots|\mathbf{v}_{k1}|\cdots|\mathbf{v}_{kd_{k}}]
+\end{align*}
+@col
+Then
+\begin{align*}
+\displaystyle S^{-1}AS=\operatorname{diag}(\underbrace{\lambda_{1},\ldots,\lambda_{1}}_{d_{1}},\underbrace{\lambda_{2},\ldots,\lambda_{2}}_{d_{2}},\ldots,\underbrace{\lambda_{k},\ldots,\lambda_{k}}_{d_{k}}).
+\end{align*}
+@endcol
+@end
+@proof
+@newcol
+See the textbook
+@qed
+@endcol
+@end
+@remark
+@col
+Equation $\eqref{diagconde}$ may be rewritten as:
+\begin{align*}
+\displaystyle \sum_{i=1}^{k}n\!\left(A-\lambda_{i}I_{n}\right)=n\!\left(A-\lambda_{1}I_{n}\right)+\cdots+n\!\left(A-\lambda_{k}I_{n}\right)=n,
+\end{align*}
+where on the left-hand side $n(M)$ denotes the nullity of a matrix $M$.
+or
+\begin{align*}
+\displaystyle \sum_{i=1}^{k}\left(n-r\left(A-\lambda_{i}I_{n}\right)\right)=(n-r\left(A-\lambda_{1}I_{n}\right))+\cdots+(n-r\left(A-\lambda_{k}I_{n}\right))=n,
+\end{align*}
+where $r(M)$ denotes the rank of a matrix $M$.
+@end
+@slide
+@thm
+@title{Distinct Eigenvalues implies Diagonalizable}
+@label{DED}
+Suppose that $A$ is a square matrix of size $n$ with $n$ distinct eigenvalues.
+Then $A$ is diagonalizable.
+@end
+@proof
+@newcol
+You can skip the proof. See the textbook.
+@qed
+@endcol
+@end
+@slide
+@eg
+Determine if the matrix $B$ in @ref{eg:B}
+is diagonalizable. The characteristic polynomial is
+\begin{align*}
+\displaystyle p_{B}\left(x\right)=\det\left(B-xI_{4}\right)=(x-1)(x-2)^{3}.
+\end{align*}
+@newcol
+We conclude that $\lambda_{1}=1$ and $\lambda_{2}=2$ are all of the distinct eigenvalues of $B$.
+
+@col
+In @ref{eg:example6}, we compute the RREF of $B-I_{4}$ and $B-2I_{4}$. By the RREFs, we have $r\left(B-I_{4}\right)=3$, $r\left(B-2I_{4}\right)=3$.
+Therefore
+\begin{align*}
+\displaystyle \dim{\mathcal{E}}_{B}\left(1\right)=n\left(B-I_{4}\right)=4-r\left(B-I_{4}\right)=1
+\end{align*}
+and
+\begin{align*}
+\displaystyle \dim{\mathcal{E}}_{B}\left(2\right)=n\left(B-2I_{4}\right)=4-r\left(B-2I_{4}\right)=4-3=1.
+\end{align*}
+@col
+Now
+\begin{align*}
+\displaystyle \dim{\mathcal{E}}_{B}\left(1\right)+\dim{\mathcal{E}}_{B}\left(2\right)=1+1=2\neq 4.
+\end{align*}
+@col
+By Theorem @ref{diagcond}, $B$ is not diagonalizable.
+@endcol
+@end
+@eg
+Determine if the matrix $C$
+in @ref{eg:example7} is diagonalizable.Because
+\begin{align*}
+\displaystyle p_{C}\left(x\right)=-3+4x+2x^{2}-4x^{3}+x^{4}=(x-3)(x-1)^{2}(x+1),
+\end{align*}
+all the distinct eigenvalues are $\lambda_{1}=3$, $\lambda_{2}=1$ and $\lambda_{3}=-1$. We have
+\begin{align*}
+\displaystyle \sum_{i=1}^{3}\dim{\mathcal{E}}_{C}\left(\lambda_{i}\right)=\sum_{i=1}^{3}(4-r\left(C-\lambda_{i}I_{4}\right))
+\end{align*}
+\begin{align*}
+\displaystyle =(4-3)+(4-2)+(4-3)=4.
+\end{align*}
+@newcol
+By Theorem @ref{diagcond}, $C$ is diagonalizable.
+@endcol
+@end
+@eg
+Determine if the matrix $E$ in @ref{eg:example8} is diagonalizable.The characteristic polynomial is $p_{E}\left(x\right)=-(x-2)^{4}(x+1)$.
+The eigenvalues are $\lambda_{1}=2$ and $\lambda_{2}=-1$ and we have
+\begin{align*}
+\displaystyle \dim{\mathcal{E}}_{E}\left(\lambda_{1}\right)+\dim{\mathcal{E}}_{E}\left(\lambda_{2}\right)=(5-r\left(E-2I_{4}\right))+(5-r\left(E+I_{5}\right))
+\end{align*}
+\begin{align*}
+\displaystyle =(5-3)+(5-4)=2+1=3\neq 5.
+\end{align*}
+@newcol
+So $E$ is not diagonalizable.
+@endcol
+@end
+@eg
+Determine if the matrix $H$ in Example 9 is diagonalizable.Because $p_{H}\left(x\right)=x(x-2)(x-1)(x+1)(x+3)$, has $5$ distinct eigenvalues, Theorem @ref{DED} implies that $H$ is diagonalizable.
+@end
+@eg
+Diagonalize $C$ in @ref{eg:example7} (see also Example 18). By the computation in Example 18, $C$ is diagonalizable. By the computation in @ref{eg:example7}, we have that$\left\{\begin{bmatrix}1\\
+1\\
+1\\
+1\end{bmatrix}\right\}$ is a basis for ${\mathcal{E}}_{C}\left(3\right)$, $\left\{\begin{bmatrix}-1\\
+1\\
+0\\
+0\end{bmatrix},\,\begin{bmatrix}0\\
+0\\
+-1\\
+1\end{bmatrix}\right\}$ is a basis for ${\mathcal{E}}_{C}\left(1\right)$, $\left\{\begin{bmatrix}-1\\
+-1\\
+1\\
+1\end{bmatrix}\right\}$ is a basis for ${\mathcal{E}}_{C}\left(-1\right)$. By Theorem @ref{diagcond},
+\begin{align*}
+\displaystyle S=\begin{bmatrix}1&-1&0&-1\\
+1&1&0&-1\\
+1&0&-1&1\\
+1&0&1&1\end{bmatrix}.
+\end{align*}
+@newcol
+Then $S^{-1}CS=\operatorname{diag}(3,1,1,-1)$.
+
+<strong>Remark</strong>:
+Note that the invertibility of $S$ is guaranteed by Theorem @ref{diagcond}.
+@endcol
+@end
+@eg
+Diagonalize $H$ in Example 9 (see also Example 21).By the discussion of Example 21, $H$ is diagonalizable. By the computation in Example 9,
+$\begin{bmatrix}1\\
+-1\\
+-2\\
+-1\\
+1\end{bmatrix}$, $\begin{bmatrix}1\\
+0\\
+-1\\
+-2\\
+2\end{bmatrix}$, $\begin{bmatrix}-1\\
+2\\
+2\\
+0\\
+1\end{bmatrix}$, $\begin{bmatrix}1\\
+0\\
+0\\
+-1\\
+2\end{bmatrix}$
+and $\begin{bmatrix}-2\\
+1\\
+2\\
+4\\
+-2\end{bmatrix}$ are bases for ${\mathcal{E}}_{H}\left(2\right),{\mathcal{E}}_{H}\left(1\right),{\mathcal{E}}_{H}\left(0\right),{\mathcal{E}}_{H}\left(-1\right)$ and ${\mathcal{E}}_{H}\left(-3\right)$ respectively.
+By Theorem @ref{diagcond}, let
+\begin{align*}
+\displaystyle S=\begin{bmatrix}1&1&-1&1&-2\\
+-1&0&2&0&1\\
+-2&-1&2&0&2\\
+-1&-2&0&-1&4\\
+1&2&1&2&-2\\
+\end{bmatrix}.
+\end{align*}
+@newcol
+Then
+\begin{align*}
+\displaystyle S^{-1}HS=\operatorname{diag}(2,1,0,-1,-3).
+\end{align*}
+@endcol
+@end
+@eg
+Determine if
+\begin{align*}
+\displaystyle J=\begin{bmatrix}2&1&1\\
+1&2&1\\
+1&1&2\end{bmatrix}
+\end{align*}
+is diagonalizable. If it is diagonalizable, find $S$ such that $S^{-1}JS$ is diagonal.
+
+@col
+<strong>Step 1</strong>:
+@newcol
+$p_{J}\left(x\right)=-x^{3}+6x^{2}-9x+4=-(x-4)(x-1)^{2}$. All the distict eigenvalues of $J$ is $\lambda_{1}=4$, $\lambda_{2}=1$.
+@endcol
+
+<strong>Step 2</strong>:
+@newcol
+\begin{align*}
+\displaystyle J-4I_{3}\xrightarrow{\text{RREF}}\begin{bmatrix}1&0&-1\\
+0&1&-1\\
+0&0&0\\
+\end{bmatrix}.
+\end{align*}
+\begin{align*}
+\displaystyle \dim{\mathcal{E}}_{J}\left(4\right)=3-r\left(J-4I_{3}\right)=3-2=1.
+\end{align*}
+\begin{align*}
+\displaystyle J-I_{3}\xrightarrow{\text{RREF}}\begin{bmatrix}1&1&1\\
+0&0&0\\
+0&0&0\\
+\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle \dim{\mathcal{E}}_{J}\left(1\right)=3-r\left(J-I_{3}\right)=3-1=2.
+\end{align*}
+col
+Now
+\begin{align*}
+\displaystyle \dim{\mathcal{E}}_{J}\left(4\right)+\dim{\mathcal{E}}_{J}\left(1\right)=1+2=3.
+\end{align*}
+@col
+By Theorem @ref{diagcond}, $J$ is diagonalizable.
+@endcol
+
+<strong>Step 3</strong>:
+@newcol
+$\left\{\begin{bmatrix}1\\
+1\\
+1\end{bmatrix}\right\}$ is a basis for ${\mathcal{E}}_{J}\left(4\right)$. $\left\{\begin{bmatrix}-1\\
+1\\
+0\end{bmatrix},\begin{bmatrix}-1\\
+0\\
+1\end{bmatrix}\right\}$ is a basis for ${\mathcal{E}}_{J}\left(1\right)$. By Theorem @ref{diagcond}, we can take
+\begin{align*}
+\displaystyle S=\begin{bmatrix}1&-1&-1\\
+1&1&0\\
+1&0&1\end{bmatrix}.
+\end{align*}
+@col
+Then
+\begin{align*}
+\displaystyle S^{-1}JS=\operatorname{diag}(4,1,1).
+\end{align*}
+@endcol
+@endcol
+@end
+@eg
+Determine if
+\begin{align*}
+\displaystyle K=\begin{bmatrix}-4&-4&0&-11&-2&-5\\
+138&87&-6&248&44&122\\
+-24&-16&2&-44&-8&-20\\
+-62&-39&2&-110&-20&-54\\
+-63&-39&3&-114&-19&-57\\
+56&35&-2&101&18&51\\
+\end{bmatrix}
+\end{align*}
+is diagonalizable and if it is diagonalizable, find $S$ such that $S^{-1}KS$ is diagonal.
+
+@col
+<strong>Step 1</strong>:
+@newcol
+The characteristic polynomial is
+\begin{align*}
+\displaystyle p_{K}\left(x\right)=\det\left(K-xI_{6}\right)=(x+1)(x-1)^{2}(x-2)^{3}.
+\end{align*}
+@col
+The eigenvalues are $\lambda_{1}=-1,\lambda_{2}=1$ and $\lambda_{3}=2$.
+@endcol
+
+<strong>Step 2</strong>:
+@newcol
+\begin{align*}
+\displaystyle K+I_{4}\xrightarrow{\text{RREF}}\begin{bmatrix}1&0&0&0&0&\frac{1}{9}\\
+0&1&0&0&0&-\frac{22}{9}\\
+0&0&1&0&0&\frac{4}{9}\\
+0&0&0&1&0&\frac{10}{9}\\
+0&0&0&0&1&\frac{10}{9}\\
+0&0&0&0&0&0\\
+\end{bmatrix},
+\end{align*}
+\begin{align*}
+\displaystyle \dim{\mathcal{E}}_{K}\left(-1\right)=n\left(K+I_{4}\right)=6-r\left(K+I_{4}\right)=6-5=1.
+\end{align*}
+\begin{align*}
+\displaystyle A-I_{6}\xrightarrow{\text{RREF}}\begin{bmatrix}1&0&0&0&\frac{1}{18}&\frac{1}{6}\\
+0&1&0&0&\frac{5}{18}&-\frac{13}{6}\\
+0&0&1&0&\frac{2}{9}&\frac{2}{3}\\
+0&0&0&1&\frac{1}{18}&\frac{7}{6}\\
+0&0&0&0&0&0\\
+0&0&0&0&0&0\\
+\end{bmatrix}.
+\end{align*}
+\begin{align*}
+\displaystyle \dim{\mathcal{E}}_{K}\left(1\right)=n\left(K-I_{6}\right)=6-r\left(K-I_{6}\right)=6-4=2.
+\end{align*}
+\begin{align*}
+\displaystyle K-2I_{6}\xrightarrow{\text{RREF}}\begin{bmatrix}1&0&0&\frac{1}{2}&-1&-\frac{1}{2}\\
+0&1&0&2&2&2\\
+0&0&1&-\frac{3}{2}&-2&-\frac{7}{2}\\
+0&0&0&0&0&0\\
+0&0&0&0&0&0\\
+0&0&0&0&0&0\\
+\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle \dim{\mathcal{E}}_{K}\left(2\right)=n\left(K-2I_{6}\right)=6-r\left(K-2I_{6}\right)=6-3=3.
+\end{align*}
+@col
+Because
+\begin{align*}
+\displaystyle \dim{\mathcal{E}}_{K}\left(-1\right)+\dim{\mathcal{E}}_{K}\left(1\right)+\dim{\mathcal{E}}_{K}\left(2\right)=1+2+3=6.
+\end{align*}
+@col
+By Theorem @ref{diagcond}, $K$ is diagonalizable.
+@endcol
+
+<strong>Step 3</strong>:
+@newcol
+A basis for ${\mathcal{E}}_{K}\left(-1\right)={\mathcal{N}}\!\left(K+I_{6}\right)$ is
+\begin{align*}
+\displaystyle \left\{\begin{bmatrix}-1\\
+22\\
+-4\\
+-10\\
+-10\\
+9\end{bmatrix}\right\}
+\end{align*}
+(we use the method in Lecture 8 @ref{eg:example6} and multiply the result by $9$ to clear the denominator.) A basis for ${\mathcal{E}}_{K}\left(1\right)={\mathcal{N}}\!\left(K-I_{6}\right)$ is
+\begin{align*}
+\displaystyle \left\{\begin{bmatrix}-1\\
+-5\\
+-4\\
+-1\\
+18\\
+0\end{bmatrix},\begin{bmatrix}-1\\
+13\\
+-4\\
+-7\\
+0\\
+6\end{bmatrix}\right\}
+\end{align*}
+(Again, we use the method in Lecture 8 @ref{eg:example6} and multiply the first vector by $18$ and the second vector by $6$ to clear the denominators.)
+\begin{align*}
+\displaystyle \left\{\begin{bmatrix}-1\\
+-4\\
+3\\
+2\\
+0\\
+0\end{bmatrix},\begin{bmatrix}1\\
+-2\\
+2\\
+0\\
+1\\
+0\end{bmatrix},\begin{bmatrix}1\\
+-4\\
+7\\
+0\\
+0\\
+2\end{bmatrix}\right\}.
+\end{align*}
+(Again, we use the method in Lecture 8 @ref{eg:example6} and multiply the first and the third vector by $2$ to clear the denominators.) So we can take
+\begin{align*}
+\displaystyle S=\begin{bmatrix}-1&-1&-1&1&1&-1\\
+22&13&-5&-4&-2&-4\\
+-4&-4&-4&7&2&3\\
+-10&-7&-1&0&0&2\\
+-10&0&18&0&1&0\\
+9&6&0&2&0&0\\
+\end{bmatrix}.
+\end{align*}
+@col
+Then
+\begin{align*}
+\displaystyle S^{-1}AS=\operatorname{diag}(-1,1,1,2,2,2).
+\end{align*}
+@endcol
+@end
+@eg
+Determine if
+\begin{align*}
+\displaystyle J=\begin{bmatrix}2&1&1\\
+1&2&1\\
+1&1&2\end{bmatrix},\,\,L=\begin{bmatrix}-8&6&6\\
+-9&7&6\\
+-9&6&7\\
+\end{bmatrix}
+\end{align*}
+are similar. If they are similar, Find $R$ such that $R^{-1}JR=L$. We know that $J$ is
+
+@newcol
+The characteristic polynomials
+\begin{align*}
+\displaystyle p_{J}\left(x\right)=-(-4+x)(-1+x)^{2}=p_{L}\left(x\right).
+\end{align*}
+(If the characteristic polynomials are different, $J$ and $L$ are not similar, end of the story.) In example 23, we know that $J$ is diagonalizable. Follow similar method, we can show that $L$ is diagonalizable (fill the detail).
+\begin{align*}
+\displaystyle Q=\begin{bmatrix}1&2&2\\
+1&3&0\\
+1&0&3\\
+\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle Q^{-1}LQ=\operatorname{diag}(4,1,1).
+\end{align*}
+@col
+So $J$ is similar to $\operatorname{diag}(4,1,1)$ which in turns similar to $L$. So $J$ is similar to $L$ (Theorem @ref{SER}). In fact
+\begin{align*}
+\displaystyle S^{-1}JS=Q^{-1}LQ
+\end{align*}
+\begin{align*}
+\displaystyle (SQ^{-1})^{-1}J(SQ^{-1})=L.
+\end{align*}
+@col
+So we can take
+\begin{align*}
+\displaystyle R=SQ^{-1}=\begin{bmatrix}-5&3&3\\
+-2&\frac{5}{3}&\frac{4}{3}\\
+-2&\frac{4}{3}&\frac{5}{3}\\
+\end{bmatrix}.
+\end{align*}
+@endcol
+@end
+@section{Powers of Matrices}
+
+Suppose $s$ is a positive integer. Recall the notation
+\begin{align*}
+\displaystyle A^{s}=\underbrace{A\cdots A}_{s}
+\end{align*}
+@newcol
+Powers of a diagonal matrix are easy to compute. The case of a diagonalizable matrix is only slightly more difficult. Suppose that $A$ is similar to a diagonal matrix $D=\operatorname{diag}(\lambda_{1},\ldots,\lambda_{n})$. Let $S$ be an invertible matrix such that
+\begin{align*}
+\displaystyle S^{-1}AS=D.
+\end{align*}
+@col
+Then
+\begin{align*}
+\displaystyle A=SDS^{-1}.
+\end{align*}
+\begin{align*}
+\displaystyle A^{s}=\underbrace{SDS^{-1}SDS^{-1}\cdots SDS^{-1}}_{s}=S\underbrace{D\cdots D}_{s}S^{-1}=SD^{s}S^{-1}
+\end{align*}
+\begin{align*}
+\displaystyle =S\operatorname{diag}(\lambda_{1}^{s},\ldots,\lambda_{n}^{s})S^{-1}.
+\end{align*}
+@endcol
+@slide
+@eg
+Let $s$ be a positive integer and
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&3\\
+4&2\end{bmatrix}.
+\end{align*}
+@newcol
+We want to find a closed formula for $A^{s}$. The characteristic polynomial of $A$ is
+\begin{align*}
+\displaystyle p_{A}\left(x\right)=\det\left(A-xI_{2}\right)=(1-x)(2-x)-12=x^{2}-3x-10=(x+2)(x-5).
+\end{align*}
+@col
+For $\lambda=-2$
+\begin{align*}
+\displaystyle A+2I_{2}=\begin{bmatrix}3&3\\
+4&4\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}1&1\\
+0&0\end{bmatrix}.
+\end{align*}
+@col
+So
+\begin{align*}
+\displaystyle \left\{\begin{bmatrix}1\\
+-1\end{bmatrix}\right\}
+\end{align*}
+is a basis for ${\mathcal{E}}_{A}\left(-2\right)$. For $\lambda=5$
+\begin{align*}
+\displaystyle A-5I_{2}=\begin{bmatrix}-4&3\\
+4&-3\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}1&-\frac{3}{4}\\
+0&0\end{bmatrix}.
+\end{align*}
+@col
+So
+\begin{align*}
+\displaystyle \left\{\begin{bmatrix}3\\
+4\end{bmatrix}\right\}
+\end{align*}
+is a basis for ${\mathcal{E}}_{A}\left(5\right)$. Let
+\begin{align*}
+\displaystyle S=\begin{bmatrix}1&3\\
+-1&4\end{bmatrix}.
+\end{align*}
+@col
+Then
+\begin{align*}
+\displaystyle S^{-1}AS=\operatorname{diag}(-2,5)
+\end{align*}
+so that
+\begin{align*}
+\displaystyle A^{s}=S\operatorname{diag}((-2)^{s},5^{s})S^{-1}
+\end{align*}
+\begin{align*}
+\displaystyle =\begin{bmatrix}1&3\\
+-1&4\end{bmatrix}\begin{bmatrix}(-2)^{s}&0\\
+0&5^{s}\end{bmatrix}\begin{bmatrix}\frac{4}{7}&-\frac{3}{7}\\
+\frac{1}{7}&\frac{1}{7}\\
+\end{bmatrix}=\begin{bmatrix}\frac{1}{7}(-1)^{s}2^{s+2}+\frac{3\times 5^{s}}{7}&\frac{1}{7}(-3)(-2)^{s}+\frac{3\times 5^{s}}{7}\\
+-\frac{1}{7}(-1)^{s}2^{s+2}+\frac{4\times 5^{s}}{7}&\frac{3(-2)^{s}}{7}+\frac{4\times 5^{s}}{7}\\
+\end{bmatrix}.
+\end{align*}
+@endcol
+@end
+@eg
+<b>High power of a diagonalizable matrix</b>
+
+@newcol
+Suppose that
+\begin{align*}
+\displaystyle A=\begin{bmatrix}19&0&6&13\\
+-33&-1&-9&-21\\
+21&-4&12&21\\
+-36&2&-14&-28\end{bmatrix}.
+\end{align*}
+@col
+We wish to compute $A^{20}$. Normally this would require 19 matrix multiplications. But since $A$ is diagonalizable, we can simplify the computations substantially.
+
+@col
+First, we diagonalize $A$. With
+\begin{align*}
+\displaystyle S=\begin{bmatrix}1&-1&2&-1\\
+-2&3&-3&3\\
+1&1&3&3\\
+-2&1&-4&0\end{bmatrix},
+\end{align*}
+we find
+\begin{align*}
+\displaystyle D&\displaystyle=S^{-1}AS \\
+&\displaystyle=\begin{bmatrix}-6&1&-3&-6\\
+0&2&-2&-3\\
+3&0&1&2\\
+-1&-1&1&1\end{bmatrix}\begin{bmatrix}19&0&6&13\\
+-33&-1&-9&-21\\
+21&-4&12&21\\
+-36&2&-14&-28\end{bmatrix}\begin{bmatrix}1&-1&2&-1\\
+-2&3&-3&3\\
+1&1&3&3\\
+-2&1&-4&0\end{bmatrix} \\
+&\displaystyle=\begin{bmatrix}-1&0&0&0\\
+0&0&0&0\\
+0&0&2&0\\
+0&0&0&1\end{bmatrix}.
+\end{align*}
+@col
+Using this, we compute
+\begin{align*}
+\displaystyle A^{20}=SD^{20}S^{-1}&\displaystyle=S\begin{bmatrix}-1&0&0&0\\
+0&0&0&0\\
+0&0&2&0\\
+0&0&0&1\end{bmatrix}^{20}S^{-1} \\
+&\displaystyle=S\begin{bmatrix}(-1)^{20}&0&0&0\\
+0&(0)^{20}&0&0\\
+0&0&(2)^{20}&0\\
+0&0&0&(1)^{20}\end{bmatrix}S^{-1} \\
+&\displaystyle=\begin{bmatrix}1&-1&2&-1\\
+-2&3&-3&3\\
+1&1&3&3\\
+-2&1&-4&0\end{bmatrix}\begin{bmatrix}1&0&0&0\\
+0&0&0&0\\
+0&0&1048576&0\\
+0&0&0&1\end{bmatrix}\begin{bmatrix}-6&1&-3&-6\\
+0&2&-2&-3\\
+3&0&1&2\\
+-1&-1&1&1\end{bmatrix} \\
+&\displaystyle=\begin{bmatrix}6291451&2&2097148&4194297\\
+-9437175&-5&-3145719&-6291441\\
+9437175&-2&3145728&6291453\\
+-12582900&-2&-4194298&-8388596\end{bmatrix}.
+\end{align*}
+@col
+Generally
+\begin{align*}
+\displaystyle A^{s}=SD^{s}S^{-1}=\begin{bmatrix}1-6(-1)^{s}+3\ 2^{s+1}&1+(-1)^{s}&-1-3(-1)^{s}+2^{s+1}&-1-6(-1)^{s}+2^{s+2}\\
+-3+12(-1)^{s}-9\ 2^{s}&-3-2(-1)^{s}&3+6(-1)^{s}-3\ 2^{s}&3+12(-1)^{s}-3\ 2^{s+1}\\
+-3-6(-1)^{s}+9\ 2^{s}&-3+(-1)^{s}&3-3(-1)^{s}+3\ 2^{s}&3-6(-1)^{s}+3\ 2^{s+1}\\
+12(-1)^{s}-3\ 2^{s+2}&-2(-1)^{s}&6(-1)^{s}-2^{s+2}&12(-1)^{s}-2^{s+3}\\
+\end{bmatrix}.
+\end{align*}
+@endcol
+@end
+@section{Summary}
+
+In below $A$ always denote a square matrix of size $n$
+
+<ol class="ltx_enumerate">
+<li class="ltx_item">
+If $\mathbf{x}\neq 0$ and $A\mathbf{x}=\lambda x$, then $\mathbf{x}$ is called
+an <b>eigenvector</b> of $A$ with eigenvalue $\lambda$.
+</li>
+<li class="ltx_item">
+$p_{A}(x)=\det(A-xI_{n})$ is called the <b>characteristic function</b> of $A$.
+
+<ol class="ltx_enumerate">
+<li class="ltx_item">
+It is a polynomial of degree $n$ with leading coefficient $(-1)^{n}$.
+</li>
+<li class="ltx_item">
+$\lambda$ is an eigenvalue if and only if $p_{A}(\lambda)=0$, i.e., $\lambda$ is a root of $p_{A}(x)$.
+</li>
+
+</ol>
+</li>
+<li class="ltx_item">
+${\mathcal{E}}_{A}\left(\lambda\right)$: <b>eigenspace</b> of $A$ for an eigenvalue $\lambda$.
+
+<ol class="ltx_enumerate">
+<li class="ltx_item">
+It is the set of of all eigenvectors of $A$ for $\lambda$, together with the zero vector,
+i.e.
+\begin{align*}
+\displaystyle {\mathcal{E}}_{\lambda}\left(A\right)=\left\{\mathbf{x}\in{\mathbb{R}}^{n}\,|\,A\mathbf{x}=\lambda\mathbf{x}\right\}.
+\end{align*}
+</li>
+<li class="ltx_item">
+${\mathcal{E}}_{\lambda}\left(A\right)={\mathcal{N}}\!\left(A-\lambda I_{n}\right)$.
+</li>
+<li class="ltx_item">
+${\mathcal{E}}_{\lambda}\left(A\right)$ is a subspace of ${\mathbb{R}}^{n}$.
+</li>
+
+</ol>
+</li>
+<li class="ltx_item">
+$\alpha_{A}\left(\lambda\right)$: <b>algebraic multiplicity</b>. The power of $(x-\lambda)$ in the factorization of $p_{A}(x)$.
+</li>
+<li class="ltx_item">
+$\gamma_{A}\left(\lambda\right)$: <b>geometric multiplicity</b>. It is $\dim{\mathcal{E}}_{A}\left(\lambda\right)=n\left(A-\lambda I_{n}\right)$.
+</li>
+<li class="ltx_item">
+Basic properties. Suppose $\lambda$ is an eigenvalue of $A$ and $\mathbf{x}$ is an eigenvector of $A$ with eigenvalue $\lambda$.
+
+<ol class="ltx_enumerate">
+<li class="ltx_item">
+$A$ is invertible if and only if $\lambda=0$ is not an eigenvalue.
+</li>
+<li class="ltx_item">
+For positive integer $s$, $\mathbf{x}$ is an eigenvector of $A^{s}$ with eigenvalue $\lambda^{s}$.
+</li>
+<li class="ltx_item">
+If $\lambda\neq 0$, $\mathbf{x}$ is an eigenvector of $A^{-1}$ with eigenvalue $\lambda^{-1}$.
+</li>
+<li class="ltx_item">
+$\lambda$ is an eigenvector of $A^{t}$ (but $\mathbf{x}$ may <b>not</b> be an eigenvector of $A$)
+</li>
+
+</ol>
+</li>
+<li class="ltx_item">
+Computational questions
+
+<ol class="ltx_enumerate">
+<li class="ltx_item">
+Find all the eigenvalues of $A$: find all the roots of $p_{A}(x)$.
+</li>
+<li class="ltx_item">
+Find ${\mathcal{E}}_{A}\left(\lambda\right)$: find ${\mathcal{N}}\!\left(A-\lambda I_{n}\right)$, this can be done by finding the RREF of $A-\lambda I_{n}$.
+
+</li>
+<li class="ltx_item">
+Find $\alpha_{A}\left(\lambda\right)$: Find the power of $x-\lambda$ in the factorization of $p_{A}(x)$.
+</li>
+<li class="ltx_item">
+Find a basis for ${\mathcal{E}}_{A}\left(\lambda\right)$: again, this is same as finding basis of ${\mathcal{N}}\!\left(A-\lambda I_{n}\right)$. This can be done by $A-\lambda I_{n}\xrightarrow{\text{RREF}}B$ and use the standard method
+in finding basis (see Lecture 8 Theorem 4, @ref{eg:example6}).
+</li>
+<li class="ltx_item">
+Find $\gamma_{A}\left(\lambda\right)$: same as finding $n\left(A-\lambda I_{n}\right)=n-r\left(A-\lambda I_{n}\right)$. Suppose $A-\lambda I_{n}\xrightarrow{\text{RREF}}B$.
+Then $\gamma_{A}\left(\lambda\right)=n-r\left(B\right)=n-\text{ number of pivot columns of $B$}$.
+</li>
+
+</ol>
+</li>
+
+</ol>

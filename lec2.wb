@@ -1,0 +1,391 @@
+@course{Math 1030}
+@setchapter{2}
+@chapter{Geometric interpretation of linear equations and vector spaces}
+$
+\newcommand{\R}{\mathbf{R}}
+\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\ol}{\overline}
+\newcommand{\mat}[4]{\begin{bmatrix} {#1} & {#2} \\ {#3} & {#4}\end{bmatrix}}
+\newcommand{\vvec}[2]{\begin{bmatrix}{#1} \\ {#2} \end{bmatrix}}
+\newcommand{\hvec}[2]{\begin{bmatrix}{#1} & {#2} \end{bmatrix}}
+\newcommand{\e}{\varepsilon}
+$
+@section{
+Intersections between Lines and Planes
+}
+@subsection{
+Two Dimensions
+}
+@eg
+@label{ex:1}
+Solve the equations:
+\[
+\begin{cases}
+2x-3y=-5,\\ x+y=5.
+\end{cases}
+\]
+@col
+There are two variables and we can draw these equations in a (2-dimensional) plane.
+Each (linear) equation represented by a straight line.
+For the line that corresponds to $2x-3y=-5$, it passes through the point $(0,5/3)$ (take $x=0$ and one gets $y=5/3$) and another the point $(-5/2,0)$. Hence it is determined.
+Similarly, the second straight line is the one passes through the points $(0,5)$ and $(5.0)$.
+@figure
+<iframe src="https://www.desmos.com/calculator/ivgmstarrz?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
+@caption{Intersection between lines}
+@end
+The solution of the two equations corresponds to the unique intersection $(2,3)$
+between the two straight lines.
+
+
+@slide
+@eg
+@label{ex:2}
+The following system of equations has no solution.
+\[
+\begin{cases}
+2x-3y=-5,\\ 2x-3y=0.
+\end{cases}
+\]
+@col
+@figure
+<iframe src="https://www.desmos.com/calculator/fuhvpsxixz?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
+@caption{Parallel lines}
+@end
+This is because the corresponding lines are parallel to each other
+and there is no intersections.
+@end
+
+@eg
+@label{ex:3}
+@newcol
+How about the system of equations:
+\[\begin{cases}
+2x-3y=-5,\\2x-3y=-5.
+\end{cases}\]
+Here, there are infinite solutions:
+For any real number $t$,
+\[
+(x,y)=(t,\frac{2t+5}{3})
+\]
+is a solution.
+The two lines coincide and their intersection is just the whole line.
+@endcol
+@end
+
+
+@subsection{
+Three Dimensions
+}
+
+@eg
+Solve the equations:
+\[
+\begin{cases}
+2x+3y+3z=3,\\ 2x-y+0z=0.
+\end{cases}
+\]
+@col
+@figure
+@label{fig:3d}
+@caption{Intersection of planes}
+<iframe style="width:100%;height:700px" frameborder="0" src="https://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&zscale=0&domain=2&numsamples=20&autozscale=1&showaxes=1&centeredaxes=1&xmin=-2&xmax=2&ymin=-2&ymax=2&zmin=-10&zmax=10&xticks=5&yticks=9&zticks=10&equations[0]='1%20-%20(2%2F3)x%20-%20y'&colors[0]='6cb8d9'&alphas[0]=0.9&equations[1]='s%2C%202s%2C%20t'&sdomain[1]='-1,1'&tdomain[1]='-2,3'&colors[1]='d998b7'&alphas[1]=0.9&rotationMatrix=[-0.35,-0.08,0.93,0,0.93,-0.18,0.33,0,0.14,0.99,0.14,0,0,0,0,1]&dimensions=[600,600]"/>
+@end
+
+@col
+There are three variables and we work in 3-dimensional space.
+Each (linear) equation corresponds to a plane.
+For instance, the ones above correspond to the blue and red planes
+in the figure above.
+
+@col
+Their intersection is the thick straight line,
+where the points on it can be expressed as
+\[
+\left\{\left(\frac{3-3t}{8},\frac{3-3t}{4},t\right)\mid t\in\mathbb{R}\right\}.
+\]
+@end
+
+
+@slide
+@eg
+The following system of equations has no solutions, since the corresponding planes are parallel.
+\[\begin{cases}
+2x-y+0z=2,\\ 2x-y+0z=0.
+\end{cases}\]
+@col
+@figure
+<iframe style="width:100%;height:700px" frameborder="0" src="https://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&zscale=0&domain=1&numsamples=20&autozscale=1&showaxes=1&centeredaxes=1&xmin=-1&xmax=1&ymin=-1&ymax=1&zmin=-10&zmax=10&xticks=5&yticks=9&zticks=10&equations[0]='s%2C%202s%2C%20t'&sdomain[0]='-1,1'&tdomain[0]='-1,1'&colors[0]='d998b7'&alphas[0]=0.9&equations[1]='s%2C%202s%20-%202%2C%20t'&sdomain[1]='-1,1'&tdomain[1]='-1,1'&colors[1]='1dd1d9'&alphas[1]=0.9&rotationMatrix=[-0.76,-0.4,0.52,0,0.66,-0.31,0.7,0,-0.12,0.87,0.49,0,0,0,0,1]&dimensions=[600,600]"/>
+@caption{Parallel Planes}
+@end
+@end
+@slide
+@eg
+@title{Singular Case}
+Suppose that there are three (linear) equations with three variables
+that corresponds to three distinguish planes.
+If they do not share a unique intersection,
+then either they share no intersections or they intersection is a line.
+More precisely, there are five cases:
+@ol
+@li
+All three planes are parallel to each other.
+We shall illustrate this by the following picture.
+@figure
+@caption{}
+<center>
+<script type="text/tikz">\begin{tikzpicture}[rotate=0,scale=1,arrow/.style={->,>=stealth,thick}]\draw[red, thick](0,3)--(1,0)(1,3)--(2,0)(2,3)--(3,0);\end{tikzpicture}
+</script>
+</center>
+@end
+@li
+Only two planes are parallel to each other.
+@figure
+@caption{}
+<center>
+<script type="text/tikz">
+\begin{tikzpicture}[rotate=0,scale=1,arrow/.style={->,>=stealth,thick}]
+\draw[red, thick](0,3)--(1,0)   (1,3)--(2,0);
+\draw[blue, thick](-1,0)--(3,3);
+\end{tikzpicture}
+</script>
+</center>
+@end
+@li
+The intersection of each pair of planes is a line and
+three such lines are parallel to each other.
+@figure
+@caption{}
+<center>
+<script type="text/tikz">
+\begin{tikzpicture}[rotate=0,scale=1,arrow/.style={->,>=stealth,thick}]
+\draw[blue, thick](90+10:2)--(-30-10:2)
+(90-10:2)--(210+10:2)
+(-30+10:2)--(210-10:2);
+\end{tikzpicture}
+</script>
+</center>
+@end
+@li
+Their intersection is a line.
+@figure
+@caption{}
+<center>
+<script type="text/tikz">
+\begin{tikzpicture}[rotate=0,scale=1,arrow/.style={->,>=stealth,thick}]
+\draw[blue, thick](90+30:2)--(-30-30:2)
+(90-30:2)--(210+30:2)
+(-30+30:2)--(210-30:2);
+\end{tikzpicture}
+</script>
+</center>
+@end
+@li
+Their intersection is a point, e.g. the xy-plane, yz-plane and zx-plane intersect at $(0,0,0)$.
+@figure
+@caption{}
+<center>
+<script type="text/tikz">
+\begin{tikzpicture}[scale=3,arrow/.style={->,>=stealth,thick}]
+\filldraw[draw=red,fill=red!20]
+(0,0,0)--(0,1.2,0)--(0,1.2,1.2)--(0,0,1.2)-- cycle;
+\filldraw[draw=blue,fill=blue!20]
+(1.7,0,0)--(1.7,1.2,0)--(0,1.2,0)--(0,0,0)-- cycle;
+\filldraw[draw=yellow,fill=yellow!20]
+(1.7,0,0)--(1.7,0,1.2)--(0,0,1.2)--(0,0,0)-- cycle;
+\filldraw[draw=red,fill=red!20]
+(0,0,0)--(0,1.2,0)--(0,1.2,1.2)--(0,0,1.2)-- cycle;
+\draw[thin,->] (0,0,0) -- (1.7,0,0) node[anchor=north east]{$x$};
+\draw[thin,->] (0,0,0) -- (0,1.2,0) node[anchor=north west]{$y$};
+\draw[thin,->] (0,0,0) -- (0,0,1.2) node[anchor=south]{$z$}
+(0,0,0)node[left]{$(0,0,0)$};
+\end{tikzpicture}
+</script>
+</center>
+@end
+@endol
+@end
+@remark
+
+<h5>Higher Dimensions</h5>
+How does this row picture extend into $n$ dimensions? The $n$ equations will contain
+$n$ unknowns. The first equation still determines a plane. It is no longer a two dimensional
+plane in 3-space; somehow it has dimension $n-1$. It must be flat and
+extremely thin within $n$-dimensional space, although it would look solid to us.
+
+
+If time is the fourth dimension, then the plane t = 0 cuts through four-dimensional
+space and produces the three-dimensional universe we live in (or rather, the universe as
+it was at $t =0$). Another plane is $z=0$, which is also three-dimensional; it is the ordinary
+$x-y$ plane taken over all time. Those three-dimensional planes will intersect! They share
+the ordinary $x-y$ plane at $t = 0$. We are down to two dimensions, and the next plane
+leaves a line. Finally a fourth plane leaves a single point. It is the intersection point of 4
+planes in 4 dimensions, and it solves the 4 underlying equations.
+
+
+I will be in trouble if that example from relativity goes any further. The point is that
+linear algebra can operate with any number of equations. The first equation produces an
+$(n-1)$-dimensional plane in $n$ dimensions, The second plane intersects it (we hope) in
+a smaller set of dimension $n-2$. Assuming all goes well, every new plane (every new
+equation) reduces the dimension by one. At the end, when all $n$ planes are accounted
+for, the intersection has dimension zero. It is a point, it lies on all the planes, and its
+coordinates satisfy all $n$ equations. It is the solution!
+@end
+
+
+@section{
+Column Pictures: Vector Point of View
+}
+<strong>Skipped. Can be discussed after introducing column vectors.</strong>
+@eg
+Back to the equations in @ref{ex:1}, which can be written
+in a single vector form equation:
+\[
+x\vvec{2}{1}+y\vvec{-3}{1}=\vvec{-5}{5}=b.
+\]
+@col
+The problem expressed this way is to find the combination of the column vectors on the left side that
+produces the vector $b$ on the right side.
+Note that the vector $b$ is in fact identified with the pint whose coordinates are $-5$ and $5$.
+In this case, we look for the combination of $\vvec{2}{1}$ (red vector)
+and $\vvec{-3}{1}$ (blue vector) to produce $\vvec{-5}{5}$ (black vector),
+cf. Figure  @ref{fig:vec}.
+
+@figure
+@label{fig:vec}
+@caption{Combinations of vectors}
+<div class='image'>
+<img src='content/math1030/fig_vec_com.png'/>
+</div>
+@end
+@end
+
+@slide
+@eg
+@col
+In  @ref{ex:2} and  @ref{ex:3},
+the corresponding equations are
+\[
+x\vvec{2}{2}+y\vvec{-3}{-3}=\vvec{-5}{0}.
+\]
+and
+\[
+x\vvec{2}{2}+y\vvec{-3}{-3}=\vvec{-5}{-5},
+\]
+respectively.
+The two vectors colinear.
+When the target vector is not colinear with them, there is no solution ( @ref{ex:2})
+and when the target vector is colinear with them,
+there are infinitely many solutions (@ref{ex:3}).
+@figure
+@caption{}
+<center>
+<script type="text/tikz">
+\begin{tikzpicture}[domain=0:4,scale=.8,arrow/.style={->,>=stealth,thick}]
+\draw[ultra thick,->] (-3,-3)to(-5,-5) node[below] {(-5,-5)};
+\draw[very thin,dashed,color=gray] (-5.5,-5.5) grid (3.5,3.5);
+\draw[thin,->] (-5,0) -- (3,0) node[right] {$x$};
+\draw[thin,->] (0,-5) -- (0,3) node[above] {$y$};
+\draw[red,very thick,->] (0,0)to(2,2) node[above] {(2,2)};
+\draw[blue,very thick,->] (0,0)to(-3,-3) node[right] {(-3,-3)};
+\draw[ultra thick,->] (0,0)to(-5,0) node[above] {(-5,0)};
+\end{tikzpicture}
+</script>
+</center>
+@end
+
+@end
+
+@eg
+@col
+Let us check a 'trivial' 3-dimensional case.
+\[x\begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix}+
+y\begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix}+
+z\begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix}=
+\begin{bmatrix}3 \\ 5 \\ 4\end{bmatrix}.
+\]
+
+@col
+@figure
+@label{fig:cube}
+@caption{Vectors in 3 Dimensions}
+<center>
+<img src='content/math1030/fig_cube.png'/>
+</center>
+@end
+
+@col
+One sees that the solution is $x=3, y=4,z=5$,
+which corresponds to the scaling of the red vectors so that
+the sum of the rescaled vectors is the blue vector in @ref{fig:cube}.
+More precisely, we have multiplication by scalars
+\[
+%    \text{\bf{}}:
+3\begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix}=\begin{bmatrix}3 \\ 0 \\ 0\end{bmatrix},\quad
+4\begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix}=\begin{bmatrix}0 \\ 4 \\ 0\end{bmatrix},\quad
+5\begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix}=\begin{bmatrix}0 \\ 0 \\ 5\end{bmatrix},
+\]
+and the vector addition
+\[\begin{bmatrix}3 \\ 0 \\ 0\end{bmatrix}+
+\begin{bmatrix}0 \\ 4 \\ 0\end{bmatrix}+
+\begin{bmatrix}0 \\ 0 \\ 5\end{bmatrix}=
+\begin{bmatrix}3 \\ 5 \\ 4\end{bmatrix}.
+\]
+@end
+
+@eg
+@col
+Let us see a non-trivial case.
+\[x\begin{bmatrix}2 \\ 4 \\ -2\end{bmatrix}+
+y\begin{bmatrix}1 \\ -6 \\ 7\end{bmatrix}+
+z\begin{bmatrix}1 \\ 0 \\ 2\end{bmatrix}=
+\begin{bmatrix}5 \\ -2 \\ 9\end{bmatrix}.
+\]
+The corresponding vectors are pictured as follows:
+
+@figure
+@caption{}
+@label{fig:cube_nontrivial}
+<center>
+@image{content/math1030/fig_cube_nontrivial.png}
+
+</center>
+@end
+@end
+
+@eg
+@col
+Suppose that there are three (linear) equations with three variables.
+In the column picture, what it happens to the singular case.
+So we have three vectors and try to combine them to produce vector $b$.
+
+
+When the three column vectors are in the same plane $P$
+any combination of them falls into $P$.
+For instance, the vectors in the following equation are in the plane
+$2x+3y+3z=0$.
+\[x\begin{bmatrix}\frac{3}{2} \\ -1 \\ 0\end{bmatrix}+
+y\begin{bmatrix}0 \\ 1 \\ -1\end{bmatrix}+
+z\begin{bmatrix}\frac{3}{2} \\ 0 \\ -1\end{bmatrix}=
+b.\]
+Then there are two cases:
+
+@itemize
+@item
+<strong>No solution:</strong>
+When
+$$b=b_0=\begin{bmatrix}0\\1\\1\end{bmatrix}$$
+is not in $P$, then there is no solution.
+
+@item
+<strong>Infinite solution:</strong>
+When $$b=b_\infty=\begin{bmatrix}3\\ -1\\ -1\end{bmatrix}$$
+is in $P$, it may have infinite solution.
+@enditemize
+@end
+
+@remark
+@col
+In general, if the $n$ planes have no point in common,
+or infinitely many points, then the corresponding $n$
+columns lie in the same plane.
+@end

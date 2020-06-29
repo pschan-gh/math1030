@@ -1,0 +1,965 @@
+@course{Math 1030}
+@setchapter{5}
+@chapter{More about matrices}
+
+
+The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at @href{http://linear.ups.edu/download.html}.
+
+
+The print version can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-print.pdf}.
+
+
+<h5 class="notkw">Reference.</h5>
+@itemize
+@item
+Beezer, Ver 3.5 Section Matrix Operations, Section Matrix Multiplication.
+@item
+Strang, Sect 1.4 and Sect 1.6.
+@enditemize
+
+
+Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf
+(Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$)Section MO (p52-56), all. Section MM (p57-60), all except T12 and T35.
+@section{
+Matrix Equality, Addition, Scalar Multiplication
+}
+@label{MEASM}
+Recall $M_{mn}$ is the set of $m\times n$ matrices with real entries. Throughout the section, unless otherwise stated,
+\[A=\begin{bmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
+a_{21}&a_{22}&\cdots&a_{2n}\\
+\vdots&\vdots&\vdots&\vdots\\
+a_{m1}&a_{m2}&\cdots&a_{mn}\end{bmatrix},\,\,B=\begin{bmatrix}b_{11}&b_{12}&%
+\cdots&b_{1n}\\
+b_{21}&b_{22}&\cdots&b_{2n}\\
+\vdots&\vdots&\vdots&\vdots\\
+b_{m1}&b_{m2}&\cdots&b_{mn}\end{bmatrix}\]
+@defn
+@title{Matrix Equality}
+@newcol
+The $m\times n$ matrices $A$ and $B$ are <b>equal</b>, written $A=B$ provided: $\left[A\right]_{ij}=\left[B\right]_{ij}$ for all $1\leq i\leq m$, $1\leq j\leq n$, that is:
+\[
+a_{ij}=b_{ij}\quad\text{ for all } i,j.
+\]
+@endcol
+@end
+@defn
+@title{Matrix Addition}
+@label{MA}
+@newcol
+Given $m\times n$ matrices $A$ and $B$, define the <b>sum</b> of $A$ and $B$ as an $m\times n$ matrix, written $A+B$, according to
+\[\displaystyle\left[A+B\right]_{ij}=\left[A\right]_{ij}+\left[B\right]_{ij}\]
+i.e.,
+\[A+B=\begin{bmatrix}a_{11}+b_{11}&a_{12}+b_{12}&\cdots&a_{1n}+b_{1n}\\
+a_{21}+b_{21}&a_{22}+b_{22}&\cdots&a_{2n}+b_{2n}\\
+\vdots&\vdots&\vdots&\vdots\\
+a_{m1}+b_{m1}&a_{m2}+b_{m2}&\cdots&a_{mn}+b_{mn}\end{bmatrix}\]
+@endcol
+@end
+@slide
+@eg
+If
+\[
+\displaystyle A=\begin{bmatrix}2&-3&4\\
+1&0&-7\end{bmatrix}
+\quad
+B=\begin{bmatrix}6&2&-4\\
+3&5&2\end{bmatrix}
+\]
+then:
+
+@newcol
+\[\displaystyle A+B=\begin{bmatrix}2&-3&4\\
+1&0&-7\end{bmatrix}+\begin{bmatrix}6&2&-4\\
+3&5&2\end{bmatrix}\]
+@col
+\[\displaystyle=\begin{bmatrix}2+6&-3+2&4+(-4)\\
+1+3&0+5&-7+2\end{bmatrix}=\begin{bmatrix}8&-1&0\\
+4&5&-5\end{bmatrix}\]
+@endcol
+@end
+@slide
+@defn
+@title{Matrix Scalar Multiplication}
+Given $m\times n$ matrix $A$
+and a scalar $\lambda\in{\mathbb{R}}$, the <b>scalar multiple</b> of $A$ by $\lambda$ is the $m\times n$ matrix, written $\lambda A$,
+defined as follows:
+\[
+\displaystyle\left[\lambda A\right]_{ij}=\lambda\left[A\right]_{ij},
+\]
+i.e.,
+\[\lambda A=\begin{bmatrix}\lambda a_{11}&\lambda a_{12}&\cdots&\lambda a_{1n}\\
+\lambda a_{21}&\lambda a_{22}&\cdots&\lambda a_{2n}\\
+\vdots&\vdots&\vdots&\vdots\\
+\lambda a_{m1}&\lambda a_{m2}&\cdots&\lambda a_{mn}\end{bmatrix}.\]
+@end
+Notice again that we have yet another kind of multiplication, and it is again written putting two symbols side-by-side. Computationally, scalar matrix multiplication is very easy.
+@eg
+@newcol
+If
+\[A=\begin{bmatrix}2&8\\
+-3&5\\
+0&1\end{bmatrix}\]
+and $\lambda=7$, then
+\[\lambda A=7\begin{bmatrix}2&8\\
+-3&5\\
+0&1\end{bmatrix}=\begin{bmatrix}7(2)&7(8)\\
+7(-3)&7(5)\\
+7(0)&7(1)\end{bmatrix}=\begin{bmatrix}14&56\\
+-21&35\\
+0&7\end{bmatrix}.\]
+@endcol
+@end
+@slide
+@defn
+@title{Zero Matrix}
+The $m\times n$ <b>zero matrix</b> is written as ${\cal O}={\cal O}_{m\times n}$ and defined by $\left[{\cal O}\right]_{ij}=0$, for all $1\leq i\leq m$, $1\leq j\leq n$, i.e.
+
+
+@newcol
+\[{\cal O}={\cal O}_{m\times n}=\begin{bmatrix}0&0&\cdots&0\\
+0&0&\cdots&0\\
+\vdots&\vdots&\vdots&\vdots\\
+0&0&\cdots&0\end{bmatrix}.\]
+@endcol
+@end
+
+
+@defn
+@title{Additive Inverse}
+@newcol
+The additive inverse of a matrix $A\in M_{mn}$, denoted by $-A$ is defined by $-A=(-1)A$, i.e.
+\[-A=\begin{bmatrix}-a_{11}&-a_{12}&\cdots&-a_{1n}\\
+-a_{21}&-a_{22}&\cdots&-a_{2n}\\
+\vdots&\vdots&\vdots&\vdots\\
+-a_{m1}&-a_{m2}&\cdots&-a_{mn}\end{bmatrix}.\]
+@endcol
+@end
+@slide
+Below are some obvious properties satisfied by the addition and scalar multiplication of matrices:
+@enumerate
+@item
+<b>Associativity of Matrix Addition</b>
+@newcol
+For all $A,\,B,\,C\in M_{mn}$,
+we have:
+\[
+A+\left(B+C\right)=\left(A+B\right)+C.
+\]
+@endcol
+@item
+<b>Commutativity of Matrix Addition</b>
+@newcol
+For all $A,\,B\in M_{mn}$, we have:
+\[
+A+B=B+A.
+\]
+@endcol
+@item
+<b>Additive Identity of Matrix Addition</b>
+@newcol
+$A+{\cal O}=A$ for all $A\in M_{mn}$.
+@endcol
+@item
+<strong>Existence of</strong> <b>Additive Inverse</b>
+@newcol
+For any $m\times n$ matrix $A$, we have:
+\[
+A+(-A)={\cal O}_{m \times n}.
+\]
+@endcol
+@item
+<b>Associativity of Scalar Multiplication</b>
+@newcol
+For all $\alpha,\,\beta\in \mathbb{R}$
+and $A\in M_{mn}$, we have:
+\[
+\alpha(\beta A)=(\alpha\beta)A.
+\]
+@endcol
+@item
+<b>Distributivity across Matrix Addition</b>
+@newcol
+For all $\alpha\in\mathbb{R}$ and $A,\,B\in M_{mn}$,
+we have:
+\[
+\alpha(A+B)=\alpha A+\alpha B.
+\]
+@endcol
+@item
+<b>Distributivity across Scalar Addition</b>
+@newcol
+For all $\alpha,\,\beta\in \mathbb{R}$ and $A\in M_{mn}$,
+we have:
+\[
+(\alpha+\beta)A=\alpha A+\beta A.
+\]
+@endcol
+@item
+<strong>Scalar Multiplication by $1 \in \mathbb{R}$</strong>
+@newcol
+For all $A\in M_{mn}$, we have  $1A=A$.
+@endcol
+@endenumerate
+
+
+@eg
+@newcol
+As an example, we prove here property 7,
+$(\alpha+\beta)A=\alpha A+\beta A$.
+We need to establish the equality of two matrices.
+
+
+@col
+For any $i$ and $j$, $1\leq i\leq m$, $1\leq j\leq n$,
+
+
+@col
+@steps
+\begin{align*}
+\left[(\alpha+\beta)A\right]_{ij}
+&= @nstep{(\alpha+\beta)\left[A\right]_{ij}}
+\\
+& @nstep{ = \alpha\left[A\right]_{ij}+\beta\left[A\right]_{ij}}
+\\
+& @nstep{ = \left[\alpha A\right]_{ij}+\left[\beta A\right]_{ij}}
+\\
+& @nstep{= \left[\alpha A+\beta A\right]_{ij}.}
+\end{align*}
+@endsteps
+@col
+Hence by the definition of equality of matrices, $(\alpha+\beta)A=\alpha A+\beta A$.
+@endcol
+@end
+@section{
+Transposes and Symmetric Matrices
+}
+@label{TSM}
+We now describe one more common operation which can be performed on matrices.
+Informally, to transpose a matrix is to build a new matrix by swapping its rows and columns.
+@defn
+@title{Transpose of a Matrix}
+@label{TM}
+Given an $m\times n$ matrix $A$, its <b>transpose</b> is the $n\times m$ matrix $A^{t}$ given by
+\[\left[A^{t}\right]_{ij}=\left[A\right]_{ji},\quad 1\leq i\leq n,\,1\leq j\leq m,\]
+i.e.
+
+@newcol
+\[
+A^t=\begin{bmatrix}a_{11}&a_{12}&a_{13}&\dots&a_{1n}\\
+a_{21}&a_{22}&a_{23}&\dots&a_{2n}\\
+\vdots&\vdots&\vdots&\vdots&\vdots\\
+a_{n1}&a_{n2}&a_{n3}&\dots&a_{nm}\\
+\end{bmatrix}^{t}
+\]
+@col
+\[
+=\begin{bmatrix}a_{11}&a_{21}&a_{31}&\dots&a_{m1}\\
+a_{12}&a_{22}&a_{32}&\dots&a_{m2}\\
+\vdots&\vdots&\vdots&\vdots&\vdots\\
+a_{1n}&a_{2n}&a_{3n}&\dots&a_{mn}\\
+\end{bmatrix}.
+\]
+@endcol
+@end
+@eg
+@newcol
+Suppose:
+\[
+D=\begin{bmatrix}3&7&2&-3\\
+-1&4&2&8\\
+0&3&-2&5\end{bmatrix}.\]
+Then,
+
+@col
+\[D^{t}=\begin{bmatrix}3&-1&0\\
+7&4&3\\
+2&2&-2\\
+-3&8&5\end{bmatrix}.\]
+@endcol
+@end
+@slide
+@defn
+@title{Symmetric Matrix}
+@label{SYM}
+A matrix $A$ is said to be <b>symmetric</b> if $A=A^{t}$, i.e.
+
+
+@newcol
+\[A=\begin{bmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
+a_{21}&a_{22}&\cdots&a_{2n}\\
+\vdots&\vdots&\vdots&\vdots\\
+a_{n1}&a_{n2}&\cdots&a_{nn}\end{bmatrix}\]
+with
+\[a_{ij}=a_{ji}\text{ for all $i,j$}.\]
+@endcol
+@end
+@eg
+@newcol
+The matrix:
+\[E=\begin{bmatrix}2&3&-9&5&7\\
+3&1&6&-2&-3\\
+-9&6&0&-1&9\\
+5&-2&-1&4&-8\\
+7&-3&9&-8&-3\end{bmatrix}\]
+is symmetric.
+@endcol
+@end
+@thm
+@title{Symmetric Matrices are Square}
+@label{SMS}
+Suppose that $A$ is a symmetric matrix. Then $A$ is square.
+@end
+@proof
+@newcol
+Suppose $A$ is a $n\times m$ matrix. Then $A^{t}$ is a $m\times n$ matrix.
+In order for $A$ and $A^{t}$ to be equal, they must have the same dimension. Hence $n=m$.
+@endcol
+@end
+@slide
+@thm
+@title{Transpose and Matrix Addition}
+Suppose that $A$ and $B$ are $m\times n$ matrices. Then $(A+B)^{t}=A^{t}+B^{t}$.
+@end
+@proof
+@newcol
+For $1\leq i\leq n$, $1\leq j\leq m$,
+@steps
+\[
+\begin{split}
+\left[(A+B)^{t}\right]_{ij}&= @nstep{\left[A+B\right]_{ji}}\\
+& @nstep{=\left[A\right]_{ji}+\left[B\right]_{ji}}\\
+& @nstep{=\left[A^{t}\right]_{ij}+\left[B^{t}\right]_{ij}}\\
+& @nstep{=\left[A^{t}+B^{t}\right]_{ij}}\\
+\end{split}
+\]
+@endsteps
+
+
+@col
+Since the matrices $(A+B)^{t}$ and $A^{t}+B^{t}$ agree at each entry, they are equal.
+@endcol
+@end
+
+
+@thm
+@title{Transpose and Matrix Scalar Multiplication}
+@newcol
+Suppose that $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $A$ is an $m\times n$ matrix. Then $(\alpha A)^{t}=\alpha A^{t}$.
+@endcol
+@end
+@proof
+@newcol
+For $1\leq i\leq m$, $1\leq j\leq n$,
+\[\displaystyle\left[(\alpha A)^{t}\right]_{ji}=\left[\alpha A\right]_{ij}\]
+\[\displaystyle=\alpha\left[A\right]_{ij}\]
+\[\displaystyle=\alpha\left[A^{t}\right]_{ji}\]
+\[\displaystyle=\left[\alpha A^{t}\right]_{ji}.\]
+Since the matrices $(\alpha A)^{t}$ and $\alpha A^{t}$ agree at each entry, they are equal.
+@endcol
+@end
+@thm
+@title{Transpose of a Transpose}
+@label{TT}
+@newcol
+Suppose that $A$ is an $m\times n$ matrix. Then $\left(A^{t}\right)^{t}=A$.
+@endcol
+@end
+@proof
+@newcol
+For $1\leq i\leq m$, $1\leq j\leq n$,
+\[\displaystyle\left[\left(A^{t}\right)^{t}\right]_{ij}=\left[A^{t}\right]_{ji}\]
+\[\displaystyle=\left[A\right]_{ij}.\]
+Since the matrices $\left(A^{t}\right)^{t}$ and $A$ agree at each entry, they are equal.
+@endcol
+@end
+@section{
+Matrix-Vector Product
+}
+@defn
+@title{Matrix-Vector Product}
+@label{MVP}
+Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$ and $\mathbf{u}$ is a vector of size $n$. Then the <b>matrix-vector product</b> of $A$ with $\mathbf{u}$ is the linear combination
+\[A\mathbf{u}=\left[\mathbf{u}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{u}\right]_%
+{2}\mathbf{A}_{2}+\left[\mathbf{u}\right]_{3}\mathbf{A}_{3}+\cdots+\left[%
+\mathbf{u}\right]_{n}\mathbf{A}_{n}\]
+@end
+
+
+@newcol
+Note that an $m\times n$ matrix $A$
+times a vector of size $n$ will create a column vector of size $m$.
+
+
+In particular, if $A$ is (non-square) rectangular,
+then the size of the vector changes.
+@eg
+Consider:
+\[\displaystyle A=\begin{bmatrix}1&4&2&3&4\\
+-3&2&0&1&-2\\
+1&6&-3&-1&5\end{bmatrix},\;\mathbf{u}=\begin{bmatrix}2\\
+1\\
+-2\\
+3\\
+-1\end{bmatrix}\]
+@newcol
+Then:
+\begin{align*}
+A\mathbf{u}&=2\begin{bmatrix}1\\
+-3\\
+1\end{bmatrix}
++1\begin{bmatrix}4\\
+2\\
+6\end{bmatrix}
++(-2)\begin{bmatrix}2\\
+0\\
+-3\end{bmatrix}
++3\begin{bmatrix}3\\
+1\\
+-1\end{bmatrix}
++(-1)\begin{bmatrix}4\\
+-2\\
+5\end{bmatrix}
+\\&
+=\begin{bmatrix}7\\
+1\\
+6\end{bmatrix}.
+\end{align*}
+@endcol
+@end
+@endcol
+@subsection{
+Matrix Notation for Systems of Linear Equations
+}
+@thm
+@title{Systems of Linear Equations as Matrix Multiplication}
+@label{SLEMM}
+The solution set to the linear system $\mathcal{LS}(A, \mathbf{b})$ is equal to the set of solutions $\mathbf{x}$ to the vector equation $A\mathbf{x}=\mathbf{b}$.
+@end
+@proof
+@newcol
+\[\displaystyle\mathbf{x}\text{ is a solution to } \mathcal{LS}(A,\mathbf{b})\]
+\[\displaystyle\iff\left[\mathbf{x}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{x}%
+\right]_{2}\mathbf{A}_{2}+\left[\mathbf{x}\right]_{3}\mathbf{A}_{3}+\cdots+%
+\left[\mathbf{x}\right]_{n}\mathbf{A}_{n}=\mathbf{b}\]
+\[\displaystyle\iff\mathbf{x}\text{ is a solution to }A\mathbf{x}=\mathbf{b}\]
+@endcol
+@end
+@eg
+@newcol
+Consider the system of linear equations
+\[\displaystyle 2x_{1}+4x_{2}-3x_{3}+5x_{4}+x_{5}=9\]
+\[\displaystyle 3x_{1}+x_{2}+x_{4}-3x_{5}=0\]
+\[\displaystyle-2x_{1}+7x_{2}-5x_{3}+2x_{4}+2x_{5}=-3\]
+has coefficient matrix and vector of constants
+\[\displaystyle A=\begin{bmatrix}2&4&-3&5&1\\
+3&1&0&1&-3\\
+-2&7&-5&2&2\end{bmatrix}\qquad\mathbf{b}=\begin{bmatrix}9\\
+0\\
+-3\end{bmatrix}\]
+and so will be described compactly by the vector equation $A\mathbf{x}=\mathbf{b}$.
+@endcol
+@end
+@slide
+@thm
+@title{Equality of Matrices and Matrix-Vector Products}
+@label{EMMVP}
+If $A$ and $B$ are $m\times n$ matrices such that $A\mathbf{x}=B\mathbf{x}$ for every $\mathbf{x}\in{\mathbb{R}}^{n}$,
+then $A=B$.
+@end
+@proof
+@newcol
+Suppose $A\mathbf{x}=B\mathbf{x}$ for all $\mathbf{x}\in{\mathbb{R}}^{n}$.
+Then, in particular this equality holds for the standard unit vectors, defined as follows:
+
+
+For $1\leq j\leq n$, we define the <b>standard unit vector</b> $\mathbf{e}_{j}$ to be the column vector in ${\mathbb{R}}^{n}$ with the $j$-th entry equal $1$ and all other entries equal to zero.  For any $1 \leq i \leq m$ and $1 \leq j \leq n$, we have:
+
+
+@col
+\begin{align*}
+\left[A\right]_{ij}
+&=\left[A\mathbf{e}_{j}\right]_{i}\\
+&=\left[B\mathbf{e}_{j}\right]_{i}\\
+&=\left[B\right]_{ij}
+\end{align*}
+@col
+Hence $A = B$.
+@endcol
+@end
+
+
+@remark
+@newcol
+You might notice from studying the proof that the hypotheses of this theorem could be weakened i.e., made less restrictive). We need only suppose the equality of the matrix-vector products for the standard unit vectors or any other spanning set of ${\mathbb{R}}^{n}$. However, in practice, when we apply this theorem the stronger hypothesis will be in effect so this version of the theorem suffices for our purposes. (If we changed the statement of the theorem to have the less restrictive hypothesis, then we would call the theorem stronger.)
+@endcol
+@end
+@section{
+Matrix Multiplication
+}
+@defn
+@title{Matrix Multiplication}
+@label{NM}
+Suppose $A$ is an $m\times n$ matrix and $\mathbf{B}_{1},\,\mathbf{B}_{2},\,\mathbf{B}_{3},\,\ldots,\,\mathbf{B}_{p}$ are the columns of an $n\times p$ matrix $B$. Then the <b>matrix product</b> of $A$ with $B$ is the $m\times p$ matrix whose $i$th column is the matrix-vector product $A\mathbf{B}_{i}$. Symbolically,
+\[AB=A\left[\mathbf{B}_{1}|\mathbf{B}_{2}|\mathbf{B}_{3}|\ldots|\mathbf{B}_{p}%
+\right]=\left[A\mathbf{B}_{1}|A\mathbf{B}_{2}|A\mathbf{B}_{3}|\ldots|A\mathbf{%
+B}_{p}\right].\]
+@end
+@eg
+@newcol
+Let:
+\[\displaystyle A=\begin{bmatrix}1&2&-1&4&6\\
+0&-4&1&2&3\\
+-5&1&2&-3&4\end{bmatrix},\;
+B=\begin{bmatrix}1&6&2&1\\
+-1&4&3&2\\
+1&1&2&3\\
+6&4&-1&2\\
+1&-2&3&0\end{bmatrix}.\]
+@col
+Then:
+\[
+\begin{split}
+AB&=\left[A\begin{bmatrix}1\\
+-1\\
+1\\
+6\\
+1\end{bmatrix}\left\lvert A\begin{bmatrix}6\\
+4\\
+1\\
+4\\
+-2\end{bmatrix}\right.\left\lvert A\begin{bmatrix}2\\
+3\\
+2\\
+-1\\
+3\end{bmatrix}\right.\left\lvert A\begin{bmatrix}1\\
+2\\
+3\\
+2\\
+0\end{bmatrix}\right.\right]
+\\
+&
+\\
+&=\begin{bmatrix}28&17&20&10\\
+20&-13&-3&-1\\
+-18&-44&12&-3\end{bmatrix}.
+\end{split}
+\]
+@endcol
+@end
+@remark
+@newcol
+Is this the definition of matrix multiplication you expected? Perhaps our previous operations for matrices caused you to think that we might multiply two matrices of the same size, entry-by-entry? Notice that our current definition uses matrices of different sizes (though the number of columns in the first must equal the number of rows in the second), and the result is of a third size.
+Notice too that in the previous example we cannot even consider the product $BA$, since the sizes of the two matrices in this order are not compatible.
+But it gets weirder than that. Many of your old ideas about multiplication will not apply to matrix multiplication, but some still will. So make no assumptions, and do not do anything until you have a theorem that says you can. Even if the sizes are right, matrix multiplication is not commutative – order matters.
+@endcol
+@end
+@slide
+@eg
+This example demonstrates that
+matrix multiplication is in general <strong>not</strong> commutative.
+
+
+@newcol
+Let:
+\[\displaystyle A=\begin{bmatrix}1&3\\
+-1&2\end{bmatrix},\;
+B=\begin{bmatrix}4&0\\
+5&1\end{bmatrix}.\]
+@col
+Then:
+\[\displaystyle AB=\begin{bmatrix}19&3\\
+6&2\end{bmatrix},\;
+BA=\begin{bmatrix}4&12\\
+4&17\end{bmatrix}\]
+So, $AB\neq BA$.
+
+
+@col
+It should not be hard for you to construct other pairs of matrices that do not commute (try a couple of $3\times 3$’s). Can you find a pair of non-identical matrices that do commute?
+@endcol
+@end
+@slide
+@thm
+@title{Entries of Matrix Products}
+@label{EMP}
+Suppose $A$ is an $m\times n$ matrix and $B$ is an $n\times p$ matrix. Then for $1\leq i\leq m$, $1\leq j\leq p$, the individual entries of $AB$ are given by:
+
+
+@newcol
+\begin{align*}
+\left[AB\right]_{ij}
+&=\left[A\right]_{i1}\left[B\right]_{1j}+\left[A\right]_{i2}\left[B\right]_{2j}+\left[A\right]_{i3}\left[B\right]_{3j}+ \cdots+\left[A\right]_{in}\left[B\right]_{nj}\\
+&=\sum_{k=1}^{n}\left[A\right]_{ik}\left[B\right]_{kj}
+\end{align*}
+@endcol
+@end
+@remark
+@newcol
+In most books, this is used as the definition of $AB$.
+@endcol
+@end
+@proof
+@newcol
+View the columns of $A$ as column vectors and denote them from left to right by:
+$\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$.  Similarly, denote the columns of $B$ by: $\mathbf{B}_{1},\,\mathbf{B}_{2},\,\mathbf{B}_{3},\,\ldots,\,\mathbf{B}_{p}$.
+
+
+@col
+Then, for $1\leq i\leq m$, $1\leq j\leq p$, we have:
+\begin{align*}
+\left[AB\right]_{ij}=\left[A\mathbf{B}_{j}\right]_{i}
+&=\left[\left[\mathbf{B}_{j}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{B}_{j}\right]_{2}\mathbf{A}_{2}+\cdots+\left[\mathbf{B}_{j}\right]_{n}\mathbf{A}_{n}\right]_{i}\\
+&=\left[\left[\mathbf{B}_{j}\right]_{1}\mathbf{A}_{1}\right]_{i}+
+\left[\left[\mathbf{B}_{j}\right]_{2}\mathbf{A}_{2}\right]_{i}+\cdots+\left[\left[\mathbf{B}_{j}\right]_{n}\mathbf{A}_{n}\right]_{i}\\
+&=\left[\mathbf{B}_{j}\right]_{1}\left[\mathbf{A}_{1}\right]_{i}+\left[\mathbf{B}_{j}\right]_{2}\left[\mathbf{A}_{2}\right]_{i}+\cdots+\left[\mathbf{B}_{j}\right]_{n}\left[\mathbf{A}_{n}\right]_{i}\\
+&=\left[B\right]_{1j}\left[A\right]_{i1}+\left[B\right]_{2j}\left[A\right]_{i2}+\cdots+\left[B\right]_{nj}\left[A\right]_{in}\\
+&=\left[A\right]_{i1}\left[B\right]_{1j}+\left[A\right]_{i2}\left[B\right]_{2j}+\cdots+\left[A\right]_{in}\left[B\right]_{nj}\\
+&=\sum_{k=1}^{n}\left[A\right]_{ik}\left[B\right]_{kj}
+\end{align*}
+@endcol
+@end
+@eg
+@title{Product of Two Matrices, Entry-by-Entry}
+Consider the matrices:
+\[\displaystyle A=\begin{bmatrix}1&2&-1&4&6\\
+0&-4&1&2&3\\
+-5&1&2&-3&4\end{bmatrix},\;
+B=\begin{bmatrix}1&6&2&1\\
+-1&4&3&2\\
+1&1&2&3\\
+6&4&-1&2\\
+1&-2&3&0\end{bmatrix}\]
+Suppose we just wanted the entry of $AB$ in the second row, third column:
+\begin{align*}
+\matrixentry{AB}{23}
+=&
+\matrixentry{A}{21}\matrixentry{B}{13}+
+\matrixentry{A}{22}\matrixentry{B}{23}+
+\matrixentry{A}{23}\matrixentry{B}{33}+
+\matrixentry{A}{24}\matrixentry{B}{43}+
+\matrixentry{A}{25}\matrixentry{B}{53}\\
+=&(0)(2)+(-4)(3)+(1)(2)+(2)(-1)+(3)(3)=-3
+\end{align*}
+Notice how there are 5 terms in the sum, since 5 is the common dimension of the two matrices (column count for $A$, row count for $B$). In the conclusion of the above theorem, it would be the index $k$ that would run from 1 to 5 in this computation. Here is a bit more practice.
+The entry of third row, first column:
+\begin{align*}
+\matrixentry{AB}{31}
+=&
+\matrixentry{A}{31}\matrixentry{B}{11}+
+\matrixentry{A}{32}\matrixentry{B}{21}+
+\matrixentry{A}{33}\matrixentry{B}{31}+
+\matrixentry{A}{34}\matrixentry{B}{41}+
+\matrixentry{A}{35}\matrixentry{B}{51}\\
+=&(-5)(1)+(1)(-1)+(2)(1)+(-3)(6)+(4)(1)=-18
+\end{align*}
+Try to compute all the other entries.
+@end
+<h5 class="notkw">How to memorize the formula</h5>: 
+@newcol
+To find the $(i,j)$-th entry of $AB$. (1) Find the $i$-th row of $A$ (simply called the row below)(2) Find the $j$-th column of $B$ (simply called the column below)(3) sum up the product the corresponding entries of the row and the column, i.e.
+(entry 1 of the row $\times$ entry 1 of the column) + (entry 2 of the row $\times$ entry 2 of the column) + $\cdots$
+@endcol
+@eg
+@newcol
+Find the $(3,2)$ entry of $AB$ in the previous example.The $3$-rd row of $A$ is $\begin{bmatrix}-5&1&2&-3&4\end{bmatrix}$ The $2$-nd column of $B$ is $\begin{bmatrix}6\\
+4\\
+1\\
+4\\
+-2\end{bmatrix}$. Let’s do the multiplication:
+row
+-5
+1
+2
+-3
+4
+column
+6
+4
+1
+4
+-2
+product
+-30
+4
+2
+-12
+-8
+The sum is
+\[-30+4+2-12-8=-44.\]
+@endcol
+@end
+@subsection{
+Properties of Matrix Multiplication
+}
+In this subsection, we collect properties of matrix multiplication and its interaction with
+the zero matrix, the identity matrix, matrix addition, scalar matrix multiplication and
+the transpose.
+@thm
+@title{Matrix Multiplication and the Zero Matrix}
+@label{MMZM}
+@newcol
+Suppose $A$ is an $m\times n$ matrix. Then
+@enumerate
+@item
+$A{\cal O}_{n\times p}={\cal O}_{m\times p}$
+@item
+${\cal O}_{p\times m}A={\cal O}_{p\times n}$
+@endenumerate
+@endcol
+@end
+@proof
+@newcol
+We will prove (1) and leave (2) to you. Using the entry-by-entry definition of matrix multiplication, for $1\leq i\leq m$, $1\leq j\leq p$, we comoute
+\[\displaystyle\left[A{\cal O}_{n\times p}\right]_{ij}=\sum_{k=1}^{n}\left[A%
+\right]_{ik}\left[{\cal O}_{n\times p}\right]_{kj}\]
+\[\displaystyle=\sum_{k=1}^{n}\left[A\right]_{ik}0\]
+\[\displaystyle=\sum_{k=1}^{n}0\]
+\[\displaystyle=0\]
+\[\displaystyle=\left[{\cal O}_{m\times p}\right]_{ij}\]
+So the matrices $A{\cal O}_{n\times p}$ and ${\cal O}_{m\times p}$ are equal.
+@endcol
+@end
+@thm
+@title{Matrix Multiplication and Identity Matrix}
+@label{MMIM}
+@newcol
+Suppose that $A$ is an $m\times n$ matrix. Then
+@enumerate
+@item
+$AI_{n}=A$
+
+
+@item
+$I_{m}A=A$
+@endenumerate
+@endcol
+@end
+@proof
+@newcol
+Again, we will prove (1) and leave (2) to you. Using the entry-by-entry definition of matrix multiplication, for $1\leq i\leq m$, $1\leq j\leq n$, we compute
+\[\displaystyle\left[AI_{n}\right]_{ij}=\sum_{k=1}^{n}\left[A\right]_{ik}\left[I%
+_{n}\right]_{kj}\]
+\[\displaystyle=\left[A\right]_{ij}\left[I_{n}\right]_{jj}+\sum_{%
+\begin{subarray}{c}k=1\\
+k\neq j\end{subarray}}^{n}\left[A\right]_{ik}\left[I_{n}\right]_{kj}\]
+\[\displaystyle=\left[A\right]_{ij}(1)+\sum_{k=1,k\neq j}^{n}\left[A\right]_{ik}%
+(0)\]
+\[\displaystyle=\left[A\right]_{ij}+\sum_{k=1,k\neq j}^{n}0\]
+\[\displaystyle=\left[A\right]_{ij}.\]
+So the matrices $A$ and $AI_{n}$ are equal entrywise. By the definition of matrix equality, they are equal matrices.
+@endcol
+@end
+@remark
+@newcol
+It is the previous theorem that gives the identity matrix its name. It is a matrix that behaves with matrix multiplication like the scalar 1 does with scalar multiplication. To multiply by the identity matrix is to have no effect on the other matrix.
+@endcol
+@end
+@slide
+@thm
+@title{Matrix Multiplication Distributes Across Addition}
+@label{MMDAA}
+Suppose that $A$ is an $m\times n$ matrix and $B$ and $C$ are $n\times p$ matrices and $D$ is a $p\times s$ matrix.
+Then:
+@enumerate
+@item
+$A(B+C)=AB+AC$
+@item
+$(B+C)D=BD+CD$
+@endenumerate
+@end
+@proof
+@newcol
+We will do (1), you do (2). Entry-by-entry, for $1\leq i\leq m$, $1\leq j\leq p$,
+\begin{align*}
+\matrixentry{A(B+C)}{ij}
+&=
+\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B+C}{kj}
+\\%&&acroref type="theorem" acro="EMP" />\\
+&=\sum_{k=1}^{n}\matrixentry{A}{ik}(\matrixentry{B}{kj}+\matrixentry{C}{kj})
+\\%&&acroref type="definition" acro="MA" />\\
+&=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}+\matrixentry{A}{ik}\matrixentry{C}{kj}
+\\%&&acroref type="property" acro="DCN" />\\
+&=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}+\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{C}{kj}
+\\%&&acroref type="property" acro="CACN" />\\
+&=\matrixentry{AB}{ij}+\matrixentry{AC}{ij}
+\\%&&acroref type="theorem" acro="EMP" />\\
+&=\matrixentry{AB+AC}{ij}
+\\%&&acroref type="definition" acro="MA" />
+\end{align*}
+So the matrices $A(B+C)$ and $AB+AC$ are equal, entry-by-entry.
+Hence by the definition of matrix equality, we can say they are equal matrices.
+@endcol
+@end
+@thm
+@title{Matrix Multiplication and Scalar Matrix Multiplication}
+@label{MMSMM}
+@newcol
+Suppose $A$ is an $m\times n$ matrix and $B$ is an $n\times p$ matrix. Let $\alpha$ be a scalar. Then $\alpha(AB)=(\alpha A)B=A(\alpha B)$.
+@endcol
+@end
+@proof
+@newcol
+These are equalities of matrices. We will do the first one, the second is similar and will be good practice for you.
+For $1\leq i\leq m$, $1\leq j\leq p$,
+\begin{align*}
+\matrixentry{\alpha(AB)}{ij}
+&=\alpha\matrixentry{AB}{ij}
+\\%&&acroref type="definition" acro="MSM" />\\
+&=\alpha\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}
+\\%&&acroref type="theorem" acro="EMP" />\\
+&=\sum_{k=1}^{n}\alpha\matrixentry{A}{ik}\matrixentry{B}{kj}
+\\%&&acroref type="property" acro="DCN" />\\
+&=\sum_{k=1}^{n}\matrixentry{\alpha A}{ik}\matrixentry{B}{kj}
+\\%&&acroref type="definition" acro="MSM" />\\
+&=\matrixentry{(\alpha A)B}{ij}
+\\%&&acroref type="theorem" acro="EMP" />
+\end{align*}
+So the matrices $\alpha(AB)$ and $(\alpha A)B$ are equal, entry-by-entry, and by the definition of matrix equality we can say they are equal matrices.
+@endcol
+@end
+@slide
+@thm
+@title{Matrix Multiplication is Associative}
+@label{MMA}
+@newcol
+Suppose $A$ is an $m\times n$ matrix, $B$ is an $n\times p$ matrix and $D$ is a $p\times s$ matrix. Then $A(BD)=(AB)D$.
+@endcol
+@end
+@proof
+@newcol
+A matrix equality, so we will go entry-by-entry, no surprise there. For $1\leq i\leq m$, $1\leq j\leq s$,
+\begin{align*}
+\matrixentry{A(BD)}{ij}
+&=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{BD}{kj}
+\\%&&acroref type="theorem" acro="EMP" />\\
+&=\sum_{k=1}^{n}\matrixentry{A}{ik}\left(\sum_{\ell=1}^{p}\matrixentry{B}{k\ell}\matrixentry{D}{\ell j}\right)
+\\%&&acroref type="theorem" acro="EMP" />\\
+&=\sum_{k=1}^{n}\sum_{\ell=1}^{p}\matrixentry{A}{ik}\matrixentry{B}{k\ell}\matrixentry{D}{\ell j}
+\\%&&acroref type="property" acro="DCN" />\\
+\end{align*}
+@col
+We can switch the order of the summation since these are finite sums.
+
+
+@col
+\begin{align*}
+&=\sum_{\ell=1}^{p}\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{k\ell}\matrixentry{D}{\ell j}
+\\%&&acroref type="property" acro="CACN" />\\
+\end{align*}
+@col
+As $\matrixentry{D}{\ell j}$ does not depend on the index $k$, we can use distributivity to move it outside of the inner sum.
+
+
+@col
+\begin{align*}
+&=\sum_{\ell=1}^{p}\matrixentry{D}{\ell j}\left(\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{k\ell}\right)
+\\%&&acroref type="property" acro="DCN" />\\
+&=\sum_{\ell=1}^{p}\matrixentry{D}{\ell j}\matrixentry{AB}{i\ell}
+\\%&&acroref type="theorem" acro="EMP" />\\
+&=\sum_{\ell=1}^{p}\matrixentry{AB}{i\ell}\matrixentry{D}{\ell j}
+\\%&&acroref type="property" acro="CMCN" />\\
+&=\matrixentry{(AB)D}{ij}
+\\%&&acroref type="theorem" acro="EMP" />
+\end{align*}
+@col
+Hence, $(AB)D = A(BD)$.
+@endcol
+@end
+@remark
+@newcol
+The above result says matrix multiplication is associative; it means we do not have to be careful about how we parenthesize an expression with just several matrices multiplied together. So this is where we draw the line on explaining every last detail in a proof. We will frequently add, remove, or rearrange parentheses with no comment.
+@endcol
+@end
+@slide
+@thm
+@title{Matrix Multiplication and Transposes}
+@label{MMT}
+Suppose $A$ is an $m\times n$ matrix and $B$ is an $n\times p$ matrix. Then $(AB)^{t}=B^{t}A^{t}$.
+@end
+@proof
+@newcol
+Here we go again, entry-by-entry. For $1\leq i\leq m$, $1\leq j\leq p$,
+
+
+@col
+\begin{align*}
+\matrixentry{\transpose{(AB)}}{ji}=&\matrixentry{AB}{ij}
+\\%&&acroref type="definition" acro="TM" />\\
+&=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}
+\\%&&acroref type="theorem" acro="EMP" />\\
+&=\sum_{k=1}^{n}\matrixentry{B}{kj}\matrixentry{A}{ik}
+\\%&&acroref type="property" acro="CMCN" />\\
+&=\sum_{k=1}^{n}\matrixentry{\transpose{B}}{jk}\matrixentry{\transpose{A}}{ki}
+\\%&&acroref type="definition" acro="TM" />\\
+&=\matrixentry{\transpose{B}\transpose{A}}{ji}
+\\%&&acroref type="theorem" acro="EMP" />
+\end{align*}
+
+
+@col
+So, $(AB)^{t} = B^{t}A^{t}$.
+@endcol
+@end
+@section{
+Row Operations and Matrix Multiplication
+}
+In this section, we will discuss the relation between elementary row operations and matrix multiplication.
+
+
+@defn
+@title{Row Operations}
+@label{RO}
+@newcol
+The following three operations, each of which is known as a <b>row operation</b>, will transform an $m\times n$ matrix into a different matrix of the same size.
+@enumerate
+@item
+@newcol
+Swap the locations of two rows.
+@endcol
+@item
+@newcol
+Multiply each entry of a single row by a nonzero quantity.
+@endcol
+@item
+@newcol
+Multiply each entry of one row by some quantity, and add these values to the entries in the same columns of a second row. Leave the first row the same after this operation, but replace the second row by the new values.
+@endcol
+@endenumerate
+@endcol
+@end
+@thm
+@label{thm:ROEM}
+@newcol
+Let $A\in M_{mn}$. Let $B$ be a matrix obtained by applying one of the above row operations on $A$.
+Let $J$ be a matrix obtained by applying the same row operation on $I_{m}$. Then
+\[JA=B.\]
+@endcol
+@end
+@proof
+@newcol
+Exercise.
+@endcol
+@end
+@slide
+@eg
+Let:
+\[A=\begin{bmatrix}a_{11}&a_{12}&a_{13}&a_{14}&a_{15}\\
+a_{21}&a_{22}&a_{23}&a_{24}&a_{25}\\
+a_{31}&a_{32}&a_{33}&a_{34}&a_{35}\\
+a_{41}&a_{42}&a_{43}&a_{44}&a_{45}\\
+\end{bmatrix}\]
+Consider the row operation $3R_{2}+R_{3}$.
+\[A\xrightarrow{3R_{2}+R_{3}}B=\begin{bmatrix}a_{11}&a_{12}&a_{13}&a_{14}&a_{15}%
+\\
+a_{21}&a_{22}&a_{23}&a_{24}&a_{25}\\
+3a_{21}+a_{31}&3a_{22}+a_{32}&3a_{23}+a_{33}&3a_{24}+a_{34}&3a_{25}+a_{35}\\
+a_{41}&a_{42}&a_{43}&a_{44}&a_{45}\\
+\end{bmatrix}\]
+\[I_{4}\xrightarrow{3R_{2}+R_{3}}J=\begin{bmatrix}1&0&0&0\\
+0&1&0&0\\
+0&3&1&0\\
+0&0&0&1\\
+\end{bmatrix}\]
+Then
+\[JA=B.\]
+@end
