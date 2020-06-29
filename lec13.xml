@@ -1,0 +1,1110 @@
+<?xml version="1.0"?>
+<document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
+  <course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030">
+    <keywords slide="all" environ="course" chapter="" course="Math 1030">
+      <keyword chapter="" slide="all">Dependency in Linearly Dependent Sets</keyword>
+      <keyword chapter="" slide="all">Basis of a Span</keyword>
+    </keywords>
+    <title environment="title" chapter_type="" wbtag="course" scope="course" course="Math 1030" chapter="" section="" subsection="" subsubsection="" serial="" slide="">Math 1030</title>
+    <slides environment="" chapter_type="">
+      <slide environment="" chapter_type="" canon_num="1" scope="course" course="Math 1030" title="Math 1030" id="s1" slide="1" chapter="" section="" subsection="" subsubsection="" chapter_title="" section_title="">
+        <title environment="title" chapter_type="" wbtag="course" scope="course" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="1">Math 1030</title>
+        <keywords slide="1" environ="slide" chapter="" course="Math 1030"/>
+        <setchapter course="Math 1030" chapter="" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="setchapter" argument="13"/>
+      </slide>
+    </slides>
+    <chapter environment="" chapter_type="Chapter" type="Chapter" wbtag="chapter" num="13" title="Linear Dependence and Span" course="Math 1030" serial="13">
+      <keywords slide="all" environ="chapter" chapter="13" course="Math 1030">
+        <keyword chapter="13" slide="all">Dependency in Linearly Dependent Sets</keyword>
+        <keyword chapter="13" slide="all">Basis of a Span</keyword>
+      </keywords>
+      <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="Math 1030" chapter="13" section="" subsection="" subsubsection="" serial="13" slide="">Linear Dependence and Span</title>
+      <slides environment="" chapter_type="">
+        <slide environment="" chapter_type="Chapter" canon_num="2" scope="chapter" id="s2" slide="2" course="Math 1030" chapter="13" section="" subsection="" subsubsection="" chapter_title="Linear Dependence and Span" section_title="">
+          <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="2">Linear Dependence and Span</title>
+          <keywords slide="2" environ="slide" chapter="13" course="Math 1030"/>
+          <h5 xmlns="http://www.w3.org/1999/xhtml" class="notkw" environment="">
+            <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">Reference.</paragraphs>
+          </h5>
+          <ul xmlns="http://www.w3.org/1999/xhtml" environment="">
+            <li environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Beezer, Ver 3.5 Section LDS (print version p105 - p113) </paragraphs>
+            </li>
+            <li environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Strang, Sect 2.3 </paragraphs>
+            </li>
+          </ul>
+          <h5 xmlns="http://www.w3.org/1999/xhtml" class="notkw" environment="">
+            <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">Exercise</paragraphs>
+          </h5>
+          <ul xmlns="http://www.w3.org/1999/xhtml" environment="">
+            <li environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Exercises with solutions can be downloaded at </paragraphs>
+              <href xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="" subsection="" subsubsection="" environment="" src="http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf" name="http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf" wbtag="href" argument="http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf"/>
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Section LI (p.48-51) (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$ in the following questions)
+C20, C40, C50, C51, C52, C55, C70, M10, T40. </paragraphs>
+            </li>
+            <li environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Strang, Sect 2.3 </paragraphs>
+            </li>
+          </ul>
+        </slide>
+      </slides>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Linearly Dependent Sets and Spans" course="Math 1030" chapter="13" num="1" serial="13.1">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="13" section="1" subsection="" subsubsection="" serial="13.1" slide="">
+          <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Linearly Dependent Sets and Spans</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="3" scope="section" id="s3" slide="3" course="Math 1030" chapter="13" section="1" subsection="" subsubsection="" chapter_title="Linear Dependence and Span" section_title="Linearly Dependent Sets and Spans">
+            <keywords slide="3" environ="slide" chapter="13" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="13" section="1" subsection="" subsubsection="" serial="" slide="3">
+              <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Linearly Dependent Sets and Spans</paragraphs>
+            </title>
+            <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs"> If we use a linearly dependent set to construct a span, then we can always create the same infinite set by starting with a set that is one vector smaller in size. We will illustrate this behaviour in </paragraphs>
+            <ref environment="" chapter_type="" label="RSC5" wbtag="ref" course="Math 1030" chapter="13" slide="3" src-course="MATH 1030" src-chapter="13" src-slide="169" type="Example" item="13.2" src-filename="lecs1-20.xml" md5="428f9710632cec0a42ac86c57154bf2e" class="lcref" serial="">
+              <title>Example 13.2</title>
+            </ref>
+            <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs">. However, this will not be possible if we build a span from a linearly independent set. So, in a certain sense, using a linearly independent set to formulate a span is the best possible way – there are no any extra vectors being used to build up all the necessary linear combinations. OK, here is the theorem, and then the example. </paragraphs>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="4" id="s4" slide="4" course="Math 1030" chapter="13" section="1" subsection="" subsubsection="" chapter_title="Linear Dependence and Span" section_title="Linearly Dependent Sets and Spans">
+            <keywords slide="4" environ="slide" chapter="13" course="Math 1030">
+              <keyword chapter="13" slide="4">Dependency in Linearly Dependent Sets</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="1" title="Dependency in Linearly Dependent Sets" md5="4a14cadf10ec606cc88093a90eb44a75" course="Math 1030" chapter="13" slide="4" item="13.1">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="13" section="1" subsection="" subsubsection="" serial="" slide="4">Dependency in Linearly Dependent Sets</title>
+              <label course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="label" name="DLDS" type="Theorem"/>
+              <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $S=\left\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\right\}$ is a set of vectors. Then $S$ is a linearly dependent set if and only if there is an index $t$, $1\leq t\leq n$, such that $\mathbf{u_{t}}$ is a linear combination of the vectors $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{t-1},\,\mathbf{u}_{t+1},\,\ldots,\,\mathbf{u}_{n}$. </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="999db374c40fec16a02d86a9c0c242dc" course="Math 1030" chapter="13" slide="4" of="4a14cadf10ec606cc88093a90eb44a75">
+              <newline course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="substatement"/>
+              <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">($\Rightarrow$) </paragraphs>
+              <newcol course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose that $S$ is linearly dependent. Then there exists a nontrivial relation of linear dependence (Lecture 12 Definition 1). That is, there are scalars, $\alpha_{i}$, $1\leq i\leq n$, not all of which are zero, such that
+\begin{align*}
+\displaystyle \alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}+\cdots+\alpha_{n}\mathbf{u}_{n}=\mathbf{0}.
+\end{align*}
+Suppose that $\alpha_{t}$ is nonzero. Then,
+\begin{align*}
+\displaystyle\mathbf{u}_{t}&amp;\displaystyle=\frac{-1}{\alpha_{t}}\left(-\alpha_{t}\mathbf{u}_{t}\right) \\
+&amp;\displaystyle=\frac{-1}{\alpha_{t}}\left(\alpha_{1}\mathbf{u}_{1}+\cdots+\alpha_{t-1}\mathbf{u}_{t-1}+\alpha_{t+1}\mathbf{u}_{t+1}+\cdots+\alpha_{n}\mathbf{u}_{n}\right) \\
+&amp;\displaystyle=\frac{-\alpha_{1}}{\alpha_{t}}\mathbf{u}_{1}+\cdots+\frac{-\alpha_{t-1}}{\alpha_{t}}\mathbf{u}_{t-1}+\frac{-\alpha_{t+1}}{\alpha_{t}}\mathbf{u}_{t+1}+\cdots+\frac{-\alpha_{n}}{\alpha_{t}}\mathbf{u}_{n}.
+\end{align*}
+Since $\frac{\alpha_{i}}{\alpha_{t}}$ is again a scalar, we have expressed $\mathbf{u}_{t}$ as a linear combination of the other elements of $S$. </paragraphs>
+              </newcol>
+              <newline course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="substatement"/>
+              <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">($\Leftarrow$) </paragraphs>
+              <newcol course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Assume that the vector $\mathbf{u}_{t}$ is a linear combination of the other vectors in $S$. Write such a linear combination as
+\begin{align*}
+\displaystyle\mathbf{u_{t}}&amp;\displaystyle=\beta_{1}\mathbf{u}_{1}+\beta_{2}\mathbf{u}_{2}+\cdots+\beta_{t-1}\mathbf{u}_{t-1}+\beta_{t+1}\mathbf{u}_{t+1}+\cdots+\beta_{n}\mathbf{u}_{n}.
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then we have
+\begin{align*}
+\displaystyle\beta_{1}\mathbf{u}_{1}&amp;\displaystyle+\cdots+\beta_{t-1}\mathbf{u}_{t-1}+(-1)\mathbf{u}_{t}+\beta_{t+1}\mathbf{u}_{t+1}+\cdots+\beta_{n}\mathbf{u}_{n} \\
+&amp;\displaystyle=\mathbf{u}_{t}+(-1)\mathbf{u}_{t} \\
+&amp;\displaystyle=\left(1+\left(-1\right)\right)\mathbf{u}_{t} \\
+&amp;\displaystyle=0\mathbf{u}_{t} \\
+&amp;\displaystyle=\mathbf{0}.
+\end{align*} </paragraphs>
+                  <collapse course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So the scalars $\beta_{1},\,\beta_{2},\,\beta_{3},\,\ldots,\,\beta_{t-1},\,\beta_{t}=-1,\beta_{t+1},\,\,\ldots,\,\beta_{n}$ provide a nontrivial relation of linear dependence of the vectors in $S$, thus establishing that $S$ is a linearly dependent set. </paragraphs>
+                  </collapse>
+                </collapse>
+              </newcol>
+              <qed course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="substatement"/>
+            </substatement>
+            <newcol course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+              <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This theorem can be used, sometimes repeatedly, to whittle down the size of a set of vectors used in a span construction.
+In the next example we will examine some of the subtleties. </paragraphs>
+            </newcol>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="5" id="s5" slide="5" course="Math 1030" chapter="13" section="1" subsection="" subsubsection="" chapter_title="Linear Dependence and Span" section_title="Linearly Dependent Sets and Spans">
+            <keywords slide="5" environ="slide" chapter="13" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="2" md5="1adab9393c4ea632c7792592f24eb4db" course="Math 1030" chapter="13" slide="5" item="13.2">
+              <label course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="label" name="RSC5" type="Example"/>
+              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Reducing the generating set of a span in ${\mathbb{R}}^{5}$</paragraphs>
+              </b>
+              <newline course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Consider the following set of $n=4$ vectors in ${\mathbb{R}}^{5}$,
+\begin{align*}
+\displaystyle R=
+\left\{
+\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\mathbf{v}_{4}\right\}
+=\left\{\begin{bmatrix}1\\
+2\\
+-1\\
+3\\
+2\end{bmatrix},\,\begin{bmatrix}2\\
+1\\
+3\\
+1\\
+2\end{bmatrix},\,\begin{bmatrix}0\\
+-7\\
+6\\
+-11\\
+-2\end{bmatrix},\,\begin{bmatrix}4\\
+1\\
+2\\
+1\\
+6\end{bmatrix}\right\}.\\
+\end{align*}
+Define $V=\left&lt;  R\right&gt;$.</paragraphs>
+              <newline course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We form a $5\times 4$ matrix, $D$, and row-reduce it to understand the solutions to the homogeneous system $\mathcal{LS}({D},{\mathbf{0}})$:
+\begin{align*}
+\displaystyle D=\begin{bmatrix}1&amp;2&amp;0&amp;4\\
+2&amp;1&amp;-7&amp;1\\
+-1&amp;3&amp;6&amp;2\\
+3&amp;1&amp;-11&amp;1\\
+2&amp;2&amp;-2&amp;6\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;0&amp;0&amp;4\\
+0&amp;\boxed{1}&amp;0&amp;0\\
+0&amp;0&amp;\boxed{1}&amp;1\\
+0&amp;0&amp;0&amp;0\\
+0&amp;0&amp;0&amp;0\end{bmatrix}.
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We can find infinitely many solutions to the system $\mathcal{LS}({D},{\mathbf{0}})$, most of which are nontrivial. Choose any nontrivial solution to build a nontrivial relation of linear dependence on $R$. Let us begin with $x_{4}=1$, to find the solution
+\begin{align*}
+\displaystyle \begin{bmatrix}-4\\
+0\\
+-1\\
+1\end{bmatrix}.
+\end{align*} </paragraphs>
+                  <collapse course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The corresponding relation of linear dependence is
+\begin{align*}
+\displaystyle (-4)\mathbf{v}_{1}+0\mathbf{v}_{2}+(-1)\mathbf{v}_{3}+1\mathbf{v}_{4}=\mathbf{0}.
+\end{align*} </paragraphs>
+                    <collapse course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The theorem above guarantees that we can solve this relation of linear dependence for some vector in $R$, but the choice of which one is up to us. Notice however that $\mathbf{v}_{2}$ has a zero coefficient. In this case, we cannot choose to solve for $\mathbf{v}_{2}$. Maybe some other relation of linear dependence would produce a nonzero coefficient for $\mathbf{v}_{2}$ if we just had to solve for this vector. Unfortunately, this example has been engineered to always produce a zero coefficient here, as you can see from solving the homogeneous system. Every solution has $x_{2}=0$!</paragraphs>
+                      <newline course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">OK, if we are convinced that we cannot solve for $\mathbf{v}_{2}$, let us instead solve for $\mathbf{v}_{3}$:
+\begin{align*}
+\displaystyle \mathbf{v}_{3}=(-4)\mathbf{v}_{1}+0\mathbf{v}_{2}+1\mathbf{v}_{4}=(-4)\mathbf{v}_{1}+1\mathbf{v}_{4}
+\end{align*} </paragraphs>
+                      <collapse course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We claim that this particular equation will allow us to write
+\begin{align*}
+\displaystyle V=\left&lt; R\right&gt;=\left&lt; \left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\mathbf{v}_{4}\right\}\right&gt;=\left&lt; \left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{4}\right\}\right&gt;,
+\end{align*}
+in essence declaring $\mathbf{v}_{3}$ as surplus for the task of building $V$ as a span of $R$. This claim is an equality of two sets. Let $R^{\prime}=\left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{4}\right\}$ and $V^{\prime}=\left&lt; R^{\prime}\right&gt;$. We want to show that $V=V^{\prime}$.</paragraphs>
+                        <newline course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                        <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">First show that $V^{\prime}\subseteq V$. Since every vector of $R^{\prime}$ is in $R$, any vector we can construct in $V^{\prime}$ as a linear combination of vectors from $R^{\prime}$ can also be constructed as a vector in $V$ by the same linear combination of the same vectors in $R$. That was easy, now turn it around.</paragraphs>
+                        <newline course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                        <collapse course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Next show that $V\subseteq V^{\prime}$. Choose any $\mathbf{v}$ from $V$. So there are scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4}$ such that
+\begin{align*}
+\displaystyle\mathbf{v}&amp;\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\mathbf{v}_{3}+\alpha_{4}\mathbf{v}_{4} \\
+&amp;\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\left((-4)\mathbf{v}_{1}+1\mathbf{v}_{4}\right)+\alpha_{4}\mathbf{v}_{4} \\
+&amp;\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\left((-4\alpha_{3})\mathbf{v}_{1}+\alpha_{3}\mathbf{v}_{4}\right)+\alpha_{4}\mathbf{v}_{4} \\
+&amp;\displaystyle=\left(\alpha_{1}-4\alpha_{3}\right)\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\left(\alpha_{3}+\alpha_{4}\right)\mathbf{v}_{4}.
+\end{align*} </paragraphs>
+                          <collapse course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                            <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This equation says that $\mathbf{v}$ can be written as a linear combination of the vectors in $R^{\prime}$ and hence qualifies for membership in $V^{\prime}$. So $V\subseteq V^{\prime}$ and we have established that $V=V^{\prime}$.</paragraphs>
+                            <newline course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                            <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">If $R^{\prime}$ was also linearly dependent (in fact, it is not), we could reduce the set $R^{\prime}$ even further. Notice that we could have chosen to eliminate any one of $\mathbf{v}_{1}$, $\mathbf{v}_{3}$ or $\mathbf{v}_{4}$, but somehow $\mathbf{v}_{2}$ is essential to the creation of $V$ since it cannot be replaced by any linear combination of $\mathbf{v}_{1}$, $\mathbf{v}_{3}$ or $\mathbf{v}_{4}$. </paragraphs>
+                          </collapse>
+                        </collapse>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Casting Out Vectors" course="Math 1030" chapter="13" num="2" serial="13.2">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="13" section="2" subsection="" subsubsection="" serial="13.2" slide="">
+          <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="title"/>
+          <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Casting Out Vectors</paragraphs>
+        </title>
+        <label course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="label" name="COV" type="Section"/>
+        <label course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="label" name="slide:canonicalbasis" type="Section"/>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="6" scope="section" id="s6" slide="6" course="Math 1030" chapter="13" section="2" subsection="" subsubsection="" chapter_title="Linear Dependence and Span" section_title="Casting Out Vectors">
+            <keywords slide="6" environ="slide" chapter="13" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="13" section="2" subsection="" subsubsection="" serial="" slide="6">
+              <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="title"/>
+              <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Casting Out Vectors</paragraphs>
+            </title>
+            <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> In </paragraphs>
+            <ref environment="" chapter_type="" label="RSC5" wbtag="ref" course="Math 1030" chapter="13" slide="6" src-course="MATH 1030" src-chapter="13" src-slide="169" type="Example" item="13.2" src-filename="lecs1-20.xml" md5="428f9710632cec0a42ac86c57154bf2e" class="lcref" serial="">
+              <title>Example 13.2</title>
+            </ref>
+            <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> we used four vectors to create a span. With a relation of linear dependence in hand, we were able to toss out one of these four vectors and create the same span from a subset of just three of the original set of four vectors. We did have to take some care as to just which vector we tossed out. In the next example, we will be more methodical about just how we choose to eliminate vectors from a linearly dependent set while preserving a span. </paragraphs>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="7" id="s7" slide="7" course="Math 1030" chapter="13" section="2" subsection="" subsubsection="" chapter_title="Linear Dependence and Span" section_title="Casting Out Vectors">
+            <keywords slide="7" environ="slide" chapter="13" course="Math 1030"/>
+            <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> In $\mathbb{R}^m$,
+for $i = 1, 2, \ldots, m$, let:
+\[
+\vec{e}_1 = \colvector{1\\0\\0\\\vdots\\0},\;
+\vec{e}_2 = \colvector{0\\1\\0\\\vdots\\0},
+\;\cdots\;,\;
+\vec{e}_m = \colvector{0\\0\\0\\\vdots\\1}.
+\]
+That is:
+\[
+\left[\vec{e}_m\right]_j = \begin{cases}
+1 &amp; \text{ if } j = m;\\
+0 &amp; \text{ otherwise.}
+\end{cases}
+\] </paragraphs>
+            <newcol course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+              <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Observe that every vector $\vec{v} = \colvector{v_1\\v_2\\ \vdots \\ v_m} \in \mathbb{R}^m$
+lies in the span of $\{\vec{e}_1, \vec{e}_2, \ldots, \vec{e}_m\}$, since:</paragraphs>
+              <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+              <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \[
+\colvector{v_1\\v_2\\ \vdots \\ v_m} = v_1 \colvector{1\\0\\0\\\vdots\\0}
++ v_2 \colvector{0\\1\\0\\\vdots\\0} + \cdots + v_m \colvector{0\\0\\0\\\vdots\\1}.
+\] </paragraphs>
+                <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Moreover, for any positive integer $r &lt; n$,
+and any vector $\vec{v} \in \mathbb{R}^m$ of the form:
+\[
+\vec{v} = \colvector{v_1\\v_2\\ \vdots \\ v_r \\ 0 \\0 \\ \vdots \\0},
+\]</paragraphs>
+                  <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> we have:
+\[
+\vec{v} \in \left\langle \{\vec{e}_1, \vec{e}_2, \ldots, \vec{e}_r\}\right\rangle.
+\]</paragraphs>
+                    <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                        <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Exercise.</paragraphs>
+                      </strong>
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Notice also that the vectors: $\vec{e}_1, \vec{e}_2, \ldots, \vec{e}_r$ are linearly independent. </paragraphs>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </collapse>
+            </newcol>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="8" id="s8" slide="8" course="Math 1030" chapter="13" section="2" subsection="" subsubsection="" chapter_title="Linear Dependence and Span" section_title="Casting Out Vectors">
+            <keywords slide="8" environ="slide" chapter="13" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="3" md5="a6015156e56e0ac3962516f29be19cfc" course="Math 1030" chapter="13" slide="8" item="13.3">
+              <label course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="label" name="eg:COV" type="Example"/>
+              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Casting out vectors</paragraphs>
+              </b>
+              <newcol course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Consider now the following set $S$ of $n = 7$ vectors in ${\mathbb{R}}^{4}$:
+\begin{align*}
+\displaystyle S=\left\{\begin{bmatrix}1\\
+2\\
+0\\
+-1\end{bmatrix},\,\begin{bmatrix}4\\
+8\\
+0\\
+-4\end{bmatrix},\,\begin{bmatrix}0\\
+-1\\
+2\\
+2\end{bmatrix},\,\begin{bmatrix}-1\\
+3\\
+-3\\
+4\end{bmatrix},\,\begin{bmatrix}0\\
+9\\
+-4\\
+8\end{bmatrix},\,\begin{bmatrix}7\\
+-13\\
+12\\
+-31\end{bmatrix},\,\begin{bmatrix}-9\\
+7\\
+-8\\
+37\end{bmatrix}\right\}.
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="8fc8ebb550bd42bcda3fb034a92efbd1" wbtag="ref" course="Math 1030" chapter="13" slide="8" src-course="MATH 1030" src-chapter="12" src-slide="159" type="Theorem" item="12.11" src-filename="lecs1-20.xml" md5="8fc8ebb550bd42bcda3fb034a92efbd1" class="lcref" serial="">
+                    <title>More Vectors than Size implies Linear Dependence</title>
+                  </ref>
+                  <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">,
+the set $S$ is obviously linearly dependent, since we have $n = 7$ vectors in ${\mathbb{R}}^{4}$. So, we can slim down $S$ some and express the subspace
+$\left\langle S \right\rangle$ as the span of a smaller set of vectors.</paragraphs>
+                  <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                  <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">We would like to know:</paragraphs>
+                  <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                  <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> What's the smallest subset $S'$ of $S$ such that
+$\left\langle S' \right\rangle = \left\langle S \right\rangle$? </paragraphs>
+                  </strong>
+                  <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Consider the matrix $A$ whose columns consist of the vectors in $S$:
+\begin{align*}
+\displaystyle A=\left[\mathbf{A}_{1}|\mathbf{A}_{2}|\mathbf{A}_{3}|\ldots|\mathbf{A}_{7}\right]=\begin{bmatrix}1&amp;4&amp;0&amp;-1&amp;0&amp;7&amp;-9\\
+2&amp;8&amp;-1&amp;3&amp;9&amp;-13&amp;7\\
+0&amp;0&amp;2&amp;-3&amp;-4&amp;12&amp;-8\\
+-1&amp;-4&amp;2&amp;4&amp;8&amp;-31&amp;37\end{bmatrix}.
+\end{align*}
+The matrix $A$ is row-equivalent to the RREF matrix:
+\begin{align*}
+\displaystyle B=\begin{bmatrix}\boxed{1}&amp;4&amp;0&amp;0&amp;2&amp;1&amp;-3\\
+0&amp;0&amp;\boxed{1}&amp;0&amp;1&amp;-3&amp;5\\
+0&amp;0&amp;0&amp;\boxed{1}&amp;2&amp;-6&amp;6\\
+0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}.
+\end{align*}
+In this case, the rank (i.e. the number of non-zero rows) of $B$ is $r = 3$.
+The pivot columns of $B$ are $\mathbf{B}_1, \mathbf{B}_3, \mathbf{B}_4$.</paragraphs>
+                    <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="newcol">
+                        <li class="ltx_item" environment="newcol">
+                          <strong environment="newcol">
+                            <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\displaystyle \mathbf{A}_1, \mathbf{A}_3, \mathbf{A}_4$ are linearly independent. </paragraphs>
+                          </strong>
+                          <collapse xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                            <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The pivot columns of $B$ are precisely the vectors:
+\begin{align*}
+\mathbf{B}_1 &amp;= \vec{e}_1, &amp; \mathbf{B}_3 &amp;= \vec{e}_2, &amp; \mathbf{B}_4 &amp;= \vec{e}_3.
+\end{align*}
+In particular, they are linearly independent.</paragraphs>
+                            <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                            <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                              <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We claim that the corresponding columns of $A$
+(namely $\mathbf{A}_1, \mathbf{A}_3, \mathbf{A}_4$) are also linearly independent.
+The reason is as follows:</paragraphs>
+                              <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                              <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The augmented matrix:
+\[
+B' = [\mathbf{B}_1 | \mathbf{B}_3 | \mathbf{B}_4] =
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 0
+\end{bmatrix}
+\]
+is an RREF matrix which is row-equivalent to the augmented matrix:
+\[
+A' = [\mathbf{A}_1 | \mathbf{A}_3 | \mathbf{A}_4].
+\]
+It now follows from </paragraphs>
+                                <ref environment="newcol" chapter_type="" label="60dd89e0db5ce8bae68e89cd2a2330de" wbtag="ref" course="Math 1030" chapter="13" slide="8" src-course="MATH 1030" src-chapter="12" src-slide="156" type="Theorem" item="12.8" src-filename="lecs1-20.xml" md5="60dd89e0db5ce8bae68e89cd2a2330de" class="lcref" serial="">
+                                  <title>Linearly Independent Vectors, $r$ and $n$</title>
+                                </ref>
+                                <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> that the columns of $A'$ are linearly independent. </paragraphs>
+                              </collapse>
+                            </collapse>
+                          </collapse>
+                        </li>
+                        <li class="ltx_item" environment="newcol">
+                          <strong environment="newcol">
+                            <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The span of $S$ is equal to
+$\displaystyle
+\left\langle\{\mathbf{A}_1, \mathbf{A}_3, \mathbf{A}_4\}\right\rangle.
+$ </paragraphs>
+                          </strong>
+                          <collapse xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                            <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> First, notice that every column of $B$ is a vector in $\mathbb{R}^4$.
+Moreover, since the rank of $B$ is $r = 3$,
+the $4$-th entry of each such column vector is zero.</paragraphs>
+                            <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                            <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                              <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By the observations made earlier, we have:
+\[
+\mathbf{B}_i \in \left\langle \underbrace{\mathbf{B}_1}_{\vec{e}_1},
+\underbrace{\mathbf{B}_3}_{\vec{e}_2}, \underbrace{\mathbf{B}_4}_{\vec{e}_3}
+\right\rangle
+\]
+for $i = 1, 2, \ldots, 7$.</paragraphs>
+                              <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                              <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> In other words, for any $1 \leq i \leq 7$, the vector equation:
+\[
+[\mathbf{B}_1 | \mathbf{B}_3 | \mathbf{B}_4]\vec{x} = \mathbf{B}_i
+\]
+has a solution $\vec{x} \in \mathbb{R}^3$. </paragraphs>
+                                <paragraphs>
+                                  <!-- or equivalently the linear system:
+\[
+\mathcal{LS}(B', \mathbf{B}_i)
+\]
+is consistent.
+-->
+                                </paragraphs>
+                                <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                                <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                  <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> On the other hand, the augmented matrix $[\mathbf{B}_1 | \mathbf{B}_3 | \mathbf{B}_4| \mathbf{B}_i]$ is row-equivalent to
+$[\mathbf{A}_1 | \mathbf{A}_3 | \mathbf{A}_4| \mathbf{A}_i]$, which implies that any solution to 
+$[\mathbf{B}_1 | \mathbf{B}_3 | \mathbf{B}_4]\vec{x} = \mathbf{B}_i$
+is also a solution to 
+$[\mathbf{A}_1 | \mathbf{A}_3 | \mathbf{A}_4]\vec{x} = \mathbf{A}_i$.</paragraphs>
+                                  <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                                  <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                    <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> For example, we have:
+\[
+[\mathbf{B}_1 | \mathbf{B}_3 | \mathbf{B}_4]\colvector{2\\1\\2}
+=
+2\mathbf{B}_1 + \mathbf{B}_3 + 2 \mathbf{B}_4
+= \colvector{2\\1\\2\\0}
+= \mathbf{B}_5
+\]
+which implies that:
+\[
+\vec{x} = \colvector{2\\1\\2}
+\]
+is a solution to 
+$[\mathbf{B}_1 | \mathbf{B}_3 | \mathbf{B}_4]\vec{x} = \mathbf{B}_5$
+and hence also a solution to
+$[\mathbf{A}_1 | \mathbf{A}_3 | \mathbf{A}_4]\vec{x} = \mathbf{A}_5$.
+Indeed:</paragraphs>
+                                    <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                                    <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \[
+[\mathbf{A}_1 | \mathbf{A}_3 | \mathbf{A}_4]\colvector{2\\1\\2} =
+2\mathbf{A}_1 + \mathbf{A}_3 + 2 \mathbf{A}_4 = \colvector{0\\9\\-4\\8}
+= \mathbf{A}_5
+\]
+In particular, $\mathbf{A}_5$ lies in the span of
+$\mathbf{A}_1, \mathbf{A}_3, \mathbf{A}_4$.</paragraphs>
+                                      <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                                      <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                        <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> It now follows, since every $\mathbf{B}_i$ is in the span of the
+$\mathbf{B}_1, \mathbf{B}_3, \mathbf{B}_4$, that
+every $\mathbf{A}_i$ lies in the span of $\mathbf{A}_1, \mathbf{A}_3, \mathbf{A}_4$.</paragraphs>
+                                        <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                                        <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                          <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence,
+the span of $S$ is equal to the span of the vectors:
+\[
+\mathbf{A}_1, \mathbf{A}_3, \mathbf{A}_4.
+\] </paragraphs>
+                                        </collapse>
+                                      </collapse>
+                                    </collapse>
+                                  </collapse>
+                                </collapse>
+                              </collapse>
+                            </collapse>
+                          </collapse>
+                        </li>
+                      </ol>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="9" id="s9" slide="9" course="Math 1030" chapter="13" section="2" subsection="" subsubsection="" chapter_title="Linear Dependence and Span" section_title="Casting Out Vectors">
+            <keywords slide="9" environ="slide" chapter="13" course="Math 1030">
+              <keyword chapter="13" slide="9">Basis of a Span</keyword>
+            </keywords>
+            <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> The previous example motivates the following fundamental theorem: </paragraphs>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="4" title="Basis of a Span" md5="ea6d5ae5f39204f8144e232790eb29ac" course="Math 1030" chapter="13" slide="9" item="13.4">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="13" section="2" subsection="" subsubsection="" serial="" slide="9">Basis of a Span</title>
+              <label course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="label" name="BS" type="Theorem"/>
+              <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $S=\left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\ldots,\,\mathbf{v}_{n}\right\}$ is a set of column vectors. Define $W=\left&lt; S\right&gt;$ and let $A$ be the matrix whose columns are the vectors from $S$. Let $B$ be the reduced row-echelon form of $A$, with $D=\left\{{d}_{1},\,{d}_{2},\,{d}_{3},\,\ldots,\,{d}_{r}\right\}$ the set of indices for the pivot columns of $B$. Then </paragraphs>
+              <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $T=\left\{\mathbf{v}_{d_{1}},\,\mathbf{v}_{d_{2}},\,\mathbf{v}_{d_{3}},\,\ldots\,\mathbf{v}_{d_{r}}\right\}$ is a linearly independent set. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $W=\left&lt; T\right&gt;$. </paragraphs>
+                </li>
+              </ol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="a8c860af8e75f1ceaeaf914bfdbcc9e5" course="Math 1030" chapter="13" slide="9" of="ea6d5ae5f39204f8144e232790eb29ac">
+              <strong xmlns="http://www.w3.org/1999/xhtml" environment="substatement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">Try to understand the example and skip the proof for now</paragraphs>
+              </strong>
+              <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="substatement"/>
+              <newcol course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> To prove that $T$ is linearly independent, begin with a relation of linear dependence on $T$,
+\begin{align*}
+\displaystyle \mathbf{0}=\alpha_{1}\mathbf{v}_{d_{1}}+\alpha_{2}\mathbf{v}_{d_{2}}+\alpha_{3}\mathbf{v}_{d_{3}}+\ldots+\alpha_{r}\mathbf{v}_{d_{r}}.
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We will try to conclude that the only possibility for the scalars $\alpha_{i}$ is that they are all zero.
+Denote the non-pivot columns of $B$ by $F=\left\{{f}_{1},\,{f}_{2},\,{f}_{3},\,\ldots,\,{f}_{n-r}\right\}$. Then we can preserve the equality by adding a big fat zero to the linear combination:
+\begin{align*}
+\displaystyle \mathbf{0}=\alpha_{1}\mathbf{v}_{d_{1}}+\alpha_{2}\mathbf{v}_{d_{2}}+\alpha_{3}\mathbf{v}_{d_{3}}+\ldots+\alpha_{r}\mathbf{v}_{d_{r}}+0\mathbf{v}_{f_{1}}+0\mathbf{v}_{f_{2}}+0\mathbf{v}_{f_{3}}+\ldots+0\mathbf{v}_{f_{n-r}}.
+\end{align*} </paragraphs>
+                  <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The scalars in this linear combination (suitably reordered) are a solution to the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$. Notice that this is the solution obtained by setting each free variable to zero. In the case of a homogeneous system, we see that if all of the free variables are set to zero, then the resulting solution vector is trivial (all zeros). So it must be that $\alpha_{i}=0$, $1\leq i\leq r$. This implies, by the definition of linear independence, that $T$ is a linearly independent set.</paragraphs>
+                    <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The second conclusion of this theorem is an equality of sets. Since $T$ is a subset of $S$, any linear combination of elements of the set $T$ can also be viewed as a linear combination of elements of the set $S$. So $\left&lt; T\right&gt;\subseteq\left&lt; S\right&gt;=W$. It remains to prove that $W=\left&lt; S\right&gt;\subseteq\left&lt; T\right&gt;$.</paragraphs>
+                      <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">For each $k$, $1\leq k\leq n-r$, form a solution $\mathbf{x}$ to $\mathcal{LS}({A},{\mathbf{0}})$ by setting the free variables as follows:
+\begin{align*}
+\displaystyle x_{f_{1}}&amp;\displaystyle=0&amp;\displaystyle x_{f_{2}}&amp;\displaystyle=0&amp;\displaystyle x_{f_{3}}&amp;\displaystyle=0&amp;\displaystyle\ldots&amp;\displaystyle x_{f_{k}}&amp;\displaystyle=1&amp;\displaystyle\ldots&amp;\displaystyle x_{f_{n-r}}&amp;\displaystyle=0.
+\end{align*} </paragraphs>
+                      <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The remainder of this solution vector is given by
+\begin{align*}
+\displaystyle x_{d_{1}}&amp;\displaystyle=-\left[B\right]_{1,f_{k}}&amp;\displaystyle x_{d_{2}}&amp;\displaystyle=-\left[B\right]_{2,f_{k}}&amp;\displaystyle x_{d_{3}}&amp;\displaystyle=-\left[B\right]_{3,f_{k}}&amp;\displaystyle\ldots&amp;\displaystyle x_{d_{r}}&amp;\displaystyle=-\left[B\right]_{r,f_{k}}.
+\end{align*}
+From this solution, we obtain a relation of linear dependence on the columns of $A$,
+\begin{align*}
+\displaystyle -\left[B\right]_{1,f_{k}}\mathbf{v}_{d_{1}}-\left[B\right]_{2,f_{k}}\mathbf{v}_{d_{2}}-\left[B\right]_{3,f_{k}}\mathbf{v}_{d_{3}}-\ldots-\left[B\right]_{r,f_{k}}\mathbf{v}_{d_{r}}+1\mathbf{v}_{f_{k}}=\mathbf{0},
+\end{align*}
+which can be arranged to the equality
+\begin{align*}
+\displaystyle \mathbf{v}_{f_{k}}=\left[B\right]_{1,f_{k}}\mathbf{v}_{d_{1}}+\left[B\right]_{2,f_{k}}\mathbf{v}_{d_{2}}+\left[B\right]_{3,f_{k}}\mathbf{v}_{d_{3}}+\ldots+\left[B\right]_{r,f_{k}}\mathbf{v}_{d_{r}}.
+\end{align*}
+Now, suppose we take an arbitrary element $\mathbf{w}$ of $W=\left&lt; S\right&gt;$ and write it as a linear combination of the elements of $S$, but with the terms organized according to the indices in $D$ and $F$:
+\begin{align*}
+\displaystyle\mathbf{w}&amp;\displaystyle=\alpha_{1}\mathbf{v}_{d_{1}}+\alpha_{2}\mathbf{v}_{d_{2}}+\ldots+\alpha_{r}\mathbf{v}_{d_{r}}+\beta_{1}\mathbf{v}_{f_{1}}+\beta_{2}\mathbf{v}_{f_{2}}+\ldots+\beta_{n-r}\mathbf{v}_{f_{n-r}}
+\end{align*}
+From the above, we can replace each $\mathbf{v}_{f_{j}}$ by a linear combination of the $\mathbf{v}_{d_{i}}$:
+\begin{align*}
+\displaystyle\mathbf{w}&amp;\displaystyle=\alpha_{1}\mathbf{v}_{d_{1}}+\alpha_{2}\mathbf{v}_{d_{2}}+\ldots+\alpha_{r}\mathbf{v}_{d_{r}}+ \\
+&amp;\displaystyle\beta_{1}\left(\left[B\right]_{1,f_{1}}\mathbf{v}_{d_{1}}+\left[B\right]_{2,f_{1}}\mathbf{v}_{d_{2}}+\left[B\right]_{3,f_{1}}\mathbf{v}_{d_{3}}+\ldots+\left[B\right]_{r,f_{1}}\mathbf{v}_{d_{r}}\right)+ \\
+&amp;\displaystyle\beta_{2}\left(\left[B\right]_{1,f_{2}}\mathbf{v}_{d_{1}}+\left[B\right]_{2,f_{2}}\mathbf{v}_{d_{2}}+\left[B\right]_{3,f_{2}}\mathbf{v}_{d_{3}}+\ldots+\left[B\right]_{r,f_{2}}\mathbf{v}_{d_{r}}\right)+ \\
+&amp;\displaystyle\quad\quad\vdots \\
+&amp;\displaystyle\beta_{n-r}\left(\left[B\right]_{1,f_{n-r}}\mathbf{v}_{d_{1}}+\left[B\right]_{2,f_{n-r}}\mathbf{v}_{d_{2}}+\left[B\right]_{3,f_{n-r}}\mathbf{v}_{d_{3}}+\ldots+\left[B\right]_{r,f_{n-r}}\mathbf{v}_{d_{r}}\right) \\
+\displaystyle=&amp;\displaystyle\ \left(\alpha_{1}+\beta_{1}\left[B\right]_{1,f_{1}}+\beta_{2}\left[B\right]_{1,f_{2}}+\beta_{3}\left[B\right]_{1,f_{3}}+\ldots+\beta_{n-r}\left[B\right]_{1,f_{n-r}}\right)\mathbf{v}_{d_{1}}+ \\
+&amp;\displaystyle\left(\alpha_{2}+\beta_{1}\left[B\right]_{2,f_{1}}+\beta_{2}\left[B\right]_{2,f_{2}}+\beta_{3}\left[B\right]_{2,f_{3}}+\ldots+\beta_{n-r}\left[B\right]_{2,f_{n-r}}\right)\mathbf{v}_{d_{2}}+ \\
+&amp;\displaystyle\quad\quad\vdots \\
+&amp;\displaystyle\left(\alpha_{r}+\beta_{1}\left[B\right]_{r,f_{1}}+\beta_{2}\left[B\right]_{r,f_{2}}+\beta_{3}\left[B\right]_{r,f_{3}}+\ldots+\beta_{n-r}\left[B\right]_{r,f_{n-r}}\right)\mathbf{v}_{d_{r}}.
+\end{align*} </paragraphs>
+                        <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This mess expresses the vector $\mathbf{w}$ as a linear combination of the vectors in
+\begin{align*}
+\displaystyle T=\left\{\mathbf{v}_{d_{1}},\,\mathbf{v}_{d_{2}},\,\mathbf{v}_{d_{3}},\,\ldots\,\mathbf{v}_{d_{r}}\right\},
+\end{align*}
+thus saying that $\mathbf{w}\in\left&lt; T\right&gt;$. Therefore, $W=\left&lt; S\right&gt;\subseteq\left&lt; T\right&gt;$. </paragraphs>
+                          <qed course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                        </collapse>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </substatement>
+            <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
+            <paragraphs>
+              <!--@slide
+In @ref{eg:COV}, we tossed&#45;out vectors one at a time. But in each instance, we rewrote the offending vector as a linear combination of those vectors with the column indices of the pivot columns of the reduced row&#45;echelon form of the matrix of columns. In the proof of Theorem   @ref{BS}, we accomplish this reduction in one big step. In @ref{eg:COV} we arrived at a linearly independent set at exactly the same moment that we ran out of free variables to exploit. This was not a coincidence; it is the substance of our conclusion of linear independence in Theorem   @ref{BS}.
+-->
+            </paragraphs>
+            <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="Math 1030" chapter="13" section="2" subsection="" subsubsection="" chapter_title="Linear Dependence and Span" section_title="Casting Out Vectors">
+            <keywords slide="10" environ="slide" chapter="13" course="Math 1030"/>
+            <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Here is a straightforward application of Theorem </paragraphs>
+            <ref environment="" chapter_type="" label="BS" wbtag="ref" course="Math 1030" chapter="13" slide="10" src-course="MATH 1030" src-chapter="13" src-slide="173" type="Theorem" item="13.4" src-filename="lecs1-20.xml" md5="ea6d5ae5f39204f8144e232790eb29ac" class="lcref" serial="">
+              <title>Basis of a Span</title>
+            </ref>
+            <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">. </paragraphs>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="5" md5="92b81387f5497f3ffc2eb112c1a220ca" course="Math 1030" chapter="13" slide="10" item="13.5">
+              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Reducing the generating set of a span in ${\mathbb{R}}^{4}$</paragraphs>
+              </b>
+              <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Begin with a set of five vectors in ${\mathbb{R}}^{4}$,
+\begin{align*}
+\displaystyle S=\left\{\begin{bmatrix}1\\
+1\\
+2\\
+1\end{bmatrix},\,\begin{bmatrix}2\\
+2\\
+4\\
+2\end{bmatrix},\,\begin{bmatrix}2\\
+0\\
+-1\\
+1\end{bmatrix},\,\begin{bmatrix}7\\
+1\\
+-1\\
+4\end{bmatrix},\,\begin{bmatrix}0\\
+2\\
+5\\
+1\end{bmatrix}\right\}
+\end{align*}
+and let $W=\left&lt; S\right&gt;$.</paragraphs>
+                <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> To arrive at a (smaller) linearly independent set, follow the procedure described in Theorem   </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="BS" wbtag="ref" course="Math 1030" chapter="13" slide="10" src-course="MATH 1030" src-chapter="13" src-slide="173" type="Theorem" item="13.4" src-filename="lecs1-20.xml" md5="ea6d5ae5f39204f8144e232790eb29ac" class="lcref" serial="">
+                    <title>Basis of a Span</title>
+                  </ref>
+                  <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. Place the vectors from $S$ into a matrix as columns, and row-reduce:
+\begin{align*}
+\displaystyle \begin{bmatrix}1&amp;2&amp;2&amp;7&amp;0\\
+1&amp;2&amp;0&amp;1&amp;2\\
+2&amp;4&amp;-1&amp;-1&amp;5\\
+1&amp;2&amp;1&amp;4&amp;1\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;2&amp;0&amp;1&amp;2\\
+0&amp;0&amp;\boxed{1}&amp;3&amp;-1\\
+0&amp;0&amp;0&amp;0&amp;0\\
+0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}.
+\end{align*}
+Columns 1 and 3 are the pivot columns ($D=\left\{1,\,3\right\}$). So the set
+\begin{align*}
+\displaystyle T=\left\{\begin{bmatrix}1\\
+1\\
+2\\
+1\end{bmatrix},\,\begin{bmatrix}2\\
+0\\
+-1\\
+1\end{bmatrix}\right\}
+\end{align*}
+is linearly independent and $\left&lt; T\right&gt;=\left&lt; S\right&gt;=W$. Boom!</paragraphs>
+                  <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                  <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Since the reduced row-echelon form of a matrix is unique, the procedure of Theorem   </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="BS" wbtag="ref" course="Math 1030" chapter="13" slide="10" src-course="MATH 1030" src-chapter="13" src-slide="173" type="Theorem" item="13.4" src-filename="lecs1-20.xml" md5="ea6d5ae5f39204f8144e232790eb29ac" class="lcref" serial="">
+                    <title>Basis of a Span</title>
+                  </ref>
+                  <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> leads us to a unique set $T$. However, there is a wide variety of possibilities for sets $T$ that are linearly independent and which can be employed in a span to create $W$. Without proof, we list two other possibilities:
+\begin{align*}
+\displaystyle T^{\prime}&amp;\displaystyle=\left\{\begin{bmatrix}2\\
+2\\
+4\\
+2\end{bmatrix},\,\begin{bmatrix}2\\
+0\\
+-1\\
+1\end{bmatrix}\right\} \\
+\displaystyle T^{*}&amp;\displaystyle=\left\{\begin{bmatrix}3\\
+1\\
+1\\
+2\end{bmatrix},\,\begin{bmatrix}-1\\
+1\\
+3\\
+0\end{bmatrix}\right\}.
+\end{align*}
+Can you prove that $T^{\prime}$ and $T^{*}$ are linearly independent sets and that $W=\left&lt; S\right&gt;=\left&lt; T^{\prime}\right&gt;=\left&lt; T^{*}\right&gt;$? </paragraphs>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="11" id="s11" slide="11" course="Math 1030" chapter="13" section="2" subsection="" subsubsection="" chapter_title="Linear Dependence and Span" section_title="Casting Out Vectors">
+            <keywords slide="11" environ="slide" chapter="13" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="6" md5="77db9cdbe3d755339dd595f7d341f3b5" course="Math 1030" chapter="13" slide="11" item="13.6">
+              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Reworking elements of a span</paragraphs>
+              </b>
+              <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Begin with a set of five vectors in ${\mathbb{R}}^{4}$
+\begin{align*}
+\displaystyle R=\left\{\begin{bmatrix}2\\
+1\\
+3\\
+2\end{bmatrix},\,\begin{bmatrix}-1\\
+1\\
+0\\
+1\end{bmatrix},\,\begin{bmatrix}-8\\
+-1\\
+-9\\
+-4\end{bmatrix},\,\begin{bmatrix}3\\
+1\\
+-1\\
+-2\end{bmatrix},\,\begin{bmatrix}-10\\
+-1\\
+-1\\
+4\end{bmatrix}\right\}.
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> It is easy to create elements of $X=\left&lt; R\right&gt;$ – we will create one at random,
+\begin{align*}
+\displaystyle \mathbf{y}=6\begin{bmatrix}2\\
+1\\
+3\\
+2\end{bmatrix}+(-7)\begin{bmatrix}-1\\
+1\\
+0\\
+1\end{bmatrix}+1\begin{bmatrix}-8\\
+-1\\
+-9\\
+-4\end{bmatrix}+6\begin{bmatrix}3\\
+1\\
+-1\\
+-2\end{bmatrix}+2\begin{bmatrix}-10\\
+-1\\
+-1\\
+4\end{bmatrix}=\begin{bmatrix}9\\
+2\\
+1\\
+-3\end{bmatrix}.
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We know we can replace $R$ by a smaller set, that will create the same span. Here goes:
+\begin{align*}
+\displaystyle \begin{bmatrix}2&amp;-1&amp;-8&amp;3&amp;-10\\
+1&amp;1&amp;-1&amp;1&amp;-1\\
+3&amp;0&amp;-9&amp;-1&amp;-1\\
+2&amp;1&amp;-4&amp;-2&amp;4\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;0&amp;-3&amp;0&amp;-1\\
+0&amp;\boxed{1}&amp;2&amp;0&amp;2\\
+0&amp;0&amp;0&amp;\boxed{1}&amp;-2\\
+0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}.
+\end{align*} </paragraphs>
+                  <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So, if we collect the first, second and fourth vectors from $R$,</paragraphs>
+                    <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                    <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">\begin{align*}
+\displaystyle P=\left\{\begin{bmatrix}2\\
+1\\
+3\\
+2\end{bmatrix},\,\begin{bmatrix}-1\\
+1\\
+0\\
+1\end{bmatrix},\,\begin{bmatrix}3\\
+1\\
+-1\\
+-2\end{bmatrix}\right\}
+\end{align*} </paragraphs>
+                    <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> then $P$ is linearly independent and $\left&lt; P\right&gt;=\left&lt; R\right&gt;=X$ by Theorem   </paragraphs>
+                      <ref environment="newcol" chapter_type="" label="BS" wbtag="ref" course="Math 1030" chapter="13" slide="11" src-course="MATH 1030" src-chapter="13" src-slide="173" type="Theorem" item="13.4" src-filename="lecs1-20.xml" md5="ea6d5ae5f39204f8144e232790eb29ac" class="lcref" serial="">
+                        <title>Basis of a Span</title>
+                      </ref>
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. Since we built $\mathbf{y}$ as an element of $\left&lt; R\right&gt;$ it must also be an element of $\left&lt; P\right&gt;$. Can we write $\mathbf{y}$ as a linear combination of just the three vectors in $P$? The answer is, of course, yes. But let us compute an explicit linear combination just for fun. We can get such a linear combination by solving a system of equations with the column vectors of $R$ as the columns of a coefficient matrix, and $\mathbf{y}$ as the vector of constants.</paragraphs>
+                      <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                      <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We employ an augmented matrix to solve this system:
+\begin{align*}
+\displaystyle \begin{bmatrix}2&amp;-1&amp;3&amp;9\\
+1&amp;1&amp;1&amp;2\\
+3&amp;0&amp;-1&amp;1\\
+2&amp;1&amp;-2&amp;-3\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;0&amp;0&amp;1\\
+0&amp;\boxed{1}&amp;0&amp;-1\\
+0&amp;0&amp;\boxed{1}&amp;2\\
+0&amp;0&amp;0&amp;0\end{bmatrix}.
+\end{align*} </paragraphs>
+                        <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So we see, as expected, that
+\begin{align*}
+\displaystyle 1\begin{bmatrix}2\\
+1\\
+3\\
+2\end{bmatrix}+(-1)\begin{bmatrix}-1\\
+1\\
+0\\
+1\end{bmatrix}+2\begin{bmatrix}3\\
+1\\
+-1\\
+-2\end{bmatrix}=\begin{bmatrix}9\\
+2\\
+1\\
+-3\end{bmatrix}=\mathbf{y}.
+\end{align*}
+A key feature of this example is that the linear combination that expresses $\mathbf{y}$ as a linear combination of the vectors in $P$ is unique. This is a consequence of the linear independence of $P$. The linearly independent set $P$ is smaller than $R$, but still just (barely) big enough to create elements of the set $X=\left&lt; R\right&gt;$. There are many, many ways to write $\mathbf{y}$ as a linear combination of the five vectors in $R$ (the appropriate system of equations to verify this claim yields two free variables in the description of the solution set), yet there is precisely one way to write $\mathbf{y}$ as a linear combination of the three vectors in $P$. </paragraphs>
+                        </collapse>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Uniqueness of RREF" course="Math 1030" chapter="13" num="3" serial="13.3">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="13" section="3" subsection="" subsubsection="" serial="13.3" slide="">
+          <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="title"/>
+          <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Uniqueness of RREF</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="12" scope="section" id="s12" slide="12" course="Math 1030" chapter="13" section="3" subsection="" subsubsection="" chapter_title="Linear Dependence and Span" section_title="Uniqueness of RREF">
+            <keywords slide="12" environ="slide" chapter="13" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="13" section="3" subsection="" subsubsection="" serial="" slide="12">
+              <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="title"/>
+              <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Uniqueness of RREF</paragraphs>
+            </title>
+            <strong xmlns="http://www.w3.org/1999/xhtml" environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="" wbtag="paragraphs">Math Major only. You can skip this section. Similar concept appears in the classworks. </paragraphs>
+            </strong>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="7" md5="3fb79d59158b54aa4664963319c42107" course="Math 1030" chapter="13" slide="12" item="13.7">
+              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Entries of RREF $B$ gives relationship of columns of $A$</paragraphs>
+              </b>
+              <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&amp;2&amp;1&amp;8&amp;1&amp;17\\
+1&amp;2&amp;2&amp;13&amp;3&amp;37\\
+1&amp;2&amp;0&amp;3&amp;-2&amp;-10\\
+\end{bmatrix}.
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then $A$ can be row reduced to</paragraphs>
+                  <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                  <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">\begin{align*}
+\displaystyle B=\begin{bmatrix}1&amp;2&amp;0&amp;3&amp;0&amp;4\\
+0&amp;0&amp;1&amp;5&amp;0&amp;6\\
+0&amp;0&amp;0&amp;0&amp;1&amp;7\end{bmatrix}.
+\end{align*}
+Let $\mathbf{A}_{i}$ (resp. $\mathbf{B}_{i}$) be the $i$-th column of $A$ (resp. $B$) for $i=1,\ldots,6$.
+By the equivalence of system of linear equation $\mathcal{LS}({A},{\mathbf{0}})$ and $\mathcal{LS}({B},{\mathbf{0}})$, we have
+\begin{align}
+\displaystyle x_{1}\mathbf{A}_{1}+x_{2}\mathbf{A}_{2}+\cdots+x_{6}\mathbf{A}_{6}=\mathbf{0}&amp;
+\end{align}
+if and only if
+\begin{align}
+\label{eq:B}
+\displaystyle x_{1}\mathbf{B}_{1}+x_{2}\mathbf{B}_{2}+\cdots+x_{6}\mathbf{B}_{6}=\mathbf{0}.&amp;
+\end{align} </paragraphs>
+                  <collapse course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 1</paragraphs>
+                    </strong>
+                    <newcol course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> First of all, if $(x_{1},x_{2},x_{3},x_{4},x_{5},x_{6})=(x_{1},0,0,0,0,0)$ is a solution of \eqref{eq:B}, then
+\begin{align*}
+\displaystyle x_{1}\mathbf{B}_{1}=\mathbf{0}.
+\end{align*} </paragraphs>
+                      <collapse course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So $x_{1}$ is zero. This is equivalent to
+\begin{align*}
+\displaystyle x_{1}\mathbf{A}_{1}=\mathbf{0}.
+\end{align*}
+It has only the trivial solution, i.e. $\left\{\mathbf{A}_{1}\right\}$ is linearly independent. Hence $d_{1}=1$ is a pivot column. </paragraphs>
+                      </collapse>
+                    </newcol>
+                    <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                    <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 2</paragraphs>
+                    </strong>
+                    <newcol course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let’s move to $x_{2}$. Suppose that
+$(x_{1},x_{2},x_{3},x_{4},x_{5},x_{6})=(x_{1},x_{2},0,0,0,0)$.</paragraphs>
+                      <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                      <collapse course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then
+\begin{align*}
+\displaystyle x_{1}\mathbf{B}_{1}+x_{2}\mathbf{B}_{1}=\mathbf{0}
+\end{align*}
+has nontrivial solution. Say $(x_{1},x_{2})=(-2,1)$.</paragraphs>
+                        <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                        <collapse course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> These can also be seen as
+\begin{align*}
+\displaystyle -2\mathbf{A}_{1}+\mathbf{A}_{2}=\mathbf{0}
+\end{align*}
+or equivalently
+\begin{align*}
+\displaystyle \mathbf{A}_{2}=2\mathbf{A}_{1}.
+\end{align*} </paragraphs>
+                        </collapse>
+                      </collapse>
+                    </newcol>
+                    <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                    <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 3</paragraphs>
+                    </strong>
+                    <newcol course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Consider $x_{3}$. Let $(x_{1},x_{2},x_{3},x_{4},x_{5},x_{6})=(x_{1},0,x_{3},0,0,0)$. Then
+\begin{align*}
+\displaystyle x_{1}\mathbf{B}_{1}+x_{3}\mathbf{B}_{3}=\mathbf{0}
+\end{align*}
+has only trivial solution. Equivalently $\left\{\mathbf{A}_{1},\mathbf{A}_{3}\right\}$ is linearly independent.Column $3$ of $B$ is a pivot column. </paragraphs>
+                    </newcol>
+                    <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                    <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 4</paragraphs>
+                    </strong>
+                    <newcol course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Consder
+\begin{align*}
+\displaystyle \mathbf{B}_{4}=3\mathbf{B}_{1}+5\mathbf{B}_{3},
+\end{align*}
+or equivalently
+\begin{align*}
+\displaystyle \mathbf{A}_{4}=3\mathbf{A}_{1}+5\mathbf{A}_{3}.
+\end{align*} </paragraphs>
+                      <collapse course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The relation of columns of $A$ gives the entries of the column 4 of $B$. </paragraphs>
+                      </collapse>
+                    </newcol>
+                    <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                    <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 5</paragraphs>
+                    </strong>
+                    <newcol course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\mathbf{B}_{5}$ is not in span of $\mathbf{B}_{1}$ and $\mathbf{B}_{3}$. Equivalently $\mathbf{A}_{5}$ is not in span of $\mathbf{A}_{1}$ and $\mathbf{A}_{3}$. Column $5$ of $B$ is a pivot column. </paragraphs>
+                    </newcol>
+                    <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                    <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 6</paragraphs>
+                    </strong>
+                    <newcol course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Consider
+\begin{align*}
+\displaystyle \mathbf{B}_{6}=4\mathbf{B}_{1}+6\mathbf{B}_{3}+7\mathbf{B}_{5}.
+\end{align*}
+Equivalently
+\begin{align*}
+\displaystyle \mathbf{A}_{6}=4\mathbf{A}_{1}+6\mathbf{A}_{3}+7\mathbf{A}_{5}.
+\end{align*} </paragraphs>
+                      <collapse course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The relation of columns of $A$ gives the entries of the column 6 of $B$. </paragraphs>
+                      </collapse>
+                    </newcol>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+            <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment=""/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="8" md5="e17a333278ee3f4a74d501124b0b432b" course="Math 1030" chapter="13" slide="12" item="13.8">
+              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Relationship of columns of $A$ determine entries of $B$</paragraphs>
+              </b>
+              <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Row reduce
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&amp;1&amp;3&amp;1&amp;0&amp;0&amp;4\\
+2&amp;1&amp;5&amp;1&amp;1&amp;2&amp;7\\
+1&amp;-1&amp;1&amp;2&amp;1&amp;-3&amp;10\\
+1&amp;3&amp;5&amp;1&amp;-1&amp;1&amp;1\\
+\end{bmatrix}
+\end{align*}
+to a RREF $B$ by the above technique. Let $\mathbf{A}_{i}$ (resp. $\mathbf{B}_{i}$) be the $i$-th column of $A$ (resp. $B$) for $i=1,\ldots,7$.</paragraphs>
+                <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 1</paragraphs>
+                  </strong>
+                  <newcol course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                    <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\mathbf{A}_{1}$ is nonzero column. So the index $d_{1}=1$ corresponds to a pivot column. We have
+\begin{align*}
+\displaystyle \mathbf{B}_{1}=\begin{bmatrix}1\\
+0\\
+0\\
+0\end{bmatrix}.
+\end{align*} </paragraphs>
+                  </newcol>
+                  <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                  <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 2</paragraphs>
+                  </strong>
+                  <newcol course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                    <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\mathbf{A}_{2}$ is not in $\left&lt; \left\{\mathbf{A}_{d_{1}}\right\}\right&gt;$. So the index $d_{2}=2$ corresponds to a pivot column. We have
+\begin{align*}
+\displaystyle \mathbf{B}_{2}=\begin{bmatrix}0\\
+1\\
+0\\
+0\end{bmatrix}.
+\end{align*} </paragraphs>
+                  </newcol>
+                  <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                  <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 3</paragraphs>
+                  </strong>
+                  <newcol course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                    <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Consider
+\begin{align*}
+\displaystyle \mathbf{A}_{3}=2\mathbf{A}_{d_{1}}+\mathbf{A}_{d_{2}}.
+\end{align*} </paragraphs>
+                    <collapse course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So we have
+\begin{align*}
+\displaystyle \mathbf{B}_{3}=2\mathbf{B}_{d_{1}}+\mathbf{B}_{d_{2}}=\begin{bmatrix}2\\
+1\\
+0\\
+0\end{bmatrix}.
+\end{align*} </paragraphs>
+                    </collapse>
+                  </newcol>
+                  <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                  <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 4</paragraphs>
+                  </strong>
+                  <newcol course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                    <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\mathbf{A}_{4}$ is not in $\left&lt; \left\{\mathbf{A}_{d_{1}},\mathbf{A}_{d_{2}}\right\}\right&gt;$.</paragraphs>
+                    <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So the index $d_{3}=4$ corresponds to a pivot column. We have
+\begin{align*}
+\displaystyle \mathbf{B}_{4}=\begin{bmatrix}0\\
+0\\
+1\\
+0\end{bmatrix}.
+\end{align*} </paragraphs>
+                    </collapse>
+                  </newcol>
+                  <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                  <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 5</paragraphs>
+                  </strong>
+                  <newcol course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                    <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\mathbf{A}_{5}$ is not in $\left&lt; \left\{\mathbf{A}_{d_{1}},\mathbf{A}_{d_{3}},\mathbf{A}_{d_{3}}\right\}\right&gt;$.</paragraphs>
+                    <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So the index $d_{4}=5$ corresponds to a pivot column. We have
+\begin{align*}
+\displaystyle \mathbf{B}_{5}=\begin{bmatrix}0\\
+0\\
+0\\
+1\end{bmatrix}.
+\end{align*} </paragraphs>
+                    </collapse>
+                  </newcol>
+                  <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                  <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 6</paragraphs>
+                  </strong>
+                  <newcol course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                    <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Consider
+\begin{align*}
+\displaystyle \mathbf{A}_{6}=\mathbf{A}_{d_{1}}+\mathbf{A}_{d_{2}}-2\mathbf{A}_{d_{3}}+\mathbf{A}_{d_{4}}.
+\end{align*} </paragraphs>
+                    <collapse course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So, we have
+\begin{align*}
+\displaystyle \mathbf{B}_{6}=\mathbf{B}_{d_{1}}+\mathbf{B}_{d_{2}}-2\mathbf{B}_{d_{3}}+\mathbf{B}_{d_{4}}=\begin{bmatrix}1\\
+1\\
+-2\\
+1\end{bmatrix}
+\end{align*} </paragraphs>
+                    </collapse>
+                  </newcol>
+                  <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                  <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 7</paragraphs>
+                  </strong>
+                  <newcol course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                    <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Consider
+\begin{align*}
+\displaystyle \mathbf{A}_{7}=2\mathbf{A}_{d_{1}}-\mathbf{A}_{d_{2}}+3\mathbf{A}_{d_{3}}+\mathbf{A}_{d_{4}}.
+\end{align*} </paragraphs>
+                    <collapse course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So, we have
+\begin{align*}
+\displaystyle \mathbf{B}_{7}=\mathbf{B}_{d_{1}}+\mathbf{B}_{d_{2}}-2\mathbf{B}_{d_{3}}+\mathbf{B}_{d_{4}}=\begin{bmatrix}2\\
+-1\\
+3\\
+1\end{bmatrix}
+\end{align*} </paragraphs>
+                      <collapse course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence the RREF of $A$ is
+\begin{align*}
+\displaystyle \begin{bmatrix}1&amp;0&amp;2&amp;0&amp;0&amp;1&amp;2\\
+0&amp;1&amp;1&amp;0&amp;0&amp;1&amp;-1\\
+0&amp;0&amp;0&amp;1&amp;0&amp;-2&amp;3\\
+0&amp;0&amp;0&amp;0&amp;1&amp;1&amp;1\\
+\end{bmatrix}.
+\end{align*} </paragraphs>
+                      </collapse>
+                    </collapse>
+                  </newcol>
+                  <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Important remark</paragraphs>
+                    </strong>
+                    <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: from the above computation, the entries of $B$ are uniquely determined by $A$.</paragraphs>
+                    <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So the RREF $B$ is unique.</paragraphs>
+                      <newline course="Math 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+        </slides>
+      </section>
+    </chapter>
+  </course>
+</document>

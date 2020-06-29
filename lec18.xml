@@ -1,0 +1,2183 @@
+<?xml version="1.0"?>
+<document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
+  <course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030">
+    <keywords slide="all" environ="course" chapter="" course="Math 1030">
+      <keyword chapter="" slide="all">Determinant Expansion about Rows</keyword>
+      <keyword chapter="" slide="all">Determinant of the Transpose</keyword>
+      <keyword chapter="" slide="all">Determinant Expansion about Columns</keyword>
+      <keyword chapter="" slide="all">Determinant with Zero Row or Column</keyword>
+      <keyword chapter="" slide="all">Determinant for Row or Column Swap</keyword>
+      <keyword chapter="" slide="all">Determinant for Row or Column Multiples</keyword>
+      <keyword chapter="" slide="all">Determinant with Equal Rows or Columns</keyword>
+      <keyword chapter="" slide="all">Determinant for Row or Column Multiples and Addition</keyword>
+      <keyword chapter="" slide="all">Vandermonde Determinant</keyword>
+      <keyword chapter="" slide="all">Cramers rule</keyword>
+      <keyword chapter="" slide="all">Formula for inverse</keyword>
+    </keywords>
+    <title environment="title" chapter_type="" wbtag="course" scope="course" course="Math 1030" chapter="" section="" subsection="" subsubsection="" serial="" slide="">Math 1030</title>
+    <slides environment="" chapter_type="">
+      <slide environment="" chapter_type="" canon_num="1" scope="course" course="Math 1030" title="Math 1030" id="s1" slide="1" chapter="" section="" subsection="" subsubsection="" chapter_title="" section_title="">
+        <title environment="title" chapter_type="" wbtag="course" scope="course" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="1">Math 1030</title>
+        <keywords slide="1" environ="slide" chapter="" course="Math 1030"/>
+        <setchapter course="Math 1030" chapter="" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="setchapter" argument="18"/>
+      </slide>
+    </slides>
+    <chapter environment="" chapter_type="Chapter" type="Chapter" wbtag="chapter" num="18" title="Determinant" course="Math 1030" serial="18">
+      <keywords slide="all" environ="chapter" chapter="18" course="Math 1030">
+        <keyword chapter="18" slide="all">Determinant Expansion about Rows</keyword>
+        <keyword chapter="18" slide="all">Determinant of the Transpose</keyword>
+        <keyword chapter="18" slide="all">Determinant Expansion about Columns</keyword>
+        <keyword chapter="18" slide="all">Determinant with Zero Row or Column</keyword>
+        <keyword chapter="18" slide="all">Determinant for Row or Column Swap</keyword>
+        <keyword chapter="18" slide="all">Determinant for Row or Column Multiples</keyword>
+        <keyword chapter="18" slide="all">Determinant with Equal Rows or Columns</keyword>
+        <keyword chapter="18" slide="all">Determinant for Row or Column Multiples and Addition</keyword>
+        <keyword chapter="18" slide="all">Vandermonde Determinant</keyword>
+        <keyword chapter="18" slide="all">Cramers rule</keyword>
+        <keyword chapter="18" slide="all">Formula for inverse</keyword>
+      </keywords>
+      <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="Math 1030" chapter="18" section="" subsection="" subsubsection="" serial="18" slide="">Determinant</title>
+      <slides environment="" chapter_type="">
+        <slide environment="" chapter_type="Chapter" canon_num="2" scope="chapter" id="s2" slide="2" course="Math 1030" chapter="18" section="" subsection="" subsubsection="" chapter_title="Determinant" section_title="">
+          <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="2">Determinant</title>
+          <keywords slide="2" environ="slide" chapter="18" course="Math 1030"/>
+          <h5 xmlns="http://www.w3.org/1999/xhtml" class="notkw" environment="">
+            <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">Reference.</paragraphs>
+          </h5>
+          <paragraphs course="Math 1030" chapter="18" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Beezer, Ver 3.5 Chapter D (print version p261-282)</paragraphs>
+          <newline course="Math 1030" chapter="18" chapter_type="" section="" subsection="" subsubsection="" environment=""/>
+          <h5 xmlns="http://www.w3.org/1999/xhtml" class="notkw" environment="">
+            <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">Exercise.</paragraphs>
+          </h5>
+          <paragraphs course="Math 1030" chapter="18" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Exercises with solutions can be downloaded at </paragraphs>
+          <href course="Math 1030" chapter="18" chapter_type="" section="" subsection="" subsubsection="" environment="" src="http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf" name="http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf" wbtag="href" argument="http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf"/>
+          <paragraphs course="Math 1030" chapter="18" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$)Section DM p.98 - 101 all, Section PDM p.101-102 M30, T10, T15, T20</paragraphs>
+          <newline course="Math 1030" chapter="18" chapter_type="" section="" subsection="" subsubsection="" environment=""/>
+        </slide>
+      </slides>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Definition of the determinant" course="Math 1030" chapter="18" num="1" serial="18.1">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="18" section="1" subsection="" subsubsection="" serial="18.1" slide="">
+          <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Definition of the determinant</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="3" scope="section" id="s3" slide="3" course="Math 1030" chapter="18" section="1" subsection="" subsubsection="" chapter_title="Determinant" section_title="Definition of the determinant">
+            <keywords slide="3" environ="slide" chapter="18" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="18" section="1" subsection="" subsubsection="" serial="" slide="3">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Definition of the determinant</paragraphs>
+            </title>
+            <newline course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment=""/>
+            <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs">The </paragraphs>
+            <b xmlns="http://www.w3.org/1999/xhtml" environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs">determinant</paragraphs>
+            </b>
+            <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs"> is a function that take a square matrix as an input and
+produces a scalar as an output.</paragraphs>
+            <newline course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment=""/>
+            <newcol course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose $A$ is an $m\times n$ matrix. Then the submatrix $A(i|j)$ is the $(m-1)\times(n-1)$
+matrix obtained from $A$ by removing row $i$ and column $j$. </paragraphs>
+            </newcol>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="4" id="s4" slide="4" course="Math 1030" chapter="18" section="1" subsection="" subsubsection="" chapter_title="Determinant" section_title="Definition of the determinant">
+            <keywords slide="4" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="1" md5="36c8bdeb992d941900cce342bc5d0b89" course="Math 1030" chapter="18" slide="4" item="18.1">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&amp;2&amp;3&amp;4\\
+5&amp;6&amp;7&amp;8\\
+9&amp;10&amp;11&amp;12\end{bmatrix}.
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then
+\begin{align*}
+\displaystyle A(2|3)=\begin{bmatrix}1&amp;2&amp;4\\
+9&amp;10&amp;12\end{bmatrix}\qquad A(3|1)=\begin{bmatrix}2&amp;3&amp;4\\
+6&amp;7&amp;8\end{bmatrix}
+\end{align*} </paragraphs>
+              </newcol>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="2" md5="37365dbce65fb36af200a79c331cf1a2" course="Math 1030" chapter="18" slide="4" item="18.2">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> \begin{align*}
+\displaystyle A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;a_{14}\\
+a_{21}&amp;a_{22}&amp;a_{23}&amp;a_{24}\\
+a_{31}&amp;a_{32}&amp;a_{33}&amp;a_{34}\\
+a_{41}&amp;a_{42}&amp;a_{43}&amp;a_{44}\end{bmatrix}.
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then
+\begin{align*}
+\displaystyle A(3|2)=\begin{bmatrix}a_{11}&amp;a_{13}&amp;a_{14}\\
+a_{21}&amp;a_{23}&amp;a_{24}\\
+a_{41}&amp;a_{42}&amp;a_{44}\end{bmatrix}\qquad A(4|1)=\begin{bmatrix}a_{12}&amp;a_{13}&amp;a_{14}\\
+a_{22}&amp;a_{23}&amp;a_{24}\\
+a_{32}&amp;a_{33}&amp;a_{34}\end{bmatrix}
+\end{align*} </paragraphs>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="5" id="s5" slide="5" course="Math 1030" chapter="18" section="1" subsection="" subsubsection="" chapter_title="Determinant" section_title="Definition of the determinant">
+            <keywords slide="5" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="3" md5="ebf7062119ca00533b98a4ed0b840427" course="Math 1030" chapter="18" slide="5" item="18.3">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is a square matrix. Then its </paragraphs>
+              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">determinant</paragraphs>
+              </b>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">, $\det\left(A\right)$ (or denoted by $|A|$), is an element of ${\mathbb{R}}^{\hbox{}}$ defined recursively by:</paragraphs>
+              <newline course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> If $A$ is a $1\times 1$ matrix, then $\det\left(A\right)=\left[A\right]_{11}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> If $A$ is a matrix of size $n$ with $n\geq 2$, then
+\begin{align*}
+\displaystyle\det\left(A\right)&amp;\displaystyle=\left[A\right]_{11}\det\left(A\left(1|1\right)\right)-\left[A\right]_{12}\det\left(A\left(1|2\right)\right)+\left[A\right]_{13}\det\left(A\left(1|3\right)\right)- \\
+&amp;\displaystyle\quad\left[A\right]_{14}\det\left(A\left(1|4\right)\right)+\cdots+(-1)^{n+1}\left[A\right]_{1n}\det\left(A\left(1|n\right)\right) \\
+&amp;\displaystyle\quad=\sum_{i=1}^{n}(-1)^{i+1}\left[A\right]_{1i}\det\left(A\left(1|i\right)\right)
+\end{align*} </paragraphs>
+                </li>
+                <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              </ol>
+            </statement>
+            <newcol course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So to compute the determinant of a $5\times 5$ matrix we must build 5 submatrices, each of size $4$. To compute the determinants of each the $4\times 4$ matrices we need to create 4 submatrices each, these now of size $3$ and so on. To compute the determinant of a $10\times 10$ matrix would require computing the determinant of $10!=10\times 9\times 8\times 7\times 6\times 5\times 4\times 3\times 2=3,628,800$
+$1\times 1$ matrices. Fortunately there are </paragraphs>
+              <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">better ways</paragraphs>
+              </b>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">).</paragraphs>
+              <newline course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+              <collapse course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let us compute the determinant of a reasonably sized matrix by hand. </paragraphs>
+              </collapse>
+            </newcol>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="6" id="s6" slide="6" course="Math 1030" chapter="18" section="1" subsection="" subsubsection="" chapter_title="Determinant" section_title="Definition of the determinant">
+            <keywords slide="6" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="4" md5="54d637984a15ce0cb409f097da254d0d" course="Math 1030" chapter="18" slide="6" item="18.4">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that we have the $3\times 3$ matrix
+\begin{align*}
+\displaystyle A=\begin{bmatrix}3&amp;2&amp;-1\\
+4&amp;1&amp;6\\
+-3&amp;-1&amp;2\end{bmatrix}
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then
+\begin{align*}
+\displaystyle\det\left(A\right)=|A|&amp;\displaystyle=\begin{vmatrix}3&amp;2&amp;-1\\
+4&amp;1&amp;6\\
+-3&amp;-1&amp;2\end{vmatrix} \\
+&amp;\displaystyle=3\begin{vmatrix}1&amp;6\\
+-1&amp;2\end{vmatrix}-2\begin{vmatrix}4&amp;6\\
+-3&amp;2\end{vmatrix}+(-1)\begin{vmatrix}4&amp;1\\
+-3&amp;-1\end{vmatrix} \\
+&amp;\displaystyle=3\left(1\begin{vmatrix}2\\
+\end{vmatrix}-6\begin{vmatrix}-1\end{vmatrix}\right)-2\left(4\begin{vmatrix}2\end{vmatrix}-6\begin{vmatrix}-3\end{vmatrix}\right)-\left(4\begin{vmatrix}-1\end{vmatrix}-1\begin{vmatrix}-3\end{vmatrix}\right) \\
+&amp;\displaystyle=3\left(1(2)-6(-1)\right)-2\left(4(2)-6(-3)\right)-\left(4(-1)-1(-3)\right) \\
+&amp;\displaystyle=24-52+1 \\
+&amp;\displaystyle=-27
+\end{align*} </paragraphs>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="7" id="s7" slide="7" course="Math 1030" chapter="18" section="1" subsection="" subsubsection="" chapter_title="Determinant" section_title="Definition of the determinant">
+            <keywords slide="7" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="5" md5="4f529976921cf680ad8898072b9aa8b4" course="Math 1030" chapter="18" slide="7" item="18.5">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose
+\begin{align*}
+\displaystyle A=\begin{bmatrix}a&amp;b\\
+c&amp;d\end{bmatrix}.
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then
+\begin{align*}
+\displaystyle \det\left(A\right)=ad-bc.
+\end{align*} </paragraphs>
+              </newcol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="2ce2d25c032d96e15d10c5d5ed301afd" course="Math 1030" chapter="18" slide="7" of="4f529976921cf680ad8898072b9aa8b4">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle \begin{vmatrix}a&amp;b\\
+c&amp;d\end{vmatrix}=a\begin{vmatrix}d\end{vmatrix}-b\begin{vmatrix}c\end{vmatrix}=ad-bc
+\end{align*} </paragraphs>
+                <qed course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="8" id="s8" slide="8" course="Math 1030" chapter="18" section="1" subsection="" subsubsection="" chapter_title="Determinant" section_title="Definition of the determinant">
+            <keywords slide="8" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="6" md5="357357f5713b9248bd5f2ce23a6bbab5" course="Math 1030" chapter="18" slide="8" item="18.6">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose
+\begin{align*}
+\displaystyle A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}\\
+a_{21}&amp;a_{22}&amp;a_{23}\\
+a_{31}&amp;a_{32}&amp;a_{33}\end{bmatrix}.
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then
+\begin{align*}
+\displaystyle \det\left(A\right)=a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-a_{11}a_{23}a_{32}-a_{12}a_{21}a_{33}-a_{13}a_{22}a_{31}
+\end{align*} </paragraphs>
+              </newcol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="679c1cbaaac186a1f8cf3d5ef6d444f4" course="Math 1030" chapter="18" slide="8" of="357357f5713b9248bd5f2ce23a6bbab5">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle\det\left(A\right)&amp;\displaystyle=a_{11}|A\left(1|1\right)|-a_{12}|A\left(1|2\right)|+a_{13}|A\left(1|3\right)| \\
+&amp;\displaystyle=a_{11}\begin{vmatrix}a_{22}&amp;a_{23}\\
+a_{32}&amp;a_{33}\end{vmatrix}-a_{12}\begin{vmatrix}a_{21}&amp;a_{23}\\
+a_{31}&amp;a_{33}\end{vmatrix}+a_{13}\begin{vmatrix}a_{21}&amp;a_{22}\\
+a_{31}&amp;a_{32}\end{vmatrix} \\
+&amp;\displaystyle=a_{11}(a_{22}a_{33}-a_{23}a_{32})-a_{12}(a_{21}a_{33}-a_{23}a_{31})+a_{13}(a_{21}a_{32}-a_{22}a_{31}) \\
+&amp;\displaystyle=a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-a_{11}a_{23}a_{32}-a_{12}a_{21}a_{33}-a_{13}a_{22}a_{31}
+\end{align*} </paragraphs>
+                <qed course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Computing Determinants" course="Math 1030" chapter="18" num="2" serial="18.2">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="18" section="2" subsection="" subsubsection="" serial="18.2" slide="">
+          <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Computing Determinants</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="9" scope="section" id="s9" slide="9" course="Math 1030" chapter="18" section="2" subsection="" subsubsection="" chapter_title="Determinant" section_title="Computing Determinants">
+            <keywords slide="9" environ="slide" chapter="18" course="Math 1030">
+              <keyword chapter="18" slide="9">Determinant Expansion about Rows</keyword>
+            </keywords>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="18" section="2" subsection="" subsubsection="" serial="" slide="9">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Computing Determinants</paragraphs>
+            </title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="7" title="Determinant Expansion about Rows" md5="0023b9b443a8f408f45715e443efc985" course="Math 1030" chapter="18" slide="9" item="18.7">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="18" section="2" subsection="" subsubsection="" serial="" slide="9">Determinant Expansion about Rows</title>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$. Then for $1\leq i\leq n$
+\begin{align*}
+\displaystyle\det\left(A\right)&amp;\displaystyle=(-1)^{i+1}\left[A\right]_{i1}\det\left(A\left(i|1\right)\right)+(-1)^{i+2}\left[A\right]_{i2}\det\left(A\left(i|2\right)\right) \\
+&amp;\displaystyle\quad+(-1)^{i+3}\left[A\right]_{i3}\det\left(A\left(i|3\right)\right)+\cdots+(-1)^{i+n}\left[A\right]_{in}\det\left(A\left(i|n\right)\right)
+\end{align*}
+which is known as </paragraphs>
+              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">expansion</paragraphs>
+              </b>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> about row $i$. </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="639339178ed045a8f1c0e53991eddfb8" course="Math 1030" chapter="18" slide="9" of="0023b9b443a8f408f45715e443efc985">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Skip the proof. If you are interested, see Beezer, p.266. </paragraphs>
+                <qed course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="Math 1030" chapter="18" section="2" subsection="" subsubsection="" chapter_title="Determinant" section_title="Computing Determinants">
+            <keywords slide="10" environ="slide" chapter="18" course="Math 1030">
+              <keyword chapter="18" slide="10">Determinant of the Transpose</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="8" title="Determinant of the Transpose" md5="a1346a22254e399f32aa9dc8961d1f9a" course="Math 1030" chapter="18" slide="10" item="18.8">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="18" section="2" subsection="" subsubsection="" serial="" slide="10">Determinant of the Transpose</title>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix. Then $\det\left(A^{t}\right)=\det\left(A\right)$. </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="bc7769de449576b9838215e975d65f5c" course="Math 1030" chapter="18" slide="10" of="a1346a22254e399f32aa9dc8961d1f9a">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Skip the proof.
+If you are interested, see Beezer, p.267. </paragraphs>
+                <qed course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="11" id="s11" slide="11" course="Math 1030" chapter="18" section="2" subsection="" subsubsection="" chapter_title="Determinant" section_title="Computing Determinants">
+            <keywords slide="11" environ="slide" chapter="18" course="Math 1030">
+              <keyword chapter="18" slide="11">Determinant Expansion about Columns</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="9" title="Determinant Expansion about Columns" md5="85ecb60f23c797cfbb1d57edc1aac418" course="Math 1030" chapter="18" slide="11" item="18.9">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="18" section="2" subsection="" subsubsection="" serial="" slide="11">Determinant Expansion about Columns</title>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$. Then for $1\leq j\leq n$
+\begin{align*}
+\displaystyle\det\left(A\right)&amp;\displaystyle=(-1)^{1+j}\left[A\right]_{1j}\det\left(A\left(1|j\right)\right)+(-1)^{2+j}\left[A\right]_{2j}\det\left(A\left(2|j\right)\right) \\
+&amp;\displaystyle\quad+(-1)^{3+j}\left[A\right]_{3j}\det\left(A\left(3|j\right)\right)+\cdots+(-1)^{n+j}\left[A\right]_{nj}\det\left(A\left(n|j\right)\right)
+\end{align*}
+which is known as </paragraphs>
+              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">expansion</paragraphs>
+              </b>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> about column $j$. </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="842599bfdebf172f7f3b9d8f8f0cdf8c" course="Math 1030" chapter="18" slide="11" of="85ecb60f23c797cfbb1d57edc1aac418">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Skip the proof.
+If you are interested, see Beezer, p.268. </paragraphs>
+                <qed course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="12" id="s12" slide="12" course="Math 1030" chapter="18" section="2" subsection="" subsubsection="" chapter_title="Determinant" section_title="Computing Determinants">
+            <keywords slide="12" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="10" md5="ae10d85c6a66885a7ca13c2948883807" course="Math 1030" chapter="18" slide="12" item="18.10">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}-2&amp;3&amp;0&amp;1\\
+9&amp;-2&amp;0&amp;1\\
+1&amp;3&amp;-2&amp;-1\\
+4&amp;1&amp;2&amp;6\end{bmatrix}
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then expanding about the fourth row yields,
+\begin{align*}
+\displaystyle|A|&amp;\displaystyle=(4)(-1)^{4+1}\begin{vmatrix}3&amp;0&amp;1\\
+-2&amp;0&amp;1\\
+3&amp;-2&amp;-1\end{vmatrix}+(1)(-1)^{4+2}\begin{vmatrix}-2&amp;0&amp;1\\
+9&amp;0&amp;1\\
+1&amp;-2&amp;-1\end{vmatrix} \\
+&amp;\displaystyle\quad\quad+(2)(-1)^{4+3}\begin{vmatrix}-2&amp;3&amp;1\\
+9&amp;-2&amp;1\\
+1&amp;3&amp;-1\end{vmatrix}+(6)(-1)^{4+4}\begin{vmatrix}-2&amp;3&amp;0\\
+9&amp;-2&amp;0\\
+1&amp;3&amp;-2\end{vmatrix} \\
+&amp;\displaystyle=(-4)(10)+(1)(-22)+(-2)(61)+6(46)=92
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Expanding about column 3 gives
+\begin{align*}
+\displaystyle|A|&amp;\displaystyle=(0)(-1)^{1+3}\begin{vmatrix}9&amp;-2&amp;1\\
+1&amp;3&amp;-1\\
+4&amp;1&amp;6\end{vmatrix}+(0)(-1)^{2+3}\begin{vmatrix}-2&amp;3&amp;1\\
+1&amp;3&amp;-1\\
+4&amp;1&amp;6\end{vmatrix}+ \\
+&amp;\displaystyle\quad\quad(-2)(-1)^{3+3}\begin{vmatrix}-2&amp;3&amp;1\\
+9&amp;-2&amp;1\\
+4&amp;1&amp;6\end{vmatrix}+(2)(-1)^{4+3}\begin{vmatrix}-2&amp;3&amp;1\\
+9&amp;-2&amp;1\\
+1&amp;3&amp;-1\end{vmatrix} \\
+&amp;\displaystyle=0+0+(-2)(-107)+(-2)(61)=92
+\end{align*} </paragraphs>
+                  <collapse course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Notice how much easier the second computation was. By choosing to expand about the third column, we have two entries that are zero, so two $3\times 3$ determinants need not be computed at all! </paragraphs>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+            <newcol course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> When a matrix has all zeros above (or below) the diagonal, exploiting the zeros by expanding about the proper row or column makes computing a determinant insanely easy. </paragraphs>
+            </newcol>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="13" id="s13" slide="13" course="Math 1030" chapter="18" section="2" subsection="" subsubsection="" chapter_title="Determinant" section_title="Computing Determinants">
+            <keywords slide="13" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="11" md5="3b099b929b08ccca1ab22e00bb713383" course="Math 1030" chapter="18" slide="13" item="18.11">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that
+\begin{align*}
+\displaystyle T=\begin{bmatrix}2&amp;3&amp;-1&amp;3&amp;3\\
+0&amp;-1&amp;5&amp;2&amp;-1\\
+0&amp;0&amp;3&amp;9&amp;2\\
+0&amp;0&amp;0&amp;-1&amp;3\\
+0&amp;0&amp;0&amp;0&amp;5\end{bmatrix}
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We will compute the determinant of this $5\times 5$ matrix by consistently expanding about the first column for each submatrix that arises and does not have a zero entry multiplying it.
+\begin{align*}
+\displaystyle\det\left(T\right)&amp;\displaystyle=\begin{vmatrix}2&amp;3&amp;-1&amp;3&amp;3\\
+0&amp;-1&amp;5&amp;2&amp;-1\\
+0&amp;0&amp;3&amp;9&amp;2\\
+0&amp;0&amp;0&amp;-1&amp;3\\
+0&amp;0&amp;0&amp;0&amp;5\end{vmatrix} \\
+&amp;\displaystyle=2(-1)^{1+1}\begin{vmatrix}-1&amp;5&amp;2&amp;-1\\
+0&amp;3&amp;9&amp;2\\
+0&amp;0&amp;-1&amp;3\\
+0&amp;0&amp;0&amp;5\end{vmatrix} \\
+&amp;\displaystyle=2(-1)(-1)^{1+1}\begin{vmatrix}3&amp;9&amp;2\\
+0&amp;-1&amp;3\\
+0&amp;0&amp;5\end{vmatrix} \\
+&amp;\displaystyle=2(-1)(3)(-1)^{1+1}\begin{vmatrix}-1&amp;3\\
+0&amp;5\end{vmatrix} \\
+&amp;\displaystyle=2(-1)(3)(-1)(-1)^{1+1}\begin{vmatrix}5\end{vmatrix} \\
+&amp;\displaystyle=2(-1)(3)(-1)(5)=30
+\end{align*} </paragraphs>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="14" id="s14" slide="14" course="Math 1030" chapter="18" section="2" subsection="" subsubsection="" chapter_title="Determinant" section_title="Computing Determinants">
+            <keywords slide="14" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="12" md5="73380963e537216f9182bf6560027df2" course="Math 1030" chapter="18" slide="14" item="18.12">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is upper triangular matrix, i.e.
+\begin{align*}
+\displaystyle A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;\cdots&amp;a_{1n}\\
+0&amp;a_{22}&amp;a_{23}&amp;\cdots&amp;a_{2n}\\
+0&amp;0&amp;a_{33}&amp;\cdots&amp;a_{3n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+0&amp;0&amp;0&amp;\cdots&amp;a_{nn}\end{bmatrix}
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then
+\begin{align*}
+\displaystyle \det\left(A\right)=a_{11}a_{22}\cdots a_{nn}.
+\end{align*} </paragraphs>
+              </newcol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="e80b8e45ee7771e330754ec60069690f" course="Math 1030" chapter="18" slide="14" of="73380963e537216f9182bf6560027df2">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle\det\left(A\right)&amp;\displaystyle=a_{11}\det\left(\begin{bmatrix}a_{22}&amp;a_{23}&amp;\cdots&amp;a_{2n}\\
+0&amp;a_{33}&amp;\cdots&amp;a_{3n}\\
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+0&amp;0&amp;\cdots&amp;a_{nn}\end{bmatrix}\right)&amp;xpand along the column  \\
+&amp;\displaystyle=a_{11}a_{22}\det\left(\begin{bmatrix}a_{33}&amp;\cdots&amp;a_{3n}\\
+\vdots&amp;\ddots&amp;\vdots\\
+0&amp;\cdots&amp;a_{nn}\end{bmatrix}\right)&amp;xpand along the column  \\
+&amp;\displaystyle\cdots \\
+&amp;\displaystyle=a_{11}a_{22}\cdots a_{nn}
+\end{align*} </paragraphs>
+                <qed course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+            <newline course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="13" md5="3728f9a05588884b34fb2566b623ed2e" course="Math 1030" chapter="18" slide="14" item="18.13">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose $A$ is lower triangular matrix, i.e.
+\begin{align*}
+\displaystyle A=\begin{bmatrix}a_{11}&amp;0&amp;0&amp;\cdots&amp;0\\
+a_{21}&amp;a_{22}&amp;0&amp;\cdots&amp;0\\
+a_{31}&amp;a_{32}&amp;a_{33}&amp;\cdots&amp;0\\
+\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+a_{n1}&amp;a_{n2}&amp;a_{n3}&amp;\cdots&amp;a_{nn}\end{bmatrix}
+\end{align*} </paragraphs>
+                <newcol course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then
+\begin{align*}
+\displaystyle \det\left(A\right)=a_{11}a_{22}\cdots a_{nn}.
+\end{align*} </paragraphs>
+                </newcol>
+              </newcol>
+            </statement>
+            <newcol course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> When you consult other texts in your study of determinants, you may run into the terms </paragraphs>
+              <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">minor</paragraphs>
+              </b>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and </paragraphs>
+              <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">cofactor</paragraphs>
+              </b>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, especially in a discussion centered on expansion about rows and columns. We have chosen not to make these definitions formally since we have been able to get along without them. However, informally, a </paragraphs>
+              <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">minor</paragraphs>
+              </b>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> is a determinant of a submatrix, specifically $\det\left(A\left(i|j\right)\right)$ and is usually referenced as the minor of $\left[A\right]_{ij}$. A </paragraphs>
+              <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">cofactor</paragraphs>
+              </b>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> is a signed minor, specifically the cofactor of $\left[A\right]_{ij}$ is $(-1)^{i+j}\det\left(A\left(i|j\right)\right)$.</paragraphs>
+              <newline course="Math 1030" chapter="18" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+            </newcol>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Properties of Determinants of Matrces" course="Math 1030" chapter="18" num="3" serial="18.3">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="18" section="3" subsection="" subsubsection="" serial="18.3" slide="">
+          <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Properties of Determinants of Matrces</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="15" scope="section" id="s15" slide="15" course="Math 1030" chapter="18" section="3" subsection="" subsubsection="" chapter_title="Determinant" section_title="Properties of Determinants of Matrces">
+            <keywords slide="15" environ="slide" chapter="18" course="Math 1030">
+              <keyword chapter="18" slide="15">Determinant with Zero Row or Column</keyword>
+            </keywords>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="18" section="3" subsection="" subsubsection="" serial="" slide="15">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Properties of Determinants of Matrces</paragraphs>
+            </title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="14" title="Determinant with Zero Row or Column" md5="4a11a92f30752e2fb24756e95da40252" course="Math 1030" chapter="18" slide="15" item="18.14">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="18" section="3" subsection="" subsubsection="" serial="" slide="15">Determinant with Zero Row or Column</title>
+              <label course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="label" name="DZRC" type="Theorem"/>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix with a row where every entry is zero, or a column where every entry is zero. Then $\det\left(A\right)=0$. </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="9ef420a96942af9a552fffd1015c30e9" course="Math 1030" chapter="18" slide="15" of="4a11a92f30752e2fb24756e95da40252">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$ and row $i$ has every entry equal to zero. We compute $\det\left(A\right)$ via expansion about row $i$.
+\begin{align*}
+\displaystyle\det\left(A\right)&amp;\displaystyle=\sum_{j=1}^{n}(-1)^{i+j}\left[A\right]_{ij}\det\left(A\left(i|j\right)\right) \\
+&amp;\displaystyle=\sum_{j=1}^{n}(-1)^{i+j}\,0\,\det\left(A\left(i|j\right)\right)&amp;\text{row $i$ is zero.} \\
+&amp;\displaystyle=\sum_{j=1}^{n}0=0
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The proof for the case of a zero column is entirely similar, or could be derived by the fact that
+$\det\left(A\right)=\det\left(A^{t}\right)$. </paragraphs>
+                  <qed course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                </collapse>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="16" id="s16" slide="16" course="Math 1030" chapter="18" section="3" subsection="" subsubsection="" chapter_title="Determinant" section_title="Properties of Determinants of Matrces">
+            <keywords slide="16" environ="slide" chapter="18" course="Math 1030">
+              <keyword chapter="18" slide="16">Determinant for Row or Column Swap</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="15" title="Determinant for Row or Column Swap" md5="02887a61000b9b4c55170573c037d67f" course="Math 1030" chapter="18" slide="16" item="18.15">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="18" section="3" subsection="" subsubsection="" serial="" slide="16">Determinant for Row or Column Swap</title>
+              <label course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="label" name="DRCS" type="Theorem"/>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix. Let $B$ be the square matrix obtained from $A$ by interchanging the location of two rows, or interchanging the location of two columns. Then $\det\left(B\right)=-\det\left(A\right)$. </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="bafe6ed3d2e286b8c828dc107998486f" course="Math 1030" chapter="18" slide="16" of="02887a61000b9b4c55170573c037d67f">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Skip the proof. If you are interested, see Beezer p.273. </paragraphs>
+                <qed course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="17" id="s17" slide="17" course="Math 1030" chapter="18" section="3" subsection="" subsubsection="" chapter_title="Determinant" section_title="Properties of Determinants of Matrces">
+            <keywords slide="17" environ="slide" chapter="18" course="Math 1030">
+              <keyword chapter="18" slide="17">Determinant for Row or Column Multiples</keyword>
+              <keyword chapter="18" slide="17">Determinant with Equal Rows or Columns</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="16" title="Determinant for Row or Column Multiples" md5="ba892fef33ad42ea1deba4029d6f2530" course="Math 1030" chapter="18" slide="17" item="18.16">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="18" section="3" subsection="" subsubsection="" serial="" slide="17">Determinant for Row or Column Multiples</title>
+              <label course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="label" name="DRCM" type="Theorem"/>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix. Let $B$ be the square matrix obtained from $A$ by multiplying a single row (say, row $i$) by the scalar $\alpha$, or by multiplying a single column by the scalar $\alpha$. Then $\det\left(B\right)=\alpha\det\left(A\right)$. </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="527898142ff57365f44ab2ce4c9c3ccb" course="Math 1030" chapter="18" slide="17" of="ba892fef33ad42ea1deba4029d6f2530">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Expand along row $i$, then
+\begin{align*}
+\displaystyle \det\left(B\right)=(-1)^{i+1}[B]_{i1}\det\left(B(i|1)\right)+(-1)^{i+1}[B]_{i2}\det\left(B(i|2)\right)+\cdots+(-1)^{i+n}[B]_{in}\det\left(B(i|n)\right)
+\end{align*}
+\begin{align*}
+\displaystyle =\alpha((-1)^{i+1}[A]_{i1}\det\left(A(i|1)\right)+(-1)^{i+1}[A]_{i2}\det\left(A(i|2)\right)+\cdots+(-1)^{i+n}[A]_{in}\det\left(A(i|n)\right))=\det\left(A\right).
+\end{align*} </paragraphs>
+                <qed course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+            <newline course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment=""/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="17" title="Determinant with Equal Rows or Columns" md5="e9c3499040bae858187a4f8e7e11417b" course="Math 1030" chapter="18" slide="17" item="18.17">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="18" section="3" subsection="" subsubsection="" serial="" slide="17">Determinant with Equal Rows or Columns</title>
+              <label course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="label" name="DERC" type="Theorem"/>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose that $A$ is a square matrix with two equal rows, or two equal columns. Then $\det\left(A\right)=0$. </paragraphs>
+              </newcol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="a539a43dbbde6209c5035362ddf5e646" course="Math 1030" chapter="18" slide="17" of="e9c3499040bae858187a4f8e7e11417b">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Skip the proof. If you are interested, see Beezer p.274. </paragraphs>
+                <qed course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="18" id="s18" slide="18" course="Math 1030" chapter="18" section="3" subsection="" subsubsection="" chapter_title="Determinant" section_title="Properties of Determinants of Matrces">
+            <keywords slide="18" environ="slide" chapter="18" course="Math 1030">
+              <keyword chapter="18" slide="18">Determinant for Row or Column Multiples and Addition</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="18" title="Determinant for Row or Column Multiples and Addition" md5="67ddd3dda36950b9ea1dee2d082c83f8" course="Math 1030" chapter="18" slide="18" item="18.18">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="18" section="3" subsection="" subsubsection="" serial="" slide="18">Determinant for Row or Column Multiples and Addition</title>
+              <label course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="label" name="DRCMA" type="Theorem"/>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix. Let $B$ be the square matrix obtained from $A$ by multiplying a row by the scalar $\alpha$ and then adding it to another row, or by multiplying a column by the scalar $\alpha$ and then adding it to another column. Then $\det\left(B\right)=\det\left(A\right)$. </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="5295c16fac94de3f9d98517d310bb78a" course="Math 1030" chapter="18" slide="18" of="67ddd3dda36950b9ea1dee2d082c83f8">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose the row operation is $\alpha R_{i}+R_{j}$, expand along row $j$. For details, see Beezer p.275. </paragraphs>
+                <qed course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="19" id="s19" slide="19" course="Math 1030" chapter="18" section="3" subsection="" subsubsection="" chapter_title="Determinant" section_title="Properties of Determinants of Matrces">
+            <keywords slide="19" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="19" md5="dc1494b0e4d3b786b2bc7a35f03514ca" course="Math 1030" chapter="18" slide="19" item="18.19">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> \begin{align*}
+\displaystyle \begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+\vdots&amp;\vdots&amp;\cdots&amp;\vdots\\
+a_{i-1,1}&amp;a_{i-1,2}&amp;\cdots&amp;a_{i-1,n}\\
+b_{1}+c_{1}&amp;b_{2}+c_{2}&amp;\cdots&amp;b_{n}+c_{n}\\
+a_{i+1,1}&amp;a_{i+1,2}&amp;\cdots&amp;a_{i+1,n}\\
+\vdots&amp;\vdots&amp;\cdots&amp;\vdots\\
+a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}\\
+\end{vmatrix}=\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+\vdots&amp;\vdots&amp;\cdots&amp;\vdots\\
+a_{i-1,1}&amp;a_{i-1,2}&amp;\cdots&amp;a_{i-1,n}\\
+b_{1}&amp;b_{2}&amp;\cdots&amp;b_{n}\\
+a_{i+1,1}&amp;a_{i+1,2}&amp;\cdots&amp;a_{i+1,n}\\
+\vdots&amp;\vdots&amp;\cdots&amp;\vdots\\
+a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}\\
+\end{vmatrix}+\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+\vdots&amp;\vdots&amp;\cdots&amp;\vdots\\
+a_{i-1,1}&amp;a_{i-1,2}&amp;\cdots&amp;a_{i-1,n}\\
+c_{1}&amp;c_{2}&amp;\cdots&amp;c_{n}\\
+a_{i+1,1}&amp;a_{i+1,2}&amp;\cdots&amp;a_{i+1,n}\\
+\vdots&amp;\vdots&amp;\cdots&amp;\vdots\\
+a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}\\
+\end{vmatrix}
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Similarly
+\begin{align*}
+\displaystyle \begin{vmatrix}a_{11}&amp;\cdots&amp;a_{1,i-1}&amp;b_{1}+c_{1}&amp;a_{1,i+1}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;\cdots&amp;a_{2,i-1}&amp;b_{2}+c_{2}&amp;a_{2,i+1}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{n1}&amp;\cdots&amp;a_{n,i-1}&amp;b_{n}+c_{n}&amp;a_{n,i+1}&amp;\cdots&amp;a_{nn}\end{vmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle =\begin{vmatrix}a_{11}&amp;\cdots&amp;a_{1,i-1}&amp;b_{1}&amp;a_{1,i+1}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;\cdots&amp;a_{2,i-1}&amp;b_{2}&amp;a_{2,i+1}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{n1}&amp;\cdots&amp;a_{n,i-1}&amp;b_{n}&amp;a_{n,i+1}&amp;\cdots&amp;a_{nn}\end{vmatrix}+\begin{vmatrix}a_{11}&amp;\cdots&amp;a_{1,i-1}&amp;c_{1}&amp;a_{1,i+1}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;\cdots&amp;a_{2,i-1}&amp;c_{2}&amp;a_{2,i+1}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{n1}&amp;\cdots&amp;a_{n,i-1}&amp;c_{n}&amp;a_{n,i+1}&amp;\cdots&amp;a_{nn}\end{vmatrix}
+\end{align*} </paragraphs>
+              </newcol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="3121b21b886e5ebb630d10de7c8a12f3" course="Math 1030" chapter="18" slide="19" of="dc1494b0e4d3b786b2bc7a35f03514ca">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Expand along row $i$ (or column $i$). </paragraphs>
+                <qed course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="20" id="s20" slide="20" course="Math 1030" chapter="18" section="3" subsection="" subsubsection="" chapter_title="Determinant" section_title="Properties of Determinants of Matrces">
+            <keywords slide="20" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="20" md5="946e67b64a6b1e2b7e0e949d8dc79876" course="Math 1030" chapter="18" slide="20" item="18.20">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose we desire the determinant of the $4\times 4$ matrix
+\begin{align*}
+\displaystyle A=\begin{bmatrix}2&amp;0&amp;2&amp;3\\
+1&amp;3&amp;-1&amp;1\\
+-1&amp;1&amp;-1&amp;2\\
+3&amp;5&amp;4&amp;0\end{bmatrix}
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We will perform a sequence of row operations on this matrix, shooting for an upper triangular matrix, whose determinant will be simply the product of its diagonal entries. For each row operation, we will track the effect on the determinant via Theorem   </paragraphs>
+                <ref environment="newcol" chapter_type="" label="DRCS" wbtag="ref" course="Math 1030" chapter="18" slide="20" src-course="MATH 1030" src-chapter="18" src-slide="283" type="Theorem" item="18.15" src-filename="lecs1-20.xml" md5="02887a61000b9b4c55170573c037d67f" class="lcref" serial="">
+                  <title>Determinant for Row or Column Swap</title>
+                </ref>
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Theorem   </paragraphs>
+                <ref environment="newcol" chapter_type="" label="DRCM" wbtag="ref" course="Math 1030" chapter="18" slide="20" src-course="MATH 1030" src-chapter="18" src-slide="284" type="Theorem" item="18.16" src-filename="lecs1-20.xml" md5="ba892fef33ad42ea1deba4029d6f2530" class="lcref" serial="">
+                  <title>Determinant for Row or Column Multiples</title>
+                </ref>
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and Theorem   </paragraphs>
+                <ref environment="newcol" chapter_type="" label="DRCMA" wbtag="ref" course="Math 1030" chapter="18" slide="20" src-course="MATH 1030" src-chapter="18" src-slide="285" type="Theorem" item="18.18" src-filename="lecs1-20.xml" md5="67ddd3dda36950b9ea1dee2d082c83f8" class="lcref" serial="">
+                  <title>Determinant for Row or Column Multiples and Addition</title>
+                </ref>
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">.
+\begin{align*}
+\displaystyle \begin{vmatrix}2&amp;0&amp;2&amp;3\\
+1&amp;3&amp;-1&amp;1\\
+-1&amp;1&amp;-1&amp;2\\
+3&amp;5&amp;4&amp;0\end{vmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle =-\begin{vmatrix}1&amp;3&amp;-1&amp;1\\
+2&amp;0&amp;2&amp;3\\
+-1&amp;1&amp;-1&amp;2\\
+3&amp;5&amp;4&amp;0\end{vmatrix}\qquad(R_{1}\leftrightarrow R_{2})
+\end{align*}
+\begin{align*}
+\displaystyle =-\begin{vmatrix}1&amp;3&amp;-1&amp;1\\
+0&amp;-6&amp;4&amp;1\\
+-1&amp;1&amp;-1&amp;2\\
+3&amp;5&amp;4&amp;0\end{vmatrix}\qquad(-2R_{1}+R_{2})
+\end{align*}
+\begin{align*}
+\displaystyle =-\begin{vmatrix}1&amp;3&amp;-1&amp;1\\
+0&amp;-6&amp;4&amp;1\\
+0&amp;4&amp;-2&amp;3\\
+3&amp;5&amp;4&amp;0\end{vmatrix}\qquad(1R_{1}+R_{3})
+\end{align*}
+\begin{align*}
+\displaystyle =-\begin{vmatrix}1&amp;3&amp;-1&amp;1\\
+0&amp;-6&amp;4&amp;1\\
+0&amp;4&amp;-2&amp;3\\
+0&amp;-4&amp;7&amp;-3\end{vmatrix}\qquad(-3R_{1}+R_{4})
+\end{align*}
+\begin{align*}
+\displaystyle =-\begin{vmatrix}1&amp;3&amp;-1&amp;1\\
+0&amp;-2&amp;2&amp;4\\
+0&amp;4&amp;-2&amp;3\\
+0&amp;-4&amp;7&amp;-3\end{vmatrix}\qquad(1R_{3}+R_{2})
+\end{align*}
+\begin{align*}
+\displaystyle =2\begin{vmatrix}1&amp;3&amp;-1&amp;1\\
+0&amp;1&amp;-1&amp;-2\\
+0&amp;4&amp;-2&amp;3\\
+0&amp;-4&amp;7&amp;-3\end{vmatrix}\qquad(-\frac{1}{2}R_{2})
+\end{align*}
+\begin{align*}
+\displaystyle =2\begin{vmatrix}1&amp;3&amp;-1&amp;1\\
+0&amp;1&amp;-1&amp;-2\\
+0&amp;0&amp;2&amp;11\\
+0&amp;-4&amp;7&amp;-3\end{vmatrix}\qquad(-4R_{2}+R_{3})
+\end{align*}
+\begin{align*}
+\displaystyle =2\begin{vmatrix}1&amp;3&amp;-1&amp;1\\
+0&amp;1&amp;-1&amp;-2\\
+0&amp;0&amp;2&amp;11\\
+0&amp;0&amp;3&amp;-11\end{vmatrix}\qquad(-4R_{2}+R_{4})
+\end{align*}
+\begin{align*}
+\displaystyle =2\begin{vmatrix}1&amp;3&amp;-1&amp;1\\
+0&amp;1&amp;-1&amp;-2\\
+0&amp;0&amp;2&amp;11\\
+0&amp;0&amp;1&amp;-22\end{vmatrix}\qquad(-1R_{3}+R_{4})
+\end{align*}
+\begin{align*}
+\displaystyle =2\begin{vmatrix}1&amp;3&amp;-1&amp;1\\
+0&amp;1&amp;-1&amp;-2\\
+0&amp;0&amp;0&amp;55\\
+0&amp;0&amp;1&amp;-22\end{vmatrix}\qquad(-2R_{4}+R_{3})
+\end{align*}
+\begin{align*}
+\displaystyle =-2\begin{vmatrix}1&amp;3&amp;-1&amp;1\\
+0&amp;1&amp;-1&amp;-2\\
+0&amp;0&amp;1&amp;-22\\
+0&amp;0&amp;0&amp;55\end{vmatrix}\qquad(R_{3}\leftrightarrow R_{4})
+\end{align*}
+\begin{align*}
+\displaystyle =-2\times 1\times 1\times 1\times 55=-110.
+\end{align*} </paragraphs>
+              </newcol>
+            </statement>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Examples" course="Math 1030" chapter="18" num="4" serial="18.4">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="18" section="4" subsection="" subsubsection="" serial="18.4" slide="">
+          <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Examples</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="21" scope="section" id="s21" slide="21" course="Math 1030" chapter="18" section="4" subsection="" subsubsection="" chapter_title="Determinant" section_title="Examples">
+            <keywords slide="21" environ="slide" chapter="18" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="18" section="4" subsection="" subsubsection="" serial="" slide="21">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Examples</paragraphs>
+            </title>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="21" md5="978d10925c836de6cac473462c2d307e" course="Math 1030" chapter="18" slide="21" item="18.21">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Compute
+\begin{align*}
+\displaystyle \begin{vmatrix}1&amp;a_{1}&amp;a_{2}&amp;a_{3}\\
+1&amp;a_{1}+b_{1}&amp;a_{2}&amp;a_{3}\\
+1&amp;a_{1}&amp;a_{2}+b_{2}&amp;a_{3}\\
+1&amp;a_{1}&amp;a_{2}&amp;a_{3}+b_{3}.\end{vmatrix}
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The above is
+\begin{align*}
+\displaystyle \begin{vmatrix}1&amp;a_{1}&amp;a_{2}&amp;a_{3}\\
+0&amp;b_{1}&amp;0&amp;0\\
+0&amp;0&amp;b_{2}&amp;0\\
+0&amp;0&amp;0&amp;b_{3}\end{vmatrix}\qquad(-1R_{1}+R_{2},-1R_{1}+R_{3},-1R_{1}+R_{4})
+\end{align*}
+\begin{align*}
+\displaystyle =b_{1}b_{2}b_{3}\qquad(\text{upper triangular matrix})
+\end{align*} </paragraphs>
+              </newcol>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="22" md5="6ab36e5d0780a919116b1af0f083559b" course="Math 1030" chapter="18" slide="21" item="18.22">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Compute
+\begin{align*}
+\displaystyle \begin{vmatrix}1&amp;1&amp;1\\
+a&amp;b&amp;c\\
+a^{2}&amp;b^{2}&amp;c^{2}\end{vmatrix}.
+\end{align*}
+\begin{align*}
+\displaystyle =\begin{vmatrix}1&amp;1&amp;1\\
+a&amp;b&amp;c\\
+0&amp;b(b-a)&amp;c(c-a)\end{vmatrix}\qquad(-aR_{2}+R_{3})
+\end{align*}
+\begin{align*}
+\displaystyle =\begin{vmatrix}1&amp;1&amp;1\\
+0&amp;b-a&amp;c-a\\
+0&amp;b(b-a)&amp;c(c-a)\end{vmatrix}\qquad(-aR_{1}+R_{2})
+\end{align*}
+\begin{align*}
+\displaystyle =\begin{vmatrix}b-a&amp;c-a\\
+b(b-a)&amp;c(c-a)\end{vmatrix}\qquad(\text{expand along the first column})
+\end{align*}
+\begin{align*}
+\displaystyle =(b-a)\begin{vmatrix}1&amp;c-a\\
+b&amp;c(c-a)\end{vmatrix}\qquad(\text{pull out $b-a$ from column 1})
+\end{align*}
+\begin{align*}
+\displaystyle =(b-a)(c-a)\begin{vmatrix}1&amp;1\\
+b&amp;c\end{vmatrix}\qquad(\text{pull out $c-a$ from column 2})
+\end{align*}
+\begin{align*}
+\displaystyle =(b-a)(c-a)(c-b).
+\end{align*} </paragraphs>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="23" md5="0ae0edc5b86e5db4a4694c830ab85bfb" course="Math 1030" chapter="18" slide="21" item="18.23">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}0&amp;0&amp;0&amp;a_{14}\\
+0&amp;0&amp;a_{23}&amp;a_{24}\\
+0&amp;a_{32}&amp;a_{33}&amp;a_{34}\\
+a_{41}&amp;a_{42}&amp;a_{43}&amp;a_{44}\end{bmatrix}
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Find $\det\left(A\right)$. $\det\left(A\right)$
+\begin{align*}
+\displaystyle =-\begin{vmatrix}a_{41}&amp;a_{42}&amp;a_{43}&amp;a_{44}\\
+0&amp;0&amp;a_{23}&amp;a_{24}\\
+0&amp;a_{32}&amp;a_{33}&amp;a_{34}\\
+0&amp;0&amp;0&amp;a_{14}\end{vmatrix}\qquad(R_{1}\leftrightarrow R_{4})
+\end{align*}
+\begin{align*}
+\displaystyle =\begin{vmatrix}a_{41}&amp;a_{42}&amp;a_{43}&amp;a_{44}\\
+0&amp;a_{32}&amp;a_{33}&amp;a_{34}\\
+0&amp;0&amp;a_{23}&amp;a_{24}\\
+0&amp;0&amp;0&amp;a_{14}\end{vmatrix}\qquad(R_{2}\leftrightarrow R_{3})
+\end{align*}
+\begin{align*}
+\displaystyle =a_{41}a_{32}a_{23}a_{14}.
+\end{align*} </paragraphs>
+              </newcol>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="24" md5="702d918a6065cc0bf99b671af28009a4" course="Math 1030" chapter="18" slide="21" item="18.24">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}\\
+a_{21}&amp;a_{22}&amp;a_{23}\\
+a_{31}&amp;a_{32}&amp;a_{33}\end{bmatrix}
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Given $\det\left(A\right)=1$.
+Find
+\begin{align*}
+\displaystyle \begin{vmatrix}2a_{11}&amp;3a_{12}&amp;4a_{13}\\
+2a_{21}&amp;3a_{22}&amp;4a_{23}\\
+2a_{31}&amp;3a_{32}&amp;4a_{33}\end{vmatrix}.
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The above is
+\begin{align*}
+\displaystyle =2\begin{vmatrix}a_{11}&amp;3a_{12}&amp;4a_{13}\\
+a_{21}&amp;3a_{22}&amp;4a_{23}\\
+a_{31}&amp;3a_{32}&amp;4a_{33}\end{vmatrix}\qquad(\frac{1}{2}C_{1})
+\end{align*}
+\begin{align*}
+\displaystyle =2\times 3\begin{vmatrix}a_{11}&amp;a_{12}&amp;4a_{13}\\
+a_{21}&amp;a_{22}&amp;4a_{23}\\
+a_{31}&amp;a_{32}&amp;4a_{33}\end{vmatrix}\qquad(\frac{1}{3}C_{2})
+\end{align*}
+\begin{align*}
+\displaystyle =2\times 3\times 4\begin{vmatrix}a_{11}&amp;a_{12}&amp;a_{13}\\
+a_{21}&amp;a_{22}&amp;a_{23}\\
+a_{31}&amp;a_{32}&amp;a_{33}\end{vmatrix}\qquad(\frac{1}{4}C_{3})
+\end{align*}
+\begin{align*}
+\displaystyle =24.
+\end{align*} </paragraphs>
+                </collapse>
+              </newcol>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="25" md5="e70c1dddd219fde27bd5030273d54191" course="Math 1030" chapter="18" slide="21" item="18.25">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Compute
+\begin{align*}
+\displaystyle \det\left(A\right)=\begin{vmatrix}1&amp;1&amp;1&amp;1&amp;1\\
+2&amp;2&amp;1&amp;2&amp;2\\
+1&amp;2&amp;1&amp;2&amp;3\\
+1&amp;1&amp;1&amp;3&amp;2\\
+1&amp;1&amp;1&amp;1&amp;4\end{vmatrix}
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By $-1R_{1}+R_{2}$, $-1R_{1}+R_{3}$, $-1R_{1}+R_{4}$, $-1R_{1}+R_{5}$,
+the above is
+\begin{align*}
+\displaystyle \begin{vmatrix}1&amp;1&amp;1&amp;1&amp;1\\
+1&amp;1&amp;0&amp;1&amp;1\\
+0&amp;1&amp;0&amp;1&amp;2\\
+0&amp;0&amp;0&amp;2&amp;1\\
+0&amp;0&amp;0&amp;0&amp;3\end{vmatrix}.
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Expand along column 3,
+the above is
+\begin{align*}
+\displaystyle (-1)^{1+3}\times 1\times\begin{vmatrix}1&amp;1&amp;1&amp;1\\
+0&amp;1&amp;1&amp;2\\
+0&amp;0&amp;2&amp;1\\
+0&amp;0&amp;0&amp;3\end{vmatrix}=1\times 1\times 2\times 3=6.
+\end{align*} </paragraphs>
+                </collapse>
+              </newcol>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="26" md5="b5e5a4387b0c305de232918e6d05fc66" course="Math 1030" chapter="18" slide="21" item="18.26">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}\\
+a_{21}&amp;a_{22}&amp;a_{23}\\
+a_{31}&amp;a_{32}&amp;a_{33}\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle B=\begin{bmatrix}b_{11}&amp;b_{12}\\
+b_{21}&amp;b_{22}\end{bmatrix}.
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let
+\begin{align*}
+\displaystyle C=\begin{bmatrix}A&amp;{\cal O}_{32}\\
+{\cal O}_{23}&amp;B\end{bmatrix}=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;0&amp;0\\
+a_{21}&amp;a_{22}&amp;a_{23}&amp;0&amp;0\\
+a_{31}&amp;a_{32}&amp;a_{33}&amp;0&amp;0\\
+0&amp;0&amp;0&amp;b_{11}&amp;b_{12}\\
+0&amp;0&amp;0&amp;b_{21}&amp;b_{22}\end{bmatrix}
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Show that
+\begin{align*}
+\displaystyle \det\left(C\right)=\det\left(A\right)\det\left(B\right).
+\end{align*} </paragraphs>
+                  <collapse course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Expand $C$ along the last row, $\det\left(C\right)=$
+\begin{align*}
+\displaystyle (-1)^{5+4}b_{21}\begin{vmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;0\\
+a_{21}&amp;a_{22}&amp;a_{23}&amp;0\\
+a_{31}&amp;a_{32}&amp;a_{33}&amp;0\\
+0&amp;0&amp;0&amp;b_{12}\\
+\end{vmatrix}+(-1)^{5+5}b_{22}\begin{vmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;0\\
+a_{21}&amp;a_{22}&amp;a_{23}&amp;0\\
+a_{31}&amp;a_{32}&amp;a_{33}&amp;0\\
+0&amp;0&amp;0&amp;b_{11}\\
+\end{vmatrix}.
+\end{align*} </paragraphs>
+                    <collapse course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> For each $4\times 4$ submatrix, expand along the last row, the above is
+\begin{align*}
+\displaystyle (-1)^{5+4}b_{21}(-1)^{4+4}b_{12}\begin{vmatrix}a_{11}&amp;a_{12}&amp;a_{13}\\
+a_{21}&amp;a_{22}&amp;a_{23}\\
+a_{31}&amp;a_{32}&amp;a_{33}\\
+\end{vmatrix}+(-1)^{5+5}b_{22}(-1)^{4+4}b_{11}\begin{vmatrix}a_{11}&amp;a_{12}&amp;a_{13}\\
+a_{21}&amp;a_{22}&amp;a_{23}\\
+a_{31}&amp;a_{32}&amp;a_{33}\\
+\end{vmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle =(b_{11}b_{22}-b_{21}b_{12})\det\left(A\right)=\det\left(A\right)\det\left(B\right).
+\end{align*} </paragraphs>
+                      <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                        <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Remark</paragraphs>
+                      </b>
+                      <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: The result is also valid when $A$ is a square matrix of size $n$ and $B$ is a square matrix of size $m$. </paragraphs>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="27" md5="44c2df0f902cd543db3e2d7e79614046" course="Math 1030" chapter="18" slide="21" item="18.27">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Compute
+\begin{align*}
+\displaystyle \det\left(A\right)=\begin{vmatrix}a&amp;1&amp;1&amp;1\\
+1&amp;a&amp;1&amp;1\\
+1&amp;1&amp;a&amp;1\\
+1&amp;1&amp;1&amp;a.\end{vmatrix}
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By $-1R_{1}+R_{2}$, $-1R_{1}+R_{3}$, $-1R_{1}+R_{4}$, the above is
+\begin{align*}
+\displaystyle \begin{vmatrix}a&amp;1&amp;1&amp;1\\
+1-a&amp;a-1&amp;0&amp;0\\
+1-a&amp;0&amp;a-1&amp;0\\
+1-a&amp;0&amp;0&amp;a-1\end{vmatrix}
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Take out the common factor $a-1$ of row 2, row 3 and row 4, the above is
+\begin{align*}
+\displaystyle (a-1)^{3}\begin{vmatrix}a&amp;1&amp;1&amp;1\\
+-1&amp;1&amp;0&amp;0\\
+-1&amp;0&amp;1&amp;0\\
+-1&amp;0&amp;0&amp;1\end{vmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle =(a-1)^{3}\begin{vmatrix}a+3&amp;0&amp;0&amp;0\\
+-1&amp;1&amp;0&amp;0\\
+-1&amp;0&amp;1&amp;0\\
+-1&amp;0&amp;0&amp;1\end{vmatrix}\qquad(-1R_{4}+R_{1},-1R_{3}+R_{1},-1R_{2}+R_{1})
+\end{align*}
+\begin{align*}
+\displaystyle =(a+3)(a-1)^{3}.
+\end{align*} </paragraphs>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="More examples" course="Math 1030" chapter="18" num="5" serial="18.5">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="18" section="5" subsection="" subsubsection="" serial="18.5" slide="">
+          <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">More examples</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="22" scope="section" id="s22" slide="22" course="Math 1030" chapter="18" section="5" subsection="" subsubsection="" chapter_title="Determinant" section_title="More examples">
+            <keywords slide="22" environ="slide" chapter="18" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="18" section="5" subsection="" subsubsection="" serial="" slide="22">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">More examples</paragraphs>
+            </title>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="28" md5="5094436824a7be29c896d807fd358678" course="Math 1030" chapter="18" slide="22" item="18.28">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $A_{n}$ be a $n\times n$ matrix
+\begin{align*}
+\displaystyle \left.\left[\vphantom{\begin{array}[]{c}1\\
+1\\
+1\\
+1\\
+1\end{array}}\smash{\underbrace{\begin{array}[]{ccccc}x&amp;1&amp;1&amp;\cdots&amp;1\\
+1&amp;x&amp;1&amp;\cdots&amp;1\\
+1&amp;1&amp;x&amp;\cdots&amp;1\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;1\\
+1&amp;1&amp;1&amp;\cdots&amp;x\end{array}}_{n}}\right]\right\}\,n
+\end{align*}
+Find $\det(A_{n})$.</paragraphs>
+              <newline course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Add columns $C_{2},C_{3},\ldots,C_{n}$ to $C_{1}$:
+\[
+\displaystyle \det(A_{n})
+=
+\left|
+%% \vphantom{\begin{array}[]{c}1\\
+%% 1\\
+%% 1\\
+%% 1\\
+%% 1\end{array}}
+%% \smash{\underbrace{
+\begin{array}[]{ccccc}x+(n-1)&amp;1&amp;1&amp;\cdots&amp;1\\
+x+(n-1)&amp;x&amp;1&amp;\cdots&amp;1\\
+x+(n-1)&amp;1&amp;x&amp;\cdots&amp;1\\
+\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;1\\
+x+(n-1)&amp;1&amp;1&amp;\cdots&amp;x\end{array}
+%%}_{n}}
+\right|
+\]
+\[
+=
+(x+(n-1))\left|\vphantom{\begin{array}[]{c}1\\
+1\\
+1\\
+1\\
+1\end{array}}\smash{\underbrace{\begin{array}[]{ccccc}1&amp;1&amp;1&amp;\cdots&amp;1\\
+1&amp;x&amp;1&amp;\cdots&amp;1\\
+1&amp;1&amp;x&amp;\cdots&amp;1\\
+\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;1\\
+1&amp;1&amp;1&amp;\cdots&amp;x\end{array}}_{n}}\right|
+\] </paragraphs>
+                <collapse course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Performing the following sequence of column operations:
+\[
+-C_{1}+C_{2}$, $-C_{1}+C_{3},\ldots,-C_{1}+C_{n},
+\]
+we conclude that the determinant is equal to:
+\begin{align*}
+\displaystyle \left.\left|\vphantom{\begin{array}[]{c}1\\
+1\\
+1\\
+1\\
+1\end{array}}\smash{\underbrace{\begin{array}[]{ccccc}1&amp;0&amp;0&amp;\cdots&amp;0\\
+1&amp;x-1&amp;0&amp;\cdots&amp;0\\
+1&amp;0&amp;x-1&amp;\cdots&amp;0\\
+\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;0\\
+1&amp;0&amp;0&amp;\cdots&amp;x-1\end{array}}_{n}}\right|\right\}\,n=(x+n-1)(x-1)^{n-1}.
+\end{align*} </paragraphs>
+                  <collapse course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The last step follows by the fact that the matrix on the left hand side is the lower triangular matrix. </paragraphs>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="23" id="s23" slide="23" course="Math 1030" chapter="18" section="5" subsection="" subsubsection="" chapter_title="Determinant" section_title="More examples">
+            <keywords slide="23" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="29" md5="24276c536667b07bb1606d0d9559bf71" course="Math 1030" chapter="18" slide="23" item="18.29">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $B_{n}$ be a $n\times n$ matrix in the form
+\begin{align*}
+\displaystyle \begin{bmatrix}1-a_{1}&amp;a_{2}&amp;0&amp;\cdots&amp;0&amp;0\\
+-1&amp;1-a_{2}&amp;a_{3}&amp;\cdots&amp;0&amp;0\\
+0&amp;-1&amp;1-a_{3}&amp;\cdots&amp;0&amp;0\\
+\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots&amp;\vdots\\
+0&amp;0&amp;0&amp;\cdots&amp;1-a_{n-1}&amp;a_{n}\\
+0&amp;0&amp;0&amp;\cdots&amp;-1&amp;1-a_{n}\end{bmatrix}
+\end{align*} </paragraphs>
+              <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Show that $\det(B_{n})=\det(B_{n-1})+(-1)^{n}(a_{1}a_{2}\cdots a_{n})$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Hence show $\det(B_{n})=1+\sum_{i=1}^{n}(-1)^{i}(a_{1}a_{2}\cdots a_{i})$. </paragraphs>
+                </li>
+              </ol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Solution" wbtag="sol" md5="3b7ae9a092f041ad0055587f0dad0c1f" course="Math 1030" chapter="18" slide="23">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="newcol">
+                  <li class="ltx_item" environment="newcol">
+                    <collapse xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Adding rows $R_{1},\ldots,R_{n-1}$ to $R_{n}$, we have: </paragraphs>
+                      <collapse course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\det(B_{n})=$
+\begin{align*}
+\displaystyle \begin{vmatrix}1-a_{1}&amp;a_{2}&amp;0&amp;\cdots&amp;0&amp;0\\
+-1&amp;1-a_{2}&amp;a_{3}&amp;\cdots&amp;0&amp;0\\
+0&amp;-1&amp;1-a_{3}&amp;\cdots&amp;0&amp;0\\
+\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots&amp;\vdots\\
+0&amp;0&amp;0&amp;\cdots&amp;1-a_{n-1}&amp;a_{n}\\
+-a_{1}&amp;0&amp;0&amp;\cdots&amp;0&amp;1\end{vmatrix}
+\end{align*} </paragraphs>
+                        <newcol course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                          <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Expand along the last row, the determinant above is equal to:
+\begin{align*}
+\displaystyle (-1)^{n+1}(-a_{1})\begin{vmatrix}a_{2}&amp;0&amp;\cdots&amp;0&amp;0\\
+1-a_{2}&amp;a_{3}&amp;\cdots&amp;0&amp;0\\
+-1&amp;1-a_{3}&amp;\cdots&amp;0&amp;0\\
+\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\
+0&amp;0&amp;\cdots&amp;1-a_{n-1}&amp;a_{n}\end{vmatrix}+
+\end{align*}
+\begin{align*}
+\displaystyle +(-1)^{n+n}\begin{vmatrix}1-a_{1}&amp;a_{2}&amp;0&amp;\cdots&amp;0\\
+-1&amp;1-a_{2}&amp;a_{3}&amp;\cdots&amp;0\\
+0&amp;-1&amp;1-a_{3}&amp;\cdots&amp;0\\
+\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\
+0&amp;0&amp;0&amp;\cdots&amp;1-a_{n-1}\\
+\end{vmatrix}
+\end{align*} </paragraphs>
+                          <collapse course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                            <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The first matrix is an lower triangular matrix, so the determinant is the product of the diagonal entries, the second matrix is $B_{n-1}$.
+\begin{align*}
+\displaystyle =(-1)^{n}(a_{1}\cdots a_{n})+\det(B_{n-1}).
+\end{align*} </paragraphs>
+                          </collapse>
+                        </newcol>
+                      </collapse>
+                    </collapse>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <collapse xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We prove the result by </paragraphs>
+                      <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                        <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">mathematical induction</paragraphs>
+                      </strong>
+                      <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">:</paragraphs>
+                      <newline course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                      <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                        <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 1</paragraphs>
+                      </strong>
+                      <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: </paragraphs>
+                      <newcol course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                        <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The formula is valid for $n=1$: $\det(B_{1})=1-a_{1}$. </paragraphs>
+                      </newcol>
+                      <newline course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                      <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                        <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 2</paragraphs>
+                      </strong>
+                      <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: </paragraphs>
+                      <newcol course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                        <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose the formula is true for $n=k$, we want to show that the formula is true for $n=k+1$:
+\begin{align*}
+\displaystyle B_{k+1}=(-1)^{k+1}(a_{1}\cdots a_{k+1})+\det(B_{k})
+\end{align*}
+\begin{align*}
+\displaystyle =1+\sum_{i=1}^{k}(-1)^{i}(a_{1}a_{2}\cdots a_{i})+(-1)^{k+1}(a_{1}\cdots a_{k+1})
+\end{align*}
+\begin{align*}
+\displaystyle =1+\sum_{i=1}^{k+1}(-1)^{i}(a_{1}\cdots a_{i})
+\end{align*}
+\begin{align*}
+\displaystyle =1+\sum_{i=1}^{n}(-1)^{i}(a_{1}\cdots a_{i}).
+\end{align*} </paragraphs>
+                        <collapse course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The formula is true for $n=k+1$. </paragraphs>
+                        </collapse>
+                      </newcol>
+                      <newline course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                      <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                        <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 3</paragraphs>
+                      </strong>
+                      <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: </paragraphs>
+                      <newcol course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                        <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By mathematical induction, the formula is valid for all positive integer. </paragraphs>
+                        <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                          <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Explanation</paragraphs>
+                        </b>
+                        <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: the formula is true for $k=1$, then it is true for $k+1=2$, so true for $k+1=3$, etc. Hence true for all integers. </paragraphs>
+                      </newcol>
+                    </collapse>
+                  </li>
+                </ol>
+                <qed course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="24" id="s24" slide="24" course="Math 1030" chapter="18" section="5" subsection="" subsubsection="" chapter_title="Determinant" section_title="More examples">
+            <keywords slide="24" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="30" md5="963651a716c31e37936fdb390e135ef7" course="Math 1030" chapter="18" slide="24" item="18.30">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $C_{n}$ be a $n\times n$ matrix given by
+\begin{align*}
+\displaystyle C_{n}=\left.\left[\vphantom{\begin{array}[]{c}1\\
+1\\
+1\\
+1\\
+1\\
+1\end{array}}\smash{\underbrace{\begin{array}[]{cccccc}x&amp;a&amp;a&amp;\cdots&amp;a&amp;a\\
+-a&amp;x&amp;a&amp;\cdots&amp;a&amp;a\\
+-a&amp;-a&amp;x&amp;\cdots&amp;a&amp;a\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+-a&amp;-a&amp;-a&amp;\cdots&amp;-a&amp;x\end{array}}_{n}}\right]\right\}\,n
+\end{align*} </paragraphs>
+              <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Show that $\det(C_{n})=a(x+a)^{n-1}+(x-a)\det(C_{n-1})$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Show that $\det(C_{n})=\frac{1}{2}((x+a)^{n}+(x-a)^{n})$. </paragraphs>
+                </li>
+                <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="statement"/>
+              </ol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Solution" wbtag="sol" md5="faff857e55f8d1cd713135bd5df27147" course="Math 1030" chapter="18" slide="24">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="newcol">
+                  <li class="ltx_item" environment="newcol">
+                    <collapse xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The last column can be written as
+\begin{align*}
+\displaystyle \begin{bmatrix}a\\
+a\\
+a\\
+\vdots\\
+x\end{bmatrix}=\begin{bmatrix}a\\
+a\\
+a\\
+\vdots\\
+a\end{bmatrix}+\begin{bmatrix}0\\
+0\\
+0\\
+\vdots\\
+x-a\end{bmatrix}.
+\end{align*} </paragraphs>
+                      <newcol course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                        <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then $\det(C_{n})=$
+\begin{align*}
+\displaystyle
+\left|
+%% \vphantom{\begin{array}[]{c}1\\
+%% 1\\
+%% 1\\
+%% 1\\
+%% 1\\
+%% 1\end{array}}\smash{\underbrace{
+%%
+\begin{array}[]{cccccc}x&amp;a&amp;a&amp;\cdots&amp;a&amp;a\\
+-a&amp;x&amp;a&amp;\cdots&amp;a&amp;a\\
+-a&amp;-a&amp;x&amp;\cdots&amp;a&amp;a\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+-a&amp;-a&amp;-a&amp;\cdots&amp;-a&amp;a\end{array}
+%% }_{n}}
+%%
+\right| +
+\left|
+%% \vphantom{\begin{array}[]{c}1\\
+%% 1\\
+%% 1\\
+%% 1\\
+%% 1\\
+%% 1\end{array}}\smash{\underbrace{
+\begin{array}[]{cccccc}x&amp;a&amp;a&amp;\cdots&amp;a&amp;0\\
+-a&amp;x&amp;a&amp;\cdots&amp;a&amp;0\\
+-a&amp;-a&amp;x&amp;\cdots&amp;a&amp;0\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+-a&amp;-a&amp;-a&amp;\cdots&amp;-a&amp;x-a\end{array}
+%% }_{n}}
+\right|
+\end{align*} </paragraphs>
+                        <collapse course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> For the first determinant, pulling out $a$ from the last column,
+it is equal to:
+\begin{align*}
+\displaystyle a\left|
+%% \vphantom{\begin{array}[]{c}1\\
+%% 1\\
+%% 1\\
+%% 1\\
+%% 1\\
+%% 1\end{array}}\smash{\underbrace{
+\begin{array}[]{cccccc}x&amp;a&amp;a&amp;\cdots&amp;a&amp;1\\
+-a&amp;x&amp;a&amp;\cdots&amp;a&amp;1\\
+-a&amp;-a&amp;x&amp;\cdots&amp;a&amp;1\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+-a&amp;-a&amp;-a&amp;\cdots&amp;-a&amp;1\end{array}
+%% }_{n}}
+\right|
+\end{align*}
+Then, performing the row operations:
+\[
+-1R_{n}+R_{1},\ldots,-1R_{n-1}+R_{n-1},
+\]
+the determinant above is equal to:
+\begin{align*}
+\displaystyle a\left|
+%% \vphantom{\begin{array}[]{c}1\\
+%% 1\\
+%% 1\\
+%% 1\\
+%% 1\\
+%% 1\end{array}}\smash{\underbrace{
+\begin{array}[]{cccccc}x+a&amp;2a&amp;2a&amp;\cdots&amp;2a&amp;0\\
+0&amp;x+a&amp;2a&amp;\cdots&amp;2a&amp;0\\
+0&amp;0&amp;x+a&amp;\cdots&amp;2a&amp;0\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+-a&amp;-a&amp;-a&amp;\cdots&amp;-a&amp;1\end{array}
+%% }_{n}}
+\right|
+\end{align*}
+\begin{align*}
+\displaystyle =(-1)^{n+n}a
+\left|
+%% \vphantom{\begin{array}[]{c}1\\
+%% 1\\
+%% 1\\
+%% 1\\
+%% 1\end{array}
+%% }\smash{\underbrace{
+\begin{array}[]{cccccc}x+a&amp;2a&amp;2a&amp;\cdots&amp;2a\\
+0&amp;x+a&amp;2a&amp;\cdots&amp;2a\\
+0&amp;0&amp;x+a&amp;\cdots&amp;2a\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+0&amp;0&amp;0&amp;\cdots&amp;x+a\end{array}
+%% }_{n-1}}
+\right|
+%% \right\}\,n-1
+\end{align*}
+(Expand along the last column.)
+\begin{align*}
+\displaystyle =a(x+a)^{n-1}
+\end{align*}
+(Determinant of upper triangular matrix.)</paragraphs>
+                          <newline course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                          <collapse course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                            <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> For the second determinant,
+\begin{align*}
+\displaystyle \left|
+%% \vphantom{
+%% \begin{array}[]{c}1\\
+%% 1\\
+%% 1\\
+%% 1\\
+%% 1\\
+%% 1\end{array}}\smash{\underbrace{
+\begin{array}[]{cccccc}x&amp;a&amp;a&amp;\cdots&amp;a&amp;0\\
+-a&amp;x&amp;a&amp;\cdots&amp;a&amp;0\\
+-a&amp;-a&amp;x&amp;\cdots&amp;a&amp;0\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+-a&amp;-a&amp;-a&amp;\cdots&amp;-a&amp;x-a\end{array}
+%% }_{n}}
+\right|
+%%\right\}\,n
+\end{align*}
+\begin{align*}
+\displaystyle =(x-a)\left|
+%% \vphantom{\begin{array}[]{c}1\\
+%% 1\\
+%% 1\\
+%% 1\\
+%% 1\end{array}}\smash{\underbrace{
+\begin{array}[]{ccccc}x&amp;a&amp;a&amp;\cdots&amp;a\\
+-a&amp;x&amp;a&amp;\cdots&amp;a\\
+-a&amp;-a&amp;x&amp;\cdots&amp;a\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+-a&amp;-a&amp;-a&amp;\cdots&amp;x-a\end{array}
+%% }_{n-1}}
+\right|
+%% \right\}\,n-1\,\,\,(\text{expand along the last column})
+\end{align*}
+(Expand along the last column.)
+\begin{align*}
+\displaystyle =(x-a)\det(C_{n-1}).
+\end{align*} </paragraphs>
+                            <collapse course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Adding the results
+\begin{align*}
+\displaystyle \det(C_{n})=a(x+a)^{n-1}+(x-a)\det(C_{n-1}).
+\end{align*} </paragraphs>
+                            </collapse>
+                          </collapse>
+                        </collapse>
+                      </newcol>
+                    </collapse>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <collapse xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We will prove the formula by induction.</paragraphs>
+                      <newline course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                      <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                        <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 1</paragraphs>
+                      </strong>
+                      <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: </paragraphs>
+                      <newcol course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                        <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> When $n=1$, $C_{1}=[x]$, $\det(C_{1})=x=\frac{1}{2}((x+a)+(x-a))$. So the formula is valid for $n=1$. </paragraphs>
+                      </newcol>
+                      <newline course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                      <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                        <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 2</paragraphs>
+                      </strong>
+                      <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: </paragraphs>
+                      <newcol course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                        <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose the formula is valid for $n=k$, i.e.
+\begin{align*}
+\displaystyle \det(C_{k})=\frac{1}{2}((x+a)^{k}+(x-a)^{k}).
+\end{align*} </paragraphs>
+                        <collapse course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then for $n=k+1$,
+\begin{align*}
+\displaystyle \det(C_{k+1}) &amp;=a(x+a)^{k}+(x-a)\det(C_{k})\\
+\displaystyle &amp;=a(x+a)^{k}+(x-a)\frac{1}{2}((x+a)^{k}+(x-a)^{k})\\
+\displaystyle &amp;=\frac{1}{2}(x+a)^{k}(2a+x-a)+\frac{1}{2}(x-a)^{k+1}\\
+\displaystyle &amp;=\frac{1}{2}((x+a)^{k+1}+(x-a)^{k+1})\\
+\displaystyle &amp;=\frac{1}{2}((x+a)^{n}+(x-a)^{n}).
+\end{align*} </paragraphs>
+                          <collapse course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                            <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So the formula is valid for $n=k+1$. </paragraphs>
+                          </collapse>
+                        </collapse>
+                      </newcol>
+                      <newline course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                      <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                        <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 3</paragraphs>
+                      </strong>
+                      <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: </paragraphs>
+                      <newcol course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                        <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By mathematical induction, the formula is valid for all integers $n\geq 1$. </paragraphs>
+                      </newcol>
+                      <qed course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                    </collapse>
+                  </li>
+                </ol>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="25" id="s25" slide="25" course="Math 1030" chapter="18" section="5" subsection="" subsubsection="" chapter_title="Determinant" section_title="More examples">
+            <keywords slide="25" environ="slide" chapter="18" course="Math 1030">
+              <keyword chapter="18" slide="25">Vandermonde Determinant</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="31" title="Vandermonde Determinant" md5="b69b47db8eb3f58ef296a6a40170dd7b" course="Math 1030" chapter="18" slide="25" item="18.31">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="18" section="5" subsection="" subsubsection="" serial="" slide="25">Vandermonde Determinant</title>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> This is the most important example of determinant. Let
+\begin{align*}
+\displaystyle V_{n}=\begin{bmatrix}1&amp;1&amp;1&amp;\cdots&amp;1\\
+a_{1}&amp;a_{2}&amp;a_{3}&amp;\cdots&amp;a_{n}\\
+a_{1}^{2}&amp;a_{2}^{2}&amp;a_{3}^{2}&amp;\cdots&amp;a_{n}^{2}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{1}^{n-2}&amp;a_{2}^{n-2}&amp;a_{3}^{n-2}&amp;\cdots&amp;a_{n}^{n-2}\\
+a_{1}^{n-1}&amp;a_{2}^{n-1}&amp;a_{3}^{n-1}&amp;\cdots&amp;a_{n}^{n-1}\end{bmatrix}
+\end{align*} </paragraphs>
+              <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $\det(V_{n})=\det(V_{n-1})\prod_{i=1}^{n-1}(a_{n}-a_{i})$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $\det(V_{n})=\prod_{1\leq i &lt; j\leq n}(a_{j}-a_{i})$ for $n\geq 2$. </paragraphs>
+                </li>
+              </ol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Solution" wbtag="sol" md5="ec93e19ab63502f31a6b07eccef414bb" course="Math 1030" chapter="18" slide="25">
+              <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="substatement">
+                <li class="ltx_item" environment="substatement">
+                  <newcol xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                    <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Performing the row operations:
+\[
+-a_{n}R_{n-1}+R_{n}, -a_{n}R_{n-2}+R_{n-1}, \ldots, -a_{n}R_{1}+R_{2},
+\]
+we have:
+$\det V_{n}=$
+\begin{align*}
+\displaystyle =\begin{vmatrix}1&amp;1&amp;1&amp;\cdots&amp;1\\
+a_{1}-a_{n}&amp;a_{2}-a_{n}&amp;a_{3}-a_{n}&amp;\cdots&amp;0\\
+a_{1}^{2}-a_{1}a_{n}&amp;a_{2}^{2}-a_{2}a_{n}&amp;a_{3}^{2}-a_{3}a_{n}&amp;\cdots&amp;0\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{1}^{n-2}-a_{1}^{n-3}a_{n}&amp;a_{2}^{n-2}-a_{2}^{n-3}a_{n}&amp;a_{3}^{n-2}-a_{3}^{n-3}a_{n}&amp;\cdots&amp;0\\
+a_{1}^{n-1}-a_{1}^{n-2}a_{n}&amp;a_{2}^{n-1}-a_{2}^{n-2}a_{n}&amp;a_{3}^{n-1}-a_{3}^{n-2}a_{n}&amp;\cdots&amp;0\end{vmatrix}
+\end{align*}
+(expanding along the last column)
+\begin{align*}
+\displaystyle =(-1)^{1+n}\begin{vmatrix}a_{1}-a_{n}&amp;a_{2}-a_{n}&amp;a_{3}-a_{n}&amp;\cdots&amp;a_{n-1}-a_{n}\\
+a_{1}(a_{1}-a_{n})&amp;a_{2}(a_{2}-a_{n})&amp;a_{3}(a_{3}-a_{n})&amp;\cdots&amp;a_{n-1}(a_{n-1}-a_{n})\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{1}^{n-3}(a_{1}-a_{n})&amp;a_{2}^{n-3}(a_{2}-a_{n})&amp;a_{3}^{n-3}(a_{3}-a_{n})&amp;\cdots&amp;a_{n-1}^{n-3}(a_{n-1}-a_{n})\\
+a_{1}^{n-2}(a_{1}-a_{n})&amp;a_{2}^{n-2}(a_{2}-a_{n})&amp;a_{3}^{n-2}(a_{3}-a_{n})&amp;\cdots&amp;a_{n-1}^{n-2}(a_{n-1}-a_{n})\\
+\end{vmatrix}
+\end{align*}
+(pull out factor $a_{1}-a_{n}$ from column 1, $a_{2}-a_{n}$ from column 2, …., $a_{n-1}-a_{n}$ from column $n-1$)
+\begin{align*}
+\displaystyle =(-1)^{n-1}(a_{1}-a_{n})(a_{2}-a_{n})\cdots(a_{n-1}-a_{n})\begin{vmatrix}1&amp;1&amp;1&amp;\cdots&amp;1\\
+a_{1}&amp;a_{2}&amp;a_{3}&amp;\cdots&amp;a_{n-1}\\
+a_{1}^{2}&amp;a_{2}^{2}&amp;a_{3}^{2}&amp;\cdots&amp;a_{n-1}^{2}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{1}^{n-2}&amp;a_{2}^{n-2}&amp;a_{3}^{n-2}&amp;\cdots&amp;a_{n-1}^{n-2}\\
+\end{vmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle =(a_{n}-a_{1})\cdots(a_{n}-a_{n-1})\det(V_{n-1})=\det(V_{n-1})\prod_{i=1}^{n-1}(a_{n}-a_{i}).
+\end{align*} </paragraphs>
+                  </newcol>
+                </li>
+                <li class="ltx_item" environment="substatement">
+                  <newcol xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                    <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Again by mathematical induction:</paragraphs>
+                    <newline course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                    <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 1</paragraphs>
+                    </strong>
+                    <newcol course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                      <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> When $n=2$,
+\begin{align*}
+\displaystyle \begin{vmatrix}1&amp;1\\
+a_{1}&amp;a_{2}\end{vmatrix}=a_{2}-a_{1}.
+\end{align*} </paragraphs>
+                      <collapse course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So the formula is valid for $n=2$. </paragraphs>
+                      </collapse>
+                    </newcol>
+                    <newline course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                    <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 2</paragraphs>
+                    </strong>
+                    <newcol course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                      <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose the statement is true for $n=k$, i.e.
+\begin{align*}
+\displaystyle \det(V_{k})=\prod_{1\leq i&lt;j\leq k}(a_{j}-a_{i}).
+\end{align*} </paragraphs>
+                      <collapse course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then for $n=k+1$
+\begin{align*}
+\displaystyle \det(V_{k+1})=\det(V_{k})\prod_{i=1}^{k}(a_{k+1}-a_{i})
+\end{align*}
+\begin{align*}
+\displaystyle =\prod_{1\leq i&lt;j\leq k}(a_{j}-a_{i})\prod_{i=1}^{k}(a_{k+1}-a_{i})
+\end{align*}
+\begin{align*}
+\displaystyle =\prod_{1\leq i&lt;j\leq k+1}(a_{j}-a_{i})
+\end{align*}
+\begin{align*}
+\displaystyle =\prod_{1\leq 1&lt;j\leq n}(a_{j}-a_{i}).
+\end{align*} </paragraphs>
+                        <collapse course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The formula is valid for $n=k+1$. </paragraphs>
+                        </collapse>
+                      </collapse>
+                    </newcol>
+                    <newline course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                    <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 3</paragraphs>
+                    </strong>
+                    <newcol course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                      <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By mathematical induction, the formula is valid for all $n\geq 2$. Or without mathematical induction, you can simple repeat the steps again and again until $n=2$. </paragraphs>
+                    </newcol>
+                  </newcol>
+                </li>
+              </ol>
+              <qed course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement"/>
+            </substatement>
+            <newline course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="More properties of determinants" course="Math 1030" chapter="18" num="6" serial="18.6">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" serial="18.6" slide="">
+          <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="title" wbtag="paragraphs">More properties of determinants</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="26" scope="section" id="s26" slide="26" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" chapter_title="Determinant" section_title="More properties of determinants">
+            <keywords slide="26" environ="slide" chapter="18" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" serial="" slide="26">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="title" wbtag="paragraphs">More properties of determinants</paragraphs>
+            </title>
+            <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="32" md5="6ce660244a4fca7b9949747f96a1d07a" course="Math 1030" chapter="18" slide="26" item="18.32">
+              <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $I_{n}\xrightarrow{R_{i}\leftrightarrow R_{j}}J$, then $\det\left(J\right)=-1$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $I_{n}\xrightarrow{\alpha R_{i}}J$, then $\det\left(J\right)=\alpha$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $I_{n}\xrightarrow{\alpha R_{i}+R_{j}}J$, then $\det\left(J\right)=1$. </paragraphs>
+                </li>
+                <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement"/>
+              </ol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="27" id="s27" slide="27" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" chapter_title="Determinant" section_title="More properties of determinants">
+            <keywords slide="27" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="33" md5="ccb74f02a931a1aef656274fdc47191c" course="Math 1030" chapter="18" slide="27" item="18.33">
+              <label course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="label" name="cor:detBJA" type="Corollary"/>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $A$ be a square matrix, apply row operation on $A$ and obtain a new matrix $B$.
+Let $J$ be obtained by applying the same row operation on $I_{n}$. By lecture 13, $B=JA$.
+Then $\det\left(B\right)=\det\left(JA\right)=\det\left(J\right)\det\left(A\right)$. </paragraphs>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="28" id="s28" slide="28" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" chapter_title="Determinant" section_title="More properties of determinants">
+            <keywords slide="28" environ="slide" chapter="18" course="Math 1030"/>
+            <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Recall that an $n\times n$ square matrix $A$ is nonsingular if and only if $A$ is row equivalent to $I_n$.</paragraphs>
+            <newline course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
+            <newcol course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By </paragraphs>
+              <ref environment="newcol" chapter_type="" label="thm:ROEM" wbtag="ref" course="Math 1030" chapter="18" slide="28" src-course="MATH 1030" src-chapter="5" src-slide="61" type="Theorem" item="5.35" src-filename="lecs1-20.xml" md5="5c58e155ca934e2b7386d3148127f30b" class="lcref" serial="">
+                <title>Theorem 5.35</title>
+              </ref>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">,
+this is in turn equivalent to the existence of a sequence of
+"elementary matrices" $J_i$, corresponding to row operations,
+such that:
+\[
+A = J_1 J_2 \cdots J_k I_n.
+\] </paragraphs>
+              <collapse course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Applying the previous corollary repeatedly,
+we have:
+\[
+\det(A) = \det(J_1) \det(J_2) \cdots \det(J_k) \det(I_n).
+\] </paragraphs>
+                <collapse course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Since, each $\det(J_i) \neq 0$, we have: </paragraphs>
+                </collapse>
+              </collapse>
+            </newcol>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="34" md5="a8c7e1bc93e5e7161946bdce38aad19f" course="Math 1030" chapter="18" slide="28" item="18.34">
+              <label course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="label" name="thm:nonsingulardet" type="Theorem"/>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $A$ is nonsingular if and only if $\det\left(A\right)\neq 0$. </paragraphs>
+              </newcol>
+            </statement>
+            <paragraphs>
+              <!-- @proof@newcol
+Suppose $A$ is nonsingular, then $A$ is invertible, so
+\begin{align*}
+\displaystyle AA^{&#45;1}=I_{n}.
+\end{align*}
+\begin{align*}
+\displaystyle \det\left(A\right)\det\left(A^{&#45;1}\right)=\det\left(I_{n}\right)=1.&
+\end{align*}
+@col
+So $\det\left(A\right)$ is nonzero. Next suppose $\det\left(A\right)\neq 0$, we want to show that $A$ is nonsingular.
+If $A$ is singular, then by lecture 13, there exists an invertible matrix $J$, such that $JA=B$,
+where $B$ is of RREF with rank $< n$. Hence $B$ has a zero row. Therefore $\det\left(B\right)=0$.
+Because $J$ is invertible, $\det\left(J\right)\neq 0$. So $\det\left(A\right)=0$. Contradiction.
+@qed@endcol@end -->
+            </paragraphs>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="29" id="s29" slide="29" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" chapter_title="Determinant" section_title="More properties of determinants">
+            <keywords slide="29" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="35" md5="79e97847dbdd9fbeaa8a3e92e2db82b6" course="Math 1030" chapter="18" slide="29" item="18.35">
+              <label course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="label" name="thm:DETMULT" type="Theorem"/>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> If $A$ and $B$ are square matrices. Then
+\begin{align*}
+\displaystyle \det\left(AB\right)=\det\left(A\right)\det\left(B\right).
+\end{align*} </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="c6af5a82049a445b652c4c5ccbb2b58c" course="Math 1030" chapter="18" slide="29" of="79e97847dbdd9fbeaa8a3e92e2db82b6">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose $A$ or $B$ is singular.
+Then, accordingly $\det(A)$ or $\det(B)$ is equal to zero.
+By </paragraphs>
+                <ref environment="newcol" chapter_type="" label="NPNT" wbtag="ref" course="Math 1030" chapter="18" slide="29" src-course="MATH 1030" src-chapter="17" src-slide="263" type="Theorem" item="17.15" src-filename="lecs1-20.xml" md5="4a6fa187252d4410af384bca4874b76e" class="lcref" serial="">
+                  <title>Nonsingular Product has Nonsingular Terms</title>
+                </ref>
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> the matrix $AB$ is also singular, hence:
+\[
+\det(AB) = 0 = \det(A)\det(B).
+\]</paragraphs>
+                <newline course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If both $A$ and $B$ are nonsingular,
+then there are elementary matrices, $J_i$ and $K_i$,
+coresponding to row operations, such that:
+\[
+A = J_1 J_2\cdots J_k I_n,
+\]
+\[
+B = K_1 K_2\cdots K_l I_n.
+\]
+This implies that:
+\[
+AB = (J_1 J_2\cdots J_k)(K_1 K_2\cdots K_l) I_n
+\] </paragraphs>
+                  <collapse course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By </paragraphs>
+                    <ref environment="newcol" chapter_type="" label="cor:detBJA" wbtag="ref" course="Math 1030" chapter="18" slide="29" src-course="MATH 1030" src-chapter="18" src-slide="294" type="Corollary" item="18.33" src-filename="lecs1-20.xml" md5="ccb74f02a931a1aef656274fdc47191c" class="lcref" serial="">
+                      <title>Corollary 18.33</title>
+                    </ref>
+                    <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, we have:
+\begin{align*}
+\det(A) &amp;= \det(J_1)\det(J_2)\cdots\det(J_k),\\
+\det(B) &amp;= \det(K_1)\det(K_2)\cdots\det(K_l),\\
+\det(AB) &amp;= \det(J_1)\det(J_2)\cdots\det(J_k)\\
+&amp;\quad\quad\cdot \det(K_1)\det(K_2)\cdots\det(K_l).
+\end{align*}
+Hence, $\det(AB) = \det(A)\det(B)$. </paragraphs>
+                    <qed course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="30" id="s30" slide="30" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" chapter_title="Determinant" section_title="More properties of determinants">
+            <keywords slide="30" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="36" md5="90e95c368095269059e6753499e848dd" course="Math 1030" chapter="18" slide="30" item="18.36">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Find $x$ such that
+\begin{align*}
+\displaystyle A=\begin{bmatrix}2&amp;1&amp;0&amp;1\\
+0&amp;1&amp;1&amp;1\\
+1&amp;0&amp;0&amp;x\\
+0&amp;2&amp;3&amp;1\\
+\end{bmatrix}
+\end{align*}
+is singular.Expand along the first column
+\begin{align*}
+\displaystyle \det\left(A\right)=2\begin{vmatrix}1&amp;1&amp;1\\
+0&amp;0&amp;x\\
+2&amp;3&amp;1\end{vmatrix}+\begin{vmatrix}1&amp;0&amp;1\\
+1&amp;1&amp;1\\
+2&amp;3&amp;1\end{vmatrix}.
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Expand along the second row
+\begin{align*}
+\displaystyle \begin{vmatrix}1&amp;1&amp;1\\
+0&amp;0&amp;x\\
+2&amp;3&amp;1\end{vmatrix}=-x\begin{vmatrix}1&amp;1\\
+2&amp;3\end{vmatrix}=-x.
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Finally
+\begin{align*}
+\displaystyle \begin{vmatrix}1&amp;0&amp;1\\
+1&amp;1&amp;1\\
+2&amp;3&amp;1\end{vmatrix}=-1.
+\end{align*} </paragraphs>
+                  <collapse course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence
+\begin{align*}
+\displaystyle \det\left(A\right)=-2x-1.
+\end{align*} </paragraphs>
+                    <collapse course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> It is singular if and only if $\det\left(A\right)=0$ if and only if $x=-\frac{1}{2}$. </paragraphs>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="37" md5="3e4dbe8c2fa2abe7c578b48ee4c6d8cc" course="Math 1030" chapter="18" slide="30" item="18.37">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}a&amp;b&amp;c&amp;d\\
+e&amp;0&amp;0&amp;0\\
+f&amp;0&amp;0&amp;0\\
+g&amp;0&amp;0&amp;0\end{bmatrix}
+\end{align*}
+find $\det\left(A\right)$.</paragraphs>
+              <newline course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement"/>
+              <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Method 1</paragraphs>
+              </strong>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle a\begin{vmatrix}0&amp;0&amp;0\\
+0&amp;0&amp;0\\
+0&amp;0&amp;0\end{vmatrix}-b\begin{vmatrix}e&amp;0&amp;0\\
+f&amp;0&amp;0\\
+g&amp;0&amp;0\end{vmatrix}+c\begin{vmatrix}e&amp;0&amp;0\\
+f&amp;0&amp;0\\
+g&amp;0&amp;0\end{vmatrix}-d\begin{vmatrix}e&amp;0&amp;0\\
+f&amp;0&amp;0\\
+g&amp;0&amp;0\end{vmatrix}
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> In each of the above matrices, there is one zero columns, so all the determinants of the $3\times 3$ submatrices must be zero.
+Therefore the above is
+\begin{align*}
+\displaystyle a0-b0+c0-d0=0.
+\end{align*} </paragraphs>
+                </collapse>
+              </newcol>
+              <newline course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement"/>
+              <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Method 2</paragraphs>
+              </strong>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If $c=0$, then column 3 is the zero column, so $\det\left(A\right)=0$. Otherwise
+\begin{align*}
+\displaystyle A\begin{bmatrix}0\\
+1\\
+-b/c\\
+0\end{bmatrix}=\mathbf{0}.
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So $A$ is singular and hence $\det\left(A\right)=0$. </paragraphs>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="31" id="s31" slide="31" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" chapter_title="Determinant" section_title="More properties of determinants">
+            <keywords slide="31" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="38" md5="c50497b242964b676d569cf3e4cd6130" course="Math 1030" chapter="18" slide="31" item="18.38">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> If $\det\left(A\right)\neq 0$, then $A$ is invertible and
+\begin{align}
+\label{A-1}
+\displaystyle \det\left(A^{-1}\right)=\frac{1}{\det\left(A\right)}.
+\end{align} </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="a6960ea6d91eb97df54f0aa25c3dcb04" course="Math 1030" chapter="18" slide="31" of="c50497b242964b676d569cf3e4cd6130">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> It follows from </paragraphs>
+                <ref environment="newcol" chapter_type="" label="thm:nonsingulardet" wbtag="ref" course="Math 1030" chapter="18" slide="31" src-course="MATH 1030" src-chapter="18" src-slide="295" type="Theorem" item="18.34" src-filename="lecs1-20.xml" md5="a8c7e1bc93e5e7161946bdce38aad19f" class="lcref" serial="">
+                  <title>Theorem 18.34</title>
+                </ref>
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> that $A^{-1}$ exists.
+The identity $\eqref{A-1}$ then follows from:
+\[
+AA^{-1} = I_n
+\]
+and </paragraphs>
+                <ref environment="newcol" chapter_type="" label="thm:DETMULT" wbtag="ref" course="Math 1030" chapter="18" slide="31" src-course="MATH 1030" src-chapter="18" src-slide="296" type="Theorem" item="18.35" src-filename="lecs1-20.xml" md5="79e97847dbdd9fbeaa8a3e92e2db82b6" class="lcref" serial="">
+                  <title>Theorem 18.35</title>
+                </ref>
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. </paragraphs>
+                <qed course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="32" id="s32" slide="32" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" chapter_title="Determinant" section_title="More properties of determinants">
+            <keywords slide="32" environ="slide" chapter="18" course="Math 1030">
+              <keyword chapter="18" slide="32">Cramers rule</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="39" title="Cramers rule" md5="9f4800985f4113f92c0c94a4317d08c1" course="Math 1030" chapter="18" slide="32" item="18.39">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" serial="" slide="32">Cramer’s rule</title>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $A$ be a invertible square matrix of size $n$. Let $\mathbf{b}\in{\mathbb{R}}^{n}$.
+Let $M_{k}$ be the square matrix by replacing the $k$-th column of $A$ by $\mathbf{b}$.
+If
+\begin{align*}
+\displaystyle \mathbf{x}=\begin{bmatrix}x_{1}\\
+x_{2}\\
+\vdots\\
+x_{n}\end{bmatrix}
+\end{align*}
+is a solution of $A\mathbf{x}=\mathbf{b}$, then
+\begin{align*}
+\displaystyle x_{k}=\frac{\det\left(M_{k}\right)}{\det\left(A\right)}
+\end{align*}
+where $k=1,\ldots,n$. </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="0ddaa29a34695041bcf627d84e02079e" course="Math 1030" chapter="18" slide="32" of="9f4800985f4113f92c0c94a4317d08c1">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Because $A$ is invertible, $A\mathbf{x}=\mathbf{b}$ has a unique solution. Let $X_{k}$ be matrix obtained from the identity matrix $I_{n}$ by replacing column $k$ with $\mathbf{x}$.
+Then
+\begin{align*}
+\displaystyle A\mathbf{e}_{i}=\mathbf{A}_{i}\text{ if $i\neq k$}\qquad A\mathbf{x}=\mathbf{b}\text{ if $i=k$.}
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence
+\begin{align*}
+\displaystyle AX_{k}=M_{k}.
+\end{align*} </paragraphs>
+                  <collapse course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Expanding $X_{k}$ along the row $k$, we have
+\begin{align*}
+\displaystyle \det\left(X_{k}\right)=x_{k}\det\left(I_{n-1}\right)=x_{k}.
+\end{align*} </paragraphs>
+                    <collapse course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So
+\begin{align*}
+\displaystyle \det\left(M_{k}\right)=\det\left(AX_{k}\right)=\det\left(A\right)\det\left(X_{k}\right)=\det\left(A\right)x_{k}.
+\end{align*} </paragraphs>
+                      <collapse course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Therefore
+\begin{align*}
+\displaystyle x_{k}=\frac{\det\left(M_{k}\right)}{\det\left(A\right)}.
+\end{align*} </paragraphs>
+                        <qed course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="33" id="s33" slide="33" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" chapter_title="Determinant" section_title="More properties of determinants">
+            <keywords slide="33" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="40" md5="a51f727046f03d76bda382be6bfb3adb" course="Math 1030" chapter="18" slide="33" item="18.40">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Using Carmaer’s rule to solve the following system of linear equation.
+\begin{align*}
+\displaystyle x_{1}+2x_{2}+3x_{3}=2 \\
+\displaystyle x_{1}\qquad+x_{3}=3 \\
+\displaystyle x_{1}+x_{2}-x_{3}=1
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&amp;2&amp;3\\
+1&amp;0&amp;1\\
+1&amp;1&amp;-1\end{bmatrix}\qquad\mathbf{b}=\begin{bmatrix}2\\
+3\\
+1\end{bmatrix}.
+\end{align*}
+\begin{align*}
+\displaystyle \det\left(A\right)=6.
+\end{align*}
+\begin{align*}
+\displaystyle M_{1}=\begin{bmatrix}2&amp;2&amp;3\\
+3&amp;0&amp;1\\
+1&amp;1&amp;-1\end{bmatrix},\det\left(M_{1}\right)=15.
+\end{align*}
+\begin{align*}
+\displaystyle x_{1}=\frac{\det\left(M_{1}\right)}{\det\left(A\right)}=\frac{15}{6}=\frac{5}{2}.
+\end{align*}
+\begin{align*}
+\displaystyle M_{2}=\begin{bmatrix}1&amp;2&amp;3\\
+1&amp;3&amp;1\\
+1&amp;1&amp;-1\end{bmatrix},\det\left(M_{2}\right)=-6.
+\end{align*}
+\begin{align*}
+\displaystyle x_{2}=\frac{\det\left(M_{2}\right)}{\det\left(A\right)}=\frac{-6}{6}=-1.
+\end{align*}
+\begin{align*}
+\displaystyle M_{3}=\begin{bmatrix}1&amp;2&amp;2\\
+1&amp;0&amp;3\\
+1&amp;1&amp;1\end{bmatrix},\det\left(M_{3}\right)=3.
+\end{align*}
+\begin{align*}
+\displaystyle x_{3}=\frac{\det\left(M_{3}\right)}{\det\left(A\right)}=\frac{3}{6}=\frac{1}{2}.
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Thus
+\begin{align*}
+\displaystyle \begin{bmatrix}x_{1}\\
+x_{2}\\
+x_{3}\end{bmatrix}=\begin{bmatrix}\frac{5}{2}\\
+-1\\
+\frac{1}{2}\end{bmatrix}
+\end{align*}
+is a solution. </paragraphs>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="34" id="s34" slide="34" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" chapter_title="Determinant" section_title="More properties of determinants">
+            <keywords slide="34" environ="slide" chapter="18" course="Math 1030">
+              <keyword chapter="18" slide="34">Formula for inverse</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="41" title="Formula for inverse" md5="8d86da3148c86d1606870a79055323e5" course="Math 1030" chapter="18" slide="34" item="18.41">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" serial="" slide="34">Formula for inverse</title>
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is an invertible matrix. Then
+\begin{align*}
+\displaystyle [A^{-1}]_{ji}=\frac{(-1)^{i+j}\det\left(A(i|j)\right)}{\det\left(A\right)}.
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Pay attention to the order of the indexes $i$ and $j$! </paragraphs>
+              </newcol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="c70f1481f47e3a6b77b2dff574c0064d" course="Math 1030" chapter="18" slide="34" of="8d86da3148c86d1606870a79055323e5">
+              <newcol course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $B=A^{-1}$.
+Let $\mathbf{B}_{i}$ be the $i$-th column of $B$. Then
+\begin{align*}
+\displaystyle A\mathbf{B}_{i}=\mathbf{e}_{i}.
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The vector $\mathbf{B}_{i}$ is a solution of $A\mathbf{x}=\mathbf{e}_{i}$.
+We can use the previous theorem to find $\mathbf{B}_{i}$.
+Let $M_{j}$ be the square matrix by replacing the $j$-th column of $A$ by $\mathbf{e}_{i}$.
+Expand along the $j$-th column of $M_{j}$, we have
+\begin{align*}
+\displaystyle \det\left(M_{j}\right)=(-1)^{i+j}\det\left(M_{j}(i|j)\right)=(-1)^{i+j}\det\left(A(i|j)\right).
+\end{align*} </paragraphs>
+                  <collapse course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then the $j$-th coordinate of $\mathbf{B}_{i}$ is given by
+\begin{align*}
+\displaystyle B_{ji}=[\mathbf{B}_{i}]_{j}=\frac{\det\left(M_{j}\right)}{{\det\left(A\right)}}=\frac{(-1)^{i+j}\det\left(A(i|j)\right)}{\det\left(A\right)}.
+\end{align*} </paragraphs>
+                    <qed course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="35" id="s35" slide="35" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" chapter_title="Determinant" section_title="More properties of determinants">
+            <keywords slide="35" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="42" md5="255f9ac6a95586161541fb380ecfd1a6" course="Math 1030" chapter="18" slide="35" item="18.42">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> By the above formula, find the inverse of
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&amp;2&amp;3\\
+1&amp;0&amp;1\\
+1&amp;1&amp;-1\end{bmatrix},
+\end{align*}
+\begin{align*}
+\displaystyle \det\left(A\right)=6.
+\end{align*}
+\begin{align*}
+\displaystyle A(1|1)=\begin{bmatrix}0&amp;1\\
+1&amp;-1\end{bmatrix},\qquad\det\left(A(1|1)\right)=-1,
+\end{align*}
+\begin{align*}
+\displaystyle A(1|2)=\begin{bmatrix}1&amp;1\\
+1&amp;-1\end{bmatrix},\qquad\det\left(A(1|2)\right)=-2,
+\end{align*}
+\begin{align*}
+\displaystyle A(1|3)=\begin{bmatrix}1&amp;0\\
+1&amp;1\end{bmatrix},\qquad\det\left(A(1|3)\right)=1,
+\end{align*}
+\begin{align*}
+\displaystyle A(2|1)=\begin{bmatrix}2&amp;3\\
+1&amp;-1\end{bmatrix},\qquad\det\left(A(2|1)\right)=-5,
+\end{align*}
+\begin{align*}
+\displaystyle A(2|2)=\begin{bmatrix}1&amp;3\\
+1&amp;-1\end{bmatrix},\qquad\det\left(A(2|2)\right)=-4,
+\end{align*}
+\begin{align*}
+\displaystyle A(2|3)=\begin{bmatrix}1&amp;2\\
+1&amp;1\end{bmatrix},\qquad\det\left(A(2|3)\right)=-1,
+\end{align*}
+\begin{align*}
+\displaystyle A(3|1)=\begin{bmatrix}2&amp;3\\
+0&amp;1\end{bmatrix},\qquad\det\left(A(3|1)\right)=2,
+\end{align*}
+\begin{align*}
+\displaystyle A(3|2)=\begin{bmatrix}1&amp;3\\
+1&amp;1\end{bmatrix},\qquad\det\left(A(3|2)\right)=-2,
+\end{align*}
+\begin{align*}
+\displaystyle A(3|3)=\begin{bmatrix}1&amp;2\\
+1&amp;0\end{bmatrix},\qquad\det\left(A(3|3)\right)=-2.
+\end{align*} </paragraphs>
+            </statement>
+            <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="" wbtag="paragraphs"> \begin{align*}
+\displaystyle A^{-1}=\frac{1}{\det\left(A\right)}\begin{bmatrix}\det\left(A(1|1)\right)&amp;-\det\left(A(2|1)\right)&amp;\det\left(A(3|1)\right)\\
+-\det\left((A(1|2)\right)&amp;\det\left(A(2|2)\right)&amp;-\det\left(A(3|2)\right)\\
+\det\left(A(1|3)\right)&amp;-\det\left(A(2|3)\right)&amp;\det\left(A(3|3)\right)\end{bmatrix}=\begin{bmatrix}-\frac{1}{6}&amp;\frac{5}{6}&amp;\frac{1}{3}\\
+\frac{1}{3}&amp;-\frac{2}{3}&amp;\frac{1}{3}\\
+\frac{1}{6}&amp;\frac{1}{6}&amp;-\frac{1}{3}\end{bmatrix}
+\end{align*} </paragraphs>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Properties of Determinant summary" course="Math 1030" chapter="18" num="7" serial="18.7">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="18" section="7" subsection="" subsubsection="" serial="18.7" slide="">
+          <paragraphs course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Properties of Determinant (summary)</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="36" scope="section" id="s36" slide="36" course="Math 1030" chapter="18" section="7" subsection="" subsubsection="" chapter_title="Determinant" section_title="Properties of Determinant summary">
+            <keywords slide="36" environ="slide" chapter="18" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="18" section="7" subsection="" subsubsection="" serial="" slide="36">
+              <paragraphs course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Properties of Determinant (summary)</paragraphs>
+            </title>
+            <newline course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment=""/>
+            <paragraphs course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs">Let $A$ be a square matrix with size $n$.</paragraphs>
+            <newline course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment=""/>
+            <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="">
+              <li class="ltx_item" environment="">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> \begin{align*}
+\displaystyle \begin{vmatrix}a&amp;b\\
+c&amp;d\end{vmatrix}=ad-bc.
+\end{align*} </paragraphs>
+              </li>
+              <li class="ltx_item" environment="">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> \begin{align*}
+\displaystyle A=\begin{vmatrix}a_{11}&amp;a_{12}&amp;a_{13}\\
+a_{21}&amp;a_{22}&amp;a_{23}\\
+a_{31}&amp;a_{32}&amp;a_{33}\end{vmatrix}=a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-a_{11}a_{23}a_{32}-a_{12}a_{21}a_{33}-a_{13}a_{22}a_{31}
+\end{align*} </paragraphs>
+              </li>
+              <li class="ltx_item" environment="">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Expand along row $i$
+\begin{align*}
+\displaystyle\det\left(A\right)&amp;\displaystyle=(-1)^{i+1}\left[A\right]_{i1}\det\left(A\left(i|1\right)\right)+(-1)^{i+2}\left[A\right]_{i2}\det\left(A\left(i|2\right)\right) \\
+&amp;\displaystyle\quad+(-1)^{i+3}\left[A\right]_{i3}\det\left(A\left(i|3\right)\right)+\cdots+(-1)^{i+n}\left[A\right]_{in}\det\left(A\left(i|n\right)\right)
+\end{align*} </paragraphs>
+              </li>
+              <li class="ltx_item" environment="">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Expand along column $j$
+\begin{align*}
+\displaystyle\det\left(A\right)&amp;\displaystyle=(-1)^{1+j}\left[A\right]_{1j}\det\left(A\left(1|j\right)\right)+(-1)^{2+j}\left[A\right]_{2j}\det\left(A\left(2|j\right)\right) \\
+&amp;\displaystyle\quad+(-1)^{3+j}\left[A\right]_{3j}\det\left(A\left(3|j\right)\right)+\cdots+(-1)^{n+j}\left[A\right]_{nj}\det\left(A\left(n|j\right)\right)
+\end{align*} </paragraphs>
+              </li>
+              <li class="ltx_item" environment="">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> $\det\left(A^{t}\right)=\det\left(A\right)$ </paragraphs>
+              </li>
+              <li class="ltx_item" environment="">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Determinant of upper/lower triangular matrix.
+\begin{align*}
+\displaystyle \begin{vmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;\cdots&amp;a_{1n}\\
+0&amp;a_{22}&amp;a_{23}&amp;\cdots&amp;a_{2n}\\
+0&amp;0&amp;a_{33}&amp;\cdots&amp;a_{3n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+0&amp;0&amp;0&amp;\cdots&amp;a_{nn}\end{vmatrix}=a_{11}a_{22}\cdots a_{nn}.
+\end{align*}
+\begin{align*}
+\displaystyle \begin{vmatrix}a_{11}&amp;0&amp;0&amp;\cdots&amp;0\\
+a_{21}&amp;a_{22}&amp;0&amp;\cdots&amp;0\\
+a_{31}&amp;a_{32}&amp;a_{33}&amp;\cdots&amp;0\\
+\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+a_{n1}&amp;a_{n2}&amp;a_{n3}&amp;\cdots&amp;a_{nn}\end{vmatrix}=a_{11}a_{22}\cdots a_{nn}.
+\end{align*} </paragraphs>
+              </li>
+              <li class="ltx_item" environment="">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Suppose that $A$ is a square matrix with a row where every entry is zero, or a column where every entry is zero. Then $\det\left(A\right)=0$. </paragraphs>
+              </li>
+              <li class="ltx_item" environment="">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Suppose that $A$ is a square matrix with two equal rows, or two equal columns,
+i.e., $R_{i}=R_{j}$ or $C_{i}=C_{j}$ for $i\neq j$. Then $\det\left(A\right)=0$. </paragraphs>
+              </li>
+              <li class="ltx_item" environment="">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Let $B$ be the square matrix obtained from $A$ by interchanging the location of two rows, or interchanging the location of two columns, i.e., $R_{i}\leftrightarrow R_{j}$ or $C_{i}\leftrightarrow C_{j}$, $i\neq j$. Then $\det\left(B\right)=-\det\left(A\right)$. </paragraphs>
+              </li>
+              <li class="ltx_item" environment="">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Let $B$ be the square matrix obtained from $A$ by multiplying a single row (say, row $i$) by the scalar $\alpha$, or by multiplying a single column by the scalar $\alpha$,
+i.e., $\alpha R_{i}$ or $\alpha C_{i}$. Then $\det\left(B\right)=\alpha\det\left(A\right)$. </paragraphs>
+              </li>
+              <li class="ltx_item" environment="">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Let $B$ be the square matrix obtained from $A$ by multiplying a row by the scalar $\alpha$ and then adding it to another row, or by multiplying a column by the scalar $\alpha$ and then adding it to another column, i.e., $\alpha R_{i}+R_{j}$ or $\alpha C_{i}+C_{j}$ for $i\neq j$. Then $\det\left(B\right)=\det\left(A\right)$. </paragraphs>
+              </li>
+              <li class="ltx_item" environment="">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> \begin{align*}
+\displaystyle \begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+\vdots&amp;\vdots&amp;\cdots&amp;\vdots\\
+a_{i-1,1}&amp;a_{i-1,2}&amp;\cdots&amp;a_{i-1,n}\\
+b_{1}+c_{1}&amp;b_{2}+c_{2}&amp;\cdots&amp;b_{n}+c_{n}\\
+a_{i+1,1}&amp;a_{i+1,2}&amp;\cdots&amp;a_{i+1,n}\\
+\vdots&amp;\vdots&amp;\cdots&amp;\vdots\\
+a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}\\
+\end{vmatrix}=\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+\vdots&amp;\vdots&amp;\cdots&amp;\vdots\\
+a_{i-1,1}&amp;a_{i-1,2}&amp;\cdots&amp;a_{i-1,n}\\
+b_{1}&amp;b_{2}&amp;\cdots&amp;b_{n}\\
+a_{i+1,1}&amp;a_{i+1,2}&amp;\cdots&amp;a_{i+1,n}\\
+\vdots&amp;\vdots&amp;\cdots&amp;\vdots\\
+a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}\\
+\end{vmatrix}+\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+\vdots&amp;\vdots&amp;\cdots&amp;\vdots\\
+a_{i-1,1}&amp;a_{i-1,2}&amp;\cdots&amp;a_{i-1,n}\\
+c_{1}&amp;c_{2}&amp;\cdots&amp;c_{n}\\
+a_{i+1,1}&amp;a_{i+1,2}&amp;\cdots&amp;a_{i+1,n}\\
+\vdots&amp;\vdots&amp;\cdots&amp;\vdots\\
+a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}\\
+\end{vmatrix}
+\end{align*} </paragraphs>
+                <newcol xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Similarly
+\begin{align*}
+\displaystyle \begin{vmatrix}a_{11}&amp;\cdots&amp;a_{1,i-1}&amp;b_{1}+c_{1}&amp;a_{1,i+1}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;\cdots&amp;a_{2,i-1}&amp;b_{2}+c_{2}&amp;a_{2,i+1}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{n1}&amp;\cdots&amp;a_{n,i-1}&amp;b_{n}+c_{n}&amp;a_{n,i+1}&amp;\cdots&amp;a_{nn}\end{vmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle =\begin{vmatrix}a_{11}&amp;\cdots&amp;a_{1,i-1}&amp;b_{1}&amp;a_{1,i+1}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;\cdots&amp;a_{2,i-1}&amp;b_{2}&amp;a_{2,i+1}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{n1}&amp;\cdots&amp;a_{n,i-1}&amp;b_{n}&amp;a_{n,i+1}&amp;\cdots&amp;a_{nn}\end{vmatrix}+\begin{vmatrix}a_{11}&amp;\cdots&amp;a_{1,i-1}&amp;c_{1}&amp;a_{1,i+1}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;\cdots&amp;a_{2,i-1}&amp;c_{2}&amp;a_{2,i+1}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{n1}&amp;\cdots&amp;a_{n,i-1}&amp;c_{n}&amp;a_{n,i+1}&amp;\cdots&amp;a_{nn}\end{vmatrix}
+\end{align*} </paragraphs>
+                </newcol>
+              </li>
+              <li class="ltx_item" environment="">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> If $A$ and $B$ are square matrices, then
+\begin{align*}
+\displaystyle \det\left(AB\right)=\det\left(A\right)\det\left(B\right).
+\end{align*} </paragraphs>
+              </li>
+              <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment=""/>
+            </ol>
+          </slide>
+        </slides>
+      </section>
+    </chapter>
+  </course>
+</document>

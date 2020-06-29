@@ -1,0 +1,1115 @@
+<?xml version="1.0"?>
+<document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
+  <course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030">
+    <keywords slide="all" environ="course" chapter="" course="Math 1030">
+      <keyword chapter="" slide="all">Span of a Set of Column Vectors</keyword>
+      <keyword chapter="" slide="all">Spanning Sets for Null Spaces</keyword>
+    </keywords>
+    <title environment="title" chapter_type="" wbtag="course" scope="course" course="Math 1030" chapter="" section="" subsection="" subsubsection="" serial="" slide="">Math 1030</title>
+    <slides environment="" chapter_type="">
+      <slide environment="" chapter_type="" canon_num="1" scope="course" course="Math 1030" title="Math 1030" id="s1" slide="1" chapter="" section="" subsection="" subsubsection="" chapter_title="" section_title="">
+        <title environment="title" chapter_type="" wbtag="course" scope="course" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="1">Math 1030</title>
+        <keywords slide="1" environ="slide" chapter="" course="Math 1030"/>
+        <setchapter course="Math 1030" chapter="" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="setchapter" argument="11"/>
+      </slide>
+    </slides>
+    <chapter environment="" chapter_type="Chapter" type="Chapter" wbtag="chapter" num="11" title="Spanning Sets" course="Math 1030" serial="11">
+      <keywords slide="all" environ="chapter" chapter="11" course="Math 1030">
+        <keyword chapter="11" slide="all">Span of a Set of Column Vectors</keyword>
+        <keyword chapter="11" slide="all">Spanning Sets for Null Spaces</keyword>
+      </keywords>
+      <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="Math 1030" chapter="11" section="" subsection="" subsubsection="" serial="11" slide="">Spanning Sets</title>
+      <slides environment="" chapter_type="">
+        <slide environment="" chapter_type="Chapter" canon_num="2" scope="chapter" id="s2" slide="2" course="Math 1030" chapter="11" section="" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="">
+          <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="2">Spanning Sets</title>
+          <keywords slide="2" environ="slide" chapter="11" course="Math 1030"/>
+          <newline course="Math 1030" chapter="11" chapter_type="" section="" subsection="" subsubsection="" environment=""/>
+          <h5 xmlns="http://www.w3.org/1999/xhtml" class="notkw" environment="">
+            <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">Reference.</paragraphs>
+          </h5>
+          <ul xmlns="http://www.w3.org/1999/xhtml" environment="">
+            <li environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Beezer, Ver 3.5 Section SS (print version p83 - p94) </paragraphs>
+            </li>
+            <li environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Strang, Sect 2.3 </paragraphs>
+            </li>
+          </ul>
+          <newline course="Math 1030" chapter="11" chapter_type="" section="" subsection="" subsubsection="" environment=""/>
+          <h5 xmlns="http://www.w3.org/1999/xhtml" class="notkw" environment="">
+            <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">Exercise.</paragraphs>
+          </h5>
+          <ul xmlns="http://www.w3.org/1999/xhtml" environment="">
+            <li environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Exercises with solutions can be downloaded at </paragraphs>
+              <href xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="" subsection="" subsubsection="" environment="" src="http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf" name="http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf" wbtag="href" argument="http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf"/>
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Section SS (p.34-40) C40-45, C50, C60, M10, M11, M12. (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$ in the following questions) T10, T20, T21, T22. </paragraphs>
+            </li>
+            <li environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Strang, Sect 2.3. </paragraphs>
+            </li>
+          </ul>
+        </slide>
+        <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="3" id="s3" slide="3" course="Math 1030" chapter="11" section="" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="">
+          <keywords slide="3" environ="slide" chapter="11" course="Math 1030"/>
+          <paragraphs course="Math 1030" chapter="11" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> In this section we will provide an extremely compact way to describe an infinite set of vectors, making use of linear combinations. This will give us a convenient way to describe the solution set of a linear system, the null space of a matrix, and many other sets of vectors. </paragraphs>
+        </slide>
+      </slides>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Span of a Set of Vectors" course="Math 1030" chapter="11" num="1" serial="11.1">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" serial="11.1" slide="">
+          <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Span of a Set of Vectors</paragraphs>
+        </title>
+        <label course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="label" name="SSV" type="Section"/>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="4" scope="section" id="s4" slide="4" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Span of a Set of Vectors">
+            <keywords slide="4" environ="slide" chapter="11" course="Math 1030">
+              <keyword chapter="11" slide="4">Span of a Set of Column Vectors</keyword>
+            </keywords>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" serial="" slide="4">
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Span of a Set of Vectors</paragraphs>
+            </title>
+            <paragraphs>
+              <!--
+We saw that the solution set of a homogeneous system can be described as all possible linear combinations of two particular sets of vectors. This is a useful way to construct or describe infinite sets of vectors, so we encapsulate the idea in a definition.
+-->
+            </paragraphs>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="1" title="Span of a Set of Column Vectors" md5="7d786cb9f64eb34c3e0c43aedbb98509" course="Math 1030" chapter="11" slide="4" item="11.1">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" serial="" slide="4">Span of a Set of Column Vectors</title>
+              <label course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="label" name="SSCV" type="Definition"/>
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Given a set of vectors
+\begin{align*}
+\displaystyle S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\},
+\end{align*}
+their </paragraphs>
+              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">span</paragraphs>
+              </b>
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">, $\left&lt; S \right&gt;$, is the set of all linear combinations of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}$.
+Symbolically,
+\begin{align*}
+\displaystyle
+\left&lt; S \right&gt;&amp;\displaystyle=\left\{\left.\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}+\cdots+\alpha_{n}\mathbf{u}_{n}\,\right|\,\alpha_{i}\in{\mathbb{R}}^{\hbox{}},\,1\leq i\leq n\right\} \\
+&amp;\displaystyle=\left\{\left.\sum_{i=1}^{n}\alpha_{i}\mathbf{u}_{i}\,\right|\,\alpha_{i}\in{\mathbb{R}}^{\hbox{}},\,1\leq i\leq n\right\}
+\end{align*} </paragraphs>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="5" id="s5" slide="5" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Span of a Set of Vectors">
+            <keywords slide="5" environ="slide" chapter="11" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="2" md5="b06831503b1c8cc3ad0580d459ba0886" course="Math 1030" chapter="11" slide="5" item="11.2">
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $S=\{\mathbf{u}_{1},\ldots,\mathbf{u}_{k}\}\subseteq V={\mathbb{R}}^{m}$.
+Then $\left&lt; S \right&gt;$ is a subspace of $V$. </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="9d78a6f2cd6ae780790965e0ac7aa419" course="Math 1030" chapter="11" slide="5" of="b06831503b1c8cc3ad0580d459ba0886">
+              <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Obviously $\left&lt; S \right&gt;$ is nonempty. Let $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{w}\in W=\left&lt; S \right&gt;$.
+Then there exists $\alpha_{1},\ldots,\alpha_{k},\beta_{1},\ldots,\beta_{k}$ such that
+\begin{align*}
+\displaystyle \mathbf{v}=\alpha_{1}\mathbf{u}_{1}+\cdots+\alpha_{k}\mathbf{u}_{k},
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{w}=\beta_{1}\mathbf{u}_{1}+\cdots+\beta_{k}\mathbf{u}_{k}.
+\end{align*}
+Then
+\begin{align*}
+\displaystyle \alpha\mathbf{v}+\mathbf{w}=(\alpha\alpha_{1}+\beta_{1})\mathbf{u}_{1}+\cdots+(\alpha\alpha_{k}+\beta_{k})\mathbf{u}_{k}
+\end{align*}
+is in $\left&lt; S \right&gt;$.
+Thus by </paragraphs>
+                <ref environment="newcol" chapter_type="" label="b97161010780aa4b703cb89b1294f822" wbtag="ref" course="Math 1030" chapter="11" slide="5" src-course="MATH 1030" src-chapter="9" src-slide="123" type="Theorem" item="9.23" src-filename="lecs1-20.xml" md5="b97161010780aa4b703cb89b1294f822" class="lcref" serial="">
+                  <title>Theorem 9.23</title>
+                </ref>
+                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $W$ is a subspace. </paragraphs>
+                <qed course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+            <strong xmlns="http://www.w3.org/1999/xhtml" environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs">Main Questions.</paragraphs>
+            </strong>
+            <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+              <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="newcol">
+                <li class="ltx_item" environment="newcol">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Determine if a vector $\mathbf{v}$ is an element of $\left&lt; S \right&gt;$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="newcol">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Describe the set $\left&lt; S \right&gt;$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="newcol">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Is $\left&lt; S \right&gt;$ equal to ${\mathbb{R}}^{m}$? </paragraphs>
+                </li>
+              </ol>
+            </newcol>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="6" id="s6" slide="6" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Span of a Set of Vectors">
+            <keywords slide="6" environ="slide" chapter="11" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="3" md5="5a63882fd060b1d95c9040559156f5cd" course="Math 1030" chapter="11" slide="6" item="11.3">
+              <label course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="label" name="ABS" type="Example"/>
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Consider the following set of 5 vectors, $S$, from ${\mathbb{R}}^{4}$:
+\begin{align*}
+\displaystyle S=\left\{\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix},\,\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix},\,\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix},\,\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix},\,\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}\right\}.
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Consider the infinite set of vectors $\left&lt; S \right&gt;$ formed by all linear combinations of the elements of $S$. Here are four vectors which we definitely know are elements of $\left&lt; S \right&gt;$:
+\begin{align*}
+\displaystyle \mathbf{w}=(2)\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+(1)\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+(-1)\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+(2)\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+(3)\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\begin{bmatrix}-4\\
+2\\
+28\\
+10\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{x}=(5)\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+(-6)\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+(-3)\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+(4)\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+(2)\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\begin{bmatrix}-26\\
+-6\\
+2\\
+34\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{y}=(1)\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+(0)\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+(1)\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+(0)\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+(1)\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\begin{bmatrix}7\\
+4\\
+17\\
+-4\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{z}=(0)\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+(0)\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+(0)\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+(0)\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+(0)\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\begin{bmatrix}0\\
+0\\
+0\\
+0\end{bmatrix}.
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Fundamental question:</paragraphs>
+                  </strong>
+                  <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Determine if a given vector is an element of the set or not. Let us learn more about $\left&lt; S \right&gt;$ by investigating which vectors are elements of the set, and which are not.</paragraphs>
+                  <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                  <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">First, is $\mathbf{u}=\begin{bmatrix}-15\\
+-6\\
+19\\
+5\end{bmatrix}$ an element of $\left&lt; S \right&gt;$?</paragraphs>
+                  <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> In other words, are there scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$ such that:
+\begin{align*}
+\displaystyle \alpha_{1}\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+\alpha_{2}\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+\alpha_{3}\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+\alpha_{4}\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+\alpha_{5}\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\mathbf{u}=\begin{bmatrix}-15\\
+-6\\
+19\\
+5\end{bmatrix}.
+\end{align*} </paragraphs>
+                    <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Searching for such scalars is equivalent to finding a solution to the linear system of equations with augmented matrix:
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccccc|c}1&amp;2&amp;7&amp;1&amp;-1&amp;-15\\
+1&amp;1&amp;3&amp;1&amp;0&amp;-6\\
+3&amp;2&amp;5&amp;-1&amp;9&amp;19\\
+1&amp;-1&amp;-5&amp;2&amp;0&amp;5\end{array}\right].
+\end{align*} </paragraphs>
+                      <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This matrix row-reduces to
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccccc|c}\boxed{1}&amp;0&amp;-1&amp;0&amp;3&amp;10\\
+0&amp;\boxed{1}&amp;4&amp;0&amp;-1&amp;-9\\
+0&amp;0&amp;0&amp;\boxed{1}&amp;-2&amp;-7\\
+0&amp;0&amp;0&amp;0&amp;0&amp;0\end{array}\right].
+\end{align*} </paragraphs>
+                        <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> At this point, we see that the system is consistent, so we know there is a solution for the five scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$. This is enough evidence for us to say that $\mathbf{u}\in\left&lt; S \right&gt;$.</paragraphs>
+                          <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                          <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Moreover, we can compute an actual solution, for example:</paragraphs>
+                          <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                          <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                            <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle\alpha_{1}&amp;\displaystyle=2&amp;\displaystyle\alpha_{2}&amp;\displaystyle=1&amp;\displaystyle\alpha_{3}&amp;\displaystyle=-2&amp;\displaystyle\alpha_{4}&amp;\displaystyle=-3&amp;\displaystyle\alpha_{5}&amp;\displaystyle=2.
+\end{align*}
+This particular solution allows us to write
+\begin{align*}
+\displaystyle (2)\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+(1)\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+(-2)\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+(-3)\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+(2)\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\mathbf{u}=\begin{bmatrix}-15\\
+-6\\
+19\\
+5\end{bmatrix}
+\end{align*}
+making it even more obvious that $\mathbf{u}\in\left&lt; S \right&gt;$.</paragraphs>
+                            <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                            <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We now determine if $\mathbf{v}=\begin{bmatrix}3\\
+1\\
+2\\
+-1\end{bmatrix}$ an element of $\left&lt; S \right&gt;$.</paragraphs>
+                              <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                              <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We want to know if there are scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$ such that:
+\begin{align*}
+\displaystyle \alpha_{1}\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+\alpha_{2}\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+\alpha_{3}\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+\alpha_{4}\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+\alpha_{5}\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\mathbf{v}=\begin{bmatrix}3\\
+1\\
+2\\
+-1\end{bmatrix}
+\end{align*} </paragraphs>
+                                <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                  <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Again, this is equivalent to finding a solution to the linear system of equations with augmented matrix:
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccccc|c}1&amp;2&amp;7&amp;1&amp;-1&amp;3\\
+1&amp;1&amp;3&amp;1&amp;0&amp;1\\
+3&amp;2&amp;5&amp;-1&amp;9&amp;2\\
+1&amp;-1&amp;-5&amp;2&amp;0&amp;-1\end{array}\right].
+\end{align*}
+This matrix row-reduces to
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccccc|c}\boxed{1}&amp;0&amp;-1&amp;0&amp;3&amp;0\\
+0&amp;\boxed{1}&amp;4&amp;0&amp;-1&amp;0\\
+0&amp;0&amp;0&amp;\boxed{1}&amp;-2&amp;0\\
+0&amp;0&amp;0&amp;0&amp;0&amp;\boxed{1}\end{array}\right].
+\end{align*} </paragraphs>
+                                  <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                    <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> At this point, we see that the system is inconsistent, so we know there is no solution for the five scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$. This is enough evidence for us to say that $\mathbf{v}\not\in\left&lt; S \right&gt;$. End of story. </paragraphs>
+                                  </collapse>
+                                </collapse>
+                              </collapse>
+                            </collapse>
+                          </collapse>
+                        </collapse>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="7" id="s7" slide="7" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Span of a Set of Vectors">
+            <keywords slide="7" environ="slide" chapter="11" course="Math 1030"/>
+            <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs"> From the previous example, we have the following theorem: </paragraphs>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="4" md5="29b7568b1ccedc4671ce0cc5d281fae5" course="Math 1030" chapter="11" slide="7" item="11.4">
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}$ are in $\mathbf{R}^{m}$.
+Let $A$ be the $m\times n$ matrix whose $i$-th column is $\mathbf{u}_{i}$.
+Then $\mathbf{v}\in\left&lt; S \right&gt;$ is and only if $\mathcal{LS}({A},{\mathbf{v}})$ is consistent. </paragraphs>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="8" id="s8" slide="8" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Span of a Set of Vectors">
+            <keywords slide="8" environ="slide" chapter="11" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="5" md5="a93344f75a7bb728937ba0e81805be23" course="Math 1030" chapter="11" slide="8" item="11.5">
+              <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Computational Technique.</paragraphs>
+              </strong>
+              <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Given $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\}$ in ${\mathbb{R}}^{m}$, determine if
+\begin{align*}
+\displaystyle \mathbf{v}=\begin{bmatrix}v_{1}\\
+\vdots\\
+v_{m}\end{bmatrix}\in\left&lt; S \right&gt;.
+\end{align*} </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Solution" wbtag="sol" md5="a333d4e12391f02123eee02d0fbc7725" course="Math 1030" chapter="11" slide="8">
+              <enumerate course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="enumerate" wbtag="enumerate">
+                <item course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="enumerate" wbtag="item">
+                  <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                    <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> To determine if $\mathbf{v}\in\left&lt; S \right&gt;$, we need to find $\alpha_{1},\ldots,\alpha_{n}$ such that
+\begin{align*}
+\displaystyle \alpha_{1}\mathbf{u}_{1}+\cdots+\alpha_{n}\mathbf{u}_{n}=\mathbf{v}.
+\end{align*} </paragraphs>
+                  </newcol>
+                </item>
+                <item course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="enumerate" wbtag="item">
+                  <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                    <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This is equivalent to solving the system of linear equations $\mathcal{LS}({A},{\mathbf{v}})$,
+where $A$ is the $m\times n$ matrix whose $i$-th column is $\mathbf{u}_{i}$. </paragraphs>
+                  </newcol>
+                </item>
+                <item course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="enumerate" wbtag="item">
+                  <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                    <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Row-reduce the augmented matrix $[A|\mathbf{v}]$ to an RREF $B$. </paragraphs>
+                    <enumerate course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="enumerate" wbtag="enumerate">
+                      <item course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="enumerate" wbtag="item">
+                        <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                          <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If the last column of $B$ is a pivot column, then the system is inconsistent and $\mathbf{v}\notin\left&lt; S \right&gt;$. </paragraphs>
+                        </newcol>
+                      </item>
+                      <item course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="enumerate" wbtag="item">
+                        <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                          <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If the last column of $B$ is not a pivot column, then the system is consistent and $\mathbf{v}\in\left&lt; S \right&gt;$. </paragraphs>
+                        </newcol>
+                      </item>
+                    </enumerate>
+                  </newcol>
+                </item>
+              </enumerate>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="9" id="s9" slide="9" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Span of a Set of Vectors">
+            <keywords slide="9" environ="slide" chapter="11" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="6" md5="4389965ff022e28c6e86e4be35c383c3" course="Math 1030" chapter="11" slide="9" item="11.6">
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Following the previous example, determine if:
+\[
+\mathbf{v}=\begin{bmatrix}v_{1}\\
+\vdots\\
+v_{4}\end{bmatrix}\in\left&lt; S \right&gt;.
+\] </paragraphs>
+              <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Applying Gauss-Jordan elimination to the augmented matrix
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccccc|c}1&amp;2&amp;7&amp;1&amp;-1&amp;v_{1}\\
+1&amp;1&amp;3&amp;1&amp;0&amp;v_{2}\\
+3&amp;2&amp;5&amp;-1&amp;9&amp;v_{3}\\
+1&amp;-1&amp;-5&amp;2&amp;0&amp;v_{4}\end{array}\right],
+\end{align*}
+we obtain</paragraphs>
+                <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle \left[\begin{array}[]{ccccc|c}1&amp;0&amp;-1&amp;0&amp;3&amp;-3v_{1}+5v_{2}-v_{4}\\
+0&amp;1&amp;4&amp;0&amp;-1&amp;v_{1}-v_{2}\\
+0&amp;0&amp;0&amp;1&amp;-2&amp;2v_{1}-3v_{2}+v_{4}\\
+0&amp;0&amp;0&amp;0&amp;0&amp;9v_{1}-16v_{2}+v_{3}+4v_{4}\\
+\end{array}\right].
+\end{align*} </paragraphs>
+                  <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$, then the last column is not a pivot column and the above is an RREF. In this case, $\mathbf{v}\in\left&lt; S \right&gt;$.</paragraphs>
+                    <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If instead $9v_{1}-16v_{2}+v_{3}+4v_{4}\neq 0$, then the above matrix is not an RREF. Hence, the corresponding system of linear equations is inconsistent
+and thus $\mathbf{v}\not\in\left&lt; S \right&gt;$.</paragraphs>
+                      <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                      <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We therefore conclude that $\mathbf{v}\in\left&lt; S \right&gt;$ if and only if:
+\[
+9v_{1}-16v_{2}+v_{3}+4v_{4}=0.
+\] </paragraphs>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Span of a Set of Vectors">
+            <keywords slide="10" environ="slide" chapter="11" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="7" md5="485ff86c4b94690d4dba3702efab0da1" course="Math 1030" chapter="11" slide="10" item="11.7">
+              <label course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="label" name="SCAA" type="Example"/>
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Consider:
+\begin{align*}
+\displaystyle S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}\}=\left\{\begin{bmatrix}1\\
+2\\
+1\end{bmatrix},\,\begin{bmatrix}-1\\
+1\\
+1\end{bmatrix},\,\begin{bmatrix}2\\
+1\\
+0\end{bmatrix}\right\}
+\end{align*}
+and consider the infinite set $\left&lt; S \right&gt;$.</paragraphs>
+              <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs>
+                <!-- First, as an example, note that
+\begin{align*}
+\displaystyle \mathbf{v}=(5)\begin{bmatrix}1\\
+2\\
+1\end{bmatrix}+(&#45;3)\begin{bmatrix}&#45;1\\
+1\\
+1\end{bmatrix}+(7)\begin{bmatrix}2\\
+1\\
+0\end{bmatrix}=\begin{bmatrix}22\\
+14\\
+2\end{bmatrix}
+\end{align*}
+is in $\left< S \right>$, since it is a linear combination of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}$. There is nothing magical about the scalars $\alpha_{1}=5,\,\alpha_{2}=&#45;3,\,\alpha_{3}=7$; they can be chosen arbitrarily. So repeat this part of the example yourself, using different values of $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$. What happens if you choose all three scalars to be zero?
+
+
+So we know how to quickly construct sample elements of the set $\left< S \right>$. A slightly different question arises when you are handed a vector of the correct size and asked if it is an element of $\left< S \right>$. For example, is -->
+              </paragraphs>
+              <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Does $\mathbf{w}=\begin{bmatrix}1\\
+8\\
+5\end{bmatrix}$ lie in $\left&lt; S \right&gt;$?</paragraphs>
+              <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> To answer this question, we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ such that
+\begin{align*}
+\displaystyle\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}&amp;\displaystyle=\mathbf{w}.
+\end{align*}
+This is equivalent to solving the system of linear equations
+\begin{align*}
+\displaystyle\alpha_{1}-\alpha_{2}+2\alpha_{3}&amp;\displaystyle=1 \\
+\displaystyle 2\alpha_{1}+\alpha_{2}+\alpha_{3}&amp;\displaystyle=8 \\
+\displaystyle\alpha_{1}+\alpha_{2}&amp;\displaystyle=5.
+\end{align*}
+Building the augmented matrix for this linear system, and row-reducing, gives:</paragraphs>
+                <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;1&amp;3\\
+0&amp;\boxed{1}&amp;-1&amp;2\\
+0&amp;0&amp;0&amp;0\end{array}\right].
+\end{align*}
+This system has infinitely many solutions (there is a free variable in $x_{3}$), but all we need is one solution vector. The solution,
+\begin{align*}
+\displaystyle\alpha_{1}&amp;\displaystyle=2&amp;\displaystyle\alpha_{2}&amp;\displaystyle=3&amp;\displaystyle\alpha_{3}&amp;\displaystyle=1
+\end{align*}
+tells us that:</paragraphs>
+                  <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle (2)\mathbf{u}_{1}+(3)\mathbf{u}_{2}+(1)\mathbf{u}_{3}=\mathbf{w}.
+\end{align*} </paragraphs>
+                    <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So we are convinced that $\mathbf{w}$ really is in $\left&lt; S \right&gt;$.</paragraphs>
+                      <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                      <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Notice that there is an infinite number of ways to answer this question affirmatively. We could choose a different solution, this time choosing the free variable to be zero,
+\begin{align*}
+\displaystyle\alpha_{1}&amp;\displaystyle=3&amp;\displaystyle\alpha_{2}&amp;\displaystyle=2&amp;\displaystyle\alpha_{3}&amp;\displaystyle=0,
+\end{align*}
+showing that
+\begin{align*}
+\displaystyle (3)\mathbf{u}_{1}+(2)\mathbf{u}_{2}+(0)\mathbf{u}_{3}=\mathbf{w}.
+\end{align*}
+Verifying the arithmetic in this second solution will make it obvious that $\mathbf{w}$ is in this span. And of course, we now realize that there are an </paragraphs>
+                        <em xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                          <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">infinite</paragraphs>
+                        </em>
+                        <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> number of ways to realize $\mathbf{w}$ as element of $\left&lt; S \right&gt;$.</paragraphs>
+                        <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                        <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let us ask the same type of question again, but this time with: $\mathbf{y}=\begin{bmatrix}2\\
+4\\
+3\end{bmatrix}$.</paragraphs>
+                          <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                          <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Is $\mathbf{y}\in\left&lt; S \right&gt;$?</paragraphs>
+                          <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                          <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                            <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ such that
+\begin{align*}
+\displaystyle\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}&amp;\displaystyle=\mathbf{y}.
+\end{align*}
+This is equivalent to finding solutions to the system of equations
+\begin{align*}
+\displaystyle\alpha_{1}-\alpha_{2}+2\alpha_{3}&amp;\displaystyle=2 \\
+\displaystyle 2\alpha_{1}+\alpha_{2}+\alpha_{3}&amp;\displaystyle=4 \\
+\displaystyle\alpha_{1}+\alpha_{2}&amp;\displaystyle=3,
+\end{align*}
+Building the augmented matrix for this linear system and row-reducing gives
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;1&amp;0\\
+0&amp;\boxed{1}&amp;-1&amp;0\\
+0&amp;0&amp;0&amp;\boxed{1}\end{array}\right].
+\end{align*}
+This system is inconsistent because the last column is a pivot column.
+So there are no scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ that will create a linear combination of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}$ that equals $\mathbf{y}$. More precisely, $\mathbf{y}\not\in\left&lt; S \right&gt;$.</paragraphs>
+                            <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                            <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">There are three things to observe in this example. </paragraphs>
+                            <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="newcol">
+                              <li class="ltx_item" environment="newcol">
+                                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> It is easy to construct vectors in $\left&lt; S \right&gt;$. </paragraphs>
+                              </li>
+                              <li class="ltx_item" environment="newcol">
+                                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> It is possible that some vectors are in $\left&lt; S \right&gt;$ (such as $\mathbf{w}$), while others are not (such as $\mathbf{y}$). </paragraphs>
+                              </li>
+                              <li class="ltx_item" environment="newcol">
+                                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Deciding if a given vector is in $\left&lt; S \right&gt;$ leads to a linear system of equations and asking if the system is consistent. </paragraphs>
+                              </li>
+                            </ol>
+                          </collapse>
+                        </collapse>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="11" id="s11" slide="11" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Span of a Set of Vectors">
+            <keywords slide="11" environ="slide" chapter="11" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="8" md5="807e4ccb4b188b92a92ec4d56b6987e4" course="Math 1030" chapter="11" slide="11" item="11.8">
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let
+\begin{align*}
+\displaystyle R=\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}\}=\left\{\begin{bmatrix}-7\\
+5\\
+1\end{bmatrix},\,\begin{bmatrix}-6\\
+5\\
+0\end{bmatrix},\,\begin{bmatrix}-12\\
+7\\
+4\end{bmatrix}\right\}
+\end{align*}
+and consider its span $\left&lt; R \right&gt;$. </paragraphs>
+              <paragraphs>
+                <!--
+First, as an example, note that
+\begin{align*}
+\displaystyle \mathbf{x}=(2)\begin{bmatrix}&#45;7\\
+5\\
+1\end{bmatrix}+(4)\begin{bmatrix}&#45;6\\
+5\\
+0\end{bmatrix}+(&#45;3)\begin{bmatrix}&#45;12\\
+7\\
+4\end{bmatrix}=\begin{bmatrix}&#45;2\\
+9\\
+&#45;10\end{bmatrix}
+\end{align*}
+is in $\left< R \right>$, since it is a linear combination of $\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}$. In other words, $\mathbf{x}\in\left< R \right>$. Try some different values of $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ yourself, and see what vectors you can create as elements of $\left< R \right>$.
+
+
+Now ask if a given vector is an element of $\left< R \right>$. For example, is -->
+              </paragraphs>
+              <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Does the vector$\mathbf{z}=\begin{bmatrix}-33\\
+24\\
+5\end{bmatrix}$ lie in $\left&lt; R \right&gt;$?</paragraphs>
+                <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> To answer this question, we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ so that
+\begin{align*}
+\displaystyle\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\mathbf{v}_{3}&amp;\displaystyle=\mathbf{z}.
+\end{align*}
+This is equivalent to finding solutions to the following system of linear equations:
+\begin{align*}
+\displaystyle-7\alpha_{1}-6\alpha_{2}-12\alpha_{3}&amp;\displaystyle=-33 \\
+\displaystyle 5\alpha_{1}+5\alpha_{2}+7\alpha_{3}&amp;\displaystyle=24 \\
+\displaystyle\alpha_{1}+4\alpha_{3}&amp;\displaystyle=5.
+\end{align*}
+Building the augmented matrix for this linear system and row-reducing gives
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;0&amp;-3\\
+0&amp;\boxed{1}&amp;0&amp;5\\
+0&amp;0&amp;\boxed{1}&amp;2\end{array}\right].
+\end{align*}
+This system has a unique solution,
+\begin{align*}
+\displaystyle\alpha_{1}=-3\quad\displaystyle\alpha_{2}=5\quad\displaystyle\alpha_{3}=2
+\end{align*}
+telling us that
+\begin{align*}
+\displaystyle (-3)\mathbf{v}_{1}+(5)\mathbf{v}_{2}+(2)\mathbf{v}_{3}=\mathbf{z}.
+\end{align*}
+So we are convinced that $\mathbf{z}$ really is in $\left&lt; R \right&gt;$. Notice that in this case we have only one way to answer the question affirmatively, since the solution is unique.</paragraphs>
+                  <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let us ask about another vector.
+Let $\mathbf{x}=\begin{bmatrix}-7\\
+8\\
+-3\end{bmatrix}$.
+Is $\mathbf{x}$ a vector in $\left&lt; R \right&gt;$?</paragraphs>
+                    <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> In other words, are there scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ so that:
+\begin{align*}
+\displaystyle\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\mathbf{v}_{3}&amp;\displaystyle=\mathbf{x}
+\end{align*}
+This is equivalent to finding the solutions to the system of equations</paragraphs>
+                      <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                      <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">\begin{align*}
+\displaystyle-7\alpha_{1}-6\alpha_{2}-12\alpha_{3}&amp;\displaystyle=-7 \\
+\displaystyle 5\alpha_{1}+5\alpha_{2}+7\alpha_{3}&amp;\displaystyle=8 \\
+\displaystyle\alpha_{1}+4\alpha_{3}&amp;\displaystyle=-3.
+\end{align*}
+Building the augmented matrix for this linear system and row-reducing gives
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;0&amp;1\\
+0&amp;\boxed{1}&amp;0&amp;2\\
+0&amp;0&amp;\boxed{1}&amp;-1\end{array}\right].
+\end{align*}
+This system has a unique solution,
+\begin{align*}
+\displaystyle\alpha_{1}=1\quad\displaystyle\alpha_{2}=2\quad\displaystyle\alpha_{3}=-1
+\end{align*}
+telling us that
+\begin{align*}
+\displaystyle (1)\mathbf{v}_{1}+(2)\mathbf{v}_{2}+(-1)\mathbf{v}_{3}=\mathbf{x}.
+\end{align*}
+So we are convinced that $\mathbf{x}$ really is in $\left&lt; R \right&gt;$. Notice that in this case we again have only one way to answer the question affirmatively since the solution is again unique.</paragraphs>
+                      <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                      <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">We could continue to test other vectors for membership in $\left&lt; R \right&gt;$, but there is no point. A question about membership in $\left&lt; R \right&gt;$ inevitably leads to a system of three equations in the three variables $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ with a coefficient matrix whose columns are the vectors $\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}$. This particular coefficient matrix is nonsingular, so by </paragraphs>
+                      <ref environment="newcol" chapter_type="" label="NME1" wbtag="ref" course="Math 1030" chapter="11" slide="11" src-course="MATH 1030" src-chapter="8" src-slide="109" type="Theorem" item="8.21" src-filename="lecs1-20.xml" md5="808546fe65838e425f3533c348d23441" class="lcref" serial="">
+                        <title>Nonsingular Matrix Equivalences</title>
+                      </ref>
+                      <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> the system is guaranteed to have a solution. (This solution is unique, but that is not critical here.) So no matter which vector we might have chosen for $\mathbf{z}$, we are certain to discover that it was an element of $\left&lt; R \right&gt;$.</paragraphs>
+                      <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                      <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                        <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Conclusion</paragraphs>
+                      </strong>
+                      <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: Every vector of size 3 is in $\left&lt; R \right&gt;$, or $\left&lt; R \right&gt;={\mathbb{R}}^{3}$. </paragraphs>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+            <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs"> The example above inspires the following result: </paragraphs>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="9" md5="601edc1e272a16fe6fee81ac3c885d94" course="Math 1030" chapter="11" slide="11" item="11.9">
+              <label course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="label" name="thm:ANSRM" type="Theorem"/>
+              <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Given $m$ vectors $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{m}\}$ in ${\mathbb{R}}^{m}$, let $A$ be the $m\times m$ square matrix whose $i$-th column is $\mathbf{u}_{i}$. Then $A$ is non-singular if and only if $\left&lt; S \right&gt;={\mathbb{R}}^{m}$. </paragraphs>
+              </newcol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="80a04c3cc1b9f6b2e24f096cf1c2538f" course="Math 1030" chapter="11" slide="11" of="601edc1e272a16fe6fee81ac3c885d94">
+              <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> ($\Rightarrow$) </paragraphs>
+                <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If $A$ is non-singular, then for every $\mathbf{b}\in{\mathbb{R}}^{m}$ the equation $\mathcal{LS}({A},{\mathbf{b}})$ is consistent
+by </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="b25e99edb5cb21a0655d0d961da21e47" wbtag="ref" course="Math 1030" chapter="11" slide="11" src-course="MATH 1030" src-chapter="8" src-slide="108" type="Theorem" item="8.20" src-filename="lecs1-20.xml" md5="b25e99edb5cb21a0655d0d961da21e47" class="lcref" serial="">
+                    <title>Nonsingular Matrices and Unique Solutions</title>
+                  </ref>
+                  <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. Hence $\mathbf{b}\in\left&lt; S \right&gt;$. So ${\mathbb{R}}^{m}=\left&lt; S \right&gt;$. </paragraphs>
+                </newcol>
+                <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">($\Leftarrow$) </paragraphs>
+                <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This part is difficult; we will only sketch the idea.
+Let the RREF of $A$ be $B$. Suppose that $A$ is singular. Then $B\neq I_{m}$ and the last row of $B$ is a zero row. So there exists $\mathbf{b}\in{\mathbb{R}}^{m}$ such that $\mathcal{LS}({B},{\mathbf{b}})$ is inconsistent.
+(e.g. $\mathbf{b}=\begin{bmatrix}0\\
+\vdots\\
+0\\
+1\end{bmatrix}$).
+Hence there exists $\mathbf{c}\in{\mathbb{R}}^{m}$ such that $\mathcal{LS}({A},{\mathbf{c}})$ is inconsistent (why?).
+Thus $\mathbf{c}\notin\left&lt; S \right&gt;$. So $\left&lt; S \right&gt;\neq{\mathbb{R}}^{m}$. This completes the proof. </paragraphs>
+                </newcol>
+                <qed course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Spanning Sets of Null Spaces" course="Math 1030" chapter="11" num="2" serial="11.2">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="11" section="2" subsection="" subsubsection="" serial="11.2" slide="">
+          <newline course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="title"/>
+          <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Spanning Sets of Null Spaces</paragraphs>
+          <newline course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="title"/>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="12" scope="section" id="s12" slide="12" course="Math 1030" chapter="11" section="2" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Spanning Sets of Null Spaces">
+            <keywords slide="12" environ="slide" chapter="11" course="Math 1030">
+              <keyword chapter="11" slide="12">Spanning Sets for Null Spaces</keyword>
+            </keywords>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="11" section="2" subsection="" subsubsection="" serial="" slide="12">
+              <newline course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="title"/>
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Spanning Sets of Null Spaces</paragraphs>
+              <newline course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="title"/>
+            </title>
+            <newline course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
+            <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">The following theorem describe how to express a null space as $\left&lt; S \right&gt;$. </paragraphs>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="10" title="Spanning Sets for Null Spaces" md5="f25c2375544217fa74d875bec0504a3b" course="Math 1030" chapter="11" slide="12" item="11.10">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="11" section="2" subsection="" subsubsection="" serial="" slide="12">Spanning Sets for Null Spaces</title>
+              <label course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="label" name="SSNS" type="Theorem"/>
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is an $m\times n$ matrix and $B$ is a row-equivalent matrix in reduced row-echelon form. Suppose that $B$ has $r$ pivot columns, with indices given by $D=\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\}$, while the $n-r$ non-pivot columns have indices $F=\{f_{1},\,f_{2},\,f_{3},\,\ldots,\,f_{n-r}\}$. Construct the $n-r$ vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$ of size $n$,
+\begin{align*}
+\displaystyle \left[\mathbf{z}_{j}\right]_{i}=\begin{cases}1&amp;\text{if $i\in F$, $i=f_{j}$}\\
+0&amp;\text{if $i\in F$, $i\neq f_{j}$}\\
+-\left[B\right]_{k,f_{j}}&amp;\text{if $i\in D$, $i=d_{k}$}\end{cases}
+\end{align*}
+Then the null space of $A$ is given by
+\begin{align*}
+\displaystyle {\mathcal{N}}\!\left(A\right)=\left&lt;\left\{\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3},\,\ldots,\,\mathbf{z}_{n-r}\right\}\right&gt;
+\end{align*} </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="984375be1912cbab134dc66836d0a591" course="Math 1030" chapter="11" slide="12" of="f25c2375544217fa74d875bec0504a3b">
+              <newcol course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The can be seen by moving the free variables to another side. For details. See Beezer p88. Don’t memorize this theorem. Instead, study the examples below. </paragraphs>
+                <qed course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="13" id="s13" slide="13" course="Math 1030" chapter="11" section="2" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Spanning Sets of Null Spaces">
+            <keywords slide="13" environ="slide" chapter="11" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="11" md5="9ed8a98057666bacb63507153cecf94f" course="Math 1030" chapter="11" slide="13" item="11.11">
+              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Spanning set of a null space</paragraphs>
+              </b>
+              <newline course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Find a set of vectors, $S$, so that the null space of the matrix
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&amp;3&amp;3&amp;-1&amp;-5\\
+2&amp;5&amp;7&amp;1&amp;1\\
+1&amp;1&amp;5&amp;1&amp;5\\
+-1&amp;-4&amp;-2&amp;0&amp;4\end{bmatrix}
+\end{align*}
+is the span of $S$, that is, $\left&lt; S \right&gt;={\mathcal{N}}\!\left(A\right)$. </paragraphs>
+              <hr xmlns="http://www.w3.org/1999/xhtml" environment="statement"/>
+              <newcol course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The null space of $A$ is the set of all solutions to the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$.
+Begin by row-reducing $A$. The result is
+\begin{align*}
+\displaystyle \begin{bmatrix}\boxed{1}&amp;0&amp;6&amp;0&amp;4\\
+0&amp;\boxed{1}&amp;-1&amp;0&amp;-2\\
+0&amp;0&amp;0&amp;\boxed{1}&amp;3\\
+0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}.
+\end{align*}
+We have $D=\{1,\,2,\,4\}$ and $F=\{3,\,5\}$. Hence $x_{3}$ and $x_{5}$ are free variables and we can interpret each nonzero row as an expression for the dependent variables $x_{1}$, $x_{2}$, $x_{4}$ (respectively) in the free variables $x_{3}$ and $x_{5}$. With this we can write the vector form of a solution vector as
+\begin{align*}
+\displaystyle \begin{bmatrix}x_{1}\\
+x_{2}\\
+x_{3}\\
+x_{4}\\
+x_{5}\end{bmatrix}=\begin{bmatrix}-6x_{3}-4x_{5}\\
+x_{3}+2x_{5}\\
+x_{3}\\
+-3x_{5}\\
+x_{5}\end{bmatrix}=x_{3}\begin{bmatrix}-6\\
+1\\
+1\\
+0\\
+0\end{bmatrix}+x_{5}\begin{bmatrix}-4\\
+2\\
+0\\
+-3\\
+1\end{bmatrix}.
+\end{align*}
+Then, in the notation of the above theorem, we have
+\begin{align*}
+\displaystyle\mathbf{z}_{1}&amp;\displaystyle=\begin{bmatrix}-6\\
+1\\
+1\\
+0\\
+0\end{bmatrix}&amp;\displaystyle\mathbf{z}_{2}&amp;\displaystyle=\begin{bmatrix}-4\\
+2\\
+0\\
+-3\\
+1\end{bmatrix}
+\end{align*}
+and
+\begin{align*}
+\displaystyle {\mathcal{N}}\!\left(A\right)
+=\left&lt;
+\left\{
+\mathbf{z}_{1},\,\mathbf{z}_{2}
+\right\}
+\right&gt;
+=\left&lt;
+\left
+\{
+\begin{bmatrix}-6\\
+1\\
+1\\
+0\\
+0\end{bmatrix},\,\begin{bmatrix}-4\\
+2\\
+0\\
+-3\\
+1\end{bmatrix}
+\right\}
+\right&gt;.
+\end{align*} </paragraphs>
+              </newcol>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="12" md5="49c0629335089b8a33b4f7cb12c6b12b" course="Math 1030" chapter="11" slide="13" item="11.12">
+              <newcol course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Consider the matrix:
+\begin{align*}
+\displaystyle A=\begin{bmatrix}2&amp;1&amp;5&amp;1&amp;5&amp;1\\
+1&amp;1&amp;3&amp;1&amp;6&amp;-1\\
+-1&amp;1&amp;-1&amp;0&amp;4&amp;-3\\
+-3&amp;2&amp;-4&amp;-4&amp;-7&amp;0\\
+3&amp;-1&amp;5&amp;2&amp;2&amp;3\end{bmatrix}.
+\end{align*}
+Row-reducing $A$ gives the matrix
+\begin{align*}
+\displaystyle B=\begin{bmatrix}\boxed{1}&amp;0&amp;2&amp;0&amp;-1&amp;2\\
+0&amp;\boxed{1}&amp;1&amp;0&amp;3&amp;-1\\
+0&amp;0&amp;0&amp;\boxed{1}&amp;4&amp;-2\\
+0&amp;0&amp;0&amp;0&amp;0&amp;0\\
+0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}.
+\end{align*}
+First, the non-pivot columns have indices $F=\{3,\,5,\,6\}$, so we will construct the $n-r=6-3=3$ vectors with a pattern of zeros and ones dictated by the indices in $F$. This is the realization of the first two lines of the three-case definition of the vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$.
+\begin{align*}
+\displaystyle\mathbf{z}_{1}&amp;\displaystyle=\begin{bmatrix}\\
+\\
+1\\
+\\
+0\\
+0\end{bmatrix}&amp;\displaystyle\mathbf{z}_{2}&amp;\displaystyle=\begin{bmatrix}\\
+\\
+0\\
+\\
+1\\
+0\end{bmatrix}&amp;\displaystyle\mathbf{z}_{3}&amp;\displaystyle=\begin{bmatrix}\\
+\\
+0\\
+\\
+0\\
+1\end{bmatrix}.
+\end{align*}
+Each of these vectors arises due to the presence of a non-pivot column. The remaining entries of each vector are the entries of the non-pivot column, negated, and distributed into the empty slots in order (these slots have indices in the set $D$, so also refer to pivot columns). This is the realization of the third line of the three-case definition of the vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$.
+\begin{align*}
+\displaystyle\mathbf{z}_{1}&amp;\displaystyle=\begin{bmatrix}-2\\
+-1\\
+1\\
+0\\
+0\\
+0\end{bmatrix}&amp;\displaystyle\mathbf{z}_{2}&amp;\displaystyle=\begin{bmatrix}1\\
+-3\\
+0\\
+-4\\
+1\\
+0\end{bmatrix}&amp;\displaystyle\mathbf{z}_{3}&amp;\displaystyle=\begin{bmatrix}-2\\
+1\\
+0\\
+2\\
+0\\
+1\end{bmatrix}.
+\end{align*}
+So we have
+\begin{align*}
+\displaystyle {\mathcal{N}}\!\left(A\right)=\left&lt;
+\left\{
+\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3}
+\right\}
+\right&gt;
+=
+\left\langle
+\left\{\begin{bmatrix}-2\\
+-1\\
+1\\
+0\\
+0\\
+0\end{bmatrix},\,\begin{bmatrix}1\\
+-3\\
+0\\
+-4\\
+1\\
+0\end{bmatrix},\,\begin{bmatrix}-2\\
+1\\
+0\\
+2\\
+0\\
+1\end{bmatrix}
+\right\}
+\right\rangle.
+\end{align*} </paragraphs>
+              </newcol>
+            </statement>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Obtain Same Span Using Fewer Vectors" course="Math 1030" chapter="11" num="3" serial="11.3">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="11" section="3" subsection="" subsubsection="" serial="11.3" slide="">
+          <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Obtain Same Span Using Fewer Vectors</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="14" scope="section" id="s14" slide="14" course="Math 1030" chapter="11" section="3" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Obtain Same Span Using Fewer Vectors">
+            <keywords slide="14" environ="slide" chapter="11" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="11" section="3" subsection="" subsubsection="" serial="" slide="14">
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Obtain Same Span Using Fewer Vectors</paragraphs>
+            </title>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="13" md5="be407dcc68e1bd7811a8b06bbc356ca7" course="Math 1030" chapter="11" slide="14" item="11.13">
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Begin with the following set of four vectors of size $3$:
+\begin{align*}
+\displaystyle T
+=\left\{\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3},\,\mathbf{w}_{4}\right\}
+=\left\{\begin{bmatrix}2\\
+-3\\
+1\end{bmatrix},\,\begin{bmatrix}1\\
+4\\
+1\end{bmatrix},\,\begin{bmatrix}7\\
+-5\\
+4\end{bmatrix},\,\begin{bmatrix}-7\\
+-6\\
+-5\end{bmatrix}
+\right\}.
+\end{align*} </paragraphs>
+              <newcol course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let:
+\begin{align*}
+\displaystyle D=\begin{bmatrix}2&amp;1&amp;7&amp;-7\\
+-3&amp;4&amp;-5&amp;-6\\
+1&amp;1&amp;4&amp;-5\end{bmatrix}
+\end{align*}
+and consider the infinite set $W=\left&lt; T \right&gt;$. Check that the vector
+\begin{align*}
+\displaystyle \mathbf{z}_{2}=\begin{bmatrix}2\\
+3\\
+0\\
+1\end{bmatrix}
+\end{align*}
+is a solution to the homogeneous system $\mathcal{LS}({D},{\mathbf{0}})$</paragraphs>
+                <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We can write the linear combination,
+\begin{align*}
+\displaystyle 2\mathbf{w}_{1}+3\mathbf{w}_{2}+0\mathbf{w}_{3}+1\mathbf{w}_{4}=\mathbf{0}
+\end{align*}
+which we can solve for $\mathbf{w}_{4}$ as
+\begin{align*}
+\displaystyle \mathbf{w}_{4}=(-2)\mathbf{w}_{1}+(-3)\mathbf{w}_{2}.
+\end{align*} </paragraphs>
+                  <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This equation says that whenever we encounter the vector $\mathbf{w}_{4}$, we can replace it with a specific linear combination of the vectors $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$. So using $\mathbf{w}_{4}$ in the set $T$, along with $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$, is excessive. An example of what we mean here can be illustrated by the computation:</paragraphs>
+                    <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle 5\mathbf{w}_{1}&amp;\displaystyle+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+(-3)\mathbf{w}_{4} \\
+&amp;\displaystyle=5\mathbf{w}_{1}+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+(-3)\left((-2)\mathbf{w}_{1}+(-3)\mathbf{w}_{2}\right) \\
+&amp;\displaystyle=5\mathbf{w}_{1}+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+\left(6\mathbf{w}_{1}+9\mathbf{w}_{2}\right) \\
+&amp;\displaystyle=11\mathbf{w}_{1}+5\mathbf{w}_{2}+6\mathbf{w}_{3}.
+\end{align*} </paragraphs>
+                      <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So, what began as a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3},\,\mathbf{w}_{4}$ has been reduced to a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3}$.</paragraphs>
+                        <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                        <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Hence: </paragraphs>
+                        <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle W=\left&lt;\left\{\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3}\right\}\right&gt;,
+\end{align*}
+and the span of our set of vectors, $W$, has not changed, but we have described it by the span of a set of three vectors, rather than four. Furthermore, we can achieve yet another, similar, reduction.</paragraphs>
+                          <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                          <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                            <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Check that the vector
+\begin{align*}
+\displaystyle \mathbf{z}_{1}=\begin{bmatrix}-3\\
+-1\\
+1\\
+0\end{bmatrix}
+\end{align*}
+is a solution to the homogeneous system $\mathcal{LS}({D},{\mathbf{0}})$.</paragraphs>
+                            <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                            <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We can write the linear combination,
+\begin{align*}
+\displaystyle (-3)\mathbf{w}_{1}+(-1)\mathbf{w}_{2}+1\mathbf{w}_{3}=\mathbf{0}
+\end{align*}
+which we can solve for $\mathbf{w}_{3}$ as
+\begin{align*}
+\displaystyle \mathbf{w}_{3}=3\mathbf{w}_{1}+1\mathbf{w}_{2}.
+\end{align*} </paragraphs>
+                              <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This equation says that whenever we encounter the vector $\mathbf{w}_{3}$, we can replace it with a specific linear combination of the vectors $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$. So, as before, the vector $\mathbf{w}_{3}$ is not needed in the description of $W$, provided we have $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$ available. In particular, a careful proof would show that
+\begin{align*}
+\displaystyle W=\left&lt;\left\{\mathbf{w}_{1},\,\mathbf{w}_{2}\right\}\right&gt;
+\end{align*} </paragraphs>
+                                <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                  <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So $W$ began life as the span of a set of four vectors. We have now shown (utilizing solutions to a homogeneous system) that $W$ can also be described as the span of a set of just two vectors. Convince yourself that we cannot go any further. In other words, it is not possible to dismiss either $\mathbf{w}_{1}$ or $\mathbf{w}_{2}$ in a similar fashion and winnow the set down to just one vector.</paragraphs>
+                                  <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                                  <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                    <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> What was it about the original set of four vectors that allowed us to declare certain vectors as surplus? And just which vectors were we able to dismiss? And why did we have to stop once we had two vectors remaining? The answers to these questions motivate </paragraphs>
+                                    <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">linear independence</paragraphs>
+                                    </b>
+                                    <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, our next section and next definition, and so are worth considering carefully now. </paragraphs>
+                                  </collapse>
+                                </collapse>
+                              </collapse>
+                            </collapse>
+                          </collapse>
+                        </collapse>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+        </slides>
+      </section>
+    </chapter>
+  </course>
+</document>
