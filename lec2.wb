@@ -1,5 +1,4 @@
-@course{Math 1030}
-@setchapter{2}
+@course{Math 1030}@setchapter{2}
 @chapter{Geometric interpretation of linear equations and vector spaces}
 $
 \newcommand{\R}{\mathbf{R}}
@@ -22,7 +21,8 @@ Solve the equations:
 There are two variables and we can draw these equations in a (2-dimensional) plane.
 Each (linear) equation represented by a straight line.
 For the line that corresponds to $2x-3y=-5$, it passes through the point $(0,5/3)$ (take $x=0$ and one gets $y=5/3$) and another the point $(-5/2,0)$. Hence it is determined.
-Similarly, the second straight line is the one passes through the points $(0,5)$ and $(5.0)$. <iframe width="500px" height="500px" style="border: 1px solid rgb(204, 204, 204); background: none; overflow: hidden;" frameborder="0" data-src="https://www.desmos.com/calculator/ivgmstarrz?embed" rendered="0" src="https://www.desmos.com/calculator/ivgmstarrz?embed" id="iFrameResizer10" scrolling="no"/>
+Similarly, the second straight line is the one passes through the points $(0,5)$ and $(5.0)$.
+<iframe width="500px" height="500px" style="border: 1px solid rgb(204, 204, 204); background: none; overflow: hidden;" frameborder="0" data-src="https://www.desmos.com/calculator/ivgmstarrz?embed" rendered="0" src="https://www.desmos.com/calculator/ivgmstarrz?embed" id="iFrameResizer10" scrolling="no"/>
 Intersection between lines
 The solution of the two equations corresponds to the unique intersection $(2,3)$
 between the two straight lines.
@@ -70,8 +70,10 @@ Solve the equations:
 2x+3y+3z=3,\\ 2x-y+0z=0.
 \end{cases}
 @newcol
-Intersection of planes <iframe style="width: 100%; height: 700px; background: none; overflow: hidden;" frameborder="0" data-src="https://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&zscale=0&domain=2&numsamples=20&autozscale=1&showaxes=1&centeredaxes=1&xmin=-2&xmax=2&ymin=-2&ymax=2&zmin=-10&zmax=10&xticks=5&yticks=9&zticks=10&equations[0]='1%20-%20(2%2F3)x%20-%20y'&colors[0]='6cb8d9'&alphas[0]=0.9&equations[1]='s%2C%202s%2C%20t'&sdomain[1]='-1,1'&tdomain[1]='-2,3'&colors[1]='d998b7'&alphas[1]=0.9&rotationMatrix=[-0.35,-0.08,0.93,0,0.93,-0.18,0.33,0,0.14,0.99,0.14,0,0,0,0,1]&dimensions=[600,600]" rendered="0" src="https://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&zscale=0&domain=2&numsamples=20&autozscale=1&showaxes=1&centeredaxes=1&xmin=-2&xmax=2&ymin=-2&ymax=2&zmin=-10&zmax=10&xticks=5&yticks=9&zticks=10&equations[0]='1%20-%20(2%2F3)x%20-%20y'&colors[0]='6cb8d9'&alphas[0]=0.9&equations[1]='s%2C%202s%2C%20t'&sdomain[1]='-1,1'&tdomain[1]='-2,3'&colors[1]='d998b7'&alphas[1]=0.9&rotationMatrix=[-0.35,-0.08,0.93,0,0.93,-0.18,0.33,0,0.14,0.99,0.14,0,0,0,0,1]&dimensions=[600,600]" id="iFrameResizer12" scrolling="no"/>
-
+@figure
+@caption{Intersection of planes}
+<iframe style="width:100%;height:500px" frameborder="0" src="http://localhost/~pschan-math/surfaceplot/?data=%7B%22sidebar%22%3A0%2C%22zscale%22%3A%220%22%2C%22domain%22%3A%222%22%2C%22numsamples%22%3A%2220%22%2C%22autozscale%22%3A%221%22%2C%22showaxes%22%3A%221%22%2C%22centeredaxes%22%3A%221%22%2C%22xmin%22%3A%22-2%22%2C%22xmax%22%3A%222%22%2C%22ymin%22%3A%22-2%22%2C%22ymax%22%3A%222%22%2C%22zmin%22%3A%22-10%22%2C%22zmax%22%3A%2210%22%2C%22xticks%22%3A%225%22%2C%22yticks%22%3A%229%22%2C%22zticks%22%3A%2210%22%2C%22equations%22%3A%5B%7B%22isParam%22%3Afalse%2C%22formula%22%3A%221%20-%20(2%2F3)x%20-%20y%22%2C%22color%22%3A%226cb8d9%22%2C%22alpha%22%3A%220.9%22%7D%2C%7B%22isParam%22%3Atrue%2C%22formula%22%3A%22s%2C%202s%2C%20t%22%2C%22domain%22%3A%7B%22s%22%3A%22-1.2%2C1%22%2C%22t%22%3A%22-2%2C3.5%22%7D%2C%22color%22%3A%22d998b7%22%2C%22alpha%22%3A%220.9%22%7D%5D%2C%22rotationMatrix%22%3A%5B-0.49%2C-0.4%2C0.77%2C0%2C0.88%2C-0.17%2C0.46%2C0%2C-0.05%2C0.9%2C0.45%2C0%2C0%2C0%2C0%2C1%5D%7D&dimensions=[480,480]"/>
+@end
 @col
 There are three variables and we work in 3-dimensional space.
 Each (linear) equation corresponds to a plane.
@@ -94,8 +96,10 @@ The following system of equations has no solutions, since the corresponding plan
 2x-y+0z=2,\\ 2x-y+0z=0.
 \end{cases}
 @newcol
-<iframe style="width: 100%; height: 700px; background: none; overflow: hidden;" frameborder="0" data-src="https://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&zscale=0&domain=1&numsamples=20&autozscale=1&showaxes=1&centeredaxes=1&xmin=-1&xmax=1&ymin=-1&ymax=1&zmin=-10&zmax=10&xticks=5&yticks=9&zticks=10&equations[0]='s%2C%202s%2C%20t'&sdomain[0]='-1,1'&tdomain[0]='-1,1'&colors[0]='d998b7'&alphas[0]=0.9&equations[1]='s%2C%202s%20-%202%2C%20t'&sdomain[1]='-1,1'&tdomain[1]='-1,1'&colors[1]='1dd1d9'&alphas[1]=0.9&rotationMatrix=[-0.76,-0.4,0.52,0,0.66,-0.31,0.7,0,-0.12,0.87,0.49,0,0,0,0,1]&dimensions=[600,600]" rendered="0" src="https://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&zscale=0&domain=1&numsamples=20&autozscale=1&showaxes=1&centeredaxes=1&xmin=-1&xmax=1&ymin=-1&ymax=1&zmin=-10&zmax=10&xticks=5&yticks=9&zticks=10&equations[0]='s%2C%202s%2C%20t'&sdomain[0]='-1,1'&tdomain[0]='-1,1'&colors[0]='d998b7'&alphas[0]=0.9&equations[1]='s%2C%202s%20-%202%2C%20t'&sdomain[1]='-1,1'&tdomain[1]='-1,1'&colors[1]='1dd1d9'&alphas[1]=0.9&rotationMatrix=[-0.76,-0.4,0.52,0,0.66,-0.31,0.7,0,-0.12,0.87,0.49,0,0,0,0,1]&dimensions=[600,600]" id="iFrameResizer13" scrolling="no"/>
-Parallel Planes
+@figure
+@caption{Parallel Planes}
+<iframe style="width:100%;height:500px" frameborder="0" src="http://localhost/~pschan-math/surfaceplot/?data=%7B%22sidebar%22%3A0%2C%22zscale%22%3A%220%22%2C%22domain%22%3A%222%22%2C%22numsamples%22%3A%2220%22%2C%22autozscale%22%3A%221%22%2C%22showaxes%22%3A%221%22%2C%22centeredaxes%22%3A%221%22%2C%22xmin%22%3A%22-2%22%2C%22xmax%22%3A%222%22%2C%22ymin%22%3A%22-2%22%2C%22ymax%22%3A%222%22%2C%22zmin%22%3A%22-10%22%2C%22zmax%22%3A%2210%22%2C%22xticks%22%3A%225%22%2C%22yticks%22%3A%229%22%2C%22zticks%22%3A%2210%22%2C%22equations%22%3A%5B%7B%22isParam%22%3Atrue%2C%22formula%22%3A%22s%2C%202s%2C%20t%22%2C%22domain%22%3A%7B%22s%22%3A%22-1%2C1%22%2C%22t%22%3A%22-1%2C1%22%7D%2C%22color%22%3A%22d998b7%22%2C%22alpha%22%3A%220.9%22%7D%2C%7B%22isParam%22%3Atrue%2C%22formula%22%3A%22s%2C%202s%20-%202%2C%20t%22%2C%22domain%22%3A%7B%22s%22%3A%22-1%2C1%22%2C%22t%22%3A%22-1%2C1%22%7D%2C%22color%22%3A%22a9d998%22%2C%22alpha%22%3A%220.9%22%7D%5D%2C%22rotationMatrix%22%3A%5B-0.89%2C-0.23%2C0.19%2C0%2C0.28%2C-0.38%2C0.82%2C0%2C-0.13%2C0.84%2C0.42%2C0%2C0%2C0%2C0%2C1%5D%7D&dimensions=[480,480]"/>
+@end
 @endcol
 @end
 @slide
@@ -109,26 +113,26 @@ More precisely, there are five cases:
 @ol
 @li
 All three planes are parallel to each other.
-We shall illustrate this by the following picture. 
 
-<iframe style="width: 100%; height: 700px; background: none; overflow: hidden;" frameborder="0" data-src="http://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&zscale=0&domain=10&numsamples=20&autozscale=0&showaxes=1&centeredaxes=1&xmin=-5&xmax=5&ymin=-5&ymax=5&zmin=-10&zmax=10&xticks=5&yticks=9&zticks=10&equations[0]='-y'&colors[0]='6cb8d9'&alphas[0]=0.9&equations[1]='-y%20-%203'&colors[1]='d998b7'&alphas[1]=0.9&equations[2]='-y%20%2B%203'&colors[2]='a9d998'&alphas[2]=0.9&rotationMatrix=[-0.47,-0.37,0.78,0,0.89,-0.19,0.43,0,-0.02,0.9,0.43,0,0,0,0,1]&dimensions=[600,600]" rendered="0" src="http://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&zscale=0&domain=10&numsamples=20&autozscale=0&showaxes=1&centeredaxes=1&xmin=-5&xmax=5&ymin=-5&ymax=5&zmin=-10&zmax=10&xticks=5&yticks=9&zticks=10&equations[0]='-y'&colors[0]='6cb8d9'&alphas[0]=0.9&equations[1]='-y%20-%203'&colors[1]='d998b7'&alphas[1]=0.9&equations[2]='-y%20%2B%203'&colors[2]='a9d998'&alphas[2]=0.9&rotationMatrix=[-0.47,-0.37,0.78,0,0.89,-0.19,0.43,0,-0.02,0.9,0.43,0,0,0,0,1]&dimensions=[600,600]" id="iFrameResizer14" scrolling="no"/><br/>
+<iframe style="width:100%;height:500px" frameborder="0" src="http://localhost/~pschan-math/surfaceplot/?data=%7B%22sidebar%22%3A0%2C%22zscale%22%3A%220%22%2C%22domain%22%3A%222%22%2C%22numsamples%22%3A%2220%22%2C%22autozscale%22%3A%221%22%2C%22showaxes%22%3A%221%22%2C%22centeredaxes%22%3A%221%22%2C%22xmin%22%3A%22-2%22%2C%22xmax%22%3A%222%22%2C%22ymin%22%3A%22-2%22%2C%22ymax%22%3A%222%22%2C%22zmin%22%3A%22-10%22%2C%22zmax%22%3A%2210%22%2C%22xticks%22%3A%225%22%2C%22yticks%22%3A%229%22%2C%22zticks%22%3A%2210%22%2C%22equations%22%3A%5B%7B%22isParam%22%3Afalse%2C%22formula%22%3A%22-x-y%22%2C%22color%22%3A%22a9d998%22%2C%22alpha%22%3A%220.9%22%7D%2C%7B%22isParam%22%3Afalse%2C%22formula%22%3A%225-x-y%22%2C%22color%22%3A%22989ad9%22%2C%22alpha%22%3A%220.9%22%7D%2C%7B%22isParam%22%3Afalse%2C%22formula%22%3A%22-3-x-y%22%2C%22color%22%3A%22d9a398%22%2C%22alpha%22%3A%220.9%22%7D%5D%2C%22rotationMatrix%22%3A%7B%220%22%3A-0.6681551756499045%2C%221%22%3A-0.3461336260898458%2C%222%22%3A0.6566204642988319%2C%223%22%3A0%2C%224%22%3A0.7397576828607286%2C%225%22%3A-0.17450758490192098%2C%226%22%3A0.6531423049608275%2C%227%22%3A0%2C%228%22%3A-0.11421297988147322%2C%229%22%3A0.924675165595799%2C%2210%22%3A0.3725877281603162%2C%2211%22%3A0%2C%2212%22%3A0%2C%2213%22%3A0%2C%2214%22%3A0%2C%2215%22%3A1%7D%7D&dimensions=[480,480]"/>
+<br/>
 @li
-Only two planes are parallel to each other. 
+Only two planes are parallel to each other.
 
-<iframe style="width: 100%; height: 700px; background: none; overflow: hidden;" frameborder="0" data-src="http://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&zscale=0&domain=10&numsamples=20&autozscale=0&showaxes=1&centeredaxes=1&xmin=-5&xmax=5&ymin=-5&ymax=5&zmin=-10&zmax=10&xticks=5&yticks=9&zticks=10&equations[0]='-2x%2By'&colors[0]='6cb8d9'&alphas[0]=0.9&equations[1]='-y%20-%203'&colors[1]='d998b7'&alphas[1]=0.9&equations[2]='-y%20%2B%203'&colors[2]='a9d998'&alphas[2]=0.9&rotationMatrix=[-0.39,-0.56,0.71,0,0.86,0.09,0.53,0,-0.37,0.81,0.46,0,0,0,0,1]&dimensions=[600,600]" rendered="0" src="http://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&zscale=0&domain=10&numsamples=20&autozscale=0&showaxes=1&centeredaxes=1&xmin=-5&xmax=5&ymin=-5&ymax=5&zmin=-10&zmax=10&xticks=5&yticks=9&zticks=10&equations[0]='-2x%2By'&colors[0]='6cb8d9'&alphas[0]=0.9&equations[1]='-y%20-%203'&colors[1]='d998b7'&alphas[1]=0.9&equations[2]='-y%20%2B%203'&colors[2]='a9d998'&alphas[2]=0.9&rotationMatrix=[-0.39,-0.56,0.71,0,0.86,0.09,0.53,0,-0.37,0.81,0.46,0,0,0,0,1]&dimensions=[600,600]" id="iFrameResizer15" scrolling="no"/><br/>
+<iframe style="width:100%;height:500px" frameborder="0" src="http://localhost/~pschan-math/surfaceplot/?data=%7B%22sidebar%22%3A0%2C%22zscale%22%3A%220%22%2C%22domain%22%3A%222%22%2C%22numsamples%22%3A%2220%22%2C%22autozscale%22%3A%221%22%2C%22showaxes%22%3A%221%22%2C%22centeredaxes%22%3A%221%22%2C%22xmin%22%3A%22-2%22%2C%22xmax%22%3A%222%22%2C%22ymin%22%3A%22-2%22%2C%22ymax%22%3A%222%22%2C%22zmin%22%3A%22-10%22%2C%22zmax%22%3A%2210%22%2C%22xticks%22%3A%225%22%2C%22yticks%22%3A%229%22%2C%22zticks%22%3A%2210%22%2C%22equations%22%3A%5B%7B%22isParam%22%3Afalse%2C%22formula%22%3A%22-5x%2By%22%2C%22color%22%3A%22a9d998%22%2C%22alpha%22%3A%220.9%22%7D%2C%7B%22isParam%22%3Afalse%2C%22formula%22%3A%225-x-y%22%2C%22color%22%3A%22989ad9%22%2C%22alpha%22%3A%220.9%22%7D%2C%7B%22isParam%22%3Afalse%2C%22formula%22%3A%22-3-x-y%22%2C%22color%22%3A%22d9a398%22%2C%22alpha%22%3A%220.9%22%7D%5D%2C%22rotationMatrix%22%3A%7B%220%22%3A-0.44780719442575995%2C%221%22%3A-0.43076271022781987%2C%222%22%3A0.781852392823963%2C%223%22%3A0%2C%224%22%3A0.8979821444653157%2C%225%22%3A-0.21278218901067344%2C%226%22%3A0.3906854689727617%2C%227%22%3A0%2C%228%22%3A-0.0045634344299610285%2C%229%22%3A0.8794823520016938%2C%2210%22%3A0.48308667451606263%2C%2211%22%3A0%2C%2212%22%3A0%2C%2213%22%3A0%2C%2214%22%3A0%2C%2215%22%3A1%7D%7D&dimensions=[480,480]"/>
 @li
 The intersection of each pair of planes is a line and
-three such lines are parallel to each other. 
+three such lines are parallel to each other.
 
-<iframe style="width: 100%; height: 700px; background: none; overflow: hidden;" frameborder="0" data-src="http://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&zscale=0&domain=10&numsamples=20&autozscale=1&showaxes=1&centeredaxes=1&xmin=-5&xmax=5&ymin=-5&ymax=5&zmin=-10&zmax=10&xticks=5&yticks=9&zticks=10&equations[0]='-1'&colors[0]='6cb8d9'&alphas[0]=0.9&equations[1]='(y%2B1)'&colors[1]='d998b7'&alphas[1]=0.9&equations[2]='-y%20%2B%201'&colors[2]='a9d998'&alphas[2]=0.9&rotationMatrix=[-0.32,-0.45,0.81,0,0.96,-0.15,0.29,0,-0.01,0.88,0.49,0,0,0,0,1]&dimensions=[600,600]" rendered="0" src="http://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&zscale=0&domain=10&numsamples=20&autozscale=1&showaxes=1&centeredaxes=1&xmin=-5&xmax=5&ymin=-5&ymax=5&zmin=-10&zmax=10&xticks=5&yticks=9&zticks=10&equations[0]='-1'&colors[0]='6cb8d9'&alphas[0]=0.9&equations[1]='(y%2B1)'&colors[1]='d998b7'&alphas[1]=0.9&equations[2]='-y%20%2B%201'&colors[2]='a9d998'&alphas[2]=0.9&rotationMatrix=[-0.32,-0.45,0.81,0,0.96,-0.15,0.29,0,-0.01,0.88,0.49,0,0,0,0,1]&dimensions=[600,600]" id="iFrameResizer16" scrolling="no"/><br/>
+<iframe style="width:100%;height:500px" frameborder="0" src="http://localhost/~pschan-math/surfaceplot/?data=%7B%22sidebar%22%3A0%2C%22zscale%22%3A%220%22%2C%22domain%22%3A%224%22%2C%22numsamples%22%3A%2220%22%2C%22autozscale%22%3A%221%22%2C%22showaxes%22%3A%221%22%2C%22centeredaxes%22%3A%221%22%2C%22xmin%22%3A%22-4%22%2C%22xmax%22%3A%224%22%2C%22ymin%22%3A%22-4%22%2C%22ymax%22%3A%224%22%2C%22zmin%22%3A%22-10%22%2C%22zmax%22%3A%2210%22%2C%22xticks%22%3A%225%22%2C%22yticks%22%3A%229%22%2C%22zticks%22%3A%2210%22%2C%22equations%22%3A%5B%7B%22isParam%22%3Afalse%2C%22formula%22%3A%221%2By%22%2C%22color%22%3A%22a9d998%22%2C%22alpha%22%3A%220.9%22%7D%2C%7B%22isParam%22%3Afalse%2C%22formula%22%3A%22-0.5%22%2C%22color%22%3A%22989ad9%22%2C%22alpha%22%3A%220.9%22%7D%2C%7B%22isParam%22%3Afalse%2C%22formula%22%3A%221-y%22%2C%22color%22%3A%22d9a398%22%2C%22alpha%22%3A%220.9%22%7D%5D%2C%22rotationMatrix%22%3A%7B%220%22%3A-0.36834073393728306%2C%221%22%3A-0.37969840344556705%2C%222%22%3A0.847071306234456%2C%223%22%3A0%2C%224%22%3A0.9313329355701181%2C%225%22%3A-0.20870204743694964%2C%226%22%3A0.30552003366904357%2C%227%22%3A0%2C%228%22%3A0.05829691910576267%2C%229%22%3A0.9039839705094088%2C%2210%22%3A0.4316178948420431%2C%2211%22%3A0%2C%2212%22%3A0%2C%2213%22%3A0%2C%2214%22%3A0%2C%2215%22%3A1%7D%7D&dimensions=[480,480]"/>
 @li
-Their intersection is a line. 
+Their intersection is a line.
 
-<iframe style="width: 100%; height: 700px; background: none; overflow: hidden;" frameborder="0" data-src="http://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&zscale=0&domain=10&numsamples=20&autozscale=1&showaxes=1&centeredaxes=1&xmin=-5&xmax=5&ymin=-5&ymax=5&zmin=-10&zmax=10&xticks=5&yticks=9&zticks=10&equations[0]='1'&colors[0]='6cb8d9'&alphas[0]=0.9&equations[1]='(y%2B1)'&colors[1]='d998b7'&alphas[1]=0.9&equations[2]='-y%20%2B%201'&colors[2]='a9d998'&alphas[2]=0.9&rotationMatrix=[-0.37,-0.52,0.74,0,0.94,-0.17,0.34,0,-0.06,0.84,0.56,0,0,0,0,1]&dimensions=[600,600]" rendered="0" src="http://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&zscale=0&domain=10&numsamples=20&autozscale=1&showaxes=1&centeredaxes=1&xmin=-5&xmax=5&ymin=-5&ymax=5&zmin=-10&zmax=10&xticks=5&yticks=9&zticks=10&equations[0]='1'&colors[0]='6cb8d9'&alphas[0]=0.9&equations[1]='(y%2B1)'&colors[1]='d998b7'&alphas[1]=0.9&equations[2]='-y%20%2B%201'&colors[2]='a9d998'&alphas[2]=0.9&rotationMatrix=[-0.37,-0.52,0.74,0,0.94,-0.17,0.34,0,-0.06,0.84,0.56,0,0,0,0,1]&dimensions=[600,600]" id="iFrameResizer17" scrolling="no"/><br/>
+<iframe style="width:100%;height:500px" frameborder="0" src="http://localhost/~pschan-math/surfaceplot/?data=%7B%22sidebar%22%3A0%2C%22zscale%22%3A%220%22%2C%22domain%22%3A%224%22%2C%22numsamples%22%3A%2220%22%2C%22autozscale%22%3A%221%22%2C%22showaxes%22%3A%221%22%2C%22centeredaxes%22%3A%221%22%2C%22xmin%22%3A%22-4%22%2C%22xmax%22%3A%224%22%2C%22ymin%22%3A%22-4%22%2C%22ymax%22%3A%224%22%2C%22zmin%22%3A%22-10%22%2C%22zmax%22%3A%2210%22%2C%22xticks%22%3A%225%22%2C%22yticks%22%3A%229%22%2C%22zticks%22%3A%2210%22%2C%22equations%22%3A%5B%7B%22isParam%22%3Afalse%2C%22formula%22%3A%221%2By%22%2C%22color%22%3A%22a9d998%22%2C%22alpha%22%3A%220.9%22%7D%2C%7B%22isParam%22%3Afalse%2C%22formula%22%3A%221%22%2C%22color%22%3A%22989ad9%22%2C%22alpha%22%3A%220.9%22%7D%2C%7B%22isParam%22%3Afalse%2C%22formula%22%3A%221-y%22%2C%22color%22%3A%22d9a398%22%2C%22alpha%22%3A%220.9%22%7D%5D%2C%22rotationMatrix%22%3A%7B%220%22%3A-0.6923530853172555%2C%221%22%3A-0.2321299161520656%2C%222%22%3A0.6812730367202934%2C%223%22%3A0%2C%224%22%3A0.7254173801075492%2C%225%22%3A-0.19681138467460027%2C%226%22%3A0.662805866347692%2C%227%22%3A0%2C%228%22%3A-0.02224389185846868%2C%229%22%3A0.9558860896399896%2C%2210%22%3A0.30440803551162765%2C%2211%22%3A0%2C%2212%22%3A0%2C%2213%22%3A0%2C%2214%22%3A0%2C%2215%22%3A1%7D%7D&dimensions=[480,480]"/>
 @li
-Their intersection is a point, e.g. the xy-plane, yz-plane and zx-plane intersect at $(0,0,0)$. 
+Their intersection is a point, e.g. the xy-plane, yz-plane and zx-plane intersect at $(0,0,0)$.
 
-<iframe style="width: 100%; height: 700px; background: none; overflow: hidden;" frameborder="0" data-src="http://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&zscale=0&domain=10&numsamples=20&autozscale=1&showaxes=1&centeredaxes=1&xmin=-5&xmax=5&ymin=-5&ymax=5&zmin=-10&zmax=10&xticks=5&yticks=9&zticks=10&equations[0]='-1.15x%2B1'&colors[0]='6cb8d9'&alphas[0]=0.9&equations[1]='(.5y%2B1)'&colors[1]='d998b7'&alphas[1]=0.9&equations[2]='-y%20%2B%201'&colors[2]='a9d998'&alphas[2]=0.9&rotationMatrix=[-0.48,-0.61,0.58,0,0.88,-0.29,0.4,0,-0.1,0.73,0.69,0,0,0,0,1]&dimensions=[600,600]" rendered="0" src="http://www.math.cuhk.edu.hk/~pschan/surfaceplot/index.php?sidebar=0&zscale=0&domain=10&numsamples=20&autozscale=1&showaxes=1&centeredaxes=1&xmin=-5&xmax=5&ymin=-5&ymax=5&zmin=-10&zmax=10&xticks=5&yticks=9&zticks=10&equations[0]='-1.15x%2B1'&colors[0]='6cb8d9'&alphas[0]=0.9&equations[1]='(.5y%2B1)'&colors[1]='d998b7'&alphas[1]=0.9&equations[2]='-y%20%2B%201'&colors[2]='a9d998'&alphas[2]=0.9&rotationMatrix=[-0.48,-0.61,0.58,0,0.88,-0.29,0.4,0,-0.1,0.73,0.69,0,0,0,0,1]&dimensions=[600,600]" id="iFrameResizer18" scrolling="no"/><br/>
+<iframe style="width:100%;height:500px" frameborder="0" src="http://localhost/~pschan-math/surfaceplot/?data=%7B%22sidebar%22%3A0%2C%22zscale%22%3A%220%22%2C%22domain%22%3A%224%22%2C%22numsamples%22%3A%2220%22%2C%22autozscale%22%3A%221%22%2C%22showaxes%22%3A%221%22%2C%22centeredaxes%22%3A%221%22%2C%22xmin%22%3A%22-4%22%2C%22xmax%22%3A%224%22%2C%22ymin%22%3A%22-4%22%2C%22ymax%22%3A%224%22%2C%22zmin%22%3A%22-10%22%2C%22zmax%22%3A%2210%22%2C%22xticks%22%3A%225%22%2C%22yticks%22%3A%229%22%2C%22zticks%22%3A%2210%22%2C%22equations%22%3A%5B%7B%22isParam%22%3Afalse%2C%22formula%22%3A%221%2By%22%2C%22color%22%3A%22a9d998%22%2C%22alpha%22%3A%220.9%22%7D%2C%7B%22isParam%22%3Afalse%2C%22formula%22%3A%22-1.5x%22%2C%22color%22%3A%22d1cde5%22%2C%22alpha%22%3A%220.9%22%7D%2C%7B%22isParam%22%3Afalse%2C%22formula%22%3A%221-y%22%2C%22color%22%3A%22d9a398%22%2C%22alpha%22%3A%220.9%22%7D%5D%2C%22rotationMatrix%22%3A%7B%220%22%3A-0.6189590598260968%2C%221%22%3A-0.6190820285370049%2C%222%22%3A0.4806108751181716%2C%223%22%3A0%2C%224%22%3A0.7809725093402085%2C%225%22%3A-0.3916293095051436%2C%226%22%3A0.490892887347542%2C%227%22%3A0%2C%228%22%3A-0.11847570790746975%2C%229%22%3A0.6813982580024979%2C%2210%22%3A0.7269975257202569%2C%2211%22%3A0%2C%2212%22%3A0%2C%2213%22%3A0%2C%2214%22%3A0%2C%2215%22%3A1%7D%7D&dimensions=[480,480]"/>
 @endol
 @end
 @remark
@@ -171,9 +175,12 @@ produces the vector $b$ on the right side.
 Note that the vector $b$ is in fact identified with the pint whose coordinates are $-5$ and $5$.
 In this case, we look for the combination of $\vvec{2}{1}$ (red vector)
 and $\vvec{-3}{1}$ (blue vector) to produce $\vvec{-5}{5}$ (black vector),
-cf. Figure @ref{fig:vec} .
+cf. Figure
+@ref{fig:vec}
+.
 
-Combinations of vectors <div class="image">
+Combinations of vectors
+<div class="image">
 <img rendered="0" src="content/math1030/fig_vec_com.png" style="width: 100%; max-height: 100%; background: none;"/></div>
 @endcol
 @end
@@ -181,7 +188,11 @@ Combinations of vectors <div class="image">
 @slide
 @eg
 @newcol
-In @ref{ex:2} and @ref{ex:3} ,
+In
+@ref{ex:2}
+and
+@ref{ex:3}
+,
 the corresponding equations are
 \[
 x\vvec{2}{2}+y\vvec{-3}{-3}=\vvec{-5}{0}.
@@ -192,9 +203,14 @@ x\vvec{2}{2}+y\vvec{-3}{-3}=\vvec{-5}{-5},
 \]
 respectively.
 The two vectors colinear.
-When the target vector is not colinear with them, there is no solution ( @ref{ex:2} )
+When the target vector is not colinear with them, there is no solution (
+@ref{ex:2}
+)
 and when the target vector is colinear with them,
-there are infinitely many solutions ( @ref{ex:3} ). <center>
+there are infinitely many solutions (
+@ref{ex:3}
+).
+<center>
 <script type="text/tikz">
 \begin{tikzpicture}[domain=0:4,scale=.8,arrow/.style={->,>=stealth,thick}]
 \draw[ultra thick,->] (-3,-3)to(-5,-5) node[below] {(-5,-5)};
@@ -221,13 +237,16 @@ z\begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix}=
 \]
 
 @col
-Vectors in 3 Dimensions <center>
+Vectors in 3 Dimensions
+<center>
 <img rendered="0" src="content/math1030/fig_cube.png" style="height: 560px; width: auto; background: none;"/></center>
 
 @col
 One sees that the solution is $x=3, y=4,z=5$,
 which corresponds to the scaling of the red vectors so that
-the sum of the rescaled vectors is the blue vector in @ref{fig:cube} .
+the sum of the rescaled vectors is the blue vector in
+@ref{fig:cube}
+.
 More precisely, we have multiplication by scalars
 \[
 %    \text{\bf{}}:
@@ -279,12 +298,14 @@ Then there are two cases:
 
 @itemize
 @item
-<strong>No solution:</strong> When
+<strong>No solution:</strong>
+When
 \[b=b_0=\begin{bmatrix}0\\1\\1\end{bmatrix}\]
 is not in $P$, then there is no solution.
 
 @item
-<strong>Infinite solution:</strong> When \[b=b_\infty=\begin{bmatrix}3\\ -1\\ -1\end{bmatrix}\]
+<strong>Infinite solution:</strong>
+When \[b=b_\infty=\begin{bmatrix}3\\ -1\\ -1\end{bmatrix}\]
 is in $P$, it may have infinite solution.
 @enditemize
 @endcol
