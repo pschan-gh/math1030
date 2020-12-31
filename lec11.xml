@@ -68,9 +68,9 @@
             <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" serial="" slide="4">
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Span of a Set of Vectors</paragraphs>
             </title>
-            <!--
+            <comment course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="">
 We saw that the solution set of a homogeneous system can be described as all possible linear combinations of two particular sets of vectors. This is a useful way to construct or describe infinite sets of vectors, so we encapsulate the idea in a definition.
--->
+</comment>
             <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="1" title="Span of a Set of Column Vectors" md5="7d786cb9f64eb34c3e0c43aedbb98509" course="Math 1030" chapter="11" slide="4" item="11.1">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" serial="" slide="4">Span of a Set of Column Vectors</title>
               <label wbtag="label" name="SSCV" type="Definition"/>
@@ -113,7 +113,7 @@ Then
 \end{align*}
 is in $\left&lt; S \right&gt;$.
 Thus by </paragraphs>
-                <ref environment="newcol" chapter_type="" label="b97161010780aa4b703cb89b1294f822" wbtag="ref" course="Math 1030" chapter="11" slide="5" src-course="MATH 1030" src-chapter="9" src-slide="123" type="Theorem" item="9.23" src-filename="lecs1-20.xml" md5="b97161010780aa4b703cb89b1294f822" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="b97161010780aa4b703cb89b1294f822" wbtag="ref" course="Math 1030" chapter="11" slide="5" src-course="Math 1030" src-chapter="9" src-slide="13" type="Theorem" item="9.23" src-filename="lec9.xml" md5="b97161010780aa4b703cb89b1294f822" class="lcref" serial="">
                   <title>Theorem 9.23</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $W$ is a subspace. </paragraphs>
@@ -495,7 +495,7 @@ and thus $\mathbf{v}\not\in\left&lt; S \right&gt;$.</paragraphs>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Span of a Set of Vectors">
             <keywords slide="10" environ="slide" chapter="11" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="7" md5="485ff86c4b94690d4dba3702efab0da1" course="Math 1030" chapter="11" slide="10" item="11.7">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="7" md5="7783567c1c04c836da8c03d1d1a9e9a1" course="Math 1030" chapter="11" slide="10" item="11.7">
               <label wbtag="label" name="SCAA" type="Example"/>
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Consider:
 \begin{align*}
@@ -509,11 +509,11 @@ and thus $\mathbf{v}\not\in\left&lt; S \right&gt;$.</paragraphs>
 \end{align*}
 and consider the infinite set $\left&lt; S \right&gt;$.</paragraphs>
               <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
-              <!-- First, as an example, note that
+              <comment course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"> First, as an example, note that
 \begin{align*}
 \displaystyle \mathbf{v}=(5)\begin{bmatrix}1\\
 2\\
-1\end{bmatrix}+(&#45;3)\begin{bmatrix}&#45;1\\
+1\end{bmatrix}+(-3)\begin{bmatrix}-1\\
 1\\
 1\end{bmatrix}+(7)\begin{bmatrix}2\\
 1\\
@@ -521,10 +521,10 @@ and consider the infinite set $\left&lt; S \right&gt;$.</paragraphs>
 14\\
 2\end{bmatrix}
 \end{align*}
-is in $\left< S \right>$, since it is a linear combination of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}$. There is nothing magical about the scalars $\alpha_{1}=5,\,\alpha_{2}=&#45;3,\,\alpha_{3}=7$; they can be chosen arbitrarily. So repeat this part of the example yourself, using different values of $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$. What happens if you choose all three scalars to be zero?
+is in $\left&lt; S \right&gt;$, since it is a linear combination of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}$. There is nothing magical about the scalars $\alpha_{1}=5,\,\alpha_{2}=-3,\,\alpha_{3}=7$; they can be chosen arbitrarily. So repeat this part of the example yourself, using different values of $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$. What happens if you choose all three scalars to be zero?
 
 
-So we know how to quickly construct sample elements of the set $\left< S \right>$. A slightly different question arises when you are handed a vector of the correct size and asked if it is an element of $\left< S \right>$. For example, is -->
+So we know how to quickly construct sample elements of the set $\left&lt; S \right&gt;$. A slightly different question arises when you are handed a vector of the correct size and asked if it is an element of $\left&lt; S \right&gt;$. For example, is </comment>
               <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Does $\mathbf{w}=\begin{bmatrix}1\\
 8\\
@@ -627,7 +627,7 @@ So there are no scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ that will create 
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="11" id="s11" slide="11" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Span of a Set of Vectors">
             <keywords slide="11" environ="slide" chapter="11" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="8" md5="807e4ccb4b188b92a92ec4d56b6987e4" course="Math 1030" chapter="11" slide="11" item="11.8">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="8" md5="f6dec5dd04e4b2c542b0cff772785b0a" course="Math 1030" chapter="11" slide="11" item="11.8">
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let
 \begin{align*}
 \displaystyle R=\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}\}=\left\{\begin{bmatrix}-7\\
@@ -639,23 +639,23 @@ So there are no scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ that will create 
 4\end{bmatrix}\right\}
 \end{align*}
 and consider its span $\left&lt; R \right&gt;$. </paragraphs>
-              <!--
+              <comment course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">
 First, as an example, note that
 \begin{align*}
-\displaystyle \mathbf{x}=(2)\begin{bmatrix}&#45;7\\
+\displaystyle \mathbf{x}=(2)\begin{bmatrix}-7\\
 5\\
-1\end{bmatrix}+(4)\begin{bmatrix}&#45;6\\
+1\end{bmatrix}+(4)\begin{bmatrix}-6\\
 5\\
-0\end{bmatrix}+(&#45;3)\begin{bmatrix}&#45;12\\
+0\end{bmatrix}+(-3)\begin{bmatrix}-12\\
 7\\
-4\end{bmatrix}=\begin{bmatrix}&#45;2\\
+4\end{bmatrix}=\begin{bmatrix}-2\\
 9\\
-&#45;10\end{bmatrix}
+-10\end{bmatrix}
 \end{align*}
-is in $\left< R \right>$, since it is a linear combination of $\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}$. In other words, $\mathbf{x}\in\left< R \right>$. Try some different values of $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ yourself, and see what vectors you can create as elements of $\left< R \right>$.
+is in $\left&lt; R \right&gt;$, since it is a linear combination of $\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}$. In other words, $\mathbf{x}\in\left&lt; R \right&gt;$. Try some different values of $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ yourself, and see what vectors you can create as elements of $\left&lt; R \right&gt;$.
 
 
-Now ask if a given vector is an element of $\left< R \right>$. For example, is -->
+Now ask if a given vector is an element of $\left&lt; R \right&gt;$. For example, is </comment>
               <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
               <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Does the vector$\mathbf{z}=\begin{bmatrix}-33\\
@@ -725,7 +725,7 @@ telling us that
 So we are convinced that $\mathbf{x}$ really is in $\left&lt; R \right&gt;$. Notice that in this case we again have only one way to answer the question affirmatively since the solution is again unique.</paragraphs>
                       <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
                       <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">We could continue to test other vectors for membership in $\left&lt; R \right&gt;$, but there is no point. A question about membership in $\left&lt; R \right&gt;$ inevitably leads to a system of three equations in the three variables $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ with a coefficient matrix whose columns are the vectors $\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}$. This particular coefficient matrix is nonsingular, so by </paragraphs>
-                      <ref environment="newcol" chapter_type="" label="NME1" wbtag="ref" course="Math 1030" chapter="11" slide="11" src-course="MATH 1030" src-chapter="8" src-slide="109" type="Theorem" item="8.21" src-filename="lecs1-20.xml" md5="808546fe65838e425f3533c348d23441" class="lcref" serial="">
+                      <ref environment="newcol" chapter_type="" label="NME1" wbtag="ref" course="Math 1030" chapter="11" slide="11" src-course="Math 1030" src-chapter="8" src-slide="21" type="Theorem" item="8.21" src-filename="lec8.xml" md5="808546fe65838e425f3533c348d23441" class="lcref" serial="">
                         <title>Nonsingular Matrix Equivalences</title>
                       </ref>
                       <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> the system is guaranteed to have a solution. (This solution is unique, but that is not critical here.) So no matter which vector we might have chosen for $\mathbf{z}$, we are certain to discover that it was an element of $\left&lt; R \right&gt;$.</paragraphs>
@@ -752,7 +752,7 @@ So we are convinced that $\mathbf{x}$ really is in $\left&lt; R \right&gt;$. Not
                 <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If $A$ is non-singular, then for every $\mathbf{b}\in{\mathbb{R}}^{m}$ the equation $\mathcal{LS}({A},{\mathbf{b}})$ is consistent
 by </paragraphs>
-                  <ref environment="newcol" chapter_type="" label="b25e99edb5cb21a0655d0d961da21e47" wbtag="ref" course="Math 1030" chapter="11" slide="11" src-course="MATH 1030" src-chapter="8" src-slide="108" type="Theorem" item="8.20" src-filename="lecs1-20.xml" md5="b25e99edb5cb21a0655d0d961da21e47" class="lcref" serial="">
+                  <ref environment="newcol" chapter_type="" label="b25e99edb5cb21a0655d0d961da21e47" wbtag="ref" course="Math 1030" chapter="11" slide="11" src-course="Math 1030" src-chapter="8" src-slide="20" type="Theorem" item="8.20" src-filename="lec8.xml" md5="b25e99edb5cb21a0655d0d961da21e47" class="lcref" serial="">
                     <title>Nonsingular Matrices and Unique Solutions</title>
                   </ref>
                   <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. Hence $\mathbf{b}\in\left&lt; S \right&gt;$. So ${\mathbb{R}}^{m}=\left&lt; S \right&gt;$. </paragraphs>
