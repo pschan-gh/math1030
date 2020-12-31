@@ -59,7 +59,7 @@
         <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" serial="11.1" slide="">
           <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Span of a Set of Vectors</paragraphs>
         </title>
-        <label course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="label" name="SSV" type="Section"/>
+        <label wbtag="label" name="SSV" type="Section"/>
         <slides environment="" chapter_type="">
           <slide environment="" chapter_type="Chapter" canon_num="4" scope="section" id="s4" slide="4" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Span of a Set of Vectors">
             <keywords slide="4" environ="slide" chapter="11" course="Math 1030">
@@ -68,14 +68,12 @@
             <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" serial="" slide="4">
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Span of a Set of Vectors</paragraphs>
             </title>
-            <paragraphs>
-              <!--
+            <!--
 We saw that the solution set of a homogeneous system can be described as all possible linear combinations of two particular sets of vectors. This is a useful way to construct or describe infinite sets of vectors, so we encapsulate the idea in a definition.
 -->
-            </paragraphs>
             <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="1" title="Span of a Set of Column Vectors" md5="7d786cb9f64eb34c3e0c43aedbb98509" course="Math 1030" chapter="11" slide="4" item="11.1">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" serial="" slide="4">Span of a Set of Column Vectors</title>
-              <label course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="label" name="SSCV" type="Definition"/>
+              <label wbtag="label" name="SSCV" type="Definition"/>
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Given a set of vectors
 \begin{align*}
 \displaystyle S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\},
@@ -142,7 +140,7 @@ Thus by </paragraphs>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="6" id="s6" slide="6" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Span of a Set of Vectors">
             <keywords slide="6" environ="slide" chapter="11" course="Math 1030"/>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="3" md5="5a63882fd060b1d95c9040559156f5cd" course="Math 1030" chapter="11" slide="6" item="11.3">
-              <label course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="label" name="ABS" type="Example"/>
+              <label wbtag="label" name="ABS" type="Example"/>
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Consider the following set of 5 vectors, $S$, from ${\mathbb{R}}^{4}$:
 \begin{align*}
 \displaystyle S=\left\{\begin{bmatrix}1\\
@@ -498,7 +496,7 @@ and thus $\mathbf{v}\not\in\left&lt; S \right&gt;$.</paragraphs>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Span of a Set of Vectors">
             <keywords slide="10" environ="slide" chapter="11" course="Math 1030"/>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="7" md5="485ff86c4b94690d4dba3702efab0da1" course="Math 1030" chapter="11" slide="10" item="11.7">
-              <label course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="label" name="SCAA" type="Example"/>
+              <label wbtag="label" name="SCAA" type="Example"/>
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Consider:
 \begin{align*}
 \displaystyle S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}\}=\left\{\begin{bmatrix}1\\
@@ -511,8 +509,7 @@ and thus $\mathbf{v}\not\in\left&lt; S \right&gt;$.</paragraphs>
 \end{align*}
 and consider the infinite set $\left&lt; S \right&gt;$.</paragraphs>
               <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
-              <paragraphs>
-                <!-- First, as an example, note that
+              <!-- First, as an example, note that
 \begin{align*}
 \displaystyle \mathbf{v}=(5)\begin{bmatrix}1\\
 2\\
@@ -528,7 +525,6 @@ is in $\left< S \right>$, since it is a linear combination of $\mathbf{u}_{1},\,
 
 
 So we know how to quickly construct sample elements of the set $\left< S \right>$. A slightly different question arises when you are handed a vector of the correct size and asked if it is an element of $\left< S \right>$. For example, is -->
-              </paragraphs>
               <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Does $\mathbf{w}=\begin{bmatrix}1\\
 8\\
@@ -643,8 +639,7 @@ So there are no scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ that will create 
 4\end{bmatrix}\right\}
 \end{align*}
 and consider its span $\left&lt; R \right&gt;$. </paragraphs>
-              <paragraphs>
-                <!--
+              <!--
 First, as an example, note that
 \begin{align*}
 \displaystyle \mathbf{x}=(2)\begin{bmatrix}&#45;7\\
@@ -661,7 +656,6 @@ is in $\left< R \right>$, since it is a linear combination of $\mathbf{v}_{1},\,
 
 
 Now ask if a given vector is an element of $\left< R \right>$. For example, is -->
-              </paragraphs>
               <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
               <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Does the vector$\mathbf{z}=\begin{bmatrix}-33\\
@@ -747,7 +741,7 @@ So we are convinced that $\mathbf{x}$ really is in $\left&lt; R \right&gt;$. Not
             </statement>
             <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs"> The example above inspires the following result: </paragraphs>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="9" md5="601edc1e272a16fe6fee81ac3c885d94" course="Math 1030" chapter="11" slide="11" item="11.9">
-              <label course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="label" name="thm:ANSRM" type="Theorem"/>
+              <label wbtag="label" name="thm:ANSRM" type="Theorem"/>
               <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Given $m$ vectors $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{m}\}$ in ${\mathbb{R}}^{m}$, let $A$ be the $m\times m$ square matrix whose $i$-th column is $\mathbf{u}_{i}$. Then $A$ is non-singular if and only if $\left&lt; S \right&gt;={\mathbb{R}}^{m}$. </paragraphs>
               </newcol>
@@ -801,7 +795,7 @@ Thus $\mathbf{c}\notin\left&lt; S \right&gt;$. So $\left&lt; S \right&gt;\neq{\m
             <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">The following theorem describe how to express a null space as $\left&lt; S \right&gt;$. </paragraphs>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="10" title="Spanning Sets for Null Spaces" md5="f25c2375544217fa74d875bec0504a3b" course="Math 1030" chapter="11" slide="12" item="11.10">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="11" section="2" subsection="" subsubsection="" serial="" slide="12">Spanning Sets for Null Spaces</title>
-              <label course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="label" name="SSNS" type="Theorem"/>
+              <label wbtag="label" name="SSNS" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is an $m\times n$ matrix and $B$ is a row-equivalent matrix in reduced row-echelon form. Suppose that $B$ has $r$ pivot columns, with indices given by $D=\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\}$, while the $n-r$ non-pivot columns have indices $F=\{f_{1},\,f_{2},\,f_{3},\,\ldots,\,f_{n-r}\}$. Construct the $n-r$ vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$ of size $n$,
 \begin{align*}
 \displaystyle \left[\mathbf{z}_{j}\right]_{i}=\begin{cases}1&amp;\text{if $i\in F$, $i=f_{j}$}\\

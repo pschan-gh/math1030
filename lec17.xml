@@ -59,7 +59,7 @@
         <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="17" section="1" subsection="" subsubsection="" serial="17.1" slide="">
           <paragraphs course="Math 1030" chapter="17" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Solution Inverse</paragraphs>
         </title>
-        <label course="Math 1030" chapter="17" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="label" name="SI" type="Section"/>
+        <label wbtag="label" name="SI" type="Section"/>
         <slides environment="" chapter_type="">
           <slide environment="" chapter_type="Chapter" canon_num="3" scope="section" id="s3" slide="3" course="Math 1030" chapter="17" section="1" subsection="" subsubsection="" chapter_title="Inverse" section_title="Solution Inverse">
             <keywords slide="3" environ="slide" chapter="17" course="Math 1030"/>
@@ -355,7 +355,7 @@ Later we will have some theorems that allow us to more quickly and easily determ
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="5" title="Two-by-Two Matrix Inverse" md5="bd90c5be3c1a2d24dec38d5b8a07de30" course="Math 1030" chapter="17" slide="9" item="17.5">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="3" subsection="" subsubsection="" serial="" slide="9">Two-by-Two Matrix Inverse</title>
-              <label course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="label" name="TTMI" type="Theorem"/>
+              <label wbtag="label" name="TTMI" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose
 \begin{align*}
 \displaystyle A=\begin{bmatrix}a&amp;b\\
@@ -813,7 +813,7 @@ dg&amp;dh\end{bmatrix}
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="8" title="Computing the Inverse of a Nonsingular Matrix" md5="b48f8d1ae208f776e81edfbd0f5b8689" course="Math 1030" chapter="17" slide="11" item="17.8">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="3" subsection="" subsubsection="" serial="" slide="11">Computing the Inverse of a Nonsingular Matrix</title>
-              <label course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="label" name="CINM" type="Theorem"/>
+              <label wbtag="label" name="CINM" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is a nonsingular square matrix of size $n$. Create the $n\times 2n$ matrix $M$ by placing the $n\times n$ identity matrix $I_{n}$ to the right of the matrix $A$. Let $N$ be a matrix that is row-equivalent to $M$ and in reduced row-echelon form. Finally, let $J$ be the matrix formed from the final $n$ columns of $N$. Then $AJ=I_{n}$. </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="56ad2c3acdd603709712431a5053dc9a" course="Math 1030" chapter="17" slide="11" of="b48f8d1ae208f776e81edfbd0f5b8689">
@@ -900,7 +900,7 @@ We will solve it later. </paragraphs>
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="10" title="Matrix Inverse is Unique" md5="e7cfd964523b1498bcd734d205d17877" course="Math 1030" chapter="17" slide="14" item="17.10">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="4" subsection="" subsubsection="" serial="" slide="14">Matrix Inverse is Unique</title>
-              <label course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="label" name="MIU" type="Theorem"/>
+              <label wbtag="label" name="MIU" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose the square matrix $A$ has an inverse. Then $A^{-1}$ is unique. </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="21257fd89359e91fcbf3775ecba2cde5" course="Math 1030" chapter="17" slide="14" of="e7cfd964523b1498bcd734d205d17877">
@@ -931,7 +931,7 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="11" title="Socks and Shoes" md5="3755d92c6ae0d761677a97cffec62a4f" course="Math 1030" chapter="17" slide="15" item="17.11">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="4" subsection="" subsubsection="" serial="" slide="15">Socks and Shoes</title>
-              <label course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="label" name="SS" type="Theorem"/>
+              <label wbtag="label" name="SS" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ and $B$ are invertible matrices of size $n$. Then $AB$ is an invertible matrix and $(AB)^{-1}=B^{-1}A^{-1}$. </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="16a5f7497d532d3fbbc04a9cf6a8a3fd" course="Math 1030" chapter="17" slide="15" of="3755d92c6ae0d761677a97cffec62a4f">
@@ -960,7 +960,7 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="12" title="Matrix Inverse of a Matrix Inverse" md5="1a050f32d011db2467b14389220c9790" course="Math 1030" chapter="17" slide="16" item="17.12">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="4" subsection="" subsubsection="" serial="" slide="16">Matrix Inverse of a Matrix Inverse</title>
-              <label course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="label" name="MIMI" type="Theorem"/>
+              <label wbtag="label" name="MIMI" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is an invertible matrix. Then $A^{-1}$ is invertible and $(A^{-1})^{-1}=A$. </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="cd34dd59e6e30f8c68a074f8857483c7" course="Math 1030" chapter="17" slide="16" of="1a050f32d011db2467b14389220c9790">
@@ -984,7 +984,7 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="13" title="Matrix Inverse of a Transpose" md5="ae30517ce3adde6fc3a9a4513ef5b5f2" course="Math 1030" chapter="17" slide="17" item="17.13">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="4" subsection="" subsubsection="" serial="" slide="17">Matrix Inverse of a Transpose</title>
-              <label course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="label" name="MIT" type="Theorem"/>
+              <label wbtag="label" name="MIT" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is an invertible matrix. Then $A^{t}$ is invertible and $(A^{t})^{-1}=(A^{-1})^{t}$. </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="1245e29900e802a7663ce605ddc05555" course="Math 1030" chapter="17" slide="17" of="ae30517ce3adde6fc3a9a4513ef5b5f2">
@@ -1016,7 +1016,7 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="14" title="Matrix Inverse of a Scalar Multiple" md5="b2949f1a05b2d7a8dcf52760e8fb3556" course="Math 1030" chapter="17" slide="18" item="17.14">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="4" subsection="" subsubsection="" serial="" slide="18">Matrix Inverse of a Scalar Multiple</title>
-              <label course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="label" name="MISM" type="Theorem"/>
+              <label wbtag="label" name="MISM" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is an invertible matrix and $\alpha$ is a nonzero scalar. Then $\left(\alpha A\right)^{-1}=\frac{1}{\alpha}A^{-1}$ and $\alpha A$ is invertible. </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="fd4be9ca79eeaf6420d7f4ace76eb572" course="Math 1030" chapter="17" slide="18" of="b2949f1a05b2d7a8dcf52760e8fb3556">
@@ -1052,7 +1052,7 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
         <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" serial="17.5" slide="">
           <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Nonsingular Matrices are Invertible</paragraphs>
         </title>
-        <label course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="label" name="NMI" type="Section"/>
+        <label wbtag="label" name="NMI" type="Section"/>
         <slides environment="" chapter_type="">
           <slide environment="" chapter_type="Chapter" canon_num="19" scope="section" id="s19" slide="19" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" chapter_title="Inverse" section_title="Nonsingular Matrices are Invertible">
             <keywords slide="19" environ="slide" chapter="17" course="Math 1030"/>
@@ -1069,7 +1069,7 @@ We have a similar result for nonsingular matrix</paragraphs>
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="15" title="Nonsingular Product has Nonsingular Terms" md5="4a6fa187252d4410af384bca4874b76e" course="Math 1030" chapter="17" slide="20" item="17.15">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" serial="" slide="20">Nonsingular Product has Nonsingular Terms</title>
-              <label course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="label" name="NPNT" type="Theorem"/>
+              <label wbtag="label" name="NPNT" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ and $B$ are square matrices of size $n$. The product $AB$ is nonsingular if and only if $A$ and $B$ are both nonsingular. </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="f6c954d0c235e21568d0680d9da1f5b0" course="Math 1030" chapter="17" slide="20" of="4a6fa187252d4410af384bca4874b76e">
@@ -1139,7 +1139,7 @@ Because $A$ is singular, there is a nonzero vector $\mathbf{y}$ that is a soluti
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="16" title="One-Sided Inverse is Sufficient" md5="27368124ff49dae27ca58380923786ba" course="Math 1030" chapter="17" slide="21" item="17.16">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" serial="" slide="21">One-Sided Inverse is Sufficient</title>
-              <label course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="label" name="OSIS" type="Theorem"/>
+              <label wbtag="label" name="OSIS" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ and $B$ are square matrices of size $n$ such that $AB=I_{n}$. Then $BA=I_{n}$. </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="314e399fea378e6fe57ff3ad758a168c" course="Math 1030" chapter="17" slide="21" of="27368124ff49dae27ca58380923786ba">
@@ -1211,7 +1211,7 @@ This may feel like we are splitting hairs, but it is important that we do not ma
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="17" title="Nonsingularity is Invertibility" md5="d3dbea32c0efccc59935842aa77652cb" course="Math 1030" chapter="17" slide="22" item="17.17">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" serial="" slide="22">Nonsingularity is Invertibility</title>
-              <label course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="label" name="NI" type="Theorem"/>
+              <label wbtag="label" name="NI" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix. Then $A$ is nonsingular if and only if $A$ is invertible. </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="971ce9bb8b92579841023c877be18357" course="Math 1030" chapter="17" slide="22" of="d3dbea32c0efccc59935842aa77652cb">
@@ -1246,7 +1246,7 @@ This may feel like we are splitting hairs, but it is important that we do not ma
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="18" title="Nonsingular Matrix Equivalences Round 3" md5="1116e77bf6fedd4e1a32230854ff3565" course="Math 1030" chapter="17" slide="23" item="17.18">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" serial="" slide="23">Nonsingular Matrix Equivalences, Round 3</title>
-              <label course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="label" name="NME3" type="Theorem"/>
+              <label wbtag="label" name="NME3" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$. The following are equivalent.</paragraphs>
               <newline course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="statement"/>
               <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">

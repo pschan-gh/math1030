@@ -72,7 +72,7 @@ C20, C40, C50, C51, C52, C55, C70, M10, T40. </paragraphs>
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="1" title="Dependency in Linearly Dependent Sets" md5="4a14cadf10ec606cc88093a90eb44a75" course="Math 1030" chapter="13" slide="4" item="13.1">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="13" section="1" subsection="" subsubsection="" serial="" slide="4">Dependency in Linearly Dependent Sets</title>
-              <label course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="label" name="DLDS" type="Theorem"/>
+              <label wbtag="label" name="DLDS" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $S=\left\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\right\}$ is a set of vectors. Then $S$ is a linearly dependent set if and only if there is an index $t$, $1\leq t\leq n$, such that $\mathbf{u_{t}}$ is a linear combination of the vectors $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{t-1},\,\mathbf{u}_{t+1},\,\ldots,\,\mathbf{u}_{n}$. </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="999db374c40fec16a02d86a9c0c242dc" course="Math 1030" chapter="13" slide="4" of="4a14cadf10ec606cc88093a90eb44a75">
@@ -122,7 +122,7 @@ In the next example we will examine some of the subtleties. </paragraphs>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="5" id="s5" slide="5" course="Math 1030" chapter="13" section="1" subsection="" subsubsection="" chapter_title="Linear Dependence and Span" section_title="Linearly Dependent Sets and Spans">
             <keywords slide="5" environ="slide" chapter="13" course="Math 1030"/>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="2" md5="1adab9393c4ea632c7792592f24eb4db" course="Math 1030" chapter="13" slide="5" item="13.2">
-              <label course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="label" name="RSC5" type="Example"/>
+              <label wbtag="label" name="RSC5" type="Example"/>
               <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
                 <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Reducing the generating set of a span in ${\mathbb{R}}^{5}$</paragraphs>
               </b>
@@ -222,8 +222,8 @@ in essence declaring $\mathbf{v}_{3}$ as surplus for the task of building $V$ as
           <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="title"/>
           <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Casting Out Vectors</paragraphs>
         </title>
-        <label course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="label" name="COV" type="Section"/>
-        <label course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="label" name="slide:canonicalbasis" type="Section"/>
+        <label wbtag="label" name="COV" type="Section"/>
+        <label wbtag="label" name="slide:canonicalbasis" type="Section"/>
         <slides environment="" chapter_type="">
           <slide environment="" chapter_type="Chapter" canon_num="6" scope="section" id="s6" slide="6" course="Math 1030" chapter="13" section="2" subsection="" subsubsection="" chapter_title="Linear Dependence and Span" section_title="Casting Out Vectors">
             <keywords slide="6" environ="slide" chapter="13" course="Math 1030"/>
@@ -290,7 +290,7 @@ and any vector $\vec{v} \in \mathbb{R}^m$ of the form:
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="8" id="s8" slide="8" course="Math 1030" chapter="13" section="2" subsection="" subsubsection="" chapter_title="Linear Dependence and Span" section_title="Casting Out Vectors">
             <keywords slide="8" environ="slide" chapter="13" course="Math 1030"/>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="3" md5="a6015156e56e0ac3962516f29be19cfc" course="Math 1030" chapter="13" slide="8" item="13.3">
-              <label course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="label" name="eg:COV" type="Example"/>
+              <label wbtag="label" name="eg:COV" type="Example"/>
               <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
                 <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Casting out vectors</paragraphs>
               </b>
@@ -423,14 +423,12 @@ for $i = 1, 2, \ldots, 7$.</paragraphs>
 [\mathbf{B}_1 | \mathbf{B}_3 | \mathbf{B}_4]\vec{x} = \mathbf{B}_i
 \]
 has a solution $\vec{x} \in \mathbb{R}^3$. </paragraphs>
-                                <paragraphs>
-                                  <!-- or equivalently the linear system:
+                                <!-- or equivalently the linear system:
 \[
 \mathcal{LS}(B', \mathbf{B}_i)
 \]
 is consistent.
 -->
-                                </paragraphs>
                                 <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
                                 <collapse course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                                   <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> On the other hand, the augmented matrix $[\mathbf{B}_1 | \mathbf{B}_3 | \mathbf{B}_4| \mathbf{B}_i]$ is row-equivalent to
@@ -501,7 +499,7 @@ the span of $S$ is equal to the span of the vectors:
             <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> The previous example motivates the following fundamental theorem: </paragraphs>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="4" title="Basis of a Span" md5="ea6d5ae5f39204f8144e232790eb29ac" course="Math 1030" chapter="13" slide="9" item="13.4">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="13" section="2" subsection="" subsubsection="" serial="" slide="9">Basis of a Span</title>
-              <label course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="label" name="BS" type="Theorem"/>
+              <label wbtag="label" name="BS" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $S=\left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\ldots,\,\mathbf{v}_{n}\right\}$ is a set of column vectors. Define $W=\left&lt; S\right&gt;$ and let $A$ be the matrix whose columns are the vectors from $S$. Let $B$ be the reduced row-echelon form of $A$, with $D=\left\{{d}_{1},\,{d}_{2},\,{d}_{3},\,\ldots,\,{d}_{r}\right\}$ the set of indices for the pivot columns of $B$. Then </paragraphs>
               <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
                 <li class="ltx_item" environment="statement">
@@ -582,11 +580,9 @@ thus saying that $\mathbf{w}\in\left&lt; T\right&gt;$. Therefore, $W=\left&lt; S
               </newcol>
             </substatement>
             <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
-            <paragraphs>
-              <!--@slide
+            <!--@slide
 In @ref{eg:COV}, we tossed&#45;out vectors one at a time. But in each instance, we rewrote the offending vector as a linear combination of those vectors with the column indices of the pivot columns of the reduced row&#45;echelon form of the matrix of columns. In the proof of Theorem   @ref{BS}, we accomplish this reduction in one big step. In @ref{eg:COV} we arrived at a linearly independent set at exactly the same moment that we ran out of free variables to exploit. This was not a coincidence; it is the substance of our conclusion of linear independence in Theorem   @ref{BS}.
 -->
-            </paragraphs>
             <newline course="Math 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="Math 1030" chapter="13" section="2" subsection="" subsubsection="" chapter_title="Linear Dependence and Span" section_title="Casting Out Vectors">
