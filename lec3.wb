@@ -3,7 +3,6 @@
 @chapter{System of linear equations}
 The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at http://linear.ups.edu/download.html Print version can be downloaded at http://linear.ups.edu/download/fcla-3.50-print.pdf
 
-
 <h5 class="notkw">Reference.</h5>
 Beezer, Ver 3.5 Sect SSLE (print version p7 - p14)
 @section{
@@ -11,7 +10,7 @@ Introduction
 }
 @defn
 @title{ (System of Linear Equations).}
-A <b>system of linear equations</b> is a collection of $m$ equations in the variables $x_{1},\,x_{2},\,x_{3},\ldots,x_{n}$ of the form:
+A @keyword{system of linear equations} is a collection of $m$ equations in the variables $x_{1},\,x_{2},\,x_{3},\ldots,x_{n}$ of the form:
 \begin{align*}
 a_{11}x_1+a_{12}x_2+a_{13}x_3+\dots+a_{1n}x_n&=b_1\\
 a_{21}x_1+a_{22}x_2+a_{23}x_3+\dots+a_{2n}x_n&=b_2\\
@@ -22,8 +21,8 @@ a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\dots+a_{mn}x_n&=b_m
 where $a_{ij}$, $b_{i}$ and $x_{j}$, $1\leq i\leq m$, $1\leq j\leq n$, are real numbers.
 @end
 @defn
-$(s_{1},s_{2},\ldots,s_{n})$ is a <b>solution</b> of a system of linear equations in $n$ variables if every equation in the system is valid for $x_1 = s_1, x_2 = s_2, \ldots, x_n = s_n$.
-The <b>solution set</b> of a linear system of equations is the set consisting of all solutions to the system, and nothing more.
+$(s_{1},s_{2},\ldots,s_{n})$ is a @keyword{solution} of a system of linear equations in $n$ variables if every equation in the system is valid for $x_1 = s_1, x_2 = s_2, \ldots, x_n = s_n$.
+The @keyword{solution set} of a linear system of equations is the set consisting of all solutions to the system, and nothing more.
 @end
 @slide
 @eg
@@ -62,7 +61,7 @@ Possibilities for Solution Sets
 @eg
 @enumerate
 @item
-The following system of linear equations has <b>only one solution</b>.
+The following system of linear equations has @keyword{only one solution}.
 \begin{align*}
 2x_1+3x_2&=3\\
 x_1-x_2&=4
@@ -70,7 +69,7 @@ x_1-x_2&=4
 The solution set is $(x_{1},x_{2})=(3,-1)$
 @item
 @newcol
-The following system of linear equations has <b>infinite many solutions</b>.
+The following system of linear equations has @keyword{infinite many solutions}.
 \begin{align*}
 2x_1+3x_2&=3\\
 4x_1+6x_2&=6
@@ -79,7 +78,7 @@ The solution set is $\{(x_{1},x_{2})=(t,\frac{3-2t}{3})\}$, where $t$ is any rea
 @endcol
 @item
 @newcol
-The following system of linear equations has <b>no solutions</b>.
+The following system of linear equations has @keyword{no solutions}.
 \begin{align*}
 2x_1+3x_2&=3\\
 4x_1+6x_2&=10
@@ -100,20 +99,17 @@ For example it is impossible for a system of     linear equation to have exactly
 @endcol
 @end
 
-
-@section{
-Equivalent Systems and Equation Operations
-}
+@section{Equivalent Systems and Equation Operations}
 @defn
 @title{Equivalent Systems}
-Two systems of linear equations are <b>equivalent</b> if their solution sets are equal.
+Two systems of linear equations are @keyword{equivalent} if their solution sets are equal.
 @end
 @defn
 @title{Equation Operations}
 @label{EO}
 @newcol
 Given a system of linear equations, the following three operations will transform the system into a different one, and each operation is known as an
-<b>equation operation</b>:
+@keyword{equation operation}:
 @ol
 @li
 Swap the locations of two equations in the list of equations.
