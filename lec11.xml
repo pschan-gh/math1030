@@ -2,6 +2,9 @@
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030">
     <keywords slide="all" environ="course" chapter="" course="Math 1030">
+      <keyword chapter="" slide="all">span</keyword>
+      <keyword chapter="" slide="all">Spanning set of a null space</keyword>
+      <keyword chapter="" slide="all">linear independence</keyword>
       <keyword chapter="" slide="all">Span of a Set of Column Vectors</keyword>
       <keyword chapter="" slide="all">Spanning Sets for Null Spaces</keyword>
     </keywords>
@@ -15,6 +18,9 @@
     </slides>
     <chapter environment="" chapter_type="Chapter" type="Chapter" wbtag="chapter" num="11" title="Spanning Sets" course="Math 1030" serial="11">
       <keywords slide="all" environ="chapter" chapter="11" course="Math 1030">
+        <keyword chapter="11" slide="all">span</keyword>
+        <keyword chapter="11" slide="all">Spanning set of a null space</keyword>
+        <keyword chapter="11" slide="all">linear independence</keyword>
         <keyword chapter="11" slide="all">Span of a Set of Column Vectors</keyword>
         <keyword chapter="11" slide="all">Spanning Sets for Null Spaces</keyword>
       </keywords>
@@ -63,14 +69,15 @@
         <slides environment="" chapter_type="">
           <slide environment="" chapter_type="Chapter" canon_num="4" scope="section" id="s4" slide="4" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Span of a Set of Vectors">
             <keywords slide="4" environ="slide" chapter="11" course="Math 1030">
+              <keyword chapter="11" slide="4">span</keyword>
               <keyword chapter="11" slide="4">Span of a Set of Column Vectors</keyword>
             </keywords>
             <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" serial="" slide="4">
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Span of a Set of Vectors</paragraphs>
             </title>
-            <comment course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="">
+            <!--
 We saw that the solution set of a homogeneous system can be described as all possible linear combinations of two particular sets of vectors. This is a useful way to construct or describe infinite sets of vectors, so we encapsulate the idea in a definition.
-</comment>
+-->
             <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="1" title="Span of a Set of Column Vectors" md5="7d786cb9f64eb34c3e0c43aedbb98509" course="Math 1030" chapter="11" slide="4" item="11.1">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" serial="" slide="4">Span of a Set of Column Vectors</title>
               <label wbtag="label" name="SSCV" type="Definition"/>
@@ -79,9 +86,7 @@ We saw that the solution set of a homogeneous system can be described as all pos
 \displaystyle S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\},
 \end{align*}
 their </paragraphs>
-              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
-                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">span</paragraphs>
-              </b>
+              <inline_keyword course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">span</inline_keyword>
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">, $\left&lt; S \right&gt;$, is the set of all linear combinations of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}$.
 Symbolically,
 \begin{align*}
@@ -495,7 +500,7 @@ and thus $\mathbf{v}\not\in\left&lt; S \right&gt;$.</paragraphs>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Span of a Set of Vectors">
             <keywords slide="10" environ="slide" chapter="11" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="7" md5="7783567c1c04c836da8c03d1d1a9e9a1" course="Math 1030" chapter="11" slide="10" item="11.7">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="7" md5="485ff86c4b94690d4dba3702efab0da1" course="Math 1030" chapter="11" slide="10" item="11.7">
               <label wbtag="label" name="SCAA" type="Example"/>
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Consider:
 \begin{align*}
@@ -509,11 +514,11 @@ and thus $\mathbf{v}\not\in\left&lt; S \right&gt;$.</paragraphs>
 \end{align*}
 and consider the infinite set $\left&lt; S \right&gt;$.</paragraphs>
               <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
-              <comment course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"> First, as an example, note that
+              <!-- First, as an example, note that
 \begin{align*}
 \displaystyle \mathbf{v}=(5)\begin{bmatrix}1\\
 2\\
-1\end{bmatrix}+(-3)\begin{bmatrix}-1\\
+1\end{bmatrix}+(&#45;3)\begin{bmatrix}&#45;1\\
 1\\
 1\end{bmatrix}+(7)\begin{bmatrix}2\\
 1\\
@@ -521,10 +526,10 @@ and consider the infinite set $\left&lt; S \right&gt;$.</paragraphs>
 14\\
 2\end{bmatrix}
 \end{align*}
-is in $\left&lt; S \right&gt;$, since it is a linear combination of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}$. There is nothing magical about the scalars $\alpha_{1}=5,\,\alpha_{2}=-3,\,\alpha_{3}=7$; they can be chosen arbitrarily. So repeat this part of the example yourself, using different values of $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$. What happens if you choose all three scalars to be zero?
+is in $\left< S \right>$, since it is a linear combination of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}$. There is nothing magical about the scalars $\alpha_{1}=5,\,\alpha_{2}=&#45;3,\,\alpha_{3}=7$; they can be chosen arbitrarily. So repeat this part of the example yourself, using different values of $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$. What happens if you choose all three scalars to be zero?
 
 
-So we know how to quickly construct sample elements of the set $\left&lt; S \right&gt;$. A slightly different question arises when you are handed a vector of the correct size and asked if it is an element of $\left&lt; S \right&gt;$. For example, is </comment>
+So we know how to quickly construct sample elements of the set $\left< S \right>$. A slightly different question arises when you are handed a vector of the correct size and asked if it is an element of $\left< S \right>$. For example, is -->
               <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Does $\mathbf{w}=\begin{bmatrix}1\\
 8\\
@@ -627,7 +632,7 @@ So there are no scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ that will create 
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="11" id="s11" slide="11" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Span of a Set of Vectors">
             <keywords slide="11" environ="slide" chapter="11" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="8" md5="f6dec5dd04e4b2c542b0cff772785b0a" course="Math 1030" chapter="11" slide="11" item="11.8">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="8" md5="807e4ccb4b188b92a92ec4d56b6987e4" course="Math 1030" chapter="11" slide="11" item="11.8">
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let
 \begin{align*}
 \displaystyle R=\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}\}=\left\{\begin{bmatrix}-7\\
@@ -639,23 +644,23 @@ So there are no scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ that will create 
 4\end{bmatrix}\right\}
 \end{align*}
 and consider its span $\left&lt; R \right&gt;$. </paragraphs>
-              <comment course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">
+              <!--
 First, as an example, note that
 \begin{align*}
-\displaystyle \mathbf{x}=(2)\begin{bmatrix}-7\\
+\displaystyle \mathbf{x}=(2)\begin{bmatrix}&#45;7\\
 5\\
-1\end{bmatrix}+(4)\begin{bmatrix}-6\\
+1\end{bmatrix}+(4)\begin{bmatrix}&#45;6\\
 5\\
-0\end{bmatrix}+(-3)\begin{bmatrix}-12\\
+0\end{bmatrix}+(&#45;3)\begin{bmatrix}&#45;12\\
 7\\
-4\end{bmatrix}=\begin{bmatrix}-2\\
+4\end{bmatrix}=\begin{bmatrix}&#45;2\\
 9\\
--10\end{bmatrix}
+&#45;10\end{bmatrix}
 \end{align*}
-is in $\left&lt; R \right&gt;$, since it is a linear combination of $\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}$. In other words, $\mathbf{x}\in\left&lt; R \right&gt;$. Try some different values of $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ yourself, and see what vectors you can create as elements of $\left&lt; R \right&gt;$.
+is in $\left< R \right>$, since it is a linear combination of $\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}$. In other words, $\mathbf{x}\in\left< R \right>$. Try some different values of $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ yourself, and see what vectors you can create as elements of $\left< R \right>$.
 
 
-Now ask if a given vector is an element of $\left&lt; R \right&gt;$. For example, is </comment>
+Now ask if a given vector is an element of $\left< R \right>$. For example, is -->
               <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
               <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Does the vector$\mathbf{z}=\begin{bmatrix}-33\\
@@ -815,11 +820,11 @@ Then the null space of $A$ is given by
             </substatement>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="13" id="s13" slide="13" course="Math 1030" chapter="11" section="2" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Spanning Sets of Null Spaces">
-            <keywords slide="13" environ="slide" chapter="11" course="Math 1030"/>
+            <keywords slide="13" environ="slide" chapter="11" course="Math 1030">
+              <keyword chapter="11" slide="13">Spanning set of a null space</keyword>
+            </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="11" md5="9ed8a98057666bacb63507153cecf94f" course="Math 1030" chapter="11" slide="13" item="11.11">
-              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
-                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Spanning set of a null space</paragraphs>
-              </b>
+              <inline_keyword course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">Spanning set of a null space</inline_keyword>
               <newline course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Find a set of vectors, $S$, so that the null space of the matrix
 \begin{align*}
@@ -991,7 +996,9 @@ So we have
         </title>
         <slides environment="" chapter_type="">
           <slide environment="" chapter_type="Chapter" canon_num="14" scope="section" id="s14" slide="14" course="Math 1030" chapter="11" section="3" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Obtain Same Span Using Fewer Vectors">
-            <keywords slide="14" environ="slide" chapter="11" course="Math 1030"/>
+            <keywords slide="14" environ="slide" chapter="11" course="Math 1030">
+              <keyword chapter="11" slide="14">linear independence</keyword>
+            </keywords>
             <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="11" section="3" subsection="" subsubsection="" serial="" slide="14">
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Obtain Same Span Using Fewer Vectors</paragraphs>
             </title>
@@ -1085,9 +1092,7 @@ which we can solve for $\mathbf{w}_{3}$ as
                                   <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
                                   <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                                     <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> What was it about the original set of four vectors that allowed us to declare certain vectors as surplus? And just which vectors were we able to dismiss? And why did we have to stop once we had two vectors remaining? The answers to these questions motivate </paragraphs>
-                                    <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
-                                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">linear independence</paragraphs>
-                                    </b>
+                                    <inline_keyword course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol">linear independence</inline_keyword>
                                     <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, our next section and next definition, and so are worth considering carefully now. </paragraphs>
                                   </collapse>
                                 </collapse>
