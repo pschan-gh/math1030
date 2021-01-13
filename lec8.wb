@@ -149,7 +149,14 @@ If $n=m$, then we can have a unique solution or infinitely many solutions (see t
 Null Space of a Matrix}
 @defn
 @label{NSM}
-The <b>null space</b> of a matrix $A$, denoted by ${\mathcal{N}}\!\left(A\right)$, is the set of all the vectors that are solutions to the homogeneous system $\linearsystem{A}{\mathbf{0}}$.
+The <b>null space</b> of a an $m \times n$ matrix $A$, denoted by ${\mathcal{N}}\!\left(A\right)$,
+is the set of vectors $\vec{x} \in \mathbb{R}^n$ such that:
+\[
+A\vec{x} = \vec{0}.
+\]
+@col
+Equivalently,
+it is the set of all the vectors which are solutions to the homogeneous system $\linearsystem{A}{\mathbf{0}}$.
 That is, if:
 \[A=\begin{bmatrix}a_{11}&a_{12}&a_{13}&\dots&a_{1n}\\
 a_{21}&a_{22}&a_{23}&\dots&a_{2n}\\
@@ -244,7 +251,7 @@ Let us compute the null space of
 5&6&7\\
 4&7&1\end{bmatrix}\]
 which we write as ${\mathcal{N}}\!\left(C\right)$. Translating definition   @ref{NSM}, we simply desire to solve the homogeneous system
-$\linearsystem{C}{\mathbf{0}}$. 
+$\linearsystem{C}{\mathbf{0}}$.
 So we row-reduce the augmented matrix to obtain
 \[\left[\begin{array}[]{ccc|c}\boxed{1}&0&0&0\\
 0&\boxed{1}&0&0\\
@@ -258,7 +265,7 @@ There are no free variables in the homogeneous system represented by the row-red
 @end
 @section{
 Augmented matrix vs Coefficient Matrix}
-The augmented matrix for the homogeneous of system of linear equations 
+The augmented matrix for the homogeneous of system of linear equations
 $\linearsystem{A}{\mathbf{0}}$ is $[A|\mathbf{0}]$.
 Any row operators on $[A|\mathbf{0}]$ will not change the last zero columns.
 If
@@ -292,7 +299,7 @@ The corresponding augmented matrix is:
 \[\left[\begin{array}[]{cccc|c}\boxed{1}&0&3&-2&0\\
 0&\boxed{1}&1&-3&0\\
 0&0&0&0&0\end{array}\right]\]
-The system is consistent. It has $n-r=4-2=2$ free variables. 
+The system is consistent. It has $n-r=4-2=2$ free variables.
 The solution set is:
 
 @col
@@ -328,7 +335,7 @@ Let
 \[A=\begin{bmatrix}1&-1&2\\
 2&1&1\\
 1&1&0\end{bmatrix}.\]
-By Example 2 Part 2, the system of linear equations $\linearsystem{A}{\mathbf{0}}$ has nontrivial solutions.
+The system of linear equations $\linearsystem{A}{\mathbf{0}}$ has nontrivial solutions.
 Hence $A$ is singular.
 @item
 @col
@@ -336,7 +343,7 @@ Let
 \[A=\begin{bmatrix}-7&-6&-12\\
 5&5&7\\
 1&0&4\end{bmatrix}.\]
-By example 2 part 1, the system of linear equations $\linearsystem{A}{\mathbf{0}}$ has only trivial solutions.
+The system of linear equations $\linearsystem{A}{\mathbf{0}}$ has only trivial solutions.
 So it is nonsingular.
 @endenumerate
 @end
@@ -364,8 +371,8 @@ The $4\times 4$ identity matrix is:
 0&0&0&1\end{bmatrix}.\]
 @end
 @col
-Notice that an identity matrix is square, and in reduced row-echelon form. 
-Also, every column is a pivot column, 
+Notice that an identity matrix is square, and in reduced row-echelon form.
+Also, every column is a pivot column,
 and every possible pivot column appears once.
 @slide
 @thm
@@ -375,20 +382,20 @@ Suppose that $A$ is a square matrix and $B$ is a row-equivalent matrix in reduce
 @end
 @proof
 
-($\Leftarrow$) 
+($\Leftarrow$)
 @col
 Suppose $B$ is the identity matrix. When the augmented matrix $\left[A|\mathbf{0}\right]$ is row-reduced, the result is $\left[B|\mathbf{0}\right]=\left[I_{n}|\mathbf{0}\right]$. The number of nonzero rows is equal to the number of variables in the linear system of equations $\linearsystem{A}{\mathbf{0}}$, so $n=r$ and has $n-r=0$ free variables.
 Thus, the homogeneous system $\linearsystem{A}{\mathbf{0}}$ has just one solution, which must be the trivial solution.
 This is exactly the definition of a nonsingular matrix.
 @endcol
 
-($\Rightarrow$) 
+($\Rightarrow$)
 @col
-If $A$ is nonsingular, then the homogeneous system 
-$\linearsystem{A}{\mathbf{0}}$ has a unique solution, 
-and has no free variables in the description of the solution set. 
+If $A$ is nonsingular, then the homogeneous system
+$\linearsystem{A}{\mathbf{0}}$ has a unique solution,
+and has no free variables in the description of the solution set.
 The homogeneous system is consistent,
-by Lecture 4 Theorem 4, the homogeneous system has $n-r$ free variables. 
+by Lecture 4 Theorem 4, the homogeneous system has $n-r$ free variables.
 Thus, $n-r=0$, and so $n=r$. So $B$ has $n$ pivot columns among its total of $n$ columns. This is enough to force $B$ to be the $n\times n$ identity matrix $I_{n}$ (why?).
 @qed
 @endcol
@@ -426,10 +433,10 @@ Suppose that $A$ is a square matrix. Then $A$ is nonsingular if and only if the 
 @proof
 @col
 The null space of a square matrix, $A$,
-is equal to the set of solutions to the homogeneous system, 
-$\linearsystem{A}{\mathbf{0}}$. A matrix is nonsingular if and only if the set of solutions to the homogeneous system, 
-$\linearsystem{A}{\mathbf{0}}$, 
-has only a trivial solution. 
+is equal to the set of solutions to the homogeneous system,
+$\linearsystem{A}{\mathbf{0}}$. A matrix is nonsingular if and only if the set of solutions to the homogeneous system,
+$\linearsystem{A}{\mathbf{0}}$,
+has only a trivial solution.
 These two observations may be chained together to construct the two proofs necessary for each half of this theorem.
 @qed
 @end
@@ -441,31 +448,31 @@ Suppose that $A$ is a square matrix. $A$ is a nonsingular matrix if and only if 
 @end
 @proof
 
-($\Rightarrow$) 
+($\Rightarrow$)
 @col
-The hypothesis for this half of the proof is that the system 
-$\linearsystem{A}{\mathbf{b}}$ 
-has a unique solution for every choice of the constant vector $\mathbf{b}$. 
-We will make a very specific choice for $\mathbf{b}$: $\mathbf{b}=\mathbf{0}$. 
-Then we know that the system $\linearsystem{A}{\mathbf{0}}$ has a unique solution. 
+The hypothesis for this half of the proof is that the system
+$\linearsystem{A}{\mathbf{b}}$
+has a unique solution for every choice of the constant vector $\mathbf{b}$.
+We will make a very specific choice for $\mathbf{b}$: $\mathbf{b}=\mathbf{0}$.
+Then we know that the system $\linearsystem{A}{\mathbf{0}}$ has a unique solution.
 But this is precisely the definition of what it means for $A$
 to be nonsingular.
 @endcol
 
-($\Leftarrow$) 
+($\Leftarrow$)
 @col
-We assume that $A$ is nonsingular of size $n\times n$, 
-so we know there is a sequence of row operations that will convert $A$ 
-into the identity matrix $I_{n}$ (Theorem   @ref{NMRRI}). 
-Form the augmented matrix $A^{\prime}=\left[A|\mathbf{b}\right]$ 
-and apply this same sequence of row operations to $A^{\prime}$. 
-The result will be the matrix $B^{\prime}=\left[I_{n}|\mathbf{c}\right]$, 
-which is in reduced row-echelon form with $r=n$. 
-Then the augmented matrix $B^{\prime}$ represents the (extremely simple) 
-system of equations $x_{i}=\left[\mathbf{c}\right]_{i}$, $1\leq i\leq n$. 
-The vector $\mathbf{c}$ is clearly a solution, so the system is consistent. 
-With a consistent system, we use Lecture 4 Theorem 4 to count free variables. 
-We find that there are $n-r=n-n=0$ free variables, 
+We assume that $A$ is nonsingular of size $n\times n$,
+so we know there is a sequence of row operations that will convert $A$
+into the identity matrix $I_{n}$ (Theorem   @ref{NMRRI}).
+Form the augmented matrix $A^{\prime}=\left[A|\mathbf{b}\right]$
+and apply this same sequence of row operations to $A^{\prime}$.
+The result will be the matrix $B^{\prime}=\left[I_{n}|\mathbf{c}\right]$,
+which is in reduced row-echelon form with $r=n$.
+Then the augmented matrix $B^{\prime}$ represents the (extremely simple)
+system of equations $x_{i}=\left[\mathbf{c}\right]_{i}$, $1\leq i\leq n$.
+The vector $\mathbf{c}$ is clearly a solution, so the system is consistent.
+With a consistent system, we use Lecture 4 Theorem 4 to count free variables.
+We find that there are $n-r=n-n=0$ free variables,
 and so we therefore know that the solution is unique.
 @qed
 @endcol
@@ -500,8 +507,8 @@ The next theorem tells us that in order to find all of the solutions to a linear
 @thm
 @title{Particular Solution Plus Homogeneous Solutions}
 @label{PSPHS}
-Suppose that $\mathbf{w}$ is one solution to the linear system of equations 
-$\linearsystem{A}{\mathbf{b}}$. Then $\mathbf{y}$ is a solution to 
+Suppose that $\mathbf{w}$ is one solution to the linear system of equations
+$\linearsystem{A}{\mathbf{b}}$. Then $\mathbf{y}$ is a solution to
 $\linearsystem{A}{\mathbf{b}}$ if and only if $\mathbf{y}=\mathbf{w}+\mathbf{z}$ for some vector $\mathbf{z}\in{\mathcal{N}}\!\left(A\right)$, i.e.
 @enumerate
 @item
@@ -530,7 +537,7 @@ So $\mathbf{y}-\mathbf{w}\in{\mathcal{N}}\!\left(A\right)$.
 @item
 Suppose $\mathbf{z}\in{\mathcal{N}}\!\left(A\right)$, $A\mathbf{z}=\mathbf{0}$.
 So $A(\mathbf{w}+\mathbf{z})=A\mathbf{w}+A\mathbf{z}=
-\mathbf{b}+\mathbf{0}=\mathbf{b}$. 
+\mathbf{b}+\mathbf{0}=\mathbf{b}$.
 Hence $\mathbf{w}+\mathbf{z}$ is a solution of $A\mathbf{x}=\mathbf{b}$.
 @endenumerate
 @qed
@@ -542,8 +549,8 @@ Hence $\mathbf{w}+\mathbf{z}$ is a solution of $A\mathbf{x}=\mathbf{b}$.
 -3x_1 + 4x_2 -5x_3 - 6x_4 &=  -12 \\
 x_1 +x_2 + 4x_3 - 5x_4 &=  4
 \end{align*}
-is a consistent system of equations with a nontrivial null space. 
-Let $A$ denote the coefficient matrix of this system. 
+is a consistent system of equations with a nontrivial null space.
+Let $A$ denote the coefficient matrix of this system.
 
 Consider the following three solutions to the system:
 
@@ -568,7 +575,7 @@ Let $\mathbf{w}=\mathbf{y}_{1}$. Then,
 are indeed elements in ${\mathcal{N}}\!\left(A\right)$ (check!).
 
 @col
-To find all the solutions, we may first work out 
+To find all the solutions, we may first work out
 (using Gaussian elimination on $\left[A|\mathbf{0}\right]$, for example) that:
 \[{\mathcal{N}}\!\left(A\right)=\left\{\left.x_{3}\begin{bmatrix}-3\\
 -1\\

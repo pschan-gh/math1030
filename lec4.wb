@@ -283,29 +283,29 @@ The next two definitions and the following theorem carry over these ideas to aug
 @defn
 @title{Row Operations}
 @label{RO}
-The following three operations will transform an $m\times n$ matrix into a different matrix of the same size, and each is known as a <b>row operation</b>.
+The following three operations will transform an $m\times n$ matrix into a different matrix of the same size, and each is known as an <b>elementary row operation</b>.
 @enumerate
 @item
 @col
 Swap the locations of two rows.
+
+<strong>Notation</strong>: $R_{i}\leftrightarrow R_{j}$
+
+(Swap the location of rows $i$ and $j$.)
 @item
 @col
-Multiply each entry of a single row by a nonzero quantity.
+Multiply each entry of a single row by a nonzero number.
+
+<strong>Notation</strong>: $\alpha R_{i}$
+
+(Multiply row $i$ by the nonzero scalar $\alpha$.)
 @item
 @col
-Multiply each entry of one row by some quantity, and add these values to the entries in the same columns of a second row. Leave the first row the same after this operation, but replace the second row by the new values.
-@endenumerate
-We will use a symbolic shorthand to describe these row operations:
-@enumerate
-@item
-@col
-$R_{i}\leftrightarrow R_{j}$: Swap the location of rows $i$ and $j$.
-@item
-@col
-$\alpha R_{i}$: Multiply row $i$ by the nonzero scalar $\alpha$.
-@item
-@col
-$\alpha R_{i}+R_{j}$: Multiply row $i$ by the scalar $\alpha$ and add to row $j$.
+Multiply each entry of one row by some number, and add these values to the entries in the same columns of a second row. Leave the first row the same after this operation, but replace the second row by the new values.
+
+<strong>Notation</strong>: $\alpha R_{i}+R_{j}$
+
+(Multiply row $i$ by the scalar $\alpha$ and add to row $j$.)
 @endenumerate
 @end
 @defn

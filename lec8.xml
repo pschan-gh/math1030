@@ -279,11 +279,18 @@ Then the hypothesis that $n&gt;m$, together with </paragraphs>
               <newline course="Math 1030" chapter="8" chapter_type="" section="2" subsection="" subsubsection="" environment="title"/>
               <paragraphs course="Math 1030" chapter="8" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Null Space of a Matrix</paragraphs>
             </title>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="7" md5="7d4f421c0f2e9754c69c2411bc71c86d" course="Math 1030" chapter="8" slide="9" item="8.7">
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="7" md5="ea6f05f2cdde2bdfd006c674f13eff45" course="Math 1030" chapter="8" slide="9" item="8.7">
               <label wbtag="label" name="NSM" type="Definition"/>
               <paragraphs course="Math 1030" chapter="8" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The </paragraphs>
               <inline_keyword course="Math 1030" chapter="8" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">null space</inline_keyword>
-              <paragraphs course="Math 1030" chapter="8" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of a matrix $A$, denoted by ${\mathcal{N}}\!\left(A\right)$, is the set of all the vectors that are solutions to the homogeneous system $\linearsystem{A}{\mathbf{0}}$.
+              <paragraphs course="Math 1030" chapter="8" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of a an $m \times n$ matrix $A$, denoted by ${\mathcal{N}}\!\left(A\right)$,
+is the set of vectors $\vec{x} \in \mathbb{R}^n$ such that:
+\[
+A\vec{x} = \vec{0}.
+\] </paragraphs>
+              <newcol course="Math 1030" chapter="8" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="8" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Equivalently,
+it is the set of all the vectors which are solutions to the homogeneous system $\linearsystem{A}{\mathbf{0}}$.
 That is, if:
 \[A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;\dots&amp;a_{1n}\\
 a_{21}&amp;a_{22}&amp;a_{23}&amp;\dots&amp;a_{2n}\\
@@ -299,6 +306,7 @@ a_{31}x_1+a_{32}x_2+a_{33}x_3+\dots+a_{3n}x_n&amp;=0\\
 \vdots&amp;\\
 a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\dots+a_{mn}x_n&amp;=0
 \end{align*} </paragraphs>
+              </newcol>
             </statement>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="Math 1030" chapter="8" section="2" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Null Space of a Matrix">
@@ -351,7 +359,7 @@ is not in ${\mathcal{N}}\!\left(A\right)$ as
 1&amp;0&amp;2&amp;4&amp;9\\
 2&amp;2&amp;-2&amp;-1&amp;8\end{bmatrix}\]
 which we write as ${\mathcal{N}}\!\left(A\right)$. Translating </paragraphs>
-              <ref environment="statement" chapter_type="" label="NSM" wbtag="ref" course="Math 1030" chapter="8" slide="11" src-course="Math 1030" src-chapter="8" src-slide="9" type="Definition" item="8.7" src-filename="lec8.xml" md5="7d4f421c0f2e9754c69c2411bc71c86d" class="lcref" serial="">
+              <ref environment="statement" chapter_type="" label="NSM" wbtag="ref" course="Math 1030" chapter="8" slide="11" src-course="Math 1030" src-chapter="8" src-slide="9" type="Definition" item="8.7" src-filename="lec8.xml" md5="ea6f05f2cdde2bdfd006c674f13eff45" class="lcref" serial="">
                 <title>Definition 8.7</title>
               </ref>
               <paragraphs course="Math 1030" chapter="8" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">,
@@ -392,11 +400,11 @@ x_{5}\end{bmatrix}\,\right|\,x_{3},\,x_{5}\text{ real numbers}\right\}.\] </para
 5&amp;6&amp;7\\
 4&amp;7&amp;1\end{bmatrix}\]
 which we write as ${\mathcal{N}}\!\left(C\right)$. Translating definition   </paragraphs>
-              <ref environment="statement" chapter_type="" label="NSM" wbtag="ref" course="Math 1030" chapter="8" slide="12" src-course="Math 1030" src-chapter="8" src-slide="9" type="Definition" item="8.7" src-filename="lec8.xml" md5="7d4f421c0f2e9754c69c2411bc71c86d" class="lcref" serial="">
+              <ref environment="statement" chapter_type="" label="NSM" wbtag="ref" course="Math 1030" chapter="8" slide="12" src-course="Math 1030" src-chapter="8" src-slide="9" type="Definition" item="8.7" src-filename="lec8.xml" md5="ea6f05f2cdde2bdfd006c674f13eff45" class="lcref" serial="">
                 <title>Definition 8.7</title>
               </ref>
               <paragraphs course="Math 1030" chapter="8" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">, we simply desire to solve the homogeneous system
-$\linearsystem{C}{\mathbf{0}}$. 
+$\linearsystem{C}{\mathbf{0}}$.
 So we row-reduce the augmented matrix to obtain
 \[\left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;0&amp;0\\
 0&amp;\boxed{1}&amp;0&amp;0\\
@@ -424,7 +432,7 @@ So we row-reduce the augmented matrix to obtain
               <newline course="Math 1030" chapter="8" chapter_type="" section="3" subsection="" subsubsection="" environment="title"/>
               <paragraphs course="Math 1030" chapter="8" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Augmented matrix vs Coefficient Matrix</paragraphs>
             </title>
-            <paragraphs course="Math 1030" chapter="8" chapter_type="" section="3" subsection="" subsubsection="" environment="" wbtag="paragraphs"> The augmented matrix for the homogeneous of system of linear equations 
+            <paragraphs course="Math 1030" chapter="8" chapter_type="" section="3" subsection="" subsubsection="" environment="" wbtag="paragraphs"> The augmented matrix for the homogeneous of system of linear equations
 $\linearsystem{A}{\mathbf{0}}$ is $[A|\mathbf{0}]$.
 Any row operators on $[A|\mathbf{0}]$ will not change the last zero columns.
 If
@@ -458,7 +466,7 @@ The corresponding augmented matrix is:</paragraphs>
                       <paragraphs course="Math 1030" chapter="8" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \[\left[\begin{array}[]{cccc|c}\boxed{1}&amp;0&amp;3&amp;-2&amp;0\\
 0&amp;\boxed{1}&amp;1&amp;-3&amp;0\\
 0&amp;0&amp;0&amp;0&amp;0\end{array}\right]\]
-The system is consistent. It has $n-r=4-2=2$ free variables. 
+The system is consistent. It has $n-r=4-2=2$ free variables.
 The solution set is:</paragraphs>
                       <newline course="Math 1030" chapter="8" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
                       <collapse course="Math 1030" chapter="8" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
@@ -526,7 +534,7 @@ Then we say that $A$ is a </paragraphs>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="15" id="s15" slide="15" course="Math 1030" chapter="8" section="4" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices">
             <keywords slide="15" environ="slide" chapter="8" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="13" md5="29f83827f363ada28c5b3be8a6303553" course="Math 1030" chapter="8" slide="15" item="8.13">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="13" md5="8bb0798c5e51b5342b76ff53c2efb23b" course="Math 1030" chapter="8" slide="15" item="8.13">
               <enumerate course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="enumerate" wbtag="enumerate">
                 <item course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="enumerate" wbtag="item">
                   <newcol course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
@@ -534,7 +542,7 @@ Then we say that $A$ is a </paragraphs>
 \[A=\begin{bmatrix}1&amp;-1&amp;2\\
 2&amp;1&amp;1\\
 1&amp;1&amp;0\end{bmatrix}.\]
-By Example 2 Part 2, the system of linear equations $\linearsystem{A}{\mathbf{0}}$ has nontrivial solutions.
+The system of linear equations $\linearsystem{A}{\mathbf{0}}$ has nontrivial solutions.
 Hence $A$ is singular. </paragraphs>
                   </newcol>
                 </item>
@@ -544,7 +552,7 @@ Hence $A$ is singular. </paragraphs>
 \[A=\begin{bmatrix}-7&amp;-6&amp;-12\\
 5&amp;5&amp;7\\
 1&amp;0&amp;4\end{bmatrix}.\]
-By example 2 part 1, the system of linear equations $\linearsystem{A}{\mathbf{0}}$ has only trivial solutions.
+The system of linear equations $\linearsystem{A}{\mathbf{0}}$ has only trivial solutions.
 So it is nonsingular. </paragraphs>
                   </newcol>
                 </item>
@@ -582,8 +590,8 @@ i.e.
               </newcol>
             </statement>
             <newcol course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-              <paragraphs course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Notice that an identity matrix is square, and in reduced row-echelon form. 
-Also, every column is a pivot column, 
+              <paragraphs course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Notice that an identity matrix is square, and in reduced row-echelon form.
+Also, every column is a pivot column,
 and every possible pivot column appears once. </paragraphs>
             </newcol>
           </slide>
@@ -598,20 +606,20 @@ and every possible pivot column appears once. </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="5990c9ba17f44e79ec5dbe4190640225" course="Math 1030" chapter="8" slide="17" of="63a0fa79dbb22ae7e60cd449cbea33cd">
               <newline course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement"/>
-              <paragraphs course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">($\Leftarrow$)  </paragraphs>
+              <paragraphs course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">($\Leftarrow$) </paragraphs>
               <newcol course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose $B$ is the identity matrix. When the augmented matrix $\left[A|\mathbf{0}\right]$ is row-reduced, the result is $\left[B|\mathbf{0}\right]=\left[I_{n}|\mathbf{0}\right]$. The number of nonzero rows is equal to the number of variables in the linear system of equations $\linearsystem{A}{\mathbf{0}}$, so $n=r$ and has $n-r=0$ free variables.
 Thus, the homogeneous system $\linearsystem{A}{\mathbf{0}}$ has just one solution, which must be the trivial solution.
 This is exactly the definition of a nonsingular matrix. </paragraphs>
               </newcol>
               <newline course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement"/>
-              <paragraphs course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">($\Rightarrow$)  </paragraphs>
+              <paragraphs course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">($\Rightarrow$) </paragraphs>
               <newcol course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If $A$ is nonsingular, then the homogeneous system 
-$\linearsystem{A}{\mathbf{0}}$ has a unique solution, 
-and has no free variables in the description of the solution set. 
+                <paragraphs course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If $A$ is nonsingular, then the homogeneous system
+$\linearsystem{A}{\mathbf{0}}$ has a unique solution,
+and has no free variables in the description of the solution set.
 The homogeneous system is consistent,
-by Lecture 4 Theorem 4, the homogeneous system has $n-r$ free variables. 
+by Lecture 4 Theorem 4, the homogeneous system has $n-r$ free variables.
 Thus, $n-r=0$, and so $n=r$. So $B$ has $n$ pivot columns among its total of $n$ columns. This is enough to force $B$ to be the $n\times n$ identity matrix $I_{n}$ (why?). </paragraphs>
                 <qed course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
               </newcol>
@@ -667,10 +675,10 @@ Since $B$ is the $3\times 3$ identity matrix, $A$ is a nonsingular matrix by the
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="83c36a3dcdbfa585d5fdcbb25c7263bc" course="Math 1030" chapter="8" slide="19" of="76dbc2947ee0f11c0148cd7476a55652">
               <newcol course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The null space of a square matrix, $A$,
-is equal to the set of solutions to the homogeneous system, 
-$\linearsystem{A}{\mathbf{0}}$. A matrix is nonsingular if and only if the set of solutions to the homogeneous system, 
-$\linearsystem{A}{\mathbf{0}}$, 
-has only a trivial solution. 
+is equal to the set of solutions to the homogeneous system,
+$\linearsystem{A}{\mathbf{0}}$. A matrix is nonsingular if and only if the set of solutions to the homogeneous system,
+$\linearsystem{A}{\mathbf{0}}$,
+has only a trivial solution.
 These two observations may be chained together to construct the two proofs necessary for each half of this theorem. </paragraphs>
                 <qed course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
               </newcol>
@@ -687,35 +695,35 @@ These two observations may be chained together to construct the two proofs neces
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="a139ccd2c16622d9b967c14637d1d11c" course="Math 1030" chapter="8" slide="20" of="b25e99edb5cb21a0655d0d961da21e47">
               <newline course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement"/>
-              <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">($\Rightarrow$)  </paragraphs>
+              <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">($\Rightarrow$) </paragraphs>
               <newcol course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The hypothesis for this half of the proof is that the system 
-$\linearsystem{A}{\mathbf{b}}$ 
-has a unique solution for every choice of the constant vector $\mathbf{b}$. 
-We will make a very specific choice for $\mathbf{b}$: $\mathbf{b}=\mathbf{0}$. 
-Then we know that the system $\linearsystem{A}{\mathbf{0}}$ has a unique solution. 
+                <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The hypothesis for this half of the proof is that the system
+$\linearsystem{A}{\mathbf{b}}$
+has a unique solution for every choice of the constant vector $\mathbf{b}$.
+We will make a very specific choice for $\mathbf{b}$: $\mathbf{b}=\mathbf{0}$.
+Then we know that the system $\linearsystem{A}{\mathbf{0}}$ has a unique solution.
 But this is precisely the definition of what it means for $A$
 to be nonsingular. </paragraphs>
               </newcol>
               <newline course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement"/>
-              <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">($\Leftarrow$)  </paragraphs>
+              <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">($\Leftarrow$) </paragraphs>
               <newcol course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We assume that $A$ is nonsingular of size $n\times n$, 
-so we know there is a sequence of row operations that will convert $A$ 
+                <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We assume that $A$ is nonsingular of size $n\times n$,
+so we know there is a sequence of row operations that will convert $A$
 into the identity matrix $I_{n}$ (Theorem   </paragraphs>
                 <ref environment="newcol" chapter_type="" label="NMRRI" wbtag="ref" course="Math 1030" chapter="8" slide="20" src-course="Math 1030" src-chapter="8" src-slide="17" type="Theorem" item="8.16" src-filename="lec8.xml" md5="63a0fa79dbb22ae7e60cd449cbea33cd" class="lcref" serial="">
                   <title>Nonsingular Matrices Row Reduce to the Identity Matrix</title>
                 </ref>
-                <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">). 
-Form the augmented matrix $A^{\prime}=\left[A|\mathbf{b}\right]$ 
-and apply this same sequence of row operations to $A^{\prime}$. 
-The result will be the matrix $B^{\prime}=\left[I_{n}|\mathbf{c}\right]$, 
-which is in reduced row-echelon form with $r=n$. 
-Then the augmented matrix $B^{\prime}$ represents the (extremely simple) 
-system of equations $x_{i}=\left[\mathbf{c}\right]_{i}$, $1\leq i\leq n$. 
-The vector $\mathbf{c}$ is clearly a solution, so the system is consistent. 
-With a consistent system, we use Lecture 4 Theorem 4 to count free variables. 
-We find that there are $n-r=n-n=0$ free variables, 
+                <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">).
+Form the augmented matrix $A^{\prime}=\left[A|\mathbf{b}\right]$
+and apply this same sequence of row operations to $A^{\prime}$.
+The result will be the matrix $B^{\prime}=\left[I_{n}|\mathbf{c}\right]$,
+which is in reduced row-echelon form with $r=n$.
+Then the augmented matrix $B^{\prime}$ represents the (extremely simple)
+system of equations $x_{i}=\left[\mathbf{c}\right]_{i}$, $1\leq i\leq n$.
+The vector $\mathbf{c}$ is clearly a solution, so the system is consistent.
+With a consistent system, we use Lecture 4 Theorem 4 to count free variables.
+We find that there are $n-r=n-n=0$ free variables,
 and so we therefore know that the solution is unique. </paragraphs>
                 <qed course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
               </newcol>
@@ -786,8 +794,8 @@ So the statement of this theorem is just a convenient way to organize all these 
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="22" title="Particular Solution Plus Homogeneous Solutions" md5="29578e42bfc35d83899457fd5d8d296c" course="Math 1030" chapter="8" slide="22" item="8.22">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="8" section="6" subsection="" subsubsection="" serial="" slide="22">Particular Solution Plus Homogeneous Solutions</title>
               <label wbtag="label" name="PSPHS" type="Theorem"/>
-              <paragraphs course="Math 1030" chapter="8" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $\mathbf{w}$ is one solution to the linear system of equations 
-$\linearsystem{A}{\mathbf{b}}$. Then $\mathbf{y}$ is a solution to 
+              <paragraphs course="Math 1030" chapter="8" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $\mathbf{w}$ is one solution to the linear system of equations
+$\linearsystem{A}{\mathbf{b}}$. Then $\mathbf{y}$ is a solution to
 $\linearsystem{A}{\mathbf{b}}$ if and only if $\mathbf{y}=\mathbf{w}+\mathbf{z}$ for some vector $\mathbf{z}\in{\mathcal{N}}\!\left(A\right)$, i.e. </paragraphs>
               <enumerate course="Math 1030" chapter="8" chapter_type="" section="6" subsection="" subsubsection="" environment="enumerate" wbtag="enumerate">
                 <item course="Math 1030" chapter="8" chapter_type="" section="6" subsection="" subsubsection="" environment="enumerate" wbtag="item">
@@ -819,7 +827,7 @@ So $\mathbf{y}-\mathbf{w}\in{\mathcal{N}}\!\left(A\right)$. </paragraphs>
                   <item course="Math 1030" chapter="8" chapter_type="" section="6" subsection="" subsubsection="" environment="enumerate" wbtag="item">
                     <paragraphs course="Math 1030" chapter="8" chapter_type="" section="6" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs"> Suppose $\mathbf{z}\in{\mathcal{N}}\!\left(A\right)$, $A\mathbf{z}=\mathbf{0}$.
 So $A(\mathbf{w}+\mathbf{z})=A\mathbf{w}+A\mathbf{z}=
-\mathbf{b}+\mathbf{0}=\mathbf{b}$. 
+\mathbf{b}+\mathbf{0}=\mathbf{b}$.
 Hence $\mathbf{w}+\mathbf{z}$ is a solution of $A\mathbf{x}=\mathbf{b}$. </paragraphs>
                   </item>
                 </enumerate>
@@ -835,7 +843,7 @@ Hence $\mathbf{w}+\mathbf{z}$ is a solution of $A\mathbf{x}=\mathbf{b}$. </parag
 -3x_1 + 4x_2 -5x_3 - 6x_4 &amp;=  -12 \\
 x_1 +x_2 + 4x_3 - 5x_4 &amp;=  4
 \end{align*}
-is a consistent system of equations with a nontrivial null space. 
+is a consistent system of equations with a nontrivial null space.
 Let $A$ denote the coefficient matrix of this system.</paragraphs>
               <newline course="Math 1030" chapter="8" chapter_type="" section="6" subsection="" subsubsection="" environment="statement"/>
               <paragraphs course="Math 1030" chapter="8" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Consider the following three solutions to the system:</paragraphs>
@@ -861,7 +869,7 @@ Let $\mathbf{w}=\mathbf{y}_{1}$. Then,
 are indeed elements in ${\mathcal{N}}\!\left(A\right)$ (check!).</paragraphs>
                 <newline course="Math 1030" chapter="8" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
                 <collapse course="Math 1030" chapter="8" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="Math 1030" chapter="8" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> To find all the solutions, we may first work out 
+                  <paragraphs course="Math 1030" chapter="8" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> To find all the solutions, we may first work out
 (using Gaussian elimination on $\left[A|\mathbf{0}\right]$, for example) that:
 \[{\mathcal{N}}\!\left(A\right)=\left\{\left.x_{3}\begin{bmatrix}-3\\
 -1\\

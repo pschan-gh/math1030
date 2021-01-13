@@ -16,7 +16,7 @@
       <keyword chapter="" slide="all">solution vector</keyword>
       <keyword chapter="" slide="all">matrix representation</keyword>
       <keyword chapter="" slide="all">augmented matrix</keyword>
-      <keyword chapter="" slide="all">row operation</keyword>
+      <keyword chapter="" slide="all">elementary row operation</keyword>
       <keyword chapter="" slide="all">row-equivalent</keyword>
       <keyword chapter="" slide="all">Matrix</keyword>
       <keyword chapter="" slide="all">Column Vector</keyword>
@@ -55,7 +55,7 @@
         <keyword chapter="4" slide="all">solution vector</keyword>
         <keyword chapter="4" slide="all">matrix representation</keyword>
         <keyword chapter="4" slide="all">augmented matrix</keyword>
-        <keyword chapter="4" slide="all">row operation</keyword>
+        <keyword chapter="4" slide="all">elementary row operation</keyword>
         <keyword chapter="4" slide="all">row-equivalent</keyword>
         <keyword chapter="4" slide="all">Matrix</keyword>
         <keyword chapter="4" slide="all">Column Vector</keyword>
@@ -501,7 +501,7 @@ The augmented matrix is
         <slides environment="" chapter_type="">
           <slide environment="" chapter_type="Chapter" canon_num="10" scope="section" id="s10" slide="10" course="Math 1030" chapter="4" section="5" subsection="" subsubsection="" chapter_title="Matrices" section_title="Row operations">
             <keywords slide="10" environ="slide" chapter="4" course="Math 1030">
-              <keyword chapter="4" slide="10">row operation</keyword>
+              <keyword chapter="4" slide="10">elementary row operation</keyword>
               <keyword chapter="4" slide="10">row-equivalent</keyword>
               <keyword chapter="4" slide="10">Row Operations</keyword>
               <keyword chapter="4" slide="10">Row-Equivalent Matrices</keyword>
@@ -514,44 +514,47 @@ The augmented matrix is
             <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs"> An augmented matrix can be used to represent a system of linear equations and release us from writing out all the variables.
 We have seen how certain operations we can perform on equations will preserve their solutions .
 The next two definitions and the following theorem carry over these ideas to augmented matrices. </paragraphs>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="14" title="Row Operations" md5="38a1a5d198aa0b2fcf06bbcaf7478711" course="Math 1030" chapter="4" slide="10" item="4.14">
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="14" title="Row Operations" md5="308a8137997242db56a3552704c04c83" course="Math 1030" chapter="4" slide="10" item="4.14">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="4" section="5" subsection="" subsubsection="" serial="" slide="10">Row Operations</title>
               <label wbtag="label" name="RO" type="Definition"/>
-              <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The following three operations will transform an $m\times n$ matrix into a different matrix of the same size, and each is known as a </paragraphs>
-              <inline_keyword course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="statement">row operation</inline_keyword>
+              <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The following three operations will transform an $m\times n$ matrix into a different matrix of the same size, and each is known as an </paragraphs>
+              <inline_keyword course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="statement">elementary row operation</inline_keyword>
               <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">. </paragraphs>
               <enumerate course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="enumerate" wbtag="enumerate">
                 <item course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="enumerate" wbtag="item">
                   <newcol course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                    <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Swap the locations of two rows. </paragraphs>
+                    <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Swap the locations of two rows.</paragraphs>
+                    <newline course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                    <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Notation</paragraphs>
+                    </strong>
+                    <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: $R_{i}\leftrightarrow R_{j}$</paragraphs>
+                    <newline course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                    <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">(Swap the location of rows $i$ and $j$.) </paragraphs>
                   </newcol>
                 </item>
                 <item course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="enumerate" wbtag="item">
                   <newcol course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                    <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Multiply each entry of a single row by a nonzero quantity. </paragraphs>
+                    <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Multiply each entry of a single row by a nonzero number.</paragraphs>
+                    <newline course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                    <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Notation</paragraphs>
+                    </strong>
+                    <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: $\alpha R_{i}$</paragraphs>
+                    <newline course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                    <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">(Multiply row $i$ by the nonzero scalar $\alpha$.) </paragraphs>
                   </newcol>
                 </item>
                 <item course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="enumerate" wbtag="item">
                   <newcol course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                    <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Multiply each entry of one row by some quantity, and add these values to the entries in the same columns of a second row. Leave the first row the same after this operation, but replace the second row by the new values. </paragraphs>
-                  </newcol>
-                </item>
-              </enumerate>
-              <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> We will use a symbolic shorthand to describe these row operations: </paragraphs>
-              <enumerate course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="enumerate" wbtag="enumerate">
-                <item course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="enumerate" wbtag="item">
-                  <newcol course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                    <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $R_{i}\leftrightarrow R_{j}$: Swap the location of rows $i$ and $j$. </paragraphs>
-                  </newcol>
-                </item>
-                <item course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="enumerate" wbtag="item">
-                  <newcol course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                    <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\alpha R_{i}$: Multiply row $i$ by the nonzero scalar $\alpha$. </paragraphs>
-                  </newcol>
-                </item>
-                <item course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="enumerate" wbtag="item">
-                  <newcol course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                    <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\alpha R_{i}+R_{j}$: Multiply row $i$ by the scalar $\alpha$ and add to row $j$. </paragraphs>
+                    <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Multiply each entry of one row by some number, and add these values to the entries in the same columns of a second row. Leave the first row the same after this operation, but replace the second row by the new values.</paragraphs>
+                    <newline course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                    <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Notation</paragraphs>
+                    </strong>
+                    <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: $\alpha R_{i}+R_{j}$</paragraphs>
+                    <newline course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                    <paragraphs course="Math 1030" chapter="4" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">(Multiply row $i$ by the scalar $\alpha$ and add to row $j$.) </paragraphs>
                   </newcol>
                 </item>
               </enumerate>
