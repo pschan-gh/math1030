@@ -872,7 +872,7 @@ In this section, we will discuss the relation between elementary row operations 
 @title{Row Operations}
 @label{RO}
 @newcol
-The following three operations, each of which is known as a @keyword{row operation}, will transform an $m\times n$ matrix into a different matrix of the same size.
+The following three operations, each of which is known as an @keyword{elementary row operation}, will transform an $m\times n$ matrix into a different matrix of the same size.
 @enumerate
 @item
 @newcol
@@ -889,6 +889,7 @@ Multiply each entry of one row by some quantity, and add these values to the ent
 @endenumerate
 @endcol
 @end
+@slide
 @thm
 @label{thm:ROEM}
 @newcol
@@ -902,8 +903,9 @@ Let $J$ be a matrix obtained by applying the same row operation on $I_{m}$. Then
 Exercise.
 @endcol
 @end
-@slide
+
 @eg
+@newcol
 Let:
 \[A=\begin{bmatrix}a_{11}&a_{12}&a_{13}&a_{14}&a_{15}\\
 a_{21}&a_{22}&a_{23}&a_{24}&a_{25}\\
@@ -922,6 +924,12 @@ a_{41}&a_{42}&a_{43}&a_{44}&a_{45}\\
 0&3&1&0\\
 0&0&0&1\\
 \end{bmatrix}\]
-Then
+Verify that:
 \[JA=B.\]
+@endcol
+@end
+
+@slide
+@defn
+A matrix $J$ which corresponds to an elementary row operation as in @ref{thm:ROEM} is called an @keyword{elementary matrix}.
 @end
