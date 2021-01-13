@@ -1,10 +1,13 @@
-@course{Math 1030}@setchapter{5}
+@course{Math 1030}
+@setchapter{5}
 @chapter{More about matrices}
 
-The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at @href{http://linear.ups.edu/download.html}
+The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at
+@href{http://linear.ups.edu/download.html}
 .
 
-The print version can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-print.pdf}
+The print version can be downloaded at
+@href{http://linear.ups.edu/download/fcla-3.50-print.pdf}
 .
 
 <h5 class="notkw">Reference.</h5>
@@ -193,7 +196,7 @@ we have:
 For all $A\in M_{mn}$, we have  $1A=A$.
 @endcol
 @endenumerate
-
+@slide
 @eg
 @newcol
 As an example, we prove here property 7,
@@ -588,6 +591,7 @@ Then, for $1\leq i\leq m$, $1\leq j\leq p$, we have:
 \end{align*}
 @endcol
 @end
+@slide
 @eg
 @title{Product of Two Matrices, Entry-by-Entry}
 Consider the matrices:
@@ -599,6 +603,7 @@ B=\begin{bmatrix}1&6&2&1\\
 1&1&2&3\\
 6&4&-1&2\\
 1&-2&3&0\end{bmatrix}\]
+@newcol
 Suppose we just wanted the entry of $AB$ in the second row, third column:
 \begin{align*}
 \matrixentry{AB}{23}
@@ -623,7 +628,9 @@ The entry of third row, first column:
 =&(-5)(1)+(1)(-1)+(2)(1)+(-3)(6)+(4)(1)=-18
 \end{align*}
 Try to compute all the other entries.
+@endcol
 @end
+@slide
 <h5 class="notkw">How to memorize the formula</h5>
 :
 @newcol
@@ -642,11 +649,12 @@ The $2$-nd column of $B$ is $\begin{bmatrix}6\\
 
 Let’s do the multiplication:
 
-<table>
+<table class="table table-bordered">
+<tbody>
 <tr>
 <td>Row</td><td>-5</td><td>1</td><td>2</td><td>-3</td><td>4</td></tr><tr>
 <td>Column</td><td>6</td><td>4</td><td>1</td><td>4</td><td>-2</td></tr><tr>
-<td>Product</td><td>-30</td><td>4</td><td>2</td><td>-12</td><td>-8</td></tr></table>
+<td>Product</td><td>-30</td><td>4</td><td>2</td><td>-12</td><td>-8</td></tr></tbody></table>
 
 The sum is:
 \[-30+4+2-12-8=-44.\]
