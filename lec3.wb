@@ -5,11 +5,9 @@ The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downlo
 
 <h5 class="notkw">Reference.</h5>
 Beezer, Ver 3.5 Sect SSLE (print version p7 - p14)
-@section{
-Introduction
-}
+@section{Introduction}
 @defn
-@title{ (System of Linear Equations).}
+@title{(System of Linear Equations).}
 A @keyword{system of linear equations} is a collection of $m$ equations in the variables $x_{1},\,x_{2},\,x_{3},\ldots,x_{n}$ of the form:
 \begin{align*}
 a_{11}x_1+a_{12}x_2+a_{13}x_3+\dots+a_{1n}x_n&=b_1\\
@@ -55,10 +53,13 @@ The solution set may be descrbied as follows:
 \]
 @endcol
 @end
-@section{
-Possibilities for Solution Sets
-}
+@section{Possibilities for Solution Sets}
+@defn
+@label{def:CS}
+A system of linear equations is @keyword{consistent} if it has at least one solution. Otherwise, the system is called @keyword{inconsistent}.
+@end
 @eg
+@newcol
 @enumerate
 @item
 The following system of linear equations has @keyword{only one solution}.
@@ -66,7 +67,9 @@ The following system of linear equations has @keyword{only one solution}.
 2x_1+3x_2&=3\\
 x_1-x_2&=4
 \end{align*}
-The solution set is $(x_{1},x_{2})=(3,-1)$
+The solution set is $(x_{1},x_{2})=(3,-1)$.
+
+Since the solution set is nonempty, the system is <strong>consistent</strong>.
 @item
 @newcol
 The following system of linear equations has @keyword{infinite many solutions}.
@@ -75,6 +78,8 @@ The following system of linear equations has @keyword{infinite many solutions}.
 4x_1+6x_2&=6
 \end{align*}
 The solution set is $\{(x_{1},x_{2})=(t,\frac{3-2t}{3})\}$, where $t$ is any real number.
+
+Since the solution set is nonempty, the system is <strong>consistent</strong>.
 @endcol
 @item
 @newcol
@@ -84,9 +89,13 @@ The following system of linear equations has @keyword{no solutions}.
 4x_1+6x_2&=10
 \end{align*}
 The solution set is empty.
+
+So, the system is <strong>inconsistent</strong>.
 @endcol
 @endenumerate
+@endcol
 @end
+@slide
 @thm
 @newcol
 A system of linear equations can have (1) a unique solution or (2) infinitely many solutions
@@ -108,8 +117,7 @@ Two systems of linear equations are @keyword{equivalent} if their solution sets 
 @title{Equation Operations}
 @label{EO}
 @newcol
-Given a system of linear equations, the following three operations will transform the system into a different one, and each operation is known as an
-@keyword{equation operation}:
+Given a system of linear equations, the following three operations will transform the system into a different one, and each operation is known as an @keyword{equation operation}:
 @ol
 @li
 Swap the locations of two equations in the list of equations.
@@ -140,26 +148,20 @@ In fact, the second system of linear equations is obtained by applying operation
 If we apply one of the three equation operations of Definition          @ref{EO} to a system of linear equations, then the original system and the transformed system are equivalent.
 @end
 @proof
-@title{(Sketch)}
 @newcol
 Let $S$ be a system of linear equations and $S^{\prime}$ be another system of linear equations obtained by applying equation operations on $S$.
 
-
 Let $(x_{1},\ldots,x_{n})$ be a solution for $S$. Because $S^{\prime}$ is obtained by equation operations on $S$,
-
 
 @col
 it is obvious that $(x_{1},\ldots,x_{n})$ is also a solution for $S^{\prime}$. Conversely, suppose that $(x_{1},\ldots,x_{n})$ is a solution for $S^{\prime}$.
 Note that the reverse of the equation operations are also equation operations.
 
-
 @col
 Reversing the equation operators on $S$, we can show that $S$ can be obtained by equation operations on $S^{\prime}$. So $(x_{1},\ldots,x_{n})$ is also a solution for $S$.
 
-
 @col
 Hence $S$ and $S^{\prime}$ have the same solution set.
-
 
 @col
 For details, See Beezer, Theorem EOPSS (Ver 3.5, print version p. 10).
