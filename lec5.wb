@@ -868,28 +868,8 @@ So, $(AB)^{t} = B^{t}A^{t}$.
 @section{Row Operations and Matrix Multiplication}
 In this section, we will discuss the relation between elementary row operations and matrix multiplication.
 
-@defn
-@title{Row Operations}
-@label{RO}
-@newcol
-The following three operations, each of which is known as an @keyword{elementary row operation}, will transform an $m\times n$ matrix into a different matrix of the same size.
-@enumerate
-@item
-@newcol
-Swap the locations of two rows.
-@endcol
-@item
-@newcol
-Multiply each entry of a single row by a nonzero quantity.
-@endcol
-@item
-@newcol
-Multiply each entry of one row by some quantity, and add these values to the entries in the same columns of a second row. Leave the first row the same after this operation, but replace the second row by the new values.
-@endcol
-@endenumerate
-@endcol
-@end
-@slide
+Recall the definition of @ref{def:RO} on matrices.
+
 @thm
 @label{thm:ROEM}
 @newcol

@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030">
     <keywords slide="all" environ="course" chapter="" course="Math 1030">
@@ -17,7 +18,6 @@
       <keyword chapter="" slide="all">matrix-vector product</keyword>
       <keyword chapter="" slide="all">standard unit vector</keyword>
       <keyword chapter="" slide="all">matrix product</keyword>
-      <keyword chapter="" slide="all">elementary row operation</keyword>
       <keyword chapter="" slide="all">elementary matrix</keyword>
       <keyword chapter="" slide="all">Matrix Equality</keyword>
       <keyword chapter="" slide="all">Matrix Addition</keyword>
@@ -42,7 +42,6 @@
       <keyword chapter="" slide="all">Matrix Multiplication and Scalar Matrix Multiplication</keyword>
       <keyword chapter="" slide="all">Matrix Multiplication is Associative</keyword>
       <keyword chapter="" slide="all">Matrix Multiplication and Transposes</keyword>
-      <keyword chapter="" slide="all">Row Operations</keyword>
     </keywords>
     <title environment="title" chapter_type="" wbtag="course" scope="course" course="Math 1030" chapter="" section="" subsection="" subsubsection="" serial="" slide="">Math 1030</title>
     <slides environment="" chapter_type="">
@@ -70,7 +69,6 @@
         <keyword chapter="5" slide="all">matrix-vector product</keyword>
         <keyword chapter="5" slide="all">standard unit vector</keyword>
         <keyword chapter="5" slide="all">matrix product</keyword>
-        <keyword chapter="5" slide="all">elementary row operation</keyword>
         <keyword chapter="5" slide="all">elementary matrix</keyword>
         <keyword chapter="5" slide="all">Matrix Equality</keyword>
         <keyword chapter="5" slide="all">Matrix Addition</keyword>
@@ -95,7 +93,6 @@
         <keyword chapter="5" slide="all">Matrix Multiplication and Scalar Matrix Multiplication</keyword>
         <keyword chapter="5" slide="all">Matrix Multiplication is Associative</keyword>
         <keyword chapter="5" slide="all">Matrix Multiplication and Transposes</keyword>
-        <keyword chapter="5" slide="all">Row Operations</keyword>
       </keywords>
       <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="Math 1030" chapter="5" section="" subsection="" subsubsection="" serial="5" slide="">More about matrices</title>
       <slides environment="" chapter_type="">
@@ -1258,45 +1255,19 @@ So the matrices $\alpha(AB)$ and $(\alpha A)B$ are equal, entry-by-entry, and by
         </title>
         <slides environment="" chapter_type="">
           <slide environment="" chapter_type="Chapter" canon_num="24" scope="section" id="s24" slide="24" course="Math 1030" chapter="5" section="5" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Row Operations and Matrix Multiplication">
-            <keywords slide="24" environ="slide" chapter="5" course="Math 1030">
-              <keyword chapter="5" slide="24">elementary row operation</keyword>
-              <keyword chapter="5" slide="24">Row Operations</keyword>
-            </keywords>
+            <keywords slide="24" environ="slide" chapter="5" course="Math 1030"/>
             <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="5" section="5" subsection="" subsubsection="" serial="" slide="24">
               <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Row Operations and Matrix Multiplication</paragraphs>
             </title>
             <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs"> In this section, we will discuss the relation between elementary row operations and matrix multiplication.</paragraphs>
             <newline course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="34" title="Row Operations" md5="a50728d2404803124a72d7fea0c08744" course="Math 1030" chapter="5" slide="24" item="5.34">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="5" section="5" subsection="" subsubsection="" serial="" slide="24">Row Operations</title>
-              <label wbtag="label" name="RO" type="Definition"/>
-              <newcol course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The following three operations, each of which is known as an </paragraphs>
-                <inline_keyword course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol">elementary row operation</inline_keyword>
-                <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, will transform an $m\times n$ matrix into a different matrix of the same size. </paragraphs>
-                <enumerate course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="enumerate" wbtag="enumerate">
-                  <item course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="enumerate" wbtag="item">
-                    <newcol course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                      <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Swap the locations of two rows. </paragraphs>
-                    </newcol>
-                  </item>
-                  <item course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="enumerate" wbtag="item">
-                    <newcol course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                      <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Multiply each entry of a single row by a nonzero quantity. </paragraphs>
-                    </newcol>
-                  </item>
-                  <item course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="enumerate" wbtag="item">
-                    <newcol course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                      <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Multiply each entry of one row by some quantity, and add these values to the entries in the same columns of a second row. Leave the first row the same after this operation, but replace the second row by the new values. </paragraphs>
-                    </newcol>
-                  </item>
-                </enumerate>
-              </newcol>
-            </statement>
-          </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="25" id="s25" slide="25" course="Math 1030" chapter="5" section="5" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Row Operations and Matrix Multiplication">
-            <keywords slide="25" environ="slide" chapter="5" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="35" md5="5c58e155ca934e2b7386d3148127f30b" course="Math 1030" chapter="5" slide="25" item="5.35">
+            <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs">Recall the definition of </paragraphs>
+            <ref environment="" chapter_type="" label="def:RO" wbtag="ref" course="Math 1030" chapter="5" slide="24" src-course="Math 1030" src-chapter="4" src-slide="10" type="Definition" item="4.14" src-filename="lec4.xml" md5="308a8137997242db56a3552704c04c83" class="lcref" serial="">
+              <title>Row Operations</title>
+            </ref>
+            <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs"> on matrices.</paragraphs>
+            <newline course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="34" md5="5c58e155ca934e2b7386d3148127f30b" course="Math 1030" chapter="5" slide="24" item="5.34">
               <label wbtag="label" name="thm:ROEM" type="Theorem"/>
               <newcol course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $A\in M_{mn}$. Let $B$ be a matrix obtained by applying one of the above row operations on $A$.
@@ -1304,13 +1275,13 @@ Let $J$ be a matrix obtained by applying the same row operation on $I_{m}$. Then
 \[JA=B.\] </paragraphs>
               </newcol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="ef8fb97d271d5d2e855498ac9a9b41b7" course="Math 1030" chapter="5" slide="25" of="5c58e155ca934e2b7386d3148127f30b">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="ef8fb97d271d5d2e855498ac9a9b41b7" course="Math 1030" chapter="5" slide="24" of="5c58e155ca934e2b7386d3148127f30b">
               <newcol course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Exercise. </paragraphs>
               </newcol>
             </substatement>
             <newline course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="36" md5="fb6a6b3a0dca650c9c263c93d68a1046" course="Math 1030" chapter="5" slide="25" item="5.36">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="35" md5="fb6a6b3a0dca650c9c263c93d68a1046" course="Math 1030" chapter="5" slide="24" item="5.35">
               <newcol course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let:
 \[A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;a_{14}&amp;a_{15}\\
@@ -1336,13 +1307,13 @@ Verify that:
             </statement>
             <newline course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="26" id="s26" slide="26" course="Math 1030" chapter="5" section="5" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Row Operations and Matrix Multiplication">
-            <keywords slide="26" environ="slide" chapter="5" course="Math 1030">
-              <keyword chapter="5" slide="26">elementary matrix</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="25" id="s25" slide="25" course="Math 1030" chapter="5" section="5" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Row Operations and Matrix Multiplication">
+            <keywords slide="25" environ="slide" chapter="5" course="Math 1030">
+              <keyword chapter="5" slide="25">elementary matrix</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="37" md5="e230d241c6dd9bffce82a9f2a267e2ed" course="Math 1030" chapter="5" slide="26" item="5.37">
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="36" md5="e230d241c6dd9bffce82a9f2a267e2ed" course="Math 1030" chapter="5" slide="25" item="5.36">
               <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> A matrix $J$ which corresponds to an elementary row operation as in </paragraphs>
-              <ref environment="statement" chapter_type="" label="thm:ROEM" wbtag="ref" course="Math 1030" chapter="5" slide="26" src-course="Math 1030" src-chapter="5" src-slide="24" type="Theorem" item="5.35" src-filename="lec5.xml" md5="5c58e155ca934e2b7386d3148127f30b" class="lcref" serial="">
+              <ref environment="statement" chapter_type="" label="thm:ROEM" wbtag="ref" course="Math 1030" chapter="5" slide="25" src-course="Math 1030" src-chapter="5" src-slide="25" type="Theorem" item="5.35" src-filename="lec5.xml" md5="5c58e155ca934e2b7386d3148127f30b" class="lcref" serial="">
                 <title>Theorem 5.35</title>
               </ref>
               <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> is called an </paragraphs>
