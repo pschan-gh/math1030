@@ -381,32 +381,32 @@ and you can verify that $(x_{1},\,x_{2},\,x_{3},\,x_{4})=(-17,\,13,\,5,\,-2)$ ma
 @slide
 @eg
 Solve the following system of linear equations:
-\begin{alignedat}{6}
+\[\begin{alignedat}{6}
 & {} {} &  x_2 & {}+{} & x_3 & {}+{} & 2x_4   & {}+{} & 2x_5 &{}={} & 2 \\
 x_1 & {}+{} &  2x_2 & {}+{} & 3x_3 & {}+{} & 2x_4 &  {}+{}&  3x_5&{}={} & 4 \\
 -2x_1 & {}-{} &  x_2 & {}-{} & 3x_3 & {}+{} & 3x_4 & {}+{} &  x_5   &{}={} & 3
-\end{alignedat}
+\end{alignedat}\]
 @newcol
 Swap equation 1 and equation 2:
-\begin{alignedat}{6}
+\[\begin{alignedat}{6}
 x_1 & {}+{} &  2x_2 & {}+{} & 3x_3 & {}+{} & 2x_4 &  {}+{}&  3x_5&{}={} & 4 \\
 & {} {} &  x_2 & {}+{} & x_3 & {}+{} & 2x_4   & {}+{} & 2x_5 &{}={} & 2 \\
 -2x_1 & {}-{} &  x_2 & {}-{} & 3x_3 & {}+{} & 3x_4 & {}+{} &  x_5   &{}={} & 3
-\end{alignedat}
+\end{alignedat}\]
 @col
 2 times equation 1, and add it to equation 3:
-\begin{alignedat}{6}
+\[\begin{alignedat}{6}
 x_1 & {}+{} &  2x_2 & {}+{} & 3x_3 & {}+{} & 2x_4 &  {}+{}&  3x_5&{}={} & 4 \\
 & {} {} &  x_2 & {}+{} & x_3 & {}+{} & 2x_4   & {}+{} & 2x_5 &{}={} & 2 \\
 & {} {} & 3x_2 & {}+{} & 3x_3 & {}+{} & 7x_4 &  {}+{} &7x_5     &{}={} & 11
-\end{alignedat}
+\end{alignedat}\]
 @col
 -3 times equation 2 and add it to equation 3:
-\begin{alignedat}{6}
+\[\begin{alignedat}{6}
 x_1 & {}+{} &  2x_2 & {}+{} & 3x_3 & {}+{} & 2x_4 &  {}+{}&  3x_5&{}={} & 4 \\
 & {} {} &  x_2 & {}+{} & x_3 & {}+{} & 2x_4   & {}+{} & 2x_5 &{}={} & 2 \\
 & {} {} &     & {}  {} &     & {} {} & x_4 &  {}+{}  & x_5 &{}={} & 5
-\end{alignedat}
+\end{alignedat}\]
 @col
 Now the system of linear equations looks like an ”inverted stair”.
 We can then solve the system of linear equations by substitution.
@@ -431,32 +431,32 @@ Set $x_{3}=a$, $x_{5}=b$, the solution set can be given by
 \[\{(10-a-b,-8-a,a,5-b,b)\,|\,a,b\text{ real numbers}\}.\]
 @col
 <strong>A better method:</strong> Instead of subsitution, we could use more elimination:
-\begin{alignedat}{6}
+\[\begin{alignedat}{6}
 x_1 & {}+{} &  2x_2 & {}+{} & 3x_3 & {}+{} & 2x_4 &  {}+{}&  3x_5&{}={} & 4 \\
 & {} {} &  x_2 & {}+{} & x_3 & {}+{} & 2x_4   & {}+{} & 2x_5 &{}={} & 2 \\
 & {} {} &     & {}  {} &     & {} {} & x_4 &  {}+{}  & x_5 &{}={} & 5
-\end{alignedat}
+\end{alignedat}\]
 @col
 -2 times equation 3 and add it to equation 2:
-\begin{alignedat}{6}
+\[\begin{alignedat}{6}
 x_1 & {}+{} &  2x_2 & {}+{} & 3x_3 & {}+{} & 2x_4 &  {}+{}&  3x_5&{}={} & 4 \\
 & {} {} &  x_2 & {}+{} & x_3 & {} {} &   & {} {} &  &{}={} & -8 \\
 & {} {} &     & {}  {} &     & {} {} & x_4 &  {}+{}  & x_5 &{}={} & 5
-\end{alignedat}
+\end{alignedat}\]
 @col
 -2 times equation 3 and add it to equation 1:
-\begin{alignedat}{6}
+\[\begin{alignedat}{6}
 x_1 & {}+{} &  2x_2 & {}+{} & 3x_3 & {}+{} &     &  {}+{}&  x_5&{}={} & -6 \\
 & {} {} &  x_2 & {}+{} & x_3 & {} {} &   & {} {} &  &{}={} & -8 \\
 & {} {} &     & {}  {} &     & {} {} & x_4 &  {}+{}  & x_5 &{}={} & 5
-\end{alignedat}
+\end{alignedat}\]
 @col
 -2 times equation 2 and add it to equation 1:
-\begin{alignedat}{6}
+\[\begin{alignedat}{6}
 x_1 & {}+{} &      & {}+{} & x_3 & {} {} &     &  {}+{}&  x_5&{}={} &10 \\
 & {} {} &  x_2 & {}+{} & x_3 & {} {} &   & {} {} &  &{}={} & -8 \\
 & {} {} &     & {}  {} &     & {} {} & x_4 &  {}+{}  & x_5 &{}={} & 5
-\end{alignedat}
+\end{alignedat}\]
 @col
 Notice the following:
 @enumerate
