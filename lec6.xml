@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030">
     <keywords slide="all" environ="course" chapter="" course="Math 1030">
@@ -58,8 +59,8 @@
             <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">Reference.</paragraphs>
           </h5>
           <paragraphs course="Math 1030" chapter="6" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Beezer, Ver 3.5 Subsection RREF (print version p21 - p33) You can skip the proof of Thm REMEF on p.22 and Thm RREFU on p.24-27 </paragraphs>
-          <br xmlns="http://www.w3.org/1999/xhtml" environment="" />
-          <br xmlns="http://www.w3.org/1999/xhtml" environment="" />
+          <br xmlns="http://www.w3.org/1999/xhtml" environment=""/>
+          <br xmlns="http://www.w3.org/1999/xhtml" environment=""/>
           <h5 xmlns="http://www.w3.org/1999/xhtml" class="notkw" environment="">
             <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">Exercise.</paragraphs>
           </h5>
@@ -188,7 +189,7 @@ More precisely: </paragraphs>
                   <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> If $i &lt; j$ and both row $i$ and row $j$ are not zero rows,
 then $d_{i} &lt; d_{j}$, i.e.
 $d_{1},d_{2},\ldots$ are in ascending order. </paragraphs>
-                  <br xmlns="http://www.w3.org/1999/xhtml" environment="col_ol" />
+                  <br xmlns="http://www.w3.org/1999/xhtml" environment="col_ol"/>
                   <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> In particular,
 all matrix entries below a leftmost nonzero entry must be equal to zero. </paragraphs>
                 </col_li>
@@ -498,7 +499,7 @@ since we now know we have at least one nonzero row.</paragraphs>
                                     <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">,
 with column index $j$ increased to $2$ and $r = 1$.</paragraphs>
                                     <newline course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
-                                    <br xmlns="http://www.w3.org/1999/xhtml" environment="newcol" />
+                                    <br xmlns="http://www.w3.org/1999/xhtml" environment="newcol"/>
                                     <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> In fact, we may as well ignore row 1 and column 1,
 and essentially apply the previous steps to the remaining $3 \times 4$ matrix:</paragraphs>
                                     <newline course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
@@ -836,9 +837,11 @@ x_{1}+4x_{3}&amp;=5
 \right]
 \] </paragraphs>
                   <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \[\displaystyle\xrightarrow{7R_{1}+R_{3}}\left[\begin{array}[]{ccc|c}\boxed{1%}&amp;0&amp;4&amp;5\\
+                    <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \[\displaystyle\xrightarrow{7R_{1}+R_{3}}\left[\begin{array}[]{ccc|c}
+\boxed{1}&amp;0&amp;4&amp;5\\
 0&amp;5&amp;-13&amp;-1\\
-0&amp;-6&amp;16&amp;2\end{array}\right]\] </paragraphs>
+0&amp;-6&amp;16&amp;2\end{array}\right]
+\] </paragraphs>
                     <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Now, with $j=2$,
 \[\displaystyle\xrightarrow{\frac{1}{5}R_{2}}\left[\begin{array}[]{ccc|c}%

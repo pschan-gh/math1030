@@ -19,6 +19,9 @@
       <keyword chapter="" slide="all">standard unit vector</keyword>
       <keyword chapter="" slide="all">matrix product</keyword>
       <keyword chapter="" slide="all">elementary matrix</keyword>
+      <keyword chapter="" slide="all">invertible</keyword>
+      <keyword chapter="" slide="all">inverse</keyword>
+      <keyword chapter="" slide="all">nonsingular</keyword>
       <keyword chapter="" slide="all">Matrix Equality</keyword>
       <keyword chapter="" slide="all">Matrix Addition</keyword>
       <keyword chapter="" slide="all">Matrix Scalar Multiplication</keyword>
@@ -70,6 +73,9 @@
         <keyword chapter="5" slide="all">standard unit vector</keyword>
         <keyword chapter="5" slide="all">matrix product</keyword>
         <keyword chapter="5" slide="all">elementary matrix</keyword>
+        <keyword chapter="5" slide="all">invertible</keyword>
+        <keyword chapter="5" slide="all">inverse</keyword>
+        <keyword chapter="5" slide="all">nonsingular</keyword>
         <keyword chapter="5" slide="all">Matrix Equality</keyword>
         <keyword chapter="5" slide="all">Matrix Addition</keyword>
         <keyword chapter="5" slide="all">Matrix Scalar Multiplication</keyword>
@@ -1313,12 +1319,95 @@ Verify that:
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="36" md5="e230d241c6dd9bffce82a9f2a267e2ed" course="Math 1030" chapter="5" slide="25" item="5.36">
               <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> A matrix $J$ which corresponds to an elementary row operation as in </paragraphs>
-              <ref environment="statement" chapter_type="" label="thm:ROEM" wbtag="ref" course="Math 1030" chapter="5" slide="25" src-course="Math 1030" src-chapter="5" src-slide="25" type="Theorem" item="5.35" src-filename="lec5.xml" md5="5c58e155ca934e2b7386d3148127f30b" class="lcref" serial="">
-                <title>Theorem 5.35</title>
+              <ref environment="statement" chapter_type="" label="thm:ROEM" wbtag="ref" course="Math 1030" chapter="5" slide="25" src-course="Math 1030" src-chapter="5" src-slide="24" type="Theorem" item="5.34" src-filename="lec5.xml" md5="5c58e155ca934e2b7386d3148127f30b" class="lcref" serial="">
+                <title>Theorem 5.34</title>
               </ref>
               <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> is called an </paragraphs>
               <inline_keyword course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="statement">elementary matrix</inline_keyword>
               <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">. </paragraphs>
+            </statement>
+            <newline course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Invertible Matrices" course="Math 1030" chapter="5" num="6" serial="5.6">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="5" section="6" subsection="" subsubsection="" serial="5.6" slide="">
+          <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Invertible Matrices</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="26" scope="section" id="s26" slide="26" course="Math 1030" chapter="5" section="6" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Invertible Matrices">
+            <keywords slide="26" environ="slide" chapter="5" course="Math 1030">
+              <keyword chapter="5" slide="26">invertible</keyword>
+              <keyword chapter="5" slide="26">inverse</keyword>
+              <keyword chapter="5" slide="26">nonsingular</keyword>
+            </keywords>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="5" section="6" subsection="" subsubsection="" serial="" slide="26">
+              <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Invertible Matrices</paragraphs>
+            </title>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="37" md5="ed3ae18215d80380938986f70dbb2e12" course="Math 1030" chapter="5" slide="26" item="5.37">
+              <label wbtag="label" name="def:matrixinverse" type="Definition"/>
+              <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> An $n \times n$ square matrix $A$ is said to be </paragraphs>
+              <inline_keyword course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="statement">invertible</inline_keyword>
+              <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> if there exists an $n \times n$ matrix $B$
+such that:
+\[
+AB = BA = I_n.
+\]
+We call $B$ an </paragraphs>
+              <inline_keyword course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="statement">inverse</inline_keyword>
+              <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$. </paragraphs>
+            </statement>
+            <newline course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="38" md5="3f1de1d4a9d2e464866075da469a219e" course="Math 1030" chapter="5" slide="26" item="5.38">
+              <newcol course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If $A, B, B'$ are $n \times n$ matrices such that:
+\[
+AB = BA = I_n \quad \text{and} \quad AB' = B'A = I_n,
+\]
+then $B = B'$.
+Hence, the inverse of an invertible matrix $A$ is unique. We denote it by $A^{-1}$. </paragraphs>
+              </newcol>
+            </statement>
+            <newline course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
+            <statement environment="statement" chapter_type="Chapter" type="Fact" wbtag="fact" num="39" md5="52204403549194cbcd96929b9361c74a" course="Math 1030" chapter="5" slide="26" item="5.39">
+              <newcol course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $A$ be an $n \times n$ matrix. </paragraphs>
+                <col_ul course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="col_ul" wbtag="col_ul">
+                  <col_li course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="col_ul" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="col_ul" wbtag="paragraphs"> If $A$ is invertible, so is $A^{-1}$, with:
+\[
+\left( A^{-1} \right)^{-1} = A.
+\] </paragraphs>
+                  </col_li>
+                  <col_li course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="col_ul" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="col_ul" wbtag="paragraphs"> The  matrix $A$ is invertible if and only if it is row-equivalent to $I_n$. </paragraphs>
+                  </col_li>
+                  <col_li course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="col_ul" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="col_ul" wbtag="paragraphs"> The matrix $A$ is invertible if and only if it is </paragraphs>
+                    <inline_keyword course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="col_ul">nonsingular</inline_keyword>
+                    <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="col_ul" wbtag="paragraphs">, that is:
+\[
+A \vec{x} = \vec{0}
+\]
+if and only if $\vec{x} = \vec{0}$. </paragraphs>
+                  </col_li>
+                  <col_li course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="col_ul" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="col_ul" wbtag="paragraphs"> If the matrix $A$ is invertible, then so is its transpose $A^t$, with:
+\[
+\left(A^t\right)^{-1} = \left(A^{-1}\right)^t.
+\] </paragraphs>
+                  </col_li>
+                  <col_li course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="col_ul" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="col_ul" wbtag="paragraphs"> If $A$, $B$ are invertible $n \times n$ matrices, then
+\[
+\left(AB\right)^{-1} = B^{-1}A^{-1}.
+\] </paragraphs>
+                  </col_li>
+                  <col_li course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="col_ul" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="col_ul" wbtag="paragraphs"> Elementary matrices are invertible. </paragraphs>
+                  </col_li>
+                </col_ul>
+              </newcol>
             </statement>
           </slide>
         </slides>
