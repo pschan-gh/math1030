@@ -1421,7 +1421,8 @@ if and only if $\vec{x} = \vec{0}$. </paragraphs>
             <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="" wbtag="paragraphs">.</paragraphs>
             <newline course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" of="REMES" md5="b0f79dc6e10b303342e604204f1990dc" course="Math 1030" chapter="5" slide="27">
-              <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs"> Suppose $A = [A' | \vec{a}]$ and $B = [B' | \vec{b}]$.
+              <newcol course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose $A = [A' | \vec{a}]$ and $B = [B' | \vec{b}]$.
 If $A$ and $B$ are row-equivalent, then there exists a sequence of elementary matrices $J_1, J_2, \ldots J_l$
 such that:
 \[
@@ -1436,24 +1437,24 @@ B' = J A'
 \quad
 \vec{b} = J\vec{a}.
 \] </paragraphs>
-              <newcol course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> For any $\vec{v}$ which is a solution to $\mathcal{LS}(A', \vec{a})$, by definition we have:
+                <collapse course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> For any $\vec{v}$ which is a solution to $\mathcal{LS}(A', \vec{a})$, by definition we have:
 \[
 A' \vec{v} = \vec{a}.
 \] </paragraphs>
-                <collapse course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So,
+                  <collapse course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So,
 \[
 B'\vec{v} = JA'\vec{v} = J\vec{a} = \vec{b},
 \]
 which implies that $\vec{v}$ is also a solution to $\mathcal{LS}(B', \vec{b})$.</paragraphs>
-                  <newline course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
-                  <collapse course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Conversely, by </paragraphs>
-                    <ref environment="newcol" chapter_type="" label="fact:matrixinverse" wbtag="ref" course="Math 1030" chapter="5" slide="27" src-course="Math 1030" src-chapter="5" src-slide="26" type="Fact" item="5.39" src-filename="lec5.xml" md5="ce970673f079e662a0f8445d4ea25f33" class="lcref" serial="">
-                      <title>Fact 5.39</title>
-                    </ref>
-                    <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> the matrix $J$ is invertible, hence,
+                    <newline course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Conversely, by </paragraphs>
+                      <ref environment="newcol" chapter_type="" label="fact:matrixinverse" wbtag="ref" course="Math 1030" chapter="5" slide="27" src-course="Math 1030" src-chapter="5" src-slide="26" type="Fact" item="5.39" src-filename="lec5.xml" md5="ce970673f079e662a0f8445d4ea25f33" class="lcref" serial="">
+                        <title>Fact 5.39</title>
+                      </ref>
+                      <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> the matrix $J$ is invertible, hence,
 \[
 A' = J^{-1} B'
 \quad
@@ -1461,12 +1462,13 @@ A' = J^{-1} B'
 \quad
 \vec{a} = J^{-1}\vec{b}.
 \] </paragraphs>
-                    <collapse course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                      <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> It then follows from the same arguments used before that any solution $\vec{v}$ to $\mathcal{LS}(B', \vec{b})$
+                      <collapse course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> It then follows from the same arguments used before that any solution $\vec{v}$ to $\mathcal{LS}(B', \vec{b})$
 is also a solution to $\mathcal{LS}(A', \vec{a})$.</paragraphs>
-                      <newline course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
-                      <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">We conclude that $\mathcal{LS}(A', \vec{a})$ and  $\mathcal{LS}(B', \vec{b})$ have the same solution set,
+                        <newline course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
+                        <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">We conclude that $\mathcal{LS}(A', \vec{a})$ and  $\mathcal{LS}(B', \vec{b})$ have the same solution set,
 hence they are equivalent linear systems. </paragraphs>
+                      </collapse>
                     </collapse>
                   </collapse>
                 </collapse>
