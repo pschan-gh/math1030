@@ -936,6 +936,7 @@ Hence, the inverse of an invertible matrix $A$ is unique. We denote it by $A^{-1
 @end
 
 @fact
+@label{fact:matrixinverse}
 @col
 Let $A$ be an $n \times n$ matrix.
 @ul
@@ -958,7 +959,7 @@ If the matrix $A$ is invertible, then so is its transpose $A^t$, with:
 \left(A^t\right)^{-1} = \left(A^{-1}\right)^t.
 \]
 @li
-If $A$, $B$ are invertible $n \times n$ matrices, then
+If $A$, $B$ are invertible $n \times n$ matrices, then $AB$ is also invertible, with:
 \[
 \left(AB\right)^{-1} = B^{-1}A^{-1}.
 \]
@@ -973,4 +974,46 @@ We may now prove Theorem @ref{REMES}.
 
 @proof
 @of{REMES}
+Suppose $A = [A' | \vec{a}]$ and $B = [B' | \vec{b}]$.
+If $A$ and $B$ are row-equivalent, then there exists a sequence of elementary matrices $J_1, J_2, \ldots J_l$
+such that:
+\[
+[B' | \vec{b}] = B = J_l\cdots J_2 j_1 A = J_l\cdots J_2 j_1 [A' | \vec{a}]
+\]
+Let $J = J_l \cdots J_2 J_1$.
+Then, we have:
+\[
+B' = J A'
+\quad
+\text{ and }
+\quad
+\vec{b} = J\vec{a}.
+\]
+@col
+For any $\vec{v}$ which is a solution to $\mathcal{LS}(A', \vec{a})$, by definition we have:
+\[
+A' \vec{v} = \vec{a}.
+\]
+@col
+So,
+\[
+B'\vec{v} = JA'\vec{v} = J\vec{a} = \vec{b},
+\]
+which implies that $\vec{v}$ is also a solution to $\mathcal{LS}(B', \vec{b})$.
+
+@col
+Conversely, by @ref{fact:matrixinverse} the matrix $J$ is invertible, hence,
+\[
+A' = J^{-1} B'
+\quad
+\text{ and }
+\quad
+\vec{a} = J^{-1}\vec{b}.
+\]
+@col
+It then follows from the same arguments before that any solution $\vec{v}$ to $\mathcal{LS}(B', \vec{b})$
+is also a solution to $\mathcal{LS}(A', \vec{a})$.
+
+We conclude that $\mathcal{LS}(A', \vec{a})$ and  $\mathcal{LS}(B', \vec{b})$ have the same solution set,
+hence they are equivalent linear systems.
 @end
