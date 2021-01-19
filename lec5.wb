@@ -90,7 +90,7 @@ i.e.,
 \vdots&\vdots&\vdots&\vdots\\
 \lambda a_{m1}&\lambda a_{m2}&\cdots&\lambda a_{mn}\end{bmatrix}.\]
 @end
-Notice again that we have yet another kind of multiplication, and it is again written putting two symbols side-by-side. Computationally, scalar matrix multiplication is very easy.
+Computationally, scalar matrix multiplication is very easy.
 @eg
 @newcol
 If
@@ -915,7 +915,7 @@ A matrix $J$ which corresponds to an elementary row operation as in @ref{thm:ROE
 @end
 
 @section{Invertible Matrices}
-@def
+@defn
 @label{def:matrixinverse}
 An $n \times n$ square matrix $A$ is said to be @keyword{invertible} if there exists an $n \times n$ matrix $B$
 such that:
@@ -926,18 +926,19 @@ We call $B$ an @keyword{inverse} of $A$.
 @end
 
 @thm
-@col
+@newcol
 If $A, B, B'$ are $n \times n$ matrices such that:
 \[
 AB = BA = I_n \quad \text{and} \quad AB' = B'A = I_n,
 \]
 then $B = B'$.
 Hence, the inverse of an invertible matrix $A$ is unique. We denote it by $A^{-1}$.
+@endcol
 @end
 
 @fact
 @label{fact:matrixinverse}
-@col
+@newcol
 Let $A$ be an $n \times n$ matrix.
 @ul
 @li
@@ -964,6 +965,7 @@ If $A$, $B$ are invertible $n \times n$ matrices, then $AB$ is also invertible, 
 \left(AB\right)^{-1} = B^{-1}A^{-1}.
 \]
 @endul
+@endcol
 @end
 @slide
 @thm
@@ -973,8 +975,7 @@ Elementary matrices are invertible.
 We may now prove Theorem @ref{REMES}.
 
 @proof
-@of{REMES}
-@col
+@newcol
 Suppose $A = [A' | \vec{a}]$ and $B = [B' | \vec{b}]$.
 If $A$ and $B$ are row-equivalent, then there exists a sequence of elementary matrices $J_1, J_2, \ldots J_l$
 such that:
@@ -1017,4 +1018,5 @@ is also a solution to $\mathcal{LS}(A', \vec{a})$.
 
 We conclude that $\mathcal{LS}(A', \vec{a})$ and  $\mathcal{LS}(B', \vec{b})$ have the same solution set,
 hence they are equivalent linear systems.
+@endcol
 @end
