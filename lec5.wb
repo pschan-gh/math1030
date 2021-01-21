@@ -690,11 +690,11 @@ So the matrices $A{\cal O}_{n\times p}$ and ${\cal O}_{m\times p}$ are equal.
 @endcol
 @end
 @slide
-@def
+@defn
 The @keyword{identity matrix} $I_m$ is the $m \times m$ square matrix whose diagonal entries are all equal to $1$,
 and all off-diagonal entries are equal to zero. That is:
 
-@col
+@newcol
 \[
 \left[I_m\right]_{ij} = \begin{cases}
 1, & \text{ if } i = j;\\
@@ -866,8 +866,7 @@ Hence, $(AB)D = A(BD)$.
 
 Alternatively,
 @proof
-@of{MMA}
-@col
+@newcol
 Write:
 \[
 A = \left(
@@ -917,13 +916,14 @@ We have:
 \[
 \begin{split}
 A(B\vec{v}) = A(v_1\mathbf{B}_1 + \cdots + v_p \mathbf{B}_p)
-&= v_1 (A\mathbf{B}_1) + \cdots v_p (A\mathbf{B}_p)
+&= v_1 (A\mathbf{B}_1) + \cdots + v_p (A\mathbf{B}_p)
 \\&= (A\mathbf{B}_1 | \cdots | A \mathbf{B}_p)\vec{v}
 \\&= (AB)\vec{v}.
 \end{split}
 \]
 This completes the proof.
 @qed
+@endcol
 @end
 
 @remark
