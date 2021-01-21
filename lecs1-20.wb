@@ -2399,17 +2399,17 @@ We will do (1), you do (2). Entry-by-entry, for $1\leq i\leq m$, $1\leq j\leq p$
 \matrixentry{A(B+C)}{ij}
 &=
 \sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B+C}{kj}
-\\%&&acroref type="theorem" acro="EMP" />\\
+\\
 &=\sum_{k=1}^{n}\matrixentry{A}{ik}(\matrixentry{B}{kj}+\matrixentry{C}{kj})
-\\%&&acroref type="definition" acro="MA" />\\
+\\
 &=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}+\matrixentry{A}{ik}\matrixentry{C}{kj}
-\\%&&acroref type="property" acro="DCN" />\\
+\\
 &=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}+\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{C}{kj}
-\\%&&acroref type="property" acro="CACN" />\\
+\\
 &=\matrixentry{AB}{ij}+\matrixentry{AC}{ij}
-\\%&&acroref type="theorem" acro="EMP" />\\
+\\
 &=\matrixentry{AB+AC}{ij}
-\\%&&acroref type="definition" acro="MA" />
+\\
 \end{align*}
 So the matrices $A(B+C)$ and $AB+AC$ are equal, entry-by-entry.
 Hence by the definition of matrix equality, we can say they are equal matrices.
@@ -2429,15 +2429,15 @@ For $1\leq i\leq m$, $1\leq j\leq p$,
 \begin{align*}
 \matrixentry{\alpha(AB)}{ij}
 &=\alpha\matrixentry{AB}{ij}
-\\%&&acroref type="definition" acro="MSM" />\\
+\\
 &=\alpha\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}
-\\%&&acroref type="theorem" acro="EMP" />\\
+\\
 &=\sum_{k=1}^{n}\alpha\matrixentry{A}{ik}\matrixentry{B}{kj}
-\\%&&acroref type="property" acro="DCN" />\\
+\\
 &=\sum_{k=1}^{n}\matrixentry{\alpha A}{ik}\matrixentry{B}{kj}
-\\%&&acroref type="definition" acro="MSM" />\\
+\\
 &=\matrixentry{(\alpha A)B}{ij}
-\\%&&acroref type="theorem" acro="EMP" />
+\\
 \end{align*}
 So the matrices $\alpha(AB)$ and $(\alpha A)B$ are equal, entry-by-entry, and by the definition of matrix equality we can say they are equal matrices.
 @endcol
@@ -2456,11 +2456,11 @@ A matrix equality, so we will go entry-by-entry, no surprise there. For $1\leq i
 \begin{align*}
 \matrixentry{A(BD)}{ij}
 &=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{BD}{kj}
-\\%&&acroref type="theorem" acro="EMP" />\\
+\\
 &=\sum_{k=1}^{n}\matrixentry{A}{ik}\left(\sum_{\ell=1}^{p}\matrixentry{B}{k\ell}\matrixentry{D}{\ell j}\right)
-\\%&&acroref type="theorem" acro="EMP" />\\
+\\
 &=\sum_{k=1}^{n}\sum_{\ell=1}^{p}\matrixentry{A}{ik}\matrixentry{B}{k\ell}\matrixentry{D}{\ell j}
-\\%&&acroref type="property" acro="DCN" />\\
+\\
 \end{align*}
 @col
 We can switch the order of the summation since these are finite sums.
@@ -2469,7 +2469,7 @@ We can switch the order of the summation since these are finite sums.
 @col
 \begin{align*}
 &=\sum_{\ell=1}^{p}\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{k\ell}\matrixentry{D}{\ell j}
-\\%&&acroref type="property" acro="CACN" />\\
+\\
 \end{align*}
 @col
 As $\matrixentry{D}{\ell j}$ does not depend on the index $k$, we can use distributivity to move it outside of the inner sum.
@@ -2478,13 +2478,13 @@ As $\matrixentry{D}{\ell j}$ does not depend on the index $k$, we can use distri
 @col
 \begin{align*}
 &=\sum_{\ell=1}^{p}\matrixentry{D}{\ell j}\left(\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{k\ell}\right)
-\\%&&acroref type="property" acro="DCN" />\\
+\\
 &=\sum_{\ell=1}^{p}\matrixentry{D}{\ell j}\matrixentry{AB}{i\ell}
-\\%&&acroref type="theorem" acro="EMP" />\\
+\\
 &=\sum_{\ell=1}^{p}\matrixentry{AB}{i\ell}\matrixentry{D}{\ell j}
-\\%&&acroref type="property" acro="CMCN" />\\
+\\
 &=\matrixentry{(AB)D}{ij}
-\\%&&acroref type="theorem" acro="EMP" />
+\\
 \end{align*}
 @col
 Hence, $(AB)D = A(BD)$.
@@ -2509,15 +2509,15 @@ Here we go again, entry-by-entry. For $1\leq i\leq m$, $1\leq j\leq p$,
 @col
 \begin{align*}
 \matrixentry{\transpose{(AB)}}{ji}=&\matrixentry{AB}{ij}
-\\%&&acroref type="definition" acro="TM" />\\
+\\
 &=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}
-\\%&&acroref type="theorem" acro="EMP" />\\
+\\
 &=\sum_{k=1}^{n}\matrixentry{B}{kj}\matrixentry{A}{ik}
-\\%&&acroref type="property" acro="CMCN" />\\
+\\
 &=\sum_{k=1}^{n}\matrixentry{\transpose{B}}{jk}\matrixentry{\transpose{A}}{ki}
-\\%&&acroref type="definition" acro="TM" />\\
+\\
 &=\matrixentry{\transpose{B}\transpose{A}}{ji}
-\\%&&acroref type="theorem" acro="EMP" />
+\\
 \end{align*}
 
 

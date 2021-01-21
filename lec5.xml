@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030">
     <keywords slide="all" environ="course" chapter="" course="Math 1030">
@@ -1146,24 +1147,24 @@ Then: </paragraphs>
                   </item>
                 </enumerate>
               </statement>
-              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="840537918f60d77ec5ee0be837f432d1" course="Math 1030" chapter="5" slide="22" of="68a71c39b6ea622e3be690690c3fd5e8">
+              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="1544229fa1fd86a5c1fa874b20045227" course="Math 1030" chapter="5" slide="22" of="68a71c39b6ea622e3be690690c3fd5e8">
                 <newcol course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> We will do (1), you do (2). Entry-by-entry, for $1\leq i\leq m$, $1\leq j\leq p$,
 \begin{align*}
 \matrixentry{A(B+C)}{ij}
 &amp;=
 \sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B+C}{kj}
-\\%&amp;&amp;acroref type="theorem" acro="EMP" /&gt;\\
+\\
 &amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}(\matrixentry{B}{kj}+\matrixentry{C}{kj})
-\\%&amp;&amp;acroref type="definition" acro="MA" /&gt;\\
+\\
 &amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}+\matrixentry{A}{ik}\matrixentry{C}{kj}
-\\%&amp;&amp;acroref type="property" acro="DCN" /&gt;\\
+\\
 &amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}+\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{C}{kj}
-\\%&amp;&amp;acroref type="property" acro="CACN" /&gt;\\
+\\
 &amp;=\matrixentry{AB}{ij}+\matrixentry{AC}{ij}
-\\%&amp;&amp;acroref type="theorem" acro="EMP" /&gt;\\
+\\
 &amp;=\matrixentry{AB+AC}{ij}
-\\%&amp;&amp;acroref type="definition" acro="MA" /&gt;
+\\
 \end{align*}
 So the matrices $A(B+C)$ and $AB+AC$ are equal, entry-by-entry.
 Hence by the definition of matrix equality, we can say they are equal matrices. </paragraphs>
@@ -1176,22 +1177,22 @@ Hence by the definition of matrix equality, we can say they are equal matrices. 
                   <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose $A$ is an $m\times n$ matrix and $B$ is an $n\times p$ matrix. Let $\alpha$ be a scalar. Then $\alpha(AB)=(\alpha A)B=A(\alpha B)$. </paragraphs>
                 </newcol>
               </statement>
-              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="d964fe731f7b7fa83d3e195463160692" course="Math 1030" chapter="5" slide="22" of="dd66b55424e01836b1b2a25d76b50527">
+              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="fe2f51439f25d3b81c58bcd15f562ef0" course="Math 1030" chapter="5" slide="22" of="dd66b55424e01836b1b2a25d76b50527">
                 <newcol course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> These are equalities of matrices. We will do the first one, the second is similar and will be good practice for you.
 For $1\leq i\leq m$, $1\leq j\leq p$,
 \begin{align*}
 \matrixentry{\alpha(AB)}{ij}
 &amp;=\alpha\matrixentry{AB}{ij}
-\\%&amp;&amp;acroref type="definition" acro="MSM" /&gt;\\
+\\
 &amp;=\alpha\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}
-\\%&amp;&amp;acroref type="theorem" acro="EMP" /&gt;\\
+\\
 &amp;=\sum_{k=1}^{n}\alpha\matrixentry{A}{ik}\matrixentry{B}{kj}
-\\%&amp;&amp;acroref type="property" acro="DCN" /&gt;\\
+\\
 &amp;=\sum_{k=1}^{n}\matrixentry{\alpha A}{ik}\matrixentry{B}{kj}
-\\%&amp;&amp;acroref type="definition" acro="MSM" /&gt;\\
+\\
 &amp;=\matrixentry{(\alpha A)B}{ij}
-\\%&amp;&amp;acroref type="theorem" acro="EMP" /&gt;
+\\
 \end{align*}
 So the matrices $\alpha(AB)$ and $(\alpha A)B$ are equal, entry-by-entry, and by the definition of matrix equality we can say they are equal matrices. </paragraphs>
                 </newcol>
@@ -1208,17 +1209,17 @@ So the matrices $\alpha(AB)$ and $(\alpha A)B$ are equal, entry-by-entry, and by
                   <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose $A$ is an $m\times n$ matrix, $B$ is an $n\times p$ matrix and $D$ is a $p\times s$ matrix. Then $A(BD)=(AB)D$. </paragraphs>
                 </newcol>
               </statement>
-              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="8e77f6bf2bc023de26954c326891c41f" course="Math 1030" chapter="5" slide="23" of="d687b2c72c89819fb71d6e0eae04d95d">
+              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="35dcde11e0b7a0d896fa24cc4ec79b68" course="Math 1030" chapter="5" slide="23" of="d687b2c72c89819fb71d6e0eae04d95d">
                 <newcol course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> A matrix equality, so we will go entry-by-entry, no surprise there. For $1\leq i\leq m$, $1\leq j\leq s$,
 \begin{align*}
 \matrixentry{A(BD)}{ij}
 &amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{BD}{kj}
-\\%&amp;&amp;acroref type="theorem" acro="EMP" /&gt;\\
+\\
 &amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}\left(\sum_{\ell=1}^{p}\matrixentry{B}{k\ell}\matrixentry{D}{\ell j}\right)
-\\%&amp;&amp;acroref type="theorem" acro="EMP" /&gt;\\
+\\
 &amp;=\sum_{k=1}^{n}\sum_{\ell=1}^{p}\matrixentry{A}{ik}\matrixentry{B}{k\ell}\matrixentry{D}{\ell j}
-\\%&amp;&amp;acroref type="property" acro="DCN" /&gt;\\
+\\
 \end{align*} </paragraphs>
                   <collapse course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
                     <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> We can switch the order of the summation since these are finite sums.</paragraphs>
@@ -1226,7 +1227,7 @@ So the matrices $\alpha(AB)$ and $(\alpha A)B$ are equal, entry-by-entry, and by
                     <collapse course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
 &amp;=\sum_{\ell=1}^{p}\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{k\ell}\matrixentry{D}{\ell j}
-\\%&amp;&amp;acroref type="property" acro="CACN" /&gt;\\
+\\
 \end{align*} </paragraphs>
                       <collapse course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
                         <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> As $\matrixentry{D}{\ell j}$ does not depend on the index $k$, we can use distributivity to move it outside of the inner sum.</paragraphs>
@@ -1234,13 +1235,13 @@ So the matrices $\alpha(AB)$ and $(\alpha A)B$ are equal, entry-by-entry, and by
                         <collapse course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
                           <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
 &amp;=\sum_{\ell=1}^{p}\matrixentry{D}{\ell j}\left(\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{k\ell}\right)
-\\%&amp;&amp;acroref type="property" acro="DCN" /&gt;\\
+\\
 &amp;=\sum_{\ell=1}^{p}\matrixentry{D}{\ell j}\matrixentry{AB}{i\ell}
-\\%&amp;&amp;acroref type="theorem" acro="EMP" /&gt;\\
+\\
 &amp;=\sum_{\ell=1}^{p}\matrixentry{AB}{i\ell}\matrixentry{D}{\ell j}
-\\%&amp;&amp;acroref type="property" acro="CMCN" /&gt;\\
+\\
 &amp;=\matrixentry{(AB)D}{ij}
-\\%&amp;&amp;acroref type="theorem" acro="EMP" /&gt;
+\\
 \end{align*} </paragraphs>
                           <collapse course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
                             <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence, $(AB)D = A(BD)$. </paragraphs>
@@ -1333,22 +1334,21 @@ This completes the proof. </paragraphs>
                 <label wbtag="label" name="MMT" type="Theorem"/>
                 <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is an $m\times n$ matrix and $B$ is an $n\times p$ matrix. Then $(AB)^{t}=B^{t}A^{t}$. </paragraphs>
               </statement>
-              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="f1606fffebc9503b4a51fbc1353c40c3" course="Math 1030" chapter="5" slide="24" of="546f2001ac219c9b23cfae25245a5981">
+              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="de912f391ff541136b9ed20939dc4ecd" course="Math 1030" chapter="5" slide="24" of="546f2001ac219c9b23cfae25245a5981">
                 <newcol course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Here we go again, entry-by-entry. For $1\leq i\leq m$, $1\leq j\leq p$,</paragraphs>
                   <newline course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol"/>
                   <collapse course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
                     <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
 \matrixentry{\transpose{(AB)}}{ji}=&amp;\matrixentry{AB}{ij}
-\\%&amp;&amp;acroref type="definition" acro="TM" /&gt;\\
+\\
 &amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}
-\\%&amp;&amp;acroref type="theorem" acro="EMP" /&gt;\\
+\\
 &amp;=\sum_{k=1}^{n}\matrixentry{B}{kj}\matrixentry{A}{ik}
-\\%&amp;&amp;acroref type="property" acro="CMCN" /&gt;\\
+\\
 &amp;=\sum_{k=1}^{n}\matrixentry{\transpose{B}}{jk}\matrixentry{\transpose{A}}{ki}
-\\%&amp;&amp;acroref type="definition" acro="TM" /&gt;\\
+\\
 &amp;=\matrixentry{\transpose{B}\transpose{A}}{ji}
-\\%&amp;&amp;acroref type="theorem" acro="EMP" /&gt;
 \end{align*}</paragraphs>
                     <newline course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol"/>
                     <collapse course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
