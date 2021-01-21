@@ -1252,6 +1252,73 @@ So the matrices $\alpha(AB)$ and $(\alpha A)B$ are equal, entry-by-entry, and by
                   </collapse>
                 </newcol>
               </substatement>
+              <newline course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment=""/>
+              <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="" wbtag="paragraphs">Alternatively, </paragraphs>
+              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" of="MMA" md5="fdad7fb739cc679f5bba0654cf4633dc" course="Math 1030" chapter="5" slide="23">
+                <newcol course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Write:
+\[
+A = \left(
+\mathbf{A}_1 |  \mathbf{A}_2 | \cdots | \mathbf{A}_n
+\right)
+\]
+\[
+B = \left(
+\mathbf{B}_1 |  \mathbf{B}_2 | \cdots | \mathbf{B}_p
+\right)
+\]
+\[
+D = \left(
+\mathbf{D}_1 |  \mathbf{D}_2 | \cdots | \mathbf{D}_s
+\right)
+\] </paragraphs>
+                  <collapse course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Then, for any $1 \leq j \leq s$,
+the $j$-column of $A(BD)$ is the $j$-column of:
+\[
+A
+\left(
+B\mathbf{D}_1 |  B\mathbf{D}_2 | \cdots | B\mathbf{D}_s
+\right)
+,
+\]
+which is equal to:
+\[
+A(B\mathbf{D}_j).
+\] </paragraphs>
+                    <collapse course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> The $j$-column of $(AB)D$ is:
+\[
+(AB)\mathbf{D}_j.
+\] </paragraphs>
+                      <collapse course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence, it suffices to show that:
+\[
+A(B\mathbf{D}_j) = (AB)\mathbf{D}_j
+\]
+for any $1 \leq j \leq s$.</paragraphs>
+                        <newline course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol"/>
+                        <collapse course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Given any $1 \leq j \leq s$,
+to simplify the notation, let $\vec{v} = \mathbf{D}_j$.
+We have:
+\[
+\begin{split}
+A(B\vec{v}) = A(v_1\mathbf{B}_1 + \cdots + v_p \mathbf{B}_p)
+&amp;= v_1 (A\mathbf{B}_1) + \cdots v_p (A\mathbf{B}_p)
+\\&amp;= (A\mathbf{B}_1 | \cdots | A \mathbf{B}_p)\vec{v}
+\\&amp;= (AB)\vec{v}.
+\end{split}
+\]
+This completes the proof. </paragraphs>
+                          <qed course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol"/>
+                        </collapse>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </newcol>
+              </substatement>
+              <newline course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment=""/>
               <substatement environment="substatement" chapter_type="" type="Remark" wbtag="remark" md5="679b0ee4a5d451c2ce542e95968f1d5b" course="Math 1030" chapter="5" slide="23">
                 <newcol course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> The above result says matrix multiplication is associative; it means we do not have to be careful about how we parenthesize an expression with just several matrices multiplied together. So this is where we draw the line on explaining every last detail in a proof. We will frequently add, remove, or rearrange parentheses with no comment. </paragraphs>
