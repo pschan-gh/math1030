@@ -689,6 +689,37 @@ We will prove (1) and leave (2) to you. Using the entry-by-entry definition of m
 So the matrices $A{\cal O}_{n\times p}$ and ${\cal O}_{m\times p}$ are equal.
 @endcol
 @end
+@slide
+@def
+The @keyword{identity matrix} $I_m$ is the $m \times m$ square matrix whose diagonal entries are all equal to $1$,
+and all off-diagonal entries are equal to zero. That is:
+
+@col
+\[
+\left[I_m\right]_{ij} = \begin{cases}
+1, & \text{ if } i = j;\\
+0, & \text{ if } i \neq j.
+\end{cases}
+\]
+@col
+For example:
+\[
+I_2 = \begin{pmatrix}
+1 & 0\\
+0 & 1
+\end{pmatrix},
+\quad
+I_5 = \begin{pmatrix}
+1 & 0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 1
+\end{pmatrix}
+.
+\]
+@endcol
+@end
 @thm
 @title{Matrix Multiplication and Identity Matrix}
 @label{MMIM}

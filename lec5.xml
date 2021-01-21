@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030">
     <keywords slide="all" environ="course" chapter="" course="Math 1030">
@@ -17,6 +18,7 @@
       <keyword chapter="" slide="all">matrix-vector product</keyword>
       <keyword chapter="" slide="all">standard unit vector</keyword>
       <keyword chapter="" slide="all">matrix product</keyword>
+      <keyword chapter="" slide="all">identity matrix</keyword>
       <keyword chapter="" slide="all">elementary matrix</keyword>
       <keyword chapter="" slide="all">invertible</keyword>
       <keyword chapter="" slide="all">inverse</keyword>
@@ -71,6 +73,7 @@
         <keyword chapter="5" slide="all">matrix-vector product</keyword>
         <keyword chapter="5" slide="all">standard unit vector</keyword>
         <keyword chapter="5" slide="all">matrix product</keyword>
+        <keyword chapter="5" slide="all">identity matrix</keyword>
         <keyword chapter="5" slide="all">elementary matrix</keyword>
         <keyword chapter="5" slide="all">invertible</keyword>
         <keyword chapter="5" slide="all">inverse</keyword>
@@ -1015,7 +1018,6 @@ Try to compute all the other entries. </paragraphs>
             <slide environment="" chapter_type="Chapter" canon_num="20" scope="subsection" id="s20" slide="20" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" chapter_title="More about matrices" section_title="Matrix Multiplication">
               <keywords slide="20" environ="slide" chapter="5" course="Math 1030">
                 <keyword chapter="5" slide="20">Matrix Multiplication and the Zero Matrix</keyword>
-                <keyword chapter="5" slide="20">Matrix Multiplication and Identity Matrix</keyword>
               </keywords>
               <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" serial="" slide="20">
                 <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="title" wbtag="paragraphs">Properties of Matrix Multiplication</paragraphs>
@@ -1050,8 +1052,47 @@ the transpose. </paragraphs>
 So the matrices $A{\cal O}_{n\times p}$ and ${\cal O}_{m\times p}$ are equal. </paragraphs>
                 </newcol>
               </substatement>
-              <statement environment="statement" chapter_type="" type="Theorem" wbtag="thm" num="29" title="Matrix Multiplication and Identity Matrix" md5="863efefee777450a6d64ea18fe4a6648" course="Math 1030" chapter="5" slide="20" item="5.29">
-                <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" serial="" slide="20">Matrix Multiplication and Identity Matrix</title>
+            </slide>
+            <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="21" id="s21" slide="21" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" chapter_title="More about matrices" section_title="Matrix Multiplication">
+              <keywords slide="21" environ="slide" chapter="5" course="Math 1030">
+                <keyword chapter="5" slide="21">identity matrix</keyword>
+                <keyword chapter="5" slide="21">Matrix Multiplication and Identity Matrix</keyword>
+              </keywords>
+              <statement environment="statement" chapter_type="" type="Definition" wbtag="defn" num="29" md5="2ed94dcae0cae3b966c6952e5ab6ee9e" course="Math 1030" chapter="5" slide="21" item="5.29">
+                <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs"> The </paragraphs>
+                <inline_keyword course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="statement">identity matrix</inline_keyword>
+                <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs"> $I_m$ is the $m \times m$ square matrix whose diagonal entries are all equal to $1$,
+and all off-diagonal entries are equal to zero. That is:</paragraphs>
+                <newline course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="statement"/>
+                <newcol course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> \[
+\left[I_m\right]_{ij} = \begin{cases}
+1, &amp; \text{ if } i = j;\\
+0, &amp; \text{ if } i \neq j.
+\end{cases}
+\] </paragraphs>
+                  <collapse course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> For example:
+\[
+I_2 = \begin{pmatrix}
+1 &amp; 0\\
+0 &amp; 1
+\end{pmatrix},
+\quad
+I_5 = \begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}
+.
+\] </paragraphs>
+                  </collapse>
+                </newcol>
+              </statement>
+              <statement environment="statement" chapter_type="" type="Theorem" wbtag="thm" num="30" title="Matrix Multiplication and Identity Matrix" md5="863efefee777450a6d64ea18fe4a6648" course="Math 1030" chapter="5" slide="21" item="5.30">
+                <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" serial="" slide="21">Matrix Multiplication and Identity Matrix</title>
                 <label wbtag="label" name="MMIM" type="Theorem"/>
                 <newcol course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose that $A$ is an $m\times n$ matrix. Then </paragraphs>
@@ -1066,7 +1107,7 @@ So the matrices $A{\cal O}_{n\times p}$ and ${\cal O}_{m\times p}$ are equal. </
                   </enumerate>
                 </newcol>
               </statement>
-              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="51415c74606fd483eac829d58716f3e2" course="Math 1030" chapter="5" slide="20" of="863efefee777450a6d64ea18fe4a6648">
+              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="51415c74606fd483eac829d58716f3e2" course="Math 1030" chapter="5" slide="21" of="863efefee777450a6d64ea18fe4a6648">
                 <newcol course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Again, we will prove (1) and leave (2) to you. Using the entry-by-entry definition of matrix multiplication, for $1\leq i\leq m$, $1\leq j\leq n$, we compute
 \[\displaystyle\left[AI_{n}\right]_{ij}=\sum_{k=1}^{n}\left[A\right]_{ik}\left[I%
@@ -1081,19 +1122,19 @@ k\neq j\end{subarray}}^{n}\left[A\right]_{ik}\left[I_{n}\right]_{kj}\]
 So the matrices $A$ and $AI_{n}$ are equal entrywise. By the definition of matrix equality, they are equal matrices. </paragraphs>
                 </newcol>
               </substatement>
-              <substatement environment="substatement" chapter_type="" type="Remark" wbtag="remark" md5="10c3572f3dd45e12a4a8c1d2ba0f5160" course="Math 1030" chapter="5" slide="20">
+              <substatement environment="substatement" chapter_type="" type="Remark" wbtag="remark" md5="10c3572f3dd45e12a4a8c1d2ba0f5160" course="Math 1030" chapter="5" slide="21">
                 <newcol course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> It is the previous theorem that gives the identity matrix its name. It is a matrix that behaves with matrix multiplication like the scalar 1 does with scalar multiplication. To multiply by the identity matrix is to have no effect on the other matrix. </paragraphs>
                 </newcol>
               </substatement>
             </slide>
-            <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="21" id="s21" slide="21" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" chapter_title="More about matrices" section_title="Matrix Multiplication">
-              <keywords slide="21" environ="slide" chapter="5" course="Math 1030">
-                <keyword chapter="5" slide="21">Matrix Multiplication Distributes Across Addition</keyword>
-                <keyword chapter="5" slide="21">Matrix Multiplication and Scalar Matrix Multiplication</keyword>
+            <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="22" id="s22" slide="22" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" chapter_title="More about matrices" section_title="Matrix Multiplication">
+              <keywords slide="22" environ="slide" chapter="5" course="Math 1030">
+                <keyword chapter="5" slide="22">Matrix Multiplication Distributes Across Addition</keyword>
+                <keyword chapter="5" slide="22">Matrix Multiplication and Scalar Matrix Multiplication</keyword>
               </keywords>
-              <statement environment="statement" chapter_type="" type="Theorem" wbtag="thm" num="30" title="Matrix Multiplication Distributes Across Addition" md5="68a71c39b6ea622e3be690690c3fd5e8" course="Math 1030" chapter="5" slide="21" item="5.30">
-                <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" serial="" slide="21">Matrix Multiplication Distributes Across Addition</title>
+              <statement environment="statement" chapter_type="" type="Theorem" wbtag="thm" num="31" title="Matrix Multiplication Distributes Across Addition" md5="68a71c39b6ea622e3be690690c3fd5e8" course="Math 1030" chapter="5" slide="22" item="5.31">
+                <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" serial="" slide="22">Matrix Multiplication Distributes Across Addition</title>
                 <label wbtag="label" name="MMDAA" type="Theorem"/>
                 <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is an $m\times n$ matrix and $B$ and $C$ are $n\times p$ matrices and $D$ is a $p\times s$ matrix.
 Then: </paragraphs>
@@ -1106,7 +1147,7 @@ Then: </paragraphs>
                   </item>
                 </enumerate>
               </statement>
-              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="840537918f60d77ec5ee0be837f432d1" course="Math 1030" chapter="5" slide="21" of="68a71c39b6ea622e3be690690c3fd5e8">
+              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="840537918f60d77ec5ee0be837f432d1" course="Math 1030" chapter="5" slide="22" of="68a71c39b6ea622e3be690690c3fd5e8">
                 <newcol course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> We will do (1), you do (2). Entry-by-entry, for $1\leq i\leq m$, $1\leq j\leq p$,
 \begin{align*}
@@ -1129,14 +1170,14 @@ So the matrices $A(B+C)$ and $AB+AC$ are equal, entry-by-entry.
 Hence by the definition of matrix equality, we can say they are equal matrices. </paragraphs>
                 </newcol>
               </substatement>
-              <statement environment="statement" chapter_type="" type="Theorem" wbtag="thm" num="31" title="Matrix Multiplication and Scalar Matrix Multiplication" md5="dd66b55424e01836b1b2a25d76b50527" course="Math 1030" chapter="5" slide="21" item="5.31">
-                <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" serial="" slide="21">Matrix Multiplication and Scalar Matrix Multiplication</title>
+              <statement environment="statement" chapter_type="" type="Theorem" wbtag="thm" num="32" title="Matrix Multiplication and Scalar Matrix Multiplication" md5="dd66b55424e01836b1b2a25d76b50527" course="Math 1030" chapter="5" slide="22" item="5.32">
+                <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" serial="" slide="22">Matrix Multiplication and Scalar Matrix Multiplication</title>
                 <label wbtag="label" name="MMSMM" type="Theorem"/>
                 <newcol course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose $A$ is an $m\times n$ matrix and $B$ is an $n\times p$ matrix. Let $\alpha$ be a scalar. Then $\alpha(AB)=(\alpha A)B=A(\alpha B)$. </paragraphs>
                 </newcol>
               </statement>
-              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="d964fe731f7b7fa83d3e195463160692" course="Math 1030" chapter="5" slide="21" of="dd66b55424e01836b1b2a25d76b50527">
+              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="d964fe731f7b7fa83d3e195463160692" course="Math 1030" chapter="5" slide="22" of="dd66b55424e01836b1b2a25d76b50527">
                 <newcol course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> These are equalities of matrices. We will do the first one, the second is similar and will be good practice for you.
 For $1\leq i\leq m$, $1\leq j\leq p$,
@@ -1157,18 +1198,18 @@ So the matrices $\alpha(AB)$ and $(\alpha A)B$ are equal, entry-by-entry, and by
                 </newcol>
               </substatement>
             </slide>
-            <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="22" id="s22" slide="22" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" chapter_title="More about matrices" section_title="Matrix Multiplication">
-              <keywords slide="22" environ="slide" chapter="5" course="Math 1030">
-                <keyword chapter="5" slide="22">Matrix Multiplication is Associative</keyword>
+            <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="23" id="s23" slide="23" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" chapter_title="More about matrices" section_title="Matrix Multiplication">
+              <keywords slide="23" environ="slide" chapter="5" course="Math 1030">
+                <keyword chapter="5" slide="23">Matrix Multiplication is Associative</keyword>
               </keywords>
-              <statement environment="statement" chapter_type="" type="Theorem" wbtag="thm" num="32" title="Matrix Multiplication is Associative" md5="d687b2c72c89819fb71d6e0eae04d95d" course="Math 1030" chapter="5" slide="22" item="5.32">
-                <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" serial="" slide="22">Matrix Multiplication is Associative</title>
+              <statement environment="statement" chapter_type="" type="Theorem" wbtag="thm" num="33" title="Matrix Multiplication is Associative" md5="d687b2c72c89819fb71d6e0eae04d95d" course="Math 1030" chapter="5" slide="23" item="5.33">
+                <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" serial="" slide="23">Matrix Multiplication is Associative</title>
                 <label wbtag="label" name="MMA" type="Theorem"/>
                 <newcol course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose $A$ is an $m\times n$ matrix, $B$ is an $n\times p$ matrix and $D$ is a $p\times s$ matrix. Then $A(BD)=(AB)D$. </paragraphs>
                 </newcol>
               </statement>
-              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="8e77f6bf2bc023de26954c326891c41f" course="Math 1030" chapter="5" slide="22" of="d687b2c72c89819fb71d6e0eae04d95d">
+              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="8e77f6bf2bc023de26954c326891c41f" course="Math 1030" chapter="5" slide="23" of="d687b2c72c89819fb71d6e0eae04d95d">
                 <newcol course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> A matrix equality, so we will go entry-by-entry, no surprise there. For $1\leq i\leq m$, $1\leq j\leq s$,
 \begin{align*}
@@ -1211,22 +1252,22 @@ So the matrices $\alpha(AB)$ and $(\alpha A)B$ are equal, entry-by-entry, and by
                   </collapse>
                 </newcol>
               </substatement>
-              <substatement environment="substatement" chapter_type="" type="Remark" wbtag="remark" md5="679b0ee4a5d451c2ce542e95968f1d5b" course="Math 1030" chapter="5" slide="22">
+              <substatement environment="substatement" chapter_type="" type="Remark" wbtag="remark" md5="679b0ee4a5d451c2ce542e95968f1d5b" course="Math 1030" chapter="5" slide="23">
                 <newcol course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> The above result says matrix multiplication is associative; it means we do not have to be careful about how we parenthesize an expression with just several matrices multiplied together. So this is where we draw the line on explaining every last detail in a proof. We will frequently add, remove, or rearrange parentheses with no comment. </paragraphs>
                 </newcol>
               </substatement>
             </slide>
-            <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="23" id="s23" slide="23" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" chapter_title="More about matrices" section_title="Matrix Multiplication">
-              <keywords slide="23" environ="slide" chapter="5" course="Math 1030">
-                <keyword chapter="5" slide="23">Matrix Multiplication and Transposes</keyword>
+            <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="24" id="s24" slide="24" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" chapter_title="More about matrices" section_title="Matrix Multiplication">
+              <keywords slide="24" environ="slide" chapter="5" course="Math 1030">
+                <keyword chapter="5" slide="24">Matrix Multiplication and Transposes</keyword>
               </keywords>
-              <statement environment="statement" chapter_type="" type="Theorem" wbtag="thm" num="33" title="Matrix Multiplication and Transposes" md5="546f2001ac219c9b23cfae25245a5981" course="Math 1030" chapter="5" slide="23" item="5.33">
-                <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" serial="" slide="23">Matrix Multiplication and Transposes</title>
+              <statement environment="statement" chapter_type="" type="Theorem" wbtag="thm" num="34" title="Matrix Multiplication and Transposes" md5="546f2001ac219c9b23cfae25245a5981" course="Math 1030" chapter="5" slide="24" item="5.34">
+                <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="5" section="4" subsection="1" subsubsection="" serial="" slide="24">Matrix Multiplication and Transposes</title>
                 <label wbtag="label" name="MMT" type="Theorem"/>
                 <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is an $m\times n$ matrix and $B$ is an $n\times p$ matrix. Then $(AB)^{t}=B^{t}A^{t}$. </paragraphs>
               </statement>
-              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="f1606fffebc9503b4a51fbc1353c40c3" course="Math 1030" chapter="5" slide="23" of="546f2001ac219c9b23cfae25245a5981">
+              <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="f1606fffebc9503b4a51fbc1353c40c3" course="Math 1030" chapter="5" slide="24" of="546f2001ac219c9b23cfae25245a5981">
                 <newcol course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Here we go again, entry-by-entry. For $1\leq i\leq m$, $1\leq j\leq p$,</paragraphs>
                   <newline course="Math 1030" chapter="5" chapter_type="" section="4" subsection="1" subsubsection="" environment="newcol"/>
@@ -1259,20 +1300,20 @@ So the matrices $\alpha(AB)$ and $(\alpha A)B$ are equal, entry-by-entry, and by
           <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Row Operations and Matrix Multiplication</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="24" scope="section" id="s24" slide="24" course="Math 1030" chapter="5" section="5" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Row Operations and Matrix Multiplication">
-            <keywords slide="24" environ="slide" chapter="5" course="Math 1030"/>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="5" section="5" subsection="" subsubsection="" serial="" slide="24">
+          <slide environment="" chapter_type="Chapter" canon_num="25" scope="section" id="s25" slide="25" course="Math 1030" chapter="5" section="5" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Row Operations and Matrix Multiplication">
+            <keywords slide="25" environ="slide" chapter="5" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="5" section="5" subsection="" subsubsection="" serial="" slide="25">
               <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Row Operations and Matrix Multiplication</paragraphs>
             </title>
             <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs"> In this section, we will discuss the relation between elementary row operations and matrix multiplication.</paragraphs>
             <newline course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
             <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs">Recall the definition of </paragraphs>
-            <ref environment="" chapter_type="" label="def:RO" wbtag="ref" course="Math 1030" chapter="5" slide="24" src-course="Math 1030" src-chapter="4" src-slide="10" type="Definition" item="4.14" src-filename="lec4.xml" md5="308a8137997242db56a3552704c04c83" class="lcref" serial="">
+            <ref environment="" chapter_type="" label="def:RO" wbtag="ref" course="Math 1030" chapter="5" slide="25" src-course="Math 1030" src-chapter="4" src-slide="10" type="Definition" item="4.14" src-filename="lec4.xml" md5="308a8137997242db56a3552704c04c83" class="lcref" serial="">
               <title>Row Operations</title>
             </ref>
             <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs"> on matrices.</paragraphs>
             <newline course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="34" md5="5c58e155ca934e2b7386d3148127f30b" course="Math 1030" chapter="5" slide="24" item="5.34">
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="35" md5="5c58e155ca934e2b7386d3148127f30b" course="Math 1030" chapter="5" slide="25" item="5.35">
               <label wbtag="label" name="thm:ROEM" type="Theorem"/>
               <newcol course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $A\in M_{mn}$. Let $B$ be a matrix obtained by applying one of the above row operations on $A$.
@@ -1280,13 +1321,13 @@ Let $J$ be a matrix obtained by applying the same row operation on $I_{m}$. Then
 \[JA=B.\] </paragraphs>
               </newcol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="ef8fb97d271d5d2e855498ac9a9b41b7" course="Math 1030" chapter="5" slide="24" of="5c58e155ca934e2b7386d3148127f30b">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="ef8fb97d271d5d2e855498ac9a9b41b7" course="Math 1030" chapter="5" slide="25" of="5c58e155ca934e2b7386d3148127f30b">
               <newcol course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Exercise. </paragraphs>
               </newcol>
             </substatement>
             <newline course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="35" md5="fb6a6b3a0dca650c9c263c93d68a1046" course="Math 1030" chapter="5" slide="24" item="5.35">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="36" md5="fb6a6b3a0dca650c9c263c93d68a1046" course="Math 1030" chapter="5" slide="25" item="5.36">
               <newcol course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let:
 \[A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;a_{14}&amp;a_{15}\\
@@ -1312,14 +1353,14 @@ Verify that:
             </statement>
             <newline course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="25" id="s25" slide="25" course="Math 1030" chapter="5" section="5" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Row Operations and Matrix Multiplication">
-            <keywords slide="25" environ="slide" chapter="5" course="Math 1030">
-              <keyword chapter="5" slide="25">elementary matrix</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="26" id="s26" slide="26" course="Math 1030" chapter="5" section="5" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Row Operations and Matrix Multiplication">
+            <keywords slide="26" environ="slide" chapter="5" course="Math 1030">
+              <keyword chapter="5" slide="26">elementary matrix</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="36" md5="e230d241c6dd9bffce82a9f2a267e2ed" course="Math 1030" chapter="5" slide="25" item="5.36">
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="37" md5="e230d241c6dd9bffce82a9f2a267e2ed" course="Math 1030" chapter="5" slide="26" item="5.37">
               <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> A matrix $J$ which corresponds to an elementary row operation as in </paragraphs>
-              <ref environment="statement" chapter_type="" label="thm:ROEM" wbtag="ref" course="Math 1030" chapter="5" slide="25" src-course="Math 1030" src-chapter="5" src-slide="24" type="Theorem" item="5.34" src-filename="lec5.xml" md5="5c58e155ca934e2b7386d3148127f30b" class="lcref" serial="">
-                <title>Theorem 5.34</title>
+              <ref environment="statement" chapter_type="" label="thm:ROEM" wbtag="ref" course="Math 1030" chapter="5" slide="26" src-course="Math 1030" src-chapter="5" src-slide="25" type="Theorem" item="5.35" src-filename="lec5.xml" md5="5c58e155ca934e2b7386d3148127f30b" class="lcref" serial="">
+                <title>Theorem 5.35</title>
               </ref>
               <paragraphs course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> is called an </paragraphs>
               <inline_keyword course="Math 1030" chapter="5" chapter_type="" section="5" subsection="" subsubsection="" environment="statement">elementary matrix</inline_keyword>
@@ -1334,16 +1375,16 @@ Verify that:
           <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Invertible Matrices</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="26" scope="section" id="s26" slide="26" course="Math 1030" chapter="5" section="6" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Invertible Matrices">
-            <keywords slide="26" environ="slide" chapter="5" course="Math 1030">
-              <keyword chapter="5" slide="26">invertible</keyword>
-              <keyword chapter="5" slide="26">inverse</keyword>
-              <keyword chapter="5" slide="26">nonsingular</keyword>
+          <slide environment="" chapter_type="Chapter" canon_num="27" scope="section" id="s27" slide="27" course="Math 1030" chapter="5" section="6" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Invertible Matrices">
+            <keywords slide="27" environ="slide" chapter="5" course="Math 1030">
+              <keyword chapter="5" slide="27">invertible</keyword>
+              <keyword chapter="5" slide="27">inverse</keyword>
+              <keyword chapter="5" slide="27">nonsingular</keyword>
             </keywords>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="5" section="6" subsection="" subsubsection="" serial="" slide="26">
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="5" section="6" subsection="" subsubsection="" serial="" slide="27">
               <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Invertible Matrices</paragraphs>
             </title>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="37" md5="ed3ae18215d80380938986f70dbb2e12" course="Math 1030" chapter="5" slide="26" item="5.37">
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="38" md5="ed3ae18215d80380938986f70dbb2e12" course="Math 1030" chapter="5" slide="27" item="5.38">
               <label wbtag="label" name="def:matrixinverse" type="Definition"/>
               <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> An $n \times n$ square matrix $A$ is said to be </paragraphs>
               <inline_keyword course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="statement">invertible</inline_keyword>
@@ -1357,7 +1398,7 @@ We call $B$ an </paragraphs>
               <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$. </paragraphs>
             </statement>
             <newline course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="38" md5="3f1de1d4a9d2e464866075da469a219e" course="Math 1030" chapter="5" slide="26" item="5.38">
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="39" md5="3f1de1d4a9d2e464866075da469a219e" course="Math 1030" chapter="5" slide="27" item="5.39">
               <newcol course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If $A, B, B'$ are $n \times n$ matrices such that:
 \[
@@ -1368,7 +1409,7 @@ Hence, the inverse of an invertible matrix $A$ is unique. We denote it by $A^{-1
               </newcol>
             </statement>
             <newline course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
-            <statement environment="statement" chapter_type="Chapter" type="Fact" wbtag="fact" num="39" md5="ce970673f079e662a0f8445d4ea25f33" course="Math 1030" chapter="5" slide="26" item="5.39">
+            <statement environment="statement" chapter_type="Chapter" type="Fact" wbtag="fact" num="40" md5="ce970673f079e662a0f8445d4ea25f33" course="Math 1030" chapter="5" slide="27" item="5.40">
               <label wbtag="label" name="fact:matrixinverse" type="Fact"/>
               <newcol course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $A$ be an $n \times n$ matrix. </paragraphs>
@@ -1407,19 +1448,19 @@ if and only if $\vec{x} = \vec{0}$. </paragraphs>
               </newcol>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="27" id="s27" slide="27" course="Math 1030" chapter="5" section="6" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Invertible Matrices">
-            <keywords slide="27" environ="slide" chapter="5" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="40" md5="8bb6139a5b182de83ba6fb1eef49c793" course="Math 1030" chapter="5" slide="27" item="5.40">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="28" id="s28" slide="28" course="Math 1030" chapter="5" section="6" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Invertible Matrices">
+            <keywords slide="28" environ="slide" chapter="5" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="41" md5="8bb6139a5b182de83ba6fb1eef49c793" course="Math 1030" chapter="5" slide="28" item="5.41">
               <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Elementary matrices are invertible. </paragraphs>
             </statement>
             <newline course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
             <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="" wbtag="paragraphs">We may now prove Theorem </paragraphs>
-            <ref environment="" chapter_type="" label="REMES" wbtag="ref" course="Math 1030" chapter="5" slide="27" src-course="Math 1030" src-chapter="4" src-slide="12" type="Theorem" item="4.17" src-filename="lec4.xml" md5="fba53aad9441e371b163e297725874e0" class="lcref" serial="">
+            <ref environment="" chapter_type="" label="REMES" wbtag="ref" course="Math 1030" chapter="5" slide="28" src-course="Math 1030" src-chapter="4" src-slide="12" type="Theorem" item="4.17" src-filename="lec4.xml" md5="fba53aad9441e371b163e297725874e0" class="lcref" serial="">
               <title>Row-Equivalent Matrices represent Equivalent Systems</title>
             </ref>
             <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="" wbtag="paragraphs">.</paragraphs>
             <newline course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="b0f79dc6e10b303342e604204f1990dc" course="Math 1030" chapter="5" slide="27" of="8bb6139a5b182de83ba6fb1eef49c793">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="b0f79dc6e10b303342e604204f1990dc" course="Math 1030" chapter="5" slide="28" of="8bb6139a5b182de83ba6fb1eef49c793">
               <newcol course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose $A = [A' | \vec{a}]$ and $B = [B' | \vec{b}]$.
 If $A$ and $B$ are row-equivalent, then there exists a sequence of elementary matrices $J_1, J_2, \ldots J_l$
@@ -1450,8 +1491,8 @@ which implies that $\vec{v}$ is also a solution to $\mathcal{LS}(B', \vec{b})$.<
                     <newline course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
                     <collapse course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Conversely, by </paragraphs>
-                      <ref environment="newcol" chapter_type="" label="fact:matrixinverse" wbtag="ref" course="Math 1030" chapter="5" slide="27" src-course="Math 1030" src-chapter="5" src-slide="26" type="Fact" item="5.39" src-filename="lec5.xml" md5="ce970673f079e662a0f8445d4ea25f33" class="lcref" serial="">
-                        <title>Fact 5.39</title>
+                      <ref environment="newcol" chapter_type="" label="fact:matrixinverse" wbtag="ref" course="Math 1030" chapter="5" slide="28" src-course="Math 1030" src-chapter="5" src-slide="27" type="Fact" item="5.40" src-filename="lec5.xml" md5="ce970673f079e662a0f8445d4ea25f33" class="lcref" serial="">
+                        <title>Fact 5.40</title>
                       </ref>
                       <paragraphs course="Math 1030" chapter="5" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> the matrix $J$ is invertible, hence,
 \[
