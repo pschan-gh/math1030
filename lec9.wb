@@ -3,29 +3,23 @@
 @chapter{Vector space and subspace}
 <h5 class="notkw">Reference.</h5>
 Beezer, Ver 3.5 Section VO (print version p57 - p63)Subsection VS, EVS (print version p197-203)
-Strang, Section 2.1
-<p/>
-<h5 class="notkw">Exercise.</h5>
+Strang, Section 2.1 <p/><h5 class="notkw">Exercise.</h5>
 Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdfSection VO (p.28-31) All questions.C10-C15, T05-T07, T13, T17, T18, T30-T32 Section VS (p.75-77) Replace $\mathbb{C}$ (the set of complex numbers) by $\mathbb{R}$ (the set of real numbers) M11, M12, M13, M14, M15, M20.
 
-
-@section{
-Vectors
-}
+@section{Vectors}
 <strong>Notation</strong>: ${\mathbb{R}}^{\hbox{}}$ is the set of real numbers.
 If $X$ is a set, $x\in X$ means $x$ is an element of the set $X$.
 @defn
 @title{Vector Space of Column Vectors}
 @label{VSCV}
-The vector space ${\mathbb{R}}^{m}$ is the set of all column vectors of size $m$ with entries from the set of real numbers, ${\mathbb{R}}^{\hbox{}}$. ${\mathbb{R}}^{m}$ is also called the <b>Euclidean $m$-space</b>.
+The vector space ${\mathbb{R}}^{m}$ is the set of all column vectors of size $m$ with entries from the set of real numbers, ${\mathbb{R}}^{\hbox{}}$. ${\mathbb{R}}^{m}$ is also called the @keyword{Euclidean $m$-space}.
 @end
-
 
 @defn
 @title{Column Vector Equality}
 @label{CVE}
 @newcol
-Suppose that $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$. Then $\mathbf{u}$ and $\mathbf{v}$ are <b>equal</b>, written $\mathbf{u}=\mathbf{v}$ if
+Suppose that $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$. Then $\mathbf{u}$ and $\mathbf{v}$ are @keyword{equal}, written $\mathbf{u}=\mathbf{v}$ if
 \begin{align*}
 \displaystyle\left[\mathbf{u}\right]_{i}&\displaystyle=\left[\mathbf{v}\right]_{i}&\displaystyle 1\leq i\leq m
 \end{align*}
@@ -55,7 +49,6 @@ The system of linear equations:
 \end{align*}
 can be rewritten as:
 
-
 @newcol
 \begin{align*}
 \displaystyle \begin{bmatrix}-7x_{1}-6x_{2}-12x_{3}\\
@@ -70,7 +63,7 @@ x_{1}+4x_{3}\end{bmatrix}=\begin{bmatrix}-33\\
 @defn
 @title{Column Vector Addition}
 @label{CVA}
-Suppose that $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$. The <b>sum</b> of $\mathbf{u}$ and $\mathbf{v}$ is the vector $\mathbf{u}+\mathbf{v}$ defined by
+Suppose that $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$. The @keyword{sum} of $\mathbf{u}$ and $\mathbf{v}$ is the vector $\mathbf{u}+\mathbf{v}$ defined by
 \begin{align*}
 \displaystyle\left[\mathbf{u}+\mathbf{v}\right]_{i}&\displaystyle=\left[\mathbf{u}\right]_{i}+\left[\mathbf{v}\right]_{i}&\displaystyle 1\leq i\leq m.
 \end{align*}
@@ -126,7 +119,7 @@ then
 @defn
 @title{Column Vector Scalar Multiplication}
 @label{CVSM}
-Suppose $\mathbf{u}\in{\mathbb{R}}^{m}$ and $\alpha\in{\mathbb{R}}^{\hbox{}}$, then the <b>scalar multiple</b> of $\mathbf{u}$ by $\alpha$ is the vector $\alpha\mathbf{u}$ defined by
+Suppose $\mathbf{u}\in{\mathbb{R}}^{m}$ and $\alpha\in{\mathbb{R}}^{\hbox{}}$, then the @keyword{scalar multiple} of $\mathbf{u}$ by $\alpha$ is the vector $\alpha\mathbf{u}$ defined by
 \begin{align*}
 \displaystyle\left[\alpha\mathbf{u}\right]_{i}&\displaystyle=\alpha\left[\mathbf{u}\right]_{i}&\displaystyle 1\leq i\leq m.
 \end{align*}
@@ -179,7 +172,6 @@ The system of linear equations
 \end{align*}
 can be written as:
 
-
 @newcol
 \begin{align*}
 \displaystyle x_{1}\begin{bmatrix}-7\\
@@ -194,16 +186,13 @@ can be written as:
 \end{align*}
 @endcol
 @end
-@section{
-Vector Space Properties
-}
+@section{Vector Space Properties}
 @label{VSP}
 <strong>Warning</strong>: Read the statements of Theorem @ref{VSPCV} and skip the rest of this section <strong>unless you are/going to be</strong> a math major. The material skipped will not appear in the tests and the final exam.
 With definitions of vector addition and scalar multiplication we can state, and prove, several properties of each operation, and some properties that involve their interplay. We now collect ten of them here for later reference.
 @thm
 @title{Vector Space Properties of Column Vectors}
 @label{VSPCV}
-Suppose that ${\mathbb{R}}^{m}$ is the set of column vectors of size $m$ with addition and scalar multiplication as defined in Definition @ref{CVA} and Definition @ref{CVSM}
 @label{ACC}
 @label{SCC}
 @label{CC}
@@ -214,81 +203,59 @@ Suppose that ${\mathbb{R}}^{m}$ is the set of column vectors of size $m$ with ad
 @label{DVAC}
 @label{DSAC}
 @label{OC}
-.
-Then:
-<ol class="ltx_enumerate">
+Suppose that ${\mathbb{R}}^{m}$ is the set of column vectors of size $m$ with addition and scalar multiplication as defined in Definition @ref{CVA} and Definition @ref{CVSM} .
+Then: <ol class="ltx_enumerate">
 <li class="ltx_item">
-<b>ACC</b>
+@keyword{ACC}
 <em>Additive Closure, Column Vectors</em>
 
-
-If $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$, then $\mathbf{u}+\mathbf{v}\in{\mathbb{R}}^{m}$.
-</li>
+If $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$, then $\mathbf{u}+\mathbf{v}\in{\mathbb{R}}^{m}$. </li>
 <li class="ltx_item">
-<b>SCC</b>
+@keyword{SCC}
 <em>Scalar Closure, Column Vectors</em>
 
-
-If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in{\mathbb{R}}^{m}$, then $\alpha\mathbf{u}\in{\mathbb{R}}^{m}$.
-</li>
+If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in{\mathbb{R}}^{m}$, then $\alpha\mathbf{u}\in{\mathbb{R}}^{m}$. </li>
 <li class="ltx_item">
-<b>CC</b>
+@keyword{CC}
 <em>Commutativity, Column Vectors</em>
 
-
-If $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$, then $\mathbf{u}+\mathbf{v}=\mathbf{v}+\mathbf{u}$.
-</li>
+If $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$, then $\mathbf{u}+\mathbf{v}=\mathbf{v}+\mathbf{u}$. </li>
 <li class="ltx_item">
-<b>AAC</b>
+@keyword{AAC}
 <em>Additive Associativity, Column Vectors</em>
 
-
-If $\mathbf{u},\,\mathbf{v},\,\mathbf{w}\in{\mathbb{R}}^{m}$, then $\mathbf{u}+\left(\mathbf{v}+\mathbf{w}\right)=\left(\mathbf{u}+\mathbf{v}\right)+\mathbf{w}$.
-</li>
+If $\mathbf{u},\,\mathbf{v},\,\mathbf{w}\in{\mathbb{R}}^{m}$, then $\mathbf{u}+\left(\mathbf{v}+\mathbf{w}\right)=\left(\mathbf{u}+\mathbf{v}\right)+\mathbf{w}$. </li>
 <li class="ltx_item">
-<b>ZC</b>
+@keyword{ZC}
 <em>Zero Vector, Column Vectors</em>
 
-
-There is a vector, $\mathbf{0}$, called the <b>zero vector</b>, such that $\mathbf{u}+\mathbf{0}=\mathbf{u}$ for all $\mathbf{u}\in{\mathbb{R}}^{m}$.
-</li>
+There is a vector, $\mathbf{0}$, called the @keyword{zero vector}, such that $\mathbf{u}+\mathbf{0}=\mathbf{u}$ for all $\mathbf{u}\in{\mathbb{R}}^{m}$. </li>
 <li class="ltx_item">
-<b>AIC</b>
+@keyword{AIC}
 <em>Additive Inverses, Column Vectors</em>
 
-
-If $\mathbf{u}\in{\mathbb{R}}^{m}$, then there exists a vector $\mathbf{-u}\in{\mathbb{R}}^{m}$ so that $\mathbf{u}+(\mathbf{-u})=\mathbf{0}$.
-</li>
+If $\mathbf{u}\in{\mathbb{R}}^{m}$, then there exists a vector $\mathbf{-u}\in{\mathbb{R}}^{m}$ so that $\mathbf{u}+(\mathbf{-u})=\mathbf{0}$. </li>
 <li class="ltx_item">
-<b>SMAC</b>
+@keyword{SMAC}
 <em>Scalar Multiplication Associativity, Column Vectors</em>
 
-
-If $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in{\mathbb{R}}^{m}$, then $\alpha(\beta\mathbf{u})=(\alpha\beta)\mathbf{u}$.
-</li>
+If $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in{\mathbb{R}}^{m}$, then $\alpha(\beta\mathbf{u})=(\alpha\beta)\mathbf{u}$. </li>
 <li class="ltx_item">
-<b>DVAC</b>
+@keyword{DVAC}
 <em>Distributivity across Vector Addition, Column Vectors</em>
 
-
-If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$, then $\alpha(\mathbf{u}+\mathbf{v})=\alpha\mathbf{u}+\alpha\mathbf{v}$.
-</li>
+If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$, then $\alpha(\mathbf{u}+\mathbf{v})=\alpha\mathbf{u}+\alpha\mathbf{v}$. </li>
 <li class="ltx_item">
-<b>DSAC</b>
+@keyword{DSAC}
 <em>Distributivity across Scalar Addition, Column Vectors</em>
 
-
 If $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in{\mathbb{R}}^{m}$, then
-$(\alpha+\beta)\mathbf{u}=\alpha\mathbf{u}+\beta\mathbf{u}$.
-</li>
+$(\alpha+\beta)\mathbf{u}=\alpha\mathbf{u}+\beta\mathbf{u}$. </li>
 <li class="ltx_item">
-<b>OC</b>
+@keyword{OC}
 <em>One, Column Vectors</em>
 
-
-If $\mathbf{u}\in{\mathbb{R}}^{m}$, then $1\mathbf{u}=\mathbf{u}$.
-</li>
-</ol>
+If $\mathbf{u}\in{\mathbb{R}}^{m}$, then $1\mathbf{u}=\mathbf{u}$. </li></ol>
 @end
 @proof
 While some of these properties seem very obvious, they all require proof. However, the proofs are not very interesting, and border on tedious.
@@ -302,141 +269,101 @@ For $1\leq i\leq m$,
 \end{align*}
 Since the individual components of the vectors $(\alpha+\beta)\mathbf{u}$ and $\alpha\mathbf{u}+\beta\mathbf{u}$ are equal for all $i$, $1\leq i\leq m$, @ref{CVE} tells us the vectors are equal.
 @qed
-@end
-Many of the conclusions of our theorems can be characterized as <b>identities</b>, especially when we are establishing basic properties of operations such as those in this section. Most of the properties listed in Theorem @ref{VSPCV} are examples. So some advice about the style we use for proving identities is appropriate right now.
+@end Many of the conclusions of our theorems can be characterized as @keyword{identities}, especially when we are establishing basic properties of operations such as those in this section. Most of the properties listed in Theorem @ref{VSPCV} are examples. So some advice about the style we use for proving identities is appropriate right now.
 Be careful with the notion of the vector $\mathbf{-u}$. This is a vector that we add to $\mathbf{u}$ so that the result is the particular vector $\mathbf{0}$. This is basically a property of vector addition. It happens that we can compute $\mathbf{-u}$ using the other operation, scalar multiplication. We can prove this directly by writing that
 \begin{align*}
 \displaystyle \left[\mathbf{-u}\right]_{i}=-\left[\mathbf{u}\right]_{i}=(-1)\left[\mathbf{u}\right]_{i}=\left[(-1)\mathbf{u}\right]_{i}
 \end{align*}
-We will see later how to derive this property as a <b>consequence</b> of several of the ten properties listed in Theorem @ref{VSPCV}.
-Similarly, we will often write something you would immediately recognize as <b>vector subtraction</b>. This could be placed on a firm theoretical foundation – as you can do yourself with exercise T30.
-A final note. @ref{VSPCV} Property <b>AAC</b> implies that we do not have to be careful about how we <em>parenthesize</em> the addition of vectors. In other words, there is nothing to be gained by writing
+We will see later how to derive this property as a @keyword{consequence} of several of the ten properties listed in Theorem @ref{VSPCV}.
+Similarly, we will often write something you would immediately recognize as @keyword{vector subtraction}. This could be placed on a firm theoretical foundation – as you can do yourself with exercise T30.
+A final note. @ref{VSPCV} Property @keyword{AAC} implies that we do not have to be careful about how we <em>parenthesize</em> the addition of vectors. In other words, there is nothing to be gained by writing
 $\left(\mathbf{u}+\mathbf{v}\right)+\left(\mathbf{w}+\left(\mathbf{x}+\mathbf{y}\right)\right)$
 rather than
 $\mathbf{u}+\mathbf{v}+\mathbf{w}+\mathbf{x}+\mathbf{y}$, since we get the same result no matter which order we choose to perform the four additions. So we will not be careful about using parentheses this way.
-@section{
-Vector Space
-}
+@section{Vector Space}
 <strong>For math major only. Non-math major can skip the rest of this section. The material will not appear in the midterms or final</strong> In this section we will give an abstract definition of vector space.
 
-
-<strong>Why do we need the abstract definitions?</strong>
-A lot of different algebraic objects (e.g. polynomials, matrices, sequences, functions) share similar properties
+<strong>Why do we need the abstract definitions?</strong> A lot of different algebraic objects (e.g. polynomials, matrices, sequences, functions) share similar properties
 with the set of column vectors. We can use
 the common properties to derive similar results.
 we therefore don’t need to reproof and restate the results.
 
-
 <strong>One stone, kill many birds</strong>.
-
 
 @defn
 @label{VS}
-Suppose that $V$ is a set upon which we have defined two operations: (1) <b>vector addition</b>, which combines two elements of $V$ and is denoted by $+$, and (2) <b>scalar multiplication</b>, which combines a real number with an element of $V$ and is denoted by juxtaposition. Then $V$, along with the two operations, is a <b>vector space</b> over ${\mathbb{R}}^{\hbox{}}$ if the following ten properties hold.
-<ol class="ltx_enumerate">
+Suppose that $V$ is a set upon which we have defined two operations: (1) @keyword{vector addition}, which combines two elements of $V$ and is denoted by $+$, and (2) @keyword{scalar multiplication}, which combines a real number with an element of $V$ and is denoted by juxtaposition. Then $V$, along with the two operations, is a @keyword{vector space} over ${\mathbb{R}}^{\hbox{}}$ if the following ten properties hold. <ol class="ltx_enumerate">
 <li class="ltx_item">
-<b>AC</b>
+@keyword{AC}
 <em>Additive Closure</em>
 
-
-If $\mathbf{u},\,\mathbf{v}\in V$, then $\mathbf{u}+\mathbf{v}\in V$.
-</li>
+If $\mathbf{u},\,\mathbf{v}\in V$, then $\mathbf{u}+\mathbf{v}\in V$. </li>
 <li class="ltx_item">
-<b>SC</b>
+@keyword{SC}
 <em>Scalar Closure</em>
 
-
-If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in V$, then $\alpha\mathbf{u}\in V$.
-</li>
+If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in V$, then $\alpha\mathbf{u}\in V$. </li>
 <li class="ltx_item">
-<b>C</b>
+@keyword{C}
 <em>Commutativity</em>
 
-
-If $\mathbf{u},\,\mathbf{v}\in V$, then $\mathbf{u}+\mathbf{v}=\mathbf{v}+\mathbf{u}$.
-</li>
+If $\mathbf{u},\,\mathbf{v}\in V$, then $\mathbf{u}+\mathbf{v}=\mathbf{v}+\mathbf{u}$. </li>
 <li class="ltx_item">
-<b>AA</b>
+@keyword{AA}
 <em>Additive Associativity</em>
 
-
-If $\mathbf{u},\,\mathbf{v},\,\mathbf{w}\in V$, then $\mathbf{u}+\left(\mathbf{v}+\mathbf{w}\right)=\left(\mathbf{u}+\mathbf{v}\right)+\mathbf{w}$.
-</li>
+If $\mathbf{u},\,\mathbf{v},\,\mathbf{w}\in V$, then $\mathbf{u}+\left(\mathbf{v}+\mathbf{w}\right)=\left(\mathbf{u}+\mathbf{v}\right)+\mathbf{w}$. </li>
 <li class="ltx_item">
-<b>Z</b>
+@keyword{Z}
 <em>Zero Vector</em>
 
-
-There is a vector, $\mathbf{0}$, called the <b>zero vector</b>, such that $\mathbf{u}+\mathbf{0}=\mathbf{u}$ for all $\mathbf{u}\in V$.
-</li>
+There is a vector, $\mathbf{0}$, called the @keyword{zero vector}, such that $\mathbf{u}+\mathbf{0}=\mathbf{u}$ for all $\mathbf{u}\in V$. </li>
 <li class="ltx_item">
-<b>AI</b>
+@keyword{AI}
 <em>Additive Inverses</em>
 
-
-If $\mathbf{u}\in V$, then there exists a vector $\mathbf{-u}\in V$ so that $\mathbf{u}+(\mathbf{-u})=\mathbf{0}$.
-</li>
+If $\mathbf{u}\in V$, then there exists a vector $\mathbf{-u}\in V$ so that $\mathbf{u}+(\mathbf{-u})=\mathbf{0}$. </li>
 <li class="ltx_item">
-<b>SMA</b>
+@keyword{SMA}
 <em>Scalar Multiplication Associativity</em>
 
-
-If $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in V$, then $\alpha(\beta\mathbf{u})=(\alpha\beta)\mathbf{u}$.
-</li>
+If $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in V$, then $\alpha(\beta\mathbf{u})=(\alpha\beta)\mathbf{u}$. </li>
 <li class="ltx_item">
-<b>DVA</b>
+@keyword{DVA}
 <em>Distributivity across Vector Addition</em>
 
-
-If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u},\,\mathbf{v}\in V$, then $\alpha(\mathbf{u}+\mathbf{v})=\alpha\mathbf{u}+\alpha\mathbf{v}$.
-</li>
+If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u},\,\mathbf{v}\in V$, then $\alpha(\mathbf{u}+\mathbf{v})=\alpha\mathbf{u}+\alpha\mathbf{v}$. </li>
 <li class="ltx_item">
-<b>DSA</b>
+@keyword{DSA}
 <em>Distributivity across Scalar Addition</em>
 
-
 If $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in V$, then
-$(\alpha+\beta)\mathbf{u}=\alpha\mathbf{u}+\beta\mathbf{u}$.
-</li>
+$(\alpha+\beta)\mathbf{u}=\alpha\mathbf{u}+\beta\mathbf{u}$. </li>
 <li class="ltx_item">
-<b>O</b>
+@keyword{O}
 <em>One</em>
 
-
-If $\mathbf{u}\in V$, then $1\mathbf{u}=\mathbf{u}$.
-</li>
-</ol>
-The objects in $V$ are called <b>vectors</b>, no matter what else they might really be, simply by virtue of being elements of a vector space.
+If $\mathbf{u}\in V$, then $1\mathbf{u}=\mathbf{u}$. </li></ol> The objects in $V$ are called @keyword{vectors}, no matter what else they might really be, simply by virtue of being elements of a vector space.
 @end
 @slide
 @eg
-<b>column vector space</b> The set of column vectors ${\mathbb{R}}^{n}$ is a vector space.
+@keyword{column vector space} The set of column vectors ${\mathbb{R}}^{n}$ is a vector space.
 @end
 @eg
-<b>Row vector space</b>
-
+@keyword{Row vector space}
 
 @newcol
-The set of row vector ($1\times n$ matrices), is a vector space with the following operations:
-<ul class="ltx_itemize">
-<li class="ltx_item">
-Vector addition: $[a_{1}\,a_{2}\,\ldots\,a_{n}]+[a_{1}\,b_{2}\,\ldots\,b_{n}]=[a_{1}+b_{1}\,a_{2}+b_{2}\,\ldots\,a_{n}+b_{n}]$
-</li>
-<li class="ltx_item">
-Scalar multiplication $\alpha[a_{1}\,a_{2}\,\ldots,a_{n}]=[\alpha a_{1}\,\alpha a_{2},\ldots,\alpha a_{n}]$
-</li>
-</ul>
+The set of row vector ($1\times n$ matrices), is a vector space with the following operations: <ul class="ltx_itemize">
+<li class="ltx_item"> Vector addition: $[a_{1}\,a_{2}\,\ldots\,a_{n}]+[a_{1}\,b_{2}\,\ldots\,b_{n}]=[a_{1}+b_{1}\,a_{2}+b_{2}\,\ldots\,a_{n}+b_{n}]$ </li>
+<li class="ltx_item"> Scalar multiplication $\alpha[a_{1}\,a_{2}\,\ldots,a_{n}]=[\alpha a_{1}\,\alpha a_{2},\ldots,\alpha a_{n}]$ </li></ul>
 @endcol
 @end
 @eg
-<b>Matrices</b>
-
+@keyword{Matrices}
 
 @newcol
-The set of $m\times n$ matrices, denoted by $M_{mn}$, is a vector space with the following operations:
-<ul class="ltx_itemize">
-<li class="ltx_item">
-Vector addition:
+The set of $m\times n$ matrices, denoted by $M_{mn}$, is a vector space with the following operations: <ul class="ltx_itemize">
+<li class="ltx_item"> Vector addition:
 \begin{align*}
 \displaystyle \begin{bmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
 a_{21}&a_{22}&\cdots&a_{2n}\\
@@ -448,10 +375,8 @@ b_{m1}&b_{m2}&\cdots&b_{mn}\end{bmatrix}=\begin{bmatrix}a_{11}+b_{11}&a_{12}+b_{
 a_{21}+b_{21}&a_{22}+b_{22}&\cdots&a_{2n}+b_{2n}\\
 \vdots&\vdots&\vdots&\vdots\\
 a_{m1}+b_{m1}&a_{m2}+b_{m2}&\cdots&a_{mn}+b_{mn}\end{bmatrix}
-\end{align*}
-</li>
-<li class="ltx_item">
-Scalar multiplication
+\end{align*} </li>
+<li class="ltx_item"> Scalar multiplication
 \begin{align*}
 \displaystyle \alpha\begin{bmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
 a_{21}&a_{22}&\cdots&a_{2n}\\
@@ -460,9 +385,7 @@ a_{m1}&a_{m2}&\cdots&a_{mn}\end{bmatrix}=\begin{bmatrix}\alpha a_{11}&\alpha a_{
 \alpha a_{21}&\alpha a_{22}&\cdots&\alpha a_{2n}\\
 \vdots&\vdots&\vdots&\vdots\\
 \alpha a_{m1}&\alpha a_{m2}&\cdots&\alpha a_{mn}\end{bmatrix}
-\end{align*}
-</li>
-</ul>
+\end{align*} </li></ul>
 Property Z: The zero vector is
 \begin{align*}
 \displaystyle \begin{bmatrix}0&0&\cdots&0\\
@@ -488,29 +411,22 @@ You can try proving all other properties.
 @endcol
 @end
 @eg
-<b>The vector space of polynomials, $P_{n}$</b>
-
+@keyword{The vector space of polynomials, $P_{n}$}
 
 @newcol
 The set of all polynomials of degree $n$ or less in the variable $x$ with coefficients from ${\mathbb{R}}^{\hbox{}}$,
-denoted by $P_{n}$ is a vector space.
-<ul class="ltx_itemize">
-<li class="ltx_item">
-Vector Addition:
+denoted by $P_{n}$ is a vector space. <ul class="ltx_itemize">
+<li class="ltx_item"> Vector Addition:
 \begin{align*}
 \displaystyle (a_{0}+a_{1}x+a_{2}x^{2}+\cdots+a_{n}x^{n})+(b_{0}+b_{1}x+b_{2}x^{2}+\cdots+b_{n}x^{n})
 \end{align*}
 \begin{align*}
 \displaystyle =(a_{0}+b_{0})+(a_{1}+b_{1})x+(a_{2}+b_{2})x^{2}+\cdots+(a_{n}+b_{n})x^{n}
-\end{align*}
-</li>
-<li class="ltx_item">
-Scalar Multiplication:
+\end{align*} </li>
+<li class="ltx_item"> Scalar Multiplication:
 \begin{align*}
 \displaystyle \alpha(a_{0}+a_{1}x+a_{2}x^{2}+\cdots+a_{n}x^{n})=(\alpha a_{0})+(\alpha a_{1})x+(\alpha a_{2})x^{2}+\cdots+(\alpha a_{n})x^{n}
-\end{align*}
-</li>
-</ul>
+\end{align*} </li></ul>
 This set, with these operations, will fulfill the ten properties, though we will not work all the details here. However, we will make a few comments and prove one of the properties. First, the zero vector (property Z)
 is what you might expect, and you can check that it has the required property.
 \begin{align*}
@@ -535,54 +451,37 @@ You might try proving all the other properties.
 @endcol
 @end
 @eg
-<b>The vector space of functions</b>
-
+@keyword{The vector space of functions}
 
 @newcol
 Let $F$ be the set of functions for ${\mathbb{R}}^{\hbox{}}$ to ${\mathbb{R}}^{\hbox{}}$
-Equality: $f=g$ if and only if $f(x)=g(x)$ for all $x\in{\mathbb{R}}^{\hbox{}}$.
-<ul class="ltx_itemize">
-<li class="ltx_item">
-Vector Addition: $f+g$ is the function with outputs defined by $(f+g)(x)=f(x)+g(x)$.
-</li>
-<li class="ltx_item">
-Scalar Multiplication: $\alpha f$ is the function with outputs defined by $(\alpha f)(x)=\alpha f(x)$.
-</li>
-</ul>
+Equality: $f=g$ if and only if $f(x)=g(x)$ for all $x\in{\mathbb{R}}^{\hbox{}}$. <ul class="ltx_itemize">
+<li class="ltx_item"> Vector Addition: $f+g$ is the function with outputs defined by $(f+g)(x)=f(x)+g(x)$. </li>
+<li class="ltx_item"> Scalar Multiplication: $\alpha f$ is the function with outputs defined by $(\alpha f)(x)=\alpha f(x)$. </li></ul>
 The zero vector is a function $z$ whose definition is $z(x)=0$ for every input $x\in{\mathbb{R}}^{\hbox{}}$.
 Try proving all the other properties.
+@endcol
 @end
 @eg
-<b>The crazy vector space</b>
+@keyword{The crazy vector space}
 
-@col
-Let $C=\left\{\left.(x_{1},\,x_{2})\,\right|\,x_{1},\,x_{2}\in{\mathbb{R}}^{\hbox{}}\right\}$.
-<ol class="ltx_enumerate">
-<li class="ltx_item">
-Vector Addition: $(x_{1},\,x_{2})+(y_{1},\,y_{2})=(x_{1}+y_{1}+1,\,x_{2}+y_{2}+1)$.
-</li>
-<li class="ltx_item">
-Scalar Multiplication: $\alpha(x_{1},\,x_{2})=(\alpha x_{1}+\alpha-1,\,\alpha x_{2}+\alpha-1)$.
-</li>
-</ol>
-I am free to define my set and my operations any way I please. They may not look natural, or even useful, but we will now verify that they provide us with another example of a vector space. We will check all it satisfies all the definition of vector spaces.
-<ul class="ltx_itemize">
+@newcol
+Let $C=\left\{\left.(x_{1},\,x_{2})\,\right|\,x_{1},\,x_{2}\in{\mathbb{R}}^{\hbox{}}\right\}$. <ol class="ltx_enumerate">
+<li class="ltx_item"> Vector Addition: $(x_{1},\,x_{2})+(y_{1},\,y_{2})=(x_{1}+y_{1}+1,\,x_{2}+y_{2}+1)$. </li>
+<li class="ltx_item"> Scalar Multiplication: $\alpha(x_{1},\,x_{2})=(\alpha x_{1}+\alpha-1,\,\alpha x_{2}+\alpha-1)$. </li></ol>
+I am free to define my set and my operations any way I please. They may not look natural, or even useful, but we will now verify that they provide us with another example of a vector space. We will check all it satisfies all the definition of vector spaces. <ul class="ltx_itemize">
 <li class="ltx_item">
 <strong>Property AC, SC</strong>
 
-The result of each operation is a pair of complex numbers, so these two closure properties are fulfilled.
-</li>
+The result of each operation is a pair of complex numbers, so these two closure properties are fulfilled. </li>
 <li class="ltx_item">
-<strong>Property C</strong>
-\begin{align*}
+<strong>Property C</strong> \begin{align*}
 \displaystyle\mathbf{u}+\mathbf{v}&\displaystyle=(x_{1},\,x_{2})+(y_{1},\,y_{2})=(x_{1}+y_{1}+1,\,x_{2}+y_{2}+1) \\
 &\displaystyle=(y_{1}+x_{1}+1,\,y_{2}+x_{2}+1)=(y_{1},\,y_{2})+(x_{1},\,x_{2}) \\
 &\displaystyle=\mathbf{v}+\mathbf{u}
-\end{align*}
-</li>
+\end{align*} </li>
 <li class="ltx_item">
-<strong>Property AA</strong>
-\begin{align*}
+<strong>Property AA</strong> \begin{align*}
 \displaystyle\mathbf{u}+(\mathbf{v}+\mathbf{w})&\displaystyle=(x_{1},\,x_{2})+\left((y_{1},\,y_{2})+(z_{1},\,z_{2})\right) \\
 &\displaystyle=(x_{1},\,x_{2})+(y_{1}+z_{1}+1,\,y_{2}+z_{2}+1) \\
 &\displaystyle=(x_{1}+(y_{1}+z_{1}+1)+1,\,x_{2}+(y_{2}+z_{2}+1)+1) \\
@@ -591,16 +490,14 @@ The result of each operation is a pair of complex numbers, so these two closure 
 &\displaystyle=(x_{1}+y_{1}+1,\,x_{2}+y_{2}+1)+(z_{1},\,z_{2}) \\
 &\displaystyle=\left((x_{1},\,x_{2})+(y_{1},\,y_{2})\right)+(z_{1},\,z_{2}) \\
 &\displaystyle=\left(\mathbf{u}+\mathbf{v}\right)+\mathbf{w}
-\end{align*}
-</li>
+\end{align*} </li>
 <li class="ltx_item">
 <strong>Property Z</strong>
 
 The zero vector is $\mathbf{0}=(-1,\,-1)$ (<strong>not</strong> $(0,0)$)
 \begin{align*}
 \displaystyle \mathbf{u}+\mathbf{0}=(x_{1},\,x_{2})+(-1,\,-1)=(x_{1}+(-1)+1,\,x_{2}+(-1)+1)=(x_{1},\,x_{2})=\mathbf{u}
-\end{align*}
-</li>
+\end{align*} </li>
 <li class="ltx_item">
 <strong>Property AI</strong>
 
@@ -608,11 +505,9 @@ For each vector, $\mathbf{u}$, we must locate an additive inverse, $\mathbf{-u}$
 \begin{align*}
 \displaystyle\mathbf{u}+(\mathbf{-u})&\displaystyle=(x_{1},\,x_{2})+(-x_{1}-2,\,-x_{2}-2) \\
 &\displaystyle=(x_{1}+(-x_{1}-2)+1,\,-x_{2}+(x_{2}-2)+1)=(-1,\,-1)=\mathbf{0}
-\end{align*}
-</li>
+\end{align*} </li>
 <li class="ltx_item">
-<strong>Property SMA</strong>
-\begin{align*}
+<strong>Property SMA</strong> \begin{align*}
 \displaystyle\alpha(\beta\mathbf{u})&\displaystyle=\alpha(\beta(x_{1},\,x_{2})) \\
 &\displaystyle=\alpha(\beta x_{1}+\beta-1,\,\beta x_{2}+\beta-1) \\
 &\displaystyle=(\alpha(\beta x_{1}+\beta-1)+\alpha-1,\,\alpha(\beta x_{2}+\beta-1)+\alpha-1) \\
@@ -620,8 +515,7 @@ For each vector, $\mathbf{u}$, we must locate an additive inverse, $\mathbf{-u}$
 &\displaystyle=(\alpha\beta x_{1}+\alpha\beta-1,\,\alpha\beta x_{2}+\alpha\beta-1) \\
 &\displaystyle=(\alpha\beta)(x_{1},\,x_{2}) \\
 &\displaystyle=(\alpha\beta)\mathbf{u}
-\end{align*}
-</li>
+\end{align*} </li>
 <li class="ltx_item">
 <strong>Property DVA</strong>
 
@@ -638,11 +532,9 @@ y_{2}+\alpha+\alpha-1) \\
 &\displaystyle=(\alpha x_{1}+\alpha-1,\,\alpha x_{2}+\alpha-1)+(\alpha y_{1}+\alpha-1,\,\alpha y_{2}+\alpha-1) \\
 &\displaystyle=\alpha(x_{1},\,x_{2})+\alpha(y_{1},\,y_{2}) \\
 &\displaystyle=\alpha\mathbf{u}+\alpha\mathbf{v}
-\end{align*}
-</li>
+\end{align*} </li>
 <li class="ltx_item">
-<strong>Property DSA</strong>
-\begin{align*}
+<strong>Property DSA</strong> \begin{align*}
 \displaystyle(\alpha&\displaystyle+\beta)\mathbf{u} \\
 &\displaystyle=(\alpha+\beta)(x_{1},\,x_{2}) \\
 &\displaystyle=((\alpha+\beta)x_{1}+(\alpha+\beta)-1,\,(\alpha+\beta)x_{2}+(\alpha+\beta)-1) \\
@@ -652,24 +544,19 @@ y_{2}+\alpha+\alpha-1) \\
 &\displaystyle=(\alpha x_{1}+\alpha-1,\,\alpha x_{2}+\alpha-1)+(\beta x_{1}+\beta-1,\,\beta x_{2}+\beta-1) \\
 &\displaystyle=\alpha(x_{1},\,x_{2})+\beta(x_{1},\,x_{2}) \\
 &\displaystyle=\alpha\mathbf{u}+\beta\mathbf{u}
-\end{align*}
-</li>
+\end{align*} </li>
 <li class="ltx_item">
 <strong>Property O</strong>
 
 After all that, this one is easy, but no less pleasing.
 \begin{align*}
 \displaystyle 1\mathbf{u}=1(x_{1},\,x_{2})=(x_{1}+1-1,\,x_{2}+1-1)=(x_{1},\,x_{2})=\mathbf{u}
-\end{align*}
-</li>
-</ul>
+\end{align*} </li></ul>
 That is it, $C$ is a vector space, as crazy as that may seem.
 Notice that in the case of the zero vector and additive inverses, we only had to propose possibilities and then verify that they were the correct choices. You might try to discover how you would arrive at these choices, though you should understand why the process of discovering them is not a necessary component of the proof itself.
 @endcol
 @end
-@section{
-Basic Properties of Vector Spaces
-}
+@section{Basic Properties of Vector Spaces}
 <strong>For math major only. Non-math major can skip the rest of this section. The material will not appear in the midterms or final</strong>
 @thm
 @title{Cancellation Law for Vector Addition}
@@ -690,7 +577,6 @@ Thus,
 \displaystyle \mathbf{v}&=\mathbf{u}&\text{Property Z}.
 \end{align*}
 
-
 @qed
 @end
 @thm
@@ -707,7 +593,6 @@ Let $\mathbf{w}$ be an element in $V$.
 \begin{align*}
 \displaystyle \mathbf{0}_{1}=\mathbf{0}_{2}\hskip 28.452756pt\text{by the previous theorem}
 \end{align*}
-
 
 @qed
 @end
@@ -737,27 +622,17 @@ By @ref{cancell},
 \displaystyle \mathbf{v}=\mathbf{u}.
 \end{align*}
 
-
 @qed
 @end
 @thm
-Let $V$ be a vector space, $\alpha$ a real number, $\mathbf{v}$ a vector in $V$. We have the following statement.
-<ol class="ltx_enumerate">
-<li class="ltx_item">
-$0\mathbf{v}=\mathbf{0}$ .
-</li>
-<li class="ltx_item">
-$a\mathbf{0}=\mathbf{0}$.
-</li>
-<li class="ltx_item">
-$(-\alpha)\mathbf{v}=-(\alpha\mathbf{v})=\alpha(-\mathbf{v})$.
-</li>
-</ol>
+Let $V$ be a vector space, $\alpha$ a real number, $\mathbf{v}$ a vector in $V$. We have the following statement. <ol class="ltx_enumerate">
+<li class="ltx_item"> $0\mathbf{v}=\mathbf{0}$ . </li>
+<li class="ltx_item"> $a\mathbf{0}=\mathbf{0}$. </li>
+<li class="ltx_item"> $(-\alpha)\mathbf{v}=-(\alpha\mathbf{v})=\alpha(-\mathbf{v})$. </li></ol>
 @end
 @proof
 <ol class="ltx_enumerate">
-<li class="ltx_item">
-\begin{align*}
+<li class="ltx_item"> \begin{align*}
 \displaystyle 0\mathbf{v}+0\mathbf{v}&=(0+0)\mathbf{v} & \text{Property DSA}\\
 \displaystyle 0\mathbf{v}+0\mathbf{v}=0\mathbf{v}&=\mathbf{0}+0\mathbf{v} & \text{Property Z}
 \end{align*}
@@ -765,11 +640,9 @@ Hence,
 \[
 \displaystyle 0\mathbf{v}=\mathbf{0},
 \]
-by @ref{cancell}.
-</li>
+by @ref{cancell}. </li>
 <li class="ltx_item">
-<br/>
-\begin{align*}
+<br/> \begin{align*}
 \displaystyle\alpha\mathbf{0}+a\mathbf{0}&\displaystyle=\alpha(\mathbf{0}+\mathbf{0}) & \text{Property DVA} \\
 &\displaystyle=\alpha\mathbf{0} & \text{Property Z} \\
 &\displaystyle=\mathbf{0}+\alpha\mathbf{0} & \text{Property Z}
@@ -777,10 +650,8 @@ by @ref{cancell}.
 By @ref{cancell},
 \begin{align*}
 \displaystyle \alpha\mathbf{0}=\mathbf{0}
-\end{align*}
-</li>
-<li class="ltx_item">
-\begin{align*}
+\end{align*} </li>
+<li class="ltx_item"> \begin{align*}
 \displaystyle\alpha\mathbf{v}+(-\alpha)\mathbf{v}&\displaystyle=(\alpha+(-\alpha))\mathbf{v}&\text{Property DSA}. \\
 &\displaystyle=0\mathbf{v}& \\
 &\displaystyle=\mathbf{0}&\text{item 1}
@@ -798,31 +669,18 @@ Next
 By Property AI and the uniqueness of the additive inverse (@ref{invunique}),
 \begin{align*}
 \displaystyle \alpha(-\mathbf{v})=-\alpha\mathbf{v}.
-\end{align*}
-</li>
-</ol>
-
+\end{align*} </li></ol>
 
 @qed
 @end
-@section{
-Subspaces
-}
+@section{Subspaces}
 @defn
 @label{subdef}
 Let $V$ be vector space.
-A subset $W$ of $V$ is said to be a <b>subspace</b> of $V$ if
-<ol class="ltx_enumerate">
-<li class="ltx_item">
-$W$ is nonempty.
-</li>
-<li class="ltx_item">
-For $\mathbf{v},\mathbf{w}\in W$, then $\mathbf{v}+\mathbf{w}\in W$.
-</li>
-<li class="ltx_item">
-For $\alpha\in\mathbf{R}$, $\mathbf{v}\in W$, then $\alpha\mathbf{v}\in W$.
-</li>
-</ol>
+A subset $W$ of $V$ is said to be a @keyword{subspace} of $V$ if <ol class="ltx_enumerate">
+<li class="ltx_item"> $W$ is nonempty. </li>
+<li class="ltx_item"> For $\mathbf{v},\mathbf{w}\in W$, then $\mathbf{v}+\mathbf{w}\in W$. </li>
+<li class="ltx_item"> For $\alpha\in\mathbf{R}$, $\mathbf{v}\in W$, then $\alpha\mathbf{v}\in W$. </li></ol>
 @end
 @slide
 We will prove several theorem first before we give examples.
@@ -847,15 +705,9 @@ Hence, the zero vector $\mathbf{0}$ lies in $W$.
 @newcol
 Let $V$ be a vector space
 and $W$ a subset of $V$,
-then $W$ is a subspace if and only if
-<ol class="ltx_enumerate">
-<li class="ltx_item">
-$W$ is nonempty.
-</li>
-<li class="ltx_item">
-For any $\alpha\in\mathbf{R}$, $\mathbf{v},\mathbf{w}\in W$, $\alpha\mathbf{v}+\mathbf{w}\in W$.
-</li>
-</ol>
+then $W$ is a subspace if and only if <ol class="ltx_enumerate">
+<li class="ltx_item"> $W$ is nonempty. </li>
+<li class="ltx_item"> For any $\alpha\in\mathbf{R}$, $\mathbf{v},\mathbf{w}\in W$, $\alpha\mathbf{v}+\mathbf{w}\in W$. </li></ol>
 @endcol
 @end
 @proof
@@ -891,7 +743,7 @@ W = \left\{\left.\colvector{w_1\\0\\w_3} \;\right| \;w_1, w_3 \in \mathbb{R}\rig
 \]
 We now show that $W$ is a subspace of $V$:
 
-@col
+@newcol
 @ol
 @li
 Clearly, $\colvector{0\\0\\0}$ lies in $W$, hence $W$ is nonempty.
@@ -917,16 +769,27 @@ Hence,
 = \colvector{\alpha w_1\\0\\\alpha w_3} \in W.
 \]
 @endol
+@endcol
 @end
+@eg
+$V = \mathbb{R}^3$.
+\[
+W = \left\{\left.\colvector{x\\y\\z} \in \mathbb{R}^3 \,\right|\, x + 2y + 3z = 0
+\right\}
+\]
+@end
+
+@slide
 @eg
 <strong>Skip for now, until you learn the definition of column space.</strong>
 
-@col
+@newcol
 Let $A\in M_{mn}$, then $\mathcal{C}\!\left(A\right)$ is a subspace of ${\mathbb{R}}^{m}$.
+@endcol
 @end
 @proof
 @newcol
-$\mathcal{C}\!\left(A\right)=\left<\{\mathbf{A}_{1},\ldots,\mathbf{A}_{n}\}\right>$. So by the previous theorem, $\mathcal{C}\!\left(A\right)$ is a subspace of ${\mathbb{R}}^{m}$. <b>Alternate proof</b>: Suppose For $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{w}\in W=\mathcal{C}\!\left(A\right)$.
+$\mathcal{C}\!\left(A\right)=\left<\{\mathbf{A}_{1},\ldots,\mathbf{A}_{n}\}\right>$. So by the previous theorem, $\mathcal{C}\!\left(A\right)$ is a subspace of ${\mathbb{R}}^{m}$. @keyword{Alternate proof}: Suppose For $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{w}\in W=\mathcal{C}\!\left(A\right)$.
 Recall
 \begin{align*}
 \displaystyle \mathcal{C}\!\left(A\right)=\{A\mathbf{x}\,|\,x\in{\mathbb{R}}^{m}\}.
@@ -953,7 +816,6 @@ Thus $\alpha A+B\in S_{n}$. Hence $S_{n}$ is a subspace by @ref{subdef2}.
 @end
 @eg
 <strong>For math majors only</strong>
-
 
 @newcol
 Let
@@ -984,9 +846,7 @@ Let $h=\alpha f+g$. Then
 So $h\in E$. Hence $E$ is a subspace.
 @endcol
 @end
-@section{
-Non-Examples
-}
+@section{Non-Examples}
 To show that $W$ is <strong>not</strong> a subspace of $V$, it suffices to show that it violates @ref{subdef} condition 1 or condition 2.
 This can be done by finding counter examples to either condition. Usually before checking those conditions, we quickly check if $\mathbf{0}_{V}\in W$
 (see @ref{0}).
@@ -1053,11 +913,12 @@ Thus $W$ violates @ref{subdef} condition 2 and hence not a subspace. In fact, we
 @eg
 <strong>For math majors only</strong>
 
-@col
+@newcol
 Let $V=P_{n}$. Let $G$ be the set of polynomial with degree exactly equal to $n$. Let $f(x)=x^{n}$, $g(x)=-x^{n}+1$. Both $f$ and $g$ have degree exactly equal to $n$.
 But
 \begin{align*}
 \displaystyle f(x)+g(x)=1
 \end{align*}
 is a polynomial with degree $0$. So $f+g$ is not in $G$. Thus $W$ violates @ref{subdef} condition 2 and hence not a subspace.
+@endcol
 @end
