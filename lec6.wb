@@ -147,7 +147,7 @@ Column 1, 2, 3 are pivot columns, $r=3$, $D=\{1,2,3\}$, $d_{1}=1,d_{2}=2,d_{3}=3
 0&0&0&0&1&1&0&8&8\\
 0&0&0&0&0&0&1&3&4\\
 0&0&0&0&0&0&0&0&0\end{bmatrix}\]
-Column 2, 5, 7 are pivot columns. Note that column 3 is <strong>not</strong> a pivot column. $r=3$,
+Column 2, 5, 7 are pivot columns. Note that column 3 is <strong style="">not</strong> a pivot column. $r=3$,
 $D=\{2,5,7\}$, $d_{1}=2,d_{2}=5,d_{3}=7$,
 $F=\{1,3,4,6,8,9\}$, $f_{1}=1,f_{2}=3,f_{3}=4,f_{4}=6,f_{5}=8,f_{6}=9$.
 @endcol
@@ -749,7 +749,7 @@ cccc|c}\boxed{1}&0&3&-2&0\\
 0&\boxed{1}&1&-3&0\\
 0&0&0&0&\boxed{1}\end{array}\right]\]
 @col
-The third equation will read $0=1$. This is patently false, all the time. No choice of values for our variables will ever make it true. We are done. Since we cannot even make the last equation true, we have no hope of making all of the equations simultaneously true. So this system has @keyword{no solutions}, and its solution set is the empty set, $\emptyset=\{\ \}$
+The third equation will read $0=1$. This is patently false, all the time. No choice of values for our variables will ever make it true. We are done. Since we cannot even make the last equation true, we have no hope of making all of the equations simultaneously true. So this system has @keyword{no solutions}, and its solution set is the empty set, $\varnothing=\{\ \}$
 Notice that we could have reached this conclusion sooner. After performing the row operation
 $-7R_{2}+R_{3}$, we can see that the third equation reads $0=-5$, a false statement. Since the system represented by this matrix has no solutions, none of the systems represented has any solutions. However, for this example, we have chosen to bring the matrix all the way to reduced row-echelon form as practice.
 The above three examples
