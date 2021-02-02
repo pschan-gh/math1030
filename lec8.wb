@@ -441,6 +441,30 @@ These two observations may be chained together to construct the two proofs neces
 @qed
 @end
 @slide
+@remark
+It is now easy to see that any nonsingular matrix $A$ is invertible:
+
+@col
+If an $n\times n$ matrix $A$ is invertible, then it is row-equivalent to $I_n$,
+which means there exists a sequence of elementary matrices $J_1, J_2, \ldots, J_l$
+(each correspond to a row operation), such that:
+\[
+J_l \cdots J_2 J_1 A = I.
+\]
+Let $J = J_l \cdots J_2 J_1$. Since each elementary matrix is invertible,
+and the product of invertible matrices is also invertible, the matrix $J$ is invertible.
+
+@col
+Hence,
+\[
+A = J^{-1}JA = J^{-1} I = J^{-1} 
+\]
+The matrix $J^{-1}$, being the inverse of an invertiable matrix, is invertible.
+We conclude that $A = J^{-1}$ is invertible.
+
+(Observe that every nonsingular matrix is in particular a product of elementary matrices.)
+@end
+@slide
 @thm
 @title{Nonsingular Matrices and Unique Solutions}
 @label{NMUS}
@@ -476,6 +500,16 @@ We find that there are $n-r=n-n=0$ free variables,
 and so we therefore know that the solution is unique.
 @qed
 @endcol
+@end
+Alternatively,
+@proof
+@of{NMUS}
+If $A$ is nonsingular, then $A^{-1}$ exists.
+So, $A\mathbf{x} = \mathbf{b}$ implies that the unique solution is $\mathbf{x} = A^{-1}\mathbf{b}$.
+
+Conversely, if $A \mathbf{x} = \mathbf{b}$ has a unique solution for every vector $\mathbf{b}$. Then, in particular, the only solution to $A\mathbf{x} = \mathbf{b}$
+is $\mathbf{x} = \mathbf{0}$. This implies by definition that $A$ is nonsingular.
+@qed
 @end
 @slide
 @thm
