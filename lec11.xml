@@ -2,9 +2,6 @@
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030">
     <keywords slide="all" environ="course" chapter="" course="Math 1030">
-      <keyword chapter="" slide="all">span</keyword>
-      <keyword chapter="" slide="all">Spanning set of a null space</keyword>
-      <keyword chapter="" slide="all">linear independence</keyword>
       <keyword chapter="" slide="all">Span of a Set of Column Vectors</keyword>
       <keyword chapter="" slide="all">Spanning Sets for Null Spaces</keyword>
     </keywords>
@@ -18,9 +15,6 @@
     </slides>
     <chapter environment="" chapter_type="Chapter" type="Chapter" wbtag="chapter" num="11" title="Spanning Sets" course="Math 1030" serial="11">
       <keywords slide="all" environ="chapter" chapter="11" course="Math 1030">
-        <keyword chapter="11" slide="all">span</keyword>
-        <keyword chapter="11" slide="all">Spanning set of a null space</keyword>
-        <keyword chapter="11" slide="all">linear independence</keyword>
         <keyword chapter="11" slide="all">Span of a Set of Column Vectors</keyword>
         <keyword chapter="11" slide="all">Spanning Sets for Null Spaces</keyword>
       </keywords>
@@ -69,7 +63,6 @@
         <slides environment="" chapter_type="">
           <slide environment="" chapter_type="Chapter" canon_num="4" scope="section" id="s4" slide="4" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Span of a Set of Vectors">
             <keywords slide="4" environ="slide" chapter="11" course="Math 1030">
-              <keyword chapter="11" slide="4">span</keyword>
               <keyword chapter="11" slide="4">Span of a Set of Column Vectors</keyword>
             </keywords>
             <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="11" section="1" subsection="" subsubsection="" serial="" slide="4">
@@ -86,7 +79,9 @@ We saw that the solution set of a homogeneous system can be described as all pos
 \displaystyle S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\},
 \end{align*}
 their </paragraphs>
-              <inline_keyword course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">span</inline_keyword>
+              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">span</paragraphs>
+              </b>
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">, $\left&lt; S \right&gt;$, is the set of all linear combinations of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}$.
 Symbolically,
 \begin{align*}
@@ -730,7 +725,7 @@ telling us that
 So we are convinced that $\mathbf{x}$ really is in $\left&lt; R \right&gt;$. Notice that in this case we again have only one way to answer the question affirmatively since the solution is again unique.</paragraphs>
                       <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
                       <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">We could continue to test other vectors for membership in $\left&lt; R \right&gt;$, but there is no point. A question about membership in $\left&lt; R \right&gt;$ inevitably leads to a system of three equations in the three variables $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ with a coefficient matrix whose columns are the vectors $\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}$. This particular coefficient matrix is nonsingular, so by </paragraphs>
-                      <ref environment="newcol" chapter_type="" label="NME1" wbtag="ref" course="Math 1030" chapter="11" slide="11" src-course="Math 1030" src-chapter="8" src-slide="21" type="Theorem" item="8.21" src-filename="lec8.xml" md5="808546fe65838e425f3533c348d23441" class="lcref" serial="">
+                      <ref environment="newcol" chapter_type="" label="NME1" wbtag="ref" course="Math 1030" chapter="11" slide="11" src-course="Math 1030" src-chapter="8" src-slide="22" type="Theorem" item="8.21" src-filename="lec8.xml" md5="808546fe65838e425f3533c348d23441" class="lcref" serial="">
                         <title>Nonsingular Matrix Equivalences</title>
                       </ref>
                       <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> the system is guaranteed to have a solution. (This solution is unique, but that is not critical here.) So no matter which vector we might have chosen for $\mathbf{z}$, we are certain to discover that it was an element of $\left&lt; R \right&gt;$.</paragraphs>
@@ -757,7 +752,7 @@ So we are convinced that $\mathbf{x}$ really is in $\left&lt; R \right&gt;$. Not
                 <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If $A$ is non-singular, then for every $\mathbf{b}\in{\mathbb{R}}^{m}$ the equation $\mathcal{LS}({A},{\mathbf{b}})$ is consistent
 by </paragraphs>
-                  <ref environment="newcol" chapter_type="" label="b25e99edb5cb21a0655d0d961da21e47" wbtag="ref" course="Math 1030" chapter="11" slide="11" src-course="Math 1030" src-chapter="8" src-slide="20" type="Theorem" item="8.20" src-filename="lec8.xml" md5="b25e99edb5cb21a0655d0d961da21e47" class="lcref" serial="">
+                  <ref environment="newcol" chapter_type="" label="b25e99edb5cb21a0655d0d961da21e47" wbtag="ref" course="Math 1030" chapter="11" slide="11" src-course="Math 1030" src-chapter="8" src-slide="21" type="Theorem" item="8.20" src-filename="lec8.xml" md5="b25e99edb5cb21a0655d0d961da21e47" class="lcref" serial="">
                     <title>Nonsingular Matrices and Unique Solutions</title>
                   </ref>
                   <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. Hence $\mathbf{b}\in\left&lt; S \right&gt;$. So ${\mathbb{R}}^{m}=\left&lt; S \right&gt;$. </paragraphs>
@@ -820,11 +815,11 @@ Then the null space of $A$ is given by
             </substatement>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="13" id="s13" slide="13" course="Math 1030" chapter="11" section="2" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Spanning Sets of Null Spaces">
-            <keywords slide="13" environ="slide" chapter="11" course="Math 1030">
-              <keyword chapter="11" slide="13">Spanning set of a null space</keyword>
-            </keywords>
+            <keywords slide="13" environ="slide" chapter="11" course="Math 1030"/>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="11" md5="9ed8a98057666bacb63507153cecf94f" course="Math 1030" chapter="11" slide="13" item="11.11">
-              <inline_keyword course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">Spanning set of a null space</inline_keyword>
+              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Spanning set of a null space</paragraphs>
+              </b>
               <newline course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Find a set of vectors, $S$, so that the null space of the matrix
 \begin{align*}
@@ -996,9 +991,7 @@ So we have
         </title>
         <slides environment="" chapter_type="">
           <slide environment="" chapter_type="Chapter" canon_num="14" scope="section" id="s14" slide="14" course="Math 1030" chapter="11" section="3" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Obtain Same Span Using Fewer Vectors">
-            <keywords slide="14" environ="slide" chapter="11" course="Math 1030">
-              <keyword chapter="11" slide="14">linear independence</keyword>
-            </keywords>
+            <keywords slide="14" environ="slide" chapter="11" course="Math 1030"/>
             <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="11" section="3" subsection="" subsubsection="" serial="" slide="14">
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Obtain Same Span Using Fewer Vectors</paragraphs>
             </title>
@@ -1092,7 +1085,9 @@ which we can solve for $\mathbf{w}_{3}$ as
                                   <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
                                   <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                                     <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> What was it about the original set of four vectors that allowed us to declare certain vectors as surplus? And just which vectors were we able to dismiss? And why did we have to stop once we had two vectors remaining? The answers to these questions motivate </paragraphs>
-                                    <inline_keyword course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol">linear independence</inline_keyword>
+                                    <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">linear independence</paragraphs>
+                                    </b>
                                     <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, our next section and next definition, and so are worth considering carefully now. </paragraphs>
                                   </collapse>
                                 </collapse>
