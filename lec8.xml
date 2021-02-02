@@ -746,13 +746,17 @@ and so we therefore know that the solution is unique. </paragraphs>
               </newcol>
             </substatement>
             <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Alternatively, </paragraphs>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" of="NMUS" md5="431be8ddf00979b89777ed6399888ec9" course="Math 1030" chapter="8" slide="21">
-              <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs"> If $A$ is nonsingular, then $A^{-1}$ exists.
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" of="NMUS" md5="11f1d5e577471f65c30122889bfcd80a" course="Math 1030" chapter="8" slide="21">
+              <newcol course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If $A$ is nonsingular, then $A^{-1}$ exists.
 So, $A\mathbf{x} = \mathbf{b}$ implies that the unique solution is $\mathbf{x} = A^{-1}\mathbf{b}$.</paragraphs>
-              <newline course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement"/>
-              <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">Conversely, if $A \mathbf{x} = \mathbf{b}$ has a unique solution for every vector $\mathbf{b}$. Then, in particular, the only solution to $A\mathbf{x} = \mathbf{b}$
+                <newline course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Conversely, if $A \mathbf{x} = \mathbf{b}$ has a unique solution for every vector $\mathbf{b}$. Then, in particular, the only solution to $A\mathbf{x} = \mathbf{0}$
 is $\mathbf{x} = \mathbf{0}$. This implies by definition that $A$ is nonsingular. </paragraphs>
-              <qed course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement"/>
+                  <qed course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                </collapse>
+              </newcol>
             </substatement>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="22" id="s22" slide="22" course="Math 1030" chapter="8" section="5" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Null Space of a Nonsingular Matrix">
@@ -799,8 +803,8 @@ So the statement of this theorem is just a convenient way to organize all these 
               </newcol>
             </substatement>
             <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs"> In fact, we further have: </paragraphs>
-            <ref environment="" chapter_type="" label="NME3" wbtag="ref" course="Math 1030" chapter="8" slide="22" src-course="Math 1030" src-chapter="15" src-slide="12" type="Theorem" item="15.10" src-filename="lec15.xml" md5="69f01bd979af012e7b7ec8716e77a339" class="lcref" serial="">
-              <title>Nonsingular Matrix Equivalences</title>
+            <ref environment="" chapter_type="" label="NME3" wbtag="ref" course="Math 1030" chapter="8" slide="22" src-course="Math 1030" src-chapter="17" src-slide="23" type="Theorem" item="17.18" src-filename="lec17.xml" md5="1116e77bf6fedd4e1a32230854ff3565" class="lcref" serial="">
+              <title>Nonsingular Matrix Equivalences, Round 3</title>
             </ref>
             <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs">. </paragraphs>
           </slide>

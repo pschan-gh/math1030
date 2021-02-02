@@ -504,10 +504,13 @@ and so we therefore know that the solution is unique.
 Alternatively,
 @proof
 @of{NMUS}
+@col
 If $A$ is nonsingular, then $A^{-1}$ exists.
 So, $A\mathbf{x} = \mathbf{b}$ implies that the unique solution is $\mathbf{x} = A^{-1}\mathbf{b}$.
 
-Conversely, if $A \mathbf{x} = \mathbf{b}$ has a unique solution for every vector $\mathbf{b}$. Then, in particular, the only solution to $A\mathbf{x} = \mathbf{b}$
+
+@col
+Conversely, if $A \mathbf{x} = \mathbf{b}$ has a unique solution for every vector $\mathbf{b}$. Then, in particular, the only solution to $A\mathbf{x} = \mathbf{0}$
 is $\mathbf{x} = \mathbf{0}$. This implies by definition that $A$ is nonsingular.
 @qed
 @end
