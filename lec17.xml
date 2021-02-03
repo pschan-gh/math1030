@@ -2,6 +2,17 @@
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030">
     <keywords slide="all" environ="course" chapter="" course="Math 1030">
+      <keyword chapter="" slide="all">multiplicative inverse</keyword>
+      <keyword chapter="" slide="all">invertible</keyword>
+      <keyword chapter="" slide="all">inverse</keyword>
+      <keyword chapter="" slide="all">A matrix without an inverse</keyword>
+      <keyword chapter="" slide="all">Matrix inverse</keyword>
+      <keyword chapter="" slide="all">Computing a matrix inverse</keyword>
+      <keyword chapter="" slide="all">Computing a matrix inverse</keyword>
+      <keyword chapter="" slide="all">Computing a matrix inverse</keyword>
+      <keyword chapter="" slide="all">right-inverse</keyword>
+      <keyword chapter="" slide="all">right-inverse</keyword>
+      <keyword chapter="" slide="all">left-inverse</keyword>
       <keyword chapter="" slide="all">Two-by-Two Matrix Inverse</keyword>
       <keyword chapter="" slide="all">Computing the Inverse of a Nonsingular Matrix</keyword>
       <keyword chapter="" slide="all">Matrix Inverse is Unique</keyword>
@@ -25,6 +36,17 @@
     </slides>
     <chapter environment="" chapter_type="Chapter" type="Chapter" wbtag="chapter" num="17" title="Inverse" course="Math 1030" serial="17">
       <keywords slide="all" environ="chapter" chapter="17" course="Math 1030">
+        <keyword chapter="17" slide="all">multiplicative inverse</keyword>
+        <keyword chapter="17" slide="all">invertible</keyword>
+        <keyword chapter="17" slide="all">inverse</keyword>
+        <keyword chapter="17" slide="all">A matrix without an inverse</keyword>
+        <keyword chapter="17" slide="all">Matrix inverse</keyword>
+        <keyword chapter="17" slide="all">Computing a matrix inverse</keyword>
+        <keyword chapter="17" slide="all">Computing a matrix inverse</keyword>
+        <keyword chapter="17" slide="all">Computing a matrix inverse</keyword>
+        <keyword chapter="17" slide="all">right-inverse</keyword>
+        <keyword chapter="17" slide="all">right-inverse</keyword>
+        <keyword chapter="17" slide="all">left-inverse</keyword>
         <keyword chapter="17" slide="all">Two-by-Two Matrix Inverse</keyword>
         <keyword chapter="17" slide="all">Computing the Inverse of a Nonsingular Matrix</keyword>
         <keyword chapter="17" slide="all">Matrix Inverse is Unique</keyword>
@@ -69,7 +91,9 @@
             <paragraphs course="Math 1030" chapter="17" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs"> The inverse of a square matrix, and solutions to linear systems with square coefficient matrices, are intimately connected. </paragraphs>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="4" id="s4" slide="4" course="Math 1030" chapter="17" section="1" subsection="" subsubsection="" chapter_title="Inverse" section_title="Solution Inverse">
-            <keywords slide="4" environ="slide" chapter="17" course="Math 1030"/>
+            <keywords slide="4" environ="slide" chapter="17" course="Math 1030">
+              <keyword chapter="17" slide="4">multiplicative inverse</keyword>
+            </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="1" md5="7ce940e52b9f2eedc037c407f7cd04ff" course="Math 1030" chapter="17" slide="4" item="17.1">
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> \begin{align*}
 \displaystyle-7x_{1}-6x_{2}-12x_{3}&amp;\displaystyle=-33 \\
@@ -137,9 +161,7 @@ and note the remarkable fact that
 \end{align*} </paragraphs>
               <collapse course="Math 1030" chapter="17" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Here we have obtained a solution by employing the </paragraphs>
-                <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
-                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="17" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">multiplicative inverse</paragraphs>
-                </b>
+                <inline_keyword course="Math 1030" chapter="17" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol">multiplicative inverse</inline_keyword>
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> of $3$, $3^{-1}=\frac{1}{3}$. This works fine for any scalar multiple of $x$, except for zero, since zero does not have a multiplicative inverse. Consider separately the two linear equations,
 \begin{align*}
 \displaystyle 0x&amp;\displaystyle=12&amp;\displaystyle 0x&amp;\displaystyle=0
@@ -159,19 +181,18 @@ and note the remarkable fact that
         </title>
         <slides environment="" chapter_type="">
           <slide environment="" chapter_type="Chapter" canon_num="5" scope="section" id="s5" slide="5" course="Math 1030" chapter="17" section="2" subsection="" subsubsection="" chapter_title="Inverse" section_title="Inverse of a Matrix">
-            <keywords slide="5" environ="slide" chapter="17" course="Math 1030"/>
+            <keywords slide="5" environ="slide" chapter="17" course="Math 1030">
+              <keyword chapter="17" slide="5">invertible</keyword>
+              <keyword chapter="17" slide="5">inverse</keyword>
+            </keywords>
             <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="17" section="2" subsection="" subsubsection="" serial="" slide="5">
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Inverse of a Matrix</paragraphs>
             </title>
             <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="2" md5="c68b15bdbed6e5909a4f0a6262f29f1f" course="Math 1030" chapter="17" slide="5" item="17.2">
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ and $B$ are square matrices of size $n$ such that $AB=I_{n}$ and $BA=I_{n}$. Then $A$ is </paragraphs>
-              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
-                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">invertible</paragraphs>
-              </b>
+              <inline_keyword course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">invertible</inline_keyword>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> and $B$ is the </paragraphs>
-              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
-                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">inverse</paragraphs>
-              </b>
+              <inline_keyword course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">inverse</inline_keyword>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$. In this situation, we write $B=A^{-1}$. </paragraphs>
             </statement>
             <newcol course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
@@ -183,11 +204,11 @@ and note the remarkable fact that
             </newcol>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="6" id="s6" slide="6" course="Math 1030" chapter="17" section="2" subsection="" subsubsection="" chapter_title="Inverse" section_title="Inverse of a Matrix">
-            <keywords slide="6" environ="slide" chapter="17" course="Math 1030"/>
+            <keywords slide="6" environ="slide" chapter="17" course="Math 1030">
+              <keyword chapter="17" slide="6">A matrix without an inverse</keyword>
+            </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="3" md5="c5bf028ba65df6dfe60ba3e3bf32987e" course="Math 1030" chapter="17" slide="6" item="17.3">
-              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
-                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">A matrix without an inverse</paragraphs>
-              </b>
+              <inline_keyword course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">A matrix without an inverse</inline_keyword>
               <newline course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
               <newcol course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Consider the coefficient matrix
@@ -226,11 +247,11 @@ which allows us to recognize the inconsistency.</paragraphs>
             </newcol>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="7" id="s7" slide="7" course="Math 1030" chapter="17" section="2" subsection="" subsubsection="" chapter_title="Inverse" section_title="Inverse of a Matrix">
-            <keywords slide="7" environ="slide" chapter="17" course="Math 1030"/>
+            <keywords slide="7" environ="slide" chapter="17" course="Math 1030">
+              <keyword chapter="17" slide="7">Matrix inverse</keyword>
+            </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="4" md5="5d1f8ff452305b75fabeabce11f6756e" course="Math 1030" chapter="17" slide="7" item="17.4">
-              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
-                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Matrix inverse</paragraphs>
-              </b>
+              <inline_keyword course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">Matrix inverse</inline_keyword>
               <newline course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
               <newcol course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
@@ -460,11 +481,12 @@ dg&amp;dh\end{bmatrix}
             </newcol>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="Math 1030" chapter="17" section="3" subsection="" subsubsection="" chapter_title="Inverse" section_title="Computing the Inverse of a Matrix">
-            <keywords slide="10" environ="slide" chapter="17" course="Math 1030"/>
+            <keywords slide="10" environ="slide" chapter="17" course="Math 1030">
+              <keyword chapter="17" slide="10">Computing a matrix inverse</keyword>
+              <keyword chapter="17" slide="10">Computing a matrix inverse</keyword>
+            </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="6" md5="73084aa29c5e4dee5df5453a7080dcf2" course="Math 1030" chapter="17" slide="10" item="17.6">
-              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
-                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Computing a matrix inverse</paragraphs>
-              </b>
+              <inline_keyword course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">Computing a matrix inverse</inline_keyword>
               <newline course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
               <newcol course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Consider
@@ -602,9 +624,7 @@ dg&amp;dh\end{bmatrix}
               </newcol>
             </statement>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="7" md5="e52f3eafa97c8f3594a902c2a82c8a0b" course="Math 1030" chapter="17" slide="10" item="17.7">
-              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
-                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Computing a matrix inverse</paragraphs>
-              </b>
+              <inline_keyword course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">Computing a matrix inverse</inline_keyword>
               <newline course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
               <newcol course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let
@@ -842,8 +862,8 @@ as desired. </paragraphs>
               <newline course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
               <collapse course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> What if $A$ is singular? At this point we only know that Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="CINM" wbtag="ref" course="Math 1030" chapter="17" slide="11">
-                  <title>UNDEFINED</title>
+                <ref environment="newcol" chapter_type="" label="CINM" wbtag="ref" course="Math 1030" chapter="17" slide="11" src-course="Math 1030" src-chapter="17" src-slide="11" type="Theorem" item="17.8" src-filename="lec17.xml" md5="b48f8d1ae208f776e81edfbd0f5b8689" class="lcref" serial="">
+                  <title>Computing the Inverse of a Nonsingular Matrix</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> cannot be applied. The question of $A$’s inverse is still open.
 We will solve it later. </paragraphs>
@@ -851,11 +871,11 @@ We will solve it later. </paragraphs>
             </newcol>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="12" id="s12" slide="12" course="Math 1030" chapter="17" section="3" subsection="" subsubsection="" chapter_title="Inverse" section_title="Computing the Inverse of a Matrix">
-            <keywords slide="12" environ="slide" chapter="17" course="Math 1030"/>
+            <keywords slide="12" environ="slide" chapter="17" course="Math 1030">
+              <keyword chapter="17" slide="12">Computing a matrix inverse</keyword>
+            </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="9" md5="9d84675c0a4fe052441a6345b8f1f71a" course="Math 1030" chapter="17" slide="12" item="17.9">
-              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
-                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Computing a matrix inverse</paragraphs>
-              </b>
+              <inline_keyword course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">Computing a matrix inverse</inline_keyword>
               <newline course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
               <newcol course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
@@ -990,8 +1010,8 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="1245e29900e802a7663ce605ddc05555" course="Math 1030" chapter="17" slide="17" of="ae30517ce3adde6fc3a9a4513ef5b5f2">
               <newcol course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> As with the proof of Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="SS" wbtag="ref" course="Math 1030" chapter="17" slide="17">
-                  <title>UNDEFINED</title>
+                <ref environment="newcol" chapter_type="" label="SS" wbtag="ref" course="Math 1030" chapter="17" slide="17" src-course="Math 1030" src-chapter="17" src-slide="15" type="Theorem" item="17.11" src-filename="lec17.xml" md5="3755d92c6ae0d761677a97cffec62a4f" class="lcref" serial="">
+                  <title>Socks and Shoes</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, we see if $(A^{-1})^{t}$ is a suitable inverse for $A^{t}$.
 \begin{align*}
@@ -1022,8 +1042,8 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="fd4be9ca79eeaf6420d7f4ace76eb572" course="Math 1030" chapter="17" slide="18" of="b2949f1a05b2d7a8dcf52760e8fb3556">
               <newcol course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> As with the proof of Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="SS" wbtag="ref" course="Math 1030" chapter="17" slide="18">
-                  <title>UNDEFINED</title>
+                <ref environment="newcol" chapter_type="" label="SS" wbtag="ref" course="Math 1030" chapter="17" slide="18" src-course="Math 1030" src-chapter="17" src-slide="15" type="Theorem" item="17.11" src-filename="lec17.xml" md5="3755d92c6ae0d761677a97cffec62a4f" class="lcref" serial="">
+                  <title>Socks and Shoes</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, we see if $\frac{1}{\alpha}A^{-1}$ is a suitable inverse for $\alpha A$.
 \begin{align*}
@@ -1135,6 +1155,9 @@ Because $A$ is singular, there is a nonzero vector $\mathbf{y}$ that is a soluti
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="21" id="s21" slide="21" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" chapter_title="Inverse" section_title="Nonsingular Matrices are Invertible">
             <keywords slide="21" environ="slide" chapter="17" course="Math 1030">
+              <keyword chapter="17" slide="21">right-inverse</keyword>
+              <keyword chapter="17" slide="21">right-inverse</keyword>
+              <keyword chapter="17" slide="21">left-inverse</keyword>
               <keyword chapter="17" slide="21">One-Sided Inverse is Sufficient</keyword>
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="16" title="One-Sided Inverse is Sufficient" md5="27368124ff49dae27ca58380923786ba" course="Math 1030" chapter="17" slide="21" item="17.16">
@@ -1145,14 +1168,12 @@ Because $A$ is singular, there is a nonzero vector $\mathbf{y}$ that is a soluti
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="314e399fea378e6fe57ff3ad758a168c" course="Math 1030" chapter="17" slide="21" of="27368124ff49dae27ca58380923786ba">
               <newcol course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The matrix $I_{n}$ is nonsingular. So $A$ and $B$ are nonsingular by, so in particular $B$ is nonsingular. We can therefore apply Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="CINM" wbtag="ref" course="Math 1030" chapter="17" slide="21">
-                  <title>UNDEFINED</title>
+                <ref environment="newcol" chapter_type="" label="CINM" wbtag="ref" course="Math 1030" chapter="17" slide="21" src-course="Math 1030" src-chapter="17" src-slide="11" type="Theorem" item="17.8" src-filename="lec17.xml" md5="b48f8d1ae208f776e81edfbd0f5b8689" class="lcref" serial="">
+                  <title>Computing the Inverse of a Nonsingular Matrix</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> to assert the existence of a matrix $C$ so that $BC=I_{n}$.
 $B$ is nonsingular, so there must be a </paragraphs>
-                <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
-                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">right-inverse</paragraphs>
-                </b>
+                <inline_keyword course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol">right-inverse</inline_keyword>
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> for $B$, and we are calling it $C$.</paragraphs>
                 <newline course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
                 <collapse course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
@@ -1173,31 +1194,27 @@ which is the desired conclusion.</paragraphs>
             </substatement>
             <newcol course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So above theorem tells us that if $A$ is nonsingular, then the matrix $B$ guaranteed by Theorem   </paragraphs>
-              <ref environment="newcol" chapter_type="" label="CINM" wbtag="ref" course="Math 1030" chapter="17" slide="21">
-                <title>UNDEFINED</title>
+              <ref environment="newcol" chapter_type="" label="CINM" wbtag="ref" course="Math 1030" chapter="17" slide="21" src-course="Math 1030" src-chapter="17" src-slide="11" type="Theorem" item="17.8" src-filename="lec17.xml" md5="b48f8d1ae208f776e81edfbd0f5b8689" class="lcref" serial="">
+                <title>Computing the Inverse of a Nonsingular Matrix</title>
               </ref>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> will be both a </paragraphs>
-              <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
-                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">right-inverse</paragraphs>
-              </b>
+              <inline_keyword course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol">right-inverse</inline_keyword>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and a </paragraphs>
-              <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
-                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">left-inverse</paragraphs>
-              </b>
+              <inline_keyword course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol">left-inverse</inline_keyword>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> for $A$, so $A$ is invertible and $A^{-1}=B$.</paragraphs>
               <newline course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
               <collapse course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So if you have a nonsingular matrix, $A$, you can use the procedure described in Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="CINM" wbtag="ref" course="Math 1030" chapter="17" slide="21">
-                  <title>UNDEFINED</title>
+                <ref environment="newcol" chapter_type="" label="CINM" wbtag="ref" course="Math 1030" chapter="17" slide="21" src-course="Math 1030" src-chapter="17" src-slide="11" type="Theorem" item="17.8" src-filename="lec17.xml" md5="b48f8d1ae208f776e81edfbd0f5b8689" class="lcref" serial="">
+                  <title>Computing the Inverse of a Nonsingular Matrix</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> to find an inverse for $A$. If $A$ is singular, then the procedure in Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="CINM" wbtag="ref" course="Math 1030" chapter="17" slide="21">
-                  <title>UNDEFINED</title>
+                <ref environment="newcol" chapter_type="" label="CINM" wbtag="ref" course="Math 1030" chapter="17" slide="21" src-course="Math 1030" src-chapter="17" src-slide="11" type="Theorem" item="17.8" src-filename="lec17.xml" md5="b48f8d1ae208f776e81edfbd0f5b8689" class="lcref" serial="">
+                  <title>Computing the Inverse of a Nonsingular Matrix</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> will fail as the first $n$ columns of $M$ will not row-reduce to the identity matrix. However, we can say a bit more. When $A$ is singular, then $A$ does not have an inverse (which is very different from saying that the procedure in Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="CINM" wbtag="ref" course="Math 1030" chapter="17" slide="21">
-                  <title>UNDEFINED</title>
+                <ref environment="newcol" chapter_type="" label="CINM" wbtag="ref" course="Math 1030" chapter="17" slide="21" src-course="Math 1030" src-chapter="17" src-slide="11" type="Theorem" item="17.8" src-filename="lec17.xml" md5="b48f8d1ae208f776e81edfbd0f5b8689" class="lcref" serial="">
+                  <title>Computing the Inverse of a Nonsingular Matrix</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> fails to find an inverse).
 This may feel like we are splitting hairs, but it is important that we do not make unfounded assumptions. These observations motivate the next theorem.</paragraphs>
@@ -1217,18 +1234,18 @@ This may feel like we are splitting hairs, but it is important that we do not ma
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="971ce9bb8b92579841023c877be18357" course="Math 1030" chapter="17" slide="22" of="d3dbea32c0efccc59935842aa77652cb">
               <newcol course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> ($\Leftarrow$) Since $A$ is invertible, we can write $I_{n}=AA^{-1}$. Notice that $I_{n}$ is nonsingular, so Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="NPNT" wbtag="ref" course="Math 1030" chapter="17" slide="22">
-                  <title>UNDEFINED</title>
+                <ref environment="newcol" chapter_type="" label="NPNT" wbtag="ref" course="Math 1030" chapter="17" slide="22" src-course="Math 1030" src-chapter="17" src-slide="20" type="Theorem" item="17.15" src-filename="lec17.xml" md5="4a6fa187252d4410af384bca4874b76e" class="lcref" serial="">
+                  <title>Nonsingular Product has Nonsingular Terms</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> implies that $A$ (and $A^{-1}$) is nonsingular.</paragraphs>
                 <newline course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">($\Rightarrow$) Suppose now that $A$ is nonsingular. By Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="CINM" wbtag="ref" course="Math 1030" chapter="17" slide="22">
-                  <title>UNDEFINED</title>
+                <ref environment="newcol" chapter_type="" label="CINM" wbtag="ref" course="Math 1030" chapter="17" slide="22" src-course="Math 1030" src-chapter="17" src-slide="11" type="Theorem" item="17.8" src-filename="lec17.xml" md5="b48f8d1ae208f776e81edfbd0f5b8689" class="lcref" serial="">
+                  <title>Computing the Inverse of a Nonsingular Matrix</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> we find $B$ so that $AB=I_{n}$. Then Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="OSIS" wbtag="ref" course="Math 1030" chapter="17" slide="22">
-                  <title>UNDEFINED</title>
+                <ref environment="newcol" chapter_type="" label="OSIS" wbtag="ref" course="Math 1030" chapter="17" slide="22" src-course="Math 1030" src-chapter="17" src-slide="21" type="Theorem" item="17.16" src-filename="lec17.xml" md5="27368124ff49dae27ca58380923786ba" class="lcref" serial="">
+                  <title>One-Sided Inverse is Sufficient</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> tells us that $BA=I_{n}$. So $B$ is $A$’s inverse, and by construction, $A$ is invertible.</paragraphs>
                 <newline course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
