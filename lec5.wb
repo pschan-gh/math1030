@@ -306,6 +306,36 @@ In order for $A$ and $A^{t}$ to be equal, they must have the same dimension. Hen
 @endcol
 @end
 @slide
+@defn
+A matrix $A$ is said to be @keyword{skew-symmetric} (or @keyword{antisymmetric}) if:
+\[
+A^t = -A
+\]
+@end
+@eg
+@newcol
+\[
+A = \begin{bmatrix}
+0 & -5 & 7 & 11\\
+5 & 0 & 8 & -2\\
+-7 & -8 & 0 & 15\\
+-11 & 2 & -15 & 0
+\end{bmatrix}
+\]
+@endcol
+@end
+@remark
+@newcol
+Notice that if $A$ is skew-symmetric, then:
+@itemize
+@item
+It must be square.
+@item
+It's diagonal entries must all be equal to zero.
+@enditemize
+@endcol
+@end
+@slide
 @thm
 @title{Transpose and Matrix Addition}
 Suppose that $A$ and $B$ are $m\times n$ matrices. Then $(A+B)^{t}=A^{t}+B^{t}$.
