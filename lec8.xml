@@ -686,13 +686,13 @@ These two observations may be chained together to construct the two proofs neces
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="20" id="s20" slide="20" course="Math 1030" chapter="8" section="5" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Null Space of a Nonsingular Matrix">
             <keywords slide="20" environ="slide" chapter="8" course="Math 1030"/>
-            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="727725a50c82f4d9804068aa8382604d" course="Math 1030" chapter="8" slide="20">
+            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="6fde7c8eae5d963b3fd3e8732ebf22d1" course="Math 1030" chapter="8" slide="20">
               <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs"> It is now easy to see that any nonsingular matrix $A$ is invertible:</paragraphs>
               <newline course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement"/>
               <newcol course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If an $n\times n$ matrix $A$ is invertible, then it is row-equivalent to $I_n$,
 which means there exists a sequence of elementary matrices $J_1, J_2, \ldots, J_l$
-(each correspond to a row operation), such that:
+(each corresponding to a row operation), such that:
 \[
 J_l \cdots J_2 J_1 A = I.
 \]
@@ -757,14 +757,15 @@ and so we therefore know that the solution is unique. </paragraphs>
               </newcol>
             </substatement>
             <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Alternatively, </paragraphs>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" of="NMUS" md5="11f1d5e577471f65c30122889bfcd80a" course="Math 1030" chapter="8" slide="21">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" of="NMUS" md5="c22429b63f97c8989b7b7ad3a6727336" course="Math 1030" chapter="8" slide="21">
               <newcol course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If $A$ is nonsingular, then $A^{-1}$ exists.
-So, $A\mathbf{x} = \mathbf{b}$ implies that the unique solution is $\mathbf{x} = A^{-1}\mathbf{b}$.</paragraphs>
+                <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Ff $A \mathbf{x} = \mathbf{b}$ has a unique solution for every vector $\mathbf{b}$. Then, in particular, the only solution to $A\mathbf{x} = \mathbf{0}$
+is $\mathbf{x} = \mathbf{0}$. This implies by definition that $A$ is nonsingular.</paragraphs>
                 <newline course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
                 <collapse course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Conversely, if $A \mathbf{x} = \mathbf{b}$ has a unique solution for every vector $\mathbf{b}$. Then, in particular, the only solution to $A\mathbf{x} = \mathbf{0}$
-is $\mathbf{x} = \mathbf{0}$. This implies by definition that $A$ is nonsingular. </paragraphs>
+                  <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Conversely, 
+if $A$ is nonsingular, then $A^{-1}$ exists.
+So, $A\mathbf{x} = \mathbf{b}$ implies that the unique solution is $\mathbf{x} = A^{-1}\mathbf{b}$. </paragraphs>
                   <qed course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
                 </collapse>
               </newcol>

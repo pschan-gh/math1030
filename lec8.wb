@@ -447,7 +447,7 @@ It is now easy to see that any nonsingular matrix $A$ is invertible:
 @col
 If an $n\times n$ matrix $A$ is invertible, then it is row-equivalent to $I_n$,
 which means there exists a sequence of elementary matrices $J_1, J_2, \ldots, J_l$
-(each correspond to a row operation), such that:
+(each corresponding to a row operation), such that:
 \[
 J_l \cdots J_2 J_1 A = I.
 \]
@@ -505,13 +505,13 @@ Alternatively,
 @proof
 @of{NMUS}
 @col
-If $A$ is nonsingular, then $A^{-1}$ exists.
-So, $A\mathbf{x} = \mathbf{b}$ implies that the unique solution is $\mathbf{x} = A^{-1}\mathbf{b}$.
-
+Ff $A \mathbf{x} = \mathbf{b}$ has a unique solution for every vector $\mathbf{b}$. Then, in particular, the only solution to $A\mathbf{x} = \mathbf{0}$
+is $\mathbf{x} = \mathbf{0}$. This implies by definition that $A$ is nonsingular.
 
 @col
-Conversely, if $A \mathbf{x} = \mathbf{b}$ has a unique solution for every vector $\mathbf{b}$. Then, in particular, the only solution to $A\mathbf{x} = \mathbf{0}$
-is $\mathbf{x} = \mathbf{0}$. This implies by definition that $A$ is nonsingular.
+Conversely, 
+if $A$ is nonsingular, then $A^{-1}$ exists.
+So, $A\mathbf{x} = \mathbf{b}$ implies that the unique solution is $\mathbf{x} = A^{-1}\mathbf{b}$.
 @qed
 @end
 @slide
