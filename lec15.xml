@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030">
     <keywords slide="all" environ="course" chapter="" course="Math 1030">
@@ -669,67 +668,6 @@ $\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_m$ are linearly dependent. </paragraph
               </newcol>
             </substatement>
             <newline course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment=""/>
-            <!--@proof@of{SSLD}@col
-We want to prove that any set of $t+1$ or more vectors from $V$ is linearly dependent. So we will begin with a totally arbitrary set of vectors from $V$, $R=\left\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{m}\right\}$, where $m>t$. We will now construct a nontrivial relation of linear dependence on $R$.
-
-@col
-Each vector $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{m}$ can be written as a linear combination of the vectors $\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\ldots,\,\mathbf{v}_{t}$ since $S$ is a spanning set of $V$. This means there exist scalars $a_{ij}$, $1\leq i\leq t$, $1\leq j\leq m$, so that
-\begin{align*}
-\displaystyle\mathbf{u}_{1}&\displaystyle=a_{11}\mathbf{v}_{1}+a_{21}\mathbf{v}_{2}+a_{31}\mathbf{v}_{3}+\cdots+a_{t1}\mathbf{v}_{t} \\
-\displaystyle\mathbf{u}_{2}&\displaystyle=a_{12}\mathbf{v}_{1}+a_{22}\mathbf{v}_{2}+a_{32}\mathbf{v}_{3}+\cdots+a_{t2}\mathbf{v}_{t} \\
-\displaystyle\mathbf{u}_{3}&\displaystyle=a_{13}\mathbf{v}_{1}+a_{23}\mathbf{v}_{2}+a_{33}\mathbf{v}_{3}+\cdots+a_{t3}\mathbf{v}_{t} \\
-&\displaystyle\quad\quad\vdots \\
-\displaystyle\mathbf{u}_{m}&\displaystyle=a_{1m}\mathbf{v}_{1}+a_{2m}\mathbf{v}_{2}+a_{3m}\mathbf{v}_{3}+\cdots+a_{tm}\mathbf{v}_{t}
-\end{align*}
-@col
-Now we form, unmotivated, the homogeneous system of $t$ equations in the $m$ variables, $x_{1},\,x_{2},\,x_{3},\,\ldots,\,x_{m}$, where the coefficients are the just&#45;discovered scalars $a_{ij}$,
-\begin{align*}
-\displaystyle a_{11}x_{1}+a_{12}x_{2}+a_{13}x_{3}+\cdots+a_{1m}x_{m}&\displaystyle=0 \\
-\displaystyle a_{21}x_{1}+a_{22}x_{2}+a_{23}x_{3}+\cdots+a_{2m}x_{m}&\displaystyle=0 \\
-\displaystyle a_{31}x_{1}+a_{32}x_{2}+a_{33}x_{3}+\cdots+a_{3m}x_{m}&\displaystyle=0 \\
-\displaystyle\vdots& \\
-\displaystyle a_{t1}x_{1}+a_{t2}x_{2}+a_{t3}x_{3}+\cdots+a_{tm}x_{m}&\displaystyle=0
-\end{align*}
-@col
-This is a homogeneous system with more variables than equations (our hypothesis is expressed as $m>t$), so there are infinitely many solutions. Choose a nontrivial solution and denote it by $x_{1}=c_{1},\,x_{2}=c_{2},\,x_{3}=c_{3},\,\ldots,\,x_{m}=c_{m}$. As a solution to the homogeneous system, we then have
-\begin{align*}
-\displaystyle a_{11}c_{1}+a_{12}c_{2}+a_{13}c_{3}+\cdots+a_{1m}c_{m}&\displaystyle=0 \\
-\displaystyle a_{21}c_{1}+a_{22}c_{2}+a_{23}c_{3}+\cdots+a_{2m}c_{m}&\displaystyle=0 \\
-\displaystyle a_{31}c_{1}+a_{32}c_{2}+a_{33}c_{3}+\cdots+a_{3m}c_{m}&\displaystyle=0 \\
-\displaystyle\vdots& \\
-\displaystyle a_{t1}c_{1}+a_{t2}c_{2}+a_{t3}c_{3}+\cdots+a_{tm}c_{m}&\displaystyle=0
-\end{align*}
-@col
-As a collection of nontrivial scalars, $c_{1},\,c_{2},\,c_{3},\,\dots,\,c_{m}$ will provide the nontrivial relation of linear dependence we desire,
-\begin{multline*}
-\displaystyle c_{1}\mathbf{u}_{1}+c_{2}\mathbf{u}_{2}+c_{3}\mathbf{u}_{3}+\cdots+c_{m}\mathbf{u}_{m} \\
-\displaystyle=c_{1}\left(a_{11}\mathbf{v}_{1}+a_{21}\mathbf{v}_{2}+a_{31}\mathbf{v}_{3}+\cdots+a_{t1}\mathbf{v}_{t}\right) \\
-\displaystyle\quad\quad+c_{2}\left(a_{12}\mathbf{v}_{1}+a_{22}\mathbf{v}_{2}+a_{32}\mathbf{v}_{3}+\cdots+a_{t2}\mathbf{v}_{t}\right) \\
-\displaystyle\quad\quad+c_{3}\left(a_{13}\mathbf{v}_{1}+a_{23}\mathbf{v}_{2}+a_{33}\mathbf{v}_{3}+\cdots+a_{t3}\mathbf{v}_{t}\right) \\
-\displaystyle\quad\quad\quad\quad\vdots \\
-\displaystyle\quad\quad+c_{m}\left(a_{1m}\mathbf{v}_{1}+a_{2m}\mathbf{v}_{2}+a_{3m}\mathbf{v}_{3}+\cdots+a_{tm}\mathbf{v}_{t}\right) \\
-\displaystyle=c_{1}a_{11}\mathbf{v}_{1}+c_{1}a_{21}\mathbf{v}_{2}+c_{1}a_{31}\mathbf{v}_{3}+\cdots+c_{1}a_{t1}\mathbf{v}_{t} \\
-\displaystyle\quad\quad+c_{2}a_{12}\mathbf{v}_{1}+c_{2}a_{22}\mathbf{v}_{2}+c_{2}a_{32}\mathbf{v}_{3}+\cdots+c_{2}a_{t2}\mathbf{v}_{t} \\
-\displaystyle\quad\quad+c_{3}a_{13}\mathbf{v}_{1}+c_{3}a_{23}\mathbf{v}_{2}+c_{3}a_{33}\mathbf{v}_{3}+\cdots+c_{3}a_{t3}\mathbf{v}_{t} \\
-\displaystyle\quad\quad\quad\quad\vdots \\
-\displaystyle\quad\quad+c_{m}a_{1m}\mathbf{v}_{1}+c_{m}a_{2m}\mathbf{v}_{2}+c_{m}a_{3m}\mathbf{v}_{3}+\cdots+c_{m}a_{tm}\mathbf{v}_{t} \\
-\displaystyle=\left(c_{1}a_{11}+c_{2}a_{12}+c_{3}a_{13}+\cdots+c_{m}a_{1m}\right)\mathbf{v}_{1} \\
-\displaystyle\quad\quad+\left(c_{1}a_{21}+c_{2}a_{22}+c_{3}a_{23}+\cdots+c_{m}a_{2m}\right)\mathbf{v}_{2} \\
-\displaystyle\quad\quad+\left(c_{1}a_{31}+c_{2}a_{32}+c_{3}a_{33}+\cdots+c_{m}a_{3m}\right)\mathbf{v}_{3} \\
-\displaystyle\quad\quad\quad\quad\vdots \\
-\displaystyle\quad\quad+\left(c_{1}a_{t1}+c_{2}a_{t2}+c_{3}a_{t3}+\cdots+c_{m}a_{tm}\right)\mathbf{v}_{t} \\
-\displaystyle=\left(a_{11}c_{1}+a_{12}c_{2}+a_{13}c_{3}+\cdots+a_{1m}c_{m}\right)\mathbf{v}_{1} \\
-\displaystyle\quad\quad+\left(a_{21}c_{1}+a_{22}c_{2}+a_{23}c_{3}+\cdots+a_{2m}c_{m}\right)\mathbf{v}_{2} \\
-\displaystyle\quad\quad+\left(a_{31}c_{1}+a_{32}c_{2}+a_{33}c_{3}+\cdots+a_{3m}c_{m}\right)\mathbf{v}_{3} \\
-\displaystyle\quad\quad\quad\quad\vdots \\
-\displaystyle\quad\quad+\left(a_{t1}c_{1}+a_{t2}c_{2}+a_{t3}c_{3}+\cdots+a_{tm}c_{m}\right)\mathbf{v}_{t} \\
-\displaystyle=0\mathbf{v}_{1}+0\mathbf{v}_{2}+0\mathbf{v}_{3}+\cdots+0\mathbf{v}_{t} \\
-\displaystyle=\mathbf{0}+\mathbf{0}+\mathbf{0}+\cdots+\mathbf{0} \\
-\displaystyle=\mathbf{0}
-\end{multline*}
-@col
-That does it. $R$ has been undeniably shown to be a linearly dependent set.
-@qed@end-->
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="17" id="s17" slide="17" course="Math 1030" chapter="15" section="4" subsection="" subsubsection="" chapter_title="Basis" section_title="Dimension">
             <keywords slide="17" environ="slide" chapter="15" course="Math 1030"/>
@@ -1097,8 +1035,7 @@ In total the basis will have $4$ vectors, so the column space of $A$ will have d
                       <newline course="Math 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
                       <collapse course="Math 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                         <paragraphs course="Math 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \[
-R = \left\{
-\colvector{ 2 \\ 1 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0},
+R = \left\{\colvector{ 2 \\ 1 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0},
 \colvector{ -4 \\ 0 \\ -3 \\ 1 \\ 1 \\ 0 \\ 0},
 \colvector{-1 \\ 0 \\ 2 \\ 3 \\ 0 \\ -1 \\ 1}
 \right\}
@@ -1556,12 +1493,11 @@ is linearly independent. Therefore $\left\{A_{1},A_{2},A_{3}\right\}$ is linearl
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="38" md5="63ab782c331311da3da5453eb4b2e092" course="Math 1030" chapter="15" slide="34" item="15.38">
               <paragraphs course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $f_{1}(x)=1+x+x^{3}$, $f_{2}(x)=2+x+x^{2}$, $f_{3}(x)=4+3x+x^{2}+2x^{3}$, $f_{4}(x)=2x^{2}+x^{3}$, $f_{5}(x)=3+2x+3x^{2}+2x^{3}$.</paragraphs>
               <newline course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="statement"/>
-              <newcol course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Find a basis for $\left&lt; \left\{f_{1},f_{2},f_{3},f_{4},f_{5}\right\}\right&gt;$. </paragraphs>
-              </newcol>
+              <paragraphs course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Find a basis for $\left&lt; \left\{f_{1},f_{2},f_{3},f_{4},f_{5}\right\}\right&gt;$. </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Solution" wbtag="sol" md5="a1a091bc8fe6a3cb691831e8cd6f8f8d" course="Math 1030" chapter="15" slide="34">
-              <paragraphs course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs"> Let
+              <newcol course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let
 \begin{align*}
 \displaystyle \mathbf{v}_{1}=\begin{bmatrix}1\\
 1\\
@@ -1580,8 +1516,8 @@ is linearly independent. Therefore $\left\{A_{1},A_{2},A_{3}\right\}$ is linearl
 3\\
 2\end{bmatrix}.
 \end{align*} </paragraphs>
-              <newcol course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then
+                <newcol course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then
 \begin{align*}
 \displaystyle A=[\mathbf{v}_{1}|\mathbf{v}_{2}|\mathbf{v}_{3}|\mathbf{v}_{4}|\mathbf{v}_{5}]=\begin{bmatrix}1&amp;2&amp;4&amp;0&amp;3\\
 1&amp;1&amp;3&amp;0&amp;2\\
@@ -1593,14 +1529,15 @@ is linearly independent. Therefore $\left\{A_{1},A_{2},A_{3}\right\}$ is linearl
 0&amp;0&amp;0&amp;0&amp;0\\
 \end{bmatrix}.
 \end{align*} </paragraphs>
-                <collapse course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Therefore $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{4}\right\}$ is a basis for $\left&lt; \left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3},\mathbf{v}_{4},\mathbf{v}_{5}\right\}\right&gt;$.</paragraphs>
-                  <newline course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
                   <collapse course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So $\left\{f_{1},f_{2},f_{4}\right\}$ is a basis for $\left&lt; \left\{f_{1},f_{2},f_{3},f_{4},f_{5}\right\}\right&gt;$. </paragraphs>
-                    <qed course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
+                    <paragraphs course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Therefore $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{4}\right\}$ is a basis for $\left&lt; \left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3},\mathbf{v}_{4},\mathbf{v}_{5}\right\}\right&gt;$.</paragraphs>
+                    <newline course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So $\left\{f_{1},f_{2},f_{4}\right\}$ is a basis for $\left&lt; \left\{f_{1},f_{2},f_{3},f_{4},f_{5}\right\}\right&gt;$. </paragraphs>
+                      <qed course="Math 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
+                    </collapse>
                   </collapse>
-                </collapse>
+                </newcol>
               </newcol>
             </substatement>
           </slide>
