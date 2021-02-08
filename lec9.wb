@@ -206,54 +206,44 @@ With definitions of vector addition and scalar multiplication we can state, and 
 Suppose that ${\mathbb{R}}^{m}$ is the set of column vectors of size $m$ with addition and scalar multiplication as defined in Definition @ref{CVA} and Definition @ref{CVSM} .
 Then: <ol class="ltx_enumerate">
 <li class="ltx_item">
-@keyword{ACC}
-<em>Additive Closure, Column Vectors</em>
+@keyword{ACC} <em>Additive Closure, Column Vectors</em>
 
 If $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$, then $\mathbf{u}+\mathbf{v}\in{\mathbb{R}}^{m}$. </li>
 <li class="ltx_item">
-@keyword{SCC}
-<em>Scalar Closure, Column Vectors</em>
+@keyword{SCC} <em>Scalar Closure, Column Vectors</em>
 
 If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in{\mathbb{R}}^{m}$, then $\alpha\mathbf{u}\in{\mathbb{R}}^{m}$. </li>
 <li class="ltx_item">
-@keyword{CC}
-<em>Commutativity, Column Vectors</em>
+@keyword{CC} <em>Commutativity, Column Vectors</em>
 
 If $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$, then $\mathbf{u}+\mathbf{v}=\mathbf{v}+\mathbf{u}$. </li>
 <li class="ltx_item">
-@keyword{AAC}
-<em>Additive Associativity, Column Vectors</em>
+@keyword{AAC} <em>Additive Associativity, Column Vectors</em>
 
 If $\mathbf{u},\,\mathbf{v},\,\mathbf{w}\in{\mathbb{R}}^{m}$, then $\mathbf{u}+\left(\mathbf{v}+\mathbf{w}\right)=\left(\mathbf{u}+\mathbf{v}\right)+\mathbf{w}$. </li>
 <li class="ltx_item">
-@keyword{ZC}
-<em>Zero Vector, Column Vectors</em>
+@keyword{ZC} <em>Zero Vector, Column Vectors</em>
 
 There is a vector, $\mathbf{0}$, called the @keyword{zero vector}, such that $\mathbf{u}+\mathbf{0}=\mathbf{u}$ for all $\mathbf{u}\in{\mathbb{R}}^{m}$. </li>
 <li class="ltx_item">
-@keyword{AIC}
-<em>Additive Inverses, Column Vectors</em>
+@keyword{AIC} <em>Additive Inverses, Column Vectors</em>
 
 If $\mathbf{u}\in{\mathbb{R}}^{m}$, then there exists a vector $\mathbf{-u}\in{\mathbb{R}}^{m}$ so that $\mathbf{u}+(\mathbf{-u})=\mathbf{0}$. </li>
 <li class="ltx_item">
-@keyword{SMAC}
-<em>Scalar Multiplication Associativity, Column Vectors</em>
+@keyword{SMAC} <em>Scalar Multiplication Associativity, Column Vectors</em>
 
 If $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in{\mathbb{R}}^{m}$, then $\alpha(\beta\mathbf{u})=(\alpha\beta)\mathbf{u}$. </li>
 <li class="ltx_item">
-@keyword{DVAC}
-<em>Distributivity across Vector Addition, Column Vectors</em>
+@keyword{DVAC} <em>Distributivity across Vector Addition, Column Vectors</em>
 
 If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$, then $\alpha(\mathbf{u}+\mathbf{v})=\alpha\mathbf{u}+\alpha\mathbf{v}$. </li>
 <li class="ltx_item">
-@keyword{DSAC}
-<em>Distributivity across Scalar Addition, Column Vectors</em>
+@keyword{DSAC} <em>Distributivity across Scalar Addition, Column Vectors</em>
 
 If $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in{\mathbb{R}}^{m}$, then
 $(\alpha+\beta)\mathbf{u}=\alpha\mathbf{u}+\beta\mathbf{u}$. </li>
 <li class="ltx_item">
-@keyword{OC}
-<em>One, Column Vectors</em>
+@keyword{OC} <em>One, Column Vectors</em>
 
 If $\mathbf{u}\in{\mathbb{R}}^{m}$, then $1\mathbf{u}=\mathbf{u}$. </li></ol>
 @end
