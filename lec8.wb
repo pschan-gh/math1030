@@ -456,7 +456,7 @@ These two observations may be chained together to construct the two proofs neces
 It is now easy to see that any nonsingular matrix $A$ is invertible:
 
 @newcol
-If an $n\times n$ matrix $A$ is invertible, then it is row-equivalent to $I_n$,
+If an $n\times n$ matrix $A$ is nonsingular, then it is row-equivalent to $I_n$,
 which means there exists a sequence of elementary matrices $J_1, J_2, \ldots, J_l$
 (each corresponding to a row operation), such that:
 \[
@@ -567,7 +567,7 @@ If $\mathbf{y}$ is a solution to $A\mathbf{x}=\mathbf{b}$, then $\mathbf{y}-\mat
 If $\mathbf{z} \in {\mathcal{N}}\!\left(A\right)$, then $\mathbf{w}+\mathbf{z}$ is a solution of $A\mathbf{x}=\mathbf{b}$
 @endenumerate
 In other words, there is a one-to-one correspondence between
-\[\text{solution set of $A\mathbf{x}=\mathbf{b}$}\longleftrightarrow{\mathcal{N}%}\!\left(A\right),\]
+\[\text{solution set of $A\mathbf{x}=\mathbf{b}$}\longleftrightarrow{\mathcal{N}}\!\left(A\right),\]
 through
 \[\mathbf{y}\rightarrow\mathbf{y}-\mathbf{w},\]
 \[\mathbf{w}+\mathbf{z}\leftarrow\mathbf{z}.\]

@@ -628,13 +628,13 @@ is row equivalent to the reduced row echelon form
 0&amp;0&amp;0\end{bmatrix}.\]
 Since $B$ is not the $3\times 3$ identity matrix, the above theorem tells us that $A$ is a singular matrix. </paragraphs>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="18" md5="ff568f173e525ec47032b85dc078bf6c" course="Math 1030" chapter="8" slide="18" item="8.18">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="18" md5="bb21a2b459c259f65f1c2b3cae530582" course="Math 1030" chapter="8" slide="18" item="8.18">
               <newcol course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="8" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \[A=\begin{bmatrix}-7&amp;-6&amp;-12\\
 5&amp;5&amp;7\\
 1&amp;0&amp;4\end{bmatrix}.\]
 It is row-equivalent to the reduced row echelon form
-\[\begin{bmatrix}1&amp;0&amp;0\\
+\[B = \begin{bmatrix}1&amp;0&amp;0\\
 0&amp;1&amp;0\\
 0&amp;0&amp;1\end{bmatrix}\]
 Since $B$ is the $3\times 3$ identity matrix, $A$ is a nonsingular matrix by the above theorem. </paragraphs>
@@ -675,11 +675,11 @@ These two observations may be chained together to construct the two proofs neces
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="20" id="s20" slide="20" course="Math 1030" chapter="8" section="5" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Null Space of a Nonsingular Matrix">
             <keywords slide="20" environ="slide" chapter="8" course="Math 1030"/>
-            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="6fde7c8eae5d963b3fd3e8732ebf22d1" course="Math 1030" chapter="8" slide="20">
+            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="a947e653b530b1bcbddb71a83c3b3c5b" course="Math 1030" chapter="8" slide="20">
               <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs"> It is now easy to see that any nonsingular matrix $A$ is invertible:</paragraphs>
               <newline course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement"/>
               <newcol course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If an $n\times n$ matrix $A$ is invertible, then it is row-equivalent to $I_n$,
+                <paragraphs course="Math 1030" chapter="8" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If an $n\times n$ matrix $A$ is nonsingular, then it is row-equivalent to $I_n$,
 which means there exists a sequence of elementary matrices $J_1, J_2, \ldots, J_l$
 (each corresponding to a row operation), such that:
 \[
@@ -840,7 +840,7 @@ $\linearsystem{A}{\mathbf{b}}$ if and only if $\mathbf{y}=\mathbf{w}+\mathbf{z}$
                 </item>
               </enumerate>
               <paragraphs course="Math 1030" chapter="8" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> In other words, there is a one-to-one correspondence between
-\[\text{solution set of $A\mathbf{x}=\mathbf{b}$}\longleftrightarrow{\mathcal{N}%}\!\left(A\right),\]
+\[\text{solution set of $A\mathbf{x}=\mathbf{b}$}\longleftrightarrow{\mathcal{N}}\!\left(A\right),\]
 through
 \[\mathbf{y}\rightarrow\mathbf{y}-\mathbf{w},\]
 \[\mathbf{w}+\mathbf{z}\leftarrow\mathbf{z}.\] </paragraphs>
