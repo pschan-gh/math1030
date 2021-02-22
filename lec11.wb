@@ -220,7 +220,7 @@ In other words, are there scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha
 0\end{bmatrix}=\mathbf{u}=\begin{bmatrix}-15\\
 -6\\
 19\\
-5\end{bmatrix}.
+5\end{bmatrix}?
 \end{align*}
 @col
 Searching for such scalars is equivalent to finding a solution to the linear system of equations with augmented matrix:
@@ -554,7 +554,7 @@ is in $\left< R \right>$, since it is a linear combination of $\mathbf{v}_{1},\,
 Now ask if a given vector is an element of $\left< R \right>$. For example, is -->
 
 @col
-Does the vector$\mathbf{z}=\begin{bmatrix}-33\\
+Does the vector $\mathbf{z}=\begin{bmatrix}-33\\
 24\\
 5\end{bmatrix}$ lie in $\left< R \right>$?
 
@@ -653,12 +653,11 @@ Thus $\mathbf{c}\notin\left< S \right>$. So $\left< S \right>\neq{\mathbb{R}}^{m
 @qed
 @endcol
 @end
-@section{
-Spanning Sets of Null Spaces
-}
-
-The following theorem describe how to express a null space as $\left< S \right>$.
+@section{Spanning Sets of Null Spaces}
+Recall @ref{thm:nullspacesubspace}
+<!-- The following theorem describe how to express a null space as $\left< S \right>$. -->
 @thm
+@col
 @title{Spanning Sets for Null Spaces}
 @label{SSNS}
 Suppose that $A$ is an $m\times n$ matrix and $B$ is a row-equivalent matrix in reduced row-echelon form. Suppose that $B$ has $r$ pivot columns, with indices given by $D=\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\}$, while the $n-r$ non-pivot columns have indices $F=\{f_{1},\,f_{2},\,f_{3},\,\ldots,\,f_{n-r}\}$. Construct the $n-r$ vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$ of size $n$,

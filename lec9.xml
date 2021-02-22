@@ -1368,19 +1368,52 @@ W = \left\{\left.\colvector{x\\y\\z} \in \mathbb{R}^3 \,\right|\, x + 2y + 3z = 
             <newline course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="15" id="s15" slide="15" course="Math 1030" chapter="9" section="6" subsection="" subsubsection="" chapter_title="Vector space and subspace" section_title="Examples">
-            <keywords slide="15" environ="slide" chapter="9" course="Math 1030">
-              <keyword chapter="9" slide="15">Alternate proof</keyword>
+            <keywords slide="15" environ="slide" chapter="9" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="26" md5="2f7883d7d3895fb0931ca536f3cb54f8" course="Math 1030" chapter="9" slide="15" item="9.26">
+              <label wbtag="label" name="thm:nullspacesubspace" type="Theorem"/>
+              <paragraphs course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $A\in M_{mn}$, then $W=\nsp{A}$ is a subspace of $\mathbb{R}^n$. </paragraphs>
+            </statement>
+            <newline course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="f051d0229efb2280459bbae0500fe446" course="Math 1030" chapter="9" slide="15" of="2f7883d7d3895fb0931ca536f3cb54f8">
+              <newcol course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Because $\vect 0 \in \nsp{A}$, so $W$ is nonempty.</paragraphs>
+                <newline course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> For $\alpha \in \complex{\null}$, $\vect v, \vect w \in W$.
+Then
+\[ A \vect v = \vect 0, \qquad A \vect w = \vect 0. \] </paragraphs>
+                  <collapse course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then
+\[ A(\alpha \vect v + \vect w) = \alpha A \vect v + A \vect w = \alpha \vect 0 + \vect 0 = \vect 0. \] </paragraphs>
+                    <collapse course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So
+\[ \alpha \vect v + \vect w \in \nsp{A}. \]
+Thus by </paragraphs>
+                      <ref environment="newcol" chapter_type="" label="subdef2" wbtag="ref" course="Math 1030" chapter="9" slide="15" src-course="Math 1030" src-chapter="9" src-slide="13" type="Theorem" item="9.23" src-filename="lec9.xml" md5="b97161010780aa4b703cb89b1294f822" class="lcref" serial="">
+                        <title>Theorem 9.23</title>
+                      </ref>
+                      <paragraphs course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $W=\nsp{A}$ is a subspace. </paragraphs>
+                      <qed course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </substatement>
+            <newline course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="16" id="s16" slide="16" course="Math 1030" chapter="9" section="6" subsection="" subsubsection="" chapter_title="Vector space and subspace" section_title="Examples">
+            <keywords slide="16" environ="slide" chapter="9" course="Math 1030">
+              <keyword chapter="9" slide="16">Alternate proof</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="26" md5="9acc0365c50ecab8e4c58c60b1de7253" course="Math 1030" chapter="9" slide="15" item="9.26">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="27" md5="9acc0365c50ecab8e4c58c60b1de7253" course="Math 1030" chapter="9" slide="16" item="9.27">
               <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
                 <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Skip for now, until you learn the definition of column space.</paragraphs>
               </strong>
-              <newline course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="statement"/>
               <newcol course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $A\in M_{mn}$, then $\mathcal{C}\!\left(A\right)$ is a subspace of ${\mathbb{R}}^{m}$. </paragraphs>
               </newcol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="30bba05579c08718b46c1e2baf4c12d1" course="Math 1030" chapter="9" slide="15" of="9acc0365c50ecab8e4c58c60b1de7253">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="30bba05579c08718b46c1e2baf4c12d1" course="Math 1030" chapter="9" slide="16" of="9acc0365c50ecab8e4c58c60b1de7253">
               <newcol course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\mathcal{C}\!\left(A\right)=\left&lt;\{\mathbf{A}_{1},\ldots,\mathbf{A}_{n}\}\right&gt;$. So by the previous theorem, $\mathcal{C}\!\left(A\right)$ is a subspace of ${\mathbb{R}}^{m}$. </paragraphs>
                 <inline_keyword course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol">Alternate proof</inline_keyword>
@@ -1394,14 +1427,14 @@ Then there exist $\mathbf{x},\mathbf{y}$ such that $A\mathbf{x}=\mathbf{v}$, $A\
 \displaystyle \alpha\mathbf{v}+\mathbf{w}=\alpha A\mathbf{x}+A\mathbf{y}=A(\alpha\mathbf{x}+\mathbf{y})\in\mathcal{C}\!\left(A\right).
 \end{align*}
 Thus by </paragraphs>
-                <ref environment="newcol" chapter_type="" label="subdef2" wbtag="ref" course="Math 1030" chapter="9" slide="15" src-course="Math 1030" src-chapter="9" src-slide="13" type="Theorem" item="9.23" src-filename="lec9.xml" md5="b97161010780aa4b703cb89b1294f822" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="subdef2" wbtag="ref" course="Math 1030" chapter="9" slide="16" src-course="Math 1030" src-chapter="9" src-slide="13" type="Theorem" item="9.23" src-filename="lec9.xml" md5="b97161010780aa4b703cb89b1294f822" class="lcref" serial="">
                   <title>Theorem 9.23</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $W$ is a subspace. </paragraphs>
                 <qed course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
               </newcol>
             </substatement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="27" md5="6f615fc43622f3615143cdc497b510ce" course="Math 1030" chapter="9" slide="15" item="9.27">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="28" md5="6f615fc43622f3615143cdc497b510ce" course="Math 1030" chapter="9" slide="16" item="9.28">
               <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
                 <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">For math majors only</paragraphs>
               </strong>
@@ -1413,13 +1446,13 @@ Then $S_{n}$ is a subspace of $M_{nn}$. Check that $W=S_{n}$ is a subspace: Beca
 \displaystyle (\alpha A+B)^{t}=\alpha A^{t}+B^{t}=\alpha A+B.
 \end{align*}
 Thus $\alpha A+B\in S_{n}$. Hence $S_{n}$ is a subspace by </paragraphs>
-                <ref environment="newcol" chapter_type="" label="subdef2" wbtag="ref" course="Math 1030" chapter="9" slide="15" src-course="Math 1030" src-chapter="9" src-slide="13" type="Theorem" item="9.23" src-filename="lec9.xml" md5="b97161010780aa4b703cb89b1294f822" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="subdef2" wbtag="ref" course="Math 1030" chapter="9" slide="16" src-course="Math 1030" src-chapter="9" src-slide="13" type="Theorem" item="9.23" src-filename="lec9.xml" md5="b97161010780aa4b703cb89b1294f822" class="lcref" serial="">
                   <title>Theorem 9.23</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. </paragraphs>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="28" md5="bacfda8fa4f6d8b39182c7f540ddc254" course="Math 1030" chapter="9" slide="15" item="9.28">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="29" md5="bacfda8fa4f6d8b39182c7f540ddc254" course="Math 1030" chapter="9" slide="16" item="9.29">
               <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
                 <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">For math majors only</paragraphs>
               </strong>
@@ -1435,13 +1468,13 @@ Let $h=\alpha f+g$. Then
 \displaystyle h(1)=\alpha f(1)+g(1)=\alpha 0+0=0.
 \end{align*}
 So $h\in F$. Hence $F$ is a subspace by </paragraphs>
-                <ref environment="newcol" chapter_type="" label="subdef2" wbtag="ref" course="Math 1030" chapter="9" slide="15" src-course="Math 1030" src-chapter="9" src-slide="13" type="Theorem" item="9.23" src-filename="lec9.xml" md5="b97161010780aa4b703cb89b1294f822" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="subdef2" wbtag="ref" course="Math 1030" chapter="9" slide="16" src-course="Math 1030" src-chapter="9" src-slide="13" type="Theorem" item="9.23" src-filename="lec9.xml" md5="b97161010780aa4b703cb89b1294f822" class="lcref" serial="">
                   <title>Theorem 9.23</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. </paragraphs>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="29" md5="8d1200ff113d0ff0ce9841aeb1bcdc5d" course="Math 1030" chapter="9" slide="15" item="9.29">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="30" md5="8d1200ff113d0ff0ce9841aeb1bcdc5d" course="Math 1030" chapter="9" slide="16" item="9.30">
               <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
                 <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="9" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">For math majors only</paragraphs>
               </strong>
@@ -1467,9 +1500,9 @@ So $h\in E$. Hence $E$ is a subspace. </paragraphs>
           <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Non-Examples</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="16" scope="section" id="s16" slide="16" course="Math 1030" chapter="9" section="7" subsection="" subsubsection="" chapter_title="Vector space and subspace" section_title="Non-Examples">
-            <keywords slide="16" environ="slide" chapter="9" course="Math 1030"/>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="9" section="7" subsection="" subsubsection="" serial="" slide="16">
+          <slide environment="" chapter_type="Chapter" canon_num="17" scope="section" id="s17" slide="17" course="Math 1030" chapter="9" section="7" subsection="" subsubsection="" chapter_title="Vector space and subspace" section_title="Non-Examples">
+            <keywords slide="17" environ="slide" chapter="9" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="9" section="7" subsection="" subsubsection="" serial="" slide="17">
               <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Non-Examples</paragraphs>
             </title>
             <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> To show that $W$ is </paragraphs>
@@ -1477,17 +1510,17 @@ So $h\in E$. Hence $E$ is a subspace. </paragraphs>
               <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs">not</paragraphs>
             </strong>
             <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> a subspace of $V$, it suffices to show that it violates </paragraphs>
-            <ref environment="" chapter_type="" label="subdef" wbtag="ref" course="Math 1030" chapter="9" slide="16" src-course="Math 1030" src-chapter="9" src-slide="12" type="Definition" item="9.21" src-filename="lec9.xml" md5="95be227d30910528e7e6b40b0e31633f" class="lcref" serial="">
+            <ref environment="" chapter_type="" label="subdef" wbtag="ref" course="Math 1030" chapter="9" slide="17" src-course="Math 1030" src-chapter="9" src-slide="12" type="Definition" item="9.21" src-filename="lec9.xml" md5="95be227d30910528e7e6b40b0e31633f" class="lcref" serial="">
               <title>Definition 9.21</title>
             </ref>
             <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> condition 1 or condition 2.
 This can be done by finding counter examples to either condition. Usually before checking those conditions, we quickly check if $\mathbf{0}_{V}\in W$
 (see </paragraphs>
-            <ref environment="" chapter_type="" label="0" wbtag="ref" course="Math 1030" chapter="9" slide="16" src-course="Math 1030" src-chapter="9" src-slide="13" type="Proposition" item="9.22" src-filename="lec9.xml" md5="6c3ef2e3357c762cd22b092e7656a753" class="lcref" serial="">
+            <ref environment="" chapter_type="" label="0" wbtag="ref" course="Math 1030" chapter="9" slide="17" src-course="Math 1030" src-chapter="9" src-slide="13" type="Proposition" item="9.22" src-filename="lec9.xml" md5="6c3ef2e3357c762cd22b092e7656a753" class="lcref" serial="">
               <title>Proposition 9.22</title>
             </ref>
             <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs">). </paragraphs>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="30" md5="1d185691ef52b63d2a96fe14d92edd45" course="Math 1030" chapter="9" slide="16" item="9.30">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="31" md5="1d185691ef52b63d2a96fe14d92edd45" course="Math 1030" chapter="9" slide="17" item="9.31">
               <newcol course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $V={\mathbb{R}}^{m}$, $W=\{\mathbf{v}\in V\,|\,[\mathbf{v}]_{1}=1\}$.</paragraphs>
                 <newline course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol"/>
@@ -1495,7 +1528,7 @@ This can be done by finding counter examples to either condition. Usually before
                   <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Method 1</paragraphs>
                 </strong>
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Obviously $\mathbf{0}$ is not in $W$. So by </paragraphs>
-                <ref environment="newcol" chapter_type="" label="0" wbtag="ref" course="Math 1030" chapter="9" slide="16" src-course="Math 1030" src-chapter="9" src-slide="13" type="Proposition" item="9.22" src-filename="lec9.xml" md5="6c3ef2e3357c762cd22b092e7656a753" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="0" wbtag="ref" course="Math 1030" chapter="9" slide="17" src-course="Math 1030" src-chapter="9" src-slide="13" type="Proposition" item="9.22" src-filename="lec9.xml" md5="6c3ef2e3357c762cd22b092e7656a753" class="lcref" serial="">
                   <title>Proposition 9.22</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $W$ is not a subspace.</paragraphs>
@@ -1506,13 +1539,13 @@ This can be done by finding counter examples to either condition. Usually before
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> For Suppose $\mathbf{v},\mathbf{w}\in W$.
 Then $[\mathbf{v}+\mathbf{w}]_{1}=[\mathbf{v}]_{1}+[\mathbf{w}]_{1}=2$.
 So $\mathbf{v}+\mathbf{w}\not\in W$. So $W$ violates </paragraphs>
-                <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="Math 1030" chapter="9" slide="16" src-course="Math 1030" src-chapter="9" src-slide="12" type="Definition" item="9.21" src-filename="lec9.xml" md5="95be227d30910528e7e6b40b0e31633f" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="Math 1030" chapter="9" slide="17" src-course="Math 1030" src-chapter="9" src-slide="12" type="Definition" item="9.21" src-filename="lec9.xml" md5="95be227d30910528e7e6b40b0e31633f" class="lcref" serial="">
                   <title>Definition 9.21</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> condition 1 and hence not a subspace. </paragraphs>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="31" md5="df74c3d4cc751220733e0f6b5e6becd7" course="Math 1030" chapter="9" slide="16" item="9.31">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="32" md5="df74c3d4cc751220733e0f6b5e6becd7" course="Math 1030" chapter="9" slide="17" item="9.32">
               <newcol course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $V={\mathbb{R}}^{m}$, $W=\{\mathbf{v}\in V\,|\,\sum_{i=1}^{n}[\mathbf{v}]_{i}=1\}$.</paragraphs>
                 <newline course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol"/>
@@ -1520,7 +1553,7 @@ So $\mathbf{v}+\mathbf{w}\not\in W$. So $W$ violates </paragraphs>
                   <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Method 1</paragraphs>
                 </strong>
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> (the easiest method) Obviously $\mathbf{0}$ is not in $W$. So by </paragraphs>
-                <ref environment="newcol" chapter_type="" label="0" wbtag="ref" course="Math 1030" chapter="9" slide="16" src-course="Math 1030" src-chapter="9" src-slide="13" type="Proposition" item="9.22" src-filename="lec9.xml" md5="6c3ef2e3357c762cd22b092e7656a753" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="0" wbtag="ref" course="Math 1030" chapter="9" slide="17" src-course="Math 1030" src-chapter="9" src-slide="13" type="Proposition" item="9.22" src-filename="lec9.xml" md5="6c3ef2e3357c762cd22b092e7656a753" class="lcref" serial="">
                   <title>Proposition 9.22</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $W$ is not a subspace.</paragraphs>
@@ -1544,13 +1577,13 @@ Then both $\mathbf{v}$ and $\mathbf{w}$ are in $W$.
 \end{align*}
 Obvious $\mathbf{v}+\mathbf{w}\notin W$.
 Therefore $W$ violates </paragraphs>
-                <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="Math 1030" chapter="9" slide="16" src-course="Math 1030" src-chapter="9" src-slide="12" type="Definition" item="9.21" src-filename="lec9.xml" md5="95be227d30910528e7e6b40b0e31633f" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="Math 1030" chapter="9" slide="17" src-course="Math 1030" src-chapter="9" src-slide="12" type="Definition" item="9.21" src-filename="lec9.xml" md5="95be227d30910528e7e6b40b0e31633f" class="lcref" serial="">
                   <title>Definition 9.21</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> condition 1 and hence not a subspace. </paragraphs>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="32" md5="501d9a028bd6c983b9742a2e0963a5a9" course="Math 1030" chapter="9" slide="16" item="9.32">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="33" md5="501d9a028bd6c983b9742a2e0963a5a9" course="Math 1030" chapter="9" slide="17" item="9.33">
               <newcol course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $V=\mathbf{R}^{n}$, $W=\{\mathbf{v}\in V\,|\,[\mathbf{v}]_{1}\geq 0\}$. Let $\alpha=-1$ and
 \begin{align*}
@@ -1560,13 +1593,13 @@ Therefore $W$ violates </paragraphs>
 Then $[\alpha\mathbf{v}]_{1}=\alpha[\mathbf{v}]_{1}=\alpha=-1&lt;0$.
 So $\alpha\mathbf{v}\notin W$.
 Thus $W$ violates </paragraphs>
-                <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="Math 1030" chapter="9" slide="16" src-course="Math 1030" src-chapter="9" src-slide="12" type="Definition" item="9.21" src-filename="lec9.xml" md5="95be227d30910528e7e6b40b0e31633f" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="Math 1030" chapter="9" slide="17" src-course="Math 1030" src-chapter="9" src-slide="12" type="Definition" item="9.21" src-filename="lec9.xml" md5="95be227d30910528e7e6b40b0e31633f" class="lcref" serial="">
                   <title>Definition 9.21</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> condition 3 and hence not a subspace. </paragraphs>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="33" md5="b7f4b3912b6b8995ec46866afeb8393a" course="Math 1030" chapter="9" slide="16" item="9.33">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="34" md5="b7f4b3912b6b8995ec46866afeb8393a" course="Math 1030" chapter="9" slide="17" item="9.34">
               <newcol course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $V={\mathbb{R}}^{2}$,
 $W=\{\begin{bmatrix}v_{1}\\
@@ -1577,17 +1610,17 @@ $\mathbf{v}+\mathbf{w}=\begin{bmatrix}1\\
 -1\end{bmatrix}$. Because
 $1\times(-1)=-1 &lt; 0$. So $\mathbf{v}+\mathbf{w}\notin W$.
 Thus $W$ violates </paragraphs>
-                <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="Math 1030" chapter="9" slide="16" src-course="Math 1030" src-chapter="9" src-slide="12" type="Definition" item="9.21" src-filename="lec9.xml" md5="95be227d30910528e7e6b40b0e31633f" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="Math 1030" chapter="9" slide="17" src-course="Math 1030" src-chapter="9" src-slide="12" type="Definition" item="9.21" src-filename="lec9.xml" md5="95be227d30910528e7e6b40b0e31633f" class="lcref" serial="">
                   <title>Definition 9.21</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> condition 2 and hence not a subspace. In fact, we can show that $W$ satisfies </paragraphs>
-                <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="Math 1030" chapter="9" slide="16" src-course="Math 1030" src-chapter="9" src-slide="12" type="Definition" item="9.21" src-filename="lec9.xml" md5="95be227d30910528e7e6b40b0e31633f" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="Math 1030" chapter="9" slide="17" src-course="Math 1030" src-chapter="9" src-slide="12" type="Definition" item="9.21" src-filename="lec9.xml" md5="95be227d30910528e7e6b40b0e31633f" class="lcref" serial="">
                   <title>Definition 9.21</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> condition 3 but fails condition 2. </paragraphs>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="34" md5="755d192e28718d235b3a8ae2fdea510f" course="Math 1030" chapter="9" slide="16" item="9.34">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="35" md5="755d192e28718d235b3a8ae2fdea510f" course="Math 1030" chapter="9" slide="17" item="9.35">
               <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
                 <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">For math majors only</paragraphs>
               </strong>
@@ -1599,7 +1632,7 @@ But
 \displaystyle f(x)+g(x)=1
 \end{align*}
 is a polynomial with degree $0$. So $f+g$ is not in $G$. Thus $W$ violates </paragraphs>
-                <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="Math 1030" chapter="9" slide="16" src-course="Math 1030" src-chapter="9" src-slide="12" type="Definition" item="9.21" src-filename="lec9.xml" md5="95be227d30910528e7e6b40b0e31633f" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="Math 1030" chapter="9" slide="17" src-course="Math 1030" src-chapter="9" src-slide="12" type="Definition" item="9.21" src-filename="lec9.xml" md5="95be227d30910528e7e6b40b0e31633f" class="lcref" serial="">
                   <title>Definition 9.21</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="9" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> condition 2 and hence not a subspace. </paragraphs>

@@ -770,9 +770,32 @@ W = \left\{\left.\colvector{x\\y\\z} \in \mathbb{R}^3 \,\right|\, x + 2y + 3z = 
 @end
 
 @slide
+@thm
+@label{thm:nullspacesubspace}
+Let $A\in M_{mn}$, then $W=\nsp{A}$ is a subspace of $\mathbb{R}^n$.
+@end
+
+@proof
+@col
+Because $\vect 0 \in \nsp{A}$, so $W$ is nonempty.
+
+@col
+For $\alpha \in \complex{\null}$, $\vect v, \vect w \in W$.
+Then
+\[ A \vect v = \vect 0, \qquad A \vect w = \vect 0. \]
+@col
+Then
+\[ A(\alpha \vect v + \vect w) = \alpha A \vect v + A \vect w = \alpha \vect 0 + \vect 0 = \vect 0. \]
+@col
+So
+\[ \alpha \vect v + \vect w \in \nsp{A}. \]
+Thus by @ref{subdef2}, $W=\nsp{A}$ is a subspace.
+@qed
+@end
+
+@slide
 @eg
 <strong>Skip for now, until you learn the definition of column space.</strong>
-
 @newcol
 Let $A\in M_{mn}$, then $\mathcal{C}\!\left(A\right)$ is a subspace of ${\mathbb{R}}^{m}$.
 @endcol
