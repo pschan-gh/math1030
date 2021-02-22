@@ -8,15 +8,14 @@ Beezer, Ver 3.5 Section LC (print version p65 - p81)Strang: Section 2.3
 Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf
 
 Section LC (p.32-33) C40, C41, M10, M11
-@section{
-Linear Combinations}
+@section{Linear Combinations}
 @label{LC}
 @defn
 @title{Linear Combination of Column Vectors}
 @label{LCCV}
 Given $n$ vectors $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}$ in ${\mathbb{R}}^{m}$
 and $n$ scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\ldots,\,\alpha_{n}$,
-their <b>linear combination</b> is the vector:
+their @keyword{linear combination} is the vector:
 \begin{align*}
 \displaystyle \alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}+\cdots+\alpha_{n}\mathbf{u}_{n}
 \end{align*}
@@ -26,7 +25,7 @@ in $\mathbb{R}^{m}$.
 @label{TLC}
 <strong>Two linear combinations in ${\mathbb{R}}^{6}$</strong>
 
-@col
+@newcol
 Suppose that:
 \[
 \alpha_{1}=1 \quad \alpha_{2}=-4 \quad \alpha_{3}=2 \quad \alpha_{4}=-1
@@ -83,8 +82,7 @@ The resulting linear combination is:
 -5\\
 7\\
 1\\
-3\end{bmatrix}
-}
+3\end{bmatrix}}
 \\
 @nstep{=
 \begin{bmatrix}2\\
@@ -107,16 +105,13 @@ The resulting linear combination is:
 5\\
 -7\\
 -1\\
--3\end{bmatrix}
-}
-@nstep{=
+-3\end{bmatrix}}@nstep{=
 \begin{bmatrix}-35\\
 -6\\
 4\\
 4\\
 -9\\
--10\end{bmatrix}
-}
+-10\end{bmatrix}}
 \end{multline*}
 @endsteps
 
@@ -130,8 +125,7 @@ we can form the linear combination:
 \begin{multline*}
 \displaystyle\beta_{1}\mathbf{u_{1}}+\beta_{2}\mathbf{u_{2}}+\beta_{3}\mathbf{u_{3}}+\beta_{4}\mathbf{u_{4}}
 \\
-@nstep{
-=(3)\begin{bmatrix}2\\
+@nstep{=(3)\begin{bmatrix}2\\
 4\\
 -3\\
 1\\
@@ -151,11 +145,9 @@ we can form the linear combination:
 -5\\
 7\\
 1\\
-3\end{bmatrix}
-}
+3\end{bmatrix}}
 \\
-@nstep{
-=\begin{bmatrix}6\\
+@nstep{=\begin{bmatrix}6\\
 12\\
 -9\\
 3\\
@@ -175,16 +167,12 @@ we can form the linear combination:
 5\\
 -7\\
 -1\\
--3\end{bmatrix}
-}
-@nstep{
-=\begin{bmatrix}-22\\
+-3\end{bmatrix}}@nstep{=\begin{bmatrix}-22\\
 20\\
 1\\
 1\\
 -10\\
-24\end{bmatrix}.
-}
+24\end{bmatrix}.}
 \end{multline*}
 @endsteps
 @col
@@ -200,6 +188,7 @@ Can you create the following vector $\mathbf{w}$ with a suitable choice of four 
 \end{align*}
 @col
 Going further, can you create any possible vector from ${\mathbb{R}}^{6}$ by choosing the proper scalars?
+@endcol
 @end
 @slide
 @eg
@@ -221,7 +210,7 @@ x_{1}+4x_{3}\end{bmatrix}=\begin{bmatrix}-33\\
 
 can be rewritten as:
 
-@col
+@newcol
 \begin{align*}
 \displaystyle \begin{bmatrix}-7x_{1}\\
 5x_{1}\\
@@ -272,6 +261,7 @@ Furthermore, these are the only three scalars that will accomplish this equality
 
 @col
 Notice how the three vectors in this example are the columns of the coefficient matrix of the system of equations. This is our first hint of the important interplay between the vectors that form the columns of a matrix, and the matrix itself.
+@endcol
 @end
 @slide
 @eg
@@ -283,7 +273,7 @@ The system of linear equations
 \end{align*}
 can be written as:
 
-@col
+@newcol
 \begin{align*}
 \displaystyle \begin{bmatrix}x_{1}-x_{2}+2x_{3}\\
 2x_{1}+x_{2}+x_{3}\\
@@ -373,6 +363,7 @@ Notice that the three vectors on the left hand side are the columns of the coeff
 \displaystyle x_{1}=-1&\quad&\displaystyle x_{2}=1&\quad&\displaystyle x_{3}=1
 \end{eqnarray*}
 is a nontrivial solution to the homogeneous system of equations with the coefficient matrix of the original system. In particular, this demonstrates that this coefficient matrix is singular.
+@endcol
 @end
 @slide
 @thm
@@ -384,7 +375,7 @@ Denote the columns of the $m\times n$ matrix $A$ as vectors $\mathbf{A}_{1},\,\m
 \end{align*}
 @end
 @proof
-@col
+@newcol
 If $\mathbf{x}\in{\mathbb{R}}^{n}$ is a solution of $\mathcal{LS}({A},{\mathbf{b}})$, then
 \begin{align*}
 \displaystyle \mathbf{b}=A\mathbf{x}=\left[\mathbf{x}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{x}\right]_{2}\mathbf{A}_{2}+\left[\mathbf{x}\right]_{3}\mathbf{A}_{3}+\cdots+\left[\mathbf{x}\right]_{n}\mathbf{A}_{n}.
@@ -405,6 +396,7 @@ then
 @col
 So $\mathbf{x}$ is a solution of $\mathcal{LS}({A},{\mathbf{b}})$.
 @qed
+@endcol
 @end
 @slide
 <strong>Computational question</strong>: Determine if $\mathbf{u}$ is a linear combination of $\mathbf{v}_{1},\ldots,\mathbf{v}_{n}$. That is, determine whether or not the system of linear equations:
@@ -417,10 +409,10 @@ has a solution. The augmented matrix is:
 \end{align*}
 Then we can solve the system of linear questions by the technique you learned.
 @eg
-@col
+@newcol
 Let
 \begin{align*}
-\displaystyle \mathbf{u} = 
+\displaystyle \mathbf{u} =
 \begin{bmatrix}1\\
 1\\
 3\end{bmatrix},\quad
@@ -436,24 +428,21 @@ Let
 \mathbf{v}_{4}=\begin{bmatrix}-1\\
 0\\
 1\end{bmatrix}.
-\end{align*}
-<ol class="ltx_enumerate">
-<li class="ltx_item" >
+\end{align*} <ol class="ltx_enumerate">
+<li class="ltx_item">
 
 Determine if $\mathbf{u}$ is a linear combination of $\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\}$.
-If yes, find the linear combination.
-</li>
-<li class="ltx_item" >
+If yes, find the linear combination. </li>
+<li class="ltx_item">
 
 Determine if $\mathbf{u}$ is a linear combination of $\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3},\mathbf{v}_{4}\}$.
-If yes, find the linear combination.
-</li>
-</ol>
+If yes, find the linear combination. </li></ol>
+@endcol
 @end
 @sol
-@col
+@newcol
 <ol class="ltx_enumerate">
-<li class="ltx_item" >
+<li class="ltx_item">
 @col
 To determine if $\mathbf{u}$ is a linear combination of $\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\}$,
 we need to solve
@@ -479,9 +468,8 @@ The augmented matrix is
 \end{align*}
 @col
 Because the last column of the RREF is a pivot column, the system of linear equations is not solvable.
-Hence $\mathbf{u}$ is not a linear combination of $\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\}$.
-</li>
-<li class="ltx_item" >
+Hence $\mathbf{u}$ is not a linear combination of $\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\}$. </li>
+<li class="ltx_item">
 @col
 To determine if $\mathbf{u}$ is a linear combination of $\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3},\mathbf{v}_{4}\}$,
 we need to solve
@@ -511,12 +499,10 @@ x_{4}=\frac{1}{2}
 i.e.
 \begin{align*}
 \displaystyle \mathbf{u}=\frac{5}{6}\mathbf{v}_{1}-\frac{2}{3}\mathbf{v}_{2}+\frac{1}{2}\mathbf{v}_{4}.
-\end{align*}
-</li>
-</ol>
+\end{align*} </li></ol>
+@endcol
 @end
-@section{
-Vector Form of Solution Sets}
+@section{Vector Form of Solution Sets}
 @label{VFSS}
 @eg
 Consider the linear system
@@ -525,7 +511,7 @@ Consider the linear system
 \displaystyle-3x_{1}+4x_{2}-5x_{3}-6x_{4}&\displaystyle=-12 \\
 \displaystyle x_{1}+x_{2}+4x_{3}-5x_{4}&\displaystyle=4.
 \end{align*}
-@col
+@newcol
 Row-reducing the augmented matrix yields
 \begin{align*}
 \displaystyle \begin{bmatrix}\boxed{1}&0&3&-2&4\\
@@ -574,15 +560,18 @@ Step 1. Write the vector of variables as a fixed vector plus a linear combinatio
 \displaystyle \mathbf{x}=\begin{bmatrix}x_{1}\\
 x_{2}\\
 x_{3}\\
-x_{4}\end{bmatrix}=\begin{bmatrix}\\
-\\
-\\
-\end{bmatrix}+x_{3}\begin{bmatrix}\\
-\\
-\\
-\end{bmatrix}+x_{4}\begin{bmatrix}\\
-\\
-\\
+x_{4}\end{bmatrix}=\begin{bmatrix}
+\;\\
+\;\\
+\;\\
+\end{bmatrix}+x_{3}\begin{bmatrix}
+\;\\
+\;\\
+\;\\
+\end{bmatrix}+x_{4}\begin{bmatrix}
+\;\\
+\;\\
+\;\\
 \end{bmatrix}
 \end{align*}
 
@@ -643,9 +632,10 @@ While this form is useful for quickly creating solutions, it is even better beca
 0\\
 0\\
 0\end{bmatrix}$. Period. So it only takes us three vectors to describe the entire infinite solution set, provided we also agree on how to combine the three vectors into a linear combination.
+@endcol
 @end
 @eg
-@col
+@newcol
 Consider a linear system of $m=5$ equations in $n=7$ variables, having the augmented matrix
 \begin{align*}
 \displaystyle A=\begin{bmatrix}2&1&-1&-2&2&1&5&21\\
@@ -745,29 +735,29 @@ x_{4}\\
 x_{5}\\
 x_{6}\\
 x_{7}\end{bmatrix}=\begin{bmatrix}\\
-\\
-\\
-\\
-\\
-\\
+\;\\
+\;\\
+\;\\
+\;\\
+\;\\
 \end{bmatrix}+x_{3}\begin{bmatrix}\\
-\\
-\\
-\\
-\\
-\\
+\;\\
+\;\\
+\;\\
+\;\\
+\;\\
 \end{bmatrix}+x_{4}\begin{bmatrix}\\
-\\
-\\
-\\
-\\
-\\
+\;\\
+\;\\
+\;\\
+\;\\
+\;\\
 \end{bmatrix}+x_{7}\begin{bmatrix}\\
-\\
-\\
-\\
-\\
-\\
+\;\\
+\;\\
+\;\\
+\;\\
+\;\\
 \end{bmatrix}
 \end{align*}
 
@@ -1100,6 +1090,7 @@ Suppose you were told that the vector $\mathbf{w}$ below was a solution to this 
 -7\\
 1\end{bmatrix}
 \end{align*}
+@endcol
 @end
 @slide
 @thm
@@ -1122,7 +1113,7 @@ Then the set of solutions to the system of equations $\mathcal{LS}({A},{\mathbf{
 @end
 @proof
 <strong>You can skip this proof for now, as long as you understand the examples</strong>
-@col
+@newcol
 First, the equation $\mathcal{LS}({A},{\mathbf{b}})$ is equivalent to the linear system of equations that has the matrix $B$ as its augmented matrix.
 So we need only show that $S$ is the solution set for the system with $B$ as its augmented matrix. The conclusion of this theorem is that the solution set is equal to the set $S$.
 
@@ -1165,7 +1156,6 @@ So $\beta_{\ell}$ began as the left-hand side of equation $\ell$ of the system r
 
 For the second half of the proof, assume that $\mathbf{x}$ is a solution vector for the system having $B$ as its augmented matrix. For convenience and clarity, denote the entries of $\mathbf{x}$ by $x_{i}$. In other words, $x_{i}=\left[\mathbf{x}\right]_{i}$. We desire to show that this solution vector is also an element of the set $S$. Begin with the observation that the entries of a solution vector make equation $\ell$ of the system true for all $1\leq\ell\leq m$:
 
-
 \begin{align*}
 \displaystyle \left[B\right]_{\ell,1}x_{1}+\left[B\right]_{\ell,2}x_{2}+\left[B\right]_{\ell,3}x_{3}+\cdots+\left[B\right]_{\ell,n}x_{n}=\left[B\right]_{\ell,n+1}
 \end{align*}
@@ -1195,4 +1185,5 @@ So entries of
 $\mathbf{x}$ and $\mathbf{c}+x_{f_{1}}\mathbf{u}_{1}+x_{f_{2}}\mathbf{u}_{2}+\cdots+x_{f_{n-r}}\mathbf{u}_{n-r}$
 are equal and therefore they are equal vectors. Since $x_{f_{1}},\,x_{f_{2}},\,x_{f_{3}},\,\ldots,\,x_{f_{n-r}}$ are scalars, this shows us that $\mathbf{x}$ qualifies for membership in $S$. So the set $S$ contains all of the solutions to the system.
 @qed
+@endcol
 @end
