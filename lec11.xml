@@ -1,10 +1,7 @@
-<?xml version="1.0"?>
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030">
     <keywords slide="all" environ="course" chapter="" course="Math 1030">
       <keyword chapter="" slide="all">span</keyword>
-      <keyword chapter="" slide="all">Spanning set of a null space</keyword>
-      <keyword chapter="" slide="all">linear independence</keyword>
       <keyword chapter="" slide="all">Span of a Set of Column Vectors</keyword>
     </keywords>
     <title environment="title" chapter_type="" wbtag="course" scope="course" course="Math 1030" chapter="" section="" subsection="" subsubsection="" serial="" slide="">Math 1030</title>
@@ -18,8 +15,6 @@
     <chapter environment="" chapter_type="Chapter" type="Chapter" wbtag="chapter" num="11" title="Spanning Sets" course="Math 1030" serial="11">
       <keywords slide="all" environ="chapter" chapter="11" course="Math 1030">
         <keyword chapter="11" slide="all">span</keyword>
-        <keyword chapter="11" slide="all">Spanning set of a null space</keyword>
-        <keyword chapter="11" slide="all">linear independence</keyword>
         <keyword chapter="11" slide="all">Span of a Set of Column Vectors</keyword>
       </keywords>
       <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="Math 1030" chapter="11" section="" subsection="" subsubsection="" serial="11" slide="">Spanning Sets</title>
@@ -525,8 +520,6 @@ and consider the infinite set $\left&lt; S \right&gt;$.</paragraphs>
 2\end{bmatrix}
 \end{align*}
 is in $\left&lt; S \right&gt;$, since it is a linear combination of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}$. There is nothing magical about the scalars $\alpha_{1}=5,\,\alpha_{2}=-3,\,\alpha_{3}=7$; they can be chosen arbitrarily. So repeat this part of the example yourself, using different values of $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$. What happens if you choose all three scalars to be zero?
-
-
 So we know how to quickly construct sample elements of the set $\left&lt; S \right&gt;$. A slightly different question arises when you are handed a vector of the correct size and asked if it is an element of $\left&lt; S \right&gt;$. For example, is </comment>
               <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
               <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Does $\mathbf{w}=\begin{bmatrix}1\\
@@ -656,8 +649,6 @@ First, as an example, note that
 -10\end{bmatrix}
 \end{align*}
 is in $\left&lt; R \right&gt;$, since it is a linear combination of $\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}$. In other words, $\mathbf{x}\in\left&lt; R \right&gt;$. Try some different values of $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ yourself, and see what vectors you can create as elements of $\left&lt; R \right&gt;$.
-
-
 Now ask if a given vector is an element of $\left&lt; R \right&gt;$. For example, is </comment>
               <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
               <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
@@ -793,11 +784,11 @@ Thus $\mathbf{c}\notin\left&lt; S \right&gt;$. So $\left&lt; S \right&gt;\neq{\m
               <title>Theorem 9.26</title>
             </ref>
             <comment course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment=""> The following theorem describe how to express a null space as $\left&lt; S \right&gt;$. </comment>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="10" md5="f25c2375544217fa74d875bec0504a3b" course="Math 1030" chapter="11" slide="12" item="11.10">
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="10" md5="91a40b0eed857421c64e4374a1b31d28" course="Math 1030" chapter="11" slide="12" item="11.10">
               <label wbtag="label" name="SSNS" type="Theorem"/>
-              <newcol course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol" title="Spanning Sets for Null Spaces">
-                <title environment="title" chapter_type="Chapter" wbtag="newcol" scope="" course="Math 1030" chapter="11" section="2" subsection="" subsubsection="" serial="" slide="12">Spanning Sets for Null Spaces</title>
-                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose that $A$ is an $m\times n$ matrix and $B$ is a row-equivalent matrix in reduced row-echelon form. Suppose that $B$ has $r$ pivot columns, with indices given by $D=\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\}$, while the $n-r$ non-pivot columns have indices $F=\{f_{1},\,f_{2},\,f_{3},\,\ldots,\,f_{n-r}\}$. Construct the $n-r$ vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$ of size $n$,
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">@newcolSpanning</paragraphs>
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Sets for Null Spaces
+Suppose that $A$ is an $m\times n$ matrix and $B$ is a row-equivalent matrix in reduced row-echelon form. Suppose that $B$ has $r$ pivot columns, with indices given by $D=\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\}$, while the $n-r$ non-pivot columns have indices $F=\{f_{1},\,f_{2},\,f_{3},\,\ldots,\,f_{n-r}\}$. Construct the $n-r$ vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$ of size $n$,
 \begin{align*}
 \displaystyle \left[\mathbf{z}_{j}\right]_{i}=\begin{cases}1&amp;\text{if $i\in F$, $i=f_{j}$}\\
 0&amp;\text{if $i\in F$, $i\neq f_{j}$}\\
@@ -807,23 +798,27 @@ Then the null space of $A$ is given by
 \begin{align*}
 \displaystyle {\mathcal{N}}\!\left(A\right)=\left&lt;\left\{\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3},\,\ldots,\,\mathbf{z}_{n-r}\right\}\right&gt;
 \end{align*} </paragraphs>
-              </newcol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="984375be1912cbab134dc66836d0a591" course="Math 1030" chapter="11" slide="12" of="f25c2375544217fa74d875bec0504a3b">
-              <newcol course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The can be seen by moving the free variables to another side. For details. See Beezer p88. Don’t memorize this theorem. Instead, study the examples below. </paragraphs>
-                <qed course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-              </newcol>
-            </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="13" id="s13" slide="13" course="Math 1030" chapter="11" section="2" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Spanning Sets of Null Spaces">
-            <keywords slide="13" environ="slide" chapter="11" course="Math 1030">
-              <keyword chapter="11" slide="13">Spanning set of a null space</keyword>
-            </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="11" md5="9ed8a98057666bacb63507153cecf94f" course="Math 1030" chapter="11" slide="13" item="11.11">
-              <inline_keyword course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">Spanning set of a null space</inline_keyword>
-              <newline course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
-              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Find a set of vectors, $S$, so that the null space of the matrix
+        </slides>
+      </section>
+    </chapter>
+  </course>
+  <substatement environment="substatement" chapter_type="" type="Proof" wbtag="proof" md5="984375be1912cbab134dc66836d0a591" course="" chapter="" slide="" of="91a40b0eed857421c64e4374a1b31d28">
+    <newcol course="" chapter="" chapter_type="" section="" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+      <paragraphs course="" chapter="" chapter_type="" section="" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The can be seen by moving the free variables to another side. For details. See Beezer p88. Don’t memorize this theorem. Instead, study the examples below. </paragraphs>
+      <qed course="" chapter="" chapter_type="" section="" subsection="" subsubsection="" environment="newcol"/>
+    </newcol>
+  </substatement>
+  <slides environment="" chapter_type="">
+    <slide environment="" chapter_type="" wbtag="slide" canon_num="13" id="s13" slide="13" course="" chapter="" section="" subsection="" subsubsection="" chapter_title="" section_title="">
+      <keywords slide="13" environ="slide" chapter="" course="">
+        <keyword chapter="" slide="13">Spanning set of a null space</keyword>
+      </keywords>
+      <statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="11" md5="9ed8a98057666bacb63507153cecf94f" course="" chapter="" slide="13" item="11">
+        <inline_keyword course="" chapter="" chapter_type="" section="" subsection="" subsubsection="" environment="statement">Spanning set of a null space</inline_keyword>
+        <newline course="" chapter="" chapter_type="" section="" subsection="" subsubsection="" environment="statement"/>
+        <paragraphs course="" chapter="" chapter_type="" section="" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Find a set of vectors, $S$, so that the null space of the matrix
 \begin{align*}
 \displaystyle A=\begin{bmatrix}1&amp;3&amp;3&amp;-1&amp;-5\\
 2&amp;5&amp;7&amp;1&amp;1\\
@@ -831,9 +826,9 @@ Then the null space of $A$ is given by
 -1&amp;-4&amp;-2&amp;0&amp;4\end{bmatrix}
 \end{align*}
 is the span of $S$, that is, $\left&lt; S \right&gt;={\mathcal{N}}\!\left(A\right)$. </paragraphs>
-              <hr xmlns="http://www.w3.org/1999/xhtml" environment="statement"/>
-              <newcol course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The null space of $A$ is the set of all solutions to the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$.
+        <hr xmlns="http://www.w3.org/1999/xhtml" environment="statement" />
+        <newcol course="" chapter="" chapter_type="" section="" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+          <paragraphs course="" chapter="" chapter_type="" section="" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The null space of $A$ is the set of all solutions to the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$.
 Begin by row-reducing $A$. The result is
 \begin{align*}
 \displaystyle \begin{bmatrix}\boxed{1}&amp;0&amp;6&amp;0&amp;4\\
@@ -877,14 +872,12 @@ and
 \begin{align*}
 \displaystyle {\mathcal{N}}\!\left(A\right)
 =\left&lt;
-\left\{
-\mathbf{z}_{1},\,\mathbf{z}_{2}
+\left\{\mathbf{z}_{1},\,\mathbf{z}_{2}
 \right\}
 \right&gt;
 =\left&lt;
 \left
-\{
-\begin{bmatrix}-6\\
+\{\begin{bmatrix}-6\\
 1\\
 1\\
 0\\
@@ -896,11 +889,11 @@ and
 \right\}
 \right&gt;.
 \end{align*} </paragraphs>
-              </newcol>
-            </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="12" data-lecture-skip="true" md5="49c0629335089b8a33b4f7cb12c6b12b" course="Math 1030" chapter="11" slide="13" item="11.12">
-              <newcol course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Consider the matrix:
+        </newcol>
+      </statement>
+      <statement environment="statement" chapter_type="" type="Example" wbtag="eg" num="12" md5="49c0629335089b8a33b4f7cb12c6b12b" course="" chapter="" slide="13" item="12">
+        <newcol course="" chapter="" chapter_type="" section="" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+          <paragraphs course="" chapter="" chapter_type="" section="" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Consider the matrix:
 \begin{align*}
 \displaystyle A=\begin{bmatrix}2&amp;1&amp;5&amp;1&amp;5&amp;1\\
 1&amp;1&amp;3&amp;1&amp;6&amp;-1\\
@@ -957,8 +950,7 @@ Each of these vectors arises due to the presence of a non-pivot column. The rema
 So we have
 \begin{align*}
 \displaystyle {\mathcal{N}}\!\left(A\right)=\left&lt;
-\left\{
-\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3}
+\left\{\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3}
 \right\}
 \right&gt;
 =
@@ -982,25 +974,46 @@ So we have
 \right\}
 \right\rangle.
 \end{align*} </paragraphs>
-              </newcol>
-            </statement>
-          </slide>
-        </slides>
-      </section>
-      <section environment="" chapter_type="" type="Section" wbtag="section" title="Obtain Same Span Using Fewer Vectors" course="Math 1030" chapter="11" num="3" serial="11.3">
-        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="11" section="3" subsection="" subsubsection="" serial="11.3" slide="">
-          <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Obtain Same Span Using Fewer Vectors</paragraphs>
+        </newcol>
+      </statement>
+    </slide>
+  </slides>
+  <course environment="" chapter_type="" type="Course" wbtag="course" title="">
+    <keywords slide="all" environ="course" chapter="" course="">
+      <keyword chapter="" slide="all">linear independence</keyword>
+    </keywords>
+    <title environment="title" chapter_type="" wbtag="course" scope="course" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide=""/>
+    <slides environment="" chapter_type="">
+      <slide environment="" chapter_type="" canon_num="14" scope="course" id="s14" slide="14" course="" chapter="" section="" subsection="" subsubsection="" chapter_title="" section_title="">
+        <title environment="title" chapter_type="" wbtag="course" scope="course" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="14"/>
+        <keywords slide="14" environ="slide" chapter="" course=""/>
+      </slide>
+    </slides>
+    <chapter environment="" chapter_type="Chapter" type="Chapter" wbtag="chapter" num="12" title="" course="" serial="12">
+      <keywords slide="all" environ="chapter" chapter="12" course="">
+        <keyword chapter="12" slide="all">linear independence</keyword>
+      </keywords>
+      <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="" chapter="12" section="" subsection="" subsubsection="" serial="12" slide=""/>
+      <slides environment="" chapter_type="">
+        <slide environment="" chapter_type="Chapter" canon_num="15" scope="chapter" id="s15" slide="15" course="" chapter="12" section="" subsection="" subsubsection="" chapter_title="" section_title="">
+          <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="15"/>
+          <keywords slide="15" environ="slide" chapter="12" course=""/>
+        </slide>
+      </slides>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Obtain Same Span Using Fewer Vectors" course="" chapter="12" num="1" serial="12.1">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="" chapter="12" section="1" subsection="" subsubsection="" serial="12.1" slide="">
+          <paragraphs course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Obtain Same Span Using Fewer Vectors</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="14" scope="section" id="s14" slide="14" course="Math 1030" chapter="11" section="3" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Obtain Same Span Using Fewer Vectors">
-            <keywords slide="14" environ="slide" chapter="11" course="Math 1030">
-              <keyword chapter="11" slide="14">linear independence</keyword>
+          <slide environment="" chapter_type="Chapter" canon_num="16" scope="section" id="s16" slide="16" course="" chapter="12" section="1" subsection="" subsubsection="" chapter_title="" section_title="Obtain Same Span Using Fewer Vectors">
+            <keywords slide="16" environ="slide" chapter="12" course="">
+              <keyword chapter="12" slide="16">linear independence</keyword>
             </keywords>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="11" section="3" subsection="" subsubsection="" serial="" slide="14">
-              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Obtain Same Span Using Fewer Vectors</paragraphs>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="" chapter="12" section="1" subsection="" subsubsection="" serial="" slide="16">
+              <paragraphs course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Obtain Same Span Using Fewer Vectors</paragraphs>
             </title>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="13" md5="be407dcc68e1bd7811a8b06bbc356ca7" course="Math 1030" chapter="11" slide="14" item="11.13">
-              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Begin with the following set of four vectors of size $3$:
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="1" md5="be407dcc68e1bd7811a8b06bbc356ca7" course="" chapter="12" slide="16" item="12.1">
+              <paragraphs course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Begin with the following set of four vectors of size $3$:
 \begin{align*}
 \displaystyle T
 =\left\{\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3},\,\mathbf{w}_{4}\right\}
@@ -1015,8 +1028,8 @@ So we have
 -5\end{bmatrix}
 \right\}.
 \end{align*} </paragraphs>
-              <newcol course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let:
+              <newcol course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let:
 \begin{align*}
 \displaystyle D=\begin{bmatrix}2&amp;1&amp;7&amp;-7\\
 -3&amp;4&amp;-5&amp;-6\\
@@ -1030,9 +1043,9 @@ and consider the infinite set $W=\left&lt; T \right&gt;$. Check that the vector
 1\end{bmatrix}
 \end{align*}
 is a solution to the homogeneous system $\mathcal{LS}({D},{\mathbf{0}})$</paragraphs>
-                <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
-                <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We can write the linear combination,
+                <newline course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We can write the linear combination,
 \begin{align*}
 \displaystyle 2\mathbf{w}_{1}+3\mathbf{w}_{2}+0\mathbf{w}_{3}+1\mathbf{w}_{4}=\mathbf{0}
 \end{align*}
@@ -1040,28 +1053,28 @@ which we can solve for $\mathbf{w}_{4}$ as
 \begin{align*}
 \displaystyle \mathbf{w}_{4}=(-2)\mathbf{w}_{1}+(-3)\mathbf{w}_{2}.
 \end{align*} </paragraphs>
-                  <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This equation says that whenever we encounter the vector $\mathbf{w}_{4}$, we can replace it with a specific linear combination of the vectors $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$. So using $\mathbf{w}_{4}$ in the set $T$, along with $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$, is excessive. An example of what we mean here can be illustrated by the computation:</paragraphs>
-                    <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
-                    <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                      <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+                  <collapse course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This equation says that whenever we encounter the vector $\mathbf{w}_{4}$, we can replace it with a specific linear combination of the vectors $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$. So using $\mathbf{w}_{4}$ in the set $T$, along with $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$, is excessive. An example of what we mean here can be illustrated by the computation:</paragraphs>
+                    <newline course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
 \displaystyle 5\mathbf{w}_{1}&amp;\displaystyle+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+(-3)\mathbf{w}_{4} \\
 &amp;\displaystyle=5\mathbf{w}_{1}+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+(-3)\left((-2)\mathbf{w}_{1}+(-3)\mathbf{w}_{2}\right) \\
 &amp;\displaystyle=5\mathbf{w}_{1}+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+\left(6\mathbf{w}_{1}+9\mathbf{w}_{2}\right) \\
 &amp;\displaystyle=11\mathbf{w}_{1}+5\mathbf{w}_{2}+6\mathbf{w}_{3}.
 \end{align*} </paragraphs>
-                      <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                        <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So, what began as a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3},\,\mathbf{w}_{4}$ has been reduced to a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3}$.</paragraphs>
-                        <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
-                        <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Hence: </paragraphs>
-                        <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                          <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+                      <collapse course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So, what began as a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3},\,\mathbf{w}_{4}$ has been reduced to a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3}$.</paragraphs>
+                        <newline course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                        <paragraphs course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Hence: </paragraphs>
+                        <collapse course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
 \displaystyle W=\left&lt;\left\{\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3}\right\}\right&gt;,
 \end{align*}
 and the span of our set of vectors, $W$, has not changed, but we have described it by the span of a set of three vectors, rather than four. Furthermore, we can achieve yet another, similar, reduction.</paragraphs>
-                          <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
-                          <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                            <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Check that the vector
+                          <newline course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                          <collapse course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                            <paragraphs course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Check that the vector
 \begin{align*}
 \displaystyle \mathbf{z}_{1}=\begin{bmatrix}-3\\
 -1\\
@@ -1069,9 +1082,9 @@ and the span of our set of vectors, $W$, has not changed, but we have described 
 0\end{bmatrix}
 \end{align*}
 is a solution to the homogeneous system $\mathcal{LS}({D},{\mathbf{0}})$.</paragraphs>
-                            <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
-                            <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We can write the linear combination,
+                            <newline course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                            <collapse course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                              <paragraphs course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We can write the linear combination,
 \begin{align*}
 \displaystyle (-3)\mathbf{w}_{1}+(-1)\mathbf{w}_{2}+1\mathbf{w}_{3}=\mathbf{0}
 \end{align*}
@@ -1079,18 +1092,18 @@ which we can solve for $\mathbf{w}_{3}$ as
 \begin{align*}
 \displaystyle \mathbf{w}_{3}=3\mathbf{w}_{1}+1\mathbf{w}_{2}.
 \end{align*} </paragraphs>
-                              <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This equation says that whenever we encounter the vector $\mathbf{w}_{3}$, we can replace it with a specific linear combination of the vectors $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$. So, as before, the vector $\mathbf{w}_{3}$ is not needed in the description of $W$, provided we have $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$ available. In particular, a careful proof would show that
+                              <collapse course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                <paragraphs course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This equation says that whenever we encounter the vector $\mathbf{w}_{3}$, we can replace it with a specific linear combination of the vectors $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$. So, as before, the vector $\mathbf{w}_{3}$ is not needed in the description of $W$, provided we have $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$ available. In particular, a careful proof would show that
 \begin{align*}
 \displaystyle W=\left&lt;\left\{\mathbf{w}_{1},\,\mathbf{w}_{2}\right\}\right&gt;
 \end{align*} </paragraphs>
-                                <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                                  <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So $W$ began life as the span of a set of four vectors. We have now shown (utilizing solutions to a homogeneous system) that $W$ can also be described as the span of a set of just two vectors. Convince yourself that we cannot go any further. In other words, it is not possible to dismiss either $\mathbf{w}_{1}$ or $\mathbf{w}_{2}$ in a similar fashion and winnow the set down to just one vector.</paragraphs>
-                                  <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
-                                  <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                                    <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> What was it about the original set of four vectors that allowed us to declare certain vectors as surplus? And just which vectors were we able to dismiss? And why did we have to stop once we had two vectors remaining? The answers to these questions motivate </paragraphs>
-                                    <inline_keyword course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol">linear independence</inline_keyword>
-                                    <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, our next section and next definition, and so are worth considering carefully now. </paragraphs>
+                                <collapse course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                  <paragraphs course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So $W$ began life as the span of a set of four vectors. We have now shown (utilizing solutions to a homogeneous system) that $W$ can also be described as the span of a set of just two vectors. Convince yourself that we cannot go any further. In other words, it is not possible to dismiss either $\mathbf{w}_{1}$ or $\mathbf{w}_{2}$ in a similar fashion and winnow the set down to just one vector.</paragraphs>
+                                  <newline course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                                  <collapse course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                    <paragraphs course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> What was it about the original set of four vectors that allowed us to declare certain vectors as surplus? And just which vectors were we able to dismiss? And why did we have to stop once we had two vectors remaining? The answers to these questions motivate </paragraphs>
+                                    <inline_keyword course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol">linear independence</inline_keyword>
+                                    <paragraphs course="" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, our next section and next definition, and so are worth considering carefully now. </paragraphs>
                                   </collapse>
                                 </collapse>
                               </collapse>
