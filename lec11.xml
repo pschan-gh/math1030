@@ -18,6 +18,7 @@
       <keywords slide="all" environ="chapter" chapter="11" course="Math 1030">
         <keyword chapter="11" slide="all">span</keyword>
         <keyword chapter="11" slide="all">Spanning set of a null space</keyword>
+        <keyword chapter="11" slide="all">linear independence</keyword>
         <keyword chapter="11" slide="all">Span of a Set of Column Vectors</keyword>
       </keywords>
       <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="Math 1030" chapter="11" section="" subsection="" subsubsection="" serial="11" slide="">Spanning Sets</title>
@@ -1018,32 +1019,20 @@ So we have
           </slide>
         </slides>
       </section>
-    </chapter>
-    <chapter environment="" chapter_type="Chapter" type="Chapter" wbtag="chapter" num="12" title="" course="Math 1030" serial="12">
-      <keywords slide="all" environ="chapter" chapter="12" course="Math 1030">
-        <keyword chapter="12" slide="all">linear independence</keyword>
-      </keywords>
-      <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="Math 1030" chapter="12" section="" subsection="" subsubsection="" serial="12" slide=""/>
-      <slides environment="" chapter_type="">
-        <slide environment="" chapter_type="Chapter" canon_num="15" scope="chapter" id="s15" slide="15" course="Math 1030" chapter="12" section="" subsection="" subsubsection="" chapter_title="" section_title="">
-          <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="15"/>
-          <keywords slide="15" environ="slide" chapter="12" course="Math 1030"/>
-        </slide>
-      </slides>
-      <section environment="" chapter_type="" type="Section" wbtag="section" title="Obtain Same Span Using Fewer Vectors" course="Math 1030" chapter="12" num="1" serial="12.1">
-        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="12" section="1" subsection="" subsubsection="" serial="12.1" slide="">
-          <paragraphs course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Obtain Same Span Using Fewer Vectors</paragraphs>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Obtain Same Span Using Fewer Vectors" course="Math 1030" chapter="11" num="3" serial="11.3">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="11" section="3" subsection="" subsubsection="" serial="11.3" slide="">
+          <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Obtain Same Span Using Fewer Vectors</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="16" scope="section" id="s16" slide="16" course="Math 1030" chapter="12" section="1" subsection="" subsubsection="" chapter_title="" section_title="Obtain Same Span Using Fewer Vectors">
-            <keywords slide="16" environ="slide" chapter="12" course="Math 1030">
-              <keyword chapter="12" slide="16">linear independence</keyword>
+          <slide environment="" chapter_type="Chapter" canon_num="15" scope="section" id="s15" slide="15" course="Math 1030" chapter="11" section="3" subsection="" subsubsection="" chapter_title="Spanning Sets" section_title="Obtain Same Span Using Fewer Vectors">
+            <keywords slide="15" environ="slide" chapter="11" course="Math 1030">
+              <keyword chapter="11" slide="15">linear independence</keyword>
             </keywords>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="12" section="1" subsection="" subsubsection="" serial="" slide="16">
-              <paragraphs course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Obtain Same Span Using Fewer Vectors</paragraphs>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="11" section="3" subsection="" subsubsection="" serial="" slide="15">
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Obtain Same Span Using Fewer Vectors</paragraphs>
             </title>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="1" md5="be407dcc68e1bd7811a8b06bbc356ca7" course="Math 1030" chapter="12" slide="16" item="12.1">
-              <paragraphs course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Begin with the following set of four vectors of size $3$:
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="13" md5="be407dcc68e1bd7811a8b06bbc356ca7" course="Math 1030" chapter="11" slide="15" item="11.13">
+              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Begin with the following set of four vectors of size $3$:
 \begin{align*}
 \displaystyle T
 =\left\{\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3},\,\mathbf{w}_{4}\right\}
@@ -1058,8 +1047,8 @@ So we have
 -5\end{bmatrix}
 \right\}.
 \end{align*} </paragraphs>
-              <newcol course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let:
+              <newcol course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let:
 \begin{align*}
 \displaystyle D=\begin{bmatrix}2&amp;1&amp;7&amp;-7\\
 -3&amp;4&amp;-5&amp;-6\\
@@ -1073,9 +1062,9 @@ and consider the infinite set $W=\left&lt; T \right&gt;$. Check that the vector
 1\end{bmatrix}
 \end{align*}
 is a solution to the homogeneous system $\mathcal{LS}({D},{\mathbf{0}})$</paragraphs>
-                <newline course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
-                <collapse course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We can write the linear combination,
+                <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We can write the linear combination,
 \begin{align*}
 \displaystyle 2\mathbf{w}_{1}+3\mathbf{w}_{2}+0\mathbf{w}_{3}+1\mathbf{w}_{4}=\mathbf{0}
 \end{align*}
@@ -1083,28 +1072,28 @@ which we can solve for $\mathbf{w}_{4}$ as
 \begin{align*}
 \displaystyle \mathbf{w}_{4}=(-2)\mathbf{w}_{1}+(-3)\mathbf{w}_{2}.
 \end{align*} </paragraphs>
-                  <collapse course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This equation says that whenever we encounter the vector $\mathbf{w}_{4}$, we can replace it with a specific linear combination of the vectors $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$. So using $\mathbf{w}_{4}$ in the set $T$, along with $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$, is excessive. An example of what we mean here can be illustrated by the computation:</paragraphs>
-                    <newline course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
-                    <collapse course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                      <paragraphs course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+                  <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This equation says that whenever we encounter the vector $\mathbf{w}_{4}$, we can replace it with a specific linear combination of the vectors $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$. So using $\mathbf{w}_{4}$ in the set $T$, along with $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$, is excessive. An example of what we mean here can be illustrated by the computation:</paragraphs>
+                    <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
 \displaystyle 5\mathbf{w}_{1}&amp;\displaystyle+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+(-3)\mathbf{w}_{4} \\
 &amp;\displaystyle=5\mathbf{w}_{1}+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+(-3)\left((-2)\mathbf{w}_{1}+(-3)\mathbf{w}_{2}\right) \\
 &amp;\displaystyle=5\mathbf{w}_{1}+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+\left(6\mathbf{w}_{1}+9\mathbf{w}_{2}\right) \\
 &amp;\displaystyle=11\mathbf{w}_{1}+5\mathbf{w}_{2}+6\mathbf{w}_{3}.
 \end{align*} </paragraphs>
-                      <collapse course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                        <paragraphs course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So, what began as a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3},\,\mathbf{w}_{4}$ has been reduced to a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3}$.</paragraphs>
-                        <newline course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
-                        <paragraphs course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Hence: </paragraphs>
-                        <collapse course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                          <paragraphs course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+                      <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So, what began as a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3},\,\mathbf{w}_{4}$ has been reduced to a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3}$.</paragraphs>
+                        <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                        <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Hence: </paragraphs>
+                        <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
 \displaystyle W=\left&lt;\left\{\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3}\right\}\right&gt;,
 \end{align*}
 and the span of our set of vectors, $W$, has not changed, but we have described it by the span of a set of three vectors, rather than four. Furthermore, we can achieve yet another, similar, reduction.</paragraphs>
-                          <newline course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
-                          <collapse course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                            <paragraphs course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Check that the vector
+                          <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                          <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                            <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Check that the vector
 \begin{align*}
 \displaystyle \mathbf{z}_{1}=\begin{bmatrix}-3\\
 -1\\
@@ -1112,9 +1101,9 @@ and the span of our set of vectors, $W$, has not changed, but we have described 
 0\end{bmatrix}
 \end{align*}
 is a solution to the homogeneous system $\mathcal{LS}({D},{\mathbf{0}})$.</paragraphs>
-                            <newline course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
-                            <collapse course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                              <paragraphs course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We can write the linear combination,
+                            <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                            <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                              <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We can write the linear combination,
 \begin{align*}
 \displaystyle (-3)\mathbf{w}_{1}+(-1)\mathbf{w}_{2}+1\mathbf{w}_{3}=\mathbf{0}
 \end{align*}
@@ -1122,18 +1111,18 @@ which we can solve for $\mathbf{w}_{3}$ as
 \begin{align*}
 \displaystyle \mathbf{w}_{3}=3\mathbf{w}_{1}+1\mathbf{w}_{2}.
 \end{align*} </paragraphs>
-                              <collapse course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                                <paragraphs course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This equation says that whenever we encounter the vector $\mathbf{w}_{3}$, we can replace it with a specific linear combination of the vectors $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$. So, as before, the vector $\mathbf{w}_{3}$ is not needed in the description of $W$, provided we have $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$ available. In particular, a careful proof would show that
+                              <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This equation says that whenever we encounter the vector $\mathbf{w}_{3}$, we can replace it with a specific linear combination of the vectors $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$. So, as before, the vector $\mathbf{w}_{3}$ is not needed in the description of $W$, provided we have $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$ available. In particular, a careful proof would show that
 \begin{align*}
 \displaystyle W=\left&lt;\left\{\mathbf{w}_{1},\,\mathbf{w}_{2}\right\}\right&gt;
 \end{align*} </paragraphs>
-                                <collapse course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                                  <paragraphs course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So $W$ began life as the span of a set of four vectors. We have now shown (utilizing solutions to a homogeneous system) that $W$ can also be described as the span of a set of just two vectors. Convince yourself that we cannot go any further. In other words, it is not possible to dismiss either $\mathbf{w}_{1}$ or $\mathbf{w}_{2}$ in a similar fashion and winnow the set down to just one vector.</paragraphs>
-                                  <newline course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
-                                  <collapse course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                                    <paragraphs course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> What was it about the original set of four vectors that allowed us to declare certain vectors as surplus? And just which vectors were we able to dismiss? And why did we have to stop once we had two vectors remaining? The answers to these questions motivate </paragraphs>
-                                    <inline_keyword course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol">linear independence</inline_keyword>
-                                    <paragraphs course="Math 1030" chapter="12" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, our next section and next definition, and so are worth considering carefully now. </paragraphs>
+                                <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                  <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So $W$ began life as the span of a set of four vectors. We have now shown (utilizing solutions to a homogeneous system) that $W$ can also be described as the span of a set of just two vectors. Convince yourself that we cannot go any further. In other words, it is not possible to dismiss either $\mathbf{w}_{1}$ or $\mathbf{w}_{2}$ in a similar fashion and winnow the set down to just one vector.</paragraphs>
+                                  <newline course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                                  <collapse course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                    <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> What was it about the original set of four vectors that allowed us to declare certain vectors as surplus? And just which vectors were we able to dismiss? And why did we have to stop once we had two vectors remaining? The answers to these questions motivate </paragraphs>
+                                    <inline_keyword course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol">linear independence</inline_keyword>
+                                    <paragraphs course="Math 1030" chapter="11" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, our next section and next definition, and so are worth considering carefully now. </paragraphs>
                                   </collapse>
                                 </collapse>
                               </collapse>
