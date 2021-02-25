@@ -747,7 +747,7 @@ So we are convinced that $\mathbf{x}$ really is in $\left&lt; R \right&gt;$. Not
                 <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Given $m$ vectors $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{m}\}$ in ${\mathbb{R}}^{m}$, let $A$ be the $m\times m$ square matrix whose $i$-th column is $\mathbf{u}_{i}$. Then $A$ is non-singular if and only if $\left&lt; S \right&gt;={\mathbb{R}}^{m}$. </paragraphs>
               </newcol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="a82482ee2ff21410754dc77425caa816" course="Math 1030" chapter="11" slide="12" of="601edc1e272a16fe6fee81ac3c885d94">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="8cec87e86fd66345c20abcd786901cbc" course="Math 1030" chapter="11" slide="12" of="601edc1e272a16fe6fee81ac3c885d94">
               <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> ($\Rightarrow$) </paragraphs>
                 <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
@@ -766,7 +766,7 @@ Let the RREF of $A$ be $B$. Suppose that $A$ is singular. Then $B\neq I_{m}$ and
 (e.g. $\mathbf{b}=\begin{bmatrix}0\\\vdots\\0\\1\end{bmatrix}$).
 Hence there exists $\mathbf{c}\in{\mathbb{R}}^{m}$ such that $\mathcal{LS}({A},{\mathbf{c}})$ is inconsistent (why?).
 Thus $\mathbf{c}\notin\left&lt; S \right&gt;$. So $\left&lt; S \right&gt;\neq{\mathbb{R}}^{m}$. This completes the proof. </paragraphs>
-                  <hr xmlns="http://www.w3.org/1999/xhtml" environment="newcol" />
+                  <hr xmlns="http://www.w3.org/1999/xhtml" style="" environment="newcol" />
                   <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Alternatively, </paragraphs>
                   <newcol course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                     <paragraphs course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose $A$ is singular. We claim that the span of $S$ is not equal to $\mathbb{R}$:</paragraphs>
@@ -781,7 +781,7 @@ We claim that the vector:
 \[
 \vec{v} = J^{-1}\vec{e}_m = J^{-1}\begin{bmatrix}0\\0\\\vdots\\0\\1\end{bmatrix}
 \]
-(which incidentally is the last column of the matrix $J$)
+(which incidentally is the last column of the matrix $J^{-1}$)
 does not lie in $\langle S \rangle$.</paragraphs>
                         <newline course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
                         <collapse course="Math 1030" chapter="11" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
