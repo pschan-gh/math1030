@@ -3,8 +3,8 @@
   <course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030">
     <keywords slide="all" environ="course" chapter="" course="Math 1030">
       <keyword chapter="" slide="all">column space</keyword>
-      <keyword chapter="" slide="all">Describe $\mathcal{C}\!\left(A\right)$ as a null space</keyword>
-      <keyword chapter="" slide="all">Describe $\mathcal{C}\!\left(A\right)$ by basis</keyword>
+      <keyword chapter="" slide="all">Describe $\mathcal{C}\left(A\right)$ as a null space</keyword>
+      <keyword chapter="" slide="all">Describe $\mathcal{C}\left(A\right)$ by basis</keyword>
       <keyword chapter="" slide="all">row space</keyword>
       <keyword chapter="" slide="all">Row spaces of two row-equivalent matrices</keyword>
       <keyword chapter="" slide="all">Improving a span</keyword>
@@ -29,8 +29,8 @@
     <chapter environment="" chapter_type="Chapter" type="Chapter" wbtag="chapter" num="14" title="Column and Row Space" course="Math 1030" serial="14">
       <keywords slide="all" environ="chapter" chapter="14" course="Math 1030">
         <keyword chapter="14" slide="all">column space</keyword>
-        <keyword chapter="14" slide="all">Describe $\mathcal{C}\!\left(A\right)$ as a null space</keyword>
-        <keyword chapter="14" slide="all">Describe $\mathcal{C}\!\left(A\right)$ by basis</keyword>
+        <keyword chapter="14" slide="all">Describe $\mathcal{C}\left(A\right)$ as a null space</keyword>
+        <keyword chapter="14" slide="all">Describe $\mathcal{C}\left(A\right)$ by basis</keyword>
         <keyword chapter="14" slide="all">row space</keyword>
         <keyword chapter="14" slide="all">Row spaces of two row-equivalent matrices</keyword>
         <keyword chapter="14" slide="all">Improving a span</keyword>
@@ -88,9 +88,9 @@ Section CRS p.66-71 C20, C30-C35, M10, M20, M21, T40, T41, T45. </paragraphs>
               <label wbtag="label" name="CSM" type="Definition"/>
               <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$. Then the </paragraphs>
               <inline_keyword course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">column space</inline_keyword>
-              <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$, written $\mathcal{C}\!\left(A\right)$, is the subset of ${\mathbb{R}}^{m}$ containing all linear combinations of the columns of $A$,
+              <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$, written $\mathcal{C}\left(A\right)$, is the subset of ${\mathbb{R}}^{m}$ containing all linear combinations of the columns of $A$,
 \begin{align*}
-\displaystyle \mathcal{C}\!\left(A\right)=\left&lt; \left\{\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}\right\}\right&gt;
+\displaystyle \mathcal{C}\left(A\right)=\left&lt; \left\{\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}\right\}\right&gt;
 \end{align*} </paragraphs>
             </statement>
           </slide>
@@ -102,11 +102,11 @@ Section CRS p.66-71 C20, C30-C35, M10, M20, M21, T40, T41, T45. </paragraphs>
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="14" section="1" subsection="" subsubsection="" serial="" slide="5">Column Spaces and Consistent Systems</title>
               <label wbtag="label" name="CSCS" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is an $m\times n$ matrix and $\mathbf{b}$ is a vector of size $m$.
-Then $\mathbf{b}\in\mathcal{C}\!\left(A\right)$ if and only if $\mathcal{LS}({A},{\mathbf{b}})$ is consistent. </paragraphs>
+Then $\mathbf{b}\in\mathcal{C}\left(A\right)$ if and only if $\mathcal{LS}({A},{\mathbf{b}})$ is consistent. </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="e3416ce3b90ab930753ea8b1cf1612a9" course="Math 1030" chapter="14" slide="5" of="5fa6fd7fb622eb09937b644644650fc6">
               <newcol course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> ($\Rightarrow$) Suppose $\mathbf{b}\in\mathcal{C}\!\left(A\right)$. Then we can write $\mathbf{b}$ as some linear combination of the columns of $A$. Then by </paragraphs>
+                <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> ($\Rightarrow$) Suppose $\mathbf{b}\in\mathcal{C}\left(A\right)$. Then we can write $\mathbf{b}$ as some linear combination of the columns of $A$. Then by </paragraphs>
                 <ref environment="newcol" chapter_type="" label="RCLS" wbtag="ref" course="Math 1030" chapter="14" slide="5" src-course="Math 1030" src-chapter="7" src-slide="8" type="Theorem" item="7.6" src-filename="lec7.xml" md5="f3386ff26bec659ea2917f653af3eb7e" class="lcref" serial="">
                   <title>Recognizing Consistency of a Linear System</title>
                 </ref>
@@ -116,7 +116,7 @@ Then $\mathbf{b}\in\mathcal{C}\!\left(A\right)$ if and only if $\mathcal{LS}({A}
                 <ref environment="newcol" chapter_type="" label="RCLS" wbtag="ref" course="Math 1030" chapter="14" slide="5" src-course="Math 1030" src-chapter="7" src-slide="8" type="Theorem" item="7.6" src-filename="lec7.xml" md5="f3386ff26bec659ea2917f653af3eb7e" class="lcref" serial="">
                   <title>Recognizing Consistency of a Linear System</title>
                 </ref>
-                <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> to write $\mathbf{b}$ as a linear combination of the columns of $A$. This qualifies $\mathbf{b}$ for membership in $\mathcal{C}\!\left(A\right)$. </paragraphs>
+                <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> to write $\mathbf{b}$ as a linear combination of the columns of $A$. This qualifies $\mathbf{b}$ for membership in $\mathcal{C}\left(A\right)$. </paragraphs>
                 <qed course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
               </newcol>
             </substatement>
@@ -125,12 +125,12 @@ Then $\mathbf{b}\in\mathcal{C}\!\left(A\right)$ if and only if $\mathcal{LS}({A}
             <newcol course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
               <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We can form the chain of equivalences
 \begin{align*}
-\displaystyle\mathbf{b}\in\mathcal{C}\!\left(A\right)\iff\mathcal{LS}({A},{\mathbf{b}})\text{ is consistent}\iff A\mathbf{x}=\mathbf{b}\text{ for some }\mathbf{x}
+\displaystyle\mathbf{b}\in\mathcal{C}\left(A\right)\iff\mathcal{LS}({A},{\mathbf{b}})\text{ is consistent}\iff A\mathbf{x}=\mathbf{b}\text{ for some }\mathbf{x}
 \end{align*} </paragraphs>
               <collapse course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                 <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Thus, an alternative (and popular) definition of the column space of an $m\times n$ matrix $A$ is
 \begin{align*}
-\displaystyle\mathcal{C}\!\left(A\right)&amp;\displaystyle=\left\{\left.\mathbf{y}\in{\mathbb{R}}^{m}\,\right|\,\mathbf{y}=A\mathbf{x}\text{ for some }\mathbf{x}\in{\mathbb{R}}^{n}\right\}=\left\{\left.A\mathbf{x}\,\right|\,\mathbf{x}\in{\mathbb{R}}^{n}\right\}\subseteq{\mathbb{R}}^{m}
+\displaystyle\mathcal{C}\left(A\right)&amp;\displaystyle=\left\{\left.\mathbf{y}\in{\mathbb{R}}^{m}\,\right|\,\mathbf{y}=A\mathbf{x}\text{ for some }\mathbf{x}\in{\mathbb{R}}^{n}\right\}=\left\{\left.A\mathbf{x}\,\right|\,\mathbf{x}\in{\mathbb{R}}^{n}\right\}\subseteq{\mathbb{R}}^{m}
 \end{align*} </paragraphs>
               </collapse>
             </newcol>
@@ -147,7 +147,7 @@ Then $\mathbf{b}\in\mathcal{C}\!\left(A\right)$ if and only if $\mathcal{LS}({A}
               <newcol course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Show that $\mathbf{v}=\begin{bmatrix}18\\
 -6\\
-12\end{bmatrix}$ is in the column space of $A$, $\mathbf{v}\in\mathcal{C}\!\left(A\right)$.
+12\end{bmatrix}$ is in the column space of $A$, $\mathbf{v}\in\mathcal{C}\left(A\right)$.
 The above theorem says that we need to check the consistency of $\mathcal{LS}({A},{v})$.
 From the augmented matrix and row-reduce,
 \begin{align*}
@@ -158,7 +158,7 @@ From the augmented matrix and row-reduce,
 0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}
 \end{align*} </paragraphs>
                 <collapse course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Since the last column is not a pivot column, so the system is consistent and hence $v\in\mathcal{C}\!\left(A\right)$.
+                  <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Since the last column is not a pivot column, so the system is consistent and hence $v\in\mathcal{C}\left(A\right)$.
 In fact, we have
 \begin{align*}
 \displaystyle \mathbf{v}=6\mathbf{A}_{1}.
@@ -166,7 +166,7 @@ In fact, we have
                   <collapse course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                     <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Next we show that $\mathbf{w}=\begin{bmatrix}2\\
 1\\
--3\end{bmatrix}$ is not in the column space of $A$, $\mathbf{w}\not\in\mathcal{C}\!\left(A\right)$.
+-3\end{bmatrix}$ is not in the column space of $A$, $\mathbf{w}\not\in\mathcal{C}\left(A\right)$.
 The above theorem says that we need to check the consistency of $\mathcal{LS}({A},{v})$.
 From the augmented matrix and row-reduce,
 \begin{align*}
@@ -177,20 +177,20 @@ From the augmented matrix and row-reduce,
 0&amp;0&amp;0&amp;0&amp;\boxed{1}\end{bmatrix}
 \end{align*} </paragraphs>
                     <collapse course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                      <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Since the final column is a pivot column, the system is inconsistent and therefore $\mathbf{w}\not\in\mathcal{C}\!\left(A\right)$. </paragraphs>
+                      <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Since the final column is a pivot column, the system is inconsistent and therefore $\mathbf{w}\not\in\mathcal{C}\left(A\right)$. </paragraphs>
                     </collapse>
                   </collapse>
                 </collapse>
               </newcol>
             </statement>
-            <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs"> The next two examples illustrate the main idea of describing $\mathcal{C}\!\left(A\right)$. </paragraphs>
+            <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs"> The next two examples illustrate the main idea of describing $\mathcal{C}\left(A\right)$. </paragraphs>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="7" id="s7" slide="7" course="Math 1030" chapter="14" section="1" subsection="" subsubsection="" chapter_title="Column and Row Space" section_title="Column Spaces and Systems of Equations">
             <keywords slide="7" environ="slide" chapter="14" course="Math 1030">
-              <keyword chapter="14" slide="7">Describe $\mathcal{C}\!\left(A\right)$ as a null space</keyword>
+              <keyword chapter="14" slide="7">Describe $\mathcal{C}\left(A\right)$ as a null space</keyword>
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="4" md5="279e05b060ef75b27d00439096f11199" course="Math 1030" chapter="14" slide="7" item="14.4">
-              <inline_keyword course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">Describe $\mathcal{C}\!\left(A\right)$ as a null space</inline_keyword>
+              <inline_keyword course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">Describe $\mathcal{C}\left(A\right)$ as a null space</inline_keyword>
               <newline course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
               <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Let
 \begin{align*}
@@ -200,7 +200,7 @@ From the augmented matrix and row-reduce,
 1&amp;-1&amp;-5&amp;2&amp;0\end{bmatrix}.
 \end{align*} </paragraphs>
               <newcol course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Find $\mathcal{C}\!\left(A\right)$. Let’s determine if $\mathbf{v}=\begin{bmatrix}v_{1}\\
+                <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Find $\mathcal{C}\left(A\right)$. Let’s determine if $\mathbf{v}=\begin{bmatrix}v_{1}\\
 \vdots\\
 v_{4}\end{bmatrix}\in\left&lt; S\right&gt;$.</paragraphs>
                 <newline course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
@@ -229,7 +229,7 @@ v_{4}\end{bmatrix}\in\left&lt; S\right&gt;$.</paragraphs>
                       <collapse course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                         <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So the corresponding system of linear equations is inconsistent. So $\mathbf{v}\in\left&lt; S\right&gt;$. Hence $\mathbf{v}\in\left&lt; S\right&gt;$ if and only if $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$. Therefore
 \begin{align*}
-\displaystyle \mathcal{C}\!\left(A\right)={\mathcal{N}}\!\left([9\,\,-16\,\,1\,\,4]\right).
+\displaystyle \mathcal{C}\left(A\right)={\mathcal{N}}\!\left([9\,\,-16\,\,1\,\,4]\right).
 \end{align*} </paragraphs>
                       </collapse>
                     </collapse>
@@ -240,10 +240,10 @@ v_{4}\end{bmatrix}\in\left&lt; S\right&gt;$.</paragraphs>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="8" id="s8" slide="8" course="Math 1030" chapter="14" section="1" subsection="" subsubsection="" chapter_title="Column and Row Space" section_title="Column Spaces and Systems of Equations">
             <keywords slide="8" environ="slide" chapter="14" course="Math 1030">
-              <keyword chapter="14" slide="8">Describe $\mathcal{C}\!\left(A\right)$ by basis</keyword>
+              <keyword chapter="14" slide="8">Describe $\mathcal{C}\left(A\right)$ by basis</keyword>
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="5" md5="6b94daf716cbbf0d5c5d62e5cb72201c" course="Math 1030" chapter="14" slide="8" item="14.5">
-              <inline_keyword course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">Describe $\mathcal{C}\!\left(A\right)$ by basis</inline_keyword>
+              <inline_keyword course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">Describe $\mathcal{C}\left(A\right)$ by basis</inline_keyword>
               <newline course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
               <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Let
 \begin{align*}
@@ -253,7 +253,7 @@ v_{4}\end{bmatrix}\in\left&lt; S\right&gt;$.</paragraphs>
 -1&amp;-4&amp;2&amp;4&amp;8&amp;-31&amp;37\end{bmatrix},
 \end{align*} </paragraphs>
               <newcol course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> find $\mathcal{C}\!\left(A\right)$.
+                <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> find $\mathcal{C}\left(A\right)$.
 \begin{align*}
 \displaystyle A\xrightarrow{\text{RREF}}B=\begin{bmatrix}\boxed{1}&amp;4&amp;0&amp;0&amp;2&amp;1&amp;-3\\
 0&amp;0&amp;\boxed{1}&amp;0&amp;1&amp;-3&amp;5\\
@@ -262,7 +262,7 @@ v_{4}\end{bmatrix}\in\left&lt; S\right&gt;$.</paragraphs>
 \end{align*} </paragraphs>
                 <collapse course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="Math 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The indexes of the pivot columns are $D=\left\{1,3,4\right\}$.
-Hence $\mathcal{C}\!\left(A\right)=\left&lt; A\right&gt;=\left&lt; \left\{\mathbf{A}_{1},\mathbf{A}_{3},\mathbf{A}_{4}\right\}\right&gt;$. </paragraphs>
+Hence $\mathcal{C}\left(A\right)=\left&lt; A\right&gt;=\left&lt; \left\{\mathbf{A}_{1},\mathbf{A}_{3},\mathbf{A}_{4}\right\}\right&gt;$. </paragraphs>
                 </collapse>
               </newcol>
             </statement>
@@ -282,7 +282,7 @@ Hence $\mathcal{C}\!\left(A\right)=\left&lt; A\right&gt;=\left&lt; \left\{\mathb
               <newline course="Math 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="title"/>
               <paragraphs course="Math 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Column Space Spanned by Original Columns</paragraphs>
             </title>
-            <paragraphs course="Math 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> So we have a foolproof, automated procedure for determining membership in $\mathcal{C}\!\left(A\right)$. While this works just fine a vector at a time, we would like to have a more useful description of the set $\mathcal{C}\!\left(A\right)$ as a whole. The next example will preview the first of two fundamental results about the column space of a matrix. </paragraphs>
+            <paragraphs course="Math 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> So we have a foolproof, automated procedure for determining membership in $\mathcal{C}\left(A\right)$. While this works just fine a vector at a time, we would like to have a more useful description of the set $\mathcal{C}\left(A\right)$ as a whole. The next example will preview the first of two fundamental results about the column space of a matrix. </paragraphs>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="Math 1030" chapter="14" section="2" subsection="" subsubsection="" chapter_title="Column and Row Space" section_title="Column Space Spanned by Original Columns">
             <keywords slide="10" environ="slide" chapter="14" course="Math 1030"/>
@@ -298,7 +298,7 @@ Hence $\mathcal{C}\!\left(A\right)=\left&lt; A\right&gt;=\left&lt; \left\{\mathb
               <newcol course="Math 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The column space of $A$ is
 \begin{align*}
-\displaystyle \mathcal{C}\!\left(A\right)=\left&lt; \left\{\begin{bmatrix}2\\
+\displaystyle \mathcal{C}\left(A\right)=\left&lt; \left\{\begin{bmatrix}2\\
 1\\
 0\\
 1\\
@@ -363,7 +363,7 @@ Hence $\mathcal{C}\!\left(A\right)=\left&lt; A\right&gt;=\left&lt; \left\{\mathb
 -1\end{bmatrix}\right\}
 \end{align*} </paragraphs>
                     <collapse course="Math 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                      <paragraphs course="Math 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and know that $\mathcal{C}\!\left(A\right)=\left&lt; T\right&gt;$ and $T$ is a linearly independent set of columns from the set of columns of $A$. </paragraphs>
+                      <paragraphs course="Math 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and know that $\mathcal{C}\left(A\right)=\left&lt; T\right&gt;$ and $T$ is a linearly independent set of columns from the set of columns of $A$. </paragraphs>
                     </collapse>
                   </collapse>
                 </collapse>
@@ -375,7 +375,7 @@ Hence $\mathcal{C}\!\left(A\right)=\left&lt; A\right&gt;=\left&lt; \left\{\mathb
               <keyword chapter="14" slide="11">Basis of the Column Space</keyword>
             </keywords>
             <paragraphs course="Math 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> The following theorem is a direct consequence of </paragraphs>
-            <ref environment="" chapter_type="" label="BS" wbtag="ref" course="Math 1030" chapter="14" slide="11" src-course="Math 1030" src-chapter="13" src-slide="9" type="Theorem" item="13.4" src-filename="lec13.xml" md5="ea6d5ae5f39204f8144e232790eb29ac" class="lcref" serial="">
+            <ref environment="" chapter_type="" label="BS" wbtag="ref" course="Math 1030" chapter="14" slide="11" src-course="Math 1030" src-chapter="13" src-slide="11" type="Theorem" item="13.4" src-filename="lec13.xml" md5="ea6d5ae5f39204f8144e232790eb29ac" class="lcref" serial="">
               <title>Basis of a Span</title>
             </ref>
             <paragraphs course="Math 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">: </paragraphs>
@@ -390,7 +390,7 @@ Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ld
                     <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $T$ is a linearly independent set. </paragraphs>
                   </li>
                   <li class="ltx_item" environment="newcol">
-                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\mathcal{C}\!\left(A\right)=\left&lt; T\right&gt;$. </paragraphs>
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\mathcal{C}\left(A\right)=\left&lt; T\right&gt;$. </paragraphs>
                   </li>
                 </ol>
               </newcol>
@@ -417,12 +417,12 @@ Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ld
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="8" title="Column Space of a Nonsingular Matrix" md5="8b140b74500bacd1dc31d5badad91456" course="Math 1030" chapter="14" slide="13" item="14.8">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="14" section="3" subsection="" subsubsection="" serial="" slide="13">Column Space of a Nonsingular Matrix</title>
-              <paragraphs course="Math 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is a square matrix of size $n$. Then $A$ is nonsingular if and only if $\mathcal{C}\!\left(A\right)={\mathbb{R}}^{n}$. </paragraphs>
+              <paragraphs course="Math 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is a square matrix of size $n$. Then $A$ is nonsingular if and only if $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$. </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="4ff2e716a7d06ce5274b4090b39abad3" course="Math 1030" chapter="14" slide="13" of="8b140b74500bacd1dc31d5badad91456">
               <newcol course="Math 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> See </paragraphs>
-                <ref environment="newcol" chapter_type="" label="thm:ANSRM" wbtag="ref" course="Math 1030" chapter="14" slide="13" src-course="Math 1030" src-chapter="11" src-slide="11" type="Theorem" item="11.9" src-filename="lec11.xml" md5="601edc1e272a16fe6fee81ac3c885d94" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="thm:ANSRM" wbtag="ref" course="Math 1030" chapter="14" slide="13" src-course="Math 1030" src-chapter="11" src-slide="12" type="Theorem" item="11.9" src-filename="lec11.xml" md5="601edc1e272a16fe6fee81ac3c885d94" class="lcref" serial="">
                   <title>Theorem 11.9</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. </paragraphs>
@@ -443,7 +443,7 @@ Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ld
 \end{align*} </paragraphs>
               <newcol course="Math 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We can show that $A$ is nonsingular as $A\xrightarrow{\text{RREF}}I_{4}$.
-So $\mathcal{C}\!\left(A\right)={\mathbb{R}}^{4}$. </paragraphs>
+So $\mathcal{C}\left(A\right)={\mathbb{R}}^{4}$. </paragraphs>
               </newcol>
             </statement>
           </slide>
@@ -464,7 +464,7 @@ So $\mathcal{C}\!\left(A\right)={\mathbb{R}}^{4}$. </paragraphs>
               <newline course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="title"/>
               <paragraphs course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Row Space of a Matrix</paragraphs>
             </title>
-            <!--@slide@defn
+            <comment course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="">@slide@defn
 Let $n$ be a positive integer.
 A @keyword{row vector} or size $n$ is an array of real numbers of the form:
 \[
@@ -492,7 +492,7 @@ That is:
 For any fixed positive integer $n$,
 by @ref{fb1ac45c60c8c59135e7173658dededc} the set of all row vectors of size $n$
 is a vector space under the laws of addition and scalar multiplication defined above.
-@end@slide-->
+@end@slide</comment>
             <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="10" title="Row Space of a Matrix" md5="18b9b5ec48a12e28fb7a02babfc4af48" course="Math 1030" chapter="14" slide="15" item="14.10">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="14" section="4" subsection="" subsubsection="" serial="" slide="15">Row Space of a Matrix</title>
               <paragraphs course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is an $m\times n$ matrix.
@@ -505,7 +505,7 @@ $\mathcal{R}\!\left(A\right)$ is column space $\mathcal{C}\left(A^t\right)$ of $
             <paragraphs course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="" wbtag="paragraphs">Informally, the row space is the set of all linear combinations of the rows of $A$. However, we write the rows as column vectors, thus the necessity of using the transpose to make the rows into columns. Additionally, with the row space defined in terms of the column space, all of the previous results of this section can be applied to row spaces.</paragraphs>
             <newline course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment=""/>
             <newcol course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-              <paragraphs course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Notice that if $A$ is a rectangular $m\times n$ matrix, then $\mathcal{C}\!\left(A\right)\subseteq{\mathbb{R}}^{m}$, while $\mathcal{R}\!\left(A\right)\subseteq{\mathbb{R}}^{n}$ and the two sets are not comparable since they do not even hold objects of the same type. However, when $A$ is square of size $n$, both $\mathcal{C}\!\left(A\right)$ and $\mathcal{R}\!\left(A\right)$ are subsets of ${\mathbb{R}}^{n}$, though usually the sets will not be equal. </paragraphs>
+              <paragraphs course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Notice that if $A$ is a rectangular $m\times n$ matrix, then $\mathcal{C}\left(A\right)\subseteq{\mathbb{R}}^{m}$, while $\mathcal{R}\!\left(A\right)\subseteq{\mathbb{R}}^{n}$ and the two sets are not comparable since they do not even hold objects of the same type. However, when $A$ is square of size $n$, both $\mathcal{C}\left(A\right)$ and $\mathcal{R}\!\left(A\right)$ are subsets of ${\mathbb{R}}^{n}$, though usually the sets will not be equal. </paragraphs>
             </newcol>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="16" id="s16" slide="16" course="Math 1030" chapter="14" section="4" subsection="" subsubsection="" chapter_title="Column and Row Space" section_title="Row Space of a Matrix">
@@ -532,7 +532,7 @@ $\mathcal{R}\!\left(A\right)$ is column space $\mathcal{C}\left(A^t\right)$ of $
                 <collapse course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then the columns of this matrix are used in a span to build the row space,
 \begin{align*}
-\displaystyle \mathcal{R}\!\left(A\right)=\mathcal{C}\!\left(A^{t}\right)=\left&lt; \left\{\begin{bmatrix}1\\
+\displaystyle \mathcal{R}\!\left(A\right)=\mathcal{C}\left(A^{t}\right)=\left&lt; \left\{\begin{bmatrix}1\\
 4\\
 0\\
 -1\\
@@ -572,7 +572,7 @@ $\mathcal{R}\!\left(A\right)$ is column space $\mathcal{C}\left(A^t\right)$ of $
                     <collapse course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Since the pivot columns have indices $D=\left\{1,\,2,\,3\right\}$, the column space of $A^{t}$ can be spanned by just the first three columns of $A^{t}$,
 \begin{align*}
-\displaystyle \mathcal{R}\!\left(A\right)=\mathcal{C}\!\left(A^{t}\right)=\left&lt; \left\{\begin{bmatrix}1\\
+\displaystyle \mathcal{R}\!\left(A\right)=\mathcal{C}\left(A^{t}\right)=\left&lt; \left\{\begin{bmatrix}1\\
 4\\
 0\\
 -1\\
@@ -682,53 +682,53 @@ of row operations. </paragraphs>
                 </collapse>
               </newcol>
             </substatement>
-            <!--@proof@col
-Two matrices are row&#45;equivalent if one can be obtained from another by a sequence of (possibly many) row operations. We will prove the theorem for two matrices that differ by a single row operation, and then this result can be applied repeatedly to get the full statement of the theorem. The row spaces of $A$ and $B$ are spans of the columns of their transposes. For each row operation we perform on a matrix, we can define an analogous operation on the columns. Perhaps we should call these @keyword{column operations}. Instead, we will still call them row operations, but we will apply them to the columns of the transposes.
+            <comment course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="">@proof@col
+Two matrices are row-equivalent if one can be obtained from another by a sequence of (possibly many) row operations. We will prove the theorem for two matrices that differ by a single row operation, and then this result can be applied repeatedly to get the full statement of the theorem. The row spaces of $A$ and $B$ are spans of the columns of their transposes. For each row operation we perform on a matrix, we can define an analogous operation on the columns. Perhaps we should call these @keyword{column operations}. Instead, we will still call them row operations, but we will apply them to the columns of the transposes.
 
 @col
 Refer to the columns of $A^{t}$ and $B^{t}$ as $\mathbf{A}_{i}$ and $\mathbf{B}_{i}$, $1\leq i\leq m$. The row operation that switches rows will just switch columns of the transposed matrices. This will have no effect on the possible linear combinations formed by the columns.
 
 @col
-Suppose that $B^{t}$ is formed from $A^{t}$ by multiplying column $\mathbf{A}_{t}$ by $\alpha\neq 0$. In other words, $\mathbf{B}_{t}=\alpha\mathbf{A}_{t}$, and $\mathbf{B}_{i}=\mathbf{A}_{i}$ for all $i\neq t$. We need to establish that two sets are equal, $\mathcal{C}\!\left(A^{t}\right)=\mathcal{C}\!\left(B^{t}\right)$. We will take a generic element of one and show that it is contained in the other.
+Suppose that $B^{t}$ is formed from $A^{t}$ by multiplying column $\mathbf{A}_{t}$ by $\alpha\neq 0$. In other words, $\mathbf{B}_{t}=\alpha\mathbf{A}_{t}$, and $\mathbf{B}_{i}=\mathbf{A}_{i}$ for all $i\neq t$. We need to establish that two sets are equal, $\mathcal{C}\left(A^{t}\right)=\mathcal{C}\left(B^{t}\right)$. We will take a generic element of one and show that it is contained in the other.
 \begin{align*}
-\displaystyle\beta_{1}\mathbf{B}_{1}+&\displaystyle\beta_{2}\mathbf{B}_{2}+\beta_{3}\mathbf{B}_{3}+\cdots+\beta_{t}\mathbf{B}_{t}+\cdots+\beta_{m}\mathbf{B}_{m} \\
-&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\beta_{3}\mathbf{A}_{3}+\cdots+\beta_{t}\left(\alpha\mathbf{A}_{t}\right)+\cdots+\beta_{m}\mathbf{A}_{m} \\
-&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\beta_{3}\mathbf{A}_{3}+\cdots+\left(\alpha\beta_{t}\right)\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m}
+\displaystyle\beta_{1}\mathbf{B}_{1}+&amp;\displaystyle\beta_{2}\mathbf{B}_{2}+\beta_{3}\mathbf{B}_{3}+\cdots+\beta_{t}\mathbf{B}_{t}+\cdots+\beta_{m}\mathbf{B}_{m} \\
+&amp;\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\beta_{3}\mathbf{A}_{3}+\cdots+\beta_{t}\left(\alpha\mathbf{A}_{t}\right)+\cdots+\beta_{m}\mathbf{A}_{m} \\
+&amp;\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\beta_{3}\mathbf{A}_{3}+\cdots+\left(\alpha\beta_{t}\right)\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m}
 \end{align*}
 @col
-says that $\mathcal{C}\!\left(B^{t}\right)\subseteq\mathcal{C}\!\left(A^{t}\right)$. Similarly,
+says that $\mathcal{C}\left(B^{t}\right)\subseteq\mathcal{C}\left(A^{t}\right)$. Similarly,
 \begin{align*}
-\displaystyle\gamma_{1}\mathbf{A}_{1}+&\displaystyle\gamma_{2}\mathbf{A}_{2}+\gamma_{3}\mathbf{A}_{3}+\cdots+\gamma_{t}\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
-&\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\gamma_{3}\mathbf{A}_{3}+\cdots+\left(\frac{\gamma_{t}}{\alpha}\alpha\right)\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
-&\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\gamma_{3}\mathbf{A}_{3}+\cdots+\frac{\gamma_{t}}{\alpha}\left(\alpha\mathbf{A}_{t}\right)+\cdots+\gamma_{m}\mathbf{A}_{m} \\
-&\displaystyle=\gamma_{1}\mathbf{B}_{1}+\gamma_{2}\mathbf{B}_{2}+\gamma_{3}\mathbf{B}_{3}+\cdots+\frac{\gamma_{t}}{\alpha}\mathbf{B}_{t}+\cdots+\gamma_{m}\mathbf{B}_{m}
+\displaystyle\gamma_{1}\mathbf{A}_{1}+&amp;\displaystyle\gamma_{2}\mathbf{A}_{2}+\gamma_{3}\mathbf{A}_{3}+\cdots+\gamma_{t}\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
+&amp;\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\gamma_{3}\mathbf{A}_{3}+\cdots+\left(\frac{\gamma_{t}}{\alpha}\alpha\right)\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
+&amp;\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\gamma_{3}\mathbf{A}_{3}+\cdots+\frac{\gamma_{t}}{\alpha}\left(\alpha\mathbf{A}_{t}\right)+\cdots+\gamma_{m}\mathbf{A}_{m} \\
+&amp;\displaystyle=\gamma_{1}\mathbf{B}_{1}+\gamma_{2}\mathbf{B}_{2}+\gamma_{3}\mathbf{B}_{3}+\cdots+\frac{\gamma_{t}}{\alpha}\mathbf{B}_{t}+\cdots+\gamma_{m}\mathbf{B}_{m}
 \end{align*}
 @col
-says that $\mathcal{C}\!\left(A^{t}\right)\subseteq\mathcal{C}\!\left(B^{t}\right)$. So $\mathcal{R}\!\left(A\right)=\mathcal{C}\!\left(A^{t}\right)=\mathcal{C}\!\left(B^{t}\right)=\mathcal{R}\!\left(B\right)$ when a single row operation of the second type is performed.
+says that $\mathcal{C}\left(A^{t}\right)\subseteq\mathcal{C}\left(B^{t}\right)$. So $\mathcal{R}\!\left(A\right)=\mathcal{C}\left(A^{t}\right)=\mathcal{C}\left(B^{t}\right)=\mathcal{R}\!\left(B\right)$ when a single row operation of the second type is performed.
 
 @col
 Suppose now that $B^{t}$ is formed from $A^{t}$ by replacing $\mathbf{A}_{t}$ with $\alpha\mathbf{A}_{s}+\mathbf{A}_{t}$ for some $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $s\neq t$. In other words, $\mathbf{B}_{t}=\alpha\mathbf{A}_{s}+\mathbf{A}_{t}$, and $\mathbf{B}_{i}=\mathbf{A}_{i}$ for $i\neq t$.
 \begin{align*}
-\displaystyle\beta_{1}\mathbf{B}_{1}+&\displaystyle\beta_{2}\mathbf{B}_{2}+\cdots+\beta_{s}\mathbf{B}_{s}+\cdots+\beta_{t}\mathbf{B}_{t}+\cdots+\beta_{m}\mathbf{B}_{m} \\
-&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\beta_{s}\mathbf{A}_{s}+\cdots+\beta_{t}\left(\alpha\mathbf{A}_{s}+\mathbf{A}_{t}\right)+\cdots+\beta_{m}\mathbf{A}_{m} \\
-&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\beta_{s}\mathbf{A}_{s}+\cdots+\left(\beta_{t}\alpha\right)\mathbf{A}_{s}+\beta_{t}\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m} \\
-&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\beta_{s}\mathbf{A}_{s}+\left(\beta_{t}\alpha\right)\mathbf{A}_{s}+\cdots+\beta_{t}\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m} \\
-&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\left(\beta_{s}+\beta_{t}\alpha\right)\mathbf{A}_{s}+\cdots+\beta_{t}\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m}
+\displaystyle\beta_{1}\mathbf{B}_{1}+&amp;\displaystyle\beta_{2}\mathbf{B}_{2}+\cdots+\beta_{s}\mathbf{B}_{s}+\cdots+\beta_{t}\mathbf{B}_{t}+\cdots+\beta_{m}\mathbf{B}_{m} \\
+&amp;\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\beta_{s}\mathbf{A}_{s}+\cdots+\beta_{t}\left(\alpha\mathbf{A}_{s}+\mathbf{A}_{t}\right)+\cdots+\beta_{m}\mathbf{A}_{m} \\
+&amp;\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\beta_{s}\mathbf{A}_{s}+\cdots+\left(\beta_{t}\alpha\right)\mathbf{A}_{s}+\beta_{t}\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m} \\
+&amp;\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\beta_{s}\mathbf{A}_{s}+\left(\beta_{t}\alpha\right)\mathbf{A}_{s}+\cdots+\beta_{t}\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m} \\
+&amp;\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\left(\beta_{s}+\beta_{t}\alpha\right)\mathbf{A}_{s}+\cdots+\beta_{t}\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m}
 \end{align*}
 @col
-says that $\mathcal{C}\!\left(B^{t}\right)\subseteq\mathcal{C}\!\left(A^{t}\right)$. Similarly,
+says that $\mathcal{C}\left(B^{t}\right)\subseteq\mathcal{C}\left(A^{t}\right)$. Similarly,
 \begin{align*}
-\displaystyle\gamma_{1}&\displaystyle\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\cdots+\gamma_{s}\mathbf{A}_{s}+\cdots+\gamma_{t}\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
-&\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\cdots+\gamma_{s}\mathbf{A}_{s}+\cdots+\left(&#45;\alpha\gamma_{t}\mathbf{A}_{s}+\alpha\gamma_{t}\mathbf{A}_{s}\right)+\gamma_{t}\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
-&\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\cdots+\left(&#45;\alpha\gamma_{t}+\gamma_{s}\right)\mathbf{A}_{s}+\cdots+\gamma_{t}\left(\alpha\mathbf{A}_{s}+\mathbf{A}_{t}\right)+\cdots+\gamma_{m}\mathbf{A}_{m} \\
-&\displaystyle=\gamma_{1}\mathbf{B}_{1}+\gamma_{2}\mathbf{B}_{2}+\cdots+\left(&#45;\alpha\gamma_{t}+\gamma_{s}\right)\mathbf{B}_{s}+\cdots+\gamma_{t}\mathbf{B}_{t}+\cdots+\gamma_{m}\mathbf{B}_{m}
+\displaystyle\gamma_{1}&amp;\displaystyle\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\cdots+\gamma_{s}\mathbf{A}_{s}+\cdots+\gamma_{t}\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
+&amp;\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\cdots+\gamma_{s}\mathbf{A}_{s}+\cdots+\left(-\alpha\gamma_{t}\mathbf{A}_{s}+\alpha\gamma_{t}\mathbf{A}_{s}\right)+\gamma_{t}\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
+&amp;\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\cdots+\left(-\alpha\gamma_{t}+\gamma_{s}\right)\mathbf{A}_{s}+\cdots+\gamma_{t}\left(\alpha\mathbf{A}_{s}+\mathbf{A}_{t}\right)+\cdots+\gamma_{m}\mathbf{A}_{m} \\
+&amp;\displaystyle=\gamma_{1}\mathbf{B}_{1}+\gamma_{2}\mathbf{B}_{2}+\cdots+\left(-\alpha\gamma_{t}+\gamma_{s}\right)\mathbf{B}_{s}+\cdots+\gamma_{t}\mathbf{B}_{t}+\cdots+\gamma_{m}\mathbf{B}_{m}
 \end{align*}
 @col
-says that $\mathcal{C}\!\left(A^{t}\right)\subseteq\mathcal{C}\!\left(B^{t}\right)$. So $\mathcal{R}\!\left(A\right)=\mathcal{C}\!\left(A^{t}\right)=\mathcal{C}\!\left(B^{t}\right)=\mathcal{R}\!\left(B\right)$ when a single row operation of the third type is performed.
+says that $\mathcal{C}\left(A^{t}\right)\subseteq\mathcal{C}\left(B^{t}\right)$. So $\mathcal{R}\!\left(A\right)=\mathcal{C}\left(A^{t}\right)=\mathcal{C}\left(B^{t}\right)=\mathcal{R}\!\left(B\right)$ when a single row operation of the third type is performed.
 
 @col
-So the row space of a matrix is preserved by each row operation, and hence row spaces of row&#45;equivalent matrices are equal sets.
-@qed@end-->
+So the row space of a matrix is preserved by each row operation, and hence row spaces of row-equivalent matrices are equal sets.
+@qed@end</comment>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="18" id="s18" slide="18" course="Math 1030" chapter="14" section="4" subsection="" subsubsection="" chapter_title="Column and Row Space" section_title="Row Space of a Matrix">
             <keywords slide="18" environ="slide" chapter="14" course="Math 1030">
@@ -897,12 +897,12 @@ So the row space of a matrix is preserved by each row operation, and hence row s
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="16" title="Column Space Row Space Transpose" md5="c48680e01c63782c5262d70033bcdaf9" course="Math 1030" chapter="14" slide="21" item="14.16">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="14" section="4" subsection="" subsubsection="" serial="" slide="21">Column Space, Row Space, Transpose</title>
               <label wbtag="label" name="CSRST" type="Theorem"/>
-              <paragraphs course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is a matrix. Then $\mathcal{C}\!\left(A\right)=\mathcal{R}\!\left(A^{t}\right)$. </paragraphs>
+              <paragraphs course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is a matrix. Then $\mathcal{C}\left(A\right)=\mathcal{R}\!\left(A^{t}\right)$. </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="190469bbc8bb5ed39da602b762ddff07" course="Math 1030" chapter="14" slide="21" of="c48680e01c63782c5262d70033bcdaf9">
               <newcol course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
-\displaystyle \mathcal{C}\!\left(A\right)=\mathcal{C}\!\left(\left(A^{t}\right)^{t}\right)=\mathcal{R}\!\left(A^{t}\right)
+\displaystyle \mathcal{C}\left(A\right)=\mathcal{C}\left(\left(A^{t}\right)^{t}\right)=\mathcal{R}\!\left(A^{t}\right)
 \end{align*} </paragraphs>
                 <qed course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
               </newcol>
@@ -946,7 +946,7 @@ So the row space of a matrix is preserved by each row operation, and hence row s
 4\end{bmatrix}\right\}.
 \end{align*} </paragraphs>
                   <collapse course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then $T$ is linear independent and $\mathcal{C}\!\left(A\right)=\left&lt; T\right&gt;$. </paragraphs>
+                    <paragraphs course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then $T$ is linear independent and $\mathcal{C}\left(A\right)=\left&lt; T\right&gt;$. </paragraphs>
                   </collapse>
                 </collapse>
               </newcol>
@@ -987,7 +987,7 @@ So the row space of a matrix is preserved by each row operation, and hence row s
                     </ref>
                     <paragraphs course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">,
 \begin{align*}
-\displaystyle \mathcal{C}\!\left(A\right)=\mathcal{R}\!\left(A^{t}\right)=\left&lt; \left\{\begin{bmatrix}1\\
+\displaystyle \mathcal{C}\left(A\right)=\mathcal{R}\!\left(A^{t}\right)=\left&lt; \left\{\begin{bmatrix}1\\
 0\\
 0\\
 -\frac{31}{7}\end{bmatrix},\,\begin{bmatrix}0\\
@@ -1007,7 +1007,7 @@ let’s check if
 1\\
 4\end{bmatrix}
 \end{align*}
-is in $\mathcal{C}\!\left(A\right)$ or not.</paragraphs>
+is in $\mathcal{C}\left(A\right)$ or not.</paragraphs>
                       <newline course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
                       <collapse course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                         <paragraphs course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If it is, then
@@ -1052,7 +1052,7 @@ z\\
 \frac{13}{7}\end{bmatrix}
 \end{align*} </paragraphs>
                             <collapse course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                              <paragraphs course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and hence $\mathbf{b}\in\mathcal{C}\!\left(A\right)$. </paragraphs>
+                              <paragraphs course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and hence $\mathbf{b}\in\mathcal{C}\left(A\right)$. </paragraphs>
                             </collapse>
                           </collapse>
                         </collapse>
@@ -1075,7 +1075,7 @@ Here are the differences. </paragraphs>
 However in method 2, the basis is not a subset of columns. </paragraphs>
                   </li>
                   <li class="ltx_item" environment="newcol">
-                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Given a vector $\mathbf{b}\in\mathcal{C}\!\left(A\right)$, it is easier to express it as a linear combination of the basis given by method 2. </paragraphs>
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Given a vector $\mathbf{b}\in\mathcal{C}\left(A\right)$, it is easier to express it as a linear combination of the basis given by method 2. </paragraphs>
                   </li>
                 </ol>
               </newcol>
