@@ -227,6 +227,7 @@ From the form of this matrix, we see that there are no free variables. Hence the
 @subsection{More Examples}
 @label{LISV}
 @label{LISV}
+@label{LISV}
 @eg
 @label{LIHS}
 @keyword{Linearly independent}
@@ -530,6 +531,7 @@ Suppose that $A$ is a <em>square</em> matrix. Then $A$ is nonsingular if and onl
 This is a proof where we can chain together equivalences, rather than proving the two halves separately.
 \begin{align*}
 A \text{ nonsingular} &\displaystyle\iff\text{$\mathcal{LS}({A},{\mathbf{0}})$ has a unique solution} \\
+&\displaystyle\iff A\vec{x} = \vec{0} \text{ has a unique solution} \vec{x}\\
 &\displaystyle\iff\text{columns of $A$ are linearly independent}
 \end{align*}
 @qed
