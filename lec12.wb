@@ -525,14 +525,14 @@ That the previous two examples have opposite properties for the columns of their
 @thm
 @title{Nonsingular Matrices have Linearly Independent Columns}
 @label{NMLIC}
-Suppose that $A$ is a <em>square</em> matrix. Then $A$ is nonsingular if and only if the columns of $A$ form a linearly independent set.
+Suppose that $A$ is a <em style="">square</em> matrix. Then $A$ is nonsingular if and only if the columns of $A$ form a linearly independent set.
 @end
 @proof
 @newcol
 This is a proof where we can chain together equivalences, rather than proving the two halves separately.
 \begin{align*}
 A \text{ nonsingular} &\displaystyle\iff\text{$\mathcal{LS}({A},{\mathbf{0}})$ has a unique solution} \\
-&\displaystyle\iff A\vec{x} = \vec{0} \text{ has a unique solution} \vec{x}\\
+&\displaystyle\iff A\vec{x} = \vec{0} \text{ has a unique solution }     \vec{x}\\
 &\displaystyle\iff\text{columns of $A$ are linearly independent}
 \end{align*}
 @qed
@@ -774,7 +774,7 @@ Setting instead $x_{4}=0$ and $x_{5}=1$ gives
 \end{align*}
 Hence
 \begin{align*}
-\displaystyle {\mathcal{N}}\!\left(L\right)=\left< \begin{bmatrix}-1\\
+\displaystyle {\mathcal{N}}\!\left(A\right)=\left< \begin{bmatrix}-1\\
 2\\
 -2\\
 1\\
