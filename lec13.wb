@@ -190,7 +190,7 @@ we have:
 \]
 
 @col
-<strong style="color: inherit;">Exercise.</strong> Notice also that the vectors: $\vec{e}_1, \vec{e}_2, \ldots, \vec{e}_r$ are linearly independent.
+<strong>Exercise.</strong> Notice also that the vectors: $\vec{e}_1, \vec{e}_2, \ldots, \vec{e}_r$ are linearly independent.
 @endcol
 @slide
 @eg
@@ -607,7 +607,7 @@ A key feature of this example is that the linear combination that expresses $\ma
 @section{Uniqueness of RREF}
 @slide
 @skip
-<strong style="color: inherit;">Math Major only. You can skip this section. Similar concept appears in the classworks. </strong>
+<strong>Math Major only. You can skip this section. Similar concept appears in the classworks. </strong>
 @eg
 @keyword{Entries of RREF $B$ gives relationship of columns of $A$}
 
@@ -638,7 +638,7 @@ if and only if
 \displaystyle x_{1}\mathbf{B}_{1}+x_{2}\mathbf{B}_{2}+\cdots+x_{6}\mathbf{B}_{6}=\mathbf{0}.&
 \end{align}
 @col
-<strong style="color: inherit;">Step 1</strong>
+<strong>Step 1</strong>
 @newcol
 First of all, if $(x_{1},x_{2},x_{3},x_{4},x_{5},x_{6})=(x_{1},0,0,0,0,0)$ is a solution of $\eqref{eq:B}$, then
 \begin{align*}
@@ -652,7 +652,7 @@ So $x_{1}$ is zero. This is equivalent to
 It has only the trivial solution, i.e. $\left\{\mathbf{A}_{1}\right\}$ is linearly independent. Hence $d_{1}=1$ is a pivot column.
 @endcol
 
-<strong style="color: inherit;">Step 2</strong>
+<strong>Step 2</strong>
 @newcol
 Let’s move to $x_{2}$. Suppose that
 $(x_{1},x_{2},x_{3},x_{4},x_{5},x_{6})=(x_{1},x_{2},0,0,0,0)$.
@@ -675,7 +675,7 @@ or equivalently
 \end{align*}
 @endcol
 
-<strong style="color: inherit;">Step 3</strong>
+<strong>Step 3</strong>
 @newcol
 Consider $x_{3}$. Let $(x_{1},x_{2},x_{3},x_{4},x_{5},x_{6})=(x_{1},0,x_{3},0,0,0)$. Then
 \begin{align*}
@@ -684,7 +684,7 @@ Consider $x_{3}$. Let $(x_{1},x_{2},x_{3},x_{4},x_{5},x_{6})=(x_{1},0,x_{3},0,0,
 has only trivial solution. Equivalently $\left\{\mathbf{A}_{1},\mathbf{A}_{3}\right\}$ is linearly independent.Column $3$ of $B$ is a pivot column.
 @endcol
 
-<strong style="color: inherit;">Step 4</strong>
+<strong>Step 4</strong>
 @newcol
 Consder
 \begin{align*}
@@ -698,12 +698,12 @@ or equivalently
 The relation of columns of $A$ gives the entries of the column 4 of $B$.
 @endcol
 
-<strong style="color: inherit;">Step 5</strong>
+<strong>Step 5</strong>
 @newcol
 $\mathbf{B}_{5}$ is not in span of $\mathbf{B}_{1}$ and $\mathbf{B}_{3}$. Equivalently $\mathbf{A}_{5}$ is not in span of $\mathbf{A}_{1}$ and $\mathbf{A}_{3}$. Column $5$ of $B$ is a pivot column.
 @endcol
 
-<strong style="color: inherit;">Step 6</strong>
+<strong>Step 6</strong>
 @newcol
 Consider
 \begin{align*}
@@ -734,7 +734,7 @@ Row reduce
 to a RREF $B$ by the above technique. Let $\mathbf{A}_{i}$ (resp. $\mathbf{B}_{i}$) be the $i$-th column of $A$ (resp. $B$) for $i=1,\ldots,7$.
 
 @col
-<strong style="color: inherit;">Step 1</strong>
+<strong>Step 1</strong>
 @newcol
 $\mathbf{A}_{1}$ is nonzero column. So the index $d_{1}=1$ corresponds to a pivot column. We have
 \begin{align*}
@@ -745,7 +745,7 @@ $\mathbf{A}_{1}$ is nonzero column. So the index $d_{1}=1$ corresponds to a pivo
 \end{align*}
 @endcol
 
-<strong style="color: inherit;">Step 2</strong>
+<strong>Step 2</strong>
 @newcol
 $\mathbf{A}_{2}$ is not in $\left< \left\{\mathbf{A}_{d_{1}}\right\}\right>$. So the index $d_{2}=2$ corresponds to a pivot column. We have
 \begin{align*}
@@ -756,7 +756,7 @@ $\mathbf{A}_{2}$ is not in $\left< \left\{\mathbf{A}_{d_{1}}\right\}\right>$. So
 \end{align*}
 @endcol
 
-<strong style="color: inherit;">Step 3</strong>
+<strong>Step 3</strong>
 @newcol
 Consider
 \begin{align*}
@@ -772,7 +772,7 @@ So we have
 \end{align*}
 @endcol
 
-<strong style="color: inherit;">Step 4</strong>
+<strong>Step 4</strong>
 @newcol
 $\mathbf{A}_{4}$ is not in $\left< \left\{\mathbf{A}_{d_{1}},\mathbf{A}_{d_{2}}\right\}\right>$.
 
@@ -786,7 +786,7 @@ So the index $d_{3}=4$ corresponds to a pivot column. We have
 \end{align*}
 @endcol
 
-<strong style="color: inherit;">Step 5</strong>
+<strong>Step 5</strong>
 @newcol
 $\mathbf{A}_{5}$ is not in $\left< \left\{\mathbf{A}_{d_{1}},\mathbf{A}_{d_{3}},\mathbf{A}_{d_{3}}\right\}\right>$.
 
@@ -800,7 +800,7 @@ So the index $d_{4}=5$ corresponds to a pivot column. We have
 \end{align*}
 @endcol
 
-<strong style="color: inherit;">Step 6</strong>
+<strong>Step 6</strong>
 @newcol
 Consider
 \begin{align*}
@@ -816,7 +816,7 @@ So, we have
 \end{align*}
 @endcol
 
-<strong style="color: inherit;">Step 7</strong>
+<strong>Step 7</strong>
 @newcol
 Consider
 \begin{align*}
@@ -842,7 +842,7 @@ Hence the RREF of $A$ is
 @endcol
 
 @col
-<strong style="color: inherit;">Important remark</strong>: from the above computation, the entries of $B$ are uniquely determined by $A$.
+<strong>Important remark</strong>: from the above computation, the entries of $B$ are uniquely determined by $A$.
 
 @col
 So the RREF $B$ is unique.
