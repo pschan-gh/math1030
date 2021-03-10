@@ -131,7 +131,7 @@ Let $A=[\mathbf{v}_{1}|\cdots|\mathbf{v}_{n}]\xrightarrow{\text{RREF}}B$.
 Suppose $D=\left\{d_{1},\ldots,d_{r}\right\}$ be the indexes of the pivot columns of $B$.
 
 @col
-Let $T=\left\{\mathbf{v}_{d_{1}},\ldots,\mathbf{v}_{d_{r}}\right\}$. Then $T$ is a basis for $\left< S\right>=\mathcal{C}\!\left(A\right)$
+Let $T=\left\{\mathbf{v}_{d_{1}},\ldots,\mathbf{v}_{d_{r}}\right\}$. Then $T$ is a basis for $\left< S\right>=\mathcal{C}\left(A\right)$
 @endcol
 
 <strong>Method 2</strong>
@@ -139,7 +139,7 @@ Let $T=\left\{\mathbf{v}_{d_{1}},\ldots,\mathbf{v}_{d_{r}}\right\}$. Then $T$ is
 Let $A=[\mathbf{v}_{1}|\cdots|\mathbf{v}_{n}]$. Suppose $A^{t}\xrightarrow{\text{RREF}}B$.
 
 @col
-Let $T$ be the nonzero columns of $B^{t}$. Then $T$ is a basis for $\left< S\right>=\mathcal{C}\!\left(A\right)$
+Let $T$ be the nonzero columns of $B^{t}$. Then $T$ is a basis for $\left< S\right>=\mathcal{C}\left(A\right)$
 
 This is an example from Lecture 14.
 @endcol
@@ -205,7 +205,7 @@ Let
 4\end{bmatrix}\right\}.
 \end{align*}
 @col
-Then $T$ is a basis for $\left< S\right>=\mathcal{C}\!\left(A\right)$.
+Then $T$ is a basis for $\left< S\right>=\mathcal{C}\left(A\right)$.
 @endcol
 
 <strong>Method 2</strong>
@@ -246,7 +246,7 @@ Then we can take
 \frac{13}{7}\end{bmatrix}\right\}.
 \end{align*}
 
-$T$ is a basis for $\mathcal{C}\!\left(A\right)=\left< S\right>$.
+$T$ is a basis for $\mathcal{C}\left(A\right)=\left< S\right>$.
 @endcol
 @endcol
 @end
@@ -763,7 +763,7 @@ Let $A$ be a $m\times n$ matrix. Then
 @newcol
 Equivalently
 \begin{align*}
-\displaystyle \dim\mathcal{C}\!\left(A\right)=\dim\mathcal{R}\!\left(A\right).
+\displaystyle \dim\mathcal{C}\left(A\right)=\dim\mathcal{R}\!\left(A\right).
 \end{align*}
 @endcol
 @end
@@ -823,10 +823,10 @@ Suppose that $A$ is a square matrix of size $n$. The following are equivalent. <
 @newcol
 (1 $\Rightarrow$ 2)
 @newcol
-If $A$ is nonsingular then $\mathcal{C}\!\left(A\right)={\mathbb{R}}^{n}$.
+If $A$ is nonsingular then $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$.
 
 @col
-If $\mathcal{C}\!\left(A\right)={\mathbb{R}}^{n}$, then the column space has dimension $n$, so the rank of $A$ is $n$.
+If $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$, then the column space has dimension $n$, so the rank of $A$ is $n$.
 @endcol
 
 (2 $\Rightarrow$ 3)
@@ -856,7 +856,7 @@ Suppose that $A$ is a square matrix of size $n$. The following are equivalent. <
 <li class="ltx_item"> The linear system $\mathcal{LS}({A},{\mathbf{b}})$ has a unique solution for every possible choice of $\mathbf{b}$. </li>
 <li class="ltx_item"> The columns of $A$ are a linearly independent set. </li>
 <li class="ltx_item"> $A$ is invertible. </li>
-<li class="ltx_item"> The column space of $A$ is ${\mathbb{R}}^{n}$, $\mathcal{C}\!\left(A\right)={\mathbb{R}}^{n}$. </li>
+<li class="ltx_item"> The column space of $A$ is ${\mathbb{R}}^{n}$, $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$. </li>
 <li class="ltx_item"> The columns of $A$ are a basis for ${\mathbb{R}}^{n}$. </li>
 <li class="ltx_item"> The rank of $A$ is $n$, $r\left(A\right)=n$. </li>
 <li class="ltx_item"> The nullity of $A$ is zero, $n\left(A\right)=0$. </li></ol>
