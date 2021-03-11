@@ -32,6 +32,7 @@ It is called the @keyword{standard basis}: Obviously $B$ is linearly independent
 @endcol
 @end
 @slide
+@skip
 @eg
 <strong>Math major only</strong>
 
@@ -318,6 +319,7 @@ The columns of $A$ form a basis for $\mathbb{R}^m$. </li></ol>
 @endcol
 @end
 @slide
+@skip
 @eg
 Consider $S^{\prime}=\left\{\mathbf{v}_{1}=\begin{bmatrix}1\\
 0\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}1\\
@@ -487,6 +489,7 @@ It follows from @ref{d848ac74d9e041feff51c974a9969985} that:
 \]
 @end
 @slide
+@skip
 @eg
 <strong>Math major only</strong>
 
@@ -822,6 +825,7 @@ Suppose that $A$ is a square matrix of size $n$. The following are equivalent. <
 <li class="ltx_item"> The nullity of $A$ is zero, $n\left(A\right)=0$. </li></ol>
 @end
 @proof
+@skip
 @newcol
 (1 $\Rightarrow$ 2)
 @newcol
@@ -863,13 +867,14 @@ Suppose that $A$ is a square matrix of size $n$. The following are equivalent. <
 <li class="ltx_item"> The rank of $A$ is $n$, $r\left(A\right)=n$. </li>
 <li class="ltx_item"> The nullity of $A$ is zero, $n\left(A\right)=0$. </li></ol>
 @end
+@slide
+@skip
 @section{Linear relation of $P_n$ and $M_{mn}$}
 <strong>You can skip this section. It is for math major only</strong>
 
-@newcol
 In this section, we discuss the linear relation of $P_{n}$ or $M_{mn}$ by using the techniques used for the vector space ${\mathbb{R}}^{k}$.
 
-@col
+@newcol
 Let $V=P_{n}$ and $f_{1},\ldots,f_{m},g\in P_{n}$.
 
 @col
@@ -939,6 +944,7 @@ The entries of $\mathbf{v}_{i}$ are the coefficients of $f_{i}$.
 
 @endcol
 @slide
+@skip
 We then have the following theorem:
 @thm
 <ol class="ltx_enumerate">
@@ -950,36 +956,25 @@ if and only if $\mathbf{u}$ is a linear combination of $\mathbf{v}_{1},\ldots,\m
 Problems regarding polynomials can therefore be transformed to problems regarding column vectors.
 
 @newcol
-Similarly given $m\times n$ matrix $A_{1},\ldots,A_{k},B$. Let
+Similarly given $m\times n$ matrices $A_{1},\ldots,A_{k},B$. Let
 \begin{align*}
-\displaystyle \mathbf{v}_{1}=\begin{bmatrix}[A_{1}]_{11}\\
+\displaystyle \mathbf{v}_{1}=\begin{bmatrix}
+[A_{1}]_1\\
+[A_{1}]_2\\
 \vdots\\
-_{m1}\\
-_{12}\\
+[A_{1}]_n\end{bmatrix},
+\mathbf{v}_{2}=\begin{bmatrix}
+[A_{2}]_1\\
+[A_{2}]_2\\
 \vdots\\
-_{m2}\\
+[A_{2}]_{n}\\
+\end{bmatrix},
+\cdots,
+\mathbf{u}=\begin{bmatrix}
+[B]_1\\
+[B]_2\\
 \vdots\\
-_{1n}\\
-\vdots\\
-_{mn}\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}[A_{2}]_{11}\\
-\vdots\\
-_{m1}\\
-_{12}\\
-\vdots\\
-_{m2}\\
-\vdots\\
-_{1n}\\
-\vdots\\
-_{mn}\end{bmatrix},\cdots,\mathbf{u}=\begin{bmatrix}[B]_{11}\\
-\vdots\\
-_{m1}\\
-_{12}\\
-\vdots\\
-_{m2}\\
-\vdots\\
-_{1n}\\
-\vdots\\
-_{mn}\end{bmatrix}.
+[B]_{n}\end{bmatrix}.
 \end{align*}
 We have the following:
 @col
@@ -994,28 +989,35 @@ if and only if $\mathbf{u}$ is a linear combination of $\mathbf{v}_{1},\ldots,\m
 Again, problems regarding polynomials can be transformed to problems regarding column vectors.
 @endcol
 @slide
+@skip
 @eg
-<ol class="ltx_enumerate">
-<li class="ltx_item"> Determine if
+@enumerate
+@item
+Determine if
 \begin{align*}
 \displaystyle A_{1}=\begin{bmatrix}1&2\\
 3&4\end{bmatrix},A_{2}=\begin{bmatrix}1&-1\\
 5&6\end{bmatrix},A_{3}=\begin{bmatrix}-2&0\\
 -3&-4\end{bmatrix}
 \end{align*}
-is linearly independent or not. </li>
-<li class="ltx_item"> Express
+is linearly independent or not.
+@item
+@newcol
+Express
 \begin{align*}
 \displaystyle B=\begin{bmatrix}-3&0\\
 4&1\end{bmatrix}
 \end{align*}
-@newcol
 as a linear combination of $A_{1},A_{2},A_{3}$.
-@endcol</li></ol>
+@endcol
+@endenumerate
 @end
 @sol
-<ol class="ltx_enumerate">
-<li class="ltx_item"> Let
+@newcol
+@enumerate
+@item
+@newcol
+Let
 \begin{align*}
 \displaystyle \mathbf{v}_{1}=\begin{bmatrix}1\\
 3\\
@@ -1041,11 +1043,13 @@ as a linear combination of $A_{1},A_{2},A_{3}$.
 0&0&0\\
 \end{bmatrix}.
 \end{align*}
-@newcol
+@col
 Obviously the columns of the RREF is linearly independent, hence $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\right\}$
 is linearly independent. Therefore $\left\{A_{1},A_{2},A_{3}\right\}$ is linearly independent.
-@endcol</li>
-<li class="ltx_item"> Next
+@endcol
+@item
+@newcol
+Next
 \begin{align*}
 \displaystyle [\mathbf{v}_{1}|\mathbf{v}_{2}|\mathbf{v}_{3}|\mathbf{b}]=\begin{bmatrix}1&1&-2&-3\\
 3&5&-3&4\\
@@ -1059,10 +1063,13 @@ is linearly independent. Therefore $\left\{A_{1},A_{2},A_{3}\right\}$ is linearl
 \end{align*}
 @newcol
 Then $\mathbf{u}=\mathbf{v}_{1}+2\mathbf{v}_{2}+3\mathbf{v}_{3}$. Hence $B=A_{1}+2A_{2}+3A_{3}$.
-@endcol</li></ol>
-@qed
+@endcol
+@endcol
+@endenumerate
+@endcol
 @end
 @slide
+@skip
 @eg
 Let $f_{1}(x)=1+x+x^{3}$, $f_{2}(x)=2+x+x^{2}$, $f_{3}(x)=4+3x+x^{2}+2x^{3}$, $f_{4}(x)=2x^{2}+x^{3}$, $f_{5}(x)=3+2x+3x^{2}+2x^{3}$.
 
