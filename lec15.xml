@@ -559,7 +559,7 @@ so the columns of $A$ form a basis for ${\mathbb{R}}^{3}$. </paragraphs>
               <paragraphs course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Dimension</paragraphs>
             </title>
             <newline course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment=""/>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="13" title="Dimension" md5="db1ceaf2a44870c2a7499fbd2a3710e9" course="Math 1030" chapter="15" slide="15" item="15.13">
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="13" title="Dimension" md5="fa337417cb1401c3201c9c8d62051331" course="Math 1030" chapter="15" slide="15" item="15.13">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="15" section="4" subsection="" subsubsection="" serial="" slide="15">Dimension</title>
               <paragraphs course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V$ be a vector space.</paragraphs>
               <newline course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="statement"/>
@@ -572,7 +572,9 @@ so the columns of $A$ form a basis for ${\mathbb{R}}^{3}$. </paragraphs>
               <paragraphs course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">The number $t$ (namely the number of vectors in the basis)
 is called the </paragraphs>
               <inline_keyword course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="statement">dimension</inline_keyword>
-              <paragraphs course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $V$. </paragraphs>
+              <paragraphs course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $V$.</paragraphs>
+              <newline course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">The dimension of the zero vector space $\{\vect{0}\}$ is defined to be $0$. </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="5489965a692df025331a1a4aeb86b56b" course="Math 1030" chapter="15" slide="15">
               <newcol course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
@@ -590,12 +592,12 @@ then $s=t$. </paragraphs>
               <label wbtag="label" name="SSLD" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $S=\left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\ldots,\,\mathbf{v}_{t}\right\}$ is a finite set of vectors which spans the vector space $V$. Then any set of $t+1$ or more vectors from $V$ is linearly dependent. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="f86816d80646a2af0c4a570fda818bd2" course="Math 1030" chapter="15" slide="16" of="e523c6d32b8413b4971cdd12f2cece9e">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="fc7ec1177f22eb2c44fad3131139c0f7" course="Math 1030" chapter="15" slide="16" of="e523c6d32b8413b4971cdd12f2cece9e">
               <newcol course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_m$ be $m$ vectors in $V$,
 where $m \geq t + 1$.
 Let $A = [\vect{v}_1 | \vect{v}_2 | \cdots | \vect{v}_t ]$.
-Since $S$ is a basis, for every $\vect{u}_i$ ($1\leq i \leq m$)
+Since $S$ spans $V$, for every $\vect{u}_i$ ($1\leq i \leq m$)
 there exists
 $\vect{w}_i \in \mathbb{R}^t$ such that:
 \[
@@ -812,17 +814,16 @@ $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k},\mathbf{u}\right\}$ is l
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="21" id="s21" slide="21" course="Math 1030" chapter="15" section="4" subsection="" subsubsection="" chapter_title="Basis" section_title="Dimension">
             <keywords slide="21" environ="slide" chapter="15" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="22" md5="b97c99954de693a2fed4e1a533787fd3" course="Math 1030" chapter="15" slide="21" item="15.22">
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="22" md5="bf526b216e0b6d32b3039d6c01b1e1b9" course="Math 1030" chapter="15" slide="21" item="15.22">
               <label wbtag="label" name="basisexists2" type="Theorem"/>
-              <paragraphs course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V$ be a subspace of ${\mathbb{R}}^{m}$.</paragraphs>
+              <paragraphs course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V$ be a nonzero subspace of ${\mathbb{R}}^{m}$. (That is, $V \neq \{\vect{0}\}$.)</paragraphs>
               <newline course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="statement"/>
-              <newcol course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> There exists a basis for $V$. </paragraphs>
-              </newcol>
+              <paragraphs course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Then, there exists a basis for $V$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="112fd2242da5c53371b183927d608c02" course="Math 1030" chapter="15" slide="21" of="b97c99954de693a2fed4e1a533787fd3">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="29f60523e415a9dfa16a4ceb97ca41af" course="Math 1030" chapter="15" slide="21" of="bf526b216e0b6d32b3039d6c01b1e1b9">
               <newcol course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If $V$ is the zero vector space, i.e. $V=\left\{\mathbf{0}\right\}$. Then the theorem is trivial. Suppose $V$ is not the zero vector space, let $\mathbf{v}_{1}$ be a nonzero vector in $V$. If $V=\left&lt; \left\{\mathbf{v}_{1}\right\}\right&gt;$, we can take $S=\left\{\mathbf{v}_{1}\right\}$. Then obviously $\left\{\mathbf{v}_{1}\right\}$ is linearly independent and hence $S$ is a basis for $V$.</paragraphs>
+                <paragraphs course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $V$ be a nonzero vector space.
+Let $\mathbf{v}_{1}$ be a nonzero vector in $V$. If $V=\left&lt; \left\{\mathbf{v}_{1}\right\}\right&gt;$, we can take $S=\left\{\mathbf{v}_{1}\right\}$. Then obviously $\left\{\mathbf{v}_{1}\right\}$ is linearly independent and hence $S$ is a basis for $V$.</paragraphs>
                 <newline course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
                 <collapse course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="Math 1030" chapter="15" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Otherwise, let $\mathbf{v}_{2}\in V$ but not in $\left&lt; \left\{\mathbf{v}_{1}\right\}\right&gt;$.</paragraphs>
