@@ -11,6 +11,7 @@ Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcl
 @label{SI}
 The inverse of a square matrix, and solutions to linear systems with square coefficient matrices, are intimately connected.
 @slide
+@skip
 @eg
 \begin{align*}
 \displaystyle-7x_{1}-6x_{2}-12x_{3}&\displaystyle=-33 \\
@@ -69,7 +70,7 @@ The matrix $B$ of the previous example is called the inverse of $A$. When $A$ an
 \displaystyle x=1x=\left(\frac{1}{3}\left(3\right)\right)x=\frac{1}{3}\left(3x\right)=\frac{1}{3}\left(12\right)=4
 \end{align*}
 @col
-Here we have obtained a solution by employing the <b>multiplicative inverse</b> of $3$, $3^{-1}=\frac{1}{3}$. This works fine for any scalar multiple of $x$, except for zero, since zero does not have a multiplicative inverse. Consider separately the two linear equations,
+Here we have obtained a solution by employing the @keyword{multiplicative inverse} of $3$, $3^{-1}=\frac{1}{3}$. This works fine for any scalar multiple of $x$, except for zero, since zero does not have a multiplicative inverse. Consider separately the two linear equations,
 \begin{align*}
 \displaystyle 0x&\displaystyle=12&\displaystyle 0x&\displaystyle=0
 \end{align*}
@@ -79,7 +80,7 @@ The first has no solutions, while the second has infinitely many solutions. For 
 @endcol
 @section{Inverse of a Matrix}
 @defn
-Suppose $A$ and $B$ are square matrices of size $n$ such that $AB=I_{n}$ and $BA=I_{n}$. Then $A$ is <b>invertible</b> and $B$ is the <b>inverse</b> of $A$. In this situation, we write $B=A^{-1}$.
+Suppose $A$ and $B$ are square matrices of size $n$ such that $AB=I_{n}$ and $BA=I_{n}$. Then $A$ is @keyword{invertible} and $B$ is the @keyword{inverse} of $A$. In this situation, we write $B=A^{-1}$.
 @end
 @newcol
 Notice that if $B$ is the inverse of $A$, then we can just as easily say $A$ is the inverse of $B$, or $A$ and $B$ are inverses of each other.
@@ -88,8 +89,9 @@ Notice that if $B$ is the inverse of $A$, then we can just as easily say $A$ is 
 Not every square matrix has an inverse.
 @endcol
 @slide
+@skip
 @eg
-<b>A matrix without an inverse</b>
+@keyword{A matrix without an inverse}
 
 @newcol
 Consider the coefficient matrix
@@ -124,12 +126,12 @@ So the assumption of $A$’s inverse leads to a logical inconsistency (the syste
 Let us look at one more matrix inverse before we embark on a more systematic study.
 @endcol
 @slide
+@skip
 @eg
-<b>Matrix inverse</b>
+@keyword{Matrix inverse}
 
 @newcol
-<strong>1.</strong>
-\begin{align*}
+<strong>1.</strong> \begin{align*}
 \displaystyle A=\left[\begin{array}[]{cc}1&2\\
 2&3\\
 \end{array}\right],B=\left[\begin{array}[]{cc}-3&2\\
@@ -145,8 +147,7 @@ Then
 So $B$ is the inverse of $A$.
 
 @col
-<strong>2.</strong>
-\begin{align*}
+<strong>2.</strong> \begin{align*}
 \displaystyle A=\left[\begin{array}[]{ccc}1&1&1\\
 1&0&-1\\
 0&1&1\\
@@ -237,7 +238,7 @@ Then $A$ is invertible if and only if $ad-bc\neq 0$. When $A$ is invertible, the
 @end
 @proof
 
-$\Leftarrow$ 
+$\Leftarrow$
 @newcol
 Assume that $ad-bc\neq 0$. We will use the definition of the inverse of a matrix to establish that $A$ has an inverse. Note that if $ad-bc\neq 0$ then the displayed formula for $A^{-1}$ is legitimate since we are not dividing by zero).
 Using this proposed formula for the inverse of $A$, we compute
@@ -301,7 +302,7 @@ ce+dg&cf+dh\end{bmatrix}=\begin{bmatrix}bg&bh\\
 dg&dh\end{bmatrix}
 \end{align*}
 @col
-So $bg=dh=1$ and thus $b,g,d,h$ are all nonzero. But then $bh$ and $dg$ 
+So $bg=dh=1$ and thus $b,g,d,h$ are all nonzero. But then $bh$ and $dg$
 (the <strong>other corners</strong>) must also be nonzero, so this is (finally) a contradiction. So our assumption was false and we see that $ad-bc\neq 0$ whenever $A$ has an inverse.
 @qed
 @endcol
@@ -314,7 +315,7 @@ This theorem is cute, and it is nice to have a formula for the inverse, and a co
 @endcol
 @slide
 @eg
-<b>Computing a matrix inverse</b>
+@keyword{Computing a matrix inverse}
 
 @newcol
 Consider
@@ -447,7 +448,7 @@ By this method, we know that $AB=I_{5}$. Check that $BA=I_{5}$, and then we will
 @endcol
 @end
 @eg
-<b>Computing a matrix inverse</b>
+@keyword{Computing a matrix inverse}
 
 @newcol
 Let
@@ -502,8 +503,7 @@ We can take $\mathbf{B}_{1}=\begin{bmatrix}1\\
 1\end{bmatrix}$.
 
 @col
-Next we want to find solution of $A\mathbf{x}=\mathbf{e}_{2}$ by row reducing $[A|\mathbf{e}_{2}]$. Note that we can use the
-<strong>exact same row operations</strong>.
+Next we want to find solution of $A\mathbf{x}=\mathbf{e}_{2}$ by row reducing $[A|\mathbf{e}_{2}]$. Note that we can use the <strong>exact same row operations</strong>.
 \begin{align*}
 \displaystyle [A|\mathbf{e}_{2}]=\left[\begin{array}[]{ccc|c}1&1&1&0\\
 1&0&-1&1\\
@@ -579,9 +579,9 @@ So
 \end{array}\right]
 \end{align*}
 @col
-And $AB=I_{3}$. We need to check $BA=I_{3}$ <strong>but later we will show that $BA=I_{3}$ follows from $AB=I_{3}$, so we don’t have to check it</strong>. 
+And $AB=I_{3}$. We need to check $BA=I_{3}$ <strong>but later we will show that $BA=I_{3}$ follows from $AB=I_{3}$, so we don’t have to check it</strong>.
 
-We see that we follows the exact same row operations for each case. We can combine all three cases into one. 
+We see that we follows the exact same row operations for each case. We can combine all three cases into one.
 
 <strong>Better method for finding inverse</strong>:
 
@@ -654,7 +654,7 @@ We will solve it later.
 @endcol
 @slide
 @eg
-<b>Computing a matrix inverse</b>
+@keyword{Computing a matrix inverse}
 
 @newcol
 \begin{align*}
@@ -812,17 +812,13 @@ Suppose that $A$ and $B$ are square matrices of size $n$. The product $AB$ is no
 @end
 @proof
 @newcol
-($\Rightarrow$) For this portion of the proof we will form the logically-equivalent contrapositive and prove that statement using two cases. 
+($\Rightarrow$) For this portion of the proof we will form the logically-equivalent contrapositive and prove that statement using two cases.
 
-<blockquote>
-$AB$ is nonsingular implies $A$ and $B$ are both nonsingular.
-</blockquote> 
-becomes 
+<blockquote> $AB$ is nonsingular implies $A$ and $B$ are both nonsingular. </blockquote>
+becomes
 
 @col
-<blockquote>
-$A$ or $B$ is singular implies $AB$ is singular.
-</blockquote>
+<blockquote> $A$ or $B$ is singular implies $AB$ is singular. </blockquote>
 
 @col
 Case 1. Suppose $B$ is singular. Then there is a nonzero vector $\mathbf{z}$ that is a solution to $B\mathbf{x}=\mathbf{0}$. So
@@ -872,7 +868,7 @@ Suppose $A$ and $B$ are square matrices of size $n$ such that $AB=I_{n}$. Then $
 @proof
 @newcol
 The matrix $I_{n}$ is nonsingular. So $A$ and $B$ are nonsingular by, so in particular $B$ is nonsingular. We can therefore apply Theorem   @ref{CINM} to assert the existence of a matrix $C$ so that $BC=I_{n}$.
-$B$ is nonsingular, so there must be a <b>right-inverse</b> for $B$, and we are calling it $C$.
+$B$ is nonsingular, so there must be a @keyword{right-inverse} for $B$, and we are calling it $C$.
 
 @col
 Now
@@ -890,7 +886,7 @@ which is the desired conclusion.
 @endcol
 @end
 @newcol
-So above theorem tells us that if $A$ is nonsingular, then the matrix $B$ guaranteed by Theorem   @ref{CINM} will be both a <b>right-inverse</b> and a <b>left-inverse</b> for $A$, so $A$ is invertible and $A^{-1}=B$.
+So above theorem tells us that if $A$ is nonsingular, then the matrix $B$ guaranteed by Theorem   @ref{CINM} will be both a @keyword{right-inverse} and a @keyword{left-inverse} for $A$, so $A$ is invertible and $A^{-1}=B$.
 
 @col
 So if you have a nonsingular matrix, $A$, you can use the procedure described in Theorem   @ref{CINM} to find an inverse for $A$. If $A$ is singular, then the procedure in Theorem   @ref{CINM} will fail as the first $n$ columns of $M$ will not row-reduce to the identity matrix. However, we can say a bit more. When $A$ is singular, then $A$ does not have an inverse (which is very different from saying that the procedure in Theorem   @ref{CINM} fails to find an inverse).
@@ -923,24 +919,12 @@ So for a square matrix, the properties of having an inverse and of having a triv
 Suppose that $A$ is a square matrix of size $n$. The following are equivalent.
 
 <ol class="ltx_enumerate">
-<li class="ltx_item">
-$A$ is nonsingular.
-</li>
-<li class="ltx_item">
-$A$ row-reduces to the identity matrix.
-</li>
-<li class="ltx_item">
-The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$.
-</li>
-<li class="ltx_item">
-The linear system $A\mathbf{x}=\mathbf{b}$ has a unique solution for every possible choice of $\mathbf{b}$.
-</li>
-<li class="ltx_item">
-The columns of $A$ are a linearly independent set.
-</li>
-<li class="ltx_item">
-$A$ is invertible.
-</li>
+<li class="ltx_item"> $A$ is nonsingular. </li>
+<li class="ltx_item"> $A$ row-reduces to the identity matrix. </li>
+<li class="ltx_item"> The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$. </li>
+<li class="ltx_item"> The linear system $A\mathbf{x}=\mathbf{b}$ has a unique solution for every possible choice of $\mathbf{b}$. </li>
+<li class="ltx_item"> The columns of $A$ are a linearly independent set. </li>
+<li class="ltx_item"> $A$ is invertible. </li>
 
 </ol>
 @end

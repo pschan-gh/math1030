@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030">
     <keywords slide="all" environ="course" chapter="" course="Math 1030">
@@ -90,7 +89,7 @@
             </title>
             <paragraphs course="Math 1030" chapter="17" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs"> The inverse of a square matrix, and solutions to linear systems with square coefficient matrices, are intimately connected. </paragraphs>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="4" id="s4" slide="4" course="Math 1030" chapter="17" section="1" subsection="" subsubsection="" chapter_title="Inverse" section_title="Solution Inverse">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="4" data-lecture-skip="true" id="s4" slide="4" course="Math 1030" chapter="17" section="1" subsection="" subsubsection="" chapter_title="Inverse" section_title="Solution Inverse">
             <keywords slide="4" environ="slide" chapter="17" course="Math 1030">
               <keyword chapter="17" slide="4">multiplicative inverse</keyword>
             </keywords>
@@ -203,7 +202,7 @@ and note the remarkable fact that
               </collapse>
             </newcol>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="6" id="s6" slide="6" course="Math 1030" chapter="17" section="2" subsection="" subsubsection="" chapter_title="Inverse" section_title="Inverse of a Matrix">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="6" data-lecture-skip="true" id="s6" slide="6" course="Math 1030" chapter="17" section="2" subsection="" subsubsection="" chapter_title="Inverse" section_title="Inverse of a Matrix">
             <keywords slide="6" environ="slide" chapter="17" course="Math 1030">
               <keyword chapter="17" slide="6">A matrix without an inverse</keyword>
             </keywords>
@@ -246,7 +245,7 @@ which allows us to recognize the inconsistency.</paragraphs>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let us look at one more matrix inverse before we embark on a more systematic study. </paragraphs>
             </newcol>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="7" id="s7" slide="7" course="Math 1030" chapter="17" section="2" subsection="" subsubsection="" chapter_title="Inverse" section_title="Inverse of a Matrix">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="7" data-lecture-skip="true" id="s7" slide="7" course="Math 1030" chapter="17" section="2" subsection="" subsubsection="" chapter_title="Inverse" section_title="Inverse of a Matrix">
             <keywords slide="7" environ="slide" chapter="17" course="Math 1030">
               <keyword chapter="17" slide="7">Matrix inverse</keyword>
             </keywords>
@@ -392,7 +391,7 @@ c&amp;d\end{bmatrix}
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="7d4a59a151c11984096fac253a7a1872" course="Math 1030" chapter="17" slide="9" of="bd90c5be3c1a2d24dec38d5b8a07de30">
               <newline course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="substatement"/>
-              <paragraphs course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">$\Leftarrow$  </paragraphs>
+              <paragraphs course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">$\Leftarrow$ </paragraphs>
               <newcol course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Assume that $ad-bc\neq 0$. We will use the definition of the inverse of a matrix to establish that $A$ has an inverse. Note that if $ad-bc\neq 0$ then the displayed formula for $A^{-1}$ is legitimate since we are not dividing by zero).
 Using this proposed formula for the inverse of $A$, we compute
@@ -457,7 +456,7 @@ ce+dg&amp;cf+dh\end{bmatrix}=\begin{bmatrix}bg&amp;bh\\
 dg&amp;dh\end{bmatrix}
 \end{align*} </paragraphs>
                           <collapse course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                            <paragraphs course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So $bg=dh=1$ and thus $b,g,d,h$ are all nonzero. But then $bh$ and $dg$ 
+                            <paragraphs course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So $bg=dh=1$ and thus $b,g,d,h$ are all nonzero. But then $bh$ and $dg$
 (the </paragraphs>
                             <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
                               <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">other corners</paragraphs>
@@ -1099,8 +1098,7 @@ We have a similar result for nonsingular matrix</paragraphs>
                 <blockquote xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
                   <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $AB$ is nonsingular implies $A$ and $B$ are both nonsingular. </paragraphs>
                 </blockquote>
-                <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> 
-becomes</paragraphs>
+                <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> becomes</paragraphs>
                 <newline course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
                 <collapse course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <blockquote xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
