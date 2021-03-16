@@ -365,6 +365,8 @@ Then, we say that $V$ is a @keyword{finite dimensional vector space}.
 
 The number $t$ (namely the number of vectors in the basis)
 is called the @keyword{dimension} of $V$.
+
+The dimension of the zero vector space $\{\vect{0}\}$ is defined to be $0$.
 @end
 @remark
 @newcol
@@ -385,7 +387,7 @@ Suppose that $S=\left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\ldots
 Let $\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_m$ be $m$ vectors in $V$,
 where $m \geq t + 1$.
 Let $A = [\vect{v}_1 | \vect{v}_2 | \cdots | \vect{v}_t ]$.
-Since $S$ is a basis, for every $\vect{u}_i$ ($1\leq i \leq m$)
+Since $S$ spans $V$, for every $\vect{u}_i$ ($1\leq i \leq m$)
 there exists
 $\vect{w}_i \in \mathbb{R}^t$ such that:
 \[
@@ -569,15 +571,14 @@ By the linear independence of $S$, $\alpha_{i}=0$ for all $i$. Hence the above r
 @slide
 @thm
 @label{basisexists2}
-Let $V$ be a subspace of ${\mathbb{R}}^{m}$.
+Let $V$ be a nonzero subspace of ${\mathbb{R}}^{m}$. (That is, $V \neq \{\vect{0}\}$.)
 
-@newcol
-There exists a basis for $V$.
-@endcol
+Then, there exists a basis for $V$.
 @end
 @proof
 @newcol
-If $V$ is the zero vector space, i.e. $V=\left\{\mathbf{0}\right\}$. Then the theorem is trivial. Suppose $V$ is not the zero vector space, let $\mathbf{v}_{1}$ be a nonzero vector in $V$. If $V=\left< \left\{\mathbf{v}_{1}\right\}\right>$, we can take $S=\left\{\mathbf{v}_{1}\right\}$. Then obviously $\left\{\mathbf{v}_{1}\right\}$ is linearly independent and hence $S$ is a basis for $V$.
+Let $V$ be a nonzero vector space.
+Let $\mathbf{v}_{1}$ be a nonzero vector in $V$. If $V=\left< \left\{\mathbf{v}_{1}\right\}\right>$, we can take $S=\left\{\mathbf{v}_{1}\right\}$. Then obviously $\left\{\mathbf{v}_{1}\right\}$ is linearly independent and hence $S$ is a basis for $V$.
 
 @col
 Otherwise, let $\mathbf{v}_{2}\in V$ but not in $\left< \left\{\mathbf{v}_{1}\right\}\right>$.
