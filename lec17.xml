@@ -359,7 +359,7 @@ c&amp;d\end{bmatrix}
 \end{align*} </paragraphs>
               </newcol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="7d4a59a151c11984096fac253a7a1872" course="Math 1030" chapter="17" slide="8" of="bd90c5be3c1a2d24dec38d5b8a07de30">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" data-lecture-skip="true" md5="7d4a59a151c11984096fac253a7a1872" course="Math 1030" chapter="17" slide="8" of="bd90c5be3c1a2d24dec38d5b8a07de30">
               <newline course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="substatement"/>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">$\Leftarrow$ </paragraphs>
               <newcol course="Math 1030" chapter="17" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
@@ -646,8 +646,9 @@ A^{-1} =  J_k\cdots J_2 J_1.
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Observe this procedure also allows one to see whether a given matrix $A$ in nonsingular. </paragraphs>
               </newcol>
             </substatement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="b6d4c3a5b0d4cf0dcd2e41dea45f36a6" course="Math 1030" chapter="17" slide="13" of="93a73e51bed335f9bb7db393aea58b7e">
-              <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs"> Since $A$ is nonsingular, there exist a sequence of row operations $R_1, R_2, \ldots R_k$
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" data-lecture-skip="true" md5="b6d4c3a5b0d4cf0dcd2e41dea45f36a6" course="Math 1030" chapter="17" slide="13" of="93a73e51bed335f9bb7db393aea58b7e">
+              <newcol course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Since $A$ is nonsingular, there exist a sequence of row operations $R_1, R_2, \ldots R_k$
 such that:
 \[
 A \xrightarrow{R_1}\cdots \xrightarrow{R_2} \cdots \xrightarrow{R_k} I_n
@@ -657,29 +658,30 @@ from the left, that is:
 \[
 A \xrightarrow{R_1} J_1A \xrightarrow{R_2} J_2J_1 A \xrightarrow{R_3} \cdots \xrightarrow{R_k} J_k\cdots J_2J_1 A = I_n.
 \] </paragraphs>
-              <newcol course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Start with the augmented matrix:
+                <newcol course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Start with the augmented matrix:
 \[
 [A | I_n]
 \] </paragraphs>
-                <collapse course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Applying the row operation $R_1$ to the matrix above is equivalent to:
+                  <collapse course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Applying the row operation $R_1$ to the matrix above is equivalent to:
 \[
 J_1 [A | I_n] = [J_1 A | J_1 I_n] = [J_1 A | J_1]
 \] </paragraphs>
-                  <collapse course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Further applying the row operation $R_2$ gives:
+                    <collapse course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Further applying the row operation $R_2$ gives:
 \[
 J_2[J_1 A | J_1 I_n] = [J_2 J_1 A | J_2J_1]
 \] </paragraphs>
-                    <collapse course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                      <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Applying the rest of the row operations which reduce $A$ to $I_n$, we have:
+                      <collapse course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Applying the rest of the row operations which reduce $A$ to $I_n$, we have:
 \[
 [\underbrace{J_k \cdots J_2 J_1 A}_{I_n} | \underbrace{J_k \cdots J_2J_1}_{J = A^{-1}}]
 \] </paragraphs>
+                      </collapse>
                     </collapse>
                   </collapse>
-                </collapse>
+                </newcol>
               </newcol>
             </substatement>
           </slide>
@@ -813,10 +815,6 @@ Find $B^{-1}$.</paragraphs>
                 <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="statement"/>
               </ol>
             </statement>
-            <newcol course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-              <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> In the case that $A$ is a nonsingular coefficient matrix of a system of equations, the inverse allows us to very quickly compute the unique solution, for any vector of constants.</paragraphs>
-              <newline course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
-            </newcol>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="17" id="s17" slide="17" course="Math 1030" chapter="17" section="4" subsection="" subsubsection="" chapter_title="Inverse" section_title="Computing the Inverse of a Matrix">
             <keywords slide="17" environ="slide" chapter="17" course="Math 1030">
@@ -896,24 +894,18 @@ x_{4}\end{bmatrix}=A^{-1}\begin{bmatrix}1\\
         </title>
         <slides environment="" chapter_type="">
           <slide environment="" chapter_type="Chapter" canon_num="19" scope="section" id="s19" slide="19" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" chapter_title="Inverse" section_title="Properties of Matrix Inverses">
-            <keywords slide="19" environ="slide" chapter="17" course="Math 1030"/>
+            <keywords slide="19" environ="slide" chapter="17" course="Math 1030">
+              <keyword chapter="17" slide="19">Matrix Inverse is Unique</keyword>
+            </keywords>
             <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" serial="" slide="19">
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Properties of Matrix Inverses</paragraphs>
             </title>
-            <newline course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
-            <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs">The inverse of a matrix enjoys some nice properties. We collect a few here. First, a matrix can have but one inverse.</paragraphs>
-            <newline course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
-          </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="20" id="s20" slide="20" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" chapter_title="Inverse" section_title="Properties of Matrix Inverses">
-            <keywords slide="20" environ="slide" chapter="17" course="Math 1030">
-              <keyword chapter="17" slide="20">Matrix Inverse is Unique</keyword>
-            </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="15" title="Matrix Inverse is Unique" md5="e7cfd964523b1498bcd734d205d17877" course="Math 1030" chapter="17" slide="20" item="17.15">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" serial="" slide="20">Matrix Inverse is Unique</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="15" title="Matrix Inverse is Unique" md5="e7cfd964523b1498bcd734d205d17877" course="Math 1030" chapter="17" slide="19" item="17.15">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" serial="" slide="19">Matrix Inverse is Unique</title>
               <label wbtag="label" name="MIU" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose the square matrix $A$ has an inverse. Then $A^{-1}$ is unique. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="21257fd89359e91fcbf3775ecba2cde5" course="Math 1030" chapter="17" slide="20" of="e7cfd964523b1498bcd734d205d17877">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="21257fd89359e91fcbf3775ecba2cde5" course="Math 1030" chapter="17" slide="19" of="e7cfd964523b1498bcd734d205d17877">
               <newcol course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We will assume that $A$ has two inverses. The hypothesis tells there is at least one. Suppose then that $B$ and $C$ are both inverses for $A$.
 Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
@@ -932,17 +924,17 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
             </substatement>
             <newline course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="21" id="s21" slide="21" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" chapter_title="Inverse" section_title="Properties of Matrix Inverses">
-            <keywords slide="21" environ="slide" chapter="17" course="Math 1030">
-              <keyword chapter="17" slide="21">Socks and Shoes</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="20" id="s20" slide="20" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" chapter_title="Inverse" section_title="Properties of Matrix Inverses">
+            <keywords slide="20" environ="slide" chapter="17" course="Math 1030">
+              <keyword chapter="17" slide="20">Socks and Shoes</keyword>
             </keywords>
             <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs"> When most of us dress in the morning, we put on our socks first, followed by our shoes. In the evening we must then first remove our shoes, followed by our socks. Try to connect the conclusion of the following theorem with this everyday example. </paragraphs>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="16" title="Socks and Shoes" md5="3755d92c6ae0d761677a97cffec62a4f" course="Math 1030" chapter="17" slide="21" item="17.16">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" serial="" slide="21">Socks and Shoes</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="16" title="Socks and Shoes" md5="3755d92c6ae0d761677a97cffec62a4f" course="Math 1030" chapter="17" slide="20" item="17.16">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" serial="" slide="20">Socks and Shoes</title>
               <label wbtag="label" name="SS" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ and $B$ are invertible matrices of size $n$. Then $AB$ is an invertible matrix and $(AB)^{-1}=B^{-1}A^{-1}$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="16a5f7497d532d3fbbc04a9cf6a8a3fd" course="Math 1030" chapter="17" slide="21" of="3755d92c6ae0d761677a97cffec62a4f">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" data-lecture-skip="true" md5="16a5f7497d532d3fbbc04a9cf6a8a3fd" course="Math 1030" chapter="17" slide="20" of="3755d92c6ae0d761677a97cffec62a4f">
               <newcol course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
 \displaystyle(B^{-1}A^{-1})(AB)&amp;\displaystyle=B^{-1}(A^{-1}A)B \\
@@ -962,16 +954,16 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="22" id="s22" slide="22" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" chapter_title="Inverse" section_title="Properties of Matrix Inverses">
-            <keywords slide="22" environ="slide" chapter="17" course="Math 1030">
-              <keyword chapter="17" slide="22">Matrix Inverse of a Matrix Inverse</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="21" id="s21" slide="21" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" chapter_title="Inverse" section_title="Properties of Matrix Inverses">
+            <keywords slide="21" environ="slide" chapter="17" course="Math 1030">
+              <keyword chapter="17" slide="21">Matrix Inverse of a Matrix Inverse</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="17" title="Matrix Inverse of a Matrix Inverse" md5="1a050f32d011db2467b14389220c9790" course="Math 1030" chapter="17" slide="22" item="17.17">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" serial="" slide="22">Matrix Inverse of a Matrix Inverse</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="17" title="Matrix Inverse of a Matrix Inverse" md5="1a050f32d011db2467b14389220c9790" course="Math 1030" chapter="17" slide="21" item="17.17">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" serial="" slide="21">Matrix Inverse of a Matrix Inverse</title>
               <label wbtag="label" name="MIMI" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is an invertible matrix. Then $A^{-1}$ is invertible and $(A^{-1})^{-1}=A$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="cd34dd59e6e30f8c68a074f8857483c7" course="Math 1030" chapter="17" slide="22" of="1a050f32d011db2467b14389220c9790">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" data-lecture-skip="true" md5="cd34dd59e6e30f8c68a074f8857483c7" course="Math 1030" chapter="17" slide="21" of="1a050f32d011db2467b14389220c9790">
               <newcol course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> As with the proof of of the previous example, we examine if $A$ is a suitable inverse for $A^{-1}$ (by definition, the opposite is true).
 \begin{align*}
@@ -986,19 +978,19 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="23" id="s23" slide="23" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" chapter_title="Inverse" section_title="Properties of Matrix Inverses">
-            <keywords slide="23" environ="slide" chapter="17" course="Math 1030">
-              <keyword chapter="17" slide="23">Matrix Inverse of a Transpose</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="22" id="s22" slide="22" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" chapter_title="Inverse" section_title="Properties of Matrix Inverses">
+            <keywords slide="22" environ="slide" chapter="17" course="Math 1030">
+              <keyword chapter="17" slide="22">Matrix Inverse of a Transpose</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="18" title="Matrix Inverse of a Transpose" md5="ae30517ce3adde6fc3a9a4513ef5b5f2" course="Math 1030" chapter="17" slide="23" item="17.18">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" serial="" slide="23">Matrix Inverse of a Transpose</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="18" title="Matrix Inverse of a Transpose" md5="ae30517ce3adde6fc3a9a4513ef5b5f2" course="Math 1030" chapter="17" slide="22" item="17.18">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" serial="" slide="22">Matrix Inverse of a Transpose</title>
               <label wbtag="label" name="MIT" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is an invertible matrix. Then $A^{t}$ is invertible and $(A^{t})^{-1}=(A^{-1})^{t}$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="1245e29900e802a7663ce605ddc05555" course="Math 1030" chapter="17" slide="23" of="ae30517ce3adde6fc3a9a4513ef5b5f2">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" data-lecture-skip="true" md5="1245e29900e802a7663ce605ddc05555" course="Math 1030" chapter="17" slide="22" of="ae30517ce3adde6fc3a9a4513ef5b5f2">
               <newcol course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> As with the proof of Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="SS" wbtag="ref" course="Math 1030" chapter="17" slide="23" src-course="Math 1030" src-chapter="17" src-slide="21" type="Theorem" item="17.16" src-filename="lec17.xml" md5="3755d92c6ae0d761677a97cffec62a4f" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="SS" wbtag="ref" course="Math 1030" chapter="17" slide="22" src-course="Math 1030" src-chapter="17" src-slide="21" type="Theorem" item="17.16" src-filename="lec17.xml" md5="3755d92c6ae0d761677a97cffec62a4f" class="lcref" serial="">
                   <title>Socks and Shoes</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, we see if $(A^{-1})^{t}$ is a suitable inverse for $A^{t}$.
@@ -1018,19 +1010,19 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="24" id="s24" slide="24" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" chapter_title="Inverse" section_title="Properties of Matrix Inverses">
-            <keywords slide="24" environ="slide" chapter="17" course="Math 1030">
-              <keyword chapter="17" slide="24">Matrix Inverse of a Scalar Multiple</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="23" id="s23" slide="23" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" chapter_title="Inverse" section_title="Properties of Matrix Inverses">
+            <keywords slide="23" environ="slide" chapter="17" course="Math 1030">
+              <keyword chapter="17" slide="23">Matrix Inverse of a Scalar Multiple</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="19" title="Matrix Inverse of a Scalar Multiple" md5="b2949f1a05b2d7a8dcf52760e8fb3556" course="Math 1030" chapter="17" slide="24" item="17.19">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" serial="" slide="24">Matrix Inverse of a Scalar Multiple</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="19" title="Matrix Inverse of a Scalar Multiple" md5="b2949f1a05b2d7a8dcf52760e8fb3556" course="Math 1030" chapter="17" slide="23" item="17.19">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" serial="" slide="23">Matrix Inverse of a Scalar Multiple</title>
               <label wbtag="label" name="MISM" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is an invertible matrix and $\alpha$ is a nonzero scalar. Then $\left(\alpha A\right)^{-1}=\frac{1}{\alpha}A^{-1}$ and $\alpha A$ is invertible. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="fd4be9ca79eeaf6420d7f4ace76eb572" course="Math 1030" chapter="17" slide="24" of="b2949f1a05b2d7a8dcf52760e8fb3556">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="fd4be9ca79eeaf6420d7f4ace76eb572" course="Math 1030" chapter="17" slide="23" of="b2949f1a05b2d7a8dcf52760e8fb3556">
               <newcol course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> As with the proof of Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="SS" wbtag="ref" course="Math 1030" chapter="17" slide="24" src-course="Math 1030" src-chapter="17" src-slide="21" type="Theorem" item="17.16" src-filename="lec17.xml" md5="3755d92c6ae0d761677a97cffec62a4f" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="SS" wbtag="ref" course="Math 1030" chapter="17" slide="23" src-course="Math 1030" src-chapter="17" src-slide="21" type="Theorem" item="17.16" src-filename="lec17.xml" md5="3755d92c6ae0d761677a97cffec62a4f" class="lcref" serial="">
                   <title>Socks and Shoes</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, we see if $\frac{1}{\alpha}A^{-1}$ is a suitable inverse for $\alpha A$.
