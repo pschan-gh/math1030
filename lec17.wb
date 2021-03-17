@@ -225,6 +225,7 @@ Then $A$ is invertible if and only if $ad-bc\neq 0$. When $A$ is invertible, the
 @endcol
 @end
 @proof
+@skip
 
 $\Leftarrow$
 @newcol
@@ -441,6 +442,8 @@ Observe this procedure also allows one to see whether a given matrix $A$ in nons
 @endcol
 @end
 @proof
+@skip
+@newcol
 Since $A$ is nonsingular, there exist a sequence of row operations $R_1, R_2, \ldots R_k$
 such that:
 \[
@@ -471,6 +474,7 @@ Applying the rest of the row operations which reduce $A$ to $I_n$, we have:
 \[
 [\underbrace{J_k \cdots J_2 J_1 A}_{I_n} | \underbrace{J_k \cdots J_2J_1}_{J = A^{-1}}]
 \]
+@endcol
 @endcol
 @end
 @slide
@@ -575,10 +579,6 @@ Suppose that $A$ is a square matrix of size $n$. The following are equivalent.
 
 </ol>
 @end
-@newcol
-In the case that $A$ is a nonsingular coefficient matrix of a system of equations, the inverse allows us to very quickly compute the unique solution, for any vector of constants.
-
-@endcol
 @slide
 @thm
 @title{Solution with Nonsingular Coefficient Matrix}
@@ -641,10 +641,6 @@ x_{4}\end{bmatrix}=A^{-1}\begin{bmatrix}1\\
 @endcol
 @end
 @section{Properties of Matrix Inverses}
-
-The inverse of a matrix enjoys some nice properties. We collect a few here. First, a matrix can have but one inverse.
-
-@slide
 @thm
 @title{Matrix Inverse is Unique}
 @label{MIU}
@@ -675,6 +671,7 @@ When most of us dress in the morning, we put on our socks first, followed by our
 Suppose $A$ and $B$ are invertible matrices of size $n$. Then $AB$ is an invertible matrix and $(AB)^{-1}=B^{-1}A^{-1}$.
 @end
 @proof
+@skip
 @newcol
 \begin{align*}
 \displaystyle(B^{-1}A^{-1})(AB)&\displaystyle=B^{-1}(A^{-1}A)B \\
@@ -699,6 +696,7 @@ So the matrix $B^{-1}A^{-1}$ has met all of the requirements to be $AB$’s inve
 Suppose $A$ is an invertible matrix. Then $A^{-1}$ is invertible and $(A^{-1})^{-1}=A$.
 @end
 @proof
+@skip
 @newcol
 As with the proof of of the previous example, we examine if $A$ is a suitable inverse for $A^{-1}$ (by definition, the opposite is true).
 \begin{align*}
@@ -718,6 +716,7 @@ The matrix $A$ has met all the requirements to be the inverse of $A^{-1}$, and s
 Suppose $A$ is an invertible matrix. Then $A^{t}$ is invertible and $(A^{t})^{-1}=(A^{-1})^{t}$.
 @end
 @proof
+@skip
 @newcol
 As with the proof of Theorem   @ref{SS}, we see if $(A^{-1})^{t}$ is a suitable inverse for $A^{t}$.
 \begin{align*}
