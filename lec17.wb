@@ -369,7 +369,7 @@ Suppose $A$ and $B$ are square matrices of size $n$ such that $AB=I_{n}$. Then $
 @end
 
 @proof
-The matrix $I_{n}$ is nonsingular. So $A$ and $B$ are nonsingular by, so in particular $A$ is nonsingular.
+The matrix $I_{n}$ is nonsingular. So by @ref{NPNT} $A$ is nonsingular.
 
 @newcol
 Hence, $A$ is row equivalent to the identity matrix $I_n$,
@@ -487,7 +487,7 @@ Find $A^{-1}$.
 
 @newcol
 \begin{align*}
-\displaystyle [A|\mathbf{e}_{1}|\mathbf{e}_{2}|\mathbf{e}_{3}]=\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
+\displaystyle [A|I_3]=\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
 1&0&-1&0&1&0\\
 0&1&1&0&0&1\\
 \end{array}\right]\xrightarrow{-1R_{1}+R_{2}}\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
@@ -666,11 +666,9 @@ So we conclude that $B$ and $C$ are the same, and cannot be different. So any ma
 @qed
 @endcol
 @end
-@newcol
-When most of us dress in the morning, we put on our socks first, followed by our shoes. In the evening we must then first remove our shoes, followed by our socks. Try to connect the conclusion of the following theorem with this everyday example.
 
-@endcol
 @slide
+When most of us dress in the morning, we put on our socks first, followed by our shoes. In the evening we must then first remove our shoes, followed by our socks. Try to connect the conclusion of the following theorem with this everyday example.
 @thm
 @title{Socks and Shoes}
 @label{SS}
