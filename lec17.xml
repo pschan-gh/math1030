@@ -545,8 +545,12 @@ Because $A$ is singular, there is a nonzero vector $\mathbf{y}$ that is a soluti
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ and $B$ are square matrices of size $n$ such that $AB=I_{n}$. Then $BA=I_{n}$. </paragraphs>
             </statement>
             <newline course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment=""/>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="c55e1bd615df9589e9d641dfb4be0d07" course="Math 1030" chapter="17" slide="11" of="27368124ff49dae27ca58380923786ba">
-              <paragraphs course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs"> The matrix $I_{n}$ is nonsingular. So $A$ and $B$ are nonsingular by, so in particular $A$ is nonsingular.</paragraphs>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="a039e5a51a86cce3adb718c3da492567" course="Math 1030" chapter="17" slide="11" of="27368124ff49dae27ca58380923786ba">
+              <paragraphs course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs"> The matrix $I_{n}$ is nonsingular. So by </paragraphs>
+              <ref environment="substatement" chapter_type="" label="NPNT" wbtag="ref" course="Math 1030" chapter="17" slide="11" src-course="Math 1030" src-chapter="17" src-slide="10" type="Theorem" item="17.6" src-filename="lec17.xml" md5="4a6fa187252d4410af384bca4874b76e" class="lcref" serial="">
+                <title>Nonsingular Product has Nonsingular Terms</title>
+              </ref>
+              <paragraphs course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs"> $A$ is nonsingular.</paragraphs>
               <newline course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="substatement"/>
               <newcol course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence, $A$ is row equivalent to the identity matrix $I_n$,
@@ -601,7 +605,7 @@ which means there are elementary matrices $J_1, J_2, \ldots, J_k$ such that:
 J_k\cdots J_2 J_1 A = I_n
 \]
 It now follows from </paragraphs>
-                  <ref environment="newcol" chapter_type="" label="OSIS" wbtag="ref" course="Math 1030" chapter="17" slide="12" src-course="Math 1030" src-chapter="17" src-slide="21" type="Theorem" item="17.16" src-filename="lec17.xml" md5="27368124ff49dae27ca58380923786ba" class="lcref" serial="">
+                  <ref environment="newcol" chapter_type="" label="OSIS" wbtag="ref" course="Math 1030" chapter="17" slide="12" src-course="Math 1030" src-chapter="17" src-slide="11" type="Theorem" item="17.7" src-filename="lec17.xml" md5="27368124ff49dae27ca58380923786ba" class="lcref" serial="">
                     <title>One-Sided Inverse is Sufficient</title>
                   </ref>
                   <paragraphs course="Math 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> that $A$ is invertible, with:
@@ -683,7 +687,7 @@ J_2[J_1 A | J_1 I_n] = [J_2 J_1 A | J_2J_1]
             <keywords slide="14" environ="slide" chapter="17" course="Math 1030">
               <keyword chapter="17" slide="14">Computing a matrix inverse</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="10" title="Computing a matrix inverse" md5="c15085d439c79dc24c8417cd161ddb3b" course="Math 1030" chapter="17" slide="14" item="17.10">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="10" title="Computing a matrix inverse" md5="642ee932c1b73050fcb74f57819e8c1b" course="Math 1030" chapter="17" slide="14" item="17.10">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="4" subsection="" subsubsection="" serial="" slide="14">Computing a matrix inverse</title>
               <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let
 \begin{align*}
@@ -696,7 +700,7 @@ Find $A^{-1}$.</paragraphs>
               <newline course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="statement"/>
               <newcol course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
-\displaystyle [A|\mathbf{e}_{1}|\mathbf{e}_{2}|\mathbf{e}_{3}]=\left[\begin{array}[]{ccc|ccc}1&amp;1&amp;1&amp;1&amp;0&amp;0\\
+\displaystyle [A|I_3]=\left[\begin{array}[]{ccc|ccc}1&amp;1&amp;1&amp;1&amp;0&amp;0\\
 1&amp;0&amp;-1&amp;0&amp;1&amp;0\\
 0&amp;1&amp;1&amp;0&amp;0&amp;1\\
 \end{array}\right]\xrightarrow{-1R_{1}+R_{2}}\left[\begin{array}[]{ccc|ccc}1&amp;1&amp;1&amp;1&amp;0&amp;0\\
@@ -926,15 +930,13 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
                 </collapse>
               </newcol>
             </substatement>
-            <newcol course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-              <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> When most of us dress in the morning, we put on our socks first, followed by our shoes. In the evening we must then first remove our shoes, followed by our socks. Try to connect the conclusion of the following theorem with this everyday example.</paragraphs>
-              <newline course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
-            </newcol>
+            <newline course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="21" id="s21" slide="21" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" chapter_title="Inverse" section_title="Properties of Matrix Inverses">
             <keywords slide="21" environ="slide" chapter="17" course="Math 1030">
               <keyword chapter="17" slide="21">Socks and Shoes</keyword>
             </keywords>
+            <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs"> When most of us dress in the morning, we put on our socks first, followed by our shoes. In the evening we must then first remove our shoes, followed by our socks. Try to connect the conclusion of the following theorem with this everyday example. </paragraphs>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="16" title="Socks and Shoes" md5="3755d92c6ae0d761677a97cffec62a4f" course="Math 1030" chapter="17" slide="21" item="17.16">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="17" section="5" subsection="" subsubsection="" serial="" slide="21">Socks and Shoes</title>
               <label wbtag="label" name="SS" type="Theorem"/>
@@ -996,7 +998,7 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="1245e29900e802a7663ce605ddc05555" course="Math 1030" chapter="17" slide="23" of="ae30517ce3adde6fc3a9a4513ef5b5f2">
               <newcol course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> As with the proof of Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="SS" wbtag="ref" course="Math 1030" chapter="17" slide="23" src-course="Math 1030" src-chapter="17" src-slide="15" type="Theorem" item="17.11" src-filename="lec17.xml" md5="3755d92c6ae0d761677a97cffec62a4f" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="SS" wbtag="ref" course="Math 1030" chapter="17" slide="23" src-course="Math 1030" src-chapter="17" src-slide="21" type="Theorem" item="17.16" src-filename="lec17.xml" md5="3755d92c6ae0d761677a97cffec62a4f" class="lcref" serial="">
                   <title>Socks and Shoes</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, we see if $(A^{-1})^{t}$ is a suitable inverse for $A^{t}$.
@@ -1028,7 +1030,7 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="fd4be9ca79eeaf6420d7f4ace76eb572" course="Math 1030" chapter="17" slide="24" of="b2949f1a05b2d7a8dcf52760e8fb3556">
               <newcol course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> As with the proof of Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="SS" wbtag="ref" course="Math 1030" chapter="17" slide="24" src-course="Math 1030" src-chapter="17" src-slide="15" type="Theorem" item="17.11" src-filename="lec17.xml" md5="3755d92c6ae0d761677a97cffec62a4f" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="SS" wbtag="ref" course="Math 1030" chapter="17" slide="24" src-course="Math 1030" src-chapter="17" src-slide="21" type="Theorem" item="17.16" src-filename="lec17.xml" md5="3755d92c6ae0d761677a97cffec62a4f" class="lcref" serial="">
                   <title>Socks and Shoes</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="17" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, we see if $\frac{1}{\alpha}A^{-1}$ is a suitable inverse for $\alpha A$.
