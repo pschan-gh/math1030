@@ -11,7 +11,7 @@ Exercises with solutions can be downloaded at
 
 @section{Definition of the determinant}
 
-The <b>determinant</b> is a function that take a square matrix as an input and
+The @keyword{determinant} is a function that take a square matrix as an input and
 produces a scalar as an output.
 
 @newcol
@@ -55,29 +55,44 @@ a_{32}&a_{33}&a_{34}\end{bmatrix}
 @end
 @slide
 @defn
-Suppose $A$ is a square matrix. Then its <b>determinant</b>, $\det\left(A\right)$ (or denoted by $|A|$), is an element of ${\mathbb{R}}^{\hbox{}}$ defined recursively by:
+Suppose $A$ is a square matrix. Then its @keyword{determinant}, $\det\left(A\right)$ (or denoted by $|A|$), is an element of ${\mathbb{R}}^{\hbox{}}$ defined recursively by:
 
 <ol class="ltx_enumerate">
-<li class="ltx_item">
-If $A$ is a $1\times 1$ matrix, then $\det\left(A\right)=\left[A\right]_{11}$.
-</li>
-<li class="ltx_item">
-If $A$ is a matrix of size $n$ with $n\geq 2$, then
+<li class="ltx_item"> If $A$ is a $1\times 1$ matrix, then $\det\left(A\right)=\left[A\right]_{11}$. </li>
+<li class="ltx_item"> If $A$ is a matrix of size $n$ with $n\geq 2$, then
 \begin{align*}
 \displaystyle\det\left(A\right)&\displaystyle=\left[A\right]_{11}\det\left(A\left(1|1\right)\right)-\left[A\right]_{12}\det\left(A\left(1|2\right)\right)+\left[A\right]_{13}\det\left(A\left(1|3\right)\right)- \\
 &\displaystyle\quad\left[A\right]_{14}\det\left(A\left(1|4\right)\right)+\cdots+(-1)^{n+1}\left[A\right]_{1n}\det\left(A\left(1|n\right)\right) \\
-&\displaystyle\quad=\sum_{i=1}^{n}(-1)^{i+1}\left[A\right]_{1i}\det\left(A\left(1|i\right)\right)
-\end{align*}
-</li>
-
-</ol>
+&\displaystyle\quad=\sum_{k=1}^{n}(-1)^{k+1} A_{1k} \cdot \left|A\left(1|k\right)\right|
+\end{align*} </li></ol>
 @end
 @newcol
+\[
+A =
+\left(\begin{array}{cccc|c|ccc}
+* & * & \cdots & * & A_{1k} & * & \cdots & *\\
+\hline
+A_{21} & A_{22} & \cdots & A_{2(k-1)} & * & A_{2(k+1)} & \cdots & A_{2n}\\
+\vdots & \vdots & \vdots & A_{3(k-1)} & * & A_{3(k+1)} & \vdots & A_{3n}\\
+\vdots & \vdots & \vdots & \vdots & * & \vdots & \vdots & \vdots\\
+A_{n1} & \cdots & \cdots & A_{n(k-1)} & * & A_{n(k+1)} & \cdots & A_{nn}
+\end{array}\right),
+\]
+\[
+A(1|k) =\left(\begin{array}{ccccccc}
+A_{21} & A_{22} & \cdots & A_{2(k-1)} & A_{2(k+1)} & \cdots & A_{2n}\\
+\vdots & \vdots & \vdots & A_{3(k-1)} & A_{3(k+1)} & \vdots & A_{3n}\\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+A_{n1} & \cdots & \cdots & A_{n(k-1)} & A_{n(k+1)} & \cdots & A_{nn}
+\end{array}\right)
+\]
+@newcol
 So to compute the determinant of a $5\times 5$ matrix we must build 5 submatrices, each of size $4$. To compute the determinants of each the $4\times 4$ matrices we need to create 4 submatrices each, these now of size $3$ and so on. To compute the determinant of a $10\times 10$ matrix would require computing the determinant of $10!=10\times 9\times 8\times 7\times 6\times 5\times 4\times 3\times 2=3,628,800$
-$1\times 1$ matrices. Fortunately there are <b>better ways</b>).
+$1\times 1$ matrices. Fortunately there are @keyword{better ways}).
 
 @col
 Let us compute the determinant of a reasonably sized matrix by hand.
+@endcol
 @endcol
 @slide
 @eg
@@ -129,6 +144,7 @@ c&d\end{vmatrix}=a\begin{vmatrix}d\end{vmatrix}-b\begin{vmatrix}c\end{vmatrix}=a
 @endcol
 @end
 @slide
+@skip
 @thm
 Suppose
 \begin{align*}
@@ -163,11 +179,14 @@ a_{31}&a_{32}\end{vmatrix} \\
 Suppose that $A$ is a square matrix of size $n$. Then for $1\leq i\leq n$
 \begin{align*}
 \displaystyle\det\left(A\right)&\displaystyle=(-1)^{i+1}\left[A\right]_{i1}\det\left(A\left(i|1\right)\right)+(-1)^{i+2}\left[A\right]_{i2}\det\left(A\left(i|2\right)\right) \\
-&\displaystyle\quad+(-1)^{i+3}\left[A\right]_{i3}\det\left(A\left(i|3\right)\right)+\cdots+(-1)^{i+n}\left[A\right]_{in}\det\left(A\left(i|n\right)\right)
+&\displaystyle\quad+(-1)^{i+3}\left[A\right]_{i3}\det\left(A\left(i|3\right)\right)+\cdots+(-1)^{i+n}\left[A\right]_{in}\det\left(A\left(i|n\right)\right)\\
+&=
+\sum_{k = 1}^n (-1)^i (-1)^k A_{ik}\det\left(A(i|k)\right)
 \end{align*}
-which is known as <b>expansion</b> about row $i$.
+which is known as @keyword{expansion} along the $i$-th row.
 @end
 @proof
+@skip
 @newcol
 Skip the proof. If you are interested, see Beezer, p.266.
 @qed
@@ -179,6 +198,7 @@ Skip the proof. If you are interested, see Beezer, p.266.
 Suppose that $A$ is a square matrix. Then $\det\left(A^{t}\right)=\det\left(A\right)$.
 @end
 @proof
+@skip
 @newcol
 Skip the proof.
 If you are interested, see Beezer, p.267.
@@ -193,9 +213,10 @@ Suppose that $A$ is a square matrix of size $n$. Then for $1\leq j\leq n$
 \displaystyle\det\left(A\right)&\displaystyle=(-1)^{1+j}\left[A\right]_{1j}\det\left(A\left(1|j\right)\right)+(-1)^{2+j}\left[A\right]_{2j}\det\left(A\left(2|j\right)\right) \\
 &\displaystyle\quad+(-1)^{3+j}\left[A\right]_{3j}\det\left(A\left(3|j\right)\right)+\cdots+(-1)^{n+j}\left[A\right]_{nj}\det\left(A\left(n|j\right)\right)
 \end{align*}
-which is known as <b>expansion</b> about column $j$.
+which is known as @keyword{expansion} about column $j$.
 @end
 @proof
+@skip
 @newcol
 Skip the proof.
 If you are interested, see Beezer, p.268.
@@ -249,38 +270,6 @@ Notice how much easier the second computation was. By choosing to expand about t
 When a matrix has all zeros above (or below) the diagonal, exploiting the zeros by expanding about the proper row or column makes computing a determinant insanely easy.
 @endcol
 @slide
-@eg
-Suppose that
-\begin{align*}
-\displaystyle T=\begin{bmatrix}2&3&-1&3&3\\
-0&-1&5&2&-1\\
-0&0&3&9&2\\
-0&0&0&-1&3\\
-0&0&0&0&5\end{bmatrix}
-\end{align*}
-@newcol
-We will compute the determinant of this $5\times 5$ matrix by consistently expanding about the first column for each submatrix that arises and does not have a zero entry multiplying it.
-\begin{align*}
-\displaystyle\det\left(T\right)&\displaystyle=\begin{vmatrix}2&3&-1&3&3\\
-0&-1&5&2&-1\\
-0&0&3&9&2\\
-0&0&0&-1&3\\
-0&0&0&0&5\end{vmatrix} \\
-&\displaystyle=2(-1)^{1+1}\begin{vmatrix}-1&5&2&-1\\
-0&3&9&2\\
-0&0&-1&3\\
-0&0&0&5\end{vmatrix} \\
-&\displaystyle=2(-1)(-1)^{1+1}\begin{vmatrix}3&9&2\\
-0&-1&3\\
-0&0&5\end{vmatrix} \\
-&\displaystyle=2(-1)(3)(-1)^{1+1}\begin{vmatrix}-1&3\\
-0&5\end{vmatrix} \\
-&\displaystyle=2(-1)(3)(-1)(-1)^{1+1}\begin{vmatrix}5\end{vmatrix} \\
-&\displaystyle=2(-1)(3)(-1)(5)=30
-\end{align*}
-@endcol
-@end
-@slide
 @thm
 Suppose $A$ is upper triangular matrix, i.e.
 \begin{align*}
@@ -303,10 +292,10 @@ Then
 \displaystyle\det\left(A\right)&\displaystyle=a_{11}\det\left(\begin{bmatrix}a_{22}&a_{23}&\cdots&a_{2n}\\
 0&a_{33}&\cdots&a_{3n}\\
 \vdots&\vdots&\ddots&\vdots\\
-0&0&\cdots&a_{nn}\end{bmatrix}\right)&xpand along the column  \\
+0&0&\cdots&a_{nn}\end{bmatrix}\right)&\text{ expand along the first column.}  \\
 &\displaystyle=a_{11}a_{22}\det\left(\begin{bmatrix}a_{33}&\cdots&a_{3n}\\
 \vdots&\ddots&\vdots\\
-0&\cdots&a_{nn}\end{bmatrix}\right)&xpand along the column  \\
+0&\cdots&a_{nn}\end{bmatrix}\right)&\text{ expand along the first column.}  \\
 &\displaystyle\cdots \\
 &\displaystyle=a_{11}a_{22}\cdots a_{nn}
 \end{align*}
@@ -315,7 +304,7 @@ Then
 @end
 
 @thm
-@col
+@newcol
 Suppose $A$ is lower triangular matrix, i.e.
 \begin{align*}
 \displaystyle A=\begin{bmatrix}a_{11}&0&0&\cdots&0\\
@@ -330,44 +319,48 @@ Then
 \displaystyle \det\left(A\right)=a_{11}a_{22}\cdots a_{nn}.
 \end{align*}
 @endcol
+@endcol
 @end
 @newcol
-When you consult other texts in your study of determinants, you may run into the terms <b>minor</b> and <b>cofactor</b>, especially in a discussion centered on expansion about rows and columns. We have chosen not to make these definitions formally since we have been able to get along without them. However, informally, a <b>minor</b> is a determinant of a submatrix, specifically $\det\left(A\left(i|j\right)\right)$ and is usually referenced as the minor of $\left[A\right]_{ij}$. A <b>cofactor</b> is a signed minor, specifically the cofactor of $\left[A\right]_{ij}$ is $(-1)^{i+j}\det\left(A\left(i|j\right)\right)$.
+When you consult other texts in your study of determinants, you may run into the terms @keyword{minor} and @keyword{cofactor}, especially in a discussion centered on expansion about rows and columns. We have chosen not to make these definitions formally since we have been able to get along without them. However, informally, a @keyword{minor} is a determinant of a submatrix, specifically $\det\left(A\left(i|j\right)\right)$ and is usually referenced as the minor of $\left[A\right]_{ij}$. A @keyword{cofactor} is a signed minor, specifically the cofactor of $\left[A\right]_{ij}$ is $(-1)^{i+j}\det\left(A\left(i|j\right)\right)$.
 
 @endcol
-@section{Properties of Determinants of Matrces}
-@thm
-@title{Determinant with Zero Row or Column}
-@label{DZRC}
-Suppose that $A$ is a square matrix with a row where every entry is zero, or a column where every entry is zero. Then $\det\left(A\right)=0$.
-@end
-@proof
-@newcol
-Suppose that $A$ is a square matrix of size $n$ and row $i$ has every entry equal to zero. We compute $\det\left(A\right)$ via expansion about row $i$.
+@slide
+@eg
+Suppose
 \begin{align*}
-\displaystyle\det\left(A\right)&\displaystyle=\sum_{j=1}^{n}(-1)^{i+j}\left[A\right]_{ij}\det\left(A\left(i|j\right)\right) \\
-&\displaystyle=\sum_{j=1}^{n}(-1)^{i+j}\,0\,\det\left(A\left(i|j\right)\right)&\text{row $i$ is zero.} \\
-&\displaystyle=\sum_{j=1}^{n}0=0
+\displaystyle T=\begin{bmatrix}2&3&-1&3&3\\
+0&-1&5&2&-1\\
+0&0&3&9&2\\
+0&0&0&-1&3\\
+0&0&0&0&5\end{bmatrix}
 \end{align*}
-@col
-The proof for the case of a zero column is entirely similar, or could be derived by the fact that
-$\det\left(A\right)=\det\left(A^{t}\right)$.
-@qed
-@endcol
-@end
-@slide
-@thm
-@title{Determinant for Row or Column Swap}
-@label{DRCS}
-Suppose that $A$ is a square matrix. Let $B$ be the square matrix obtained from $A$ by interchanging the location of two rows, or interchanging the location of two columns. Then $\det\left(B\right)=-\det\left(A\right)$.
-@end
-@proof
 @newcol
-Skip the proof. If you are interested, see Beezer p.273.
-@qed
+Then, $\det(T) = 2(-1)(3)(-1)(5)=30$.
 @endcol
 @end
-@slide
+<!--@newcol
+We will compute the determinant of this $5\times 5$ matrix by consistently expanding about the first column for each submatrix that arises and does not have a zero entry multiplying it.
+\begin{align*}
+\displaystyle\det\left(T\right)&\displaystyle=\begin{vmatrix}2&3&-1&3&3\\
+0&-1&5&2&-1\\
+0&0&3&9&2\\
+0&0&0&-1&3\\
+0&0&0&0&5\end{vmatrix} \\
+&\displaystyle=2(-1)^{1+1}\begin{vmatrix}-1&5&2&-1\\
+0&3&9&2\\
+0&0&-1&3\\
+0&0&0&5\end{vmatrix} \\
+&\displaystyle=2(-1)(-1)^{1+1}\begin{vmatrix}3&9&2\\
+0&-1&3\\
+0&0&5\end{vmatrix} \\
+&\displaystyle=2(-1)(3)(-1)^{1+1}\begin{vmatrix}-1&3\\
+0&5\end{vmatrix} \\
+&\displaystyle=2(-1)(3)(-1)(-1)^{1+1}\begin{vmatrix}5\end{vmatrix} \\
+&\displaystyle=2(-1)(3)(-1)(5)=30
+\end{align*}
+@endcol-->
+@section{Properties of Determinants of Matrces}
 @thm
 @title{Determinant for Row or Column Multiples}
 @label{DRCM}
@@ -377,24 +370,84 @@ Suppose that $A$ is a square matrix. Let $B$ be the square matrix obtained from 
 @newcol
 Expand along row $i$, then
 \begin{align*}
-\displaystyle \det\left(B\right)=(-1)^{i+1}[B]_{i1}\det\left(B(i|1)\right)+(-1)^{i+1}[B]_{i2}\det\left(B(i|2)\right)+\cdots+(-1)^{i+n}[B]_{in}\det\left(B(i|n)\right)
+\displaystyle \det\left(B\right) &=
+\sum_{k = 1}^n (-1)^{i+1}[B]_{ik}\det\left(B(i|k)\right)\\
+%% (-1)^{i+1}[B]_{i1}\det\left(B(i|1)\right)+(-1)^{i+1}[B]_{i2}\det\left(B(i|2)\right)+\cdots+(-1)^{i+n}[B]_{in}\det\left(B(i|n)\right)
+&= \sum_{k = 1}^n (-1)^{i+1} \alpha [A]_{ik}\det\left(B(i|k)\right)\\
+&= \alpha \sum_{k = 1}^n (-1)^{i+1} [A]_{ik}\det\left(B(i|k)\right)\\
+&= \alpha \det(A).
 \end{align*}
+<!--
 \begin{align*}
 \displaystyle =\alpha((-1)^{i+1}[A]_{i1}\det\left(A(i|1)\right)+(-1)^{i+1}[A]_{i2}\det\left(A(i|2)\right)+\cdots+(-1)^{i+n}[A]_{in}\det\left(A(i|n)\right))=\det\left(A\right).
 \end{align*}
+-->
 @qed
 @endcol
 @end
-
-@thm
-@title{Determinant with Equal Rows or Columns}
-@label{DERC}
-@col
-Suppose that $A$ is a square matrix with two equal rows, or two equal columns. Then $\det\left(A\right)=0$.
+@eg
+@newcol
+\[
+\det\begin{bmatrix} 2 & 2 \\3 & 4\end{bmatrix}
+=
+2 \cdot \det\begin{bmatrix} 1 & 1 \\3 & 4\end{bmatrix} = 2\cdot 1 = 2.
+\]
+@endcol
+@end
+@slide
+@cor
+@title{Determinant with Zero Row or Column}
+@label{DZRC}
+Suppose that $A$ is a square matrix with a row where every entry is zero, or a column where every entry is zero. Then $\det\left(A\right)=0$.
 @end
 @proof
 @newcol
+This follows from @ref{DRCM} with $\alpha = 0$.
+@qed
+@endcol
+@end
+<!--@newcol
+Suppose that $A$ is a square matrix of size $n$ and row $i$ has every entry equal to zero. We compute $\det\left(A\right)$ via expansion about row $i$.
+\begin{align*}
+\displaystyle\det\left(A\right)&\displaystyle=\sum_{j=1}^{n}(-1)^{i+j}\left[A\right]_{ij}\det\left(A\left(i|j\right)\right) \\
+&\displaystyle=\sum_{j=1}^{n}(-1)^{i+j}\,0\,\det\left(A\left(i|j\right)\right)&\text{row $i$ is zero.} \\
+&\displaystyle=\sum_{j=1}^{n}0=0
+\end{align*}
+@col
+The proof for the case of a zero column is entirely similar, or could be derived by the fact that
+$\det\left(A\right)=\det\left(A^{t}\right)$.
+@qed@endcol@end-->
+@slide
+@thm
+@title{Determinant for Row or Column Swap}
+@label{DRCS}
+Suppose that $A$ is a square matrix. Let $B$ be the square matrix obtained from $A$ by interchanging the location of two rows, or interchanging the location of two columns. Then $\det\left(B\right)=-\det\left(A\right)$.
+@end
+@proof
+@skip
+@newcol
+Skip the proof. If you are interested, see Beezer p.273.
+@qed
+@endcol
+@end
+@cor
+@title{Determinant with Equal Rows or Columns}
+@label{DERC}
+@newcol
+Suppose that $A$ is a square matrix with two equal rows, or two equal columns. Then $\det\left(A\right)=0$.
+@endcol
+@end
+@proof
+@newcol
+Switching the two equal rows (or columns) gives the same matrix $A$,
+so by the previous theorem we have:
+\[
+\det(A) = -\det(A)
+\]
+It follows that $\det(A) = 0$.
+<!--@newcol
 Skip the proof. If you are interested, see Beezer p.274.
+-->
 @qed
 @endcol
 @end
@@ -412,6 +465,58 @@ Suppose the row operation is $\alpha R_{i}+R_{j}$, expand along row $j$. For det
 @end
 @slide
 @thm
+Let $\vect{A}_i$, $\vect{B}, \vect{C}$ be row vectors with $n$ components.
+Then:
+\[
+\det \begin{bmatrix}
+\vect{A}_1\\
+\hline
+\vdots\\
+\hline
+\vect{A}_{i-1}\\
+\hline
+\vect{B} + \vect{C}\\
+\hline
+\vect{A}_{i-1}\\
+\hline
+\vdots\\
+\hline
+\vect{A}_{n}
+\end{bmatrix}
+=
+\det \begin{bmatrix}
+\vect{A}_1\\
+\hline
+\vdots\\
+\hline
+\vect{A}_{i-1}\\
+\hline
+\vect{B}\\
+\hline
+\vect{A}_{i-1}\\
+\hline
+\vdots\\
+\hline
+\vect{A}_{n}
+\end{bmatrix}
++
+\det \begin{bmatrix}
+\vect{A}_1\\
+\hline
+\vdots\\
+\hline
+\vect{A}_{i-1}\\
+\hline
+\vect{C}\\
+\hline
+\vect{A}_{i-1}\\
+\hline
+\vdots\\
+\hline
+\vect{A}_{n}
+\end{bmatrix}
+\]
+<!--
 \begin{align*}
 \displaystyle \begin{vmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
 \vdots&\vdots&\cdots&\vdots\\
@@ -436,8 +541,18 @@ a_{i+1,1}&a_{i+1,2}&\cdots&a_{i+1,n}\\
 a_{n1}&a_{n2}&\cdots&a_{nn}\\
 \end{vmatrix}
 \end{align*}
+-->
 @newcol
-Similarly
+Similarly, for column vectors $\vect{A}_i$, $\vect{B}, \vect{C}$ in $\mathbb{R}^n$,
+we have:
+\begin{multline*}
+\det \left[\vect{A}_1|\cdots|\vect{A}_{i -  1}|\vect{B} + \vect{C}|\vect{A}_{i + 1}|\cdots|\vect{A}_n\right]
+=
+\det \left[\vect{A}_1|\cdots|\vect{A}_{i -  1}|\vect{B}|\vect{A}_{i + 1}|\cdots|\vect{A}_n\right]
+\\+
+\det \left[\vect{A}_1|\cdots|\vect{A}_{i -  1}|\vect{C}|\vect{A}_{i + 1}|\cdots|\vect{A}_n\right]
+\end{multline*}
+<!--
 \begin{align*}
 \displaystyle \begin{vmatrix}a_{11}&\cdots&a_{1,i-1}&b_{1}+c_{1}&a_{1,i+1}&\cdots&a_{1n}\\
 a_{21}&\cdots&a_{2,i-1}&b_{2}+c_{2}&a_{2,i+1}&\cdots&a_{2n}\\
@@ -453,6 +568,7 @@ a_{21}&\cdots&a_{2,i-1}&c_{2}&a_{2,i+1}&\cdots&a_{2n}\\
 \vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
 a_{n1}&\cdots&a_{n,i-1}&c_{n}&a_{n,i+1}&\cdots&a_{nn}\end{vmatrix}
 \end{align*}
+-->
 @endcol
 @end
 @proof
@@ -463,7 +579,7 @@ Expand along row $i$ (or column $i$).
 @end
 @slide
 @eg
-Suppose we desire the determinant of the $4\times 4$ matrix
+Suppose we want to compute the determinant of the $4\times 4$ matrix
 \begin{align*}
 \displaystyle A=\begin{bmatrix}2&0&2&3\\
 1&3&-1&1\\
@@ -477,75 +593,51 @@ We will perform a sequence of row operations on this matrix, shooting for an upp
 1&3&-1&1\\
 -1&1&-1&2\\
 3&5&4&0\end{vmatrix}
-\end{align*}
-\begin{align*}
-\displaystyle =-\begin{vmatrix}1&3&-1&1\\
+\displaystyle &=-\begin{vmatrix}1&3&-1&1\\
 2&0&2&3\\
 -1&1&-1&2\\
 3&5&4&0\end{vmatrix}\qquad(R_{1}\leftrightarrow R_{2})
-\end{align*}
-\begin{align*}
-\displaystyle =-\begin{vmatrix}1&3&-1&1\\
+\\&=-\begin{vmatrix}1&3&-1&1\\
 0&-6&4&1\\
 -1&1&-1&2\\
 3&5&4&0\end{vmatrix}\qquad(-2R_{1}+R_{2})
-\end{align*}
-\begin{align*}
-\displaystyle =-\begin{vmatrix}1&3&-1&1\\
+\\&=-\begin{vmatrix}1&3&-1&1\\
 0&-6&4&1\\
 0&4&-2&3\\
 3&5&4&0\end{vmatrix}\qquad(1R_{1}+R_{3})
-\end{align*}
-\begin{align*}
-\displaystyle =-\begin{vmatrix}1&3&-1&1\\
+\\&=-\begin{vmatrix}1&3&-1&1\\
 0&-6&4&1\\
 0&4&-2&3\\
 0&-4&7&-3\end{vmatrix}\qquad(-3R_{1}+R_{4})
-\end{align*}
-\begin{align*}
-\displaystyle =-\begin{vmatrix}1&3&-1&1\\
+\\&=-\begin{vmatrix}1&3&-1&1\\
 0&-2&2&4\\
 0&4&-2&3\\
 0&-4&7&-3\end{vmatrix}\qquad(1R_{3}+R_{2})
-\end{align*}
-\begin{align*}
-\displaystyle =2\begin{vmatrix}1&3&-1&1\\
+\\&=2\begin{vmatrix}1&3&-1&1\\
 0&1&-1&-2\\
 0&4&-2&3\\
 0&-4&7&-3\end{vmatrix}\qquad(-\frac{1}{2}R_{2})
-\end{align*}
-\begin{align*}
-\displaystyle =2\begin{vmatrix}1&3&-1&1\\
+\\&=2\begin{vmatrix}1&3&-1&1\\
 0&1&-1&-2\\
 0&0&2&11\\
 0&-4&7&-3\end{vmatrix}\qquad(-4R_{2}+R_{3})
-\end{align*}
-\begin{align*}
-\displaystyle =2\begin{vmatrix}1&3&-1&1\\
+\\&=2\begin{vmatrix}1&3&-1&1\\
 0&1&-1&-2\\
 0&0&2&11\\
 0&0&3&-11\end{vmatrix}\qquad(-4R_{2}+R_{4})
-\end{align*}
-\begin{align*}
-\displaystyle =2\begin{vmatrix}1&3&-1&1\\
+\\&=2\begin{vmatrix}1&3&-1&1\\
 0&1&-1&-2\\
 0&0&2&11\\
 0&0&1&-22\end{vmatrix}\qquad(-1R_{3}+R_{4})
-\end{align*}
-\begin{align*}
-\displaystyle =2\begin{vmatrix}1&3&-1&1\\
+\\&=2\begin{vmatrix}1&3&-1&1\\
 0&1&-1&-2\\
 0&0&0&55\\
 0&0&1&-22\end{vmatrix}\qquad(-2R_{4}+R_{3})
-\end{align*}
-\begin{align*}
-\displaystyle =-2\begin{vmatrix}1&3&-1&1\\
+\\&=-2\begin{vmatrix}1&3&-1&1\\
 0&1&-1&-2\\
 0&0&1&-22\\
 0&0&0&55\end{vmatrix}\qquad(R_{3}\leftrightarrow R_{4})
-\end{align*}
-\begin{align*}
-\displaystyle =-2\times 1\times 1\times 1\times 55=-110.
+\\&=-2\times 1\times 1\times 1\times 55=-110.
 \end{align*}
 @endcol
 @end
@@ -750,8 +842,7 @@ a_{31}&a_{32}&a_{33}\\
 \end{align*}
 \begin{align*}
 \displaystyle =(b_{11}b_{22}-b_{21}b_{12})\det\left(A\right)=\det\left(A\right)\det\left(B\right).
-\end{align*}
-<b>Remark</b>: The result is also valid when $A$ is a square matrix of size $n$ and $B$ is a square matrix of size $m$.
+\end{align*} @keyword{Remark}: The result is also valid when $A$ is a square matrix of size $n$ and $B$ is a square matrix of size $m$.
 @endcol
 @end
 @eg
@@ -805,7 +896,7 @@ Let $A_{n}$ be a $n\times n$ matrix
 \end{align*}
 Find $\det(A_{n})$.
 
-@col
+@newcol
 Add columns $C_{2},C_{3},\ldots,C_{n}$ to $C_{1}$:
 \[
 \displaystyle \det(A_{n})
@@ -816,8 +907,7 @@ Add columns $C_{2},C_{3},\ldots,C_{n}$ to $C_{1}$:
 %% 1\\
 %% 1\\
 %% 1\end{array}}
-%% \smash{\underbrace{
-\begin{array}[]{ccccc}x+(n-1)&1&1&\cdots&1\\
+%% \smash{\underbrace{\begin{array}[]{ccccc}x+(n-1)&1&1&\cdots&1\\
 x+(n-1)&x&1&\cdots&1\\
 x+(n-1)&1&x&\cdots&1\\
 \vdots&\vdots&\vdots&\ddots&1\\
@@ -868,18 +958,12 @@ Let $B_{n}$ be a $n\times n$ matrix in the form
 \vdots&\vdots&\vdots&&\vdots&\vdots\\
 0&0&0&\cdots&1-a_{n-1}&a_{n}\\
 0&0&0&\cdots&-1&1-a_{n}\end{bmatrix}
-\end{align*}
-<ol class="ltx_enumerate">
-<li class="ltx_item">
-Show that $\det(B_{n})=\det(B_{n-1})+(-1)^{n}(a_{1}a_{2}\cdots a_{n})$.
-</li>
-<li class="ltx_item">
-Hence show $\det(B_{n})=1+\sum_{i=1}^{n}(-1)^{i}(a_{1}a_{2}\cdots a_{i})$.
-</li>
-</ol>
+\end{align*} <ol class="ltx_enumerate">
+<li class="ltx_item"> Show that $\det(B_{n})=\det(B_{n-1})+(-1)^{n}(a_{1}a_{2}\cdots a_{n})$. </li>
+<li class="ltx_item"> Hence show $\det(B_{n})=1+\sum_{i=1}^{n}(-1)^{i}(a_{1}a_{2}\cdots a_{i})$. </li></ol>
 @end
 @sol
-@col
+@newcol
 <ol class="ltx_enumerate">
 <li class="ltx_item">
 @col
@@ -947,11 +1031,10 @@ The formula is true for $n=k+1$.
 
 <strong>Step 3</strong>:
 @newcol
-By mathematical induction, the formula is valid for all positive integer. <b>Explanation</b>: the formula is true for $k=1$, then it is true for $k+1=2$, so true for $k+1=3$, etc. Hence true for all integers.
-@endcol
-</li>
-</ol>
+By mathematical induction, the formula is valid for all positive integer. @keyword{Explanation}: the formula is true for $k=1$, then it is true for $k+1=2$, so true for $k+1=3$, etc. Hence true for all integers.
+@endcol</li></ol>
 @qed
+@endcol
 @end
 @slide
 @eg
@@ -967,19 +1050,14 @@ Let $C_{n}$ be a $n\times n$ matrix given by
 -a&-a&x&\cdots&a&a\\
 \vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
 -a&-a&-a&\cdots&-a&x\end{array}}_{n}}\right]\right\}\,n
-\end{align*}
-<ol class="ltx_enumerate">
-<li class="ltx_item">
-Show that $\det(C_{n})=a(x+a)^{n-1}+(x-a)\det(C_{n-1})$.
-</li>
-<li class="ltx_item">
-Show that $\det(C_{n})=\frac{1}{2}((x+a)^{n}+(x-a)^{n})$.
-</li>
+\end{align*} <ol class="ltx_enumerate">
+<li class="ltx_item"> Show that $\det(C_{n})=a(x+a)^{n-1}+(x-a)\det(C_{n-1})$. </li>
+<li class="ltx_item"> Show that $\det(C_{n})=\frac{1}{2}((x+a)^{n}+(x-a)^{n})$. </li>
 
 </ol>
 @end
 @sol
-@col
+@newcol
 <ol class="ltx_enumerate">
 <li class="ltx_item">
 @col
@@ -1009,8 +1087,7 @@ Then $\det(C_{n})=$
 %% 1\\
 %% 1\\
 %% 1\\
-%% 1\end{array}}\smash{\underbrace{
-%%
+%% 1\end{array}}\smash{\underbrace{%%
 \begin{array}[]{cccccc}x&a&a&\cdots&a&a\\
 -a&x&a&\cdots&a&a\\
 -a&-a&x&\cdots&a&a\\
@@ -1025,8 +1102,7 @@ Then $\det(C_{n})=$
 %% 1\\
 %% 1\\
 %% 1\\
-%% 1\end{array}}\smash{\underbrace{
-\begin{array}[]{cccccc}x&a&a&\cdots&a&0\\
+%% 1\end{array}}\smash{\underbrace{\begin{array}[]{cccccc}x&a&a&\cdots&a&0\\
 -a&x&a&\cdots&a&0\\
 -a&-a&x&\cdots&a&0\\
 \vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
@@ -1044,8 +1120,7 @@ it is equal to:
 %% 1\\
 %% 1\\
 %% 1\\
-%% 1\end{array}}\smash{\underbrace{
-\begin{array}[]{cccccc}x&a&a&\cdots&a&1\\
+%% 1\end{array}}\smash{\underbrace{\begin{array}[]{cccccc}x&a&a&\cdots&a&1\\
 -a&x&a&\cdots&a&1\\
 -a&-a&x&\cdots&a&1\\
 \vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
@@ -1065,8 +1140,7 @@ the determinant above is equal to:
 %% 1\\
 %% 1\\
 %% 1\\
-%% 1\end{array}}\smash{\underbrace{
-\begin{array}[]{cccccc}x+a&2a&2a&\cdots&2a&0\\
+%% 1\end{array}}\smash{\underbrace{\begin{array}[]{cccccc}x+a&2a&2a&\cdots&2a&0\\
 0&x+a&2a&\cdots&2a&0\\
 0&0&x+a&\cdots&2a&0\\
 \vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
@@ -1082,8 +1156,7 @@ the determinant above is equal to:
 %% 1\\
 %% 1\\
 %% 1\end{array}
-%% }\smash{\underbrace{
-\begin{array}[]{cccccc}x+a&2a&2a&\cdots&2a\\
+%% }\smash{\underbrace{\begin{array}[]{cccccc}x+a&2a&2a&\cdots&2a\\
 0&x+a&2a&\cdots&2a\\
 0&0&x+a&\cdots&2a\\
 \vdots&\vdots&\vdots&\vdots&\vdots\\
@@ -1102,14 +1175,12 @@ the determinant above is equal to:
 For the second determinant,
 \begin{align*}
 \displaystyle \left|
-%% \vphantom{
-%% \begin{array}[]{c}1\\
+%% \vphantom{%% \begin{array}[]{c}1\\
 %% 1\\
 %% 1\\
 %% 1\\
 %% 1\\
-%% 1\end{array}}\smash{\underbrace{
-\begin{array}[]{cccccc}x&a&a&\cdots&a&0\\
+%% 1\end{array}}\smash{\underbrace{\begin{array}[]{cccccc}x&a&a&\cdots&a&0\\
 -a&x&a&\cdots&a&0\\
 -a&-a&x&\cdots&a&0\\
 \vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
@@ -1124,8 +1195,7 @@ For the second determinant,
 %% 1\\
 %% 1\\
 %% 1\\
-%% 1\end{array}}\smash{\underbrace{
-\begin{array}[]{ccccc}x&a&a&\cdots&a\\
+%% 1\end{array}}\smash{\underbrace{\begin{array}[]{ccccc}x&a&a&\cdots&a\\
 -a&x&a&\cdots&a\\
 -a&-a&x&\cdots&a\\
 \vdots&\vdots&\vdots&\vdots&\vdots\\
@@ -1143,8 +1213,7 @@ Adding the results
 \begin{align*}
 \displaystyle \det(C_{n})=a(x+a)^{n-1}+(x-a)\det(C_{n-1}).
 \end{align*}
-@endcol
-</li>
+@endcol</li>
 <li class="ltx_item">
 @col
 We will prove the formula by induction.
@@ -1177,9 +1246,8 @@ So the formula is valid for $n=k+1$.
 @newcol
 By mathematical induction, the formula is valid for all integers $n\geq 1$.
 @endcol
-@qed
-</li>
-</ol>
+@qed</li></ol>
+@endcol
 @end
 @slide
 @eg
@@ -1192,20 +1260,14 @@ a_{1}^{2}&a_{2}^{2}&a_{3}^{2}&\cdots&a_{n}^{2}\\
 \vdots&\vdots&\vdots&\vdots&\vdots\\
 a_{1}^{n-2}&a_{2}^{n-2}&a_{3}^{n-2}&\cdots&a_{n}^{n-2}\\
 a_{1}^{n-1}&a_{2}^{n-1}&a_{3}^{n-1}&\cdots&a_{n}^{n-1}\end{bmatrix}
-\end{align*}
-<ol class="ltx_enumerate">
-<li class="ltx_item">
-$\det(V_{n})=\det(V_{n-1})\prod_{i=1}^{n-1}(a_{n}-a_{i})$.
-</li>
-<li class="ltx_item">
-$\det(V_{n})=\prod_{1\leq i < j\leq n}(a_{j}-a_{i})$ for $n\geq 2$.
-</li>
-</ol>
+\end{align*} <ol class="ltx_enumerate">
+<li class="ltx_item"> $\det(V_{n})=\det(V_{n-1})\prod_{i=1}^{n-1}(a_{n}-a_{i})$. </li>
+<li class="ltx_item"> $\det(V_{n})=\prod_{1\leq i < j\leq n}(a_{j}-a_{i})$ for $n\geq 2$. </li></ol>
 @end
 @sol
 <ol class="ltx_enumerate">
 <li class="ltx_item">
-@col
+@newcol
 Performing the row operations:
 \[
 -a_{n}R_{n-1}+R_{n}, -a_{n}R_{n-2}+R_{n-1}, \ldots, -a_{n}R_{1}+R_{2},
@@ -1241,9 +1303,9 @@ a_{1}^{n-2}&a_{2}^{n-2}&a_{3}^{n-2}&\cdots&a_{n-1}^{n-2}\\
 \begin{align*}
 \displaystyle =(a_{n}-a_{1})\cdots(a_{n}-a_{n-1})\det(V_{n-1})=\det(V_{n-1})\prod_{i=1}^{n-1}(a_{n}-a_{i}).
 \end{align*}
-</li>
+@endcol</li>
 <li class="ltx_item">
-@col
+@newcol
 Again by mathematical induction:
 
 <strong>Step 1</strong>
@@ -1259,558 +1321,6 @@ So the formula is valid for $n=2$.
 
 <strong>Step 2</strong>
 @newcol
-Suppose the statement is true for $n=k$, i.e.
-\begin{align*}
-\displaystyle \det(V_{k})=\prod_{1\leq i<j\leq k}(a_{j}-a_{i}).
-\end{align*}
-@col
-Then for $n=k+1$
-\begin{align*}
-\displaystyle \det(V_{k+1})=\det(V_{k})\prod_{i=1}^{k}(a_{k+1}-a_{i})
-\end{align*}
-\begin{align*}
-\displaystyle =\prod_{1\leq i<j\leq k}(a_{j}-a_{i})\prod_{i=1}^{k}(a_{k+1}-a_{i})
-\end{align*}
-\begin{align*}
-\displaystyle =\prod_{1\leq i<j\leq k+1}(a_{j}-a_{i})
-\end{align*}
-\begin{align*}
-\displaystyle =\prod_{1\leq 1<j\leq n}(a_{j}-a_{i}).
-\end{align*}
-@col
-The formula is valid for $n=k+1$.
 @endcol
-
-<strong>Step 3</strong>
-@newcol
-By mathematical induction, the formula is valid for all $n\geq 2$. Or without mathematical induction, you can simple repeat the steps again and again until $n=2$.
-@endcol
-</li>
-</ol>
-@qed
+@endcol</li></ol>
 @end
-
-@section{More properties of determinants}
-@cor
-<ol class="ltx_enumerate">
-<li class="ltx_item">
-Let $I_{n}\xrightarrow{R_{i}\leftrightarrow R_{j}}J$, then $\det\left(J\right)=-1$.
-</li>
-<li class="ltx_item">
-Let $I_{n}\xrightarrow{\alpha R_{i}}J$, then $\det\left(J\right)=\alpha$.
-</li>
-<li class="ltx_item">
-Let $I_{n}\xrightarrow{\alpha R_{i}+R_{j}}J$, then $\det\left(J\right)=1$.
-</li>
-
-</ol>
-@end
-@slide
-@cor
-@label{cor:detBJA}
-Let $A$ be a square matrix, apply row operation on $A$ and obtain a new matrix $B$.
-Let $J$ be obtained by applying the same row operation on $I_{n}$. By lecture 13, $B=JA$.
-Then $\det\left(B\right)=\det\left(JA\right)=\det\left(J\right)\det\left(A\right)$.
-@end
-@slide
-Recall that an $n\times n$ square matrix $A$ is nonsingular if and only if $A$ is row equivalent to $I_n$.
-
-@col
-By @ref{thm:ROEM},
-this is in turn equivalent to the existence of a sequence of
-"elementary matrices" $J_i$, corresponding to row operations,
-such that:
-\[
-A = J_1 J_2 \cdots J_k I_n.
-\]
-@col
-Applying the previous corollary repeatedly,
-we have:
-\[
-\det(A) = \det(J_1) \det(J_2) \cdots \det(J_k) \det(I_n).
-\]
-@col
-Since, each $\det(J_i) \neq 0$, we have:
-@endcol
-@thm
-@label{thm:nonsingulardet}
-@col
-$A$ is nonsingular if and only if $\det\left(A\right)\neq 0$.
-@end
-<!-- @proof
-@newcol
-Suppose $A$ is nonsingular, then $A$ is invertible, so
-\begin{align*}
-\displaystyle AA^{-1}=I_{n}.
-\end{align*}
-\begin{align*}
-\displaystyle \det\left(A\right)\det\left(A^{-1}\right)=\det\left(I_{n}\right)=1.&
-\end{align*}
-@col
-So $\det\left(A\right)$ is nonzero. Next suppose $\det\left(A\right)\neq 0$, we want to show that $A$ is nonsingular.
-If $A$ is singular, then by lecture 13, there exists an invertible matrix $J$, such that $JA=B$,
-where $B$ is of RREF with rank $< n$. Hence $B$ has a zero row. Therefore $\det\left(B\right)=0$.
-Because $J$ is invertible, $\det\left(J\right)\neq 0$. So $\det\left(A\right)=0$. Contradiction.
-@qed
-@endcol
-@end -->
-@slide
-@thm
-@label{thm:DETMULT}
-If $A$ and $B$ are square matrices. Then
-\begin{align*}
-\displaystyle \det\left(AB\right)=\det\left(A\right)\det\left(B\right).
-\end{align*}
-@end
-@proof
-@col
-Suppose $A$ or $B$ is singular.
-Then, accordingly $\det(A)$ or $\det(B)$ is equal to zero.
-By @ref{NPNT} the matrix $AB$ is also singular, hence:
-\[
-\det(AB) = 0 = \det(A)\det(B).
-\]
-
-@col
-If both $A$ and $B$ are nonsingular,
-then there are elementary matrices, $J_i$ and $K_i$,
-coresponding to row operations, such that:
-\[
-A = J_1 J_2\cdots J_k I_n,
-\]
-\[
-B = K_1 K_2\cdots K_l I_n.
-\]
-This implies that:
-\[
-AB = (J_1 J_2\cdots J_k)(K_1 K_2\cdots K_l) I_n
-\]
-@col
-By @ref{cor:detBJA}, we have:
-\begin{align*}
-\det(A) &= \det(J_1)\det(J_2)\cdots\det(J_k),\\
-\det(B) &= \det(K_1)\det(K_2)\cdots\det(K_l),\\
-\det(AB) &= \det(J_1)\det(J_2)\cdots\det(J_k)\\
-&\quad\quad\cdot \det(K_1)\det(K_2)\cdots\det(K_l).
-\end{align*}
-Hence, $\det(AB) = \det(A)\det(B)$.
-@qed
-@end
-@slide
-@eg
-Find $x$ such that
-\begin{align*}
-\displaystyle A=\begin{bmatrix}2&1&0&1\\
-0&1&1&1\\
-1&0&0&x\\
-0&2&3&1\\
-\end{bmatrix}
-\end{align*}
-is singular.Expand along the first column
-\begin{align*}
-\displaystyle \det\left(A\right)=2\begin{vmatrix}1&1&1\\
-0&0&x\\
-2&3&1\end{vmatrix}+\begin{vmatrix}1&0&1\\
-1&1&1\\
-2&3&1\end{vmatrix}.
-\end{align*}
-@newcol
-Expand along the second row
-\begin{align*}
-\displaystyle \begin{vmatrix}1&1&1\\
-0&0&x\\
-2&3&1\end{vmatrix}=-x\begin{vmatrix}1&1\\
-2&3\end{vmatrix}=-x.
-\end{align*}
-@col
-Finally
-\begin{align*}
-\displaystyle \begin{vmatrix}1&0&1\\
-1&1&1\\
-2&3&1\end{vmatrix}=-1.
-\end{align*}
-@col
-Hence
-\begin{align*}
-\displaystyle \det\left(A\right)=-2x-1.
-\end{align*}
-@col
-It is singular if and only if $\det\left(A\right)=0$ if and only if $x=-\frac{1}{2}$.
-@endcol
-@end
-@eg
-Let
-\begin{align*}
-\displaystyle A=\begin{bmatrix}a&b&c&d\\
-e&0&0&0\\
-f&0&0&0\\
-g&0&0&0\end{bmatrix}
-\end{align*}
-find $\det\left(A\right)$.
-
-<strong>Method 1</strong>
-@newcol
-\begin{align*}
-\displaystyle a\begin{vmatrix}0&0&0\\
-0&0&0\\
-0&0&0\end{vmatrix}-b\begin{vmatrix}e&0&0\\
-f&0&0\\
-g&0&0\end{vmatrix}+c\begin{vmatrix}e&0&0\\
-f&0&0\\
-g&0&0\end{vmatrix}-d\begin{vmatrix}e&0&0\\
-f&0&0\\
-g&0&0\end{vmatrix}
-\end{align*}
-@col
-In each of the above matrices, there is one zero columns, so all the determinants of the $3\times 3$ submatrices must be zero.
-Therefore the above is
-\begin{align*}
-\displaystyle a0-b0+c0-d0=0.
-\end{align*}
-@endcol
-
-<strong>Method 2</strong>
-@newcol
-If $c=0$, then column 3 is the zero column, so $\det\left(A\right)=0$. Otherwise
-\begin{align*}
-\displaystyle A\begin{bmatrix}0\\
-1\\
--b/c\\
-0\end{bmatrix}=\mathbf{0}.
-\end{align*}
-@col
-So $A$ is singular and hence $\det\left(A\right)=0$.
-@endcol
-@end
-@slide
-@thm
-If $\det\left(A\right)\neq 0$, then $A$ is invertible and
-\begin{align}
-\label{A-1}
-\displaystyle \det\left(A^{-1}\right)=\frac{1}{\det\left(A\right)}.
-\end{align}
-@end
-@proof
-@newcol
-It follows from @ref{thm:nonsingulardet} that $A^{-1}$ exists.
-The identity $\eqref{A-1}$ then follows from:
-\[
-AA^{-1} = I_n
-\]
-and @ref{thm:DETMULT}.
-@qed
-@endcol
-@end
-@slide
-@thm
-@title{Cramer’s rule}
-Let $A$ be a invertible square matrix of size $n$. Let $\mathbf{b}\in{\mathbb{R}}^{n}$.
-Let $M_{k}$ be the square matrix by replacing the $k$-th column of $A$ by $\mathbf{b}$.
-If
-\begin{align*}
-\displaystyle \mathbf{x}=\begin{bmatrix}x_{1}\\
-x_{2}\\
-\vdots\\
-x_{n}\end{bmatrix}
-\end{align*}
-is a solution of $A\mathbf{x}=\mathbf{b}$, then
-\begin{align*}
-\displaystyle x_{k}=\frac{\det\left(M_{k}\right)}{\det\left(A\right)}
-\end{align*}
-where $k=1,\ldots,n$.
-@end
-@proof
-@newcol
-Because $A$ is invertible, $A\mathbf{x}=\mathbf{b}$ has a unique solution. Let $X_{k}$ be matrix obtained from the identity matrix $I_{n}$ by replacing column $k$ with $\mathbf{x}$.
-Then
-\begin{align*}
-\displaystyle A\mathbf{e}_{i}=\mathbf{A}_{i}\text{ if $i\neq k$}\qquad A\mathbf{x}=\mathbf{b}\text{ if $i=k$.}
-\end{align*}
-@col
-Hence
-\begin{align*}
-\displaystyle AX_{k}=M_{k}.
-\end{align*}
-@col
-Expanding $X_{k}$ along the row $k$, we have
-\begin{align*}
-\displaystyle \det\left(X_{k}\right)=x_{k}\det\left(I_{n-1}\right)=x_{k}.
-\end{align*}
-@col
-So
-\begin{align*}
-\displaystyle \det\left(M_{k}\right)=\det\left(AX_{k}\right)=\det\left(A\right)\det\left(X_{k}\right)=\det\left(A\right)x_{k}.
-\end{align*}
-@col
-Therefore
-\begin{align*}
-\displaystyle x_{k}=\frac{\det\left(M_{k}\right)}{\det\left(A\right)}.
-\end{align*}
-@qed
-@endcol
-@end
-@slide
-@eg
-Using Carmaer’s rule to solve the following system of linear equation.
-\begin{align*}
-\displaystyle x_{1}+2x_{2}+3x_{3}=2 \\
-\displaystyle x_{1}\qquad+x_{3}=3 \\
-\displaystyle x_{1}+x_{2}-x_{3}=1
-\end{align*}
-@newcol
-Let
-\begin{align*}
-\displaystyle A=\begin{bmatrix}1&2&3\\
-1&0&1\\
-1&1&-1\end{bmatrix}\qquad\mathbf{b}=\begin{bmatrix}2\\
-3\\
-1\end{bmatrix}.
-\end{align*}
-\begin{align*}
-\displaystyle \det\left(A\right)=6.
-\end{align*}
-\begin{align*}
-\displaystyle M_{1}=\begin{bmatrix}2&2&3\\
-3&0&1\\
-1&1&-1\end{bmatrix},\det\left(M_{1}\right)=15.
-\end{align*}
-\begin{align*}
-\displaystyle x_{1}=\frac{\det\left(M_{1}\right)}{\det\left(A\right)}=\frac{15}{6}=\frac{5}{2}.
-\end{align*}
-\begin{align*}
-\displaystyle M_{2}=\begin{bmatrix}1&2&3\\
-1&3&1\\
-1&1&-1\end{bmatrix},\det\left(M_{2}\right)=-6.
-\end{align*}
-\begin{align*}
-\displaystyle x_{2}=\frac{\det\left(M_{2}\right)}{\det\left(A\right)}=\frac{-6}{6}=-1.
-\end{align*}
-\begin{align*}
-\displaystyle M_{3}=\begin{bmatrix}1&2&2\\
-1&0&3\\
-1&1&1\end{bmatrix},\det\left(M_{3}\right)=3.
-\end{align*}
-\begin{align*}
-\displaystyle x_{3}=\frac{\det\left(M_{3}\right)}{\det\left(A\right)}=\frac{3}{6}=\frac{1}{2}.
-\end{align*}
-@col
-Thus
-\begin{align*}
-\displaystyle \begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\end{bmatrix}=\begin{bmatrix}\frac{5}{2}\\
--1\\
-\frac{1}{2}\end{bmatrix}
-\end{align*}
-is a solution.
-@endcol
-@end
-@slide
-@thm
-@title{Formula for inverse}
-Suppose $A$ is an invertible matrix. Then
-\begin{align*}
-\displaystyle [A^{-1}]_{ji}=\frac{(-1)^{i+j}\det\left(A(i|j)\right)}{\det\left(A\right)}.
-\end{align*}
-@newcol
-Pay attention to the order of the indexes $i$ and $j$!
-@endcol
-@end
-@proof
-@newcol
-Let $B=A^{-1}$.
-Let $\mathbf{B}_{i}$ be the $i$-th column of $B$. Then
-\begin{align*}
-\displaystyle A\mathbf{B}_{i}=\mathbf{e}_{i}.
-\end{align*}
-@col
-The vector $\mathbf{B}_{i}$ is a solution of $A\mathbf{x}=\mathbf{e}_{i}$.
-We can use the previous theorem to find $\mathbf{B}_{i}$.
-Let $M_{j}$ be the square matrix by replacing the $j$-th column of $A$ by $\mathbf{e}_{i}$.
-Expand along the $j$-th column of $M_{j}$, we have
-\begin{align*}
-\displaystyle \det\left(M_{j}\right)=(-1)^{i+j}\det\left(M_{j}(i|j)\right)=(-1)^{i+j}\det\left(A(i|j)\right).
-\end{align*}
-@col
-Then the $j$-th coordinate of $\mathbf{B}_{i}$ is given by
-\begin{align*}
-\displaystyle B_{ji}=[\mathbf{B}_{i}]_{j}=\frac{\det\left(M_{j}\right)}{{\det\left(A\right)}}=\frac{(-1)^{i+j}\det\left(A(i|j)\right)}{\det\left(A\right)}.
-\end{align*}
-@qed
-@endcol
-@end
-@slide
-@eg
-By the above formula, find the inverse of
-\begin{align*}
-\displaystyle A=\begin{bmatrix}1&2&3\\
-1&0&1\\
-1&1&-1\end{bmatrix},
-\end{align*}
-\begin{align*}
-\displaystyle \det\left(A\right)=6.
-\end{align*}
-\begin{align*}
-\displaystyle A(1|1)=\begin{bmatrix}0&1\\
-1&-1\end{bmatrix},\qquad\det\left(A(1|1)\right)=-1,
-\end{align*}
-\begin{align*}
-\displaystyle A(1|2)=\begin{bmatrix}1&1\\
-1&-1\end{bmatrix},\qquad\det\left(A(1|2)\right)=-2,
-\end{align*}
-\begin{align*}
-\displaystyle A(1|3)=\begin{bmatrix}1&0\\
-1&1\end{bmatrix},\qquad\det\left(A(1|3)\right)=1,
-\end{align*}
-\begin{align*}
-\displaystyle A(2|1)=\begin{bmatrix}2&3\\
-1&-1\end{bmatrix},\qquad\det\left(A(2|1)\right)=-5,
-\end{align*}
-\begin{align*}
-\displaystyle A(2|2)=\begin{bmatrix}1&3\\
-1&-1\end{bmatrix},\qquad\det\left(A(2|2)\right)=-4,
-\end{align*}
-\begin{align*}
-\displaystyle A(2|3)=\begin{bmatrix}1&2\\
-1&1\end{bmatrix},\qquad\det\left(A(2|3)\right)=-1,
-\end{align*}
-\begin{align*}
-\displaystyle A(3|1)=\begin{bmatrix}2&3\\
-0&1\end{bmatrix},\qquad\det\left(A(3|1)\right)=2,
-\end{align*}
-\begin{align*}
-\displaystyle A(3|2)=\begin{bmatrix}1&3\\
-1&1\end{bmatrix},\qquad\det\left(A(3|2)\right)=-2,
-\end{align*}
-\begin{align*}
-\displaystyle A(3|3)=\begin{bmatrix}1&2\\
-1&0\end{bmatrix},\qquad\det\left(A(3|3)\right)=-2.
-\end{align*}
-@end
-\begin{align*}
-\displaystyle A^{-1}=\frac{1}{\det\left(A\right)}\begin{bmatrix}\det\left(A(1|1)\right)&-\det\left(A(2|1)\right)&\det\left(A(3|1)\right)\\
--\det\left((A(1|2)\right)&\det\left(A(2|2)\right)&-\det\left(A(3|2)\right)\\
-\det\left(A(1|3)\right)&-\det\left(A(2|3)\right)&\det\left(A(3|3)\right)\end{bmatrix}=\begin{bmatrix}-\frac{1}{6}&\frac{5}{6}&\frac{1}{3}\\
-\frac{1}{3}&-\frac{2}{3}&\frac{1}{3}\\
-\frac{1}{6}&\frac{1}{6}&-\frac{1}{3}\end{bmatrix}
-\end{align*}
-@section{Properties of Determinant (summary)}
-
-Let $A$ be a square matrix with size $n$.
-
-<ol class="ltx_enumerate">
-<li class="ltx_item">
-\begin{align*}
-\displaystyle \begin{vmatrix}a&b\\
-c&d\end{vmatrix}=ad-bc.
-\end{align*}
-</li>
-<li class="ltx_item">
-\begin{align*}
-\displaystyle A=\begin{vmatrix}a_{11}&a_{12}&a_{13}\\
-a_{21}&a_{22}&a_{23}\\
-a_{31}&a_{32}&a_{33}\end{vmatrix}=a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-a_{11}a_{23}a_{32}-a_{12}a_{21}a_{33}-a_{13}a_{22}a_{31}
-\end{align*}
-</li>
-<li class="ltx_item">
-Expand along row $i$
-\begin{align*}
-\displaystyle\det\left(A\right)&\displaystyle=(-1)^{i+1}\left[A\right]_{i1}\det\left(A\left(i|1\right)\right)+(-1)^{i+2}\left[A\right]_{i2}\det\left(A\left(i|2\right)\right) \\
-&\displaystyle\quad+(-1)^{i+3}\left[A\right]_{i3}\det\left(A\left(i|3\right)\right)+\cdots+(-1)^{i+n}\left[A\right]_{in}\det\left(A\left(i|n\right)\right)
-\end{align*}
-</li>
-<li class="ltx_item">
-Expand along column $j$
-\begin{align*}
-\displaystyle\det\left(A\right)&\displaystyle=(-1)^{1+j}\left[A\right]_{1j}\det\left(A\left(1|j\right)\right)+(-1)^{2+j}\left[A\right]_{2j}\det\left(A\left(2|j\right)\right) \\
-&\displaystyle\quad+(-1)^{3+j}\left[A\right]_{3j}\det\left(A\left(3|j\right)\right)+\cdots+(-1)^{n+j}\left[A\right]_{nj}\det\left(A\left(n|j\right)\right)
-\end{align*}
-</li>
-<li class="ltx_item">
-$\det\left(A^{t}\right)=\det\left(A\right)$
-</li>
-<li class="ltx_item">
-Determinant of upper/lower triangular matrix.
-\begin{align*}
-\displaystyle \begin{vmatrix}a_{11}&a_{12}&a_{13}&\cdots&a_{1n}\\
-0&a_{22}&a_{23}&\cdots&a_{2n}\\
-0&0&a_{33}&\cdots&a_{3n}\\
-\vdots&\vdots&\vdots&\ddots&\vdots\\
-0&0&0&\cdots&a_{nn}\end{vmatrix}=a_{11}a_{22}\cdots a_{nn}.
-\end{align*}
-\begin{align*}
-\displaystyle \begin{vmatrix}a_{11}&0&0&\cdots&0\\
-a_{21}&a_{22}&0&\cdots&0\\
-a_{31}&a_{32}&a_{33}&\cdots&0\\
-\vdots&\vdots&\vdots&\ddots&\vdots\\
-a_{n1}&a_{n2}&a_{n3}&\cdots&a_{nn}\end{vmatrix}=a_{11}a_{22}\cdots a_{nn}.
-\end{align*}
-</li>
-<li class="ltx_item">
-Suppose that $A$ is a square matrix with a row where every entry is zero, or a column where every entry is zero. Then $\det\left(A\right)=0$.
-</li>
-<li class="ltx_item">
-Suppose that $A$ is a square matrix with two equal rows, or two equal columns,
-i.e., $R_{i}=R_{j}$ or $C_{i}=C_{j}$ for $i\neq j$. Then $\det\left(A\right)=0$.
-</li>
-<li class="ltx_item">
-Let $B$ be the square matrix obtained from $A$ by interchanging the location of two rows, or interchanging the location of two columns, i.e., $R_{i}\leftrightarrow R_{j}$ or $C_{i}\leftrightarrow C_{j}$, $i\neq j$. Then $\det\left(B\right)=-\det\left(A\right)$.
-</li>
-<li class="ltx_item">
-Let $B$ be the square matrix obtained from $A$ by multiplying a single row (say, row $i$) by the scalar $\alpha$, or by multiplying a single column by the scalar $\alpha$,
-i.e., $\alpha R_{i}$ or $\alpha C_{i}$. Then $\det\left(B\right)=\alpha\det\left(A\right)$.
-</li>
-<li class="ltx_item">
-Let $B$ be the square matrix obtained from $A$ by multiplying a row by the scalar $\alpha$ and then adding it to another row, or by multiplying a column by the scalar $\alpha$ and then adding it to another column, i.e., $\alpha R_{i}+R_{j}$ or $\alpha C_{i}+C_{j}$ for $i\neq j$. Then $\det\left(B\right)=\det\left(A\right)$.
-</li>
-<li class="ltx_item">
-\begin{align*}
-\displaystyle \begin{vmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
-\vdots&\vdots&\cdots&\vdots\\
-a_{i-1,1}&a_{i-1,2}&\cdots&a_{i-1,n}\\
-b_{1}+c_{1}&b_{2}+c_{2}&\cdots&b_{n}+c_{n}\\
-a_{i+1,1}&a_{i+1,2}&\cdots&a_{i+1,n}\\
-\vdots&\vdots&\cdots&\vdots\\
-a_{n1}&a_{n2}&\cdots&a_{nn}\\
-\end{vmatrix}=\begin{vmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
-\vdots&\vdots&\cdots&\vdots\\
-a_{i-1,1}&a_{i-1,2}&\cdots&a_{i-1,n}\\
-b_{1}&b_{2}&\cdots&b_{n}\\
-a_{i+1,1}&a_{i+1,2}&\cdots&a_{i+1,n}\\
-\vdots&\vdots&\cdots&\vdots\\
-a_{n1}&a_{n2}&\cdots&a_{nn}\\
-\end{vmatrix}+\begin{vmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
-\vdots&\vdots&\cdots&\vdots\\
-a_{i-1,1}&a_{i-1,2}&\cdots&a_{i-1,n}\\
-c_{1}&c_{2}&\cdots&c_{n}\\
-a_{i+1,1}&a_{i+1,2}&\cdots&a_{i+1,n}\\
-\vdots&\vdots&\cdots&\vdots\\
-a_{n1}&a_{n2}&\cdots&a_{nn}\\
-\end{vmatrix}
-\end{align*}
-@newcol
-Similarly
-\begin{align*}
-\displaystyle \begin{vmatrix}a_{11}&\cdots&a_{1,i-1}&b_{1}+c_{1}&a_{1,i+1}&\cdots&a_{1n}\\
-a_{21}&\cdots&a_{2,i-1}&b_{2}+c_{2}&a_{2,i+1}&\cdots&a_{2n}\\
-\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
-a_{n1}&\cdots&a_{n,i-1}&b_{n}+c_{n}&a_{n,i+1}&\cdots&a_{nn}\end{vmatrix}
-\end{align*}
-\begin{align*}
-\displaystyle =\begin{vmatrix}a_{11}&\cdots&a_{1,i-1}&b_{1}&a_{1,i+1}&\cdots&a_{1n}\\
-a_{21}&\cdots&a_{2,i-1}&b_{2}&a_{2,i+1}&\cdots&a_{2n}\\
-\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
-a_{n1}&\cdots&a_{n,i-1}&b_{n}&a_{n,i+1}&\cdots&a_{nn}\end{vmatrix}+\begin{vmatrix}a_{11}&\cdots&a_{1,i-1}&c_{1}&a_{1,i+1}&\cdots&a_{1n}\\
-a_{21}&\cdots&a_{2,i-1}&c_{2}&a_{2,i+1}&\cdots&a_{2n}\\
-\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
-a_{n1}&\cdots&a_{n,i-1}&c_{n}&a_{n,i+1}&\cdots&a_{nn}\end{vmatrix}
-\end{align*}
-@endcol</li>
-<li class="ltx_item">
-If $A$ and $B$ are square matrices, then
-\begin{align*}
-\displaystyle \det\left(AB\right)=\det\left(A\right)\det\left(B\right).
-\end{align*}
-</li>
-
-</ol>
