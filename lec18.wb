@@ -597,46 +597,57 @@ We will perform a sequence of row operations on this matrix, shooting for an upp
 2&0&2&3\\
 -1&1&-1&2\\
 3&5&4&0\end{vmatrix}\qquad(R_{1}\leftrightarrow R_{2})
+\\
 \\&=-\begin{vmatrix}1&3&-1&1\\
 0&-6&4&1\\
 -1&1&-1&2\\
 3&5&4&0\end{vmatrix}\qquad(-2R_{1}+R_{2})
+\\
 \\&=-\begin{vmatrix}1&3&-1&1\\
 0&-6&4&1\\
 0&4&-2&3\\
 3&5&4&0\end{vmatrix}\qquad(1R_{1}+R_{3})
+\\
 \\&=-\begin{vmatrix}1&3&-1&1\\
 0&-6&4&1\\
 0&4&-2&3\\
 0&-4&7&-3\end{vmatrix}\qquad(-3R_{1}+R_{4})
+\\
 \\&=-\begin{vmatrix}1&3&-1&1\\
 0&-2&2&4\\
 0&4&-2&3\\
 0&-4&7&-3\end{vmatrix}\qquad(1R_{3}+R_{2})
+\\
 \\&=2\begin{vmatrix}1&3&-1&1\\
 0&1&-1&-2\\
 0&4&-2&3\\
 0&-4&7&-3\end{vmatrix}\qquad(-\frac{1}{2}R_{2})
+\\
 \\&=2\begin{vmatrix}1&3&-1&1\\
 0&1&-1&-2\\
 0&0&2&11\\
 0&-4&7&-3\end{vmatrix}\qquad(-4R_{2}+R_{3})
+\\
 \\&=2\begin{vmatrix}1&3&-1&1\\
 0&1&-1&-2\\
 0&0&2&11\\
 0&0&3&-11\end{vmatrix}\qquad(-4R_{2}+R_{4})
+\\
 \\&=2\begin{vmatrix}1&3&-1&1\\
 0&1&-1&-2\\
 0&0&2&11\\
 0&0&1&-22\end{vmatrix}\qquad(-1R_{3}+R_{4})
+\\
 \\&=2\begin{vmatrix}1&3&-1&1\\
 0&1&-1&-2\\
 0&0&0&55\\
 0&0&1&-22\end{vmatrix}\qquad(-2R_{4}+R_{3})
+\\
 \\&=-2\begin{vmatrix}1&3&-1&1\\
 0&1&-1&-2\\
 0&0&1&-22\\
 0&0&0&55\end{vmatrix}\qquad(R_{3}\leftrightarrow R_{4})
+\\
 \\&=-2\times 1\times 1\times 1\times 55=-110.
 \end{align*}
 @endcol
@@ -670,6 +681,7 @@ Compute
 a&b&c\\
 a^{2}&b^{2}&c^{2}\end{vmatrix}.
 \end{align*}
+@newcol
 \begin{align*}
 \displaystyle =\begin{vmatrix}1&1&1\\
 a&b&c\\
@@ -695,50 +707,50 @@ b&c\end{vmatrix}\qquad(\text{pull out $c-a$ from column 2})
 \begin{align*}
 \displaystyle =(b-a)(c-a)(c-b).
 \end{align*}
+@endcol
 @end
+@slide
 @eg
-Let
+Suppose
 \begin{align*}
 \displaystyle A=\begin{bmatrix}0&0&0&a_{14}\\
 0&0&a_{23}&a_{24}\\
 0&a_{32}&a_{33}&a_{34}\\
-a_{41}&a_{42}&a_{43}&a_{44}\end{bmatrix}
+a_{41}&a_{42}&a_{43}&a_{44}\end{bmatrix}.
 \end{align*}
+Find $\det\left(A\right)$.
+
 @newcol
-Find $\det\left(A\right)$. $\det\left(A\right)$
 \begin{align*}
-\displaystyle =-\begin{vmatrix}a_{41}&a_{42}&a_{43}&a_{44}\\
+\displaystyle \det\left(A\right) &=-\begin{vmatrix}a_{41}&a_{42}&a_{43}&a_{44}\\
 0&0&a_{23}&a_{24}\\
 0&a_{32}&a_{33}&a_{34}\\
 0&0&0&a_{14}\end{vmatrix}\qquad(R_{1}\leftrightarrow R_{4})
-\end{align*}
-\begin{align*}
-\displaystyle =\begin{vmatrix}a_{41}&a_{42}&a_{43}&a_{44}\\
+\\
+\\&=\begin{vmatrix}a_{41}&a_{42}&a_{43}&a_{44}\\
 0&a_{32}&a_{33}&a_{34}\\
 0&0&a_{23}&a_{24}\\
 0&0&0&a_{14}\end{vmatrix}\qquad(R_{2}\leftrightarrow R_{3})
-\end{align*}
-\begin{align*}
-\displaystyle =a_{41}a_{32}a_{23}a_{14}.
+\\
+\\&=a_{41}a_{32}a_{23}a_{14}.
 \end{align*}
 @endcol
 @end
 @eg
-Let
+Suppose
 \begin{align*}
 \displaystyle A=\begin{bmatrix}a_{11}&a_{12}&a_{13}\\
 a_{21}&a_{22}&a_{23}\\
 a_{31}&a_{32}&a_{33}\end{bmatrix}
 \end{align*}
-@newcol
-Given $\det\left(A\right)=1$.
+with $\det\left(A\right)=1$.
 Find
 \begin{align*}
 \displaystyle \begin{vmatrix}2a_{11}&3a_{12}&4a_{13}\\
 2a_{21}&3a_{22}&4a_{23}\\
 2a_{31}&3a_{32}&4a_{33}\end{vmatrix}.
 \end{align*}
-@col
+@newcol
 The above is
 \begin{align*}
 \displaystyle =2\begin{vmatrix}a_{11}&3a_{12}&4a_{13}\\
@@ -760,6 +772,7 @@ a_{31}&a_{32}&a_{33}\end{vmatrix}\qquad(\frac{1}{4}C_{3})
 \end{align*}
 @endcol
 @end
+@slide
 @eg
 Compute
 \begin{align*}
@@ -790,6 +803,45 @@ the above is
 \end{align*}
 @endcol
 @end
+@eg
+@skip
+@newcol
+Compute
+\begin{align*}
+\displaystyle \det\left(A\right)=\begin{vmatrix}a&1&1&1\\
+1&a&1&1\\
+1&1&a&1\\
+1&1&1&a.\end{vmatrix}
+\end{align*}
+@newcol
+By $-1R_{1}+R_{2}$, $-1R_{1}+R_{3}$, $-1R_{1}+R_{4}$, the above is
+\begin{align*}
+\displaystyle \begin{vmatrix}a&1&1&1\\
+1-a&a-1&0&0\\
+1-a&0&a-1&0\\
+1-a&0&0&a-1\end{vmatrix}
+\end{align*}
+@col
+Take out the common factor $a-1$ of row 2, row 3 and row 4, the above is
+\begin{align*}
+\displaystyle (a-1)^{3}\begin{vmatrix}a&1&1&1\\
+-1&1&0&0\\
+-1&0&1&0\\
+-1&0&0&1\end{vmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle =(a-1)^{3}\begin{vmatrix}a+3&0&0&0\\
+-1&1&0&0\\
+-1&0&1&0\\
+-1&0&0&1\end{vmatrix}\qquad(-1R_{4}+R_{1},-1R_{3}+R_{1},-1R_{2}+R_{1})
+\end{align*}
+\begin{align*}
+\displaystyle =(a+3)(a-1)^{3}.
+\end{align*}
+@endcol
+@endcol
+@end
+@slide
 @eg
 Let
 \begin{align*}
@@ -845,43 +897,9 @@ a_{31}&a_{32}&a_{33}\\
 \end{align*} @keyword{Remark}: The result is also valid when $A$ is a square matrix of size $n$ and $B$ is a square matrix of size $m$.
 @endcol
 @end
-@eg
-Compute
-\begin{align*}
-\displaystyle \det\left(A\right)=\begin{vmatrix}a&1&1&1\\
-1&a&1&1\\
-1&1&a&1\\
-1&1&1&a.\end{vmatrix}
-\end{align*}
-@newcol
-By $-1R_{1}+R_{2}$, $-1R_{1}+R_{3}$, $-1R_{1}+R_{4}$, the above is
-\begin{align*}
-\displaystyle \begin{vmatrix}a&1&1&1\\
-1-a&a-1&0&0\\
-1-a&0&a-1&0\\
-1-a&0&0&a-1\end{vmatrix}
-\end{align*}
-@col
-Take out the common factor $a-1$ of row 2, row 3 and row 4, the above is
-\begin{align*}
-\displaystyle (a-1)^{3}\begin{vmatrix}a&1&1&1\\
--1&1&0&0\\
--1&0&1&0\\
--1&0&0&1\end{vmatrix}
-\end{align*}
-\begin{align*}
-\displaystyle =(a-1)^{3}\begin{vmatrix}a+3&0&0&0\\
--1&1&0&0\\
--1&0&1&0\\
--1&0&0&1\end{vmatrix}\qquad(-1R_{4}+R_{1},-1R_{3}+R_{1},-1R_{2}+R_{1})
-\end{align*}
-\begin{align*}
-\displaystyle =(a+3)(a-1)^{3}.
-\end{align*}
-@endcol
-@end
 @section{More examples}
 @eg
+@skip
 Let $A_{n}$ be a $n\times n$ matrix
 \begin{align*}
 \displaystyle \left.\left[\vphantom{\begin{array}[]{c}1\\
@@ -902,19 +920,19 @@ Add columns $C_{2},C_{3},\ldots,C_{n}$ to $C_{1}$:
 \displaystyle \det(A_{n})
 =
 \left|
-%% \vphantom{\begin{array}[]{c}1\\
-%% 1\\
-%% 1\\
-%% 1\\
-%% 1\end{array}}
-%% \smash{\underbrace{\begin{array}[]{ccccc}x+(n-1)&1&1&\cdots&1\\
+\vphantom{\begin{array}[]{c}1\\
+1\\
+1\\
+1\\
+1\end{array}}
+\smash{\underbrace{\begin{array}[]{ccccc}x+(n-1)&1&1&\cdots&1\\
 x+(n-1)&x&1&\cdots&1\\
 x+(n-1)&1&x&\cdots&1\\
 \vdots&\vdots&\vdots&\ddots&1\\
-x+(n-1)&1&1&\cdots&x\end{array}
-%%}_{n}}
+x+(n-1)&1&1&\cdots&x\end{array}}_{n}}
 \right|
 \]
+@col
 \[
 =
 (x+(n-1))\left|\vphantom{\begin{array}[]{c}1\\
@@ -930,7 +948,7 @@ x+(n-1)&1&1&\cdots&x\end{array}
 @col
 Performing the following sequence of column operations:
 \[
--C_{1}+C_{2}$, $-C_{1}+C_{3},\ldots,-C_{1}+C_{n},
+-C_{1}+C_{2}, -C_{1}+C_{3},\ldots,-C_{1}+C_{n},
 \]
 we conclude that the determinant is equal to:
 \begin{align*}
@@ -950,6 +968,7 @@ The last step follows by the fact that the matrix on the left hand side is the l
 @end
 @slide
 @eg
+@skip
 Let $B_{n}$ be a $n\times n$ matrix in the form
 \begin{align*}
 \displaystyle \begin{bmatrix}1-a_{1}&a_{2}&0&\cdots&0&0\\
@@ -1037,6 +1056,7 @@ By mathematical induction, the formula is valid for all positive integer. @keywo
 @endcol
 @end
 @slide
+@skip
 @eg
 Let $C_{n}$ be a $n\times n$ matrix given by
 \begin{align*}
@@ -1050,11 +1070,13 @@ Let $C_{n}$ be a $n\times n$ matrix given by
 -a&-a&x&\cdots&a&a\\
 \vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
 -a&-a&-a&\cdots&-a&x\end{array}}_{n}}\right]\right\}\,n
-\end{align*} <ol class="ltx_enumerate">
-<li class="ltx_item"> Show that $\det(C_{n})=a(x+a)^{n-1}+(x-a)\det(C_{n-1})$. </li>
-<li class="ltx_item"> Show that $\det(C_{n})=\frac{1}{2}((x+a)^{n}+(x-a)^{n})$. </li>
-
-</ol>
+\end{align*}
+@enumerate
+@item
+Show that $\det(C_{n})=a(x+a)^{n-1}+(x-a)\det(C_{n-1})$.
+@item
+Show that $\det(C_{n})=\frac{1}{2}((x+a)^{n}+(x-a)^{n})$.
+@endenumerate
 @end
 @sol
 @newcol
@@ -1082,32 +1104,28 @@ Then $\det(C_{n})=$
 \begin{align*}
 \displaystyle
 \left|
-%% \vphantom{\begin{array}[]{c}1\\
-%% 1\\
-%% 1\\
-%% 1\\
-%% 1\\
-%% 1\end{array}}\smash{\underbrace{%%
-\begin{array}[]{cccccc}x&a&a&\cdots&a&a\\
+\vphantom{\begin{array}[]{c}1\\
+1\\
+1\\
+1\\
+1\\
+1\end{array}}\smash{\underbrace{\begin{array}[]{cccccc}x&a&a&\cdots&a&a\\
 -a&x&a&\cdots&a&a\\
 -a&-a&x&\cdots&a&a\\
 \vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
--a&-a&-a&\cdots&-a&a\end{array}
-%% }_{n}}
-%%
+-a&-a&-a&\cdots&-a&a\end{array}}_{n}}
 \right| +
 \left|
-%% \vphantom{\begin{array}[]{c}1\\
-%% 1\\
-%% 1\\
-%% 1\\
-%% 1\\
-%% 1\end{array}}\smash{\underbrace{\begin{array}[]{cccccc}x&a&a&\cdots&a&0\\
+\vphantom{\begin{array}[]{c}1\\
+1\\
+1\\
+1\\
+1\\
+1\end{array}}\smash{\underbrace{\begin{array}[]{cccccc}x&a&a&\cdots&a&0\\
 -a&x&a&\cdots&a&0\\
 -a&-a&x&\cdots&a&0\\
 \vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
--a&-a&-a&\cdots&-a&x-a\end{array}
-%% }_{n}}
+-a&-a&-a&\cdots&-a&x-a\end{array}}_{n}}
 \right|
 \end{align*}
 @col
@@ -1115,17 +1133,16 @@ For the first determinant, pulling out $a$ from the last column,
 it is equal to:
 \begin{align*}
 \displaystyle a\left|
-%% \vphantom{\begin{array}[]{c}1\\
-%% 1\\
-%% 1\\
-%% 1\\
-%% 1\\
-%% 1\end{array}}\smash{\underbrace{\begin{array}[]{cccccc}x&a&a&\cdots&a&1\\
+\vphantom{\begin{array}[]{c}1\\
+1\\
+1\\
+1\\
+1\\
+1\end{array}}\smash{\underbrace{\begin{array}[]{cccccc}x&a&a&\cdots&a&1\\
 -a&x&a&\cdots&a&1\\
 -a&-a&x&\cdots&a&1\\
 \vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
--a&-a&-a&\cdots&-a&1\end{array}
-%% }_{n}}
+-a&-a&-a&\cdots&-a&1\end{array}}_{n}}
 \right|
 \end{align*}
 Then, performing the row operations:
@@ -1135,36 +1152,35 @@ Then, performing the row operations:
 the determinant above is equal to:
 \begin{align*}
 \displaystyle a\left|
-%% \vphantom{\begin{array}[]{c}1\\
-%% 1\\
-%% 1\\
-%% 1\\
-%% 1\\
-%% 1\end{array}}\smash{\underbrace{\begin{array}[]{cccccc}x+a&2a&2a&\cdots&2a&0\\
+\vphantom{\begin{array}[]{c}1\\
+1\\
+1\\
+1\\
+1\\
+1\end{array}}\smash{\underbrace{\begin{array}[]{cccccc}x+a&2a&2a&\cdots&2a&0\\
 0&x+a&2a&\cdots&2a&0\\
 0&0&x+a&\cdots&2a&0\\
 \vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
--a&-a&-a&\cdots&-a&1\end{array}
-%% }_{n}}
+-a&-a&-a&\cdots&-a&1\end{array}}_{n}}
 \right|
 \end{align*}
+
 \begin{align*}
 \displaystyle =(-1)^{n+n}a
-\left|
-%% \vphantom{\begin{array}[]{c}1\\
-%% 1\\
-%% 1\\
-%% 1\\
-%% 1\end{array}
-%% }\smash{\underbrace{\begin{array}[]{cccccc}x+a&2a&2a&\cdots&2a\\
+\left.\left|
+\vphantom{\begin{array}[]{c}1\\
+1\\
+1\\
+1\\
+1\end{array}}\smash{\underbrace{\begin{array}[]{cccccc}x+a&2a&2a&\cdots&2a\\
 0&x+a&2a&\cdots&2a\\
 0&0&x+a&\cdots&2a\\
 \vdots&\vdots&\vdots&\vdots&\vdots\\
-0&0&0&\cdots&x+a\end{array}
-%% }_{n-1}}
+0&0&0&\cdots&x+a\end{array}}_{n-1}}
 \right|
-%% \right\}\,n-1
+\right\}\,n-1
 \end{align*}
+
 (Expand along the last column.)
 \begin{align*}
 \displaystyle =a(x+a)^{n-1}
@@ -1174,35 +1190,33 @@ the determinant above is equal to:
 @col
 For the second determinant,
 \begin{align*}
-\displaystyle \left|
-%% \vphantom{%% \begin{array}[]{c}1\\
-%% 1\\
-%% 1\\
-%% 1\\
-%% 1\\
-%% 1\end{array}}\smash{\underbrace{\begin{array}[]{cccccc}x&a&a&\cdots&a&0\\
+\displaystyle \left.\left|
+\vphantom{\begin{array}[]{c}1\\
+1\\
+1\\
+1\\
+1\\
+1\end{array}}\smash{\underbrace{\begin{array}[]{cccccc}x&a&a&\cdots&a&0\\
 -a&x&a&\cdots&a&0\\
 -a&-a&x&\cdots&a&0\\
 \vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
--a&-a&-a&\cdots&-a&x-a\end{array}
-%% }_{n}}
+-a&-a&-a&\cdots&-a&x-a\end{array}}_{n}}
 \right|
-%%\right\}\,n
+\right\}\,n
 \end{align*}
 \begin{align*}
-\displaystyle =(x-a)\left|
-%% \vphantom{\begin{array}[]{c}1\\
-%% 1\\
-%% 1\\
-%% 1\\
-%% 1\end{array}}\smash{\underbrace{\begin{array}[]{ccccc}x&a&a&\cdots&a\\
+\displaystyle =(x-a)\left.\left|
+\vphantom{\begin{array}[]{c}1\\
+1\\
+1\\
+1\\
+1\end{array}}\smash{\underbrace{\begin{array}[]{ccccc}x&a&a&\cdots&a\\
 -a&x&a&\cdots&a\\
 -a&-a&x&\cdots&a\\
 \vdots&\vdots&\vdots&\vdots&\vdots\\
--a&-a&-a&\cdots&x-a\end{array}
-%% }_{n-1}}
+-a&-a&-a&\cdots&x-a\end{array}}_{n-1}}
 \right|
-%% \right\}\,n-1\,\,\,(\text{expand along the last column})
+\right\}\,n-1\,\,\,(\text{expand along the last column})
 \end{align*}
 (Expand along the last column.)
 \begin{align*}
