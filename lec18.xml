@@ -194,7 +194,7 @@ $1\times 1$ matrices. Fortunately there are </paragraphs>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="6" id="s6" slide="6" course="Math 1030" chapter="18" section="1" subsection="" subsubsection="" chapter_title="Determinant" section_title="Definition of the determinant">
             <keywords slide="6" environ="slide" chapter="18" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="4" md5="54d637984a15ce0cb409f097da254d0d" course="Math 1030" chapter="18" slide="6" item="18.4">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="4" md5="be49dab05ed1f4113cec9478428a5b96" course="Math 1030" chapter="18" slide="6" item="18.4">
               <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that we have the $3\times 3$ matrix
 \begin{align*}
 \displaystyle A=\begin{bmatrix}3&amp;2&amp;-1\\
@@ -202,21 +202,38 @@ $1\times 1$ matrices. Fortunately there are </paragraphs>
 -3&amp;-1&amp;2\end{bmatrix}
 \end{align*} </paragraphs>
               <newcol course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then </paragraphs>
+                <steps course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="steps" stepsid="steps1">
 \begin{align*}
 \displaystyle\det\left(A\right)=|A|&amp;\displaystyle=\begin{vmatrix}3&amp;2&amp;-1\\
 4&amp;1&amp;6\\
--3&amp;-1&amp;2\end{vmatrix} \\
-&amp;\displaystyle=3\begin{vmatrix}1&amp;6\\
+-3&amp;-1&amp;2\end{vmatrix}
+\\
+\\
+&amp;
+\class{steps}{\cssId{step0}{\displaystyle=3\begin{vmatrix}1&amp;6\\
 -1&amp;2\end{vmatrix}-2\begin{vmatrix}4&amp;6\\
 -3&amp;2\end{vmatrix}+(-1)\begin{vmatrix}4&amp;1\\
--3&amp;-1\end{vmatrix} \\
-&amp;\displaystyle=3\left(1\begin{vmatrix}2\\
-\end{vmatrix}-6\begin{vmatrix}-1\end{vmatrix}\right)-2\left(4\begin{vmatrix}2\end{vmatrix}-6\begin{vmatrix}-3\end{vmatrix}\right)-\left(4\begin{vmatrix}-1\end{vmatrix}-1\begin{vmatrix}-3\end{vmatrix}\right) \\
-&amp;\displaystyle=3\left(1(2)-6(-1)\right)-2\left(4(2)-6(-3)\right)-\left(4(-1)-1(-3)\right) \\
-&amp;\displaystyle=24-52+1 \\
-&amp;\displaystyle=-27
-\end{align*} </paragraphs>
+-3&amp;-1\end{vmatrix}}}
+\\
+\\
+&amp;
+\class{steps}{\cssId{step1}{\displaystyle=3\left(1\begin{vmatrix}2\\
+\end{vmatrix}-6\begin{vmatrix}-1\end{vmatrix}\right)-2\left(4\begin{vmatrix}2\end{vmatrix}-6\begin{vmatrix}-3\end{vmatrix}\right)-\left(4\begin{vmatrix}-1\end{vmatrix}-1\begin{vmatrix}-3\end{vmatrix}\right)}}
+\\
+\\
+&amp;
+\class{steps}{\cssId{step2}{\displaystyle=3\left(1(2)-6(-1)\right)-2\left(4(2)-6(-3)\right)-\left(4(-1)-1(-3)\right)}}
+\\
+\\
+&amp;
+\class{steps}{\cssId{step3}{\displaystyle=24-52+1}}
+\\
+\\
+&amp;
+\class{steps}{\cssId{step4}{\displaystyle=-27}}
+\end{align*}
+</steps>
               </newcol>
             </statement>
           </slide>
@@ -838,7 +855,7 @@ a_{n1}&amp;\cdots&amp;a_{n,i-1}&amp;c_{n}&amp;a_{n,i+1}&amp;\cdots&amp;a_{nn}\en
 \end{align*} </paragraphs>
               <newcol course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We will perform a sequence of row operations on this matrix, shooting for an upper triangular matrix, whose determinant will be simply the product of its diagonal entries. For each row operation, we will track the effect on the determinant via Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="DRCS" wbtag="ref" course="Math 1030" chapter="18" slide="21" src-course="Math 1030" src-chapter="18" src-slide="17" type="Theorem" item="18.17" src-filename="lec18.xml" md5="02887a61000b9b4c55170573c037d67f" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="DRCS" wbtag="ref" course="Math 1030" chapter="18" slide="21" src-course="Math 1030" src-chapter="18" src-slide="17" type="Theorem" item="18.18" src-filename="lec18.xml" md5="02887a61000b9b4c55170573c037d67f" class="lcref" serial="">
                   <title>Determinant for Row or Column Swap</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Theorem   </paragraphs>
@@ -846,7 +863,7 @@ a_{n1}&amp;\cdots&amp;a_{n,i-1}&amp;c_{n}&amp;a_{n,i+1}&amp;\cdots&amp;a_{nn}\en
                   <title>Determinant for Row or Column Multiples</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="DRCMA" wbtag="ref" course="Math 1030" chapter="18" slide="21" src-course="Math 1030" src-chapter="18" src-slide="18" type="Theorem" item="18.19" src-filename="lec18.xml" md5="67ddd3dda36950b9ea1dee2d082c83f8" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="DRCMA" wbtag="ref" course="Math 1030" chapter="18" slide="21" src-course="Math 1030" src-chapter="18" src-slide="19" type="Theorem" item="18.21" src-filename="lec18.xml" md5="67ddd3dda36950b9ea1dee2d082c83f8" class="lcref" serial="">
                   <title>Determinant for Row or Column Multiples and Addition</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="18" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">.
@@ -1000,7 +1017,7 @@ a_{1}^{2}&amp;a_{2}^{2}&amp;a_{3}^{2}&amp;\cdots&amp;a_{n}^{2}\\
 \vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
 a_{1}^{n-2}&amp;a_{2}^{n-2}&amp;a_{3}^{n-2}&amp;\cdots&amp;a_{n}^{n-2}\\
 a_{1}^{n-1}&amp;a_{2}^{n-1}&amp;a_{3}^{n-1}&amp;\cdots&amp;a_{n}^{n-1}\end{bmatrix}
-\end{align*}  </paragraphs>
+\end{align*} </paragraphs>
                 <enumerate course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="enumerate" wbtag="enumerate">
                   <item course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="enumerate" wbtag="item">
                     <paragraphs course="Math 1030" chapter="18" chapter_type="" section="4" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs"> $\det(V_{n})=\det(V_{n-1})\prod_{i=1}^{n-1}(a_{n}-a_{i})$. </paragraphs>
@@ -1951,8 +1968,8 @@ The identity $\eqref{A-1}$ then follows from:
 AA^{-1} = I_n
 \]
 and </paragraphs>
-                <ref environment="newcol" chapter_type="" label="thm:DETMULT" wbtag="ref" course="Math 1030" chapter="18" slide="33" src-course="Math 1030" src-chapter="18" src-slide="32" type="Theorem" item="18.36" src-filename="lec18.xml" md5="79e97847dbdd9fbeaa8a3e92e2db82b6" class="lcref" serial="">
-                  <title>Theorem 18.36</title>
+                <ref environment="newcol" chapter_type="" label="thm:DETMULT" wbtag="ref" course="Math 1030" chapter="18" slide="33" src-course="Math 1030" src-chapter="18" src-slide="32" type="Theorem" item="18.38" src-filename="lec18.xml" md5="79e97847dbdd9fbeaa8a3e92e2db82b6" class="lcref" serial="">
+                  <title>Theorem 18.38</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. </paragraphs>
                 <qed course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
