@@ -6,7 +6,8 @@
 Beezer, Ver 3.5 Subsection EEM (print version p283-285), Subsection CEE and ECEE (print version p289-297)
 
 <h5 class="notkw">Exercise.</h5>
-Exercises with solutions can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf}
+Exercises with solutions can be downloaded at
+@href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf}
 
 (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$)Section EE, p103-108, all except C22, M60. Note that for the questions regarding diagonalizability, use our method instead of the method in the solution manual.
 
@@ -14,7 +15,7 @@ Exercises with solutions can be downloaded at @href{http://linear.ups.edu/downlo
 @defn
 @title{Eigenvalues and Eigenvectors of a Matrix}
 @label{EEM}
-Suppose that $A$ is a square matrix of size $n$, $\mathbf{x}$ a non-zero vector in ${\mathbb{R}}^{n}$, and $\lambda$ a scalar in ${\mathbb{R}}^{\hbox{}}$. We say $\mathbf{x}$ is an <b>eigenvector</b> of $A$ with <b>eigenvalue</b> $\lambda$ if
+Suppose that $A$ is a square matrix of size $n$, $\mathbf{x}$ a non-zero vector in ${\mathbb{R}}^{n}$, and $\lambda$ a scalar in ${\mathbb{R}}^{\hbox{}}$. We say $\mathbf{x}$ is an @keyword{eigenvector} of $A$ with @keyword{eigenvalue} $\lambda$ if
 \begin{align*}
 \displaystyle A\mathbf{x}=\lambda\mathbf{x}.
 \end{align*}
@@ -74,6 +75,7 @@ This shows that sum of eigenvectors need not be an eigenvector.
 @endcol
 @end
 @eg
+@skip
 @label{eg:example3}
 Consider the matrix
 \begin{align*}
@@ -210,13 +212,13 @@ So, any eigenvector $x$ with eigenvalue $\lambda$ is a nonzero element of the nu
 @slide
 @defn
 @title{Characteristic Polynomial}
-Suppose that $A$ is a square matrix of size $n$. Then the <b>characteristic polynomial</b> of $A$ is the polynomial $p_{A}\left(x\right)$ defined by
+Suppose that $A$ is a square matrix of size $n$. Then the @keyword{characteristic polynomial} of $A$ is the polynomial $p_{A}\left(x\right)$ defined by
 \begin{align*}
 \displaystyle p_{A}\left(x\right)=\det\left(A-xI_{n}\right)
 \end{align*}
 @end
-@slide
 @eg
+@newcol
 Consider
 \begin{align*}
 \displaystyle F=\begin{bmatrix}-13&-8&-4\\
@@ -241,6 +243,7 @@ We compute
 &\displaystyle=3+5x+x^{2}-x^{3} \\
 &\displaystyle=-(x-3)(x+1)^{2}.
 \end{align*}
+@endcol
 @endcol
 @end
 @newcol
@@ -268,6 +271,7 @@ $\lambda$ is an eigenvalue of $A$ $\iff$ there exists $\mathbf{x}\neq\mathbf{0}$
 Suppose that $A$ is a square matrix of size $n$. Then the characteristic polynomial $p_{A}\left(x\right)$ has degree $n$.
 @end
 @proof
+@skip
 @newcol
 You can skip the proof. The following briefly explains why the theorem is true. It is not a rigorous proof.We have
 \begin{align*}
@@ -281,13 +285,13 @@ The determinant is a sum of products of entries of $A-xI_{n}$, and all such prod
 \begin{align*}
 \displaystyle (a_{11}-x)(a_{22}-x)\cdots(a_{nn}-x),
 \end{align*}
-which has degree $n$. <b>Remark</b>: We can also see that the leading coefficient is $(-1)^{n}$.
+which has degree $n$. @keyword{Remark}: We can also see that the leading coefficient is $(-1)^{n}$.
 @qed
 @endcol
 @end
-@slide
 @eg
 @label{eg:example4}
+@newcol
 In @ref{eg:example3}, we found the characteristic polynomial of
 \begin{align*}
 \displaystyle F=\begin{bmatrix}-13&-8&-4\\
@@ -295,51 +299,45 @@ In @ref{eg:example3}, we found the characteristic polynomial of
 24&16&7\end{bmatrix}
 \end{align*}
 to be $p_{F}\left(x\right)=-(x-3)(x+1)^{2}$. Being written in factored form, we can simply read off its roots; they are $x=3$ and $x=-1$. By the previous theorem, $\lambda=3$ and $\lambda=-1$ are both eigenvalues of $F$. Moreover, these are the only eigenvalues of $F$.
+@endcol
 @end
 @slide
 @defn
 @title{Eigenspace of a Matrix}
 Suppose that $A$ is a square matrix and $\lambda$ is an eigenvalue of $A$.
-Then the <b>eigenspace</b> of $A$ for $\lambda$, denoted by ${\mathcal{E}}_{A}\left(\lambda\right)$, is the set of all eigenvectors of $A$ with eigenvalue $\lambda$, together with the zero vector.
+Then the @keyword{eigenspace} of $A$ for $\lambda$, denoted by ${\mathcal{E}}_{A}\left(\lambda\right)$, is the set of all eigenvectors of $A$ with eigenvalue $\lambda$, together with the zero vector.
 @end
-@slide
 @thm
 @title{Eigenspace of a Matrix is a Null Space}
 Suppose that $A$ is a square matrix of size $n$ and $\lambda$ is an eigenvalue of $A$. Then
 \begin{align*}
 \displaystyle {\mathcal{E}}_{A}\left(\lambda\right)={\mathcal{N}}\!\left(A-\lambda I_{n}\right).
 \end{align*}
+In particular, ${\mathcal{E}}_{A}\left(\lambda\right)$ is a subspace of $\mathbb{R}^n$.
 @end
 @proof
 @newcol
 First, notice that $\mathbf{0}\in{\mathcal{E}}_{A}\left(\lambda\right)$ (by definition) and $\mathbf{0}\in{\mathcal{N}}\!\left(A-\lambda I_{n}\right)$.
-Now consider any nonzero vector $\mathbf{x}\in{\mathbb{R}}^{n}$,$\mathbf{x}\in{\mathcal{E}}_{A}\left(\lambda\right)\iff A\mathbf{x}=\lambda\mathbf{x}$$\iff A\mathbf{x}-\lambda\mathbf{x}=\mathbf{0}$ $\iff A\mathbf{x}-\lambda I_{n}\mathbf{x}=\mathbf{0}$$\iff\left(A-\lambda I_{n}\right)\mathbf{x}=\mathbf{0}$$\iff\mathbf{x}\in{\mathcal{N}}\!\left(A-\lambda I_{n}\right)$.
+Now consider any nonzero vector $\mathbf{x}\in{\mathbb{R}}^{n}$,$\mathbf{x}\in{\mathcal{E}}_{A}\left(\lambda\right)\iff A\mathbf{x}=\lambda\mathbf{x}$
 
 @col
+$\iff A\mathbf{x}-\lambda\mathbf{x}=\mathbf{0}$
+
+@col
+$\iff A\mathbf{x}-\lambda I_{n}\mathbf{x}=\mathbf{0}$
+
+@col
+$\iff\left(A-\lambda I_{n}\right)\mathbf{x}=\mathbf{0}$
+
+@col
+$\iff\mathbf{x}\in{\mathcal{N}}\!\left(A-\lambda I_{n}\right)$.
+
 This completes the proof.
 @qed
 @endcol
 @end
 @slide
-@thm
-@title{Eigenspace for a Matrix is a Subspace}
-Suppose that $A$ is a square matrix of size $n$ and $\lambda$ is an eigenvalue of $A$.
-Then the eigenspace ${\mathcal{E}}_{A}\left(\lambda\right)$ is a subspace of the vector space ${\mathbb{R}}^{n}$.
-@end
-@proof
-@newcol
-This holds because:
-\[
-{\mathcal{E}}_{A}\left(\lambda\right)={\mathcal{N}}\!\left(A-\lambda I_{n}\right),
-\]
-and the null space of any $m \times n$ matrix is a subspace of $\mathbb{R}^n$.
-@qed
-@endcol
-@end
-@slide
-@eg
-@ref{eg:example3} and @ref{eg:example4}
-describe the characteristic polynomial and eigenvalues of the $3\times 3$ matrix
+@eg@ref{eg:example3} and @ref{eg:example4} describe the characteristic polynomial and eigenvalues of the $3\times 3$ matrix
 \begin{align*}
 \displaystyle F=\begin{bmatrix}-13&-8&-4\\
 12&7&4\\
@@ -512,6 +510,8 @@ Computing eigenvectors, we find
 \end{align*}
 @endcol
 @end
+@slide
+@skip
 @eg
 @label{E}
 @label{eg:example8}
@@ -699,9 +699,9 @@ Computing eigenvectors, we find
 @defn
 @title{Similar Matrices}
 @label{SIM}
-Suppose that $A$ and $B$ are square matrices of size $n$. Then $A$ and $B$ are <b>similar</b> if there exists a nonsingular matrix of size $n$, $S$, such that $A=S^{-1}BS$.
+Suppose that $A$ and $B$ are square matrices of size $n$. Then $A$ and $B$ are @keyword{similar} if there exists a nonsingular matrix of size $n$, $S$, such that $A=S^{-1}BS$.
 We will also say $A$ is similar to $B$ via $S$.
-Finally, we will refer to $S^{-1}BS$ as a <b>similarity transformation</b> when we want to emphasize the way that $S$ changes $B$.
+Finally, we will refer to $S^{-1}BS$ as a @keyword{similarity transformation} when we want to emphasize the way that $S$ changes $B$.
 @end
 @slide
 @eg
@@ -729,6 +729,8 @@ Check that $S$ is nonsingular and then compute
 It follows that $A$ and $B$ are similar.
 @endcol
 @end
+@slide
+@skip
 @eg
 Define
 \begin{align*}
@@ -804,20 +806,20 @@ Check that $S$ is nonsingular and then compute
 @label{SER}
 Suppose that $A$, $B$ and $C$ are square matrices of size $n$. Then
 
-<ol class="ltx_enumerate">
-<li class="ltx_item">
-$A$ is similar to $A$. (Reflexive)
-</li>
-<li class="ltx_item">
-If $A$ is similar to $B$, then $B$ is similar to $A$. (Symmetric)
-</li>
-<li class="ltx_item">
-If $A$ is similar to $B$ and $B$ is similar to $C$, then $A$ is similar to $C$. (Transitive)
-</li>
-
-</ol>
+@enumerate
+@item
+(Reflexive)
+$A$ is similar to $A$.
+@item
+(Symmetric)
+If $A$ is similar to $B$, then $B$ is similar to $A$.
+@item
+(Transitive)
+If $A$ is similar to $B$ and $B$ is similar to $C$, then $A$ is similar to $C$.
+@endenumerate
 @end
 @proof
+@skip
 @newcol
 To see that $A$ is similar to $A$, we need only demonstrate a nonsingular matrix that effects a similarity transformation of $A$ to $A$. We can take $I_{n}$, which is nonsingular and satisfies $I_{n}^{-1}AI_{n}=I_{n}AI_{n}=A$.
 
@@ -893,7 +895,7 @@ We claim that the matrices
 \end{align*}
 are not similar.
 
-@col
+@newcol
 To show this, we compute
 \begin{align*}
 \displaystyle p_{A}\left(x\right)=\begin{vmatrix}1-x&2\\
@@ -907,9 +909,10 @@ and
 @newcol
 Because $p_{A}\left(x\right)\neq p_{B}\left(x\right)$, we conclude that $A$ and $B$ are not similar.
 @endcol
+@endcol
 @end
 @eg
-<b>Same characteristic polynomial, but not similar</b>
+@keyword{Same characteristic polynomial, but not similar}
 
 @newcol
 Define
@@ -939,7 +942,7 @@ Good things happen when a matrix is similar to a diagonal matrix. For example, t
 @defn
 @title{Diagonal Matrix}
 @label{DIM}
-Suppose that $A$ is a square matrix ofh size $n$. Then $A$ is a <b>diagonal matrix</b> if $\left[A\right]_{ij}=0$ whenever $i\neq j$, i.e.
+Suppose that $A$ is a square matrix ofh size $n$. Then $A$ is a @keyword{diagonal matrix} if $\left[A\right]_{ij}=0$ whenever $i\neq j$, i.e.
 \begin{align*}
 \displaystyle A=\begin{bmatrix}\lambda_{1}&0&0&\cdots&0\\
 0&\lambda_{2}&0&\cdots&0\\
@@ -955,7 +958,7 @@ We will often denote such a matrix $A$ by $\operatorname{diag}(\lambda_{1},\lamb
 @defn
 @title{Diagonalizable Matrix}
 @label{DZM}
-Suppose that $A$ is a square matrix. Then $A$ is <b>diagonalizable</b> if $A$ is similar to a diagonal matrix, i.e, there exists an invertible matrix
+Suppose that $A$ is a square matrix. Then $A$ is @keyword{diagonalizable} if $A$ is similar to a diagonal matrix, i.e, there exists an invertible matrix
 $S$ and real numbers $\lambda_{1},\lambda_{2},\ldots,\lambda_{n}$ such that
 \begin{align*}
 \displaystyle S^{-1}AS=\operatorname{diag}(\lambda_{1},\lambda_{2},\ldots,\lambda_{n}).
@@ -1058,8 +1061,9 @@ Therefore $A$ is diagonalizable.
 @qed
 @end
 @remark
-@col
-Notice that the proof is constructive. To diagonalize a matrix, we need only locate $n$ linearly independent eigenvectors. Then we can construct a nonsingular matrix $S$, using the eigenvectors as columns, with the property that $S^{-1}AS$ is a diagonal matrix ($D$). The entries on the diagonal of $D$ will be the eigenvalues of the eigenvectors used to create $S$, in the same order as the eigenvectors appear in $S$. We illustrate this by <b>diagonalizing</b> some matrices.
+@newcol
+Notice that the proof is constructive. To diagonalize a matrix, we need only locate $n$ linearly independent eigenvectors. Then we can construct a nonsingular matrix $S$, using the eigenvectors as columns, with the property that $S^{-1}AS$ is a diagonal matrix ($D$). The entries on the diagonal of $D$ will be the eigenvalues of the eigenvectors used to create $S$, in the same order as the eigenvectors appear in $S$. We illustrate this by @keyword{diagonalizing} some matrices.
+@endcol
 @end
 @slide
 @eg
@@ -1093,8 +1097,7 @@ Check that $S$ is nonsingular (row-reduces to the identity matrix, or has a nonz
 <strong>Remark</strong>: After we introduce Theorem @ref{diagcond}, you don’t need to check that $S$ is nonsingular. See examples below).
 
 @col
-The three columns of $S$ are a linearly independent set. By Theorem @ref{DC} we now know that $F$ is diagonalizable. Furthermore, the construction in the proof of Theorem @ref{DC}
-tells us that $S^{-1}FS=\operatorname{diag}(3,-1,-1)$. Let us check this directly:
+The three columns of $S$ are a linearly independent set. By Theorem @ref{DC} we now know that $F$ is diagonalizable. Furthermore, the construction in the proof of Theorem @ref{DC} tells us that $S^{-1}FS=\operatorname{diag}(3,-1,-1)$. Let us check this directly:
 \begin{align*}
 \displaystyle S^{-1}FS&\displaystyle=\begin{bmatrix}-\frac{1}{2}&-\frac{2}{3}&-\frac{1}{3}\\
 \frac{1}{2}&1&0\\
@@ -1143,12 +1146,12 @@ Then
 @end
 @proof
 @newcol
-See the textbook
+See Beezer's textbook.
 @qed
 @endcol
 @end
 @remark
-@col
+@newcol
 Equation $\eqref{diagconde}$ may be rewritten as:
 \begin{align*}
 \displaystyle \sum_{i=1}^{k}n\!\left(A-\lambda_{i}I_{n}\right)=n\!\left(A-\lambda_{1}I_{n}\right)+\cdots+n\!\left(A-\lambda_{k}I_{n}\right)=n,
@@ -1159,9 +1162,10 @@ or
 \displaystyle \sum_{i=1}^{k}\left(n-r\left(A-\lambda_{i}I_{n}\right)\right)=(n-r\left(A-\lambda_{1}I_{n}\right))+\cdots+(n-r\left(A-\lambda_{k}I_{n}\right))=n,
 \end{align*}
 where $r(M)$ denotes the rank of a matrix $M$.
+@endcol
 @end
 @slide
-@thm
+@cor
 @title{Distinct Eigenvalues implies Diagonalizable}
 @label{DED}
 Suppose that $A$ is a square matrix of size $n$ with $n$ distinct eigenvalues.
@@ -1175,8 +1179,7 @@ You can skip the proof. See the textbook.
 @end
 @slide
 @eg
-Determine if the matrix $B$ in @ref{eg:B}
-is diagonalizable. The characteristic polynomial is
+Determine if the matrix $B$ in @ref{eg:B} is diagonalizable. The characteristic polynomial is
 \begin{align*}
 \displaystyle p_{B}\left(x\right)=\det\left(B-xI_{4}\right)=(x-1)(x-2)^{3}.
 \end{align*}
@@ -1203,6 +1206,7 @@ By Theorem @ref{diagcond}, $B$ is not diagonalizable.
 @endcol
 @end
 @eg
+@skip
 Determine if the matrix $C$
 in @ref{eg:example7} is diagonalizable.Because
 \begin{align*}
@@ -1219,6 +1223,8 @@ all the distinct eigenvalues are $\lambda_{1}=3$, $\lambda_{2}=1$ and $\lambda_{
 By Theorem @ref{diagcond}, $C$ is diagonalizable.
 @endcol
 @end
+@slide
+@skip
 @eg
 Determine if the matrix $E$ in @ref{eg:example8} is diagonalizable.The characteristic polynomial is $p_{E}\left(x\right)=-(x-2)^{4}(x+1)$.
 The eigenvalues are $\lambda_{1}=2$ and $\lambda_{2}=-1$ and we have
@@ -1302,6 +1308,7 @@ Then
 \end{align*}
 @endcol
 @end
+@slide
 @eg
 Determine if
 \begin{align*}
@@ -1311,7 +1318,7 @@ Determine if
 \end{align*}
 is diagonalizable. If it is diagonalizable, find $S$ such that $S^{-1}JS$ is diagonal.
 
-@col
+@newcol
 <strong>Step 1</strong>:
 @newcol
 $p_{J}\left(x\right)=-x^{3}+6x^{2}-9x+4=-(x-4)(x-1)^{2}$. All the distict eigenvalues of $J$ is $\lambda_{1}=4$, $\lambda_{2}=1$.
@@ -1369,6 +1376,7 @@ Then
 @endcol
 @end
 @eg
+@skip
 Determine if
 \begin{align*}
 \displaystyle K=\begin{bmatrix}-4&-4&0&-11&-2&-5\\
@@ -1381,7 +1389,7 @@ Determine if
 \end{align*}
 is diagonalizable and if it is diagonalizable, find $S$ such that $S^{-1}KS$ is diagonal.
 
-@col
+@newcol
 <strong>Step 1</strong>:
 @newcol
 The characteristic polynomial is
@@ -1498,6 +1506,7 @@ Then
 \begin{align*}
 \displaystyle S^{-1}AS=\operatorname{diag}(-1,1,1,2,2,2).
 \end{align*}
+@endcol
 @endcol
 @end
 @eg
@@ -1631,7 +1640,7 @@ so that
 @endcol
 @end
 @eg
-<b>High power of a diagonalizable matrix</b>
+@keyword{High power of a diagonalizable matrix}
 
 @newcol
 Suppose that
@@ -1712,92 +1721,51 @@ Generally
 In below $A$ always denote a square matrix of size $n$
 
 <ol class="ltx_enumerate">
-<li class="ltx_item">
-If $\mathbf{x}\neq 0$ and $A\mathbf{x}=\lambda x$, then $\mathbf{x}$ is called
-an <b>eigenvector</b> of $A$ with eigenvalue $\lambda$.
-</li>
-<li class="ltx_item">
-$p_{A}(x)=\det(A-xI_{n})$ is called the <b>characteristic function</b> of $A$.
+<li class="ltx_item"> If $\mathbf{x}\neq 0$ and $A\mathbf{x}=\lambda x$, then $\mathbf{x}$ is called
+an @keyword{eigenvector} of $A$ with eigenvalue $\lambda$. </li>
+<li class="ltx_item"> $p_{A}(x)=\det(A-xI_{n})$ is called the @keyword{characteristic function} of $A$.
 
 <ol class="ltx_enumerate">
-<li class="ltx_item">
-It is a polynomial of degree $n$ with leading coefficient $(-1)^{n}$.
-</li>
-<li class="ltx_item">
-$\lambda$ is an eigenvalue if and only if $p_{A}(\lambda)=0$, i.e., $\lambda$ is a root of $p_{A}(x)$.
-</li>
+<li class="ltx_item"> It is a polynomial of degree $n$ with leading coefficient $(-1)^{n}$. </li>
+<li class="ltx_item"> $\lambda$ is an eigenvalue if and only if $p_{A}(\lambda)=0$, i.e., $\lambda$ is a root of $p_{A}(x)$. </li>
 
-</ol>
-</li>
-<li class="ltx_item">
-${\mathcal{E}}_{A}\left(\lambda\right)$: <b>eigenspace</b> of $A$ for an eigenvalue $\lambda$.
+</ol></li>
+<li class="ltx_item"> ${\mathcal{E}}_{A}\left(\lambda\right)$: @keyword{eigenspace} of $A$ for an eigenvalue $\lambda$.
 
 <ol class="ltx_enumerate">
-<li class="ltx_item">
-It is the set of of all eigenvectors of $A$ for $\lambda$, together with the zero vector,
+<li class="ltx_item"> It is the set of of all eigenvectors of $A$ for $\lambda$, together with the zero vector,
 i.e.
 \begin{align*}
 \displaystyle {\mathcal{E}}_{\lambda}\left(A\right)=\left\{\mathbf{x}\in{\mathbb{R}}^{n}\,|\,A\mathbf{x}=\lambda\mathbf{x}\right\}.
-\end{align*}
-</li>
-<li class="ltx_item">
-${\mathcal{E}}_{\lambda}\left(A\right)={\mathcal{N}}\!\left(A-\lambda I_{n}\right)$.
-</li>
-<li class="ltx_item">
-${\mathcal{E}}_{\lambda}\left(A\right)$ is a subspace of ${\mathbb{R}}^{n}$.
-</li>
+\end{align*} </li>
+<li class="ltx_item"> ${\mathcal{E}}_{\lambda}\left(A\right)={\mathcal{N}}\!\left(A-\lambda I_{n}\right)$. </li>
+<li class="ltx_item"> ${\mathcal{E}}_{\lambda}\left(A\right)$ is a subspace of ${\mathbb{R}}^{n}$. </li>
 
-</ol>
-</li>
-<li class="ltx_item">
-$\alpha_{A}\left(\lambda\right)$: <b>algebraic multiplicity</b>. The power of $(x-\lambda)$ in the factorization of $p_{A}(x)$.
-</li>
-<li class="ltx_item">
-$\gamma_{A}\left(\lambda\right)$: <b>geometric multiplicity</b>. It is $\dim{\mathcal{E}}_{A}\left(\lambda\right)=n\left(A-\lambda I_{n}\right)$.
-</li>
-<li class="ltx_item">
-Basic properties. Suppose $\lambda$ is an eigenvalue of $A$ and $\mathbf{x}$ is an eigenvector of $A$ with eigenvalue $\lambda$.
+</ol></li>
+<li class="ltx_item"> $\alpha_{A}\left(\lambda\right)$: @keyword{algebraic multiplicity}. The power of $(x-\lambda)$ in the factorization of $p_{A}(x)$. </li>
+<li class="ltx_item"> $\gamma_{A}\left(\lambda\right)$: @keyword{geometric multiplicity}. It is $\dim{\mathcal{E}}_{A}\left(\lambda\right)=n\left(A-\lambda I_{n}\right)$. </li>
+<li class="ltx_item"> Basic properties. Suppose $\lambda$ is an eigenvalue of $A$ and $\mathbf{x}$ is an eigenvector of $A$ with eigenvalue $\lambda$.
 
 <ol class="ltx_enumerate">
-<li class="ltx_item">
-$A$ is invertible if and only if $\lambda=0$ is not an eigenvalue.
-</li>
-<li class="ltx_item">
-For positive integer $s$, $\mathbf{x}$ is an eigenvector of $A^{s}$ with eigenvalue $\lambda^{s}$.
-</li>
-<li class="ltx_item">
-If $\lambda\neq 0$, $\mathbf{x}$ is an eigenvector of $A^{-1}$ with eigenvalue $\lambda^{-1}$.
-</li>
-<li class="ltx_item">
-$\lambda$ is an eigenvector of $A^{t}$ (but $\mathbf{x}$ may <b>not</b> be an eigenvector of $A$)
-</li>
+<li class="ltx_item"> $A$ is invertible if and only if $\lambda=0$ is not an eigenvalue. </li>
+<li class="ltx_item"> For positive integer $s$, $\mathbf{x}$ is an eigenvector of $A^{s}$ with eigenvalue $\lambda^{s}$. </li>
+<li class="ltx_item"> If $\lambda\neq 0$, $\mathbf{x}$ is an eigenvector of $A^{-1}$ with eigenvalue $\lambda^{-1}$. </li>
+<li class="ltx_item"> $\lambda$ is an eigenvector of $A^{t}$ (but $\mathbf{x}$ may @keyword{not} be an eigenvector of $A$) </li>
 
-</ol>
-</li>
-<li class="ltx_item">
-Computational questions
+</ol></li>
+<li class="ltx_item"> Computational questions
 
 <ol class="ltx_enumerate">
-<li class="ltx_item">
-Find all the eigenvalues of $A$: find all the roots of $p_{A}(x)$.
-</li>
-<li class="ltx_item">
-Find ${\mathcal{E}}_{A}\left(\lambda\right)$: find ${\mathcal{N}}\!\left(A-\lambda I_{n}\right)$, this can be done by finding the RREF of $A-\lambda I_{n}$.
+<li class="ltx_item"> Find all the eigenvalues of $A$: find all the roots of $p_{A}(x)$. </li>
+<li class="ltx_item"> Find ${\mathcal{E}}_{A}\left(\lambda\right)$: find ${\mathcal{N}}\!\left(A-\lambda I_{n}\right)$, this can be done by finding the RREF of $A-\lambda I_{n}$.
 
 </li>
-<li class="ltx_item">
-Find $\alpha_{A}\left(\lambda\right)$: Find the power of $x-\lambda$ in the factorization of $p_{A}(x)$.
-</li>
-<li class="ltx_item">
-Find a basis for ${\mathcal{E}}_{A}\left(\lambda\right)$: again, this is same as finding basis of ${\mathcal{N}}\!\left(A-\lambda I_{n}\right)$. This can be done by $A-\lambda I_{n}\xrightarrow{\text{RREF}}B$ and use the standard method
-in finding basis (see Lecture 8 Theorem 4, @ref{eg:example6}).
-</li>
-<li class="ltx_item">
-Find $\gamma_{A}\left(\lambda\right)$: same as finding $n\left(A-\lambda I_{n}\right)=n-r\left(A-\lambda I_{n}\right)$. Suppose $A-\lambda I_{n}\xrightarrow{\text{RREF}}B$.
-Then $\gamma_{A}\left(\lambda\right)=n-r\left(B\right)=n-\text{ number of pivot columns of $B$}$.
-</li>
+<li class="ltx_item"> Find $\alpha_{A}\left(\lambda\right)$: Find the power of $x-\lambda$ in the factorization of $p_{A}(x)$. </li>
+<li class="ltx_item"> Find a basis for ${\mathcal{E}}_{A}\left(\lambda\right)$: again, this is same as finding basis of ${\mathcal{N}}\!\left(A-\lambda I_{n}\right)$. This can be done by $A-\lambda I_{n}\xrightarrow{\text{RREF}}B$ and use the standard method
+in finding basis (see Lecture 8 Theorem 4, @ref{eg:example6}). </li>
+<li class="ltx_item"> Find $\gamma_{A}\left(\lambda\right)$: same as finding $n\left(A-\lambda I_{n}\right)=n-r\left(A-\lambda I_{n}\right)$. Suppose $A-\lambda I_{n}\xrightarrow{\text{RREF}}B$.
+Then $\gamma_{A}\left(\lambda\right)=n-r\left(B\right)=n-\text{ number of pivot columns of $B$}$. </li>
 
-</ol>
-</li>
+</ol></li>
 
 </ol>
