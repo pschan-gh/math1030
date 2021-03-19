@@ -413,6 +413,7 @@ Expand along row $i$, then
 @end
 @eg
 @skip
+@newcol
 Suppose
 \begin{align*}
 \displaystyle A=\begin{bmatrix}a_{11}&a_{12}&a_{13}\\
@@ -446,6 +447,7 @@ a_{31}&a_{32}&a_{33}\end{vmatrix}\qquad(\frac{1}{4}C_{3})
 \begin{align*}
 \displaystyle =24.
 \end{align*}
+@endcol
 @endcol
 @end
 @slide
@@ -544,6 +546,103 @@ Suppose that $A$ is a square matrix. Let $B$ be the square matrix obtained from 
 @newcol
 Suppose the row operation is $\alpha R_{i}+R_{j}$, expand along row $j$. For details, see Beezer p.275.
 @qed
+@endcol
+@end
+@slide
+@eg
+Suppose we want to compute the determinant of the $4\times 4$ matrix
+\begin{align*}
+\displaystyle A=\begin{bmatrix}2&0&2&3\\
+1&3&-1&1\\
+-1&1&-1&2\\
+3&5&4&0\end{bmatrix}
+\end{align*}
+@newcol
+We will perform a sequence of row operations on this matrix, shooting for an upper triangular matrix, whose determinant will be simply the product of its diagonal entries. For each row operation, we will track the effect on the determinant via Theorem   @ref{DRCS} Theorem   @ref{DRCM} and Theorem   @ref{DRCMA}.
+\begin{align*}
+\displaystyle \begin{vmatrix}2&0&2&3\\
+1&3&-1&1\\
+-1&1&-1&2\\
+3&5&4&0\end{vmatrix}
+\displaystyle &=-\begin{vmatrix}1&3&-1&1\\
+2&0&2&3\\
+-1&1&-1&2\\
+3&5&4&0\end{vmatrix}\qquad(R_{1}\leftrightarrow R_{2})
+\\
+\\&=-\begin{vmatrix}1&3&-1&1\\
+0&-6&4&1\\
+-1&1&-1&2\\
+3&5&4&0\end{vmatrix}\qquad(-2R_{1}+R_{2})
+\\
+\\&=-\begin{vmatrix}1&3&-1&1\\
+0&-6&4&1\\
+0&4&-2&3\\
+3&5&4&0\end{vmatrix}\qquad(1R_{1}+R_{3})
+\\
+\\&=-\begin{vmatrix}1&3&-1&1\\
+0&-6&4&1\\
+0&4&-2&3\\
+0&-4&7&-3\end{vmatrix}\qquad(-3R_{1}+R_{4})
+\\
+\\&=-\begin{vmatrix}1&3&-1&1\\
+0&-2&2&4\\
+0&4&-2&3\\
+0&-4&7&-3\end{vmatrix}\qquad(1R_{3}+R_{2})
+\\
+\\&=2\begin{vmatrix}1&3&-1&1\\
+0&1&-1&-2\\
+0&4&-2&3\\
+0&-4&7&-3\end{vmatrix}\qquad(-\frac{1}{2}R_{2})
+\\
+\\&=2\begin{vmatrix}1&3&-1&1\\
+0&1&-1&-2\\
+0&0&2&11\\
+0&-4&7&-3\end{vmatrix}\qquad(-4R_{2}+R_{3})
+\\
+\\&=2\begin{vmatrix}1&3&-1&1\\
+0&1&-1&-2\\
+0&0&2&11\\
+0&0&3&-11\end{vmatrix}\qquad(-4R_{2}+R_{4})
+\\
+\\&=2\begin{vmatrix}1&3&-1&1\\
+0&1&-1&-2\\
+0&0&2&11\\
+0&0&1&-22\end{vmatrix}\qquad(-1R_{3}+R_{4})
+\\
+\\&=2\begin{vmatrix}1&3&-1&1\\
+0&1&-1&-2\\
+0&0&0&55\\
+0&0&1&-22\end{vmatrix}\qquad(-2R_{4}+R_{3})
+\\
+\\&=-2\begin{vmatrix}1&3&-1&1\\
+0&1&-1&-2\\
+0&0&1&-22\\
+0&0&0&55\end{vmatrix}\qquad(R_{3}\leftrightarrow R_{4})
+\\
+\\&=-2\times 1\times 1\times 1\times 55=-110.
+\end{align*}
+@endcol
+@end
+@eg
+@skip
+Compute
+\begin{align*}
+\displaystyle \begin{vmatrix}1&a_{1}&a_{2}&a_{3}\\
+1&a_{1}+b_{1}&a_{2}&a_{3}\\
+1&a_{1}&a_{2}+b_{2}&a_{3}\\
+1&a_{1}&a_{2}&a_{3}+b_{3}.\end{vmatrix}
+\end{align*}
+@newcol
+The above is
+\begin{align*}
+\displaystyle \begin{vmatrix}1&a_{1}&a_{2}&a_{3}\\
+0&b_{1}&0&0\\
+0&0&b_{2}&0\\
+0&0&0&b_{3}\end{vmatrix}\qquad(-1R_{1}+R_{2},-1R_{1}+R_{3},-1R_{1}+R_{4})
+\end{align*}
+\begin{align*}
+\displaystyle =b_{1}b_{2}b_{3}\qquad(\text{upper triangular matrix})
+\end{align*}
 @endcol
 @end
 @slide
@@ -660,104 +759,7 @@ Expand along row $i$ (or column $i$).
 @qed
 @endcol
 @end
-@slide
-@eg
-Suppose we want to compute the determinant of the $4\times 4$ matrix
-\begin{align*}
-\displaystyle A=\begin{bmatrix}2&0&2&3\\
-1&3&-1&1\\
--1&1&-1&2\\
-3&5&4&0\end{bmatrix}
-\end{align*}
-@newcol
-We will perform a sequence of row operations on this matrix, shooting for an upper triangular matrix, whose determinant will be simply the product of its diagonal entries. For each row operation, we will track the effect on the determinant via Theorem   @ref{DRCS} Theorem   @ref{DRCM} and Theorem   @ref{DRCMA}.
-\begin{align*}
-\displaystyle \begin{vmatrix}2&0&2&3\\
-1&3&-1&1\\
--1&1&-1&2\\
-3&5&4&0\end{vmatrix}
-\displaystyle &=-\begin{vmatrix}1&3&-1&1\\
-2&0&2&3\\
--1&1&-1&2\\
-3&5&4&0\end{vmatrix}\qquad(R_{1}\leftrightarrow R_{2})
-\\
-\\&=-\begin{vmatrix}1&3&-1&1\\
-0&-6&4&1\\
--1&1&-1&2\\
-3&5&4&0\end{vmatrix}\qquad(-2R_{1}+R_{2})
-\\
-\\&=-\begin{vmatrix}1&3&-1&1\\
-0&-6&4&1\\
-0&4&-2&3\\
-3&5&4&0\end{vmatrix}\qquad(1R_{1}+R_{3})
-\\
-\\&=-\begin{vmatrix}1&3&-1&1\\
-0&-6&4&1\\
-0&4&-2&3\\
-0&-4&7&-3\end{vmatrix}\qquad(-3R_{1}+R_{4})
-\\
-\\&=-\begin{vmatrix}1&3&-1&1\\
-0&-2&2&4\\
-0&4&-2&3\\
-0&-4&7&-3\end{vmatrix}\qquad(1R_{3}+R_{2})
-\\
-\\&=2\begin{vmatrix}1&3&-1&1\\
-0&1&-1&-2\\
-0&4&-2&3\\
-0&-4&7&-3\end{vmatrix}\qquad(-\frac{1}{2}R_{2})
-\\
-\\&=2\begin{vmatrix}1&3&-1&1\\
-0&1&-1&-2\\
-0&0&2&11\\
-0&-4&7&-3\end{vmatrix}\qquad(-4R_{2}+R_{3})
-\\
-\\&=2\begin{vmatrix}1&3&-1&1\\
-0&1&-1&-2\\
-0&0&2&11\\
-0&0&3&-11\end{vmatrix}\qquad(-4R_{2}+R_{4})
-\\
-\\&=2\begin{vmatrix}1&3&-1&1\\
-0&1&-1&-2\\
-0&0&2&11\\
-0&0&1&-22\end{vmatrix}\qquad(-1R_{3}+R_{4})
-\\
-\\&=2\begin{vmatrix}1&3&-1&1\\
-0&1&-1&-2\\
-0&0&0&55\\
-0&0&1&-22\end{vmatrix}\qquad(-2R_{4}+R_{3})
-\\
-\\&=-2\begin{vmatrix}1&3&-1&1\\
-0&1&-1&-2\\
-0&0&1&-22\\
-0&0&0&55\end{vmatrix}\qquad(R_{3}\leftrightarrow R_{4})
-\\
-\\&=-2\times 1\times 1\times 1\times 55=-110.
-\end{align*}
-@endcol
-@end
 @section{Examples}
-@eg
-@skip
-Compute
-\begin{align*}
-\displaystyle \begin{vmatrix}1&a_{1}&a_{2}&a_{3}\\
-1&a_{1}+b_{1}&a_{2}&a_{3}\\
-1&a_{1}&a_{2}+b_{2}&a_{3}\\
-1&a_{1}&a_{2}&a_{3}+b_{3}.\end{vmatrix}
-\end{align*}
-@newcol
-The above is
-\begin{align*}
-\displaystyle \begin{vmatrix}1&a_{1}&a_{2}&a_{3}\\
-0&b_{1}&0&0\\
-0&0&b_{2}&0\\
-0&0&0&b_{3}\end{vmatrix}\qquad(-1R_{1}+R_{2},-1R_{1}+R_{3},-1R_{1}+R_{4})
-\end{align*}
-\begin{align*}
-\displaystyle =b_{1}b_{2}b_{3}\qquad(\text{upper triangular matrix})
-\end{align*}
-@endcol
-@end
 @slide
 @eg
 Compute
@@ -1032,6 +1034,418 @@ a_{31}&a_{32}&a_{33}\\
 \end{align*} @keyword{Remark}: The result is also valid when $A$ is a square matrix of size $n$ and $B$ is a square matrix of size $m$.
 @endcol
 @end
+@section{More properties of determinants}
+@cor
+<ol class="ltx_enumerate">
+<li class="ltx_item"> Let $I_{n}\xrightarrow{R_{i}\leftrightarrow R_{j}}J$, then $\det\left(J\right)=-1$. </li>
+<li class="ltx_item"> Let $I_{n}\xrightarrow{\alpha R_{i}}J$, then $\det\left(J\right)=\alpha$. </li>
+<li class="ltx_item"> Let $I_{n}\xrightarrow{\alpha R_{i}+R_{j}}J$, then $\det\left(J\right)=1$. </li>
+
+</ol>
+@end
+@slide
+@cor
+@label{cor:detBJA}
+Let $A$ be a square matrix, apply row operation on $A$ and obtain a new matrix $B$.
+Let $J$ be obtained by applying the same row operation on $I_{n}$. By lecture 13, $B=JA$.
+Then $\det\left(B\right)=\det\left(JA\right)=\det\left(J\right)\det\left(A\right)$.
+@end
+@slide
+@thm
+@label{thm:nonsingulardet}
+$A$ is nonsingular if and only if $\det\left(A\right)\neq 0$.
+@end
+
+@proof
+@newcol
+Let $B$ be the RREF of an $n\times n$ square matrix $A$.
+Then $A$ is nonsinuglar if and only if $B = I_n$.
+
+Moreover, if $A$ is singular, then $B$ must contain a zero row,
+which implies that $\det(B) = 0$.
+
+@newcol
+By @ref{thm:ROEM},
+there is a sequence of
+elementary matrices $J_i$, corresponding to row operations,
+such that:
+\[
+J_k \cdots J_2 J_1 A = B.
+\]
+@col
+Applying the previous corollary repeatedly,
+we have:
+\[
+\det(J_k) \cdots \det(J_2)\det(J_1) \det(A) = \det(B).
+\]
+@col
+Since, each $\det(J_i) \neq 0$, we have:
+\[
+\det(A) \neq 0 \Leftrightarrow \det(B) \neq 0.
+\]
+@col
+On the other hand, $B$ is an $n\times n$ RREF matrix, so
+$\det(B) \neq 0$ if and only if $B = I_n$.
+@col
+We conclude that $A$ is nonsingular if and only if $\det(A) \neq 0$.
+@qed
+@endcol
+@endcol
+@end
+@cor
+@newcol
+The columns of an $n \times n$ matrix $A$ are linearly independent if and only if $\det(A) = 0$.
+@endcol
+@end
+@slide
+@eg
+@newcol
+Find $x$ such that
+\begin{align*}
+\displaystyle A=\begin{bmatrix}2&1&0&1\\
+0&1&1&1\\
+1&0&0&x\\
+0&2&3&1\\
+\end{bmatrix}
+\end{align*}
+is singular. Expand along the first column
+\begin{align*}
+\displaystyle \det\left(A\right)=2\begin{vmatrix}1&1&1\\
+0&0&x\\
+2&3&1\end{vmatrix}+\begin{vmatrix}1&0&1\\
+1&1&1\\
+2&3&1\end{vmatrix}.
+\end{align*}
+@newcol
+Expand along the second row
+\begin{align*}
+\displaystyle \begin{vmatrix}1&1&1\\
+0&0&x\\
+2&3&1\end{vmatrix}=-x\begin{vmatrix}1&1\\
+2&3\end{vmatrix}=-x.
+\end{align*}
+@col
+Finally
+\begin{align*}
+\displaystyle \begin{vmatrix}1&0&1\\
+1&1&1\\
+2&3&1\end{vmatrix}=-1.
+\end{align*}
+@col
+Hence
+\begin{align*}
+\displaystyle \det\left(A\right)=-2x-1.
+\end{align*}
+@col
+It is singular if and only if $\det\left(A\right)=0$ if and only if $x=-\frac{1}{2}$.
+@endcol
+@endcol
+@end
+
+@eg
+@skip
+Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}a&b&c&d\\
+e&0&0&0\\
+f&0&0&0\\
+g&0&0&0\end{bmatrix}
+\end{align*}
+find $\det\left(A\right)$.
+
+<strong>Method 1</strong>
+@newcol
+\begin{align*}
+\displaystyle a\begin{vmatrix}0&0&0\\
+0&0&0\\
+0&0&0\end{vmatrix}-b\begin{vmatrix}e&0&0\\
+f&0&0\\
+g&0&0\end{vmatrix}+c\begin{vmatrix}e&0&0\\
+f&0&0\\
+g&0&0\end{vmatrix}-d\begin{vmatrix}e&0&0\\
+f&0&0\\
+g&0&0\end{vmatrix}
+\end{align*}
+@col
+In each of the above matrices, there is one zero columns, so all the determinants of the $3\times 3$ submatrices must be zero.
+Therefore the above is
+\begin{align*}
+\displaystyle a0-b0+c0-d0=0.
+\end{align*}
+@endcol
+
+<strong>Method 2</strong>
+@newcol
+If $c=0$, then column 3 is the zero column, so $\det\left(A\right)=0$. Otherwise
+\begin{align*}
+\displaystyle A\begin{bmatrix}0\\
+1\\
+-b/c\\
+0\end{bmatrix}=\mathbf{0}.
+\end{align*}
+@col
+So $A$ is singular and hence $\det\left(A\right)=0$.
+@endcol
+@end
+@slide
+@thm
+@label{thm:DETMULT}
+If $A$ and $B$ are square matrices. Then
+\begin{align*}
+\displaystyle \det\left(AB\right)=\det\left(A\right)\det\left(B\right).
+\end{align*}
+@end
+@proof
+@newcol
+Suppose $A$ or $B$ is singular.
+Then, accordingly $\det(A)$ or $\det(B)$ is equal to zero.
+By @ref{NPNT} the matrix $AB$ is also singular, hence:
+\[
+\det(AB) = 0 = \det(A)\det(B).
+\]
+
+@col
+If both $A$ and $B$ are nonsingular,
+then there are elementary matrices, $J_i$ and $K_i$,
+coresponding to row operations, such that:
+\[
+A = J_1 J_2\cdots J_k I_n,
+\]
+\[
+B = K_1 K_2\cdots K_l I_n.
+\]
+This implies that:
+\[
+AB = (J_1 J_2\cdots J_k)(K_1 K_2\cdots K_l) I_n
+\]
+@col
+By @ref{cor:detBJA}, we have:
+\begin{align*}
+\det(A) &= \det(J_1)\det(J_2)\cdots\det(J_k),\\
+\det(B) &= \det(K_1)\det(K_2)\cdots\det(K_l),\\
+\det(AB) &= \det(J_1)\det(J_2)\cdots\det(J_k)\\
+&\quad\quad\cdot \det(K_1)\det(K_2)\cdots\det(K_l).
+\end{align*}
+Hence, $\det(AB) = \det(A)\det(B)$.
+@qed
+@endcol
+@end
+@slide
+@thm
+If $\det\left(A\right)\neq 0$, then $A$ is invertible and
+\begin{align}
+\label{A-1}
+\displaystyle \det\left(A^{-1}\right)=\frac{1}{\det\left(A\right)}.
+\end{align}
+@end
+@proof
+@newcol
+It follows from @ref{thm:nonsingulardet} that $A^{-1}$ exists.
+The identity $\eqref{A-1}$ then follows from:
+\[
+AA^{-1} = I_n
+\]
+and @ref{thm:DETMULT}.
+@qed
+@endcol
+@end
+@slide
+@skip
+@thm
+@title{Cramer’s rule}
+Let $A$ be a invertible square matrix of size $n$. Let $\mathbf{b}\in{\mathbb{R}}^{n}$.
+Let $M_{k}$ be the square matrix by replacing the $k$-th column of $A$ by $\mathbf{b}$.
+If
+\begin{align*}
+\displaystyle \mathbf{x}=\begin{bmatrix}x_{1}\\
+x_{2}\\
+\vdots\\
+x_{n}\end{bmatrix}
+\end{align*}
+is a solution of $A\mathbf{x}=\mathbf{b}$, then
+\begin{align*}
+\displaystyle x_{k}=\frac{\det\left(M_{k}\right)}{\det\left(A\right)}
+\end{align*}
+where $k=1,\ldots,n$.
+@end
+@proof
+@newcol
+Because $A$ is invertible, $A\mathbf{x}=\mathbf{b}$ has a unique solution. Let $X_{k}$ be matrix obtained from the identity matrix $I_{n}$ by replacing column $k$ with $\mathbf{x}$.
+Then
+\begin{align*}
+\displaystyle A\mathbf{e}_{i}=\mathbf{A}_{i}\text{ if $i\neq k$}\qquad A\mathbf{x}=\mathbf{b}\text{ if $i=k$.}
+\end{align*}
+@col
+Hence
+\begin{align*}
+\displaystyle AX_{k}=M_{k}.
+\end{align*}
+@col
+Expanding $X_{k}$ along the row $k$, we have
+\begin{align*}
+\displaystyle \det\left(X_{k}\right)=x_{k}\det\left(I_{n-1}\right)=x_{k}.
+\end{align*}
+@col
+So
+\begin{align*}
+\displaystyle \det\left(M_{k}\right)=\det\left(AX_{k}\right)=\det\left(A\right)\det\left(X_{k}\right)=\det\left(A\right)x_{k}.
+\end{align*}
+@col
+Therefore
+\begin{align*}
+\displaystyle x_{k}=\frac{\det\left(M_{k}\right)}{\det\left(A\right)}.
+\end{align*}
+@qed
+@endcol
+@end
+@slide
+@skip
+@eg
+Using Cramer’s rule to solve the following system of linear equation.
+\begin{align*}
+\displaystyle x_{1}+2x_{2}+3x_{3}=2 \\
+\displaystyle x_{1}\qquad+x_{3}=3 \\
+\displaystyle x_{1}+x_{2}-x_{3}=1
+\end{align*}
+@newcol
+Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&2&3\\
+1&0&1\\
+1&1&-1\end{bmatrix}\qquad\mathbf{b}=\begin{bmatrix}2\\
+3\\
+1\end{bmatrix}.
+\end{align*}
+\begin{align*}
+\displaystyle \det\left(A\right)=6.
+\end{align*}
+\begin{align*}
+\displaystyle M_{1}=\begin{bmatrix}2&2&3\\
+3&0&1\\
+1&1&-1\end{bmatrix},\det\left(M_{1}\right)=15.
+\end{align*}
+\begin{align*}
+\displaystyle x_{1}=\frac{\det\left(M_{1}\right)}{\det\left(A\right)}=\frac{15}{6}=\frac{5}{2}.
+\end{align*}
+\begin{align*}
+\displaystyle M_{2}=\begin{bmatrix}1&2&3\\
+1&3&1\\
+1&1&-1\end{bmatrix},\det\left(M_{2}\right)=-6.
+\end{align*}
+\begin{align*}
+\displaystyle x_{2}=\frac{\det\left(M_{2}\right)}{\det\left(A\right)}=\frac{-6}{6}=-1.
+\end{align*}
+\begin{align*}
+\displaystyle M_{3}=\begin{bmatrix}1&2&2\\
+1&0&3\\
+1&1&1\end{bmatrix},\det\left(M_{3}\right)=3.
+\end{align*}
+\begin{align*}
+\displaystyle x_{3}=\frac{\det\left(M_{3}\right)}{\det\left(A\right)}=\frac{3}{6}=\frac{1}{2}.
+\end{align*}
+@col
+Thus
+\begin{align*}
+\displaystyle \begin{bmatrix}x_{1}\\
+x_{2}\\
+x_{3}\end{bmatrix}=\begin{bmatrix}\frac{5}{2}\\
+-1\\
+\frac{1}{2}\end{bmatrix}
+\end{align*}
+is a solution.
+@endcol
+@end
+@slide
+@skip
+@thm
+@title{Formula for inverse}
+Suppose $A$ is an invertible matrix. Then
+\begin{align*}
+\displaystyle [A^{-1}]_{ji}=\frac{(-1)^{i+j}\det\left(A(i|j)\right)}{\det\left(A\right)}.
+\end{align*}
+@newcol
+Pay attention to the order of the indexes $i$ and $j$.
+@endcol
+@end
+@proof
+@newcol
+Let $B=A^{-1}$.
+Let $\mathbf{B}_{i}$ be the $i$-th column of $B$. Then
+\begin{align*}
+\displaystyle A\mathbf{B}_{i}=\mathbf{e}_{i}.
+\end{align*}
+@col
+The vector $\mathbf{B}_{i}$ is a solution of $A\mathbf{x}=\mathbf{e}_{i}$.
+We can use the previous theorem to find $\mathbf{B}_{i}$.
+Let $M_{j}$ be the square matrix by replacing the $j$-th column of $A$ by $\mathbf{e}_{i}$.
+Expand along the $j$-th column of $M_{j}$, we have
+\begin{align*}
+\displaystyle \det\left(M_{j}\right)=(-1)^{i+j}\det\left(M_{j}(i|j)\right)=(-1)^{i+j}\det\left(A(i|j)\right).
+\end{align*}
+@col
+Then the $j$-th coordinate of $\mathbf{B}_{i}$ is given by
+\begin{align*}
+\displaystyle B_{ji}=[\mathbf{B}_{i}]_{j}=\frac{\det\left(M_{j}\right)}{{\det\left(A\right)}}=\frac{(-1)^{i+j}\det\left(A(i|j)\right)}{\det\left(A\right)}.
+\end{align*}
+@qed
+@endcol
+@end
+@slide
+@skip
+@eg
+By the above formula, find the inverse of
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&2&3\\
+1&0&1\\
+1&1&-1\end{bmatrix},
+\end{align*}
+\begin{align*}
+\displaystyle \det\left(A\right)=6.
+\end{align*}
+\begin{align*}
+\displaystyle A(1|1)=\begin{bmatrix}0&1\\
+1&-1\end{bmatrix},\qquad\det\left(A(1|1)\right)=-1,
+\end{align*}
+\begin{align*}
+\displaystyle A(1|2)=\begin{bmatrix}1&1\\
+1&-1\end{bmatrix},\qquad\det\left(A(1|2)\right)=-2,
+\end{align*}
+\begin{align*}
+\displaystyle A(1|3)=\begin{bmatrix}1&0\\
+1&1\end{bmatrix},\qquad\det\left(A(1|3)\right)=1,
+\end{align*}
+\begin{align*}
+\displaystyle A(2|1)=\begin{bmatrix}2&3\\
+1&-1\end{bmatrix},\qquad\det\left(A(2|1)\right)=-5,
+\end{align*}
+\begin{align*}
+\displaystyle A(2|2)=\begin{bmatrix}1&3\\
+1&-1\end{bmatrix},\qquad\det\left(A(2|2)\right)=-4,
+\end{align*}
+\begin{align*}
+\displaystyle A(2|3)=\begin{bmatrix}1&2\\
+1&1\end{bmatrix},\qquad\det\left(A(2|3)\right)=-1,
+\end{align*}
+\begin{align*}
+\displaystyle A(3|1)=\begin{bmatrix}2&3\\
+0&1\end{bmatrix},\qquad\det\left(A(3|1)\right)=2,
+\end{align*}
+\begin{align*}
+\displaystyle A(3|2)=\begin{bmatrix}1&3\\
+1&1\end{bmatrix},\qquad\det\left(A(3|2)\right)=-2,
+\end{align*}
+\begin{align*}
+\displaystyle A(3|3)=\begin{bmatrix}1&2\\
+1&0\end{bmatrix},\qquad\det\left(A(3|3)\right)=-2.
+\end{align*}
+@end
+\begin{align*}
+\displaystyle A^{-1}=\frac{1}{\det\left(A\right)}\begin{bmatrix}\det\left(A(1|1)\right)&-\det\left(A(2|1)\right)&\det\left(A(3|1)\right)\\
+-\det\left((A(1|2)\right)&\det\left(A(2|2)\right)&-\det\left(A(3|2)\right)\\
+\det\left(A(1|3)\right)&-\det\left(A(2|3)\right)&\det\left(A(3|3)\right)\end{bmatrix}=\begin{bmatrix}-\frac{1}{6}&\frac{5}{6}&\frac{1}{3}\\
+\frac{1}{3}&-\frac{2}{3}&\frac{1}{3}\\
+\frac{1}{6}&\frac{1}{6}&-\frac{1}{3}\end{bmatrix}
+\end{align*}
 @section{More examples}
 @eg
 @skip
@@ -1102,8 +1516,8 @@ The last step follows by the fact that the matrix on the left hand side is the l
 @endcol
 @end
 @slide
-@eg
 @skip
+@eg
 Let $B_{n}$ be a $n\times n$ matrix in the form
 \begin{align*}
 \displaystyle \begin{bmatrix}1-a_{1}&a_{2}&0&\cdots&0&0\\
@@ -1398,415 +1812,6 @@ By mathematical induction, the formula is valid for all integers $n\geq 1$.
 @qed</li></ol>
 @endcol
 @end
-@section{More properties of determinants}
-@cor
-<ol class="ltx_enumerate">
-<li class="ltx_item"> Let $I_{n}\xrightarrow{R_{i}\leftrightarrow R_{j}}J$, then $\det\left(J\right)=-1$. </li>
-<li class="ltx_item"> Let $I_{n}\xrightarrow{\alpha R_{i}}J$, then $\det\left(J\right)=\alpha$. </li>
-<li class="ltx_item"> Let $I_{n}\xrightarrow{\alpha R_{i}+R_{j}}J$, then $\det\left(J\right)=1$. </li>
-
-</ol>
-@end
-@slide
-@cor
-@label{cor:detBJA}
-Let $A$ be a square matrix, apply row operation on $A$ and obtain a new matrix $B$.
-Let $J$ be obtained by applying the same row operation on $I_{n}$. By lecture 13, $B=JA$.
-Then $\det\left(B\right)=\det\left(JA\right)=\det\left(J\right)\det\left(A\right)$.
-@end
-@slide
-Let $B$ be the RREF of an $n\times n$ square matrix $A$.
-Then $A$ is nonsinuglar if and only if $B = I_n$.
-
-Moreover, if $A$ is singular, then $B$ must contain a zero row,
-which implies that $\det(B) = 0$.
-
-@newcol
-By @ref{thm:ROEM},
-there is a sequence of
-elementary matrices $J_i$, corresponding to row operations,
-such that:
-\[
-J_k \cdots J_2 J_1 A = B.
-\]
-@col
-Applying the previous corollary repeatedly,
-we have:
-\[
-\det(J_k) \cdots \det(J_2)\det(J_1) \det(A) = \det(B).
-\]
-@col
-Since, each $\det(J_i) \neq 0$, we have:
-\[
-\det(A) \neq 0 \Leftrightarrow \det(B) \neq 0.
-\]
-@col
-On the other hand, $B$ is an $n\times n$ RREF matrix, so
-$\det(B) = 0$ if and only if $B = I_n$.
-@endcol
-@thm
-@label{thm:nonsingulardet}
-@newcol
-$A$ is nonsingular if and only if $\det\left(A\right)\neq 0$.
-@endcol
-@end
-<!-- @proof@newcol
-Suppose $A$ is nonsingular, then $A$ is invertible, so
-\begin{align*}
-\displaystyle AA^{-1}=I_{n}.
-\end{align*}
-\begin{align*}
-\displaystyle \det\left(A\right)\det\left(A^{-1}\right)=\det\left(I_{n}\right)=1.&
-\end{align*}
-@col
-So $\det\left(A\right)$ is nonzero. Next suppose $\det\left(A\right)\neq 0$, we want to show that $A$ is nonsingular.
-If $A$ is singular, then by lecture 13, there exists an invertible matrix $J$, such that $JA=B$,
-where $B$ is of RREF with rank $< n$. Hence $B$ has a zero row. Therefore $\det\left(B\right)=0$.
-Because $J$ is invertible, $\det\left(J\right)\neq 0$. So $\det\left(A\right)=0$. Contradiction.
-@qed@endcol@end -->
-@eg
-Find $x$ such that
-\begin{align*}
-\displaystyle A=\begin{bmatrix}2&1&0&1\\
-0&1&1&1\\
-1&0&0&x\\
-0&2&3&1\\
-\end{bmatrix}
-\end{align*}
-is singular.Expand along the first column
-\begin{align*}
-\displaystyle \det\left(A\right)=2\begin{vmatrix}1&1&1\\
-0&0&x\\
-2&3&1\end{vmatrix}+\begin{vmatrix}1&0&1\\
-1&1&1\\
-2&3&1\end{vmatrix}.
-\end{align*}
-@newcol
-Expand along the second row
-\begin{align*}
-\displaystyle \begin{vmatrix}1&1&1\\
-0&0&x\\
-2&3&1\end{vmatrix}=-x\begin{vmatrix}1&1\\
-2&3\end{vmatrix}=-x.
-\end{align*}
-@col
-Finally
-\begin{align*}
-\displaystyle \begin{vmatrix}1&0&1\\
-1&1&1\\
-2&3&1\end{vmatrix}=-1.
-\end{align*}
-@col
-Hence
-\begin{align*}
-\displaystyle \det\left(A\right)=-2x-1.
-\end{align*}
-@col
-It is singular if and only if $\det\left(A\right)=0$ if and only if $x=-\frac{1}{2}$.
-@endcol
-@end
-
-@eg
-@skip
-Let
-\begin{align*}
-\displaystyle A=\begin{bmatrix}a&b&c&d\\
-e&0&0&0\\
-f&0&0&0\\
-g&0&0&0\end{bmatrix}
-\end{align*}
-find $\det\left(A\right)$.
-
-<strong>Method 1</strong>
-@newcol
-\begin{align*}
-\displaystyle a\begin{vmatrix}0&0&0\\
-0&0&0\\
-0&0&0\end{vmatrix}-b\begin{vmatrix}e&0&0\\
-f&0&0\\
-g&0&0\end{vmatrix}+c\begin{vmatrix}e&0&0\\
-f&0&0\\
-g&0&0\end{vmatrix}-d\begin{vmatrix}e&0&0\\
-f&0&0\\
-g&0&0\end{vmatrix}
-\end{align*}
-@col
-In each of the above matrices, there is one zero columns, so all the determinants of the $3\times 3$ submatrices must be zero.
-Therefore the above is
-\begin{align*}
-\displaystyle a0-b0+c0-d0=0.
-\end{align*}
-@endcol
-
-<strong>Method 2</strong>
-@newcol
-If $c=0$, then column 3 is the zero column, so $\det\left(A\right)=0$. Otherwise
-\begin{align*}
-\displaystyle A\begin{bmatrix}0\\
-1\\
--b/c\\
-0\end{bmatrix}=\mathbf{0}.
-\end{align*}
-@col
-So $A$ is singular and hence $\det\left(A\right)=0$.
-@endcol
-@end
-@slide
-@thm
-@label{thm:DETMULT}
-If $A$ and $B$ are square matrices. Then
-\begin{align*}
-\displaystyle \det\left(AB\right)=\det\left(A\right)\det\left(B\right).
-\end{align*}
-@end
-@proof
-@newcol
-Suppose $A$ or $B$ is singular.
-Then, accordingly $\det(A)$ or $\det(B)$ is equal to zero.
-By @ref{NPNT} the matrix $AB$ is also singular, hence:
-\[
-\det(AB) = 0 = \det(A)\det(B).
-\]
-
-@col
-If both $A$ and $B$ are nonsingular,
-then there are elementary matrices, $J_i$ and $K_i$,
-coresponding to row operations, such that:
-\[
-A = J_1 J_2\cdots J_k I_n,
-\]
-\[
-B = K_1 K_2\cdots K_l I_n.
-\]
-This implies that:
-\[
-AB = (J_1 J_2\cdots J_k)(K_1 K_2\cdots K_l) I_n
-\]
-@col
-By @ref{cor:detBJA}, we have:
-\begin{align*}
-\det(A) &= \det(J_1)\det(J_2)\cdots\det(J_k),\\
-\det(B) &= \det(K_1)\det(K_2)\cdots\det(K_l),\\
-\det(AB) &= \det(J_1)\det(J_2)\cdots\det(J_k)\\
-&\quad\quad\cdot \det(K_1)\det(K_2)\cdots\det(K_l).
-\end{align*}
-Hence, $\det(AB) = \det(A)\det(B)$.
-@qed
-@endcol
-@end
-@slide
-@thm
-If $\det\left(A\right)\neq 0$, then $A$ is invertible and
-\begin{align}
-\label{A-1}
-\displaystyle \det\left(A^{-1}\right)=\frac{1}{\det\left(A\right)}.
-\end{align}
-@end
-@proof
-@newcol
-It follows from @ref{thm:nonsingulardet} that $A^{-1}$ exists.
-The identity $\eqref{A-1}$ then follows from:
-\[
-AA^{-1} = I_n
-\]
-and @ref{thm:DETMULT}.
-@qed
-@endcol
-@end
-@slide
-@thm
-@title{Cramer’s rule}
-Let $A$ be a invertible square matrix of size $n$. Let $\mathbf{b}\in{\mathbb{R}}^{n}$.
-Let $M_{k}$ be the square matrix by replacing the $k$-th column of $A$ by $\mathbf{b}$.
-If
-\begin{align*}
-\displaystyle \mathbf{x}=\begin{bmatrix}x_{1}\\
-x_{2}\\
-\vdots\\
-x_{n}\end{bmatrix}
-\end{align*}
-is a solution of $A\mathbf{x}=\mathbf{b}$, then
-\begin{align*}
-\displaystyle x_{k}=\frac{\det\left(M_{k}\right)}{\det\left(A\right)}
-\end{align*}
-where $k=1,\ldots,n$.
-@end
-@proof
-@newcol
-Because $A$ is invertible, $A\mathbf{x}=\mathbf{b}$ has a unique solution. Let $X_{k}$ be matrix obtained from the identity matrix $I_{n}$ by replacing column $k$ with $\mathbf{x}$.
-Then
-\begin{align*}
-\displaystyle A\mathbf{e}_{i}=\mathbf{A}_{i}\text{ if $i\neq k$}\qquad A\mathbf{x}=\mathbf{b}\text{ if $i=k$.}
-\end{align*}
-@col
-Hence
-\begin{align*}
-\displaystyle AX_{k}=M_{k}.
-\end{align*}
-@col
-Expanding $X_{k}$ along the row $k$, we have
-\begin{align*}
-\displaystyle \det\left(X_{k}\right)=x_{k}\det\left(I_{n-1}\right)=x_{k}.
-\end{align*}
-@col
-So
-\begin{align*}
-\displaystyle \det\left(M_{k}\right)=\det\left(AX_{k}\right)=\det\left(A\right)\det\left(X_{k}\right)=\det\left(A\right)x_{k}.
-\end{align*}
-@col
-Therefore
-\begin{align*}
-\displaystyle x_{k}=\frac{\det\left(M_{k}\right)}{\det\left(A\right)}.
-\end{align*}
-@qed
-@endcol
-@end
-@slide
-@eg
-Using Cramer’s rule to solve the following system of linear equation.
-\begin{align*}
-\displaystyle x_{1}+2x_{2}+3x_{3}=2 \\
-\displaystyle x_{1}\qquad+x_{3}=3 \\
-\displaystyle x_{1}+x_{2}-x_{3}=1
-\end{align*}
-@newcol
-Let
-\begin{align*}
-\displaystyle A=\begin{bmatrix}1&2&3\\
-1&0&1\\
-1&1&-1\end{bmatrix}\qquad\mathbf{b}=\begin{bmatrix}2\\
-3\\
-1\end{bmatrix}.
-\end{align*}
-\begin{align*}
-\displaystyle \det\left(A\right)=6.
-\end{align*}
-\begin{align*}
-\displaystyle M_{1}=\begin{bmatrix}2&2&3\\
-3&0&1\\
-1&1&-1\end{bmatrix},\det\left(M_{1}\right)=15.
-\end{align*}
-\begin{align*}
-\displaystyle x_{1}=\frac{\det\left(M_{1}\right)}{\det\left(A\right)}=\frac{15}{6}=\frac{5}{2}.
-\end{align*}
-\begin{align*}
-\displaystyle M_{2}=\begin{bmatrix}1&2&3\\
-1&3&1\\
-1&1&-1\end{bmatrix},\det\left(M_{2}\right)=-6.
-\end{align*}
-\begin{align*}
-\displaystyle x_{2}=\frac{\det\left(M_{2}\right)}{\det\left(A\right)}=\frac{-6}{6}=-1.
-\end{align*}
-\begin{align*}
-\displaystyle M_{3}=\begin{bmatrix}1&2&2\\
-1&0&3\\
-1&1&1\end{bmatrix},\det\left(M_{3}\right)=3.
-\end{align*}
-\begin{align*}
-\displaystyle x_{3}=\frac{\det\left(M_{3}\right)}{\det\left(A\right)}=\frac{3}{6}=\frac{1}{2}.
-\end{align*}
-@col
-Thus
-\begin{align*}
-\displaystyle \begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\end{bmatrix}=\begin{bmatrix}\frac{5}{2}\\
--1\\
-\frac{1}{2}\end{bmatrix}
-\end{align*}
-is a solution.
-@endcol
-@end
-@slide
-@thm
-@title{Formula for inverse}
-Suppose $A$ is an invertible matrix. Then
-\begin{align*}
-\displaystyle [A^{-1}]_{ji}=\frac{(-1)^{i+j}\det\left(A(i|j)\right)}{\det\left(A\right)}.
-\end{align*}
-@newcol
-Pay attention to the order of the indexes $i$ and $j$!
-@endcol
-@end
-@proof
-@skip
-@newcol
-Let $B=A^{-1}$.
-Let $\mathbf{B}_{i}$ be the $i$-th column of $B$. Then
-\begin{align*}
-\displaystyle A\mathbf{B}_{i}=\mathbf{e}_{i}.
-\end{align*}
-@col
-The vector $\mathbf{B}_{i}$ is a solution of $A\mathbf{x}=\mathbf{e}_{i}$.
-We can use the previous theorem to find $\mathbf{B}_{i}$.
-Let $M_{j}$ be the square matrix by replacing the $j$-th column of $A$ by $\mathbf{e}_{i}$.
-Expand along the $j$-th column of $M_{j}$, we have
-\begin{align*}
-\displaystyle \det\left(M_{j}\right)=(-1)^{i+j}\det\left(M_{j}(i|j)\right)=(-1)^{i+j}\det\left(A(i|j)\right).
-\end{align*}
-@col
-Then the $j$-th coordinate of $\mathbf{B}_{i}$ is given by
-\begin{align*}
-\displaystyle B_{ji}=[\mathbf{B}_{i}]_{j}=\frac{\det\left(M_{j}\right)}{{\det\left(A\right)}}=\frac{(-1)^{i+j}\det\left(A(i|j)\right)}{\det\left(A\right)}.
-\end{align*}
-@qed
-@endcol
-@end
-@slide
-@eg
-By the above formula, find the inverse of
-\begin{align*}
-\displaystyle A=\begin{bmatrix}1&2&3\\
-1&0&1\\
-1&1&-1\end{bmatrix},
-\end{align*}
-\begin{align*}
-\displaystyle \det\left(A\right)=6.
-\end{align*}
-\begin{align*}
-\displaystyle A(1|1)=\begin{bmatrix}0&1\\
-1&-1\end{bmatrix},\qquad\det\left(A(1|1)\right)=-1,
-\end{align*}
-\begin{align*}
-\displaystyle A(1|2)=\begin{bmatrix}1&1\\
-1&-1\end{bmatrix},\qquad\det\left(A(1|2)\right)=-2,
-\end{align*}
-\begin{align*}
-\displaystyle A(1|3)=\begin{bmatrix}1&0\\
-1&1\end{bmatrix},\qquad\det\left(A(1|3)\right)=1,
-\end{align*}
-\begin{align*}
-\displaystyle A(2|1)=\begin{bmatrix}2&3\\
-1&-1\end{bmatrix},\qquad\det\left(A(2|1)\right)=-5,
-\end{align*}
-\begin{align*}
-\displaystyle A(2|2)=\begin{bmatrix}1&3\\
-1&-1\end{bmatrix},\qquad\det\left(A(2|2)\right)=-4,
-\end{align*}
-\begin{align*}
-\displaystyle A(2|3)=\begin{bmatrix}1&2\\
-1&1\end{bmatrix},\qquad\det\left(A(2|3)\right)=-1,
-\end{align*}
-\begin{align*}
-\displaystyle A(3|1)=\begin{bmatrix}2&3\\
-0&1\end{bmatrix},\qquad\det\left(A(3|1)\right)=2,
-\end{align*}
-\begin{align*}
-\displaystyle A(3|2)=\begin{bmatrix}1&3\\
-1&1\end{bmatrix},\qquad\det\left(A(3|2)\right)=-2,
-\end{align*}
-\begin{align*}
-\displaystyle A(3|3)=\begin{bmatrix}1&2\\
-1&0\end{bmatrix},\qquad\det\left(A(3|3)\right)=-2.
-\end{align*}
-@end
-\begin{align*}
-\displaystyle A^{-1}=\frac{1}{\det\left(A\right)}\begin{bmatrix}\det\left(A(1|1)\right)&-\det\left(A(2|1)\right)&\det\left(A(3|1)\right)\\
--\det\left((A(1|2)\right)&\det\left(A(2|2)\right)&-\det\left(A(3|2)\right)\\
-\det\left(A(1|3)\right)&-\det\left(A(2|3)\right)&\det\left(A(3|3)\right)\end{bmatrix}=\begin{bmatrix}-\frac{1}{6}&\frac{5}{6}&\frac{1}{3}\\
-\frac{1}{3}&-\frac{2}{3}&\frac{1}{3}\\
-\frac{1}{6}&\frac{1}{6}&-\frac{1}{3}\end{bmatrix}
-\end{align*}
 @section{Properties of Determinant (summary)}
 
 Let $A$ be a square matrix with size $n$.
