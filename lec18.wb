@@ -88,12 +88,35 @@ A_{n1} & \cdots & \cdots & A_{n(k-1)} & A_{n(k+1)} & \cdots & A_{nn}
 \]
 @newcol
 So to compute the determinant of a $5\times 5$ matrix we must build 5 submatrices, each of size $4$. To compute the determinants of each the $4\times 4$ matrices we need to create 4 submatrices each, these now of size $3$ and so on. To compute the determinant of a $10\times 10$ matrix would require computing the determinant of $10!=10\times 9\times 8\times 7\times 6\times 5\times 4\times 3\times 2=3,628,800$
-$1\times 1$ matrices. Fortunately there are @keyword{better ways}).
+$1\times 1$ matrices. Fortunately ,there are better ways.
 
 @col
 Let us compute the determinant of a reasonably sized matrix by hand.
 @endcol
 @endcol
+@slide
+@thm
+Suppose
+\begin{align*}
+\displaystyle A=\begin{bmatrix}a&b\\
+c&d\end{bmatrix}.
+\end{align*}
+@newcol
+Then
+\begin{align*}
+\displaystyle \det\left(A\right)=ad-bc.
+\end{align*}
+@endcol
+@end
+@proof
+@newcol
+\begin{align*}
+\displaystyle \begin{vmatrix}a&b\\
+c&d\end{vmatrix}=a\det([d])-b\det([c])=ad-bc
+\end{align*}
+@qed
+@endcol
+@end
 @slide
 @eg
 Suppose that we have the $3\times 3$ matrix
@@ -135,29 +158,6 @@ Then
 @nstep{\displaystyle=-27}
 \end{align*}
 @endsteps
-@endcol
-@end
-@slide
-@thm
-Suppose
-\begin{align*}
-\displaystyle A=\begin{bmatrix}a&b\\
-c&d\end{bmatrix}.
-\end{align*}
-@newcol
-Then
-\begin{align*}
-\displaystyle \det\left(A\right)=ad-bc.
-\end{align*}
-@endcol
-@end
-@proof
-@newcol
-\begin{align*}
-\displaystyle \begin{vmatrix}a&b\\
-c&d\end{vmatrix}=a\begin{vmatrix}d\end{vmatrix}-b\begin{vmatrix}c\end{vmatrix}=ad-bc
-\end{align*}
-@qed
 @endcol
 @end
 @slide
