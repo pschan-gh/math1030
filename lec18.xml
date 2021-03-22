@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030">
     <keywords slide="all" environ="course" chapter="" course="Math 1030">
@@ -179,7 +180,7 @@ A_{n1} &amp; \cdots &amp; \cdots &amp; A_{n(k-1)} &amp; A_{n(k+1)} &amp; \cdots 
 \] </paragraphs>
               <newcol course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So to compute the determinant of a $5\times 5$ matrix we must build 5 submatrices, each of size $4$. To compute the determinants of each the $4\times 4$ matrices we need to create 4 submatrices each, these now of size $3$ and so on. To compute the determinant of a $10\times 10$ matrix would require computing the determinant of $10!=10\times 9\times 8\times 7\times 6\times 5\times 4\times 3\times 2=3,628,800$
-$1\times 1$ matrices. Fortunately ,there are beer ways}</paragraphs>
+$1\times 1$ matrices. Fortunately ,there are better ways.</paragraphs>
                 <newline course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
                 <collapse course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let us compute the determinant of a reasonably sized matrix by hand. </paragraphs>
@@ -202,12 +203,12 @@ c&amp;d\end{bmatrix}.
 \end{align*} </paragraphs>
               </newcol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="2ce2d25c032d96e15d10c5d5ed301afd" course="Math 1030" chapter="18" slide="6" of="4f529976921cf680ad8898072b9aa8b4" of-src-course="Math 1030" of-src-chapter="18" of-src-slide="7" of-type="Theorem" of-item="18.5" of-src-filename="lec18.xml" ofmd5="4f529976921cf680ad8898072b9aa8b4" of-serial="">
-              <of-title>Theorem 18.5</of-title>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="514ff5bda708c6e861de978b9e73dcaf" course="Math 1030" chapter="18" slide="6" of="4f529976921cf680ad8898072b9aa8b4" of-src-course="Math 1030" of-src-chapter="18" of-src-slide="6" of-type="Theorem" of-item="18.4" of-src-filename="lec18.xml" ofmd5="4f529976921cf680ad8898072b9aa8b4" of-serial="">
+              <of-title>Theorem 18.4</of-title>
               <newcol course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
 \displaystyle \begin{vmatrix}a&amp;b\\
-c&amp;d\end{vmatrix}=a\begin{vmatrix}d\end{vmatrix}-b\begin{vmatrix}c\end{vmatrix}=ad-bc
+c&amp;d\end{vmatrix}=a\det([d])-b\det([c])=ad-bc
 \end{align*} </paragraphs>
                 <qed course="Math 1030" chapter="18" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
               </newcol>
