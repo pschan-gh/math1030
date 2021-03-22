@@ -15,7 +15,7 @@ The @keyword{determinant} is a function that take a square matrix as an input an
 produces a scalar as an output.
 
 @newcol
-Suppose $A$ is an $m\times n$ matrix. Then the submatrix $A(i|j)$ is the $(m-1)\times(n-1)$
+Suppose $A$ is an $m\times n$ matrix. Then the @keyword{submatrix} $A(i|j)$ is the $(m-1)\times(n-1)$
 matrix obtained from $A$ by removing row $i$ and column $j$.
 @endcol
 @slide
@@ -63,7 +63,7 @@ Suppose $A$ is a square matrix. Then its @keyword{determinant}, $\det\left(A\rig
 \begin{align*}
 \displaystyle\det\left(A\right)&\displaystyle=\left[A\right]_{11}\det\left(A\left(1|1\right)\right)-\left[A\right]_{12}\det\left(A\left(1|2\right)\right)+\left[A\right]_{13}\det\left(A\left(1|3\right)\right)- \\
 &\displaystyle\quad\left[A\right]_{14}\det\left(A\left(1|4\right)\right)+\cdots+(-1)^{n+1}\left[A\right]_{1n}\det\left(A\left(1|n\right)\right) \\
-&\displaystyle\quad=\sum_{k=1}^{n}(-1)^{k+1} A_{1k} \cdot \left|A\left(1|k\right)\right|
+&\displaystyle\quad=\sum_{k=1}^{n}(-1)^{k+1} A_{1k} \cdot \det\left(A\left(1|k\right)\right)
 \end{align*} </li></ol>
 @end
 @newcol
@@ -193,15 +193,26 @@ a_{31}&a_{32}\end{vmatrix} \\
 @section{Computing Determinants}
 @thm
 @title{Determinant Expansion about Rows}
-Suppose that $A$ is a square matrix of size $n$. Then for $1\leq i\leq n$
+Suppose that $A$ is a square matrix of size $n$. Then for $1\leq i\leq n$,
+we have:
 \begin{align*}
 \displaystyle\det\left(A\right)&\displaystyle=(-1)^{i+1}\left[A\right]_{i1}\det\left(A\left(i|1\right)\right)+(-1)^{i+2}\left[A\right]_{i2}\det\left(A\left(i|2\right)\right) \\
 &\displaystyle\quad+(-1)^{i+3}\left[A\right]_{i3}\det\left(A\left(i|3\right)\right)+\cdots+(-1)^{i+n}\left[A\right]_{in}\det\left(A\left(i|n\right)\right)\\
 &=
-\sum_{k = 1}^n (-1)^i (-1)^k A_{ik}\det\left(A(i|k)\right)
+\sum_{j = 1}^n (-1)^i (-1)^j A_{ij}\det\left(A(i|j)\right)
 \end{align*}
 which is known as @keyword{expansion} along the $i$-th row.
 @end
+@newcol
+The coeffient $(-1)^i(-1)^j$ means that the sign in front of each term of the expansion is equal to sign at the $(i,j)$-entry of the following matrix:
+\[
+\begin{pmatrix}
++ & - & + & \cdots\\
+- & + & - & \cdots\\
++ & - & + & \cdots\\
+\vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+\]
 @proof
 @skip
 @newcol
@@ -209,6 +220,7 @@ Skip the proof. If you are interested, see Beezer, p.266.
 @qed
 @endcol
 @end
+@endcol
 @slide
 @thm
 @title{Determinant of the Transpose}
@@ -225,10 +237,13 @@ If you are interested, see Beezer, p.267.
 @slide
 @thm
 @title{Determinant Expansion about Columns}
-Suppose that $A$ is a square matrix of size $n$. Then for $1\leq j\leq n$
+Suppose that $A$ is a square matrix of size $n$. Then for $1\leq j\leq n$,
+we have:
 \begin{align*}
 \displaystyle\det\left(A\right)&\displaystyle=(-1)^{1+j}\left[A\right]_{1j}\det\left(A\left(1|j\right)\right)+(-1)^{2+j}\left[A\right]_{2j}\det\left(A\left(2|j\right)\right) \\
 &\displaystyle\quad+(-1)^{3+j}\left[A\right]_{3j}\det\left(A\left(3|j\right)\right)+\cdots+(-1)^{n+j}\left[A\right]_{nj}\det\left(A\left(n|j\right)\right)
+\\&=
+\sum_{i = 1}^n (-1)^j (-1)^i A_{ij}\det\left(A(i|j)\right)
 \end{align*}
 which is known as @keyword{expansion} about column $j$.
 @end
@@ -338,10 +353,6 @@ Then
 @endcol
 @endcol
 @end
-@newcol
-When you consult other texts in your study of determinants, you may run into the terms @keyword{minor} and @keyword{cofactor}, especially in a discussion centered on expansion about rows and columns. We have chosen not to make these definitions formally since we have been able to get along without them. However, informally, a @keyword{minor} is a determinant of a submatrix, specifically $\det\left(A\left(i|j\right)\right)$ and is usually referenced as the minor of $\left[A\right]_{ij}$. A @keyword{cofactor} is a signed minor, specifically the cofactor of $\left[A\right]_{ij}$ is $(-1)^{i+j}\det\left(A\left(i|j\right)\right)$.
-
-@endcol
 @slide
 @eg
 Suppose
@@ -377,6 +388,10 @@ We will compute the determinant of this $5\times 5$ matrix by consistently expan
 &\displaystyle=2(-1)(3)(-1)(5)=30
 \end{align*}
 @endcol-->
+@slide
+@skip
+When you consult other texts in your study of determinants, you may run into the terms @keyword{minor} and @keyword{cofactor}, especially in a discussion centered on expansion about rows and columns. We have chosen not to make these definitions formally since we have been able to get along without them. However, informally, a @keyword{minor} is a determinant of a submatrix, specifically $\det\left(A\left(i|j\right)\right)$ and is usually referenced as the minor of $\left[A\right]_{ij}$. A @keyword{cofactor} is a signed minor, specifically the cofactor of $\left[A\right]_{ij}$ is $(-1)^{i+j}\det\left(A\left(i|j\right)\right)$.
+
 @section{Properties of Determinants of Matrces}
 @thm
 @title{Determinant for Row or Column Multiples}
