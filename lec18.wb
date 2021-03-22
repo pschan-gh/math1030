@@ -420,9 +420,9 @@ Expand along row $i$, then
 @eg
 @newcol
 \[
-\det\begin{bmatrix} 2 & 2 \\3 & 4\end{bmatrix}
+\det\begin{bmatrix} {\color{red} 2} & {\color{red} 2} \\3 & 4\end{bmatrix}
 =
-2 \cdot \det\begin{bmatrix} 1 & 1 \\3 & 4\end{bmatrix} = 2\cdot 1 = 2.
+{\color{red} 2} \cdot \det\begin{bmatrix} 1 & 1 \\3 & 4\end{bmatrix} = 2\cdot 1 = 2.
 \]
 @endcol
 @end
@@ -1114,7 +1114,6 @@ The columns of an $n \times n$ matrix $A$ are linearly independent if and only i
 @end
 @slide
 @eg
-@newcol
 Find $x$ such that
 \begin{align*}
 \displaystyle A=\begin{bmatrix}2&1&0&1\\
@@ -1123,7 +1122,10 @@ Find $x$ such that
 0&2&3&1\\
 \end{bmatrix}
 \end{align*}
-is singular. Expand along the first column
+is singular.
+
+@newcol
+Expand along the first column
 \begin{align*}
 \displaystyle \det\left(A\right)=2\begin{vmatrix}1&1&1\\
 0&0&x\\
