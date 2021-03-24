@@ -1,10 +1,11 @@
+<?xml version="1.0"?>
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030">
     <keywords slide="all" environ="course" chapter="" course="Math 1030">
       <keyword chapter="" slide="all">eigenvector</keyword>
       <keyword chapter="" slide="all">eigenvalue</keyword>
-      <keyword chapter="" slide="all">characteristic polynomial</keyword>
       <keyword chapter="" slide="all">eigenspace</keyword>
+      <keyword chapter="" slide="all">characteristic polynomial</keyword>
       <keyword chapter="" slide="all">similar</keyword>
       <keyword chapter="" slide="all">similarity transformation</keyword>
       <keyword chapter="" slide="all">diagonal matrix</keyword>
@@ -17,11 +18,11 @@
       <keyword chapter="" slide="all">algebraic multiplicity</keyword>
       <keyword chapter="" slide="all">geometric multiplicity</keyword>
       <keyword chapter="" slide="all">Eigenvalues and Eigenvectors of a Matrix</keyword>
+      <keyword chapter="" slide="all">Eigenspace of a Matrix</keyword>
+      <keyword chapter="" slide="all">Eigenspace of a Matrix is a Null Space</keyword>
       <keyword chapter="" slide="all">Characteristic Polynomial</keyword>
       <keyword chapter="" slide="all">Eigenvalues of a Matrix are Roots of Characteristic Polynomials</keyword>
       <keyword chapter="" slide="all">Degree of the Characteristic Polynomial</keyword>
-      <keyword chapter="" slide="all">Eigenspace of a Matrix</keyword>
-      <keyword chapter="" slide="all">Eigenspace of a Matrix is a Null Space</keyword>
       <keyword chapter="" slide="all">Similar Matrices</keyword>
       <keyword chapter="" slide="all">Similarity is an Equivalence Relation</keyword>
       <keyword chapter="" slide="all">Similar Matrices have Equal Eigenvalues</keyword>
@@ -42,8 +43,8 @@
       <keywords slide="all" environ="chapter" chapter="19" course="Math 1030">
         <keyword chapter="19" slide="all">eigenvector</keyword>
         <keyword chapter="19" slide="all">eigenvalue</keyword>
-        <keyword chapter="19" slide="all">characteristic polynomial</keyword>
         <keyword chapter="19" slide="all">eigenspace</keyword>
+        <keyword chapter="19" slide="all">characteristic polynomial</keyword>
         <keyword chapter="19" slide="all">similar</keyword>
         <keyword chapter="19" slide="all">similarity transformation</keyword>
         <keyword chapter="19" slide="all">diagonal matrix</keyword>
@@ -56,11 +57,11 @@
         <keyword chapter="19" slide="all">algebraic multiplicity</keyword>
         <keyword chapter="19" slide="all">geometric multiplicity</keyword>
         <keyword chapter="19" slide="all">Eigenvalues and Eigenvectors of a Matrix</keyword>
+        <keyword chapter="19" slide="all">Eigenspace of a Matrix</keyword>
+        <keyword chapter="19" slide="all">Eigenspace of a Matrix is a Null Space</keyword>
         <keyword chapter="19" slide="all">Characteristic Polynomial</keyword>
         <keyword chapter="19" slide="all">Eigenvalues of a Matrix are Roots of Characteristic Polynomials</keyword>
         <keyword chapter="19" slide="all">Degree of the Characteristic Polynomial</keyword>
-        <keyword chapter="19" slide="all">Eigenspace of a Matrix</keyword>
-        <keyword chapter="19" slide="all">Eigenspace of a Matrix is a Null Space</keyword>
         <keyword chapter="19" slide="all">Similar Matrices</keyword>
         <keyword chapter="19" slide="all">Similarity is an Equivalence Relation</keyword>
         <keyword chapter="19" slide="all">Similar Matrices have Equal Eigenvalues</keyword>
@@ -305,6 +306,64 @@ so $A\mathbf{y}=0\mathbf{y}=\mathbf{0}$. But this also means that $\mathbf{y}\in
                 </collapse>
               </newcol>
             </statement>
+            <newline course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment=""/>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="5" id="s5" slide="5" course="Math 1030" chapter="19" section="1" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Eigenvalues and Eigenvectors of a Matrix">
+            <keywords slide="5" environ="slide" chapter="19" course="Math 1030">
+              <keyword chapter="19" slide="5">eigenspace</keyword>
+              <keyword chapter="19" slide="5">Eigenspace of a Matrix</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="4" title="Eigenspace of a Matrix" md5="a284ddec6e9bb307e8e77e67b221346b" course="Math 1030" chapter="19" slide="5" item="19.4">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="1" subsection="" subsubsection="" serial="" slide="5">Eigenspace of a Matrix</title>
+              <paragraphs course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is a square matrix and $\lambda$ is an eigenvalue of $A$.
+Then the </paragraphs>
+              <inline_keyword course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">eigenspace</inline_keyword>
+              <paragraphs course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$ for $\lambda$, denoted by ${\mathcal{E}}_{A}\left(\lambda\right)$, is the set of all eigenvectors of $A$ with eigenvalue $\lambda$, together with the zero vector. </paragraphs>
+            </statement>
+            <newline course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment=""/>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="6" id="s6" slide="6" course="Math 1030" chapter="19" section="1" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Eigenvalues and Eigenvectors of a Matrix">
+            <keywords slide="6" environ="slide" chapter="19" course="Math 1030">
+              <keyword chapter="19" slide="6">Eigenspace of a Matrix is a Null Space</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="5" title="Eigenspace of a Matrix is a Null Space" md5="eadb18d2e7b7eb571988c661f1336b14" course="Math 1030" chapter="19" slide="6" item="19.5">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="1" subsection="" subsubsection="" serial="" slide="6">Eigenspace of a Matrix is a Null Space</title>
+              <paragraphs course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$ and $\lambda$ is an eigenvalue of $A$. Then
+\begin{align*}
+\displaystyle {\mathcal{E}}_{A}\left(\lambda\right)={\mathcal{N}}\left(A-\lambda I_{n}\right).
+\end{align*}
+In particular, ${\mathcal{E}}_{A}\left(\lambda\right)$ is a subspace of $\mathbb{R}^n$. </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="d1ed969e84e46755b746a6a278d1a358" course="Math 1030" chapter="19" slide="6" of="eadb18d2e7b7eb571988c661f1336b14" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="6" of-type="Theorem" of-item="19.5" of-src-filename="lec19.xml" ofmd5="eadb18d2e7b7eb571988c661f1336b14" of-serial="">
+              <of-title>Eigenspace of a Matrix is a Null Space</of-title>
+              <newcol course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> First, notice that $\mathbf{0}\in{\mathcal{E}}_{A}\left(\lambda\right)$ (by definition) and $\mathbf{0}\in{\mathcal{N}}\left(A-\lambda I_{n}\right)$.</paragraphs>
+                <newline course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> For any nonzero vector $\mathbf{x}\in{\mathbb{R}}^{n}$,
+$\mathbf{x}\in{\mathcal{E}}_{A}\left(\lambda\right)\iff A\mathbf{x}=\lambda\mathbf{x}$</paragraphs>
+                  <newline course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\iff A\mathbf{x}-\lambda\mathbf{x}=\mathbf{0}$</paragraphs>
+                    <newline course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\iff A\mathbf{x}-\lambda I_{n}\mathbf{x}=\mathbf{0}$</paragraphs>
+                      <newline course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                      <collapse course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\iff\left(A-\lambda I_{n}\right)\mathbf{x}=\mathbf{0}$</paragraphs>
+                        <newline course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                        <collapse course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\iff\mathbf{x}\in{\mathcal{N}}\left(A-\lambda I_{n}\right)$.</paragraphs>
+                          <newline course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                          <paragraphs course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">This completes the proof. </paragraphs>
+                          <qed course="Math 1030" chapter="19" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                        </collapse>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </substatement>
           </slide>
         </slides>
       </section>
@@ -313,28 +372,24 @@ so $A\mathbf{y}=0\mathbf{y}=\mathbf{0}$. But this also means that $\mathbf{y}\in
           <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Existence of Eigenvalues and Eigenvectors</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="5" scope="section" id="s5" slide="5" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Existence of Eigenvalues and Eigenvectors">
-            <keywords slide="5" environ="slide" chapter="19" course="Math 1030"/>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" serial="" slide="5">
+          <slide environment="" chapter_type="Chapter" canon_num="7" scope="section" id="s7" slide="7" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Existence of Eigenvalues and Eigenvectors">
+            <keywords slide="7" environ="slide" chapter="19" course="Math 1030">
+              <keyword chapter="19" slide="7">characteristic polynomial</keyword>
+              <keyword chapter="19" slide="7">Characteristic Polynomial</keyword>
+            </keywords>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" serial="" slide="7">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Existence of Eigenvalues and Eigenvectors</paragraphs>
             </title>
-            <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
-            <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">Observe that
+            <comment course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="">
+Observe that
 \begin{align*}
 \displaystyle A\mathbf{x}=\lambda\mathbf{x}\iff A\mathbf{x}-\lambda I_{n}\mathbf{x}=\mathbf{0}\iff\left(A-\lambda I_{n}\right)\mathbf{x}=\mathbf{0}.
-\end{align*} </paragraphs>
-            <newcol course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-              <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So, any eigenvector $x$ with eigenvalue $\lambda$ is a nonzero element of the null space of $A-\lambda I_{n}$. In particular, the matrix $A-\lambda I_{n}$ is necessarily singular, therefore having zero determinant. These ideas motivate the following definition and example.</paragraphs>
-              <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-            </newcol>
-          </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="6" id="s6" slide="6" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Existence of Eigenvalues and Eigenvectors">
-            <keywords slide="6" environ="slide" chapter="19" course="Math 1030">
-              <keyword chapter="19" slide="6">characteristic polynomial</keyword>
-              <keyword chapter="19" slide="6">Characteristic Polynomial</keyword>
-            </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="4" title="Characteristic Polynomial" md5="7c833cecd00d750351d21d00b42cfa60" course="Math 1030" chapter="19" slide="6" item="19.4">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" serial="" slide="6">Characteristic Polynomial</title>
+\end{align*}
+@newcol
+So, any eigenvector $x$ with eigenvalue $\lambda$ is a nonzero element of the null space of $A-\lambda I_{n}$. In particular, the matrix $A-\lambda I_{n}$ is necessarily singular, therefore having zero determinant. These ideas motivate the following definition and example.
+@endcol</comment>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="6" title="Characteristic Polynomial" md5="7c833cecd00d750351d21d00b42cfa60" course="Math 1030" chapter="19" slide="7" item="19.6">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" serial="" slide="7">Characteristic Polynomial</title>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$. Then the </paragraphs>
               <inline_keyword course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">characteristic polynomial</inline_keyword>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$ is the polynomial $p_{A}\left(x\right)$ defined by
@@ -343,48 +398,55 @@ so $A\mathbf{y}=0\mathbf{y}=\mathbf{0}$. But this also means that $\mathbf{y}\in
 \end{align*} </paragraphs>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="7" id="s7" slide="7" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Existence of Eigenvalues and Eigenvectors">
-            <keywords slide="7" environ="slide" chapter="19" course="Math 1030">
-              <keyword chapter="19" slide="7">Eigenvalues of a Matrix are Roots of Characteristic Polynomials</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="8" id="s8" slide="8" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Existence of Eigenvalues and Eigenvectors">
+            <keywords slide="8" environ="slide" chapter="19" course="Math 1030">
+              <keyword chapter="19" slide="8">Eigenvalues of a Matrix are Roots of Characteristic Polynomials</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="5" title="Eigenvalues of a Matrix are Roots of Characteristic Polynomials" md5="fae8883ffdb41a045973b5dc297dae79" course="Math 1030" chapter="19" slide="7" item="19.5">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" serial="" slide="7">Eigenvalues of a Matrix are Roots of Characteristic Polynomials</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="7" title="Eigenvalues of a Matrix are Roots of Characteristic Polynomials" md5="fae8883ffdb41a045973b5dc297dae79" course="Math 1030" chapter="19" slide="8" item="19.7">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" serial="" slide="8">Eigenvalues of a Matrix are Roots of Characteristic Polynomials</title>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix.
 Then $\lambda$ is an eigenvalue of $A$ if and only if $p_{A}\left(\lambda\right)=0$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="0ced9c2aaa97200d14c6ce217a5430a4" course="Math 1030" chapter="19" slide="7" of="fae8883ffdb41a045973b5dc297dae79" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="7" of-type="Theorem" of-item="19.5" of-src-filename="lec19.xml" ofmd5="fae8883ffdb41a045973b5dc297dae79" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="ac7da045c25f28fa5e55a8610b29ab40" course="Math 1030" chapter="19" slide="8" of="fae8883ffdb41a045973b5dc297dae79" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="8" of-type="Theorem" of-item="19.7" of-src-filename="lec19.xml" ofmd5="fae8883ffdb41a045973b5dc297dae79" of-serial="">
               <of-title>Eigenvalues of a Matrix are Roots of Characteristic Polynomials</of-title>
               <newcol course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We have the following equivalences:</paragraphs>
+                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> A number $\lambda$ is an eigenvalue of $A$ if and only if
+${\mathcal{E}}_{A}\left(\lambda\right) = \mathcal{N}(A - \lambda I_n)$ is not the zero vector space $\{\vect{0}\}$.</paragraphs>
                 <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">$\lambda$ is an eigenvalue of $A$</paragraphs>
-                <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">$\iff$ there exists $\mathbf{x}\neq\mathbf{0}$ so that $A\mathbf{x}=\lambda\mathbf{x}$</paragraphs>
-                <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">$\iff$ there exists $\mathbf{x}\neq\mathbf{0}$ so that $A\mathbf{x}-\lambda\mathbf{x}=\mathbf{0}$</paragraphs>
-                <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">$\iff$ there exists $\mathbf{x}\neq\mathbf{0}$ so that $A\mathbf{x}-\lambda I_{n}\mathbf{x}=\mathbf{0}$</paragraphs>
-                <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">$\iff$ there exists $\mathbf{x}\neq\mathbf{0}$ so that $(A-\lambda I_{n})\mathbf{x}=\mathbf{0}$</paragraphs>
-                <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">$\iff$ $A-\lambda I_{n}$ is singular</paragraphs>
-                <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">$\iff$ $p_{A}\left(\lambda\right)=\det\left(A-\lambda I_{n}\right)=0$. </paragraphs>
-                <qed course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\iff$ $A-\lambda I_{n}$ is singular</paragraphs>
+                  <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\iff$ $0 = \det\left(A-\lambda I_{n}\right) = p_{A}\left(\lambda\right)$. </paragraphs>
+                    <comment course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol">@newcol
+We have the following equivalences:
+$\lambda$ is an eigenvalue of $A$
+$\iff$ there exists $\mathbf{x}\neq\mathbf{0}$ so that $A\mathbf{x}=\lambda\mathbf{x}$
+$\iff$ there exists $\mathbf{x}\neq\mathbf{0}$ so that $A\mathbf{x}-\lambda\mathbf{x}=\mathbf{0}$
+$\iff$ there exists $\mathbf{x}\neq\mathbf{0}$ so that $A\mathbf{x}-\lambda I_{n}\mathbf{x}=\mathbf{0}$
+$\iff$ there exists $\mathbf{x}\neq\mathbf{0}$ so that $(A-\lambda I_{n})\mathbf{x}=\mathbf{0}$
+$\iff$ $A-\lambda I_{n}$ is singular
+$\iff$ $p_{A}\left(\lambda\right)=\det\left(A-\lambda I_{n}\right)=0$.
+</comment>
+                    <qed course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                  </collapse>
+                </collapse>
               </newcol>
             </substatement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="6" md5="9aa880e2a0f0e247f7714ea753505002" course="Math 1030" chapter="19" slide="7" item="19.6">
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="9" id="s9" slide="9" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Existence of Eigenvalues and Eigenvectors">
+            <keywords slide="9" environ="slide" chapter="19" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="8" md5="9aa880e2a0f0e247f7714ea753505002" course="Math 1030" chapter="19" slide="9" item="19.8">
               <label wbtag="label" name="eg:example3" type="Example"/>
-              <newcol course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Consider
+              <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Consider
 \begin{align*}
 \displaystyle F=\begin{bmatrix}-13&amp;-8&amp;-4\\
 12&amp;7&amp;4\\
 24&amp;16&amp;7\end{bmatrix}.
 \end{align*} </paragraphs>
-                <newcol course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                  <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We compute </paragraphs>
-                  <steps course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="steps" stepsid="steps1">
+              <newcol course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We compute </paragraphs>
+                <steps course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="steps" stepsid="steps1">
 \begin{align*}
 \displaystyle p_{F}\left(x\right)&amp;\displaystyle=\det\left(F-xI_{3}\right) \\
 \\&amp;
@@ -414,23 +476,96 @@ Then $\lambda$ is an eigenvalue of $A$ if and only if $p_{A}\left(\lambda\right)
 \class{steps}{\cssId{step5}{\displaystyle=-(x-3)(x+1)^{2}.}}
 \end{align*}
 </steps>
+              </newcol>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="9" md5="2298e16aafd7976746cbdccaf7f0e17e" course="Math 1030" chapter="19" slide="9" item="19.9">
+              <label wbtag="label" name="eg:example4" type="Example"/>
+              <newcol course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> In </paragraphs>
+                <ref environment="newcol" chapter_type="" label="eg:example3" wbtag="ref" course="Math 1030" chapter="19" slide="9" referrer-type="Example" referrer-md5="2298e16aafd7976746cbdccaf7f0e17e" referrer-item="" src-course="Math 1030" src-chapter="19" src-slide="9" type="Example" item="19.8" src-filename="lec19.xml" md5="9aa880e2a0f0e247f7714ea753505002" class="lcref" serial="">
+                  <title>Example 19.8</title>
+                </ref>
+                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, we found the characteristic polynomial of
+\begin{align*}
+\displaystyle F=\begin{bmatrix}-13&amp;-8&amp;-4\\
+12&amp;7&amp;4\\
+24&amp;16&amp;7\end{bmatrix}
+\end{align*}
+to be $p_{F}\left(x\right)=-(x-3)(x+1)^{2}$. Being written in factored form, we can simply read off its roots; they are $x=3$ and $x=-1$. By the previous theorem, $\lambda=3$ and $\lambda=-1$ are both eigenvalues of $F$. Moreover, these are the only eigenvalues of $F$. </paragraphs>
+              </newcol>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="10" md5="be6936e01aa5d74556f8c7315040f608" course="Math 1030" chapter="19" slide="9" item="19.10">
+              <newcol course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <ref environment="newcol" chapter_type="" label="eg:example3" wbtag="ref" course="Math 1030" chapter="19" slide="9" referrer-type="Example" referrer-md5="be6936e01aa5d74556f8c7315040f608" referrer-item="" src-course="Math 1030" src-chapter="19" src-slide="9" type="Example" item="19.8" src-filename="lec19.xml" md5="9aa880e2a0f0e247f7714ea753505002" class="lcref" serial="">
+                  <title>Example 19.8</title>
+                </ref>
+                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and </paragraphs>
+                <ref environment="newcol" chapter_type="" label="eg:example4" wbtag="ref" course="Math 1030" chapter="19" slide="9" referrer-type="Example" referrer-md5="be6936e01aa5d74556f8c7315040f608" referrer-item="" src-course="Math 1030" src-chapter="19" src-slide="9" type="Example" item="19.9" src-filename="lec19.xml" md5="2298e16aafd7976746cbdccaf7f0e17e" class="lcref" serial="">
+                  <title>Example 19.9</title>
+                </ref>
+                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> describe the characteristic polynomial and eigenvalues of the $3\times 3$ matrix
+\begin{align*}
+\displaystyle F=\begin{bmatrix}-13&amp;-8&amp;-4\\
+12&amp;7&amp;4\\
+24&amp;16&amp;7\end{bmatrix}.
+\end{align*} </paragraphs>
+                <newcol course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We will now take each eigenvalue in turn and compute its eigenspace. To do this, we row-reduce the matrix
+$F-\lambda I_{3}$ in order to find all solutions to the homogeneous system $F-\lambda I_{3}\mathbf{x}=\mathbf{0}$. We then express the eigenspace ${\mathcal{E}}_{F}\left(\lambda\right)$ as the nullspace of $F-\lambda I_{3}$. Then we can write the nullspace as the span of a basis.</paragraphs>
+                  <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle\lambda&amp;\displaystyle=3:&amp;\displaystyle F-3I_{3}&amp;\displaystyle=\begin{bmatrix}-16&amp;-8&amp;-4\\
+12&amp;4&amp;4\\
+24&amp;16&amp;4\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;0&amp;\frac{1}{2}\\
+0&amp;\boxed{1}&amp;-\frac{1}{2}\\
+0&amp;0&amp;0\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle{\mathcal{E}}_{F}\left(3\right)&amp;\displaystyle={\mathcal{N}}\left(F-3I_{3}\right)=\left&lt; \left\{\begin{bmatrix}-\frac{1}{2}\\
+\frac{1}{2}\\
+1\end{bmatrix}\right\}\right&gt;=\left&lt; \left\{\begin{bmatrix}-1\\
+1\\
+2\end{bmatrix}\right\}\right&gt;
+\end{align*} </paragraphs>
+                    <collapse course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle\lambda&amp;\displaystyle=-1:&amp;\displaystyle F+1I_{3}&amp;\displaystyle=\begin{bmatrix}-12&amp;-8&amp;-4\\
+12&amp;8&amp;4\\
+24&amp;16&amp;8\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;\frac{2}{3}&amp;\frac{1}{3}\\
+0&amp;0&amp;0\\
+0&amp;0&amp;0\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle{\mathcal{E}}_{F}\left(-1\right)&amp;\displaystyle={\mathcal{N}}\left(F+1I_{3}\right)=\left&lt; \left\{\begin{bmatrix}-\frac{2}{3}\\
+1\\
+0\end{bmatrix},\,\begin{bmatrix}-\frac{1}{3}\\
+0\\
+1\end{bmatrix}\right\}\right&gt;=\left&lt; \left\{\begin{bmatrix}-2\\
+3\\
+0\end{bmatrix},\,\begin{bmatrix}-1\\
+0\\
+3\end{bmatrix}\right\}\right&gt;
+\end{align*} </paragraphs>
+                      <collapse course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Eigenspaces in hand, we can easily compute eigenvectors by forming nontrivial linear combinations of the basis vectors describing each eigenspace. In particular, notice that we can pretty up our basis vectors by using scalar multiples to clear out fractions. </paragraphs>
+                      </collapse>
+                    </collapse>
+                  </collapse>
                 </newcol>
               </newcol>
             </statement>
-            <newcol course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-              <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The characteristic polynomial is our main computational tool for finding eigenvalues, and will sometimes be used to aid us in determining the properties of eigenvalues. </paragraphs>
-            </newcol>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="8" id="s8" slide="8" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Existence of Eigenvalues and Eigenvectors">
-            <keywords slide="8" environ="slide" chapter="19" course="Math 1030">
-              <keyword chapter="19" slide="8">Degree of the Characteristic Polynomial</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Existence of Eigenvalues and Eigenvectors">
+            <keywords slide="10" environ="slide" chapter="19" course="Math 1030">
+              <keyword chapter="19" slide="10">Degree of the Characteristic Polynomial</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="7" title="Degree of the Characteristic Polynomial" md5="06192fb5e6dcffec625046bf597bda3f" course="Math 1030" chapter="19" slide="8" item="19.7">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" serial="" slide="8">Degree of the Characteristic Polynomial</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="11" title="Degree of the Characteristic Polynomial" md5="06192fb5e6dcffec625046bf597bda3f" course="Math 1030" chapter="19" slide="10" item="19.11">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" serial="" slide="10">Degree of the Characteristic Polynomial</title>
               <label wbtag="label" name="DCP" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$. Then the characteristic polynomial $p_{A}\left(x\right)$ has degree $n$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" data-lecture-skip="true" md5="7a67cafe00c4ebd6b94fcd602fd4ec56" course="Math 1030" chapter="19" slide="8" of="06192fb5e6dcffec625046bf597bda3f" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="8" of-type="Theorem" of-item="19.7" of-src-filename="lec19.xml" ofmd5="06192fb5e6dcffec625046bf597bda3f" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" data-lecture-skip="true" md5="7a67cafe00c4ebd6b94fcd602fd4ec56" course="Math 1030" chapter="19" slide="10" of="06192fb5e6dcffec625046bf597bda3f" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="10" of-type="Theorem" of-item="19.11" of-src-filename="lec19.xml" ofmd5="06192fb5e6dcffec625046bf597bda3f" of-serial="">
               <of-title>Degree of the Characteristic Polynomial</of-title>
               <newcol course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> You can skip the proof. The following briefly explains why the theorem is true. It is not a rigorous proof.We have
@@ -455,132 +590,6 @@ which has degree $n$.</paragraphs>
                 </collapse>
               </newcol>
             </substatement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="8" md5="2298e16aafd7976746cbdccaf7f0e17e" course="Math 1030" chapter="19" slide="8" item="19.8">
-              <label wbtag="label" name="eg:example4" type="Example"/>
-              <newcol course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> In </paragraphs>
-                <ref environment="newcol" chapter_type="" label="eg:example3" wbtag="ref" course="Math 1030" chapter="19" slide="8" referrer-type="Example" referrer-md5="2298e16aafd7976746cbdccaf7f0e17e" referrer-item="" src-course="Math 1030" src-chapter="19" src-slide="7" type="Example" item="19.6" src-filename="lec19.xml" md5="9aa880e2a0f0e247f7714ea753505002" class="lcref" serial="">
-                  <title>Example 19.6</title>
-                </ref>
-                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, we found the characteristic polynomial of
-\begin{align*}
-\displaystyle F=\begin{bmatrix}-13&amp;-8&amp;-4\\
-12&amp;7&amp;4\\
-24&amp;16&amp;7\end{bmatrix}
-\end{align*}
-to be $p_{F}\left(x\right)=-(x-3)(x+1)^{2}$. Being written in factored form, we can simply read off its roots; they are $x=3$ and $x=-1$. By the previous theorem, $\lambda=3$ and $\lambda=-1$ are both eigenvalues of $F$. Moreover, these are the only eigenvalues of $F$. </paragraphs>
-              </newcol>
-            </statement>
-          </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="9" id="s9" slide="9" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Existence of Eigenvalues and Eigenvectors">
-            <keywords slide="9" environ="slide" chapter="19" course="Math 1030">
-              <keyword chapter="19" slide="9">eigenspace</keyword>
-              <keyword chapter="19" slide="9">Eigenspace of a Matrix</keyword>
-              <keyword chapter="19" slide="9">Eigenspace of a Matrix is a Null Space</keyword>
-            </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="9" title="Eigenspace of a Matrix" md5="9eeb66b30c308791ac94a11a53484d0c" course="Math 1030" chapter="19" slide="9" item="19.9">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" serial="" slide="9">Eigenspace of a Matrix</title>
-              <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix and $\lambda$ is an eigenvalue of $A$.
-Then the </paragraphs>
-              <inline_keyword course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">eigenspace</inline_keyword>
-              <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$ for $\lambda$, denoted by ${\mathcal{E}}_{A}\left(\lambda\right)$, is the set of all eigenvectors of $A$ with eigenvalue $\lambda$, together with the zero vector. </paragraphs>
-            </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="10" title="Eigenspace of a Matrix is a Null Space" md5="eadb18d2e7b7eb571988c661f1336b14" course="Math 1030" chapter="19" slide="9" item="19.10">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" serial="" slide="9">Eigenspace of a Matrix is a Null Space</title>
-              <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$ and $\lambda$ is an eigenvalue of $A$. Then
-\begin{align*}
-\displaystyle {\mathcal{E}}_{A}\left(\lambda\right)={\mathcal{N}}\left(A-\lambda I_{n}\right).
-\end{align*}
-In particular, ${\mathcal{E}}_{A}\left(\lambda\right)$ is a subspace of $\mathbb{R}^n$. </paragraphs>
-            </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="79c10c8fcee48b0bd191c92d646c50de" course="Math 1030" chapter="19" slide="9" of="eadb18d2e7b7eb571988c661f1336b14" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="9" of-type="Theorem" of-item="19.10" of-src-filename="lec19.xml" ofmd5="eadb18d2e7b7eb571988c661f1336b14" of-serial="">
-              <of-title>Eigenspace of a Matrix is a Null Space</of-title>
-              <newcol course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> First, notice that $\mathbf{0}\in{\mathcal{E}}_{A}\left(\lambda\right)$ (by definition) and $\mathbf{0}\in{\mathcal{N}}\left(A-\lambda I_{n}\right)$.
-Now consider any nonzero vector $\mathbf{x}\in{\mathbb{R}}^{n}$,$\mathbf{x}\in{\mathcal{E}}_{A}\left(\lambda\right)\iff A\mathbf{x}=\lambda\mathbf{x}$</paragraphs>
-                <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-                <collapse course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\iff A\mathbf{x}-\lambda\mathbf{x}=\mathbf{0}$</paragraphs>
-                  <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-                  <collapse course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\iff A\mathbf{x}-\lambda I_{n}\mathbf{x}=\mathbf{0}$</paragraphs>
-                    <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-                    <collapse course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                      <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\iff\left(A-\lambda I_{n}\right)\mathbf{x}=\mathbf{0}$</paragraphs>
-                      <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-                      <collapse course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                        <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $\iff\mathbf{x}\in{\mathcal{N}}\left(A-\lambda I_{n}\right)$.</paragraphs>
-                        <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-                        <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">This completes the proof. </paragraphs>
-                        <qed course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-                      </collapse>
-                    </collapse>
-                  </collapse>
-                </collapse>
-              </newcol>
-            </substatement>
-          </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Existence of Eigenvalues and Eigenvectors">
-            <keywords slide="10" environ="slide" chapter="19" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="11" md5="be6936e01aa5d74556f8c7315040f608" course="Math 1030" chapter="19" slide="10" item="19.11">
-              <ref environment="statement" chapter_type="" label="eg:example3" wbtag="ref" course="Math 1030" chapter="19" slide="10" referrer-type="Example" referrer-md5="be6936e01aa5d74556f8c7315040f608" referrer-item="" src-course="Math 1030" src-chapter="19" src-slide="7" type="Example" item="19.6" src-filename="lec19.xml" md5="9aa880e2a0f0e247f7714ea753505002" class="lcref" serial="">
-                <title>Example 19.6</title>
-              </ref>
-              <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> and </paragraphs>
-              <ref environment="statement" chapter_type="" label="eg:example4" wbtag="ref" course="Math 1030" chapter="19" slide="10" referrer-type="Example" referrer-md5="be6936e01aa5d74556f8c7315040f608" referrer-item="" src-course="Math 1030" src-chapter="19" src-slide="8" type="Example" item="19.8" src-filename="lec19.xml" md5="2298e16aafd7976746cbdccaf7f0e17e" class="lcref" serial="">
-                <title>Example 19.8</title>
-              </ref>
-              <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> describe the characteristic polynomial and eigenvalues of the $3\times 3$ matrix
-\begin{align*}
-\displaystyle F=\begin{bmatrix}-13&amp;-8&amp;-4\\
-12&amp;7&amp;4\\
-24&amp;16&amp;7\end{bmatrix}.
-\end{align*} </paragraphs>
-              <newcol course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We will now take each eigenvalue in turn and compute its eigenspace. To do this, we row-reduce the matrix
-$F-\lambda I_{3}$ in order to find all solutions to the homogeneous system $F-\lambda I_{3}\mathbf{x}=\mathbf{0}$. We then express the eigenspace ${\mathcal{E}}_{F}\left(\lambda\right)$ as the nullspace of $F-\lambda I_{3}$. Then we can write the nullspace as the span of a basis.</paragraphs>
-                <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-                <collapse course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
-\displaystyle\lambda&amp;\displaystyle=3:&amp;\displaystyle F-3I_{3}&amp;\displaystyle=\begin{bmatrix}-16&amp;-8&amp;-4\\
-12&amp;4&amp;4\\
-24&amp;16&amp;4\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;0&amp;\frac{1}{2}\\
-0&amp;\boxed{1}&amp;-\frac{1}{2}\\
-0&amp;0&amp;0\end{bmatrix}
-\end{align*}
-\begin{align*}
-\displaystyle{\mathcal{E}}_{F}\left(3\right)&amp;\displaystyle={\mathcal{N}}\left(F-3I_{3}\right)=\left&lt; \left\{\begin{bmatrix}-\frac{1}{2}\\
-\frac{1}{2}\\
-1\end{bmatrix}\right\}\right&gt;=\left&lt; \left\{\begin{bmatrix}-1\\
-1\\
-2\end{bmatrix}\right\}\right&gt;
-\end{align*} </paragraphs>
-                  <collapse course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
-\displaystyle\lambda&amp;\displaystyle=-1:&amp;\displaystyle F+1I_{3}&amp;\displaystyle=\begin{bmatrix}-12&amp;-8&amp;-4\\
-12&amp;8&amp;4\\
-24&amp;16&amp;8\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;\frac{2}{3}&amp;\frac{1}{3}\\
-0&amp;0&amp;0\\
-0&amp;0&amp;0\end{bmatrix}
-\end{align*}
-\begin{align*}
-\displaystyle{\mathcal{E}}_{F}\left(-1\right)&amp;\displaystyle={\mathcal{N}}\left(F+1I_{3}\right)=\left&lt; \left\{\begin{bmatrix}-\frac{2}{3}\\
-1\\
-0\end{bmatrix},\,\begin{bmatrix}-\frac{1}{3}\\
-0\\
-1\end{bmatrix}\right\}\right&gt;=\left&lt; \left\{\begin{bmatrix}-2\\
-3\\
-0\end{bmatrix},\,\begin{bmatrix}-1\\
-0\\
-3\end{bmatrix}\right\}\right&gt;
-\end{align*} </paragraphs>
-                    <collapse course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                      <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Eigenspaces in hand, we can easily compute eigenvectors by forming nontrivial linear combinations of the basis vectors describing each eigenspace. In particular, notice that we can pretty up our basis vectors by using scalar multiples to clear out fractions. </paragraphs>
-                    </collapse>
-                  </collapse>
-                </collapse>
-              </newcol>
-            </statement>
           </slide>
         </slides>
       </section>
@@ -1504,7 +1513,7 @@ where $r(M)$ denotes the rank of a matrix $M$. </paragraphs>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$ with $n$ distinct eigenvalues.
 Then $A$ is diagonalizable. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="46528ffb0d66c4f1cc10498cd6a629a3" course="Math 1030" chapter="19" slide="26" of="8348db01f27484f4041eaf6d73638823" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="26" of-type="Corollary" of-item="19.30" of-src-filename="lec19.xml" ofmd5="8348db01f27484f4041eaf6d73638823" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" data-lecture-skip="true" md5="46528ffb0d66c4f1cc10498cd6a629a3" course="Math 1030" chapter="19" slide="26" of="8348db01f27484f4041eaf6d73638823" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="26" of-type="Corollary" of-item="19.30" of-src-filename="lec19.xml" ofmd5="8348db01f27484f4041eaf6d73638823" of-serial="">
               <of-title>Distinct Eigenvalues implies Diagonalizable</of-title>
               <newcol course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> You can skip the proof. See the textbook. </paragraphs>
@@ -1556,7 +1565,7 @@ and
                 </collapse>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="32" data-lecture-skip="true" md5="3e3299da58ec845223565314bdf9c7e8" course="Math 1030" chapter="19" slide="27" item="19.32">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="32" md5="3e3299da58ec845223565314bdf9c7e8" course="Math 1030" chapter="19" slide="27" item="19.32">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Determine if the matrix $C$
 in </paragraphs>
               <ref environment="statement" chapter_type="" label="eg:example7" wbtag="ref" course="Math 1030" chapter="19" slide="27" referrer-type="Example" referrer-md5="3e3299da58ec845223565314bdf9c7e8" referrer-item="" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.13" src-filename="lec19.xml" md5="290c4a633b4d24253b6da09d121706ad" class="lcref" serial="">
@@ -1949,7 +1958,10 @@ is diagonalizable and if it is diagonalizable, find $S$ such that $S^{-1}KS$ is 
                 </newcol>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="39" md5="db3ef483d55e9a3f3fb4744bb5beb804" course="Math 1030" chapter="19" slide="29" item="19.39">
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="30" id="s30" slide="30" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
+            <keywords slide="30" environ="slide" chapter="19" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="39" md5="db3ef483d55e9a3f3fb4744bb5beb804" course="Math 1030" chapter="19" slide="30" item="19.39">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Determine if
 \begin{align*}
 \displaystyle J=\begin{bmatrix}2&amp;1&amp;1\\
@@ -1978,7 +1990,7 @@ are similar. If they are similar, Find $R$ such that $R^{-1}JR=L$. We know that 
 \end{align*} </paragraphs>
                 <collapse course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So $J$ is similar to $\operatorname{diag}(4,1,1)$ which in turns similar to $L$. So $J$ is similar to $L$ (Theorem </paragraphs>
-                  <ref environment="newcol" chapter_type="" label="SER" wbtag="ref" course="Math 1030" chapter="19" slide="29" referrer-type="Example" referrer-md5="db3ef483d55e9a3f3fb4744bb5beb804" referrer-item="" src-course="Math 1030" src-chapter="19" src-slide="16" type="Theorem" item="19.20" src-filename="lec19.xml" md5="417cfb0061db88461f49dd13b74a1e2f" class="lcref" serial="">
+                  <ref environment="newcol" chapter_type="" label="SER" wbtag="ref" course="Math 1030" chapter="19" slide="30" referrer-type="Example" referrer-md5="db3ef483d55e9a3f3fb4744bb5beb804" referrer-item="" src-course="Math 1030" src-chapter="19" src-slide="16" type="Theorem" item="19.20" src-filename="lec19.xml" md5="417cfb0061db88461f49dd13b74a1e2f" class="lcref" serial="">
                     <title>Similarity is an Equivalence Relation</title>
                   </ref>
                   <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">). In fact
@@ -2008,9 +2020,9 @@ are similar. If they are similar, Find $R$ such that $R^{-1}JR=L$. We know that 
           <paragraphs course="Math 1030" chapter="19" chapter_type="" section="6" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Powers of Matrices</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="30" scope="section" id="s30" slide="30" course="Math 1030" chapter="19" section="6" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Powers of Matrices">
-            <keywords slide="30" environ="slide" chapter="19" course="Math 1030"/>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="19" section="6" subsection="" subsubsection="" serial="" slide="30">
+          <slide environment="" chapter_type="Chapter" canon_num="31" scope="section" id="s31" slide="31" course="Math 1030" chapter="19" section="6" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Powers of Matrices">
+            <keywords slide="31" environ="slide" chapter="19" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="19" section="6" subsection="" subsubsection="" serial="" slide="31">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="6" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Powers of Matrices</paragraphs>
             </title>
             <newline course="Math 1030" chapter="19" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
@@ -2037,11 +2049,11 @@ are similar. If they are similar, Find $R$ such that $R^{-1}JR=L$. We know that 
               </collapse>
             </newcol>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="31" id="s31" slide="31" course="Math 1030" chapter="19" section="6" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Powers of Matrices">
-            <keywords slide="31" environ="slide" chapter="19" course="Math 1030">
-              <keyword chapter="19" slide="31">High power of a diagonalizable matrix</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="32" id="s32" slide="32" course="Math 1030" chapter="19" section="6" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Powers of Matrices">
+            <keywords slide="32" environ="slide" chapter="19" course="Math 1030">
+              <keyword chapter="19" slide="32">High power of a diagonalizable matrix</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="40" md5="8cca6963345a53db19d02ab65408e554" course="Math 1030" chapter="19" slide="31" item="19.40">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="40" md5="8cca6963345a53db19d02ab65408e554" course="Math 1030" chapter="19" slide="32" item="19.40">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $s$ be a positive integer and
 \begin{align*}
 \displaystyle A=\begin{bmatrix}1&amp;3\\
@@ -2106,7 +2118,7 @@ so that
                 </collapse>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="41" md5="e2029071b913eb3ef71e55af63856047" course="Math 1030" chapter="19" slide="31" item="19.41">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="41" md5="e2029071b913eb3ef71e55af63856047" course="Math 1030" chapter="19" slide="32" item="19.41">
               <inline_keyword course="Math 1030" chapter="19" chapter_type="" section="6" subsection="" subsubsection="" environment="statement">High power of a diagonalizable matrix</inline_keyword>
               <newline course="Math 1030" chapter="19" chapter_type="" section="6" subsection="" subsubsection="" environment="statement"/>
               <newcol course="Math 1030" chapter="19" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
@@ -2195,15 +2207,15 @@ we find
           <paragraphs course="Math 1030" chapter="19" chapter_type="" section="7" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Summary</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="32" scope="section" id="s32" slide="32" course="Math 1030" chapter="19" section="7" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Summary">
-            <keywords slide="32" environ="slide" chapter="19" course="Math 1030">
-              <keyword chapter="19" slide="32">eigenvector</keyword>
-              <keyword chapter="19" slide="32">characteristic function</keyword>
-              <keyword chapter="19" slide="32">eigenspace</keyword>
-              <keyword chapter="19" slide="32">algebraic multiplicity</keyword>
-              <keyword chapter="19" slide="32">geometric multiplicity</keyword>
+          <slide environment="" chapter_type="Chapter" canon_num="33" scope="section" id="s33" slide="33" course="Math 1030" chapter="19" section="7" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Summary">
+            <keywords slide="33" environ="slide" chapter="19" course="Math 1030">
+              <keyword chapter="19" slide="33">eigenvector</keyword>
+              <keyword chapter="19" slide="33">characteristic function</keyword>
+              <keyword chapter="19" slide="33">eigenspace</keyword>
+              <keyword chapter="19" slide="33">algebraic multiplicity</keyword>
+              <keyword chapter="19" slide="33">geometric multiplicity</keyword>
             </keywords>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="19" section="7" subsection="" subsubsection="" serial="" slide="32">
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="19" section="7" subsection="" subsubsection="" serial="" slide="33">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="7" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Summary</paragraphs>
             </title>
             <newline course="Math 1030" chapter="19" chapter_type="" section="7" subsection="" subsubsection="" environment=""/>
@@ -2303,7 +2315,7 @@ i.e.
                   <li class="ltx_item" environment="">
                     <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="19" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Find a basis for ${\mathcal{E}}_{A}\left(\lambda\right)$: again, this is same as finding basis of ${\mathcal{N}}\left(A-\lambda I_{n}\right)$. This can be done by $A-\lambda I_{n}\xrightarrow{\text{RREF}}B$ and use the standard method
 in finding basis (see Lecture 8 Theorem 4, </paragraphs>
-                    <ref xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" environment="" chapter_type="" label="eg:example6" wbtag="ref" course="Math 1030" chapter="19" slide="32" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.12" src-filename="lec19.xml" md5="d9f2816e160f7413975d895cbfdb9e24" class="lcref" serial="">
+                    <ref xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" environment="" chapter_type="" label="eg:example6" wbtag="ref" course="Math 1030" chapter="19" slide="33" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.12" src-filename="lec19.xml" md5="d9f2816e160f7413975d895cbfdb9e24" class="lcref" serial="">
                       <title>Example 19.12</title>
                     </ref>
                     <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="19" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs">). </paragraphs>
