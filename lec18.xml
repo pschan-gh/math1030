@@ -1387,9 +1387,9 @@ $\det(B) \neq 0$ if and only if $B = I_n$. </paragraphs>
                 </newcol>
               </newcol>
             </substatement>
-            <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="33" md5="11c866f8e2aba17e731988d3fdda7e35" course="Math 1030" chapter="18" slide="29" item="18.33">
+            <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="33" md5="f025f3d80d7682cc6e844a4a948a9dfb" course="Math 1030" chapter="18" slide="29" item="18.33">
               <newcol course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The columns of an $n \times n$ matrix $A$ are linearly independent if and only if $\det(A) = 0$. </paragraphs>
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The columns of an $n \times n$ matrix $A$ are linearly independent if and only if $\det(A) \neq 0$. </paragraphs>
               </newcol>
             </statement>
           </slide>
@@ -1602,10 +1602,10 @@ is a solution of $A\mathbf{x}=\mathbf{b}$, then
 \end{align*}
 where $k=1,\ldots,n$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="8ad1ed3bcba4e77246aec24d47af62ef" course="Math 1030" chapter="18" slide="33" of="9f4800985f4113f92c0c94a4317d08c1" of-src-course="Math 1030" of-src-chapter="18" of-src-slide="33" of-type="Theorem" of-item="18.38" of-src-filename="lec18.xml" ofmd5="9f4800985f4113f92c0c94a4317d08c1" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="0ddaa29a34695041bcf627d84e02079e" course="Math 1030" chapter="18" slide="33" of="9f4800985f4113f92c0c94a4317d08c1" of-src-course="Math 1030" of-src-chapter="18" of-src-slide="33" of-type="Theorem" of-item="18.38" of-src-filename="lec18.xml" ofmd5="9f4800985f4113f92c0c94a4317d08c1" of-serial="">
               <of-title>Cramer’s rule</of-title>
               <newcol course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Because $A$ is invertible, $A\mathbf{x}=\mathbf{b}$ has a unique solution $\vect{x}$. Let $X_{k}$ be matrix obtained from the identity matrix $I_{n}$ by replacing column $k$ with $\mathbf{x}$.
+                <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Because $A$ is invertible, $A\mathbf{x}=\mathbf{b}$ has a unique solution. Let $X_{k}$ be matrix obtained from the identity matrix $I_{n}$ by replacing column $k$ with $\mathbf{x}$.
 Then
 \begin{align*}
 \displaystyle A\mathbf{e}_{i}=\mathbf{A}_{i}\text{ if $i\neq k$}\qquad A\mathbf{x}=\mathbf{b}\text{ if $i=k$.}
@@ -1737,7 +1737,10 @@ Expand along the $j$-th column of $M_{j}$, we have
                 </collapse>
               </newcol>
             </substatement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="41" md5="255f9ac6a95586161541fb380ecfd1a6" course="Math 1030" chapter="18" slide="35" item="18.41">
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="36" data-lecture-skip="true" id="s36" slide="36" course="Math 1030" chapter="18" section="5" subsection="" subsubsection="" chapter_title="Determinant" section_title="More properties of determinants">
+            <keywords slide="36" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="41" md5="255f9ac6a95586161541fb380ecfd1a6" course="Math 1030" chapter="18" slide="36" item="18.41">
               <paragraphs course="Math 1030" chapter="18" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> By the above formula, find the inverse of
 \begin{align*}
 \displaystyle A=\begin{bmatrix}1&amp;2&amp;3\\
@@ -1799,12 +1802,12 @@ Expand along the $j$-th column of $M_{j}$, we have
           <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="title" wbtag="paragraphs">More examples</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="36" scope="section" id="s36" slide="36" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" chapter_title="Determinant" section_title="More examples">
-            <keywords slide="36" environ="slide" chapter="18" course="Math 1030"/>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" serial="" slide="36">
+          <slide environment="" chapter_type="Chapter" canon_num="37" scope="section" id="s37" slide="37" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" chapter_title="Determinant" section_title="More examples">
+            <keywords slide="37" environ="slide" chapter="18" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" serial="" slide="37">
               <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="title" wbtag="paragraphs">More examples</paragraphs>
             </title>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="42" data-lecture-skip="true" md5="5094436824a7be29c896d807fd358678" course="Math 1030" chapter="18" slide="36" item="18.42">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="42" data-lecture-skip="true" md5="28770344273486acda411aaa700b50c8" course="Math 1030" chapter="18" slide="37" item="18.42">
               <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $A_{n}$ be a $n\times n$ matrix
 \begin{align*}
 \displaystyle \left.\left[\vphantom{\begin{array}[]{c}1\\
@@ -1857,7 +1860,7 @@ x+(n-1)&amp;1&amp;1&amp;\cdots&amp;x\end{array}}_{n}}
 \]
 we conclude that the determinant is equal to:
 \begin{align*}
-\displaystyle \left.\left|\vphantom{\begin{array}[]{c}1\\
+\displaystyle (x  + n - 1)\left.\left|\vphantom{\begin{array}[]{c}1\\
 1\\
 1\\
 1\\
@@ -1875,11 +1878,11 @@ we conclude that the determinant is equal to:
               </newcol>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="37" data-lecture-skip="true" id="s37" slide="37" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" chapter_title="Determinant" section_title="More examples">
-            <keywords slide="37" environ="slide" chapter="18" course="Math 1030">
-              <keyword chapter="18" slide="37">Explanation</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="38" data-lecture-skip="true" id="s38" slide="38" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" chapter_title="Determinant" section_title="More examples">
+            <keywords slide="38" environ="slide" chapter="18" course="Math 1030">
+              <keyword chapter="18" slide="38">Explanation</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="43" md5="24276c536667b07bb1606d0d9559bf71" course="Math 1030" chapter="18" slide="37" item="18.43">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="43" md5="24276c536667b07bb1606d0d9559bf71" course="Math 1030" chapter="18" slide="38" item="18.43">
               <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $B_{n}$ be a $n\times n$ matrix in the form
 \begin{align*}
 \displaystyle \begin{bmatrix}1-a_{1}&amp;a_{2}&amp;0&amp;\cdots&amp;0&amp;0\\
@@ -1898,7 +1901,7 @@ we conclude that the determinant is equal to:
                 </li>
               </ol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Solution" wbtag="sol" md5="3b7ae9a092f041ad0055587f0dad0c1f" course="Math 1030" chapter="18" slide="37">
+            <substatement environment="substatement" chapter_type="Chapter" type="Solution" wbtag="sol" md5="3b7ae9a092f041ad0055587f0dad0c1f" course="Math 1030" chapter="18" slide="38">
               <newcol course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="newcol">
                   <li class="ltx_item" environment="newcol">
@@ -1996,9 +1999,9 @@ we conclude that the determinant is equal to:
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="38" data-lecture-skip="true" id="s38" slide="38" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" chapter_title="Determinant" section_title="More examples">
-            <keywords slide="38" environ="slide" chapter="18" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="44" md5="963651a716c31e37936fdb390e135ef7" course="Math 1030" chapter="18" slide="38" item="18.44">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="39" data-lecture-skip="true" id="s39" slide="39" course="Math 1030" chapter="18" section="6" subsection="" subsubsection="" chapter_title="Determinant" section_title="More examples">
+            <keywords slide="39" environ="slide" chapter="18" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="44" md5="963651a716c31e37936fdb390e135ef7" course="Math 1030" chapter="18" slide="39" item="18.44">
               <paragraphs course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $C_{n}$ be a $n\times n$ matrix given by
 \begin{align*}
 \displaystyle C_{n}=\left.\left[\vphantom{\begin{array}[]{c}1\\
@@ -2021,7 +2024,7 @@ we conclude that the determinant is equal to:
                 </item>
               </enumerate>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Solution" wbtag="sol" md5="c0c251733908e0519b5079e615ba9190" course="Math 1030" chapter="18" slide="38">
+            <substatement environment="substatement" chapter_type="Chapter" type="Solution" wbtag="sol" md5="c0c251733908e0519b5079e615ba9190" course="Math 1030" chapter="18" slide="39">
               <newcol course="Math 1030" chapter="18" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="newcol">
                   <li class="ltx_item" environment="newcol">
@@ -2233,9 +2236,9 @@ the determinant above is equal to:
           <paragraphs course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Properties of Determinant (summary)</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="39" scope="section" id="s39" slide="39" course="Math 1030" chapter="18" section="7" subsection="" subsubsection="" chapter_title="Determinant" section_title="Properties of Determinant summary">
-            <keywords slide="39" environ="slide" chapter="18" course="Math 1030"/>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="18" section="7" subsection="" subsubsection="" serial="" slide="39">
+          <slide environment="" chapter_type="Chapter" canon_num="40" scope="section" id="s40" slide="40" course="Math 1030" chapter="18" section="7" subsection="" subsubsection="" chapter_title="Determinant" section_title="Properties of Determinant summary">
+            <keywords slide="40" environ="slide" chapter="18" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="18" section="7" subsection="" subsubsection="" serial="" slide="40">
               <paragraphs course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Properties of Determinant (summary)</paragraphs>
             </title>
             <newline course="Math 1030" chapter="18" chapter_type="" section="7" subsection="" subsubsection="" environment=""/>
