@@ -1109,7 +1109,7 @@ We conclude that $A$ is nonsingular if and only if $\det(A) \neq 0$.
 @end
 @cor
 @newcol
-The columns of an $n \times n$ matrix $A$ are linearly independent if and only if $\det(A) = 0$.
+The columns of an $n \times n$ matrix $A$ are linearly independent if and only if $\det(A) \neq 0$.
 @endcol
 @end
 @slide
@@ -1287,7 +1287,7 @@ where $k=1,\ldots,n$.
 @end
 @proof
 @newcol
-Because $A$ is invertible, $A\mathbf{x}=\mathbf{b}$ has a unique solution $\vect{x}$. Let $X_{k}$ be matrix obtained from the identity matrix $I_{n}$ by replacing column $k$ with $\mathbf{x}$.
+Because $A$ is invertible, $A\mathbf{x}=\mathbf{b}$ has a unique solution. Let $X_{k}$ be matrix obtained from the identity matrix $I_{n}$ by replacing column $k$ with $\mathbf{x}$.
 Then
 \begin{align*}
 \displaystyle A\mathbf{e}_{i}=\mathbf{A}_{i}\text{ if $i\neq k$}\qquad A\mathbf{x}=\mathbf{b}\text{ if $i=k$.}
@@ -1407,6 +1407,8 @@ Then the $j$-th coordinate of $\mathbf{B}_{i}$ is given by
 @qed
 @endcol
 @end
+@slide
+@skip
 @eg
 By the above formula, find the inverse of
 \begin{align*}
@@ -1516,7 +1518,7 @@ Performing the following sequence of column operations:
 \]
 we conclude that the determinant is equal to:
 \begin{align*}
-\displaystyle \left.\left|\vphantom{\begin{array}[]{c}1\\
+\displaystyle (x  + n - 1)\left.\left|\vphantom{\begin{array}[]{c}1\\
 1\\
 1\\
 1\\
