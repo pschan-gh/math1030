@@ -250,10 +250,39 @@ So, any eigenvector $x$ with eigenvalue $\lambda$ is a nonzero element of the nu
 @endcol-->
 @defn
 @title{Characteristic Polynomial}
-Suppose that $A$ is a square matrix of size $n$. Then the @keyword{characteristic polynomial} of $A$ is the polynomial $p_{A}\left(x\right)$ defined by
+Suppose that $A$ is a square matrix of size $n$. Then the @keyword{characteristic polynomial} of $A$ is the polynomial $p_{A}\left(x\right)$ defined by:
 \begin{align*}
 \displaystyle p_{A}\left(x\right)=\det\left(A-xI_{n}\right)
 \end{align*}
+@end
+
+@thm
+@title{Degree of the Characteristic Polynomial}
+@label{DCP}
+@newcol
+Suppose that $A$ is a square matrix of size $n$. Then the characteristic polynomial $p_{A}\left(x\right)$ has degree $n$.
+@endcol
+@end
+@proof
+@skip
+@newcol
+You can skip the proof. The following briefly explains why the theorem is true. It is not a rigorous proof.We have
+\begin{align*}
+\displaystyle p_{A}\left(x\right)=\begin{vmatrix}a_{11}-x&a_{12}&\cdots&a_{1n}\\
+a_{21}&a_{22}-x&\cdots&a_{2n}\\
+\vdots&\vdots&\vdots&\vdots\\
+a_{n1}&a_{n2}&\cdots&a_{nn}-x\end{vmatrix}.
+\end{align*}
+@col
+The determinant is a sum of products of entries of $A-xI_{n}$, and all such products have degree at most $n-1$, except the product of the diagonal entries,
+\begin{align*}
+\displaystyle (a_{11}-x)(a_{22}-x)\cdots(a_{nn}-x),
+\end{align*}
+which has degree $n$.
+
+<strong>Remark:</strong> We can also see that the leading coefficient is $(-1)^{n}$.
+@qed
+@endcol
 @end
 @slide
 @thm
@@ -385,33 +414,6 @@ $F-\lambda I_{3}$ in order to find all solutions to the homogeneous system $F-\l
 @col
 Eigenspaces in hand, we can easily compute eigenvectors by forming nontrivial linear combinations of the basis vectors describing each eigenspace. In particular, notice that we can pretty up our basis vectors by using scalar multiples to clear out fractions.
 @endcol
-@endcol
-@end
-@slide
-@thm
-@title{Degree of the Characteristic Polynomial}
-@label{DCP}
-Suppose that $A$ is a square matrix of size $n$. Then the characteristic polynomial $p_{A}\left(x\right)$ has degree $n$.
-@end
-@proof
-@skip
-@newcol
-You can skip the proof. The following briefly explains why the theorem is true. It is not a rigorous proof.We have
-\begin{align*}
-\displaystyle p_{A}\left(x\right)=\begin{vmatrix}a_{11}-x&a_{12}&\cdots&a_{1n}\\
-a_{21}&a_{22}-x&\cdots&a_{2n}\\
-\vdots&\vdots&\vdots&\vdots\\
-a_{n1}&a_{n2}&\cdots&a_{nn}-x\end{vmatrix}.
-\end{align*}
-@col
-The determinant is a sum of products of entries of $A-xI_{n}$, and all such products have degree at most $n-1$, except the product of the diagonal entries,
-\begin{align*}
-\displaystyle (a_{11}-x)(a_{22}-x)\cdots(a_{nn}-x),
-\end{align*}
-which has degree $n$.
-
-<strong>Remark:</strong> We can also see that the leading coefficient is $(-1)^{n}$.
-@qed
 @endcol
 @end
 @section{Examples of Computing Eigenvalues and Eigenvectors}

@@ -20,8 +20,8 @@
       <keyword chapter="" slide="all">Eigenspace of a Matrix</keyword>
       <keyword chapter="" slide="all">Eigenspace of a Matrix is a Null Space</keyword>
       <keyword chapter="" slide="all">Characteristic Polynomial</keyword>
-      <keyword chapter="" slide="all">Eigenvalues of a Matrix are Roots of Characteristic Polynomials</keyword>
       <keyword chapter="" slide="all">Degree of the Characteristic Polynomial</keyword>
+      <keyword chapter="" slide="all">Eigenvalues of a Matrix are Roots of Characteristic Polynomials</keyword>
       <keyword chapter="" slide="all">Similar Matrices</keyword>
       <keyword chapter="" slide="all">Similarity is an Equivalence Relation</keyword>
       <keyword chapter="" slide="all">Similar Matrices have Equal Eigenvalues</keyword>
@@ -59,8 +59,8 @@
         <keyword chapter="19" slide="all">Eigenspace of a Matrix</keyword>
         <keyword chapter="19" slide="all">Eigenspace of a Matrix is a Null Space</keyword>
         <keyword chapter="19" slide="all">Characteristic Polynomial</keyword>
-        <keyword chapter="19" slide="all">Eigenvalues of a Matrix are Roots of Characteristic Polynomials</keyword>
         <keyword chapter="19" slide="all">Degree of the Characteristic Polynomial</keyword>
+        <keyword chapter="19" slide="all">Eigenvalues of a Matrix are Roots of Characteristic Polynomials</keyword>
         <keyword chapter="19" slide="all">Similar Matrices</keyword>
         <keyword chapter="19" slide="all">Similarity is an Equivalence Relation</keyword>
         <keyword chapter="19" slide="all">Similar Matrices have Equal Eigenvalues</keyword>
@@ -375,6 +375,7 @@ $\mathbf{x}\in{\mathcal{E}}_{A}\left(\lambda\right)\iff A\mathbf{x}=\lambda\math
             <keywords slide="7" environ="slide" chapter="19" course="Math 1030">
               <keyword chapter="19" slide="7">characteristic polynomial</keyword>
               <keyword chapter="19" slide="7">Characteristic Polynomial</keyword>
+              <keyword chapter="19" slide="7">Degree of the Characteristic Polynomial</keyword>
             </keywords>
             <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" serial="" slide="7">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Existence of Eigenvalues and Eigenvectors</paragraphs>
@@ -391,17 +392,50 @@ So, any eigenvector $x$ with eigenvalue $\lambda$ is a nonzero element of the nu
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" serial="" slide="7">Characteristic Polynomial</title>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$. Then the </paragraphs>
               <inline_keyword course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">characteristic polynomial</inline_keyword>
-              <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$ is the polynomial $p_{A}\left(x\right)$ defined by
+              <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$ is the polynomial $p_{A}\left(x\right)$ defined by:
 \begin{align*}
 \displaystyle p_{A}\left(x\right)=\det\left(A-xI_{n}\right)
 \end{align*} </paragraphs>
             </statement>
+            <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="7" title="Degree of the Characteristic Polynomial" md5="06192fb5e6dcffec625046bf597bda3f" course="Math 1030" chapter="19" slide="7" item="19.7">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" serial="" slide="7">Degree of the Characteristic Polynomial</title>
+              <label wbtag="label" name="DCP" type="Theorem"/>
+              <newcol course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$. Then the characteristic polynomial $p_{A}\left(x\right)$ has degree $n$. </paragraphs>
+              </newcol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" data-lecture-skip="true" md5="7a67cafe00c4ebd6b94fcd602fd4ec56" course="Math 1030" chapter="19" slide="7" of="06192fb5e6dcffec625046bf597bda3f" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="10" of-type="Theorem" of-item="19.11" of-src-filename="lec19.xml" ofmd5="06192fb5e6dcffec625046bf597bda3f" of-serial="">
+              <of-title>Degree of the Characteristic Polynomial</of-title>
+              <newcol course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> You can skip the proof. The following briefly explains why the theorem is true. It is not a rigorous proof.We have
+\begin{align*}
+\displaystyle p_{A}\left(x\right)=\begin{vmatrix}a_{11}-x&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}-x&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}-x\end{vmatrix}.
+\end{align*} </paragraphs>
+                <collapse course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The determinant is a sum of products of entries of $A-xI_{n}$, and all such products have degree at most $n-1$, except the product of the diagonal entries,
+\begin{align*}
+\displaystyle (a_{11}-x)(a_{22}-x)\cdots(a_{nn}-x),
+\end{align*}
+which has degree $n$.</paragraphs>
+                  <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                  <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Remark:</paragraphs>
+                  </strong>
+                  <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We can also see that the leading coefficient is $(-1)^{n}$. </paragraphs>
+                  <qed course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                </collapse>
+              </newcol>
+            </substatement>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="8" id="s8" slide="8" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Existence of Eigenvalues and Eigenvectors">
             <keywords slide="8" environ="slide" chapter="19" course="Math 1030">
               <keyword chapter="19" slide="8">Eigenvalues of a Matrix are Roots of Characteristic Polynomials</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="7" title="Eigenvalues of a Matrix are Roots of Characteristic Polynomials" md5="fae8883ffdb41a045973b5dc297dae79" course="Math 1030" chapter="19" slide="8" item="19.7">
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="8" title="Eigenvalues of a Matrix are Roots of Characteristic Polynomials" md5="fae8883ffdb41a045973b5dc297dae79" course="Math 1030" chapter="19" slide="8" item="19.8">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" serial="" slide="8">Eigenvalues of a Matrix are Roots of Characteristic Polynomials</title>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix.
 Then $\lambda$ is an eigenvalue of $A$ if and only if $p_{A}\left(\lambda\right)=0$. </paragraphs>
@@ -435,7 +469,7 @@ $\iff$ $p_{A}\left(\lambda\right)=\det\left(A-\lambda I_{n}\right)=0$.
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="9" id="s9" slide="9" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Existence of Eigenvalues and Eigenvectors">
             <keywords slide="9" environ="slide" chapter="19" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="8" md5="9aa880e2a0f0e247f7714ea753505002" course="Math 1030" chapter="19" slide="9" item="19.8">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="9" md5="9aa880e2a0f0e247f7714ea753505002" course="Math 1030" chapter="19" slide="9" item="19.9">
               <label wbtag="label" name="eg:example3" type="Example"/>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Consider
 \begin{align*}
@@ -475,7 +509,7 @@ $\iff$ $p_{A}\left(\lambda\right)=\det\left(A-\lambda I_{n}\right)=0$.
 </steps>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="9" md5="2298e16aafd7976746cbdccaf7f0e17e" course="Math 1030" chapter="19" slide="9" item="19.9">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="10" md5="2298e16aafd7976746cbdccaf7f0e17e" course="Math 1030" chapter="19" slide="9" item="19.10">
               <label wbtag="label" name="eg:example4" type="Example"/>
               <newcol course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> In </paragraphs>
@@ -491,7 +525,7 @@ $\iff$ $p_{A}\left(\lambda\right)=\det\left(A-\lambda I_{n}\right)=0$.
 to be $p_{F}\left(x\right)=-(x-3)(x+1)^{2}$. Being written in factored form, we can simply read off its roots; they are $x=3$ and $x=-1$. By the previous theorem, $\lambda=3$ and $\lambda=-1$ are both eigenvalues of $F$. Moreover, these are the only eigenvalues of $F$. </paragraphs>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="10" md5="be6936e01aa5d74556f8c7315040f608" course="Math 1030" chapter="19" slide="9" item="19.10">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="11" md5="be6936e01aa5d74556f8c7315040f608" course="Math 1030" chapter="19" slide="9" item="19.11">
               <newcol course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <ref environment="newcol" chapter_type="" label="eg:example3" wbtag="ref" course="Math 1030" chapter="19" slide="9" referrer-type="Example" referrer-md5="be6936e01aa5d74556f8c7315040f608" src-course="Math 1030" src-chapter="19" src-slide="9" type="Example" item="19.8" src-filename="lec19.xml" md5="9aa880e2a0f0e247f7714ea753505002" class="lcref" serial="">
                   <title>Example 19.8</title>
@@ -553,41 +587,6 @@ $F-\lambda I_{3}$ in order to find all solutions to the homogeneous system $F-\l
               </newcol>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Existence of Eigenvalues and Eigenvectors">
-            <keywords slide="10" environ="slide" chapter="19" course="Math 1030">
-              <keyword chapter="19" slide="10">Degree of the Characteristic Polynomial</keyword>
-            </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="11" title="Degree of the Characteristic Polynomial" md5="06192fb5e6dcffec625046bf597bda3f" course="Math 1030" chapter="19" slide="10" item="19.11">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="2" subsection="" subsubsection="" serial="" slide="10">Degree of the Characteristic Polynomial</title>
-              <label wbtag="label" name="DCP" type="Theorem"/>
-              <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$. Then the characteristic polynomial $p_{A}\left(x\right)$ has degree $n$. </paragraphs>
-            </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" data-lecture-skip="true" md5="7a67cafe00c4ebd6b94fcd602fd4ec56" course="Math 1030" chapter="19" slide="10" of="06192fb5e6dcffec625046bf597bda3f" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="10" of-type="Theorem" of-item="19.11" of-src-filename="lec19.xml" ofmd5="06192fb5e6dcffec625046bf597bda3f" of-serial="">
-              <of-title>Degree of the Characteristic Polynomial</of-title>
-              <newcol course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> You can skip the proof. The following briefly explains why the theorem is true. It is not a rigorous proof.We have
-\begin{align*}
-\displaystyle p_{A}\left(x\right)=\begin{vmatrix}a_{11}-x&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
-a_{21}&amp;a_{22}-x&amp;\cdots&amp;a_{2n}\\
-\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
-a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}-x\end{vmatrix}.
-\end{align*} </paragraphs>
-                <collapse course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The determinant is a sum of products of entries of $A-xI_{n}$, and all such products have degree at most $n-1$, except the product of the diagonal entries,
-\begin{align*}
-\displaystyle (a_{11}-x)(a_{22}-x)\cdots(a_{nn}-x),
-\end{align*}
-which has degree $n$.</paragraphs>
-                  <newline course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-                  <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
-                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Remark:</paragraphs>
-                  </strong>
-                  <paragraphs course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We can also see that the leading coefficient is $(-1)^{n}$. </paragraphs>
-                  <qed course="Math 1030" chapter="19" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-                </collapse>
-              </newcol>
-            </substatement>
-          </slide>
         </slides>
       </section>
       <section environment="" chapter_type="" type="Section" wbtag="section" title="Examples of Computing Eigenvalues and Eigenvectors" course="Math 1030" chapter="19" num="3" serial="19.3">
@@ -595,12 +594,12 @@ which has degree $n$.</paragraphs>
           <paragraphs course="Math 1030" chapter="19" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Examples of Computing Eigenvalues and Eigenvectors</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="11" scope="section" id="s11" slide="11" course="Math 1030" chapter="19" section="3" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Examples of Computing Eigenvalues and Eigenvectors">
-            <keywords slide="11" environ="slide" chapter="19" course="Math 1030"/>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="19" section="3" subsection="" subsubsection="" serial="" slide="11">
+          <slide environment="" chapter_type="Chapter" canon_num="10" scope="section" id="s10" slide="10" course="Math 1030" chapter="19" section="3" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Examples of Computing Eigenvalues and Eigenvectors">
+            <keywords slide="10" environ="slide" chapter="19" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="19" section="3" subsection="" subsubsection="" serial="" slide="10">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Examples of Computing Eigenvalues and Eigenvectors</paragraphs>
             </title>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="12" md5="d9f2816e160f7413975d895cbfdb9e24" course="Math 1030" chapter="19" slide="11" item="19.12">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="12" md5="d9f2816e160f7413975d895cbfdb9e24" course="Math 1030" chapter="19" slide="10" item="19.12">
               <label wbtag="label" name="eg:B" type="Example"/>
               <label wbtag="label" name="eg:example6" type="Example"/>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Consider the matrix
@@ -657,7 +656,7 @@ Computing eigenvectors, we find
                 </collapse>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="13" md5="290c4a633b4d24253b6da09d121706ad" course="Math 1030" chapter="19" slide="11" item="19.13">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="13" md5="290c4a633b4d24253b6da09d121706ad" course="Math 1030" chapter="19" slide="10" item="19.13">
               <label wbtag="label" name="C" type="Example"/>
               <label wbtag="label" name="eg:example7" type="Example"/>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Consider the matrix
@@ -727,9 +726,9 @@ Computing eigenvectors, we find
               </newcol>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="12" data-lecture-skip="true" id="s12" slide="12" course="Math 1030" chapter="19" section="3" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Examples of Computing Eigenvalues and Eigenvectors">
-            <keywords slide="12" environ="slide" chapter="19" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="14" md5="a0824e5348b7bf7cf443f1af585ee396" course="Math 1030" chapter="19" slide="12" item="19.14">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="11" data-lecture-skip="true" id="s11" slide="11" course="Math 1030" chapter="19" section="3" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Examples of Computing Eigenvalues and Eigenvectors">
+            <keywords slide="11" environ="slide" chapter="19" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="14" md5="a0824e5348b7bf7cf443f1af585ee396" course="Math 1030" chapter="19" slide="11" item="19.14">
               <label wbtag="label" name="E" type="Example"/>
               <label wbtag="label" name="eg:example8" type="Example"/>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Consider the matrix
@@ -794,7 +793,7 @@ Computing eigenvectors, we find
                 </collapse>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="15" md5="d091c0f88ea6bee6a1632f3a595ad656" course="Math 1030" chapter="19" slide="12" item="19.15">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="15" md5="d091c0f88ea6bee6a1632f3a595ad656" course="Math 1030" chapter="19" slide="11" item="19.15">
               <label wbtag="label" name="H" type="Example"/>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Consider the matrix
 \begin{align*}
@@ -923,17 +922,17 @@ Computing eigenvectors, we find
           <paragraphs course="Math 1030" chapter="19" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Similar Matrices</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="13" scope="section" id="s13" slide="13" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Similar Matrices">
-            <keywords slide="13" environ="slide" chapter="19" course="Math 1030">
-              <keyword chapter="19" slide="13">similar</keyword>
-              <keyword chapter="19" slide="13">similarity transformation</keyword>
-              <keyword chapter="19" slide="13">Similar Matrices</keyword>
+          <slide environment="" chapter_type="Chapter" canon_num="12" scope="section" id="s12" slide="12" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Similar Matrices">
+            <keywords slide="12" environ="slide" chapter="19" course="Math 1030">
+              <keyword chapter="19" slide="12">similar</keyword>
+              <keyword chapter="19" slide="12">similarity transformation</keyword>
+              <keyword chapter="19" slide="12">Similar Matrices</keyword>
             </keywords>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" serial="" slide="13">
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" serial="" slide="12">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Similar Matrices</paragraphs>
             </title>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="16" title="Similar Matrices" md5="870d21861c7959b7e5fb94ba4b6cfe0b" course="Math 1030" chapter="19" slide="13" item="19.16">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" serial="" slide="13">Similar Matrices</title>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="16" title="Similar Matrices" md5="870d21861c7959b7e5fb94ba4b6cfe0b" course="Math 1030" chapter="19" slide="12" item="19.16">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" serial="" slide="12">Similar Matrices</title>
               <label wbtag="label" name="SIM" type="Definition"/>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ and $B$ are square matrices of size $n$. Then $A$ and $B$ are </paragraphs>
               <inline_keyword course="Math 1030" chapter="19" chapter_type="" section="4" subsection="" subsubsection="" environment="statement">similar</inline_keyword>
@@ -944,9 +943,9 @@ Finally, we will refer to $S^{-1}BS$ as a </paragraphs>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> when we want to emphasize the way that $S$ changes $B$. </paragraphs>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="14" id="s14" slide="14" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Similar Matrices">
-            <keywords slide="14" environ="slide" chapter="19" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="17" md5="4b31bd1ec972cab183752185da58b00c" course="Math 1030" chapter="19" slide="14" item="19.17">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="13" id="s13" slide="13" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Similar Matrices">
+            <keywords slide="13" environ="slide" chapter="19" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="17" md5="4b31bd1ec972cab183752185da58b00c" course="Math 1030" chapter="19" slide="13" item="19.17">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Define
 \begin{align*}
 \displaystyle B&amp;=\begin{bmatrix}-5&amp;-7\\
@@ -973,9 +972,9 @@ Finally, we will refer to $S^{-1}BS$ as a </paragraphs>
               </newcol>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="15" data-lecture-skip="true" id="s15" slide="15" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Similar Matrices">
-            <keywords slide="15" environ="slide" chapter="19" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="18" md5="cdf693453695d182dcb74d0d14290144" course="Math 1030" chapter="19" slide="15" item="19.18">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="14" data-lecture-skip="true" id="s14" slide="14" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Similar Matrices">
+            <keywords slide="14" environ="slide" chapter="19" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="18" md5="cdf693453695d182dcb74d0d14290144" course="Math 1030" chapter="19" slide="14" item="19.18">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Define
 \begin{align*}
 \displaystyle B&amp;=\begin{bmatrix}-4&amp;1&amp;-3&amp;-2&amp;2\\
@@ -1018,7 +1017,7 @@ Finally, we will refer to $S^{-1}BS$ as a </paragraphs>
                 </collapse>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="19" md5="f999f79b8d1cc8be11cba936f654798a" course="Math 1030" chapter="19" slide="15" item="19.19">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="19" md5="f999f79b8d1cc8be11cba936f654798a" course="Math 1030" chapter="19" slide="14" item="19.19">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Define
 \begin{align*}
 \displaystyle B=\begin{bmatrix}-13&amp;-8&amp;-4\\
@@ -1046,12 +1045,12 @@ Finally, we will refer to $S^{-1}BS$ as a </paragraphs>
               </newcol>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="16" id="s16" slide="16" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Similar Matrices">
-            <keywords slide="16" environ="slide" chapter="19" course="Math 1030">
-              <keyword chapter="19" slide="16">Similarity is an Equivalence Relation</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="15" id="s15" slide="15" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Similar Matrices">
+            <keywords slide="15" environ="slide" chapter="19" course="Math 1030">
+              <keyword chapter="19" slide="15">Similarity is an Equivalence Relation</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="20" title="Similarity is an Equivalence Relation" md5="417cfb0061db88461f49dd13b74a1e2f" course="Math 1030" chapter="19" slide="16" item="19.20">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" serial="" slide="16">Similarity is an Equivalence Relation</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="20" title="Similarity is an Equivalence Relation" md5="417cfb0061db88461f49dd13b74a1e2f" course="Math 1030" chapter="19" slide="15" item="19.20">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" serial="" slide="15">Similarity is an Equivalence Relation</title>
               <label wbtag="label" name="SER" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$, $B$ and $C$ are square matrices of size $n$. Then</paragraphs>
               <newline course="Math 1030" chapter="19" chapter_type="" section="4" subsection="" subsubsection="" environment="statement"/>
@@ -1070,7 +1069,7 @@ If $A$ is similar to $B$ and $B$ is similar to $C$, then $A$ is similar to $C$. 
                 </item>
               </enumerate>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" data-lecture-skip="true" md5="fda9c8a50d990992b34652bc39ac892d" course="Math 1030" chapter="19" slide="16" of="417cfb0061db88461f49dd13b74a1e2f" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="16" of-type="Theorem" of-item="19.20" of-src-filename="lec19.xml" ofmd5="417cfb0061db88461f49dd13b74a1e2f" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" data-lecture-skip="true" md5="fda9c8a50d990992b34652bc39ac892d" course="Math 1030" chapter="19" slide="15" of="417cfb0061db88461f49dd13b74a1e2f" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="16" of-type="Theorem" of-item="19.20" of-src-filename="lec19.xml" ofmd5="417cfb0061db88461f49dd13b74a1e2f" of-serial="">
               <of-title>Similarity is an Equivalence Relation</of-title>
               <newcol course="Math 1030" chapter="19" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> To see that $A$ is similar to $A$, we need only demonstrate a nonsingular matrix that effects a similarity transformation of $A$ to $A$. We can take $I_{n}$, which is nonsingular and satisfies $I_{n}^{-1}AI_{n}=I_{n}AI_{n}=A$.</paragraphs>
@@ -1101,16 +1100,16 @@ so $A$ is similar to $C$ via the nonsingular matrix $RS$. </paragraphs>
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="17" id="s17" slide="17" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Similar Matrices">
-            <keywords slide="17" environ="slide" chapter="19" course="Math 1030">
-              <keyword chapter="19" slide="17">Similar Matrices have Equal Eigenvalues</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="16" id="s16" slide="16" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Similar Matrices">
+            <keywords slide="16" environ="slide" chapter="19" course="Math 1030">
+              <keyword chapter="19" slide="16">Similar Matrices have Equal Eigenvalues</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="21" title="Similar Matrices have Equal Eigenvalues" md5="ed41bf9ca06ac427bdea9fca7803c6c7" course="Math 1030" chapter="19" slide="17" item="19.21">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" serial="" slide="17">Similar Matrices have Equal Eigenvalues</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="21" title="Similar Matrices have Equal Eigenvalues" md5="ed41bf9ca06ac427bdea9fca7803c6c7" course="Math 1030" chapter="19" slide="16" item="19.21">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" serial="" slide="16">Similar Matrices have Equal Eigenvalues</title>
               <label wbtag="label" name="SMEE" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ and $B$ are similar matrices. Then the characteristic polynomials of $A$ and $B$ are equal, that is, $p_{A}\left(x\right)=p_{B}\left(x\right)$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="7ad99efb6384ab953b1e8ef0d942936a" course="Math 1030" chapter="19" slide="17" of="ed41bf9ca06ac427bdea9fca7803c6c7" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="17" of-type="Theorem" of-item="19.21" of-src-filename="lec19.xml" ofmd5="ed41bf9ca06ac427bdea9fca7803c6c7" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="7ad99efb6384ab953b1e8ef0d942936a" course="Math 1030" chapter="19" slide="16" of="ed41bf9ca06ac427bdea9fca7803c6c7" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="17" of-type="Theorem" of-item="19.21" of-src-filename="lec19.xml" ofmd5="ed41bf9ca06ac427bdea9fca7803c6c7" of-serial="">
               <of-title>Similar Matrices have Equal Eigenvalues</of-title>
               <newcol course="Math 1030" chapter="19" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $n$ denote the size of $A$ and $B$. Since $A$ and $B$ are similar, there exists a nonsingular matrix $S$, such that $A=S^{-1}BS$.
@@ -1145,9 +1144,9 @@ Then </paragraphs>
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="18" id="s18" slide="18" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Similar Matrices">
-            <keywords slide="18" environ="slide" chapter="19" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="22" data-lecture-skip="true" md5="a066927661463ed8f39f5c070ccf77d9" course="Math 1030" chapter="19" slide="18" item="19.22">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="17" id="s17" slide="17" course="Math 1030" chapter="19" section="4" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Similar Matrices">
+            <keywords slide="17" environ="slide" chapter="19" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="22" data-lecture-skip="true" md5="a066927661463ed8f39f5c070ccf77d9" course="Math 1030" chapter="19" slide="17" item="19.22">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> We claim that the matrices
 \begin{align*}
 \displaystyle A=\begin{bmatrix}1&amp;2\\
@@ -1172,7 +1171,7 @@ and
                 </newcol>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="23" md5="2fc7abf26e98bc310688271f434d0a5b" course="Math 1030" chapter="19" slide="18" item="19.23">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="23" md5="2fc7abf26e98bc310688271f434d0a5b" course="Math 1030" chapter="19" slide="17" item="19.23">
               <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
                 <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="19" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Same characteristic polynomial, but not similar</paragraphs>
               </strong>
@@ -1207,22 +1206,22 @@ so that $A$ and $B$ have equal characteristic polynomials. If the converse of th
           <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Diagonalizability</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="19" scope="section" id="s19" slide="19" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
-            <keywords slide="19" environ="slide" chapter="19" course="Math 1030"/>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" serial="" slide="19">
+          <slide environment="" chapter_type="Chapter" canon_num="18" scope="section" id="s18" slide="18" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
+            <keywords slide="18" environ="slide" chapter="19" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" serial="" slide="18">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Diagonalizability</paragraphs>
             </title>
             <newline course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
             <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs">Good things happen when a matrix is similar to a diagonal matrix. For example, the eigenvalues of the matrix are the entries on the diagonal of the diagonal matrix. It is also much simpler matter to compute high powers of the matrix. Diagonalizable matrices are also of interest in more abstract settings. Here are the relevant definitions, then our main theorem for this section.</paragraphs>
             <newline course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="20" id="s20" slide="20" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
-            <keywords slide="20" environ="slide" chapter="19" course="Math 1030">
-              <keyword chapter="19" slide="20">diagonal matrix</keyword>
-              <keyword chapter="19" slide="20">Diagonal Matrix</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="19" id="s19" slide="19" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
+            <keywords slide="19" environ="slide" chapter="19" course="Math 1030">
+              <keyword chapter="19" slide="19">diagonal matrix</keyword>
+              <keyword chapter="19" slide="19">Diagonal Matrix</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="24" title="Diagonal Matrix" md5="66d0ef2d163c62307e3cc4dce9fcbe0e" course="Math 1030" chapter="19" slide="20" item="19.24">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" serial="" slide="20">Diagonal Matrix</title>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="24" title="Diagonal Matrix" md5="66d0ef2d163c62307e3cc4dce9fcbe0e" course="Math 1030" chapter="19" slide="19" item="19.24">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" serial="" slide="19">Diagonal Matrix</title>
               <label wbtag="label" name="DIM" type="Definition"/>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix ofh size $n$. Then $A$ is a </paragraphs>
               <inline_keyword course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement">diagonal matrix</inline_keyword>
@@ -1239,13 +1238,13 @@ so that $A$ and $B$ have equal characteristic polynomials. If the converse of th
               </newcol>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="21" id="s21" slide="21" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
-            <keywords slide="21" environ="slide" chapter="19" course="Math 1030">
-              <keyword chapter="19" slide="21">diagonalizable</keyword>
-              <keyword chapter="19" slide="21">Diagonalizable Matrix</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="20" id="s20" slide="20" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
+            <keywords slide="20" environ="slide" chapter="19" course="Math 1030">
+              <keyword chapter="19" slide="20">diagonalizable</keyword>
+              <keyword chapter="19" slide="20">Diagonalizable Matrix</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="25" title="Diagonalizable Matrix" md5="3beecd02600262a5fe27774299036198" course="Math 1030" chapter="19" slide="21" item="19.25">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" serial="" slide="21">Diagonalizable Matrix</title>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="25" title="Diagonalizable Matrix" md5="3beecd02600262a5fe27774299036198" course="Math 1030" chapter="19" slide="20" item="19.25">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" serial="" slide="20">Diagonalizable Matrix</title>
               <label wbtag="label" name="DZM" type="Definition"/>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix. Then $A$ is </paragraphs>
               <inline_keyword course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement">diagonalizable</inline_keyword>
@@ -1256,9 +1255,9 @@ $S$ and real numbers $\lambda_{1},\lambda_{2},\ldots,\lambda_{n}$ such that
 \end{align*} </paragraphs>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="22" id="s22" slide="22" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
-            <keywords slide="22" environ="slide" chapter="19" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="26" md5="8a984366a2b904dd5e8fc470cb46cc5f" course="Math 1030" chapter="19" slide="22" item="19.26">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="21" id="s21" slide="21" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
+            <keywords slide="21" environ="slide" chapter="19" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="26" md5="8a984366a2b904dd5e8fc470cb46cc5f" course="Math 1030" chapter="19" slide="21" item="19.26">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let
 \begin{align*}
 \displaystyle B=\begin{bmatrix}-7&amp;-6&amp;-12\\
@@ -1290,17 +1289,17 @@ $S$ and real numbers $\lambda_{1},\lambda_{2},\ldots,\lambda_{n}$ such that
               </newcol>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="23" id="s23" slide="23" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
-            <keywords slide="23" environ="slide" chapter="19" course="Math 1030">
-              <keyword chapter="19" slide="23">diagonalizing</keyword>
-              <keyword chapter="19" slide="23">Diagonalization Characterization</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="22" id="s22" slide="22" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
+            <keywords slide="22" environ="slide" chapter="19" course="Math 1030">
+              <keyword chapter="19" slide="22">diagonalizing</keyword>
+              <keyword chapter="19" slide="22">Diagonalization Characterization</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="27" title="Diagonalization Characterization" md5="cd5adde322fd587cfa137cfc05ae8a6c" course="Math 1030" chapter="19" slide="23" item="19.27">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" serial="" slide="23">Diagonalization Characterization</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="27" title="Diagonalization Characterization" md5="cd5adde322fd587cfa137cfc05ae8a6c" course="Math 1030" chapter="19" slide="22" item="19.27">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" serial="" slide="22">Diagonalization Characterization</title>
               <label wbtag="label" name="DC" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$. Then $A$ is diagonalizable if and only if there exists a linearly independent set $T$ that contains $n$ eigenvectors of $A$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="518b2044284502decdf6dcac7173f537" course="Math 1030" chapter="19" slide="23" of="cd5adde322fd587cfa137cfc05ae8a6c" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="23" of-type="Theorem" of-item="19.27" of-src-filename="lec19.xml" ofmd5="cd5adde322fd587cfa137cfc05ae8a6c" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="518b2044284502decdf6dcac7173f537" course="Math 1030" chapter="19" slide="22" of="cd5adde322fd587cfa137cfc05ae8a6c" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="23" of-type="Theorem" of-item="19.27" of-src-filename="lec19.xml" ofmd5="cd5adde322fd587cfa137cfc05ae8a6c" of-serial="">
               <of-title>Diagonalization Characterization</of-title>
               <newline course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement"/>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">($\Rightarrow$) </paragraphs>
@@ -1366,7 +1365,7 @@ Let
               </newcol>
               <qed course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement"/>
             </substatement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="e518f08dea0b8ed721fb8287b738317a" course="Math 1030" chapter="19" slide="23">
+            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="e518f08dea0b8ed721fb8287b738317a" course="Math 1030" chapter="19" slide="22">
               <newcol course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Notice that the proof is constructive. To diagonalize a matrix, we need only locate $n$ linearly independent eigenvectors. Then we can construct a nonsingular matrix $S$, using the eigenvectors as columns, with the property that $S^{-1}AS$ is a diagonal matrix ($D$). The entries on the diagonal of $D$ will be the eigenvalues of the eigenvectors used to create $S$, in the same order as the eigenvectors appear in $S$. We illustrate this by </paragraphs>
                 <inline_keyword course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol">diagonalizing</inline_keyword>
@@ -1374,9 +1373,9 @@ Let
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="24" id="s24" slide="24" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
-            <keywords slide="24" environ="slide" chapter="19" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="28" md5="3147e8d013a1b6cfe1fbccf4dcf1c074" course="Math 1030" chapter="19" slide="24" item="19.28">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="23" id="s23" slide="23" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
+            <keywords slide="23" environ="slide" chapter="19" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="28" md5="3147e8d013a1b6cfe1fbccf4dcf1c074" course="Math 1030" chapter="19" slide="23" item="19.28">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Consider the matrix
 \begin{align*}
 \displaystyle F=\begin{bmatrix}-13&amp;-8&amp;-4\\
@@ -1408,18 +1407,18 @@ from previous examples. The eigenvalues and eigenspaces of $F$’s are
                     <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Remark</paragraphs>
                   </strong>
                   <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: After we introduce Theorem </paragraphs>
-                  <ref environment="newcol" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="24" referrer-type="Example" referrer-md5="3147e8d013a1b6cfe1fbccf4dcf1c074" src-course="Math 1030" src-chapter="19" src-slide="25" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
+                  <ref environment="newcol" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="23" referrer-type="Example" referrer-md5="3147e8d013a1b6cfe1fbccf4dcf1c074" src-course="Math 1030" src-chapter="19" src-slide="25" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
                     <title>Theorem 19.29</title>
                   </ref>
                   <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, you don’t need to check that $S$ is nonsingular. See examples below).</paragraphs>
                   <newline course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
                   <collapse course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                     <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The three columns of $S$ are a linearly independent set. By Theorem </paragraphs>
-                    <ref environment="newcol" chapter_type="" label="DC" wbtag="ref" course="Math 1030" chapter="19" slide="24" referrer-type="Example" referrer-md5="3147e8d013a1b6cfe1fbccf4dcf1c074" src-course="Math 1030" src-chapter="19" src-slide="23" type="Theorem" item="19.27" src-filename="lec19.xml" md5="cd5adde322fd587cfa137cfc05ae8a6c" class="lcref" serial="">
+                    <ref environment="newcol" chapter_type="" label="DC" wbtag="ref" course="Math 1030" chapter="19" slide="23" referrer-type="Example" referrer-md5="3147e8d013a1b6cfe1fbccf4dcf1c074" src-course="Math 1030" src-chapter="19" src-slide="23" type="Theorem" item="19.27" src-filename="lec19.xml" md5="cd5adde322fd587cfa137cfc05ae8a6c" class="lcref" serial="">
                       <title>Diagonalization Characterization</title>
                     </ref>
                     <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> we now know that $F$ is diagonalizable. Furthermore, the construction in the proof of Theorem </paragraphs>
-                    <ref environment="newcol" chapter_type="" label="DC" wbtag="ref" course="Math 1030" chapter="19" slide="24" referrer-type="Example" referrer-md5="3147e8d013a1b6cfe1fbccf4dcf1c074" src-course="Math 1030" src-chapter="19" src-slide="23" type="Theorem" item="19.27" src-filename="lec19.xml" md5="cd5adde322fd587cfa137cfc05ae8a6c" class="lcref" serial="">
+                    <ref environment="newcol" chapter_type="" label="DC" wbtag="ref" course="Math 1030" chapter="19" slide="23" referrer-type="Example" referrer-md5="3147e8d013a1b6cfe1fbccf4dcf1c074" src-course="Math 1030" src-chapter="19" src-slide="23" type="Theorem" item="19.27" src-filename="lec19.xml" md5="cd5adde322fd587cfa137cfc05ae8a6c" class="lcref" serial="">
                       <title>Diagonalization Characterization</title>
                     </ref>
                     <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> tells us that $S^{-1}FS=\operatorname{diag}(3,-1,-1)$. Let us check this directly:
@@ -1447,9 +1446,9 @@ from previous examples. The eigenvalues and eigenspaces of $F$’s are
               </newcol>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="25" id="s25" slide="25" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
-            <keywords slide="25" environ="slide" chapter="19" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="29" md5="88b169186a9c1ff134422a032f5ed1d8" course="Math 1030" chapter="19" slide="25" item="19.29">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="24" id="s24" slide="24" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
+            <keywords slide="24" environ="slide" chapter="19" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="29" md5="88b169186a9c1ff134422a032f5ed1d8" course="Math 1030" chapter="19" slide="24" item="19.29">
               <label wbtag="label" name="diagcond" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$. Suppose that $\lambda_{1},\ldots,\lambda_{k}$ are all of the distinct eigenvalues of $A$. Then $A$ is diagonalizable if and only if
 \begin{align}
@@ -1463,7 +1462,7 @@ and let $d_{i}=\dim{\mathcal{E}}_{A}\left(\lambda_{i}\right)$. Then
 \displaystyle T=T_{1}\cup T_{2}\cup T_{3}\cup\cdots\cup T_{k}
 \end{align*}
 is a set of linearly independent eigenvectors for $A$ with size $n$. By Theorem </paragraphs>
-                <ref environment="newcol" chapter_type="" label="DC" wbtag="ref" course="Math 1030" chapter="19" slide="25" referrer-type="Theorem" referrer-md5="88b169186a9c1ff134422a032f5ed1d8" src-course="Math 1030" src-chapter="19" src-slide="23" type="Theorem" item="19.27" src-filename="lec19.xml" md5="cd5adde322fd587cfa137cfc05ae8a6c" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="DC" wbtag="ref" course="Math 1030" chapter="19" slide="24" referrer-type="Theorem" referrer-md5="88b169186a9c1ff134422a032f5ed1d8" src-course="Math 1030" src-chapter="19" src-slide="23" type="Theorem" item="19.27" src-filename="lec19.xml" md5="cd5adde322fd587cfa137cfc05ae8a6c" class="lcref" serial="">
                   <title>Diagonalization Characterization</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, let $S$ be a square matrix whose $i$-th column is the $i$-th vector of the set $T$, i.e.
@@ -1478,14 +1477,14 @@ is a set of linearly independent eigenvectors for $A$ with size $n$. By Theorem 
                 </collapse>
               </newcol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="d5d7461326c2fa7f0d0694f9c85b7380" course="Math 1030" chapter="19" slide="25" of="88b169186a9c1ff134422a032f5ed1d8" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="25" of-type="Theorem" of-item="19.29" of-src-filename="lec19.xml" ofmd5="88b169186a9c1ff134422a032f5ed1d8" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="d5d7461326c2fa7f0d0694f9c85b7380" course="Math 1030" chapter="19" slide="24" of="88b169186a9c1ff134422a032f5ed1d8" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="25" of-type="Theorem" of-item="19.29" of-src-filename="lec19.xml" ofmd5="88b169186a9c1ff134422a032f5ed1d8" of-serial="">
               <of-title>Theorem 19.29</of-title>
               <newcol course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> See Beezer's textbook. </paragraphs>
                 <qed course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
               </newcol>
             </substatement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="35e3fe910e59297f651bbdca18967e7f" course="Math 1030" chapter="19" slide="25">
+            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="35e3fe910e59297f651bbdca18967e7f" course="Math 1030" chapter="19" slide="24">
               <newcol course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Equation $\eqref{diagconde}$ may be rewritten as:
 \begin{align*}
@@ -1500,17 +1499,17 @@ where $r(M)$ denotes the rank of a matrix $M$. </paragraphs>
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="26" id="s26" slide="26" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
-            <keywords slide="26" environ="slide" chapter="19" course="Math 1030">
-              <keyword chapter="19" slide="26">Distinct Eigenvalues implies Diagonalizable</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="25" id="s25" slide="25" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
+            <keywords slide="25" environ="slide" chapter="19" course="Math 1030">
+              <keyword chapter="19" slide="25">Distinct Eigenvalues implies Diagonalizable</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="30" title="Distinct Eigenvalues implies Diagonalizable" md5="8348db01f27484f4041eaf6d73638823" course="Math 1030" chapter="19" slide="26" item="19.30">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" serial="" slide="26">Distinct Eigenvalues implies Diagonalizable</title>
+            <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="30" title="Distinct Eigenvalues implies Diagonalizable" md5="8348db01f27484f4041eaf6d73638823" course="Math 1030" chapter="19" slide="25" item="19.30">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" serial="" slide="25">Distinct Eigenvalues implies Diagonalizable</title>
               <label wbtag="label" name="DED" type="Corollary"/>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$ with $n$ distinct eigenvalues.
 Then $A$ is diagonalizable. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" data-lecture-skip="true" md5="46528ffb0d66c4f1cc10498cd6a629a3" course="Math 1030" chapter="19" slide="26" of="8348db01f27484f4041eaf6d73638823" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="26" of-type="Corollary" of-item="19.30" of-src-filename="lec19.xml" ofmd5="8348db01f27484f4041eaf6d73638823" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" data-lecture-skip="true" md5="46528ffb0d66c4f1cc10498cd6a629a3" course="Math 1030" chapter="19" slide="25" of="8348db01f27484f4041eaf6d73638823" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="26" of-type="Corollary" of-item="19.30" of-src-filename="lec19.xml" ofmd5="8348db01f27484f4041eaf6d73638823" of-serial="">
               <of-title>Distinct Eigenvalues implies Diagonalizable</of-title>
               <newcol course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> You can skip the proof. See the textbook. </paragraphs>
@@ -1518,11 +1517,11 @@ Then $A$ is diagonalizable. </paragraphs>
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="27" id="s27" slide="27" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
-            <keywords slide="27" environ="slide" chapter="19" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="31" md5="484909c1146182e3a333cf2b41807cb5" course="Math 1030" chapter="19" slide="27" item="19.31">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="26" id="s26" slide="26" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
+            <keywords slide="26" environ="slide" chapter="19" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="31" md5="484909c1146182e3a333cf2b41807cb5" course="Math 1030" chapter="19" slide="26" item="19.31">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Determine if the matrix $B$ in </paragraphs>
-              <ref environment="statement" chapter_type="" label="eg:B" wbtag="ref" course="Math 1030" chapter="19" slide="27" referrer-type="Example" referrer-md5="484909c1146182e3a333cf2b41807cb5" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.12" src-filename="lec19.xml" md5="d9f2816e160f7413975d895cbfdb9e24" class="lcref" serial="">
+              <ref environment="statement" chapter_type="" label="eg:B" wbtag="ref" course="Math 1030" chapter="19" slide="26" referrer-type="Example" referrer-md5="484909c1146182e3a333cf2b41807cb5" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.12" src-filename="lec19.xml" md5="d9f2816e160f7413975d895cbfdb9e24" class="lcref" serial="">
                 <title>Example 19.12</title>
               </ref>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> is diagonalizable. The characteristic polynomial is
@@ -1534,7 +1533,7 @@ Then $A$ is diagonalizable. </paragraphs>
                 <newline course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
                 <collapse course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> In </paragraphs>
-                  <ref environment="newcol" chapter_type="" label="eg:example6" wbtag="ref" course="Math 1030" chapter="19" slide="27" referrer-type="Example" referrer-md5="484909c1146182e3a333cf2b41807cb5" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.12" src-filename="lec19.xml" md5="d9f2816e160f7413975d895cbfdb9e24" class="lcref" serial="">
+                  <ref environment="newcol" chapter_type="" label="eg:example6" wbtag="ref" course="Math 1030" chapter="19" slide="26" referrer-type="Example" referrer-md5="484909c1146182e3a333cf2b41807cb5" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.12" src-filename="lec19.xml" md5="d9f2816e160f7413975d895cbfdb9e24" class="lcref" serial="">
                     <title>Example 19.12</title>
                   </ref>
                   <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, we compute the RREF of $B-I_{4}$ and $B-2I_{4}$. By the RREFs, we have $r\left(B-I_{4}\right)=3$, $r\left(B-2I_{4}\right)=3$.
@@ -1553,7 +1552,7 @@ and
 \end{align*} </paragraphs>
                     <collapse course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By Theorem </paragraphs>
-                      <ref environment="newcol" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="27" referrer-type="Example" referrer-md5="484909c1146182e3a333cf2b41807cb5" src-course="Math 1030" src-chapter="19" src-slide="25" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
+                      <ref environment="newcol" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="26" referrer-type="Example" referrer-md5="484909c1146182e3a333cf2b41807cb5" src-course="Math 1030" src-chapter="19" src-slide="25" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
                         <title>Theorem 19.29</title>
                       </ref>
                       <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $B$ is not diagonalizable. </paragraphs>
@@ -1562,10 +1561,10 @@ and
                 </collapse>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="32" md5="3e3299da58ec845223565314bdf9c7e8" course="Math 1030" chapter="19" slide="27" item="19.32">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="32" md5="3e3299da58ec845223565314bdf9c7e8" course="Math 1030" chapter="19" slide="26" item="19.32">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Determine if the matrix $C$
 in </paragraphs>
-              <ref environment="statement" chapter_type="" label="eg:example7" wbtag="ref" course="Math 1030" chapter="19" slide="27" referrer-type="Example" referrer-md5="3e3299da58ec845223565314bdf9c7e8" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.13" src-filename="lec19.xml" md5="290c4a633b4d24253b6da09d121706ad" class="lcref" serial="">
+              <ref environment="statement" chapter_type="" label="eg:example7" wbtag="ref" course="Math 1030" chapter="19" slide="26" referrer-type="Example" referrer-md5="3e3299da58ec845223565314bdf9c7e8" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.13" src-filename="lec19.xml" md5="290c4a633b4d24253b6da09d121706ad" class="lcref" serial="">
                 <title>Example 19.13</title>
               </ref>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> is diagonalizable.Because
@@ -1581,18 +1580,18 @@ all the distinct eigenvalues are $\lambda_{1}=3$, $\lambda_{2}=1$ and $\lambda_{
 \end{align*} </paragraphs>
               <newcol course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By Theorem </paragraphs>
-                <ref environment="newcol" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="27" referrer-type="Example" referrer-md5="3e3299da58ec845223565314bdf9c7e8" src-course="Math 1030" src-chapter="19" src-slide="25" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="26" referrer-type="Example" referrer-md5="3e3299da58ec845223565314bdf9c7e8" src-course="Math 1030" src-chapter="19" src-slide="25" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
                   <title>Theorem 19.29</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $C$ is diagonalizable. </paragraphs>
               </newcol>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="28" data-lecture-skip="true" id="s28" slide="28" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
-            <keywords slide="28" environ="slide" chapter="19" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="33" md5="1d36ae2a635841c6c668adc877a9564b" course="Math 1030" chapter="19" slide="28" item="19.33">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="27" data-lecture-skip="true" id="s27" slide="27" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
+            <keywords slide="27" environ="slide" chapter="19" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="33" md5="1d36ae2a635841c6c668adc877a9564b" course="Math 1030" chapter="19" slide="27" item="19.33">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Determine if the matrix $E$ in </paragraphs>
-              <ref environment="statement" chapter_type="" label="eg:example8" wbtag="ref" course="Math 1030" chapter="19" slide="28" referrer-type="Example" referrer-md5="1d36ae2a635841c6c668adc877a9564b" src-course="Math 1030" src-chapter="19" src-slide="12" type="Example" item="19.14" src-filename="lec19.xml" md5="a0824e5348b7bf7cf443f1af585ee396" class="lcref" serial="">
+              <ref environment="statement" chapter_type="" label="eg:example8" wbtag="ref" course="Math 1030" chapter="19" slide="27" referrer-type="Example" referrer-md5="1d36ae2a635841c6c668adc877a9564b" src-course="Math 1030" src-chapter="19" src-slide="12" type="Example" item="19.14" src-filename="lec19.xml" md5="a0824e5348b7bf7cf443f1af585ee396" class="lcref" serial="">
                 <title>Example 19.14</title>
               </ref>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> is diagonalizable.The characteristic polynomial is $p_{E}\left(x\right)=-(x-2)^{4}(x+1)$.
@@ -1607,20 +1606,20 @@ The eigenvalues are $\lambda_{1}=2$ and $\lambda_{2}=-1$ and we have
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So $E$ is not diagonalizable. </paragraphs>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="34" md5="3d6aeebe28c0b42e391e04114f69c175" course="Math 1030" chapter="19" slide="28" item="19.34">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="34" md5="3d6aeebe28c0b42e391e04114f69c175" course="Math 1030" chapter="19" slide="27" item="19.34">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Determine if the matrix $H$ in Example 9 is diagonalizable.Because $p_{H}\left(x\right)=x(x-2)(x-1)(x+1)(x+3)$, has $5$ distinct eigenvalues, Theorem </paragraphs>
-              <ref environment="statement" chapter_type="" label="DED" wbtag="ref" course="Math 1030" chapter="19" slide="28" referrer-type="Example" referrer-md5="3d6aeebe28c0b42e391e04114f69c175" src-course="Math 1030" src-chapter="19" src-slide="26" type="Corollary" item="19.30" src-filename="lec19.xml" md5="8348db01f27484f4041eaf6d73638823" class="lcref" serial="">
+              <ref environment="statement" chapter_type="" label="DED" wbtag="ref" course="Math 1030" chapter="19" slide="27" referrer-type="Example" referrer-md5="3d6aeebe28c0b42e391e04114f69c175" src-course="Math 1030" src-chapter="19" src-slide="26" type="Corollary" item="19.30" src-filename="lec19.xml" md5="8348db01f27484f4041eaf6d73638823" class="lcref" serial="">
                 <title>Distinct Eigenvalues implies Diagonalizable</title>
               </ref>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> implies that $H$ is diagonalizable. </paragraphs>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="35" md5="5271719f09c8e05ad239a418ab16eff5" course="Math 1030" chapter="19" slide="28" item="19.35">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="35" md5="5271719f09c8e05ad239a418ab16eff5" course="Math 1030" chapter="19" slide="27" item="19.35">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Diagonalize $C$ in </paragraphs>
-              <ref environment="statement" chapter_type="" label="eg:example7" wbtag="ref" course="Math 1030" chapter="19" slide="28" referrer-type="Example" referrer-md5="5271719f09c8e05ad239a418ab16eff5" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.13" src-filename="lec19.xml" md5="290c4a633b4d24253b6da09d121706ad" class="lcref" serial="">
+              <ref environment="statement" chapter_type="" label="eg:example7" wbtag="ref" course="Math 1030" chapter="19" slide="27" referrer-type="Example" referrer-md5="5271719f09c8e05ad239a418ab16eff5" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.13" src-filename="lec19.xml" md5="290c4a633b4d24253b6da09d121706ad" class="lcref" serial="">
                 <title>Example 19.13</title>
               </ref>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> (see also Example 18). By the computation in Example 18, $C$ is diagonalizable. By the computation in </paragraphs>
-              <ref environment="statement" chapter_type="" label="eg:example7" wbtag="ref" course="Math 1030" chapter="19" slide="28" referrer-type="Example" referrer-md5="5271719f09c8e05ad239a418ab16eff5" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.13" src-filename="lec19.xml" md5="290c4a633b4d24253b6da09d121706ad" class="lcref" serial="">
+              <ref environment="statement" chapter_type="" label="eg:example7" wbtag="ref" course="Math 1030" chapter="19" slide="27" referrer-type="Example" referrer-md5="5271719f09c8e05ad239a418ab16eff5" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.13" src-filename="lec19.xml" md5="290c4a633b4d24253b6da09d121706ad" class="lcref" serial="">
                 <title>Example 19.13</title>
               </ref>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">, we have that$\left\{\begin{bmatrix}1\\
@@ -1636,7 +1635,7 @@ The eigenvalues are $\lambda_{1}=2$ and $\lambda_{2}=-1$ and we have
 -1\\
 1\\
 1\end{bmatrix}\right\}$ is a basis for ${\mathcal{E}}_{C}\left(-1\right)$. By Theorem </paragraphs>
-              <ref environment="statement" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="28" referrer-type="Example" referrer-md5="5271719f09c8e05ad239a418ab16eff5" src-course="Math 1030" src-chapter="19" src-slide="25" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
+              <ref environment="statement" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="27" referrer-type="Example" referrer-md5="5271719f09c8e05ad239a418ab16eff5" src-course="Math 1030" src-chapter="19" src-slide="25" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
                 <title>Theorem 19.29</title>
               </ref>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">,
@@ -1654,13 +1653,13 @@ The eigenvalues are $\lambda_{1}=2$ and $\lambda_{2}=-1$ and we have
                 </strong>
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">:
 Note that the invertibility of $S$ is guaranteed by Theorem </paragraphs>
-                <ref environment="newcol" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="28" referrer-type="Example" referrer-md5="5271719f09c8e05ad239a418ab16eff5" src-course="Math 1030" src-chapter="19" src-slide="25" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="27" referrer-type="Example" referrer-md5="5271719f09c8e05ad239a418ab16eff5" src-course="Math 1030" src-chapter="19" src-slide="25" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
                   <title>Theorem 19.29</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. </paragraphs>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="36" md5="848622983bdab797ff727efa6c9ff50b" course="Math 1030" chapter="19" slide="28" item="19.36">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="36" md5="848622983bdab797ff727efa6c9ff50b" course="Math 1030" chapter="19" slide="27" item="19.36">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Diagonalize $H$ in Example 9 (see also Example 21).By the discussion of Example 21, $H$ is diagonalizable. By the computation in Example 9,
 $\begin{bmatrix}1\\
 -1\\
@@ -1685,7 +1684,7 @@ and $\begin{bmatrix}-2\\
 4\\
 -2\end{bmatrix}$ are bases for ${\mathcal{E}}_{H}\left(2\right),{\mathcal{E}}_{H}\left(1\right),{\mathcal{E}}_{H}\left(0\right),{\mathcal{E}}_{H}\left(-1\right)$ and ${\mathcal{E}}_{H}\left(-3\right)$ respectively.
 By Theorem </paragraphs>
-              <ref environment="statement" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="28" referrer-type="Example" referrer-md5="848622983bdab797ff727efa6c9ff50b" src-course="Math 1030" src-chapter="19" src-slide="25" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
+              <ref environment="statement" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="27" referrer-type="Example" referrer-md5="848622983bdab797ff727efa6c9ff50b" src-course="Math 1030" src-chapter="19" src-slide="25" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
                 <title>Theorem 19.29</title>
               </ref>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">, let
@@ -1705,9 +1704,9 @@ By Theorem </paragraphs>
               </newcol>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="29" id="s29" slide="29" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
-            <keywords slide="29" environ="slide" chapter="19" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="37" md5="dc7f18874400a9ca99369f5535ba20be" course="Math 1030" chapter="19" slide="29" item="19.37">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="28" id="s28" slide="28" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
+            <keywords slide="28" environ="slide" chapter="19" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="37" md5="dc7f18874400a9ca99369f5535ba20be" course="Math 1030" chapter="19" slide="28" item="19.37">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Determine if
 \begin{align*}
 \displaystyle J=\begin{bmatrix}2&amp;1&amp;1\\
@@ -1755,7 +1754,7 @@ is diagonalizable. If it is diagonalizable, find $S$ such that $S^{-1}JS$ is dia
 \end{align*} </paragraphs>
                     <collapse course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By Theorem </paragraphs>
-                      <ref environment="newcol" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="29" referrer-type="Example" referrer-md5="dc7f18874400a9ca99369f5535ba20be" src-course="Math 1030" src-chapter="19" src-slide="25" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
+                      <ref environment="newcol" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="28" referrer-type="Example" referrer-md5="dc7f18874400a9ca99369f5535ba20be" src-course="Math 1030" src-chapter="19" src-slide="25" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
                         <title>Theorem 19.29</title>
                       </ref>
                       <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $J$ is diagonalizable. </paragraphs>
@@ -1775,7 +1774,7 @@ is diagonalizable. If it is diagonalizable, find $S$ such that $S^{-1}JS$ is dia
 0\end{bmatrix},\begin{bmatrix}-1\\
 0\\
 1\end{bmatrix}\right\}$ is a basis for ${\mathcal{E}}_{J}\left(1\right)$. By Theorem </paragraphs>
-                  <ref environment="newcol" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="29" referrer-type="Example" referrer-md5="dc7f18874400a9ca99369f5535ba20be" src-course="Math 1030" src-chapter="19" src-slide="25" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
+                  <ref environment="newcol" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="28" referrer-type="Example" referrer-md5="dc7f18874400a9ca99369f5535ba20be" src-course="Math 1030" src-chapter="19" src-slide="25" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
                     <title>Theorem 19.29</title>
                   </ref>
                   <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, we can take
@@ -1793,7 +1792,7 @@ is diagonalizable. If it is diagonalizable, find $S$ such that $S^{-1}JS$ is dia
                 </newcol>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="38" data-lecture-skip="true" md5="257606e6dc6902e88803060bad8df41c" course="Math 1030" chapter="19" slide="29" item="19.38">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="38" data-lecture-skip="true" md5="257606e6dc6902e88803060bad8df41c" course="Math 1030" chapter="19" slide="28" item="19.38">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Determine if
 \begin{align*}
 \displaystyle K=\begin{bmatrix}-4&amp;-4&amp;0&amp;-11&amp;-2&amp;-5\\
@@ -1869,7 +1868,7 @@ is diagonalizable and if it is diagonalizable, find $S$ such that $S^{-1}KS$ is 
 \end{align*} </paragraphs>
                     <collapse course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By Theorem </paragraphs>
-                      <ref environment="newcol" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="29" referrer-type="Example" referrer-md5="257606e6dc6902e88803060bad8df41c" src-course="Math 1030" src-chapter="19" src-slide="25" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
+                      <ref environment="newcol" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="28" referrer-type="Example" referrer-md5="257606e6dc6902e88803060bad8df41c" src-course="Math 1030" src-chapter="19" src-slide="25" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
                         <title>Theorem 19.29</title>
                       </ref>
                       <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $K$ is diagonalizable. </paragraphs>
@@ -1892,7 +1891,7 @@ is diagonalizable and if it is diagonalizable, find $S$ such that $S^{-1}KS$ is 
 9\end{bmatrix}\right\}
 \end{align*}
 (we use the method in Lecture 8 </paragraphs>
-                  <ref environment="newcol" chapter_type="" label="eg:example6" wbtag="ref" course="Math 1030" chapter="19" slide="29" referrer-type="Example" referrer-md5="257606e6dc6902e88803060bad8df41c" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.12" src-filename="lec19.xml" md5="d9f2816e160f7413975d895cbfdb9e24" class="lcref" serial="">
+                  <ref environment="newcol" chapter_type="" label="eg:example6" wbtag="ref" course="Math 1030" chapter="19" slide="28" referrer-type="Example" referrer-md5="257606e6dc6902e88803060bad8df41c" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.12" src-filename="lec19.xml" md5="d9f2816e160f7413975d895cbfdb9e24" class="lcref" serial="">
                     <title>Example 19.12</title>
                   </ref>
                   <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and multiply the result by $9$ to clear the denominator.) A basis for ${\mathcal{E}}_{K}\left(1\right)={\mathcal{N}}\left(K-I_{6}\right)$ is
@@ -1910,7 +1909,7 @@ is diagonalizable and if it is diagonalizable, find $S$ such that $S^{-1}KS$ is 
 6\end{bmatrix}\right\}
 \end{align*}
 (Again, we use the method in Lecture 8 </paragraphs>
-                  <ref environment="newcol" chapter_type="" label="eg:example6" wbtag="ref" course="Math 1030" chapter="19" slide="29" referrer-type="Example" referrer-md5="257606e6dc6902e88803060bad8df41c" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.12" src-filename="lec19.xml" md5="d9f2816e160f7413975d895cbfdb9e24" class="lcref" serial="">
+                  <ref environment="newcol" chapter_type="" label="eg:example6" wbtag="ref" course="Math 1030" chapter="19" slide="28" referrer-type="Example" referrer-md5="257606e6dc6902e88803060bad8df41c" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.12" src-filename="lec19.xml" md5="d9f2816e160f7413975d895cbfdb9e24" class="lcref" serial="">
                     <title>Example 19.12</title>
                   </ref>
                   <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and multiply the first vector by $18$ and the second vector by $6$ to clear the denominators.)
@@ -1933,7 +1932,7 @@ is diagonalizable and if it is diagonalizable, find $S$ such that $S^{-1}KS$ is 
 2\end{bmatrix}\right\}.
 \end{align*}
 (Again, we use the method in Lecture 8 </paragraphs>
-                  <ref environment="newcol" chapter_type="" label="eg:example6" wbtag="ref" course="Math 1030" chapter="19" slide="29" referrer-type="Example" referrer-md5="257606e6dc6902e88803060bad8df41c" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.12" src-filename="lec19.xml" md5="d9f2816e160f7413975d895cbfdb9e24" class="lcref" serial="">
+                  <ref environment="newcol" chapter_type="" label="eg:example6" wbtag="ref" course="Math 1030" chapter="19" slide="28" referrer-type="Example" referrer-md5="257606e6dc6902e88803060bad8df41c" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.12" src-filename="lec19.xml" md5="d9f2816e160f7413975d895cbfdb9e24" class="lcref" serial="">
                     <title>Example 19.12</title>
                   </ref>
                   <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and multiply the first and the third vector by $2$ to clear the denominators.) So we can take
@@ -1956,9 +1955,9 @@ is diagonalizable and if it is diagonalizable, find $S$ such that $S^{-1}KS$ is 
               </newcol>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="30" id="s30" slide="30" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
-            <keywords slide="30" environ="slide" chapter="19" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="39" md5="db3ef483d55e9a3f3fb4744bb5beb804" course="Math 1030" chapter="19" slide="30" item="19.39">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="29" id="s29" slide="29" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
+            <keywords slide="29" environ="slide" chapter="19" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="39" md5="db3ef483d55e9a3f3fb4744bb5beb804" course="Math 1030" chapter="19" slide="29" item="19.39">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Determine if
 \begin{align*}
 \displaystyle J=\begin{bmatrix}2&amp;1&amp;1\\
@@ -1987,7 +1986,7 @@ are similar. If they are similar, Find $R$ such that $R^{-1}JR=L$. We know that 
 \end{align*} </paragraphs>
                 <collapse course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So $J$ is similar to $\operatorname{diag}(4,1,1)$ which in turns similar to $L$. So $J$ is similar to $L$ (Theorem </paragraphs>
-                  <ref environment="newcol" chapter_type="" label="SER" wbtag="ref" course="Math 1030" chapter="19" slide="30" referrer-type="Example" referrer-md5="db3ef483d55e9a3f3fb4744bb5beb804" src-course="Math 1030" src-chapter="19" src-slide="16" type="Theorem" item="19.20" src-filename="lec19.xml" md5="417cfb0061db88461f49dd13b74a1e2f" class="lcref" serial="">
+                  <ref environment="newcol" chapter_type="" label="SER" wbtag="ref" course="Math 1030" chapter="19" slide="29" referrer-type="Example" referrer-md5="db3ef483d55e9a3f3fb4744bb5beb804" src-course="Math 1030" src-chapter="19" src-slide="16" type="Theorem" item="19.20" src-filename="lec19.xml" md5="417cfb0061db88461f49dd13b74a1e2f" class="lcref" serial="">
                     <title>Similarity is an Equivalence Relation</title>
                   </ref>
                   <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">). In fact
@@ -2017,9 +2016,9 @@ are similar. If they are similar, Find $R$ such that $R^{-1}JR=L$. We know that 
           <paragraphs course="Math 1030" chapter="19" chapter_type="" section="6" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Powers of Matrices</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="31" scope="section" id="s31" slide="31" course="Math 1030" chapter="19" section="6" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Powers of Matrices">
-            <keywords slide="31" environ="slide" chapter="19" course="Math 1030"/>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="19" section="6" subsection="" subsubsection="" serial="" slide="31">
+          <slide environment="" chapter_type="Chapter" canon_num="30" scope="section" id="s30" slide="30" course="Math 1030" chapter="19" section="6" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Powers of Matrices">
+            <keywords slide="30" environ="slide" chapter="19" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="19" section="6" subsection="" subsubsection="" serial="" slide="30">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="6" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Powers of Matrices</paragraphs>
             </title>
             <newline course="Math 1030" chapter="19" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
@@ -2046,11 +2045,11 @@ are similar. If they are similar, Find $R$ such that $R^{-1}JR=L$. We know that 
               </collapse>
             </newcol>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="32" id="s32" slide="32" course="Math 1030" chapter="19" section="6" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Powers of Matrices">
-            <keywords slide="32" environ="slide" chapter="19" course="Math 1030">
-              <keyword chapter="19" slide="32">High power of a diagonalizable matrix</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="31" id="s31" slide="31" course="Math 1030" chapter="19" section="6" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Powers of Matrices">
+            <keywords slide="31" environ="slide" chapter="19" course="Math 1030">
+              <keyword chapter="19" slide="31">High power of a diagonalizable matrix</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="40" md5="8cca6963345a53db19d02ab65408e554" course="Math 1030" chapter="19" slide="32" item="19.40">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="40" md5="8cca6963345a53db19d02ab65408e554" course="Math 1030" chapter="19" slide="31" item="19.40">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $s$ be a positive integer and
 \begin{align*}
 \displaystyle A=\begin{bmatrix}1&amp;3\\
@@ -2115,7 +2114,7 @@ so that
                 </collapse>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="41" md5="e2029071b913eb3ef71e55af63856047" course="Math 1030" chapter="19" slide="32" item="19.41">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="41" md5="e2029071b913eb3ef71e55af63856047" course="Math 1030" chapter="19" slide="31" item="19.41">
               <inline_keyword course="Math 1030" chapter="19" chapter_type="" section="6" subsection="" subsubsection="" environment="statement">High power of a diagonalizable matrix</inline_keyword>
               <newline course="Math 1030" chapter="19" chapter_type="" section="6" subsection="" subsubsection="" environment="statement"/>
               <newcol course="Math 1030" chapter="19" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
@@ -2204,15 +2203,15 @@ we find
           <paragraphs course="Math 1030" chapter="19" chapter_type="" section="7" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Summary</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="33" scope="section" id="s33" slide="33" course="Math 1030" chapter="19" section="7" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Summary">
-            <keywords slide="33" environ="slide" chapter="19" course="Math 1030">
-              <keyword chapter="19" slide="33">eigenvector</keyword>
-              <keyword chapter="19" slide="33">characteristic function</keyword>
-              <keyword chapter="19" slide="33">eigenspace</keyword>
-              <keyword chapter="19" slide="33">algebraic multiplicity</keyword>
-              <keyword chapter="19" slide="33">geometric multiplicity</keyword>
+          <slide environment="" chapter_type="Chapter" canon_num="32" scope="section" id="s32" slide="32" course="Math 1030" chapter="19" section="7" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Summary">
+            <keywords slide="32" environ="slide" chapter="19" course="Math 1030">
+              <keyword chapter="19" slide="32">eigenvector</keyword>
+              <keyword chapter="19" slide="32">characteristic function</keyword>
+              <keyword chapter="19" slide="32">eigenspace</keyword>
+              <keyword chapter="19" slide="32">algebraic multiplicity</keyword>
+              <keyword chapter="19" slide="32">geometric multiplicity</keyword>
             </keywords>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="19" section="7" subsection="" subsubsection="" serial="" slide="33">
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="19" section="7" subsection="" subsubsection="" serial="" slide="32">
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="7" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Summary</paragraphs>
             </title>
             <newline course="Math 1030" chapter="19" chapter_type="" section="7" subsection="" subsubsection="" environment=""/>
@@ -2312,7 +2311,7 @@ i.e.
                   <li class="ltx_item" environment="">
                     <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="19" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Find a basis for ${\mathcal{E}}_{A}\left(\lambda\right)$: again, this is same as finding basis of ${\mathcal{N}}\left(A-\lambda I_{n}\right)$. This can be done by $A-\lambda I_{n}\xrightarrow{\text{RREF}}B$ and use the standard method
 in finding basis (see Lecture 8 Theorem 4, </paragraphs>
-                    <ref xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" environment="" chapter_type="" label="eg:example6" wbtag="ref" course="Math 1030" chapter="19" slide="33" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.12" src-filename="lec19.xml" md5="d9f2816e160f7413975d895cbfdb9e24" class="lcref" serial="">
+                    <ref xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" environment="" chapter_type="" label="eg:example6" wbtag="ref" course="Math 1030" chapter="19" slide="32" src-course="Math 1030" src-chapter="19" src-slide="11" type="Example" item="19.12" src-filename="lec19.xml" md5="d9f2816e160f7413975d895cbfdb9e24" class="lcref" serial="">
                       <title>Example 19.12</title>
                     </ref>
                     <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="19" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs">). </paragraphs>
