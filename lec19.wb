@@ -1,11 +1,13 @@
-@course{Math 1030}@setchapter{19}
+@course{Math 1030}
+@setchapter{19}
 @chapter{Eigenvalues and Eigenvectors}
 
 <h5 class="notkw">Reference.</h5>
 Beezer, Ver 3.5 Subsection EEM (print version p283-285), Subsection CEE and ECEE (print version p289-297)
 
 <h5 class="notkw">Exercise.</h5>
-Exercises with solutions can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf}
+Exercises with solutions can be downloaded at
+@href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf}
 
 (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$)Section EE, p103-108, all except C22, M60. Note that for the questions regarding diagonalizability, use our method instead of the method in the solution manual.
 
@@ -299,25 +301,23 @@ We compute
 \\&
 @nstep{\displaystyle=\begin{vmatrix}-13-x&-8&-4\\
 12&7-x&4\\
-24&16&7-x\end{vmatrix} \\}
+24&16&7-x\end{vmatrix}}
 \\
 \\&
 @nstep{\displaystyle=(-13-x)\begin{vmatrix}7-x&4\\
 16&7-x\end{vmatrix}+(-8)(-1)\begin{vmatrix}12&4\\
-24&7-x\end{vmatrix} \\
-\\
-+(-4)\begin{vmatrix}12&7-x\\
-24&16\end{vmatrix} \\}
+24&7-x\end{vmatrix} +(-4)\begin{vmatrix}12&7-x\\
+24&16\end{vmatrix}}
 \\
 \\&
-@nstep{\displaystyle=(-13-x)((7-x)(7-x)-4(16)) \\}
+@nstep{\displaystyle=(-13-x)((7-x)(7-x)-4(16))}
 \\
 \\&
-@nstep{\displaystyle\quad\quad+(-8)(-1)(12(7-x)-4(24)) \\
-+(-4)(12(16)-(7-x)(24)) \\}
+@nstep{\displaystyle\quad\quad+(-8)(-1)(12(7-x)-4(24))
++(-4)(12(16)-(7-x)(24))}
 \\
 \\&
-@nstep{\displaystyle=3+5x+x^{2}-x^{3} \\}
+@nstep{\displaystyle=3+5x+x^{2}-x^{3}}
 \\
 \\&
 @nstep{\displaystyle=-(x-3)(x+1)^{2}.}
