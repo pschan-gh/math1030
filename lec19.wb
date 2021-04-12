@@ -1342,6 +1342,7 @@ Then
 @end
 @slide
 @eg
+@label{eg:diagonalizableJ}
 Determine if
 \begin{align*}
 \displaystyle J=\begin{bmatrix}2&1&1\\
@@ -1552,14 +1553,20 @@ Determine if
 -9&6&7\\
 \end{bmatrix}
 \end{align*}
-are similar. If they are similar, Find $R$ such that $R^{-1}JR=L$. We know that $J$ is
+are similar. If they are similar, Find $R$ such that $R^{-1}JR=L$.
 
 @newcol
 The characteristic polynomials
 \begin{align*}
 \displaystyle p_{J}\left(x\right)=-(-4+x)(-1+x)^{2}=p_{L}\left(x\right).
 \end{align*}
-(If the characteristic polynomials are different, $J$ and $L$ are not similar, end of the story.) In example 23, we know that $J$ is diagonalizable. Follow similar method, we can show that $L$ is diagonalizable (fill the detail).
+(If the characteristic polynomials are different, $J$ and $L$ are not similar, end of the story.)
+
+@col
+In @ref{eg:diagonalizableJ}, we know that $J$ is diagonalizable. Following the same procedure as before, we can show that $L$ is diagonalizable (<strong>Exercise</strong>).
+
+@col
+We have:
 \begin{align*}
 \displaystyle Q=\begin{bmatrix}1&2&2\\
 1&3&0\\
@@ -1570,7 +1577,9 @@ The characteristic polynomials
 \displaystyle Q^{-1}LQ=\operatorname{diag}(4,1,1).
 \end{align*}
 @col
-So $J$ is similar to $\operatorname{diag}(4,1,1)$ which in turns similar to $L$. So $J$ is similar to $L$ (Theorem @ref{SER}). In fact
+So $L$ is similar to $\operatorname{diag}(4,1,1)$ which in turns similar to $J$. So $J$ is similar to $L$ (Theorem @ref{SER}). In fact:
+
+@col
 \begin{align*}
 \displaystyle S^{-1}JS=Q^{-1}LQ
 \end{align*}
