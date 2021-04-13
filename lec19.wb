@@ -904,7 +904,7 @@ Then
 \\&
 @nstep{=\det\left(S^{-1}\right)\det\left(S\right)\det\left(B-xI_{n}\right)}
 \\&
-@nstep{=\det\left(S^{-1}S\right)\det\left(B xI_{n}\right)}
+@nstep{=\det\left(S^{-1}S\right)\det\left(B - xI_{n}\right)}
 \\&
 @nstep{=\det\left(I_{n}\right)\det\left(B-xI_{n}\right)}
 \\&
@@ -974,7 +974,7 @@ Good things happen when a matrix is similar to a diagonal matrix. For example, t
 @defn
 @title{Diagonal Matrix}
 @label{DIM}
-Suppose that $A$ is a square matrix ofh size $n$. Then $A$ is a @keyword{diagonal matrix} if $\left[A\right]_{ij}=0$ whenever $i\neq j$, i.e.
+Suppose that $A$ is a square matrix of size $n$. Then $A$ is a @keyword{diagonal matrix} if $\left[A\right]_{ij}=0$ whenever $i\neq j$, i.e.
 \begin{align*}
 \displaystyle A=\begin{bmatrix}\lambda_{1}&0&0&\cdots&0\\
 0&\lambda_{2}&0&\cdots&0\\
@@ -1160,7 +1160,7 @@ Suppose that $A$ is a square matrix of size $n$. Suppose that $\lambda_{1},\ldot
 \displaystyle \sum_{i=1}^{k}\dim{\mathcal{E}}_{A}\left(\lambda_{i}\right)=\dim{\mathcal{E}}_{A}\left(\lambda_{1}\right)+\cdots+\dim{\mathcal{E}}_{A}\left(\lambda_{k}\right)=n.&
 \end{align}
 @newcol
-Suppose that the above condition is satisfies by $A$ and let $T_{i}=\left\{\mathbf{v}_{i1},\,\mathbf{v}_{i2},\,\mathbf{v}_{i3},\,\ldots,\,\mathbf{v}_{id_{i}}\right\}$ be a basis for the eigenspace of $\lambda_{i}$, ${\mathcal{E}}_{A}\left(\lambda_{i}\right)$, for each $1\leq i\leq k$
+Suppose that the above condition is satisfied by $A$ and let $T_{i}=\left\{\mathbf{v}_{i1},\,\mathbf{v}_{i2},\,\mathbf{v}_{i3},\,\ldots,\,\mathbf{v}_{id_{i}}\right\}$ be a basis for the eigenspace of $\lambda_{i}$, ${\mathcal{E}}_{A}\left(\lambda_{i}\right)$, for each $1\leq i\leq k$
 and let $d_{i}=\dim{\mathcal{E}}_{A}\left(\lambda_{i}\right)$. Then
 \begin{align*}
 \displaystyle T=T_{1}\cup T_{2}\cup T_{3}\cup\cdots\cup T_{k}
@@ -1352,12 +1352,12 @@ Determine if
 is diagonalizable. If it is diagonalizable, find $S$ such that $S^{-1}JS$ is diagonal.
 
 @newcol
-<strong>Step 1</strong>:
+<strong style="">Step 1</strong>:
 @newcol
-$p_{J}\left(x\right)=-x^{3}+6x^{2}-9x+4=-(x-4)(x-1)^{2}$. All the distict eigenvalues of $J$ is $\lambda_{1}=4$, $\lambda_{2}=1$.
+$p_{J}\left(x\right)=-x^{3}+6x^{2}-9x+4=-(x-4)(x-1)^{2}$. All the distinct eigenvalues of $J$ is $\lambda_{1}=4$, $\lambda_{2}=1$.
 @endcol
 
-<strong>Step 2</strong>:
+<strong style="">Step 2</strong>:
 @newcol
 \begin{align*}
 \displaystyle J-4I_{3}\xrightarrow{\text{RREF}}\begin{bmatrix}1&0&-1\\
@@ -1386,7 +1386,7 @@ Now
 By Theorem @ref{diagcond}, $J$ is diagonalizable.
 @endcol
 
-<strong>Step 3</strong>:
+<strong style="">Step 3</strong>:
 @newcol
 $\left\{\begin{bmatrix}1\\
 1\\
@@ -1423,7 +1423,7 @@ Determine if
 is diagonalizable and if it is diagonalizable, find $S$ such that $S^{-1}KS$ is diagonal.
 
 @newcol
-<strong>Step 1</strong>:
+<strong style="">Step 1</strong>:
 @newcol
 The characteristic polynomial is
 \begin{align*}
@@ -1433,7 +1433,7 @@ The characteristic polynomial is
 The eigenvalues are $\lambda_{1}=-1,\lambda_{2}=1$ and $\lambda_{3}=2$.
 @endcol
 
-<strong>Step 2</strong>:
+<strong style="">Step 2</strong>:
 @newcol
 \begin{align*}
 \displaystyle K+I_{4}\xrightarrow{\text{RREF}}\begin{bmatrix}1&0&0&0&0&\frac{1}{9}\\
@@ -1480,7 +1480,7 @@ Because
 By Theorem @ref{diagcond}, $K$ is diagonalizable.
 @endcol
 
-<strong>Step 3</strong>:
+<strong style="">Step 3</strong>:
 @newcol
 A basis for ${\mathcal{E}}_{K}\left(-1\right)={\mathcal{N}}\left(K+I_{6}\right)$ is
 \begin{align*}

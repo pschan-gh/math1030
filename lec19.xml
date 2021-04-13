@@ -1131,7 +1131,7 @@ Then </paragraphs>
 \\&amp;
 \class{steps}{\cssId{step5}{=\det\left(S^{-1}\right)\det\left(S\right)\det\left(B-xI_{n}\right)}}
 \\&amp;
-\class{steps}{\cssId{step6}{=\det\left(S^{-1}S\right)\det\left(B xI_{n}\right)}}
+\class{steps}{\cssId{step6}{=\det\left(S^{-1}S\right)\det\left(B - xI_{n}\right)}}
 \\&amp;
 \class{steps}{\cssId{step7}{=\det\left(I_{n}\right)\det\left(B-xI_{n}\right)}}
 \\&amp;
@@ -1220,10 +1220,10 @@ so that $A$ and $B$ have equal characteristic polynomials. If the converse of th
               <keyword chapter="19" slide="19">diagonal matrix</keyword>
               <keyword chapter="19" slide="19">Diagonal Matrix</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="24" title="Diagonal Matrix" md5="66d0ef2d163c62307e3cc4dce9fcbe0e" course="Math 1030" chapter="19" slide="19" item="19.24">
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="24" title="Diagonal Matrix" md5="cce1306d90cab34dc7b85f44672353f4" course="Math 1030" chapter="19" slide="19" item="19.24">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" serial="" slide="19">Diagonal Matrix</title>
               <label wbtag="label" name="DIM" type="Definition"/>
-              <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix ofh size $n$. Then $A$ is a </paragraphs>
+              <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$. Then $A$ is a </paragraphs>
               <inline_keyword course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement">diagonal matrix</inline_keyword>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> if $\left[A\right]_{ij}=0$ whenever $i\neq j$, i.e.
 \begin{align*}
@@ -1448,7 +1448,7 @@ from previous examples. The eigenvalues and eigenspaces of $F$’s are
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="24" id="s24" slide="24" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
             <keywords slide="24" environ="slide" chapter="19" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="29" md5="88b169186a9c1ff134422a032f5ed1d8" course="Math 1030" chapter="19" slide="24" item="19.29">
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="29" md5="86b9df9c760c174a8357d6ef63c4c437" course="Math 1030" chapter="19" slide="24" item="19.29">
               <label wbtag="label" name="diagcond" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$. Suppose that $\lambda_{1},\ldots,\lambda_{k}$ are all of the distinct eigenvalues of $A$. Then $A$ is diagonalizable if and only if
 \begin{align}
@@ -1456,13 +1456,13 @@ from previous examples. The eigenvalues and eigenspaces of $F$’s are
 \displaystyle \sum_{i=1}^{k}\dim{\mathcal{E}}_{A}\left(\lambda_{i}\right)=\dim{\mathcal{E}}_{A}\left(\lambda_{1}\right)+\cdots+\dim{\mathcal{E}}_{A}\left(\lambda_{k}\right)=n.&amp;
 \end{align} </paragraphs>
               <newcol course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose that the above condition is satisfies by $A$ and let $T_{i}=\left\{\mathbf{v}_{i1},\,\mathbf{v}_{i2},\,\mathbf{v}_{i3},\,\ldots,\,\mathbf{v}_{id_{i}}\right\}$ be a basis for the eigenspace of $\lambda_{i}$, ${\mathcal{E}}_{A}\left(\lambda_{i}\right)$, for each $1\leq i\leq k$
+                <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose that the above condition is satisfied by $A$ and let $T_{i}=\left\{\mathbf{v}_{i1},\,\mathbf{v}_{i2},\,\mathbf{v}_{i3},\,\ldots,\,\mathbf{v}_{id_{i}}\right\}$ be a basis for the eigenspace of $\lambda_{i}$, ${\mathcal{E}}_{A}\left(\lambda_{i}\right)$, for each $1\leq i\leq k$
 and let $d_{i}=\dim{\mathcal{E}}_{A}\left(\lambda_{i}\right)$. Then
 \begin{align*}
 \displaystyle T=T_{1}\cup T_{2}\cup T_{3}\cup\cdots\cup T_{k}
 \end{align*}
 is a set of linearly independent eigenvectors for $A$ with size $n$. By Theorem </paragraphs>
-                <ref environment="newcol" chapter_type="" label="DC" wbtag="ref" course="Math 1030" chapter="19" slide="24" referrer-type="Theorem" referrer-md5="88b169186a9c1ff134422a032f5ed1d8" src-course="Math 1030" src-chapter="19" src-slide="22" type="Theorem" item="19.27" src-filename="lec19.xml" md5="cd5adde322fd587cfa137cfc05ae8a6c" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="DC" wbtag="ref" course="Math 1030" chapter="19" slide="24" referrer-type="Theorem" referrer-md5="86b9df9c760c174a8357d6ef63c4c437" src-course="Math 1030" src-chapter="19" src-slide="22" type="Theorem" item="19.27" src-filename="lec19.xml" md5="cd5adde322fd587cfa137cfc05ae8a6c" class="lcref" serial="">
                   <title>Diagonalization Characterization</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, let $S$ be a square matrix whose $i$-th column is the $i$-th vector of the set $T$, i.e.
@@ -1477,7 +1477,7 @@ is a set of linearly independent eigenvectors for $A$ with size $n$. By Theorem 
                 </collapse>
               </newcol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="d5d7461326c2fa7f0d0694f9c85b7380" course="Math 1030" chapter="19" slide="24" of="88b169186a9c1ff134422a032f5ed1d8" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="24" of-type="Theorem" of-item="19.29" of-src-filename="lec19.xml" ofmd5="88b169186a9c1ff134422a032f5ed1d8" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="d5d7461326c2fa7f0d0694f9c85b7380" course="Math 1030" chapter="19" slide="24" of="86b9df9c760c174a8357d6ef63c4c437" of-src-course="Math 1030" of-src-chapter="19" of-src-slide="24" of-type="Theorem" of-item="19.29" of-src-filename="lec19.xml" ofmd5="86b9df9c760c174a8357d6ef63c4c437" of-serial="">
               <of-title>Theorem 19.29</of-title>
               <newcol course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> See Beezer's textbook. </paragraphs>
@@ -1706,7 +1706,7 @@ By Theorem </paragraphs>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="28" id="s28" slide="28" course="Math 1030" chapter="19" section="5" subsection="" subsubsection="" chapter_title="Eigenvalues and Eigenvectors" section_title="Diagonalizability">
             <keywords slide="28" environ="slide" chapter="19" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="37" md5="dc7f18874400a9ca99369f5535ba20be" course="Math 1030" chapter="19" slide="28" item="19.37">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="37" md5="318839656673eae0a7312439e06a2bbe" course="Math 1030" chapter="19" slide="28" item="19.37">
               <label wbtag="label" name="eg:diagonalizableJ" type="Example"/>
               <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Determine if
 \begin{align*}
@@ -1717,15 +1717,15 @@ By Theorem </paragraphs>
 is diagonalizable. If it is diagonalizable, find $S$ such that $S^{-1}JS$ is diagonal.</paragraphs>
               <newline course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement"/>
               <newcol course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                <strong xmlns="http://www.w3.org/1999/xhtml" style="" environment="newcol">
                   <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 1</paragraphs>
                 </strong>
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: </paragraphs>
                 <newcol course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                  <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $p_{J}\left(x\right)=-x^{3}+6x^{2}-9x+4=-(x-4)(x-1)^{2}$. All the distict eigenvalues of $J$ is $\lambda_{1}=4$, $\lambda_{2}=1$. </paragraphs>
+                  <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $p_{J}\left(x\right)=-x^{3}+6x^{2}-9x+4=-(x-4)(x-1)^{2}$. All the distinct eigenvalues of $J$ is $\lambda_{1}=4$, $\lambda_{2}=1$. </paragraphs>
                 </newcol>
                 <newline course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
-                <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                <strong xmlns="http://www.w3.org/1999/xhtml" style="" environment="newcol">
                   <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 2</paragraphs>
                 </strong>
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: </paragraphs>
@@ -1755,7 +1755,7 @@ is diagonalizable. If it is diagonalizable, find $S$ such that $S^{-1}JS$ is dia
 \end{align*} </paragraphs>
                     <collapse course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By Theorem </paragraphs>
-                      <ref environment="newcol" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="28" referrer-type="Example" referrer-md5="dc7f18874400a9ca99369f5535ba20be" src-course="Math 1030" src-chapter="19" src-slide="24" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
+                      <ref environment="newcol" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="28" referrer-type="Example" referrer-md5="318839656673eae0a7312439e06a2bbe" src-course="Math 1030" src-chapter="19" src-slide="24" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
                         <title>Theorem 19.29</title>
                       </ref>
                       <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $J$ is diagonalizable. </paragraphs>
@@ -1763,7 +1763,7 @@ is diagonalizable. If it is diagonalizable, find $S$ such that $S^{-1}JS$ is dia
                   </collapse>
                 </newcol>
                 <newline course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
-                <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                <strong xmlns="http://www.w3.org/1999/xhtml" style="" environment="newcol">
                   <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 3</paragraphs>
                 </strong>
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: </paragraphs>
@@ -1775,7 +1775,7 @@ is diagonalizable. If it is diagonalizable, find $S$ such that $S^{-1}JS$ is dia
 0\end{bmatrix},\begin{bmatrix}-1\\
 0\\
 1\end{bmatrix}\right\}$ is a basis for ${\mathcal{E}}_{J}\left(1\right)$. By Theorem </paragraphs>
-                  <ref environment="newcol" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="28" referrer-type="Example" referrer-md5="dc7f18874400a9ca99369f5535ba20be" src-course="Math 1030" src-chapter="19" src-slide="24" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
+                  <ref environment="newcol" chapter_type="" label="diagcond" wbtag="ref" course="Math 1030" chapter="19" slide="28" referrer-type="Example" referrer-md5="318839656673eae0a7312439e06a2bbe" src-course="Math 1030" src-chapter="19" src-slide="24" type="Theorem" item="19.29" src-filename="lec19.xml" md5="88b169186a9c1ff134422a032f5ed1d8" class="lcref" serial="">
                     <title>Theorem 19.29</title>
                   </ref>
                   <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, we can take
@@ -1807,7 +1807,7 @@ is diagonalizable. If it is diagonalizable, find $S$ such that $S^{-1}JS$ is dia
 is diagonalizable and if it is diagonalizable, find $S$ such that $S^{-1}KS$ is diagonal.</paragraphs>
               <newline course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="statement"/>
               <newcol course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                <strong xmlns="http://www.w3.org/1999/xhtml" style="" environment="newcol">
                   <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 1</paragraphs>
                 </strong>
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: </paragraphs>
@@ -1821,7 +1821,7 @@ is diagonalizable and if it is diagonalizable, find $S$ such that $S^{-1}KS$ is 
                   </collapse>
                 </newcol>
                 <newline course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
-                <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                <strong xmlns="http://www.w3.org/1999/xhtml" style="" environment="newcol">
                   <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 2</paragraphs>
                 </strong>
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: </paragraphs>
@@ -1877,7 +1877,7 @@ is diagonalizable and if it is diagonalizable, find $S$ such that $S^{-1}KS$ is 
                   </collapse>
                 </newcol>
                 <newline course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
-                <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                <strong xmlns="http://www.w3.org/1999/xhtml" style="" environment="newcol">
                   <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Step 3</paragraphs>
                 </strong>
                 <paragraphs course="Math 1030" chapter="19" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: </paragraphs>
