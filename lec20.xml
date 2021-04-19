@@ -14,8 +14,7 @@
       <keyword chapter="" slide="all">orthonormal</keyword>
       <keyword chapter="" slide="all">orthonormal basis</keyword>
       <keyword chapter="" slide="all">normalization</keyword>
-      <keyword chapter="" slide="all">Gram-Schmidt Orthogonalization process</keyword>
-      <keyword chapter="" slide="all">Can be skipped, will not appear in final exam</keyword>
+      <keyword chapter="" slide="all">Gram-Schmidt Orthogonalization Process</keyword>
       <keyword chapter="" slide="all">Norm</keyword>
       <keyword chapter="" slide="all">unit vector</keyword>
       <keyword chapter="" slide="all">Gram-Schmidt Orthogonalization Process</keyword>
@@ -45,8 +44,7 @@
         <keyword chapter="20" slide="all">orthonormal</keyword>
         <keyword chapter="20" slide="all">orthonormal basis</keyword>
         <keyword chapter="20" slide="all">normalization</keyword>
-        <keyword chapter="20" slide="all">Gram-Schmidt Orthogonalization process</keyword>
-        <keyword chapter="20" slide="all">Can be skipped, will not appear in final exam</keyword>
+        <keyword chapter="20" slide="all">Gram-Schmidt Orthogonalization Process</keyword>
         <keyword chapter="20" slide="all">Norm</keyword>
         <keyword chapter="20" slide="all">unit vector</keyword>
         <keyword chapter="20" slide="all">Gram-Schmidt Orthogonalization Process</keyword>
@@ -316,6 +314,7 @@ for all $\mathbf{x}\in V$. By the previous part $\mathbf{v}-\mathbf{w}=\mathbf{0
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="8" id="s8" slide="8" course="Math 1030" chapter="20" section="1" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Basic properties of inner products">
             <keywords slide="8" environ="slide" chapter="20" course="Math 1030"/>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="6" md5="8ee15d1f197fd39592f6ba5758b11205" course="Math 1030" chapter="20" slide="8" item="20.6">
+              <label wbtag="label" name="eg:lengths" type="Example"/>
               <paragraphs course="Math 1030" chapter="20" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V={\mathbb{R}}^{3}$ with the standard inner product. Let
 \begin{align*}
 \displaystyle \mathbf{v}=\begin{bmatrix}1\\
@@ -391,15 +390,20 @@ $=|\alpha|\sqrt{\left&lt; \mathbf{v},\mathbf{v}\right&gt;}=|\alpha|\|\mathbf{v}\
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="20" section="1" subsection="" subsubsection="" serial="" slide="10">unit vector</title>
               <paragraphs course="Math 1030" chapter="20" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> A vector $\mathbf{v}\in{\mathbb{R}}^{m}$ is said to be a </paragraphs>
               <inline_keyword course="Math 1030" chapter="20" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">unit vector</inline_keyword>
-              <paragraphs course="Math 1030" chapter="20" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> if $\|\mathbf{v}\|=1$.A non-zero vector $\mathbf{v}$ can be </paragraphs>
+              <paragraphs course="Math 1030" chapter="20" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> if $\|\mathbf{v}\|=1$.
+A non-zero vector $\mathbf{v}$ can be </paragraphs>
               <inline_keyword course="Math 1030" chapter="20" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">normalized</inline_keyword>
               <paragraphs course="Math 1030" chapter="20" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> to a unit vector $\frac{\mathbf{v}}{\|\mathbf{v}\|}$ (see the previous proposition item 3). </paragraphs>
             </statement>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="11" id="s11" slide="11" course="Math 1030" chapter="20" section="1" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Basic properties of inner products">
             <keywords slide="11" environ="slide" chapter="20" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="9" md5="6be4f86ee05926434b233e3b7091b436" course="Math 1030" chapter="20" slide="11" item="20.9">
-              <paragraphs course="Math 1030" chapter="20" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> In Example 4, the vectors $\mathbf{v}$ and $\mathbf{w}$ can be normalized to:
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="9" md5="8b054ca70ce9c4f037f14297983a87df" course="Math 1030" chapter="20" slide="11" item="20.9">
+              <paragraphs course="Math 1030" chapter="20" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> In </paragraphs>
+              <ref environment="statement" chapter_type="" label="eg:lengths" wbtag="ref" course="Math 1030" chapter="20" slide="11" referrer-type="Example" referrer-md5="8b054ca70ce9c4f037f14297983a87df" src-course="Math 1030" src-chapter="20" src-slide="8" type="Example" item="20.6" src-filename="lec20.xml" md5="8ee15d1f197fd39592f6ba5758b11205" class="lcref" serial="">
+                <title>Example 20.6</title>
+              </ref>
+              <paragraphs course="Math 1030" chapter="20" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">, the vectors $\mathbf{v}$ and $\mathbf{w}$ can be normalized to:
 \begin{align*}
 \displaystyle \frac{\mathbf{v}}{\|\mathbf{v}\|}=\frac{\mathbf{v}}{\sqrt{14}}=\begin{bmatrix}\frac{1}{\sqrt{14}}\\
 \frac{2}{\sqrt{14}}\\
@@ -460,9 +464,10 @@ as
 \end{align*} </paragraphs>
                 </li>
                 <li class="ltx_item" environment="statement">
-                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V={\mathbb{R}}^{m}$. Then $\mathbf{e}_{i}\perp\mathbf{e}_{j}$ if $i\neq j$. </paragraphs>
+                  <newcol xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                    <paragraphs course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $V={\mathbb{R}}^{m}$. Then $\mathbf{e}_{i}\perp\mathbf{e}_{j}$ if $i\neq j$. </paragraphs>
+                  </newcol>
                 </li>
-                <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
               </ol>
             </statement>
           </slide>
@@ -692,47 +697,46 @@ A subset $S$ of $V$ is said to be an </paragraphs>
 So in order to check if $S$ is an orthogonal basis, we need only check that $\left&lt; S\right&gt;=V$. So we have the following result.</paragraphs>
               <newline course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
             </newcol>
-          </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="21" id="s21" slide="21" course="Math 1030" chapter="20" section="2" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Orthogonal sets">
-            <keywords slide="21" environ="slide" chapter="20" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="19" md5="955513fa633c4072bc900d1b87a661ab" course="Math 1030" chapter="20" slide="21" item="20.19">
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="19" md5="955513fa633c4072bc900d1b87a661ab" course="Math 1030" chapter="20" slide="20" item="20.19">
               <label wbtag="label" name="checkob" type="Theorem"/>
-              <paragraphs course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V$ be a subspace of ${\mathbb{R}}^{m}$.
+              <newcol course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $V$ be a subspace of ${\mathbb{R}}^{m}$.
 Suppose that $S$ is an orthogonal subset of $V$. Then $S$ is an orthogonal basis if and only if $\left&lt; S\right&gt;=V$. </paragraphs>
+              </newcol>
             </statement>
-          </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="22" id="s22" slide="22" course="Math 1030" chapter="20" section="2" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Orthogonal sets">
-            <keywords slide="22" environ="slide" chapter="20" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="20" md5="ee88660f37a74b0bfb53e50477830b50" course="Math 1030" chapter="20" slide="22" item="20.20">
-              <paragraphs course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $S$ is an orthogonal subset of ${\mathbb{R}}^{m}$. Then $S$ is a basis of $\left&lt; S\right&gt;$. </paragraphs>
-            </statement>
-          </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="23" id="s23" slide="23" course="Math 1030" chapter="20" section="2" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Orthogonal sets">
-            <keywords slide="23" environ="slide" chapter="20" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="21" md5="f979f9c574526baac12355958ec37c3c" course="Math 1030" chapter="20" slide="23" item="20.21">
-              <paragraphs course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V$ be a subspace of ${\mathbb{R}}^{m}$.
+            <newcol course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+              <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="20" md5="ee88660f37a74b0bfb53e50477830b50" course="Math 1030" chapter="20" slide="20" item="20.20">
+                <newcol course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose that $S$ is an orthogonal subset of ${\mathbb{R}}^{m}$. Then $S$ is a basis of $\left&lt; S\right&gt;$. </paragraphs>
+                </newcol>
+              </statement>
+              <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="21" md5="f979f9c574526baac12355958ec37c3c" course="Math 1030" chapter="20" slide="20" item="20.21">
+                <newcol course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $V$ be a subspace of ${\mathbb{R}}^{m}$.
 Suppose that $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\right\}$ is an orthogonal basis of $V$. Then for any $\mathbf{v}\in V$, we have
 \begin{align*}
 \displaystyle \mathbf{v}=\frac{\left&lt; \mathbf{v},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}+\cdots+\frac{\left&lt; \mathbf{v},\mathbf{v}_{n}\right&gt;}{\|\mathbf{v}_{n}\|^{2}}\mathbf{v}_{n}
 \end{align*} </paragraphs>
-            </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="3279679141b2db7c253fe4381f0ab15c" course="Math 1030" chapter="20" slide="23" of="f979f9c574526baac12355958ec37c3c" of-src-course="Math 1030" of-src-chapter="20" of-src-slide="23" of-type="Corollary" of-item="20.21" of-src-filename="lec20.xml" ofmd5="f979f9c574526baac12355958ec37c3c" of-serial="">
-              <of-title>Corollary 20.21</of-title>
-              <newcol course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This follows from Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="o" wbtag="ref" course="Math 1030" chapter="20" slide="23" referrer-type="Proof" referrer-md5="3279679141b2db7c253fe4381f0ab15c" src-course="Math 1030" src-chapter="20" src-slide="18" type="Theorem" item="20.16" src-filename="lec20.xml" md5="ae0851c9d13737c4579020583b6ca552" class="lcref" serial="">
-                  <title>Theorem 20.16</title>
-                </ref>
-                <paragraphs course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. </paragraphs>
-                <qed course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
-              </newcol>
-            </substatement>
+                </newcol>
+              </statement>
+              <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="3279679141b2db7c253fe4381f0ab15c" course="Math 1030" chapter="20" slide="20" of="f979f9c574526baac12355958ec37c3c" of-src-course="Math 1030" of-src-chapter="20" of-src-slide="23" of-type="Corollary" of-item="20.21" of-src-filename="lec20.xml" ofmd5="f979f9c574526baac12355958ec37c3c" of-serial="">
+                <of-title>Corollary 20.21</of-title>
+                <newcol course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This follows from Theorem   </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="o" wbtag="ref" course="Math 1030" chapter="20" slide="20" referrer-type="Proof" referrer-md5="3279679141b2db7c253fe4381f0ab15c" src-course="Math 1030" src-chapter="20" src-slide="18" type="Theorem" item="20.16" src-filename="lec20.xml" md5="ae0851c9d13737c4579020583b6ca552" class="lcref" serial="">
+                    <title>Theorem 20.16</title>
+                  </ref>
+                  <paragraphs course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. </paragraphs>
+                  <qed course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                </newcol>
+              </substatement>
+            </newcol>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="24" id="s24" slide="24" course="Math 1030" chapter="20" section="2" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Orthogonal sets">
-            <keywords slide="24" environ="slide" chapter="20" course="Math 1030">
-              <keyword chapter="20" slide="24">the standard basis</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="21" id="s21" slide="21" course="Math 1030" chapter="20" section="2" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Orthogonal sets">
+            <keywords slide="21" environ="slide" chapter="20" course="Math 1030">
+              <keyword chapter="20" slide="21">the standard basis</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="22" md5="5da04039ea7b13dca18efe3604c02d48" course="Math 1030" chapter="20" slide="24" item="20.22">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="22" md5="5da04039ea7b13dca18efe3604c02d48" course="Math 1030" chapter="20" slide="21" item="20.22">
               <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
                 <li class="ltx_item" environment="statement">
                   <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The set $S=\left\{\begin{bmatrix}1\\
@@ -760,12 +764,12 @@ It is called </paragraphs>
               </ol>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="25" id="s25" slide="25" course="Math 1030" chapter="20" section="2" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Orthogonal sets">
-            <keywords slide="25" environ="slide" chapter="20" course="Math 1030">
-              <keyword chapter="20" slide="25">orthonormal</keyword>
-              <keyword chapter="20" slide="25">orthonormal basis</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="22" id="s22" slide="22" course="Math 1030" chapter="20" section="2" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Orthogonal sets">
+            <keywords slide="22" environ="slide" chapter="20" course="Math 1030">
+              <keyword chapter="20" slide="22">orthonormal</keyword>
+              <keyword chapter="20" slide="22">orthonormal basis</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="23" md5="7dd3bc5e2410ef16527306071ae38d7a" course="Math 1030" chapter="20" slide="25" item="20.23">
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="23" md5="7dd3bc5e2410ef16527306071ae38d7a" course="Math 1030" chapter="20" slide="22" item="20.23">
               <paragraphs course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> A subset $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ of ${\mathbb{R}}^{m}$ is said to be </paragraphs>
               <inline_keyword course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">orthonormal</inline_keyword>
               <paragraphs course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> if it is orthogonal and every vector in $S$ is a unit vector, i.e.
@@ -786,21 +790,21 @@ In particular we have the following result.</paragraphs>
               <newline course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
             </newcol>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="26" id="s26" slide="26" course="Math 1030" chapter="20" section="2" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Orthogonal sets">
-            <keywords slide="26" environ="slide" chapter="20" course="Math 1030">
-              <keyword chapter="20" slide="26">normalization</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="23" id="s23" slide="23" course="Math 1030" chapter="20" section="2" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Orthogonal sets">
+            <keywords slide="23" environ="slide" chapter="20" course="Math 1030">
+              <keyword chapter="20" slide="23">normalization</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="24" md5="a65cdb16b535a86c1e2e03c3d2ad5257" course="Math 1030" chapter="20" slide="26" item="20.24">
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="24" md5="a65cdb16b535a86c1e2e03c3d2ad5257" course="Math 1030" chapter="20" slide="23" item="20.24">
               <paragraphs course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ be an orthonormal subset of ${\mathbb{R}}^{m}$ and let $\mathbf{v}\in\left&lt; S\right&gt;$. Then
 \begin{align*}
 \displaystyle \mathbf{v}=\left&lt; \mathbf{v},\mathbf{v}_{1}\right&gt;\mathbf{v}_{1}+\cdots+\left&lt; \mathbf{v},\mathbf{v}_{k}\right&gt;\mathbf{v}_{k}.
 \end{align*} </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="dd19d6be77efc8a805ec048aac381d62" course="Math 1030" chapter="20" slide="26" of="a65cdb16b535a86c1e2e03c3d2ad5257" of-src-course="Math 1030" of-src-chapter="20" of-src-slide="26" of-type="Theorem" of-item="20.24" of-src-filename="lec20.xml" ofmd5="a65cdb16b535a86c1e2e03c3d2ad5257" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="dd19d6be77efc8a805ec048aac381d62" course="Math 1030" chapter="20" slide="23" of="a65cdb16b535a86c1e2e03c3d2ad5257" of-src-course="Math 1030" of-src-chapter="20" of-src-slide="26" of-type="Theorem" of-item="20.24" of-src-filename="lec20.xml" ofmd5="a65cdb16b535a86c1e2e03c3d2ad5257" of-serial="">
               <of-title>Theorem 20.24</of-title>
               <newcol course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="o" wbtag="ref" course="Math 1030" chapter="20" slide="26" referrer-type="Proof" referrer-md5="dd19d6be77efc8a805ec048aac381d62" src-course="Math 1030" src-chapter="20" src-slide="18" type="Theorem" item="20.16" src-filename="lec20.xml" md5="ae0851c9d13737c4579020583b6ca552" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="o" wbtag="ref" course="Math 1030" chapter="20" slide="23" referrer-type="Proof" referrer-md5="dd19d6be77efc8a805ec048aac381d62" src-course="Math 1030" src-chapter="20" src-slide="18" type="Theorem" item="20.16" src-filename="lec20.xml" md5="ae0851c9d13737c4579020583b6ca552" class="lcref" serial="">
                   <title>Theorem 20.16</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and $\|\mathbf{v}_{i}\|=1$ for $i=1,\ldots,k$. </paragraphs>
@@ -815,9 +819,9 @@ is an orthonormal subset. The process is called </paragraphs>
               <paragraphs course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. </paragraphs>
             </newcol>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="27" id="s27" slide="27" course="Math 1030" chapter="20" section="2" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Orthogonal sets">
-            <keywords slide="27" environ="slide" chapter="20" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="25" md5="4b32fb017101e203c78d08692c503af2" course="Math 1030" chapter="20" slide="27" item="20.25">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="24" id="s24" slide="24" course="Math 1030" chapter="20" section="2" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Orthogonal sets">
+            <keywords slide="24" environ="slide" chapter="20" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="25" md5="4b32fb017101e203c78d08692c503af2" course="Math 1030" chapter="20" slide="24" item="20.25">
               <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
                 <li class="ltx_item" environment="statement">
                   <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="20" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The set $S=\left\{\begin{bmatrix}1\\
@@ -860,9 +864,9 @@ Normalizing it, we obtain an orthonormal basis
           <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Gram-Schmidt Orthogonalization process</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="28" scope="section" id="s28" slide="28" course="Math 1030" chapter="20" section="3" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Gram-Schmidt Orthogonalization process">
-            <keywords slide="28" environ="slide" chapter="20" course="Math 1030"/>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="20" section="3" subsection="" subsubsection="" serial="" slide="28">
+          <slide environment="" chapter_type="Chapter" canon_num="25" scope="section" id="s25" slide="25" course="Math 1030" chapter="20" section="3" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Gram-Schmidt Orthogonalization process">
+            <keywords slide="25" environ="slide" chapter="20" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="20" section="3" subsection="" subsubsection="" serial="" slide="25">
               <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Gram-Schmidt Orthogonalization process</paragraphs>
             </title>
             <newline course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment=""/>
@@ -875,9 +879,9 @@ Normalizing it, we obtain an orthonormal basis
               <newline course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
             </newcol>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="29" id="s29" slide="29" course="Math 1030" chapter="20" section="3" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Gram-Schmidt Orthogonalization process">
-            <keywords slide="29" environ="slide" chapter="20" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="26" md5="d4dcb9b1cdec9c946c5696df8ca4bb44" course="Math 1030" chapter="20" slide="29" item="20.26">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="26" id="s26" slide="26" course="Math 1030" chapter="20" section="3" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Gram-Schmidt Orthogonalization process">
+            <keywords slide="26" environ="slide" chapter="20" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="26" md5="d4dcb9b1cdec9c946c5696df8ca4bb44" course="Math 1030" chapter="20" slide="26" item="20.26">
               <label wbtag="label" name="perp" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ be an orthogonal subset of ${\mathbb{R}}^{m}$ and let $\mathbf{w}\in{\mathbb{R}}^{m}$. Then, for each $i=1,\ldots,k$, the vector
 \begin{align*}
@@ -885,7 +889,7 @@ Normalizing it, we obtain an orthonormal basis
 \end{align*}
 is perpendicular to $\mathbf{v}_{i}$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="16b13427921bf158766ac0ea187467a4" course="Math 1030" chapter="20" slide="29" of="d4dcb9b1cdec9c946c5696df8ca4bb44" of-src-course="Math 1030" of-src-chapter="20" of-src-slide="29" of-type="Theorem" of-item="20.26" of-src-filename="lec20.xml" ofmd5="d4dcb9b1cdec9c946c5696df8ca4bb44" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="16b13427921bf158766ac0ea187467a4" course="Math 1030" chapter="20" slide="26" of="d4dcb9b1cdec9c946c5696df8ca4bb44" of-src-course="Math 1030" of-src-chapter="20" of-src-slide="29" of-type="Theorem" of-item="20.26" of-src-filename="lec20.xml" ofmd5="d4dcb9b1cdec9c946c5696df8ca4bb44" of-serial="">
               <of-title>Theorem 20.26</of-title>
               <newcol course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> For $1\leq i\leq k$, we compute
@@ -905,13 +909,13 @@ is perpendicular to $\mathbf{v}_{i}$. </paragraphs>
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="30" id="s30" slide="30" course="Math 1030" chapter="20" section="3" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Gram-Schmidt Orthogonalization process">
-            <keywords slide="30" environ="slide" chapter="20" course="Math 1030">
-              <keyword chapter="20" slide="30">Gram-Schmidt Orthogonalization process</keyword>
-              <keyword chapter="20" slide="30">Gram-Schmidt Orthogonalization Process</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="27" id="s27" slide="27" course="Math 1030" chapter="20" section="3" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Gram-Schmidt Orthogonalization process">
+            <keywords slide="27" environ="slide" chapter="20" course="Math 1030">
+              <keyword chapter="20" slide="27">Gram-Schmidt Orthogonalization Process</keyword>
+              <keyword chapter="20" slide="27">Gram-Schmidt Orthogonalization Process</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="27" title="Gram-Schmidt Orthogonalization Process" md5="8266d18d50276a165b5879a7dde1e334" course="Math 1030" chapter="20" slide="30" item="20.27">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="20" section="3" subsection="" subsubsection="" serial="" slide="30">Gram-Schmidt Orthogonalization Process</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="27" title="Gram-Schmidt Orthogonalization Process" md5="5e92cc28c0997f024eb4381292f86114" course="Math 1030" chapter="20" slide="27" item="20.27">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="20" section="3" subsection="" subsubsection="" serial="" slide="27">Gram-Schmidt Orthogonalization Process</title>
               <label wbtag="label" name="GSO" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $S=\left\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{k}\right\}$ be a linearly independent subset of $V$.
 Let $\mathbf{v}_{1}=\mathbf{w}_{1}$ and set
@@ -921,18 +925,18 @@ Let $\mathbf{v}_{1}=\mathbf{w}_{1}$ and set
               <newcol course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is an orthogonal set.Moreover, $\left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}\right&gt;=\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right&gt;$ for $\ell=1,\ldots,k$.
 In particular $\left&lt; S\right&gt;=\left&lt; S^{\prime}\right&gt;$. The process of obtaining $S^{\prime}$ by the above procedure is called the </paragraphs>
-                <inline_keyword course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol">Gram-Schmidt Orthogonalization process</inline_keyword>
+                <inline_keyword course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol">Gram-Schmidt Orthogonalization Process</inline_keyword>
                 <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. </paragraphs>
               </newcol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="8ae0d6b4aaa25ed8dbda869fe8828925" course="Math 1030" chapter="20" slide="30" of="8266d18d50276a165b5879a7dde1e334" of-src-course="Math 1030" of-src-chapter="20" of-src-slide="30" of-type="Theorem" of-item="20.27" of-src-filename="lec20.xml" ofmd5="8266d18d50276a165b5879a7dde1e334" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="8ae0d6b4aaa25ed8dbda869fe8828925" course="Math 1030" chapter="20" slide="27" of="5e92cc28c0997f024eb4381292f86114" of-src-course="Math 1030" of-src-chapter="20" of-src-slide="27" of-type="Theorem" of-item="20.27" of-src-filename="lec20.xml" ofmd5="5e92cc28c0997f024eb4381292f86114" of-serial="">
               <of-title>Gram-Schmidt Orthogonalization Process</of-title>
               <newcol course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We have $\left&lt; \left\{\mathbf{w}_{1}\right\}\right&gt;=\left&lt; \left\{\mathbf{v}_{1}\right\}\right&gt;$.
 We are going to add one vector at a time. Suppose that $\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}\right&gt;=\left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}\right&gt;$
 and that the set $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}$ is orthogonal. Thus $\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right&gt;=\left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1},\mathbf{v}_{\ell}\right\}\right&gt;$
 $=\left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1},\mathbf{w}_{\ell}\right\}\right&gt;$. By Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="perp" wbtag="ref" course="Math 1030" chapter="20" slide="30" referrer-type="Proof" referrer-md5="8ae0d6b4aaa25ed8dbda869fe8828925" src-course="Math 1030" src-chapter="20" src-slide="29" type="Theorem" item="20.26" src-filename="lec20.xml" md5="d4dcb9b1cdec9c946c5696df8ca4bb44" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="perp" wbtag="ref" course="Math 1030" chapter="20" slide="27" referrer-type="Proof" referrer-md5="8ae0d6b4aaa25ed8dbda869fe8828925" src-course="Math 1030" src-chapter="20" src-slide="29" type="Theorem" item="20.26" src-filename="lec20.xml" md5="d4dcb9b1cdec9c946c5696df8ca4bb44" class="lcref" serial="">
                   <title>Theorem 20.26</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $\mathbf{v}_{\ell}\perp\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}$. Thus $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}$ is orthogonal.
@@ -941,22 +945,22 @@ We repeat the process by increasing $\ell$ until $\ell=k$. </paragraphs>
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="31" id="s31" slide="31" course="Math 1030" chapter="20" section="3" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Gram-Schmidt Orthogonalization process">
-            <keywords slide="31" environ="slide" chapter="20" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="28" md5="f9e9a11445cc2fb0946f9b585971f479" course="Math 1030" chapter="20" slide="31" item="20.28">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="28" id="s28" slide="28" course="Math 1030" chapter="20" section="3" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Gram-Schmidt Orthogonalization process">
+            <keywords slide="28" environ="slide" chapter="20" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="28" md5="f9e9a11445cc2fb0946f9b585971f479" course="Math 1030" chapter="20" slide="28" item="20.28">
               <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $V$ is a subspace of ${\mathbb{R}}^{m}$. Then there exists an orthogonal (orthonormal basis) of $V$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="b8c0e8e875c2c5a91b7a7d225f071318" course="Math 1030" chapter="20" slide="31" of="f9e9a11445cc2fb0946f9b585971f479" of-src-course="Math 1030" of-src-chapter="20" of-src-slide="31" of-type="Corollary" of-item="20.28" of-src-filename="lec20.xml" ofmd5="f9e9a11445cc2fb0946f9b585971f479" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="b8c0e8e875c2c5a91b7a7d225f071318" course="Math 1030" chapter="20" slide="28" of="f9e9a11445cc2fb0946f9b585971f479" of-src-course="Math 1030" of-src-chapter="20" of-src-slide="31" of-type="Corollary" of-item="20.28" of-src-filename="lec20.xml" ofmd5="f9e9a11445cc2fb0946f9b585971f479" of-serial="">
               <of-title>Corollary 20.28</of-title>
               <newcol course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By Lecture 18 Theorem 8, there exists a basis $S=\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{k}\right\}$ for $V$.
 Applying Gram-Schmidt orthogonalization process to $S$, we obtain an orthogonal set $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$.
 By Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="GSO" wbtag="ref" course="Math 1030" chapter="20" slide="31" referrer-type="Proof" referrer-md5="b8c0e8e875c2c5a91b7a7d225f071318" src-course="Math 1030" src-chapter="20" src-slide="30" type="Theorem" item="20.27" src-filename="lec20.xml" md5="8266d18d50276a165b5879a7dde1e334" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="GSO" wbtag="ref" course="Math 1030" chapter="20" slide="28" referrer-type="Proof" referrer-md5="b8c0e8e875c2c5a91b7a7d225f071318" src-course="Math 1030" src-chapter="20" src-slide="30" type="Theorem" item="20.27" src-filename="lec20.xml" md5="8266d18d50276a165b5879a7dde1e334" class="lcref" serial="">
                   <title>Gram-Schmidt Orthogonalization Process</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $\left&lt; S^{\prime}\right&gt;=\left&lt; S\right&gt;=V$. By Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="checkob" wbtag="ref" course="Math 1030" chapter="20" slide="31" referrer-type="Proof" referrer-md5="b8c0e8e875c2c5a91b7a7d225f071318" src-course="Math 1030" src-chapter="20" src-slide="21" type="Theorem" item="20.19" src-filename="lec20.xml" md5="955513fa633c4072bc900d1b87a661ab" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="checkob" wbtag="ref" course="Math 1030" chapter="20" slide="28" referrer-type="Proof" referrer-md5="b8c0e8e875c2c5a91b7a7d225f071318" src-course="Math 1030" src-chapter="20" src-slide="21" type="Theorem" item="20.19" src-filename="lec20.xml" md5="955513fa633c4072bc900d1b87a661ab" class="lcref" serial="">
                   <title>Theorem 20.19</title>
                 </ref>
                 <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $S^{\prime}$ is an orthogonal basis. Normalizing $S^{\prime}$, we can also obtain an orthonormal basis. </paragraphs>
@@ -967,9 +971,9 @@ By Theorem   </paragraphs>
               <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The above proof actually describes a method to find orthogonal (orthonormal) basis of $V$. </paragraphs>
             </newcol>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="32" id="s32" slide="32" course="Math 1030" chapter="20" section="3" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Gram-Schmidt Orthogonalization process">
-            <keywords slide="32" environ="slide" chapter="20" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="29" md5="cd1eb044c3eb94e7bf83d64756e3a6e8" course="Math 1030" chapter="20" slide="32" item="20.29">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="29" id="s29" slide="29" course="Math 1030" chapter="20" section="3" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Gram-Schmidt Orthogonalization process">
+            <keywords slide="29" environ="slide" chapter="20" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="29" md5="cd1eb044c3eb94e7bf83d64756e3a6e8" course="Math 1030" chapter="20" slide="29" item="20.29">
               <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V={\mathbb{R}}^{4}$ with the standard inner product. Let
 \begin{align*}
 \displaystyle \mathbf{w}_{1}=\begin{bmatrix}1\\
@@ -1037,8 +1041,9 @@ To obtain an orthonormal basis of $\left&lt; \left\{\mathbf{w}_{1},\mathbf{w}_{2
                 </collapse>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="30" md5="530a3fd47e44d921d44f959cba7a4995" course="Math 1030" chapter="20" slide="32" item="20.30">
-              <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V={\mathcal{N}}\!\left(\begin{bmatrix}1&amp;1&amp;1&amp;1\end{bmatrix}\right)$. Find an orthonormal basis of $V$. The set
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="30" md5="530a3fd47e44d921d44f959cba7a4995" course="Math 1030" chapter="20" slide="29" item="20.30">
+              <newcol course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $V={\mathcal{N}}\!\left(\begin{bmatrix}1&amp;1&amp;1&amp;1\end{bmatrix}\right)$. Find an orthonormal basis of $V$. The set
 \begin{align*}
 \displaystyle S=\left\{\mathbf{w}_{1}=\begin{bmatrix}-1\\
 1\\
@@ -1085,8 +1090,8 @@ is a basis of $V$. We apply Gram-Schmidt orthogonalization process to the set $S
 -1/3\\
 1\end{bmatrix}.
 \end{align*} </paragraphs>
-              <newcol course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So
+                <newcol course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So
 \begin{align*}
 \displaystyle \left\{\begin{bmatrix}-1\\
 1\\
@@ -1112,8 +1117,8 @@ is an orthogonal basis of $V$. Normalizing it, we can obtain an orthonormal basi
 -1\\
 3\end{bmatrix}\right\}.
 \end{align*} </paragraphs>
-                <collapse course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The above process will be easier if we start with another basis:
+                  <collapse course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The above process will be easier if we start with another basis:
 \begin{align*}
 \displaystyle S=\left\{\mathbf{w}_{1}=\begin{bmatrix}1\\
 -1\\
@@ -1126,8 +1131,8 @@ is an orthogonal basis of $V$. Normalizing it, we can obtain an orthonormal basi
 -1\\
 0\end{bmatrix}\right\}
 \end{align*} </paragraphs>
-                  <collapse course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Now the first two vectors are perpendicular. Apply Gram-Schmidt orthogonalization process to it:
+                    <collapse course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Now the first two vectors are perpendicular. Apply Gram-Schmidt orthogonalization process to it:
 \begin{align*}
 \displaystyle \mathbf{v}_{1}=\mathbf{w}_{1}=\begin{bmatrix}1\\
 -1\\
@@ -1146,8 +1151,8 @@ is an orthogonal basis of $V$. Normalizing it, we can obtain an orthonormal basi
 -1/2\\
 -1/2\end{bmatrix}.
 \end{align*} </paragraphs>
-                    <collapse course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                      <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So
+                      <collapse course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="Math 1030" chapter="20" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So
 \begin{align*}
 \displaystyle \left\{\begin{bmatrix}1\\
 -1\\
@@ -1173,9 +1178,10 @@ is an orthogonal basis of $V$. Normalizing it, we obtain an orthonormal basis
 -1/2\\
 -1/2\end{bmatrix}\right\}.
 \end{align*} </paragraphs>
+                      </collapse>
                     </collapse>
                   </collapse>
-                </collapse>
+                </newcol>
               </newcol>
             </statement>
           </slide>
@@ -1186,29 +1192,27 @@ is an orthogonal basis of $V$. Normalizing it, we obtain an orthonormal basis
           <paragraphs course="Math 1030" chapter="20" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Cauchy-Schwarz Inequality</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="33" scope="section" id="s33" slide="33" course="Math 1030" chapter="20" section="4" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Cauchy-Schwarz Inequality">
-            <keywords slide="33" environ="slide" chapter="20" course="Math 1030">
-              <keyword chapter="20" slide="33">Can be skipped, will not appear in final exam</keyword>
-            </keywords>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="20" section="4" subsection="" subsubsection="" serial="" slide="33">
+          <slide environment="" chapter_type="Chapter" canon_num="30" scope="section" id="s30" slide="30" course="Math 1030" chapter="20" section="4" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Cauchy-Schwarz Inequality">
+            <keywords slide="30" environ="slide" chapter="20" course="Math 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="20" section="4" subsection="" subsubsection="" serial="" slide="30">
               <paragraphs course="Math 1030" chapter="20" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Cauchy-Schwarz Inequality</paragraphs>
             </title>
-            <newline course="Math 1030" chapter="20" chapter_type="" section="4" subsection="" subsubsection="" environment=""/>
-            <inline_keyword course="Math 1030" chapter="20" chapter_type="" section="4" subsection="" subsubsection="" environment="">Can be skipped, will not appear in final exam</inline_keyword>
-            <newline course="Math 1030" chapter="20" chapter_type="" section="4" subsection="" subsubsection="" environment=""/>
+            <strong xmlns="http://www.w3.org/1999/xhtml" environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="20" chapter_type="" section="4" subsection="" subsubsection="" environment="" wbtag="paragraphs">Can be skipped, will not appear in final exam</paragraphs>
+            </strong>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="34" id="s34" slide="34" course="Math 1030" chapter="20" section="4" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Cauchy-Schwarz Inequality">
-            <keywords slide="34" environ="slide" chapter="20" course="Math 1030">
-              <keyword chapter="20" slide="34">Cauchy-Schwarz Inequality</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="31" id="s31" slide="31" course="Math 1030" chapter="20" section="4" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Cauchy-Schwarz Inequality">
+            <keywords slide="31" environ="slide" chapter="20" course="Math 1030">
+              <keyword chapter="20" slide="31">Cauchy-Schwarz Inequality</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="31" title="Cauchy-Schwarz Inequality" md5="eab2910c2c1dea70bdf73e8fb1ad245c" course="Math 1030" chapter="20" slide="34" item="20.31">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="20" section="4" subsection="" subsubsection="" serial="" slide="34">Cauchy-Schwarz Inequality</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="31" title="Cauchy-Schwarz Inequality" md5="eab2910c2c1dea70bdf73e8fb1ad245c" course="Math 1030" chapter="20" slide="31" item="20.31">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="20" section="4" subsection="" subsubsection="" serial="" slide="31">Cauchy-Schwarz Inequality</title>
               <paragraphs course="Math 1030" chapter="20" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> For $\mathbf{v},\mathbf{w}\in{\mathbb{R}}^{m}$,
 \begin{align*}
 \displaystyle |\left&lt; \mathbf{v},\mathbf{w}\right&gt;|\leq\|\mathbf{v}\|\|\mathbf{w}\|.
 \end{align*} </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="77fd3397e671d58ee21390c858079b78" course="Math 1030" chapter="20" slide="34" of="eab2910c2c1dea70bdf73e8fb1ad245c" of-src-course="Math 1030" of-src-chapter="20" of-src-slide="34" of-type="Theorem" of-item="20.31" of-src-filename="lec20.xml" ofmd5="eab2910c2c1dea70bdf73e8fb1ad245c" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="77fd3397e671d58ee21390c858079b78" course="Math 1030" chapter="20" slide="31" of="eab2910c2c1dea70bdf73e8fb1ad245c" of-src-course="Math 1030" of-src-chapter="20" of-src-slide="34" of-type="Theorem" of-item="20.31" of-src-filename="lec20.xml" ofmd5="eab2910c2c1dea70bdf73e8fb1ad245c" of-serial="">
               <of-title>Cauchy-Schwarz Inequality</of-title>
               <newcol course="Math 1030" chapter="20" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="20" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The statement is trivial if $\mathbf{w}=\mathbf{0}$. Suppose $\mathbf{w}\neq\mathbf{0}$. Let $t\in{\mathbb{R}}^{\hbox{}}$, then
@@ -1237,7 +1241,7 @@ into the above, we obtain
                 </collapse>
               </newcol>
             </substatement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="b8d7c677029535de21f889e9efa20933" course="Math 1030" chapter="20" slide="34">
+            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="b8d7c677029535de21f889e9efa20933" course="Math 1030" chapter="20" slide="31">
               <newline course="Math 1030" chapter="20" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement"/>
               <newcol course="Math 1030" chapter="20" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="20" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The $t$ above is obtained by minimizing the quadratic equation
@@ -1251,18 +1255,18 @@ i.e., $\mathbf{v}=\alpha\mathbf{w}$ for some scalar $\alpha\in{\mathbb{R}}^{\hbo
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="35" id="s35" slide="35" course="Math 1030" chapter="20" section="4" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Cauchy-Schwarz Inequality">
-            <keywords slide="35" environ="slide" chapter="20" course="Math 1030">
-              <keyword chapter="20" slide="35">Triangle Inequality</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="32" id="s32" slide="32" course="Math 1030" chapter="20" section="4" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Cauchy-Schwarz Inequality">
+            <keywords slide="32" environ="slide" chapter="20" course="Math 1030">
+              <keyword chapter="20" slide="32">Triangle Inequality</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="32" title="Triangle Inequality" md5="95cbf8d776ae5635fe0c87cf4c1f039b" course="Math 1030" chapter="20" slide="35" item="20.32">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="20" section="4" subsection="" subsubsection="" serial="" slide="35">Triangle Inequality</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="32" title="Triangle Inequality" md5="95cbf8d776ae5635fe0c87cf4c1f039b" course="Math 1030" chapter="20" slide="32" item="20.32">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="20" section="4" subsection="" subsubsection="" serial="" slide="32">Triangle Inequality</title>
               <paragraphs course="Math 1030" chapter="20" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> For any $\vect{v}, \vect{w} \in \mathbb{R}^n$, we have:
 \begin{align*}
 \displaystyle \|\mathbf{v}+\mathbf{w}\|\leq\|\mathbf{v}\|+\|\mathbf{w}\|.
 \end{align*} </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="f3a4c0656c026fabfbbb69f46a99b8fb" course="Math 1030" chapter="20" slide="35" of="95cbf8d776ae5635fe0c87cf4c1f039b" of-src-course="Math 1030" of-src-chapter="20" of-src-slide="35" of-type="Theorem" of-item="20.32" of-src-filename="lec20.xml" ofmd5="95cbf8d776ae5635fe0c87cf4c1f039b" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="f3a4c0656c026fabfbbb69f46a99b8fb" course="Math 1030" chapter="20" slide="32" of="95cbf8d776ae5635fe0c87cf4c1f039b" of-src-course="Math 1030" of-src-chapter="20" of-src-slide="35" of-type="Theorem" of-item="20.32" of-src-filename="lec20.xml" ofmd5="95cbf8d776ae5635fe0c87cf4c1f039b" of-serial="">
               <of-title>Triangle Inequality</of-title>
               <newcol course="Math 1030" chapter="20" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="20" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
@@ -1285,9 +1289,9 @@ thus
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="36" id="s36" slide="36" course="Math 1030" chapter="20" section="4" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Cauchy-Schwarz Inequality">
-            <keywords slide="36" environ="slide" chapter="20" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="33" md5="12dca747690ffc2e5e8fcb43abd206ac" course="Math 1030" chapter="20" slide="36" item="20.33">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="33" id="s33" slide="33" course="Math 1030" chapter="20" section="4" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Cauchy-Schwarz Inequality">
+            <keywords slide="33" environ="slide" chapter="20" course="Math 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="33" md5="12dca747690ffc2e5e8fcb43abd206ac" course="Math 1030" chapter="20" slide="33" item="20.33">
               <paragraphs course="Math 1030" chapter="20" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $\mathbf{v},\mathbf{w}\in{\mathbb{R}}^{m}$ with the standard inner product. Let
 \begin{align*}
 \displaystyle \mathbf{v}=\begin{bmatrix}v_{1}\\
