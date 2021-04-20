@@ -618,10 +618,36 @@ In particular $\left< S\right>=\left< S^{\prime}\right>$. The process of obtaini
 @proof
 @newcol
 We have $\left< \left\{\mathbf{w}_{1}\right\}\right>=\left< \left\{\mathbf{v}_{1}\right\}\right>$.
-We are going to add one vector at a time. Suppose that $\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}\right>=\left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}\right>$
-and that the set $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}$ is orthogonal. Thus $\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right>=\left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1},\mathbf{v}_{\ell}\right\}\right>$
-$=\left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1},\mathbf{w}_{\ell}\right\}\right>$. By Theorem   @ref{perp}, $\mathbf{v}_{\ell}\perp\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}$. Thus $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}$ is orthogonal.
-We repeat the process by increasing $\ell$ until $\ell=k$.
+We are going to add one vector at a time.
+
+Suppose that $\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}\right>=\left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}\right>$
+and that the set $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}$ is orthogonal.
+
+Observe that $\vect{v}_l$ is a linear combination of $\vect{v}_1, \cdots, \vect{v}_{l-1}$ and $\vect{w}_l$.
+Since $\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}\right>=\left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}\right>$, we have:
+\[
+\vect{v}_\ell \in \left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}, \vect{w}_\ell \right\}\right>.
+\]
+Hence,
+\[
+\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right> \subseteq \left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}\right>
+\]
+Likewise, by the formula defining $\vect{v}_\ell$ we have:
+\[
+\vect{w}_\ell \in \left< \left\{\mathbf{v}_{1},\ldots, \vect{v}_\ell \right\}\right>.
+\]
+Hence,
+\[
+\left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}\right> \subseteq
+\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right>.
+\]
+It now follows that:
+\[
+\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right> =\left< \left\{\mathbf{w}_{1},\ldots, \mathbf{w}_{\ell}\right\}\right>.
+\]
+
+By Theorem   @ref{perp}, $\mathbf{v}_{\ell}\perp\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}$. Thus $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}$ is orthogonal.
+Repeating the process for the incrementing $\ell$ reaches $\ell=k$, we complete the proof.
 @qed
 @endcol
 @end
@@ -633,6 +659,7 @@ Suppose that $V$ is a subspace of ${\mathbb{R}}^{m}$. Then there exists an ortho
 @newcol
 By Lecture 18 Theorem 8, there exists a basis $S=\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{k}\right\}$ for $V$.
 Applying Gram-Schmidt orthogonalization process to $S$, we obtain an orthogonal set $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$.
+
 By Theorem   @ref{GSO}, $\left< S^{\prime}\right>=\left< S\right>=V$. By Theorem   @ref{checkob}, $S^{\prime}$ is an orthogonal basis. Normalizing $S^{\prime}$, we can also obtain an orthonormal basis.
 @qed
 @endcol
