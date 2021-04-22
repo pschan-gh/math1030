@@ -1239,6 +1239,7 @@ By Theorem @ref{diagcond}, $B$ is not diagonalizable.
 @endcol
 @end
 @eg
+@label{eg:example7diag}
 Determine if the matrix $C$
 in @ref{eg:example7} is diagonalizable.Because
 \begin{align*}
@@ -1258,6 +1259,7 @@ By Theorem @ref{diagcond}, $C$ is diagonalizable.
 @slide
 @skip
 @eg
+@label{Hdiag}
 Determine if the matrix $E$ in @ref{eg:example8} is diagonalizable.The characteristic polynomial is $p_{E}\left(x\right)=-(x-2)^{4}(x+1)$.
 The eigenvalues are $\lambda_{1}=2$ and $\lambda_{2}=-1$ and we have
 \begin{align*}
@@ -1271,10 +1273,12 @@ So $E$ is not diagonalizable.
 @endcol
 @end
 @eg
-Determine if the matrix $H$ in Example 9 is diagonalizable.Because $p_{H}\left(x\right)=x(x-2)(x-1)(x+1)(x+3)$, has $5$ distinct eigenvalues, Theorem @ref{DED} implies that $H$ is diagonalizable.
+Determine if the matrix $H$ in @ref{H} is diagonalizable.
+Because $p_{H}\left(x\right)=x(x-2)(x-1)(x+1)(x+3)$, has $5$ distinct eigenvalues, Theorem @ref{DED} implies that $H$ is diagonalizable.
 @end
 @eg
-Diagonalize $C$ in @ref{eg:example7} (see also Example 18). By the computation in Example 18, $C$ is diagonalizable. By the computation in @ref{eg:example7}, we have that$\left\{\begin{bmatrix}1\\
+Diagonalize $C$ in @ref{eg:example7} (see also @ref{eg:example7diag}).
+By the computation in @ref{eg:example7diag}, $C$ is diagonalizable. By the computation in @ref{eg:example7diag}, we have that$\left\{\begin{bmatrix}1\\
 1\\
 1\\
 1\end{bmatrix}\right\}$ is a basis for ${\mathcal{E}}_{C}\left(3\right)$, $\left\{\begin{bmatrix}-1\\
@@ -1301,7 +1305,8 @@ Note that the invertibility of $S$ is guaranteed by Theorem @ref{diagcond}.
 @endcol
 @end
 @eg
-Diagonalize $H$ in Example 9 (see also Example 21).By the discussion of Example 21, $H$ is diagonalizable. By the computation in Example 9,
+Diagonalize $H$ in @ref{H} (see also @ref{Hdiag}).
+By the discussion of @ref{Hdiag}, $H$ is diagonalizable. By the computation in @ref{H},
 $\begin{bmatrix}1\\
 -1\\
 -2\\
