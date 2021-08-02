@@ -69,7 +69,7 @@ The matrix $B$ of the previous example is called the inverse of $A$. When $A$ an
 \displaystyle x=1x=\left(\frac{1}{3}\left(3\right)\right)x=\frac{1}{3}\left(3x\right)=\frac{1}{3}\left(12\right)=4
 \end{align*}
 @col
-Here we have obtained a solution by employing the <b>multiplicative inverse</b> of $3$, $3^{-1}=\frac{1}{3}$. This works fine for any scalar multiple of $x$, except for zero, since zero does not have a multiplicative inverse. Consider separately the two linear equations,
+Here we have obtained a solution by employing the @keyword{multiplicative inverse} of $3$, $3^{-1}=\frac{1}{3}$. This works fine for any scalar multiple of $x$, except for zero, since zero does not have a multiplicative inverse. Consider separately the two linear equations,
 \begin{align*}
 \displaystyle 0x&\displaystyle=12&\displaystyle 0x&\displaystyle=0
 \end{align*}
@@ -79,7 +79,7 @@ The first has no solutions, while the second has infinitely many solutions. For 
 @endcol
 @section{Inverse of a Matrix}
 @defn
-Suppose $A$ and $B$ are square matrices of size $n$ such that $AB=I_{n}$ and $BA=I_{n}$. Then $A$ is <b>invertible</b> and $B$ is the <b>inverse</b> of $A$. In this situation, we write $B=A^{-1}$.
+Suppose $A$ and $B$ are square matrices of size $n$ such that $AB=I_{n}$ and $BA=I_{n}$. Then $A$ is @keyword{invertible} and $B$ is the @keyword{inverse} of $A$. In this situation, we write $B=A^{-1}$.
 @end
 @newcol
 Notice that if $B$ is the inverse of $A$, then we can just as easily say $A$ is the inverse of $B$, or $A$ and $B$ are inverses of each other.
@@ -89,16 +89,13 @@ Not every square matrix has an inverse.
 @endcol
 @slide
 @eg
-<b>A matrix without an inverse</b>
-
-@newcol
-Consider the coefficient matrix
+@keyword{A matrix without an inverse} Consider the coefficient matrix
 \begin{align*}
 \displaystyle A=\begin{bmatrix}1&-1&2\\
 2&1&1\\
 1&1&0\end{bmatrix}
 \end{align*}
-@col
+@newcol
 Suppose that $A$ is invertible and does have an inverse, say $B$. Choose the vector of constants
 \begin{align*}
 \displaystyle \mathbf{b}=\begin{bmatrix}1\\
@@ -125,18 +122,15 @@ Let us look at one more matrix inverse before we embark on a more systematic stu
 @endcol
 @slide
 @eg
-<b>Matrix inverse</b>
-
-@newcol
-<strong>1.</strong>
-\begin{align*}
+@keyword{Matrix inverse}
+<strong>1.</strong> \begin{align*}
 \displaystyle A=\left[\begin{array}[]{cc}1&2\\
 2&3\\
 \end{array}\right],B=\left[\begin{array}[]{cc}-3&2\\
 2&-1\\
 \end{array}\right],
 \end{align*}
-@col
+@newcol
 Then
 \begin{align*}
 \displaystyle AB=BA=I_{2}.
@@ -145,8 +139,7 @@ Then
 So $B$ is the inverse of $A$.
 
 @col
-<strong>2.</strong>
-\begin{align*}
+<strong>2.</strong> \begin{align*}
 \displaystyle A=\left[\begin{array}[]{ccc}1&1&1\\
 1&0&-1\\
 0&1&1\\
@@ -214,10 +207,6 @@ We will now concern ourselves less with whether or not an inverse of a matrix ex
 Later we will have some theorems that allow us to more quickly and easily determine just when a matrix is invertible.
 
 @endcol
-@section{Computing the Inverse of a Matrix}
-
-How would we compute an inverse? And just when is a matrix invertible, and when is it not? Writing a putative inverse with $n^{2}$ unknowns and solving the resultant $n^{2}$ equations is one approach. Applying this approach to $2\times 2$ matrices can get us somewhere, so just for fun, let us do it.
-
 @slide
 @thm
 @title{Two-by-Two Matrix Inverse}
@@ -236,8 +225,9 @@ Then $A$ is invertible if and only if $ad-bc\neq 0$. When $A$ is invertible, the
 @endcol
 @end
 @proof
+@skip
 
-$\Leftarrow$ 
+$\Leftarrow$
 @newcol
 Assume that $ad-bc\neq 0$. We will use the definition of the inverse of a matrix to establish that $A$ has an inverse. Note that if $ad-bc\neq 0$ then the displayed formula for $A^{-1}$ is legitimate since we are not dividing by zero).
 Using this proposed formula for the inverse of $A$, we compute
@@ -301,7 +291,7 @@ ce+dg&cf+dh\end{bmatrix}=\begin{bmatrix}bg&bh\\
 dg&dh\end{bmatrix}
 \end{align*}
 @col
-So $bg=dh=1$ and thus $b,g,d,h$ are all nonzero. But then $bh$ and $dg$ 
+So $bg=dh=1$ and thus $b,g,d,h$ are all nonzero. But then $bh$ and $dg$
 (the <strong>other corners</strong>) must also be nonzero, so this is (finally) a contradiction. So our assumption was false and we see that $ad-bc\neq 0$ whenever $A$ has an inverse.
 @qed
 @endcol
@@ -311,493 +301,6 @@ There are several ways one could try to prove this theorem, but there is a conti
 
 @col
 This theorem is cute, and it is nice to have a formula for the inverse, and a condition that tells us when we can use it. However, this approach becomes impractical for larger matrices, even though it is possible to demonstrate that, in theory, there is a general formula. (Think for a minute about extending this result to just $3\times 3$ matrices. For starters, we need 18 letters!) Instead, we will work column-by-column. Let us first work an example that will motivate the main theorem and remove some of the previous mystery.
-@endcol
-@slide
-@eg
-<b>Computing a matrix inverse</b>
-
-@newcol
-Consider
-\begin{align*}
-\displaystyle A=\begin{bmatrix}1&2&1&2&1\\
--2&-3&0&-5&-1\\
-1&1&0&2&1\\
--2&-3&-1&-3&-2\\
--1&-3&-1&-3&1\end{bmatrix}
-\end{align*}
-@col
-For its inverse, we desire a matrix $B$ so that $AB=I_{5}$. Emphasizing the structure of the columns and employing the definition of matrix multiplication Let $A$ be as defined in Example 3.
-\begin{align*}
-\displaystyle AB&\displaystyle=I_{5} \\
-\displaystyle A[\mathbf{B}_{1}|\mathbf{B}_{2}|\mathbf{B}_{3}|\mathbf{B}_{4}|\mathbf{B}_{5}]&\displaystyle=[\mathbf{e}_{1}|\mathbf{e}_{2}|\mathbf{e}_{3}|\mathbf{e}_{4}|\mathbf{e}_{5}] \\
-\displaystyle[A\mathbf{B}_{1}|A\mathbf{B}_{2}|A\mathbf{B}_{3}|A\mathbf{B}_{4}|A\mathbf{B}_{5}]&\displaystyle=[\mathbf{e}_{1}|\mathbf{e}_{2}|\mathbf{e}_{3}|\mathbf{e}_{4}|\mathbf{e}_{5}]
-\end{align*}
-@col
-Equating the matrices column-by-column we have
-\begin{align*}
-\displaystyle A\mathbf{B}_{1}&=\mathbf{e}_{1}&\displaystyle A\mathbf{B}_{2}&=\mathbf{e}_{2}&\displaystyle A\mathbf{B}_{3}&=\mathbf{e}_{3}&\displaystyle A\mathbf{B}_{4}&=\mathbf{e}_{4}&\displaystyle A\mathbf{B}_{5}&=\mathbf{e}_{5}.
-\end{align*}
-@col
-Since the matrix $B$ is what we are trying to compute, we can view each column, $\mathbf{B}_{i}$, as a column vector of unknowns. Then we have five systems of equations to solve, each with 5 equations in 5 variables. Notice that all 5 of these systems have the same coefficient matrix. We will now solve each system in turn,
-\begin{align*}
-\\
-\displaystyle\begin{bmatrix}1&2&1&2&1&1\\
--2&-3&0&-5&-1&0\\
-1&1&0&2&1&0\\
--2&-3&-1&-3&-2&0\\
--1&-3&-1&-3&1&0\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&0&0&-3\\
-0&\boxed{1}&0&0&0&0\\
-0&0&\boxed{1}&0&0&1\\
-0&0&0&\boxed{1}&0&1\\
-0&0&0&0&\boxed{1}&1\end{bmatrix};\mathbf{B}_{1}=\begin{bmatrix}-3\\
-0\\
-1\\
-1\\
-1\end{bmatrix} \\
-\\
-\displaystyle\begin{bmatrix}1&2&1&2&1&0\\
--2&-3&0&-5&-1&1\\
-1&1&0&2&1&0\\
--2&-3&-1&-3&-2&0\\
--1&-3&-1&-3&1&0\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&0&0&3\\
-0&\boxed{1}&0&0&0&-2\\
-0&0&\boxed{1}&0&0&2\\
-0&0&0&\boxed{1}&0&0\\
-0&0&0&0&\boxed{1}&-1\end{bmatrix};\mathbf{B}_{2}=\begin{bmatrix}3\\
--2\\
-2\\
-0\\
--1\end{bmatrix} \\
-\\
-\displaystyle\begin{bmatrix}1&2&1&2&1&0\\
--2&-3&0&-5&-1&0\\
-1&1&0&2&1&1\\
--2&-3&-1&-3&-2&0\\
--1&-3&-1&-3&1&0\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&0&0&6\\
-0&\boxed{1}&0&0&0&-5\\
-0&0&\boxed{1}&0&0&4\\
-0&0&0&\boxed{1}&0&1\\
-0&0&0&0&\boxed{1}&-2\end{bmatrix};\mathbf{B}_{3}=\begin{bmatrix}6\\
--5\\
-4\\
-1\\
--2\end{bmatrix} \\
-\\
-\displaystyle\begin{bmatrix}1&2&1&2&1&0\\
--2&-3&0&-5&-1&0\\
-1&1&0&2&1&0\\
--2&-3&-1&-3&-2&1\\
--1&-3&-1&-3&1&0\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&0&0&-1\\
-0&\boxed{1}&0&0&0&-1\\
-0&0&\boxed{1}&0&0&1\\
-0&0&0&\boxed{1}&0&1\\
-0&0&0&0&\boxed{1}&0\end{bmatrix};\mathbf{B}_{4}=\begin{bmatrix}-1\\
--1\\
-1\\
-1\\
-0\end{bmatrix} \\
-\\
-\displaystyle\begin{bmatrix}1&2&1&2&1&0\\
--2&-3&0&-5&-1&0\\
-1&1&0&2&1&0\\
--2&-3&-1&-3&-2&0\\
--1&-3&-1&-3&1&1\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&0&0&-2\\
-0&\boxed{1}&0&0&0&1\\
-0&0&\boxed{1}&0&0&-1\\
-0&0&0&\boxed{1}&0&0\\
-0&0&0&0&\boxed{1}&1\end{bmatrix};\mathbf{B}_{5}=\begin{bmatrix}-2\\
-1\\
--1\\
-0\\
-1\end{bmatrix}
-\end{align*}
-@col
-We can now collect our 5 solution vectors into the matrix $B$,
-\begin{align*}
-\displaystyle B=&\displaystyle[\mathbf{B}_{1}|\mathbf{B}_{2}|\mathbf{B}_{3}|\mathbf{B}_{4}|\mathbf{B}_{5}] \\
-\displaystyle=&\displaystyle\left[\begin{bmatrix}-3\\
-0\\
-1\\
-1\\
-1\end{bmatrix}\left\lvert\begin{bmatrix}3\\
--2\\
-2\\
-0\\
--1\end{bmatrix}\right.\left\lvert\begin{bmatrix}6\\
--5\\
-4\\
-1\\
--2\end{bmatrix}\right.\left\lvert\begin{bmatrix}-1\\
--1\\
-1\\
-1\\
-0\end{bmatrix}\right.\left\lvert\begin{bmatrix}-2\\
-1\\
--1\\
-0\\
-1\end{bmatrix}\right.\right] \\
-&\displaystyle=\begin{bmatrix}-3&3&6&-1&-2\\
-0&-2&-5&-1&1\\
-1&2&4&1&-1\\
-1&0&1&1&0\\
-1&-1&-2&0&1\end{bmatrix}
-\end{align*}
-@col
-By this method, we know that $AB=I_{5}$. Check that $BA=I_{5}$, and then we will know that we have the inverse of $A$.
-@endcol
-@end
-@eg
-<b>Computing a matrix inverse</b>
-
-@newcol
-Let
-\begin{align*}
-\displaystyle A=\left[\begin{array}[]{ccc}1&1&1\\
-1&0&-1\\
-0&1&1\\
-\end{array}\right].
-\end{align*}
-@col
-Suppose $B$ is the inverse of $A$ (at this point, we don’t know inverse exists or not).
-\begin{align*}
-\displaystyle AB=[A\mathbf{B}_{1}|A\mathbf{B}_{2}|A\mathbf{B}_{3}]=I_{3}=[\mathbf{e}_{1}|\mathbf{e}_{2}|\mathbf{e}_{3}]
-\end{align*}
-@col
-So
-\begin{align*}
-\displaystyle A\mathbf{B}_{i}=\mathbf{e}_{i}.
-\end{align*}
-@col
-Hence $\mathbf{B}_{i}$ is a solution of $A\mathbf{x}=\mathbf{e}_{i}$. The solution can be obtained RREF $[A|\mathbf{e}_{i}]$. To solve for $A\mathbf{x}=\mathbf{e}_{1}$:
-\begin{align*}
-\displaystyle [A|\mathbf{e}_{1}]=\left[\begin{array}[]{ccc|c}1&1&1&1\\
-1&0&-1&0\\
-0&1&1&0\\
-\end{array}\right]\xrightarrow{-1R_{1}+R_{2}}\left[\begin{array}[]{ccc|c}1&1&1&1\\
-0&-1&-2&-1\\
-0&1&1&0\\
-\end{array}\right]
-\end{align*}
-\begin{align*}
-\displaystyle \xrightarrow{R_{2}\leftrightarrow R_{3}}\left[\begin{array}[]{ccc|c}1&1&1&1\\
-0&1&1&0\\
-0&-1&-2&-1\\
-\end{array}\right]\xrightarrow{1R_{2}+R_{3}}\left[\begin{array}[]{ccc|c}1&1&1&1\\
-0&1&1&0\\
-0&0&-1&-1\\
-\end{array}\right]
-\end{align*}
-\begin{align*}
-\displaystyle \xrightarrow{-1R_{2}+R_{1}}\left[\begin{array}[]{ccc|c}1&0&0&1\\
-0&1&1&0\\
-0&0&-1&-1\\
-\end{array}\right]\xrightarrow{1R_{3}+R_{2},-1R_{3}}\left[\begin{array}[]{ccc|c}1&0&0&1\\
-0&1&0&-1\\
-0&0&1&1\\
-\end{array}\right]
-\end{align*}
-@col
-We can take $\mathbf{B}_{1}=\begin{bmatrix}1\\
--1\\
-1\end{bmatrix}$.
-
-@col
-Next we want to find solution of $A\mathbf{x}=\mathbf{e}_{2}$ by row reducing $[A|\mathbf{e}_{2}]$. Note that we can use the
-<strong>exact same row operations</strong>.
-\begin{align*}
-\displaystyle [A|\mathbf{e}_{2}]=\left[\begin{array}[]{ccc|c}1&1&1&0\\
-1&0&-1&1\\
-0&1&1&0\\
-\end{array}\right]\xrightarrow{-1R_{1}+R_{2}}\left[\begin{array}[]{ccc|c}1&1&1&0\\
-0&-1&-2&1\\
-0&1&1&0\\
-\end{array}\right]
-\end{align*}
-\begin{align*}
-\displaystyle \xrightarrow{R_{2}\leftrightarrow R_{3}}\left[\begin{array}[]{ccc|c}1&1&1&0\\
-0&1&1&0\\
-0&-1&-2&1\\
-\end{array}\right]\xrightarrow{1R_{2}+R_{3}}\left[\begin{array}[]{ccc|c}1&1&1&0\\
-0&1&1&0\\
-0&0&-1&1\\
-\end{array}\right]
-\end{align*}
-\begin{align*}
-\displaystyle \xrightarrow{-1R_{2}+R_{1}}\left[\begin{array}[]{ccc|c}1&0&0&0\\
-0&1&1&0\\
-0&0&-1&1\\
-\end{array}\right]\xrightarrow{1R_{3}+R_{2},-1R_{3}}\left[\begin{array}[]{ccc|c}1&0&0&0\\
-0&1&0&1\\
-0&0&1&-1\\
-\end{array}\right]
-\end{align*}
-@col
-We can take $\mathbf{B}_{2}=\begin{bmatrix}0\\
-1\\
--1\end{bmatrix}$.
-
-@col
-Next we want to find solution of $A\mathbf{x}=\mathbf{e}_{3}$ by row reducing $[A|\mathbf{e}_{3}]$. Again we can use the <strong>exact same row operations</strong>.
-\begin{align*}
-\displaystyle [A|\mathbf{e}_{3}]=\left[\begin{array}[]{ccc|c}1&1&1&0\\
-1&0&-1&0\\
-0&1&1&1\\
-\end{array}\right]\xrightarrow{-1R_{1}+R_{2}}\left[\begin{array}[]{ccc|c}1&1&1&0\\
-0&-1&-2&0\\
-0&1&1&1\\
-\end{array}\right]
-\end{align*}
-\begin{align*}
-\displaystyle \xrightarrow{R_{2}\leftrightarrow R_{3}}\left[\begin{array}[]{ccc|c}1&1&1&0\\
-0&1&1&1\\
-0&-1&-2&0\\
-\end{array}\right]\xrightarrow{1R_{2}+R_{3}}\left[\begin{array}[]{ccc|c}1&1&1&0\\
-0&1&1&1\\
-0&0&-1&1\\
-\end{array}\right]
-\end{align*}
-\begin{align*}
-\displaystyle \xrightarrow{-1R_{2}+R_{1}}\left[\begin{array}[]{ccc|c}1&0&0&-1\\
-0&1&1&1\\
-0&0&-1&1\\
-\end{array}\right]\xrightarrow{1R_{3}+R_{2},-1R_{3}}\left[\begin{array}[]{ccc|c}1&0&0&-1\\
-0&1&0&2\\
-0&0&1&-1\\
-\end{array}\right]
-\end{align*}
-@col
-We can take $\mathbf{B}_{1}=\begin{bmatrix}1\\
--1\\
-1\end{bmatrix}$.
-
-@col
-So
-\begin{align*}
-\displaystyle B=[\mathbf{B}_{1}|\mathbf{B}_{2}|\mathbf{B}_{3}]=\left[\begin{array}[]{ccc}1&0&-1\\
--1&1&2\\
-1&-1&-1\\
-\end{array}\right]
-\end{align*}
-@col
-And $AB=I_{3}$. We need to check $BA=I_{3}$ <strong>but later we will show that $BA=I_{3}$ follows from $AB=I_{3}$, so we don’t have to check it</strong>. 
-
-We see that we follows the exact same row operations for each case. We can combine all three cases into one. 
-
-<strong>Better method for finding inverse</strong>:
-
-@col
-\begin{align*}
-\displaystyle [A|\mathbf{e}_{1}|\mathbf{e}_{2}|\mathbf{e}_{3}]=\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
-1&0&-1&0&1&0\\
-0&1&1&0&0&1\\
-\end{array}\right]\xrightarrow{-1R_{1}+R_{2}}\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
-0&-1&-2&-1&1&0\\
-0&1&1&0&0&1\\
-\end{array}\right]
-\end{align*}
-\begin{align*}
-\displaystyle \xrightarrow{R_{2}\leftrightarrow R_{3}}\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
-0&1&1&0&0&1\\
-0&-1&-2&-1&1&0\\
-\end{array}\right]\xrightarrow{1R_{2}+R_{3}}\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
-0&1&1&0&0&1\\
-0&0&-1&-1&1&1\\
-\end{array}\right]
-\end{align*}
-\begin{align*}
-\displaystyle \xrightarrow{-1R_{2}+R_{1}}\left[\begin{array}[]{ccc|ccc}1&0&0&1&0&-1\\
-0&1&1&0&0&1\\
-0&0&-1&-1&1&1\\
-\end{array}\right]\xrightarrow{1R_{3}+R_{2},-1R_{3}}\left[\begin{array}[]{ccc|ccc}1&0&0&1&0&-1\\
-0&1&0&-1&1&2\\
-0&0&1&1&-1&-1\\
-\end{array}\right]
-\end{align*}
-@col
-So
-\begin{align*}
-\displaystyle B=[\mathbf{B}_{1}|\mathbf{B}_{2}|\mathbf{B}_{3}]=\left[\begin{array}[]{ccc}1&0&-1\\
--1&1&2\\
-1&-1&-1\\
-\end{array}\right]
-\end{align*}
-@endcol
-@end
-@slide
-@thm
-@title{Computing the Inverse of a Nonsingular Matrix}
-@label{CINM}
-Suppose $A$ is a nonsingular square matrix of size $n$. Create the $n\times 2n$ matrix $M$ by placing the $n\times n$ identity matrix $I_{n}$ to the right of the matrix $A$. Let $N$ be a matrix that is row-equivalent to $M$ and in reduced row-echelon form. Finally, let $J$ be the matrix formed from the final $n$ columns of $N$. Then $AJ=I_{n}$.
-@end
-@proof
-@newcol
-$A$ is nonsingular, there is a sequence of row operations that will convert $A$ into $I_{n}$. It is this same sequence of row operations that will convert $M$ into $N$, since having the identity matrix in the first $n$ columns of $N$ is sufficient to guarantee that $N$ is in reduced row-echelon form.
-
-@col
-If we consider the systems of linear equations, $A\mathbf{x}=\mathbf{e}_{i}$, $1\leq i\leq n$, we see that the aforementioned sequence of row operations will also bring the augmented matrix of each of these systems into reduced row-echelon form. Furthermore, the unique solution to $A\mathbf{x}=\mathbf{e}_{i}$ appears in column $n+1$ of the row-reduced augmented matrix of the system and is identical to column $n+i$ of $N$. Let $\mathbf{N}_{1},\,\mathbf{N}_{2},\,\mathbf{N}_{3},\,\ldots,\,\mathbf{N}_{2n}$ denote the columns of $N$. So we find,
-\begin{align*}
-\displaystyle AJ=&\displaystyle A[\mathbf{N}_{n+1}|\mathbf{N}_{n+2}|\mathbf{N}_{n+3}|\ldots|\mathbf{N}_{n+n}] \\
-\displaystyle=&\displaystyle[A\mathbf{N}_{n+1}|A\mathbf{N}_{n+2}|A\mathbf{N}_{n+3}|\ldots|A\mathbf{N}_{n+n}] \\
-\displaystyle=&\displaystyle[\mathbf{e}_{1}|\mathbf{e}_{2}|\mathbf{e}_{3}|\ldots|\mathbf{e}_{n}] \\
-\displaystyle=&\displaystyle I_{n}
-\end{align*}
-as desired.
-@qed
-@endcol
-@end
-@newcol
-We have to be just a bit careful here about both what this theorem says and what it does not say. If $A$ is a nonsingular matrix, then we are guaranteed a matrix $B$ such that $AB=I_{n}$, and the proof gives us a process for constructing $B$. However, the definition of the inverse of a matrix requires that $BA=I_{n}$ also. So at this juncture we must compute the matrix product in the <strong>opposite</strong> order before we claim $B$ as the inverse of $A$. However, we will soon see that this is always the case.
-
-@col
-What if $A$ is singular? At this point we only know that Theorem   @ref{CINM} cannot be applied. The question of $A$’s inverse is still open.
-We will solve it later.
-@endcol
-@slide
-@eg
-<b>Computing a matrix inverse</b>
-
-@newcol
-\begin{align*}
-\displaystyle B=&\displaystyle\begin{bmatrix}-7&-6&-12\\
-5&5&7\\
-1&0&4\end{bmatrix}. \\
-\\
-\displaystyle M=&\displaystyle\begin{bmatrix}-7&-6&-12&1&0&0\\
-5&5&7&0&1&0\\
-1&0&4&0&0&1\end{bmatrix}. \\
-\\
-\displaystyle N=&\displaystyle\begin{bmatrix}1&0&0&-10&-12&-9\\
-0&1&0&\frac{13}{2}&8&\frac{11}{2}\\
-0&0&1&\frac{5}{2}&3&\frac{5}{2}\end{bmatrix}. \\
-\\
-\displaystyle B^{-1}=&\displaystyle\begin{bmatrix}-10&-12&-9\\
-\frac{13}{2}&8&\frac{11}{2}\\
-\frac{5}{2}&3&\frac{5}{2}\end{bmatrix}.
-\end{align*}
-@endcol
-@end
-@section{Properties of Matrix Inverses}
-
-The inverse of a matrix enjoys some nice properties. We collect a few here. First, a matrix can have but one inverse.
-
-@slide
-@thm
-@title{Matrix Inverse is Unique}
-@label{MIU}
-Suppose the square matrix $A$ has an inverse. Then $A^{-1}$ is unique.
-@end
-@proof
-@newcol
-We will assume that $A$ has two inverses. The hypothesis tells there is at least one. Suppose then that $B$ and $C$ are both inverses for $A$.
-Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
-\begin{align*}
-\displaystyle B&\displaystyle=BI_{n} \\
-&\displaystyle=B(AC) \\
-&\displaystyle=(BA)C \\
-&\displaystyle=I_{n}C \\
-&\displaystyle=C
-\end{align*}
-@col
-So we conclude that $B$ and $C$ are the same, and cannot be different. So any matrix that acts like an inverse, must be the inverse.
-@qed
-@endcol
-@end
-@newcol
-When most of us dress in the morning, we put on our socks first, followed by our shoes. In the evening we must then first remove our shoes, followed by our socks. Try to connect the conclusion of the following theorem with this everyday example.
-
-@endcol
-@slide
-@thm
-@title{Socks and Shoes}
-@label{SS}
-Suppose $A$ and $B$ are invertible matrices of size $n$. Then $AB$ is an invertible matrix and $(AB)^{-1}=B^{-1}A^{-1}$.
-@end
-@proof
-@newcol
-\begin{align*}
-\displaystyle(B^{-1}A^{-1})(AB)&\displaystyle=B^{-1}(A^{-1}A)B \\
-&\displaystyle=B^{-1}I_{n}B \\
-&\displaystyle=B^{-1}B \\
-&\displaystyle=I_{n} \\
-\\
-\displaystyle(AB)(B^{-1}A^{-1})&\displaystyle=A(BB^{-1})A^{-1} \\
-&\displaystyle=AI_{n}A^{-1} \\
-&\displaystyle=AA^{-1} \\
-&\displaystyle=I_{n}
-\end{align*}
-@col
-So the matrix $B^{-1}A^{-1}$ has met all of the requirements to be $AB$’s inverse (date) and with the ensuing marriage proposal we can announce that $(AB)^{-1}=B^{-1}A^{-1}$.
-@qed
-@endcol
-@end
-@slide
-@thm
-@title{Matrix Inverse of a Matrix Inverse}
-@label{MIMI}
-Suppose $A$ is an invertible matrix. Then $A^{-1}$ is invertible and $(A^{-1})^{-1}=A$.
-@end
-@proof
-@newcol
-As with the proof of of the previous example, we examine if $A$ is a suitable inverse for $A^{-1}$ (by definition, the opposite is true).
-\begin{align*}
-\displaystyle AA^{-1}&\displaystyle=I_{n} \\
-\\
-\displaystyle A^{-1}A&\displaystyle=I_{n}
-\end{align*}
-@col
-The matrix $A$ has met all the requirements to be the inverse of $A^{-1}$, and so is invertible and we can write $A=(A^{-1})^{-1}$.
-@qed
-@endcol
-@end
-@slide
-@thm
-@title{Matrix Inverse of a Transpose}
-@label{MIT}
-Suppose $A$ is an invertible matrix. Then $A^{t}$ is invertible and $(A^{t})^{-1}=(A^{-1})^{t}$.
-@end
-@proof
-@newcol
-As with the proof of Theorem   @ref{SS}, we see if $(A^{-1})^{t}$ is a suitable inverse for $A^{t}$.
-\begin{align*}
-\displaystyle(A^{-1})^{t}A^{t}&\displaystyle=(AA^{-1})^{t} \\
-&\displaystyle=I_{n}^{t} \\
-&\displaystyle=I_{n} \\
-\\
-\displaystyle A^{t}(A^{-1})^{t}&\displaystyle=(A^{-1}A)^{t} \\
-&\displaystyle=I_{n}^{t} \\
-&\displaystyle=I_{n}
-\end{align*}
-@col
-The matrix $(A^{-1})^{t}$ has met all the requirements to be the inverse of $A^{t}$, and so is invertible and we can write $(A^{t})^{-1}=(A^{-1})^{t}$.
-@qed
-@endcol
-@end
-@slide
-@thm
-@title{Matrix Inverse of a Scalar Multiple}
-@label{MISM}
-Suppose $A$ is an invertible matrix and $\alpha$ is a nonzero scalar. Then $\left(\alpha A\right)^{-1}=\frac{1}{\alpha}A^{-1}$ and $\alpha A$ is invertible.
-@end
-@proof
-@newcol
-As with the proof of Theorem   @ref{SS}, we see if $\frac{1}{\alpha}A^{-1}$ is a suitable inverse for $\alpha A$.
-\begin{align*}
-\displaystyle\left(\frac{1}{\alpha}A^{-1}\right)\left(\alpha A\right)&\displaystyle=\left(\frac{1}{\alpha}\alpha\right)\left(A^{-1}A\right) \\
-&\displaystyle=1I_{n} \\
-&\displaystyle=I_{n} \\
-\\
-\displaystyle\left(\alpha A\right)\left(\frac{1}{\alpha}A^{-1}\right)&\displaystyle=\left(\alpha\frac{1}{\alpha}\right)\left(AA^{-1}\right) \\
-&\displaystyle=1I_{n} \\
-&\displaystyle=I_{n}
-\end{align*}
-@col
-The matrix $\frac{1}{\alpha}A^{-1}$ has met all the requirements to be the inverse of $\alpha A$, so we can write $\left(\alpha A\right)^{-1}=\frac{1}{\alpha}A^{-1}$.
-@qed
-@endcol
-@end
-@newcol
-Notice that there are some likely theorems that are missing here. For example, it would be tempting to think that $(A+B)^{-1}=A^{-1}+B^{-1}$, but this is false. Can you find a counterexample?
-
 @endcol
 @section{Nonsingular Matrices are Invertible}
 @label{NMI}
@@ -812,17 +315,13 @@ Suppose that $A$ and $B$ are square matrices of size $n$. The product $AB$ is no
 @end
 @proof
 @newcol
-($\Rightarrow$) For this portion of the proof we will form the logically-equivalent contrapositive and prove that statement using two cases. 
+($\Rightarrow$) For this portion of the proof we will form the logically-equivalent contrapositive and prove that statement using two cases.
 
-<blockquote>
-$AB$ is nonsingular implies $A$ and $B$ are both nonsingular.
-</blockquote> 
-becomes 
+<blockquote> $AB$ is nonsingular implies $A$ and $B$ are both nonsingular. </blockquote>
+becomes
 
 @col
-<blockquote>
-$A$ or $B$ is singular implies $AB$ is singular.
-</blockquote>
+<blockquote> $A$ or $B$ is singular implies $AB$ is singular. </blockquote>
 
 @col
 Case 1. Suppose $B$ is singular. Then there is a nonzero vector $\mathbf{z}$ that is a solution to $B\mathbf{x}=\mathbf{0}$. So
@@ -869,34 +368,30 @@ The contrapositive of this entire result is equally interesting. It says that $A
 @label{OSIS}
 Suppose $A$ and $B$ are square matrices of size $n$ such that $AB=I_{n}$. Then $BA=I_{n}$.
 @end
+
 @proof
+The matrix $I_{n}$ is nonsingular. So by @ref{NPNT} $A$ is nonsingular.
+
 @newcol
-The matrix $I_{n}$ is nonsingular. So $A$ and $B$ are nonsingular by, so in particular $B$ is nonsingular. We can therefore apply Theorem   @ref{CINM} to assert the existence of a matrix $C$ so that $BC=I_{n}$.
-$B$ is nonsingular, so there must be a <b>right-inverse</b> for $B$, and we are calling it $C$.
-
+Hence, $A$ is row equivalent to the identity matrix $I_n$,
+which means there are elementary matrices $J_1, J_2, \ldots, J_k$ such that:
+\[
+J_k\cdots J_2 J_1 A = I_n.
+\]
 @col
-Now
-\begin{align*}
-\displaystyle BA&\displaystyle=(BA)I_{n} \\
-&\displaystyle=(BA)(BC) \\
-&\displaystyle=B(AB)C \\
-&\displaystyle=BI_{n}C \\
-&\displaystyle=BC \\
-&\displaystyle=I_{n}
-\end{align*}
-which is the desired conclusion.
-
+Hence, $AB = I_n$ implies that:
+\[
+\underbrace{J_k\cdots J_2 J_1 A}_{I_n} B = \underbrace{J_k\cdots J_2 J_1 I_n}_{J_k\cdots J_2 J_1}
+\]
+@col
+So, $B = J_k\cdots J_2 J_1$, and:
+\[
+BA = J_k\cdots J_2 J_1 A = I_n
+\]
 @qed
 @endcol
 @end
-@newcol
-So above theorem tells us that if $A$ is nonsingular, then the matrix $B$ guaranteed by Theorem   @ref{CINM} will be both a <b>right-inverse</b> and a <b>left-inverse</b> for $A$, so $A$ is invertible and $A^{-1}=B$.
 
-@col
-So if you have a nonsingular matrix, $A$, you can use the procedure described in Theorem   @ref{CINM} to find an inverse for $A$. If $A$ is singular, then the procedure in Theorem   @ref{CINM} will fail as the first $n$ columns of $M$ will not row-reduce to the identity matrix. However, we can say a bit more. When $A$ is singular, then $A$ does not have an inverse (which is very different from saying that the procedure in Theorem   @ref{CINM} fails to find an inverse).
-This may feel like we are splitting hairs, but it is important that we do not make unfounded assumptions. These observations motivate the next theorem.
-
-@endcol
 @slide
 @thm
 @title{Nonsingularity is Invertibility}
@@ -905,17 +400,169 @@ Suppose that $A$ is a square matrix. Then $A$ is nonsingular if and only if $A$ 
 @end
 @proof
 @newcol
-($\Leftarrow$) Since $A$ is invertible, we can write $I_{n}=AA^{-1}$. Notice that $I_{n}$ is nonsingular, so Theorem   @ref{NPNT} implies that $A$ (and $A^{-1}$) is nonsingular.
+($\Leftarrow$)
+Suppose $A$ is invertible.
+Then, $A\vect{x} = \vect{0}$ if and only if :
+\[
+\underbrace{A^{-1}A\vect{x}}_{\vect{x}} = A^{-1}\vect{0} = \vect{0}.
+\]
+This implies that the homogeneous linear system $\mathcal{LS}(A, \vect{0})$
+only exactly one unique solution $\vect{x} = \vect{0}$.
+Hence, $A$ is nonsingular.
 
-($\Rightarrow$) Suppose now that $A$ is nonsingular. By Theorem   @ref{CINM} we find $B$ so that $AB=I_{n}$. Then Theorem   @ref{OSIS} tells us that $BA=I_{n}$. So $B$ is $A$’s inverse, and by construction, $A$ is invertible.
-
+@col
+($\Rightarrow$)
+Suppose $A$ is a nonsingular $n \times n$ matrix.
+Then, $A$ is row-equivalent to $I_n$,
+which means there are elementary matrices $J_1, J_2, \ldots, J_k$ such that:
+\[
+J_k\cdots J_2 J_1 A = I_n
+\]
+It now follows from @ref{OSIS} that $A$ is invertible, with:
+\[
+A^{-1} =  J_k\cdots J_2 J_1.
+\]
 @qed
 @endcol
 @end
+@remark
 @newcol
 So for a square matrix, the properties of having an inverse and of having a trivial null space are one and the same. Cannot have one without the other.
-
 @endcol
+@end
+@section{Computing the Inverse of a Matrix}
+@thm
+@title{Computing the Inverse of a Nonsingular Matrix}
+@label{CINM}
+Suppose $A$ is a nonsingular square matrix of size $n$. Create the $n\times 2n$ matrix $M$ by placing the $n\times n$ identity matrix $I_{n}$ to the right of the matrix $A$. Let $N$ be a matrix that is row-equivalent to $M$ and in reduced row-echelon form. Finally, let $J$ be the matrix formed from the final $n$ columns of $N$. Then $JA = AJ=I_{n}$. Hence, $A^{-1} = J$.
+@end
+@remark
+@newcol
+Observe this procedure also allows one to see whether a given matrix $A$ in nonsingular.
+@endcol
+@end
+@proof
+@skip
+@newcol
+Since $A$ is nonsingular, there exist a sequence of row operations $R_1, R_2, \ldots R_k$
+such that:
+\[
+A \xrightarrow{R_1}\cdots \xrightarrow{R_2} \cdots \xrightarrow{R_k} I_n
+\]
+Recall that each row operation $R_i$ corresponds to multiplcation by an elementary matrix $J_i$
+from the left, that is:
+\[
+A \xrightarrow{R_1} J_1A \xrightarrow{R_2} J_2J_1 A \xrightarrow{R_3} \cdots \xrightarrow{R_k} J_k\cdots J_2J_1 A = I_n.
+\]
+@newcol
+Start with the augmented matrix:
+\[
+[A | I_n]
+\]
+@col
+Applying the row operation $R_1$ to the matrix above is equivalent to:
+\[
+J_1 [A | I_n] = [J_1 A | J_1 I_n] = [J_1 A | J_1]
+\]
+@col
+Further applying the row operation $R_2$ gives:
+\[
+J_2[J_1 A | J_1 I_n] = [J_2 J_1 A | J_2J_1]
+\]
+@col
+Applying the rest of the row operations which reduce $A$ to $I_n$, we have:
+\[
+[\underbrace{J_k \cdots J_2 J_1 A}_{I_n} | \underbrace{J_k \cdots J_2J_1}_{J = A^{-1}}]
+\]
+@endcol
+@endcol
+@end
+@slide
+@eg
+@title{Computing a matrix inverse}
+Let
+\begin{align*}
+\displaystyle A=\left[\begin{array}[]{ccc}1&1&1\\
+1&0&-1\\
+0&1&1\\
+\end{array}\right].
+\end{align*}
+Find $A^{-1}$.
+
+@newcol
+\begin{align*}
+\displaystyle [A|I_3]=\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
+1&0&-1&0&1&0\\
+0&1&1&0&0&1\\
+\end{array}\right]\xrightarrow{-1R_{1}+R_{2}}\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
+0&-1&-2&-1&1&0\\
+0&1&1&0&0&1\\
+\end{array}\right]
+\end{align*}
+@col
+\begin{align*}
+\displaystyle \xrightarrow{R_{2}\leftrightarrow R_{3}}\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
+0&1&1&0&0&1\\
+0&-1&-2&-1&1&0\\
+\end{array}\right]\xrightarrow{1R_{2}+R_{3}}\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
+0&1&1&0&0&1\\
+0&0&-1&-1&1&1\\
+\end{array}\right]
+\end{align*}
+@col
+\begin{align*}
+\displaystyle \xrightarrow{-1R_{2}+R_{1}}\left[\begin{array}[]{ccc|ccc}1&0&0&1&0&-1\\
+0&1&1&0&0&1\\
+0&0&-1&-1&1&1\\
+\end{array}\right]\xrightarrow{1R_{3}+R_{2},-1R_{3}}\left[\begin{array}[]{ccc|ccc}1&0&0&1&0&-1\\
+0&1&0&-1&1&2\\
+0&0&1&1&-1&-1\\
+\end{array}\right]
+\end{align*}
+@col
+So
+\begin{align*}
+\displaystyle B=[\mathbf{B}_{1}|\mathbf{B}_{2}|\mathbf{B}_{3}]=\left[\begin{array}[]{ccc}1&0&-1\\
+-1&1&2\\
+1&-1&-1\\
+\end{array}\right]
+\end{align*}
+@endcol
+@end
+
+@slide
+@eg
+@title{Computing a matrix inverse}
+Let
+\[
+\displaystyle B=\displaystyle\begin{bmatrix}-7&-6&-12\\
+5&5&7\\
+1&0&4\end{bmatrix}.
+\]
+Find $B^{-1}$.
+
+@newcol
+\begin{align*}
+\displaystyle M=&\displaystyle
+\left[\begin{array}{ccc|ccc}-7&-6&-12&1&0&0\\
+5&5&7&0&1&0\\
+1&0&4&0&0&1\end{array}\right].
+\end{align*}
+@col
+\[
+\displaystyle \xrightarrow{\text{RREF}}
+\displaystyle\left[\begin{array}{ccc|ccc}1&0&0&-10&-12&-9\\
+0&1&0&\frac{13}{2}&8&\frac{11}{2}\\
+0&0&1&\frac{5}{2}&3&\frac{5}{2}\end{array}\right]
+\]
+@col
+\[
+\displaystyle B^{-1}=\displaystyle\begin{bmatrix}-10&-12&-9\\
+\frac{13}{2}&8&\frac{11}{2}\\
+\frac{5}{2}&3&\frac{5}{2}\end{bmatrix}.
+\]
+@endcol
+@end
 @slide
 @thm
 @title{Nonsingular Matrix Equivalences, Round 3}
@@ -923,31 +570,15 @@ So for a square matrix, the properties of having an inverse and of having a triv
 Suppose that $A$ is a square matrix of size $n$. The following are equivalent.
 
 <ol class="ltx_enumerate">
-<li class="ltx_item">
-$A$ is nonsingular.
-</li>
-<li class="ltx_item">
-$A$ row-reduces to the identity matrix.
-</li>
-<li class="ltx_item">
-The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$.
-</li>
-<li class="ltx_item">
-The linear system $A\mathbf{x}=\mathbf{b}$ has a unique solution for every possible choice of $\mathbf{b}$.
-</li>
-<li class="ltx_item">
-The columns of $A$ are a linearly independent set.
-</li>
-<li class="ltx_item">
-$A$ is invertible.
-</li>
+<li class="ltx_item"> $A$ is nonsingular. </li>
+<li class="ltx_item"> $A$ row-reduces to the identity matrix. </li>
+<li class="ltx_item"> The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$. </li>
+<li class="ltx_item"> The linear system $A\mathbf{x}=\mathbf{b}$ has a unique solution for every possible choice of $\mathbf{b}$. </li>
+<li class="ltx_item"> The columns of $A$ are a linearly independent set. </li>
+<li class="ltx_item"> $A$ is invertible. </li>
 
 </ol>
 @end
-@newcol
-In the case that $A$ is a nonsingular coefficient matrix of a system of equations, the inverse allows us to very quickly compute the unique solution, for any vector of constants.
-
-@endcol
 @slide
 @thm
 @title{Solution with Nonsingular Coefficient Matrix}
@@ -1009,3 +640,123 @@ x_{4}\end{bmatrix}=A^{-1}\begin{bmatrix}1\\
 \end{align*}
 @endcol
 @end
+@section{Properties of Matrix Inverses}
+@thm
+@title{Matrix Inverse is Unique}
+@label{MIU}
+Suppose the square matrix $A$ has an inverse. Then $A^{-1}$ is unique.
+@end
+@proof
+@newcol
+We will assume that $A$ has two inverses. The hypothesis tells there is at least one. Suppose then that $B$ and $C$ are both inverses for $A$.
+Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
+\begin{align*}
+\displaystyle B&\displaystyle=BI_{n} \\
+&\displaystyle=B(AC) \\
+&\displaystyle=(BA)C \\
+&\displaystyle=I_{n}C \\
+&\displaystyle=C
+\end{align*}
+@col
+So we conclude that $B$ and $C$ are the same, and cannot be different. So any matrix that acts like an inverse, must be the inverse.
+@qed
+@endcol
+@end
+
+@slide
+When most of us dress in the morning, we put on our socks first, followed by our shoes. In the evening we must then first remove our shoes, followed by our socks. Try to connect the conclusion of the following theorem with this everyday example.
+@thm
+@title{Socks and Shoes}
+@label{SS}
+Suppose $A$ and $B$ are invertible matrices of size $n$. Then $AB$ is an invertible matrix and $(AB)^{-1}=B^{-1}A^{-1}$.
+@end
+@proof
+@skip
+@newcol
+\begin{align*}
+\displaystyle(B^{-1}A^{-1})(AB)&\displaystyle=B^{-1}(A^{-1}A)B \\
+&\displaystyle=B^{-1}I_{n}B \\
+&\displaystyle=B^{-1}B \\
+&\displaystyle=I_{n} \\
+\\
+\displaystyle(AB)(B^{-1}A^{-1})&\displaystyle=A(BB^{-1})A^{-1} \\
+&\displaystyle=AI_{n}A^{-1} \\
+&\displaystyle=AA^{-1} \\
+&\displaystyle=I_{n}
+\end{align*}
+@col
+So the matrix $B^{-1}A^{-1}$ has met all of the requirements to be $AB$’s inverse (date) and with the ensuing marriage proposal we can announce that $(AB)^{-1}=B^{-1}A^{-1}$.
+@qed
+@endcol
+@end
+@slide
+@thm
+@title{Matrix Inverse of a Matrix Inverse}
+@label{MIMI}
+Suppose $A$ is an invertible matrix. Then $A^{-1}$ is invertible and $(A^{-1})^{-1}=A$.
+@end
+@proof
+@skip
+@newcol
+As with the proof of of the previous example, we examine if $A$ is a suitable inverse for $A^{-1}$ (by definition, the opposite is true).
+\begin{align*}
+\displaystyle AA^{-1}&\displaystyle=I_{n} \\
+\\
+\displaystyle A^{-1}A&\displaystyle=I_{n}
+\end{align*}
+@col
+The matrix $A$ has met all the requirements to be the inverse of $A^{-1}$, and so is invertible and we can write $A=(A^{-1})^{-1}$.
+@qed
+@endcol
+@end
+@slide
+@thm
+@title{Matrix Inverse of a Transpose}
+@label{MIT}
+Suppose $A$ is an invertible matrix. Then $A^{t}$ is invertible and $(A^{t})^{-1}=(A^{-1})^{t}$.
+@end
+@proof
+@skip
+@newcol
+As with the proof of Theorem   @ref{SS}, we see if $(A^{-1})^{t}$ is a suitable inverse for $A^{t}$.
+\begin{align*}
+\displaystyle(A^{-1})^{t}A^{t}&\displaystyle=(AA^{-1})^{t} \\
+&\displaystyle=I_{n}^{t} \\
+&\displaystyle=I_{n} \\
+\\
+\displaystyle A^{t}(A^{-1})^{t}&\displaystyle=(A^{-1}A)^{t} \\
+&\displaystyle=I_{n}^{t} \\
+&\displaystyle=I_{n}
+\end{align*}
+@col
+The matrix $(A^{-1})^{t}$ has met all the requirements to be the inverse of $A^{t}$, and so is invertible and we can write $(A^{t})^{-1}=(A^{-1})^{t}$.
+@qed
+@endcol
+@end
+@slide
+@thm
+@title{Matrix Inverse of a Scalar Multiple}
+@label{MISM}
+Suppose $A$ is an invertible matrix and $\alpha$ is a nonzero scalar. Then $\left(\alpha A\right)^{-1}=\frac{1}{\alpha}A^{-1}$ and $\alpha A$ is invertible.
+@end
+@proof
+@newcol
+As with the proof of Theorem   @ref{SS}, we see if $\frac{1}{\alpha}A^{-1}$ is a suitable inverse for $\alpha A$.
+\begin{align*}
+\displaystyle\left(\frac{1}{\alpha}A^{-1}\right)\left(\alpha A\right)&\displaystyle=\left(\frac{1}{\alpha}\alpha\right)\left(A^{-1}A\right) \\
+&\displaystyle=1I_{n} \\
+&\displaystyle=I_{n} \\
+\\
+\displaystyle\left(\alpha A\right)\left(\frac{1}{\alpha}A^{-1}\right)&\displaystyle=\left(\alpha\frac{1}{\alpha}\right)\left(AA^{-1}\right) \\
+&\displaystyle=1I_{n} \\
+&\displaystyle=I_{n}
+\end{align*}
+@col
+The matrix $\frac{1}{\alpha}A^{-1}$ has met all the requirements to be the inverse of $\alpha A$, so we can write $\left(\alpha A\right)^{-1}=\frac{1}{\alpha}A^{-1}$.
+@qed
+@endcol
+@end
+@newcol
+It would be tempting, for example, to think that $(A+B)^{-1}=A^{-1}+B^{-1}$, but this is false. Can you find a counterexample?
+
+@endcol

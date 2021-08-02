@@ -2,6 +2,21 @@
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="Math 1030">
     <keywords slide="all" environ="course" chapter="" course="Math 1030">
+      <keyword chapter="" slide="all">Zero row</keyword>
+      <keyword chapter="" slide="all">Leftmost nonzero entry of a row</keyword>
+      <keyword chapter="" slide="all">Index of the leftmost nonzero entry of a row</keyword>
+      <keyword chapter="" slide="all">reduced row echelon form</keyword>
+      <keyword chapter="" slide="all">pivot column</keyword>
+      <keyword chapter="" slide="all">reduced row-echelon form</keyword>
+      <keyword chapter="" slide="all">zero row</keyword>
+      <keyword chapter="" slide="all">leading 1</keyword>
+      <keyword chapter="" slide="all">pivot column</keyword>
+      <keyword chapter="" slide="all">not RREF</keyword>
+      <keyword chapter="" slide="all">Gaussian elimination</keyword>
+      <keyword chapter="" slide="all">Gauss-Jordan elimination</keyword>
+      <keyword chapter="" slide="all">free</keyword>
+      <keyword chapter="" slide="all">independent</keyword>
+      <keyword chapter="" slide="all">no solutions</keyword>
       <keyword chapter="" slide="all">Reduced Row-Echelon Form</keyword>
       <keyword chapter="" slide="all">Row-Equivalent Matrix in Echelon Form</keyword>
       <keyword chapter="" slide="all">Reduced Row-Echelon Form is Unique</keyword>
@@ -16,6 +31,21 @@
     </slides>
     <chapter environment="" chapter_type="Chapter" type="Chapter" wbtag="chapter" num="6" title="Reduced Row Echelon Forms" course="Math 1030" serial="6">
       <keywords slide="all" environ="chapter" chapter="6" course="Math 1030">
+        <keyword chapter="6" slide="all">Zero row</keyword>
+        <keyword chapter="6" slide="all">Leftmost nonzero entry of a row</keyword>
+        <keyword chapter="6" slide="all">Index of the leftmost nonzero entry of a row</keyword>
+        <keyword chapter="6" slide="all">reduced row echelon form</keyword>
+        <keyword chapter="6" slide="all">pivot column</keyword>
+        <keyword chapter="6" slide="all">reduced row-echelon form</keyword>
+        <keyword chapter="6" slide="all">zero row</keyword>
+        <keyword chapter="6" slide="all">leading 1</keyword>
+        <keyword chapter="6" slide="all">pivot column</keyword>
+        <keyword chapter="6" slide="all">not RREF</keyword>
+        <keyword chapter="6" slide="all">Gaussian elimination</keyword>
+        <keyword chapter="6" slide="all">Gauss-Jordan elimination</keyword>
+        <keyword chapter="6" slide="all">free</keyword>
+        <keyword chapter="6" slide="all">independent</keyword>
+        <keyword chapter="6" slide="all">no solutions</keyword>
         <keyword chapter="6" slide="all">Reduced Row-Echelon Form</keyword>
         <keyword chapter="6" slide="all">Row-Equivalent Matrix in Echelon Form</keyword>
         <keyword chapter="6" slide="all">Reduced Row-Echelon Form is Unique</keyword>
@@ -40,46 +70,40 @@ Section SSLE (p.1-6) C30-34, C50, M30, T20. Sect RREF (p.6-13) C10-19, C31-33, M
       </slides>
       <section environment="" chapter_type="" type="Section" wbtag="section" title="Reduced Row Echelon Form" course="Math 1030" chapter="6" num="1" serial="6.1">
         <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="6" section="1" subsection="" subsubsection="" serial="6.1" slide="">
-          <newline course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="title"/>
           <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Reduced Row Echelon Form</paragraphs>
-          <newline course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="title"/>
         </title>
         <slides environment="" chapter_type="">
           <slide environment="" chapter_type="Chapter" canon_num="3" scope="section" id="s3" slide="3" course="Math 1030" chapter="6" section="1" subsection="" subsubsection="" chapter_title="Reduced Row Echelon Forms" section_title="Reduced Row Echelon Form">
-            <keywords slide="3" environ="slide" chapter="6" course="Math 1030"/>
+            <keywords slide="3" environ="slide" chapter="6" course="Math 1030">
+              <keyword chapter="6" slide="3">Zero row</keyword>
+              <keyword chapter="6" slide="3">Leftmost nonzero entry of a row</keyword>
+              <keyword chapter="6" slide="3">Index of the leftmost nonzero entry of a row</keyword>
+            </keywords>
             <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="Math 1030" chapter="6" section="1" subsection="" subsubsection="" serial="" slide="3">
-              <newline course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="title"/>
               <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Reduced Row Echelon Form</paragraphs>
-              <newline course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="title"/>
             </title>
             <strong xmlns="http://www.w3.org/1999/xhtml" environment="">
               <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs">Terminology</paragraphs>
             </strong>
-            <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs">:  </paragraphs>
+            <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs">: </paragraphs>
             <col_ul course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ul" wbtag="col_ul">
               <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ul" wbtag="col_li">
-                <b xmlns="http://www.w3.org/1999/xhtml" environment="col_ul">
-                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ul" wbtag="paragraphs">Zero row</paragraphs>
-                </b>
-                <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ul" wbtag="paragraphs">: A row consisting only of $0$'s.  </paragraphs>
+                <inline_keyword course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ul">Zero row</inline_keyword>
+                <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ul" wbtag="paragraphs">: A row consisting only of $0$'s. </paragraphs>
               </col_li>
               <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ul" wbtag="col_li">
-                <b xmlns="http://www.w3.org/1999/xhtml" environment="col_ul">
-                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ul" wbtag="paragraphs">Leftmost nonzero entry of a row</paragraphs>
-                </b>
+                <inline_keyword course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ul">Leftmost nonzero entry of a row</inline_keyword>
                 <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ul" wbtag="paragraphs">: The first nonzero entry of a row. </paragraphs>
               </col_li>
               <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ul" wbtag="col_li">
-                <b xmlns="http://www.w3.org/1999/xhtml" environment="col_ul">
-                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ul" wbtag="paragraphs">Index of the leftmost nonzero entry of a row</paragraphs>
-                </b>
-                <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ul" wbtag="paragraphs">: The column index of the first nonzero entry in the row.  </paragraphs>
+                <inline_keyword course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ul">Index of the leftmost nonzero entry of a row</inline_keyword>
+                <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ul" wbtag="paragraphs">: The column index of the first nonzero entry in the row. </paragraphs>
               </col_li>
             </col_ul>
             <strong xmlns="http://www.w3.org/1999/xhtml" environment="">
               <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs">Notation</paragraphs>
             </strong>
-            <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs">:  </paragraphs>
+            <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs">: </paragraphs>
             <newcol course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
               <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Denote by $d_{i}$ the index of leftmost nonzero entry of row $i$. </paragraphs>
             </newcol>
@@ -109,11 +133,12 @@ The index of the leftmost nonzero entry of row 1 is $d_{1}=1$. The index of the 
             </statement>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="5" id="s5" slide="5" course="Math 1030" chapter="6" section="1" subsection="" subsubsection="" chapter_title="Reduced Row Echelon Forms" section_title="Reduced Row Echelon Form">
-            <keywords slide="5" environ="slide" chapter="6" course="Math 1030"/>
+            <keywords slide="5" environ="slide" chapter="6" course="Math 1030">
+              <keyword chapter="6" slide="5">reduced row echelon form</keyword>
+              <keyword chapter="6" slide="5">pivot column</keyword>
+            </keywords>
             <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs"> A matrix is said to be in </paragraphs>
-            <b xmlns="http://www.w3.org/1999/xhtml" environment="">
-              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs">reduced row echelon form</paragraphs>
-            </b>
+            <inline_keyword course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="">reduced row echelon form</inline_keyword>
             <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs"> if it looks like this
 ( $*$ means an arbitary number)
 \[\begin{bmatrix}1&amp;*&amp;\cdots&amp;0&amp;*&amp;\cdots&amp;0&amp;*&amp;\cdots\\
@@ -131,24 +156,24 @@ More precisely: </paragraphs>
               </col_li>
               <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
                 <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> The column that is at the edge a new step is call a </paragraphs>
-                <b xmlns="http://www.w3.org/1999/xhtml" environment="col_ol">
-                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs">pivot column</paragraphs>
-                </b>
+                <inline_keyword course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol">pivot column</inline_keyword>
                 <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs">. </paragraphs>
               </col_li>
             </col_ol>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="6" id="s6" slide="6" course="Math 1030" chapter="6" section="1" subsection="" subsubsection="" chapter_title="Reduced Row Echelon Forms" section_title="Reduced Row Echelon Form">
             <keywords slide="6" environ="slide" chapter="6" course="Math 1030">
+              <keyword chapter="6" slide="6">reduced row-echelon form</keyword>
+              <keyword chapter="6" slide="6">zero row</keyword>
+              <keyword chapter="6" slide="6">leading 1</keyword>
+              <keyword chapter="6" slide="6">pivot column</keyword>
               <keyword chapter="6" slide="6">Reduced Row-Echelon Form</keyword>
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="3" title="Reduced Row-Echelon Form" md5="90dfd77c5af6a4708ae7b0f09fa4a233" course="Math 1030" chapter="6" slide="6" item="6.3">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="6" section="1" subsection="" subsubsection="" serial="" slide="6">Reduced Row-Echelon Form</title>
-              <label course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="label" name="RREF" type="Definition"/>
+              <label wbtag="label" name="RREF" type="Definition"/>
               <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> A matrix is in </paragraphs>
-              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
-                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">reduced row-echelon form</paragraphs>
-              </b>
+              <inline_keyword course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">reduced row-echelon form</inline_keyword>
               <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> if it meets all of the following conditions: </paragraphs>
               <col_ol course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_ol">
                 <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
@@ -161,11 +186,11 @@ More precisely: </paragraphs>
                   <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> The leftmost nonzero entry of a row is the only nonzero entry in its column. </paragraphs>
                 </col_li>
                 <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
-                  <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> If $i &lt; j$ and both row $i$ and row $j$ are not zero rows, 
+                  <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> If $i &lt; j$ and both row $i$ and row $j$ are not zero rows,
 then $d_{i} &lt; d_{j}$, i.e.
 $d_{1},d_{2},\ldots$ are in ascending order. </paragraphs>
                   <br xmlns="http://www.w3.org/1999/xhtml" environment="col_ol"/>
-                  <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> In particular, 
+                  <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> In particular,
 all matrix entries below a leftmost nonzero entry must be equal to zero. </paragraphs>
                 </col_li>
               </col_ol>
@@ -175,36 +200,30 @@ all matrix entries below a leftmost nonzero entry must be equal to zero. </parag
             </strong>
             <newcol course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
               <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> A row of only zero entries is called a </paragraphs>
-              <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
-                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">zero row</paragraphs>
-              </b>
+              <inline_keyword course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol">zero row</inline_keyword>
               <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">.</paragraphs>
               <newline course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
               <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                 <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> In the case of a matrix in reduced row-echelon form,
 the leftmost nonzero entry of a nonzero row is a </paragraphs>
-                <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
-                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">leading 1</paragraphs>
-                </b>
+                <inline_keyword course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol">leading 1</inline_keyword>
                 <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">.</paragraphs>
                 <newline course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
                 <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> A column containing a leading 1 will be called a </paragraphs>
-                  <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
-                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">pivot column</paragraphs>
-                  </b>
+                  <inline_keyword course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol">pivot column</inline_keyword>
                   <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">.</paragraphs>
                   <newline course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
                   <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The number of nonzero rows will be denoted by $r$, 
-which is also equal to the number of leading 1’s and 
+                    <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The number of nonzero rows will be denoted by $r$,
+which is also equal to the number of leading 1’s and
 the number of pivot columns.</paragraphs>
                     <newline course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
                     <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The set of column indices for the pivot columns will be denoted by:
 \[
 D=\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\},
-\] 
+\]
 where:
 \[
 d_{1} &lt; d_{2} &lt; d_{3} &lt; \cdots &lt; d_{r}.
@@ -265,7 +284,7 @@ Column 1, 2, 3 are pivot columns, $r=3$, $D=\{1,2,3\}$, $d_{1}=1,d_{2}=2,d_{3}=3
 0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;3&amp;4\\
 0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}\]
 Column 2, 5, 7 are pivot columns. Note that column 3 is </paragraphs>
-                    <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                    <strong xmlns="http://www.w3.org/1999/xhtml" style="" environment="newcol">
                       <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">not</paragraphs>
                     </strong>
                     <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> a pivot column. $r=3$,
@@ -291,12 +310,12 @@ $F=\{2,\,3,\,4,\,7,\,8\}$, $f_{1}=2,f_{2}=3,f_{3}=4,f_{4}=7,f_{5}=8$. </paragrap
             </statement>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="8" id="s8" slide="8" course="Math 1030" chapter="6" section="1" subsection="" subsubsection="" chapter_title="Reduced Row Echelon Forms" section_title="Reduced Row Echelon Form">
-            <keywords slide="8" environ="slide" chapter="6" course="Math 1030"/>
+            <keywords slide="8" environ="slide" chapter="6" course="Math 1030">
+              <keyword chapter="6" slide="8">not RREF</keyword>
+            </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="5" md5="0787aa9141da97b23f92f0cfc64ca23b" course="Math 1030" chapter="6" slide="8" item="6.5">
               <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The following matrices are </paragraphs>
-              <b xmlns="http://www.w3.org/1999/xhtml" environment="statement">
-                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">not RREF</paragraphs>
-              </b>
+              <inline_keyword course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">not RREF</inline_keyword>
               <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">, explain why. </paragraphs>
               <enumerate course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="enumerate" wbtag="enumerate">
                 <item course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="enumerate" wbtag="item">
@@ -347,11 +366,13 @@ It fails condition 4: The index of the leftmost nonzero entry of row 1 is $d_{1}
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="9" id="s9" slide="9" course="Math 1030" chapter="6" section="1" subsection="" subsubsection="" chapter_title="Reduced Row Echelon Forms" section_title="Reduced Row Echelon Form">
             <keywords slide="9" environ="slide" chapter="6" course="Math 1030">
+              <keyword chapter="6" slide="9">Gaussian elimination</keyword>
+              <keyword chapter="6" slide="9">Gauss-Jordan elimination</keyword>
               <keyword chapter="6" slide="9">Row-Equivalent Matrix in Echelon Form</keyword>
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="6" title="Row-Equivalent Matrix in Echelon Form" md5="7330455b9d11f5e9938a0d2f8e6c5ebf" course="Math 1030" chapter="6" slide="9" item="6.6">
-              <label course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="label" name="thm:REMEF" type="Theorem"/>
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="6" section="1" subsection="" subsubsection="" serial="" slide="9">Row-Equivalent Matrix in Echelon Form</title>
+              <label wbtag="label" name="thm:REMEF" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is a matrix. Then there is a matrix $B$ such that: </paragraphs>
               <enumerate course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="enumerate" wbtag="enumerate">
                 <item course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="enumerate" wbtag="item">
@@ -362,70 +383,63 @@ It fails condition 4: The index of the leftmost nonzero entry of row 1 is $d_{1}
                 </item>
               </enumerate>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="16084019423d474b497febfdad5e98be" course="Math 1030" chapter="6" slide="9" of="7330455b9d11f5e9938a0d2f8e6c5ebf">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="af750cf88935c86c9e541c47492a3022" course="Math 1030" chapter="6" slide="9" of="7330455b9d11f5e9938a0d2f8e6c5ebf" of-src-course="Math 1030" of-src-chapter="6" of-src-slide="9" of-type="Theorem" of-item="6.6" of-src-filename="lec6.xml" ofmd5="7330455b9d11f5e9938a0d2f8e6c5ebf" of-serial="">
+              <of-title>Row-Equivalent Matrix in Echelon Form</of-title>
               <newcol course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> (Feel free skip the proof and look through the next example.)</paragraphs>
-                <newline course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
-                <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose that $A$ has $m$ rows and $n$ columns. 
-We will describe a process for converting $A$ into $B$ via row operations. 
+                <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose that $A$ has $m$ rows and $n$ columns.
+We will describe a process for converting $A$ into $B$ via row operations.
 This procedure is known as </paragraphs>
-                  <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
-                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Gaussian elimination</paragraphs>
-                  </b>
-                  <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> or sometimes called </paragraphs>
-                  <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
-                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Gauss-Jordan elimination</paragraphs>
-                  </b>
-                  <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. 
-Tracing through this procedure will be easier if you recognize that 
-$i$ refers to a row that is being converted, 
-$j$ refers to a column that is being converted, 
+                <inline_keyword course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol">Gaussian elimination</inline_keyword>
+                <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> or sometimes called </paragraphs>
+                <inline_keyword course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol">Gauss-Jordan elimination</inline_keyword>
+                <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">.
+Tracing through this procedure will be easier if you recognize that
+$i$ refers to a row that is being converted,
+$j$ refers to a column that is being converted,
 and $r$ keeps track of the number of nonzero rows. </paragraphs>
-                  <col_ol course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_ol">
-                    <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
-                      <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> Set $j=0$ and $r=0$. </paragraphs>
-                    </col_li>
-                    <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
-                      <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> Increase $j$ by 1. If $j$ now equals $n+1$, then stop. </paragraphs>
-                    </col_li>
-                    <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
-                      <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> Examine the entries of $A$ in column $j$ located in rows $r+1$ through $m$. If all of these entries are zero, then go to Step 2. </paragraphs>
-                    </col_li>
-                    <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
-                      <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> Choose a row from rows $r+1$ through $m$ with a nonzero entry in column $j$. Let $i$ denote the index for this row. </paragraphs>
-                    </col_li>
-                    <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
-                      <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> Increase $r$ by 1. </paragraphs>
-                    </col_li>
-                    <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
-                      <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> Use the first row operation to swap rows $i$ and $r$. </paragraphs>
-                    </col_li>
-                    <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
-                      <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> Use the second row operation to convert the entry in row $r$ and column $j$ to a 1. </paragraphs>
-                    </col_li>
-                    <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
-                      <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> Use the third row operation with row $r$ to convert every other entry of column $j$ to zero. </paragraphs>
-                    </col_li>
-                    <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
-                      <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> Go to Step 2. </paragraphs>
-                    </col_li>
-                  </col_ol>
-                  <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The result of this procedure is that the matrix $A$ is converted to a matrix in reduced row-echelon form, which we will refer to as $B$.
+                <col_ol course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_ol">
+                  <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> Set $j=0$ and $r=0$. </paragraphs>
+                  </col_li>
+                  <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> Increase $j$ by 1. If $j$ now equals $n+1$, then stop. </paragraphs>
+                  </col_li>
+                  <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> Examine the entries of $A$ in column $j$ located in rows $r+1$ through $m$. If all of these entries are zero, then go to Step 2. </paragraphs>
+                  </col_li>
+                  <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> Choose a row from rows $r+1$ through $m$ with a nonzero entry in column $j$. Let $i$ denote the index for this row. </paragraphs>
+                  </col_li>
+                  <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> Increase $r$ by 1. </paragraphs>
+                  </col_li>
+                  <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> Use the first row operation to swap rows $i$ and $r$. </paragraphs>
+                  </col_li>
+                  <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> Use the second row operation to convert the entry in row $r$ and column $j$ to a 1. </paragraphs>
+                  </col_li>
+                  <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> Use the third row operation with row $r$ to convert every other entry of column $j$ to zero. </paragraphs>
+                  </col_li>
+                  <col_li course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="col_li">
+                    <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> Go to Step 2. </paragraphs>
+                  </col_li>
+                </col_ol>
+                <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The result of this procedure is that the matrix $A$ is converted to a matrix in reduced row-echelon form, which we will refer to as $B$.
 he matrix is only converted through row operations (Steps 6, 7, 8), so $A$ and $B$ are row-equivalent.
 We need to now prove this claim by showing that the converted matrix has the requisite properties of Theorem                     </paragraphs>
-                  <ref environment="newcol" chapter_type="" label="RREF" wbtag="ref" course="Math 1030" chapter="6" slide="9" src-course="MATH 1030" src-chapter="6" src-slide="67" type="Definition" item="6.3" src-filename="lecs1-20.xml" md5="90dfd77c5af6a4708ae7b0f09fa4a233" class="lcref" serial="">
-                    <title>Reduced Row-Echelon Form</title>
-                  </ref>
-                  <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">.
+                <ref environment="newcol" chapter_type="" label="RREF" wbtag="ref" course="Math 1030" chapter="6" slide="9" referrer-type="Proof" referrer-md5="af750cf88935c86c9e541c47492a3022" src-course="Math 1030" src-chapter="6" src-slide="6" type="Definition" item="6.3" src-filename="lec6.xml" md5="90dfd77c5af6a4708ae7b0f09fa4a233" class="lcref" serial="">
+                  <title>Reduced Row-Echelon Form</title>
+                </ref>
+                <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">.
 We will skip the proof for now. See Beezer, Ver 3.5 (print version p23). </paragraphs>
-                </collapse>
               </newcol>
             </substatement>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="Math 1030" chapter="6" section="1" subsection="" subsubsection="" chapter_title="Reduced Row Echelon Forms" section_title="Reduced Row Echelon Form">
             <keywords slide="10" environ="slide" chapter="6" course="Math 1030"/>
-            <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs"> We will now run through some examples of using these definitions and theorems to solve some systems of equations. From now on, when we have a matrix in reduced row-echelon form, we will mark the leading 1’s with a small box.  </paragraphs>
+            <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs"> We will now run through some examples of using these definitions and theorems to solve some systems of equations. From now on, when we have a matrix in reduced row-echelon form, we will mark the leading 1’s with a small box. </paragraphs>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="7" md5="60f2cc52f3dc368ae71489bcb6453214" course="Math 1030" chapter="6" slide="10" item="6.7">
               <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Using the Gaussian elimination, find the RREF of
 \[A=\begin{bmatrix}0&amp;0&amp;1&amp;1&amp;4\\
@@ -460,7 +474,7 @@ Consider column 1 (set $j=1$), find a nonzero entry (underline below) in the col
 0&amp;0&amp;1&amp;1&amp;3\\
 0&amp;0&amp;1&amp;1&amp;4\\
 2&amp;2&amp;5&amp;9&amp;19\end{bmatrix}\]
-Also, at this point we increase $r$ to $r = 1$, 
+Also, at this point we increase $r$ to $r = 1$,
 since we now know we have at least one nonzero row.</paragraphs>
                           <newline course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
                           <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
@@ -480,7 +494,7 @@ since we now know we have at least one nonzero row.</paragraphs>
 0&amp;0&amp;1&amp;1&amp;3\end{bmatrix}\] </paragraphs>
                                   <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                                     <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Now we go back to Step 1 in the proof of </paragraphs>
-                                    <ref environment="newcol" chapter_type="" label="thm:REMEF" wbtag="ref" course="Math 1030" chapter="6" slide="10" src-course="MATH 1030" src-chapter="6" src-slide="70" type="Theorem" item="6.6" src-filename="lecs1-20.xml" md5="7330455b9d11f5e9938a0d2f8e6c5ebf" class="lcref" serial="">
+                                    <ref environment="newcol" chapter_type="" label="thm:REMEF" wbtag="ref" course="Math 1030" chapter="6" slide="10" referrer-type="Example" referrer-md5="60f2cc52f3dc368ae71489bcb6453214" src-course="Math 1030" src-chapter="6" src-slide="9" type="Theorem" item="6.6" src-filename="lec6.xml" md5="7330455b9d11f5e9938a0d2f8e6c5ebf" class="lcref" serial="">
                                       <title>Row-Equivalent Matrix in Echelon Form</title>
                                     </ref>
                                     <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">,
@@ -508,7 +522,7 @@ The entries of column 2 are underlined.</paragraphs>
 *&amp;0&amp;\underline{1}&amp;1&amp;3\end{bmatrix}\] </paragraphs>
                                         <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                                           <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Consider column 3.
-That is, set $j=3$.  
+That is, set $j=3$.
 (Note that the number of nonzero rows is still $r = 1$.)</paragraphs>
                                           <newline course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
                                           <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
@@ -521,13 +535,11 @@ So, we don’t need to do any swapping.
 Also, now we know there are at least 2 nonzero rows, so $r = 2$. </paragraphs>
                                             <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                                               <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Use the boxed number (the pivot) to eliminate the nonzero entries above and below it by $\alpha R_{2}+R_{i}$.
-\[\xrightarrow{
-\begin{split}
+\[\xrightarrow{\begin{split}
 -2R_{2}+R_{1},\\
 -1R_{2}+R_{3},\\
 -1R_{2}+R_{4}
-\end{split}
-}
+\end{split}}
 \begin{bmatrix}1&amp;1&amp;0&amp;2&amp;%
 2\\
 0&amp;0&amp;\boxed{1}&amp;1&amp;3\\
@@ -655,7 +667,7 @@ None of the entries of column 2 are nonzero.</paragraphs>
 \end{bmatrix}\]</paragraphs>
                                       <newline course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
                                       <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                                        <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Find a nonzero entry in column 3. 
+                                        <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Find a nonzero entry in column 3.
 In this case, all the entries are nonzero,
 so we may increase the number of nonzero rows to $r = 2$.</paragraphs>
                                         <newline course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
@@ -720,13 +732,11 @@ So, we move to the next column, with index $j=6$.</paragraphs>
 \end{bmatrix}\] </paragraphs>
                                                         <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                                                           <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \[
-\xrightarrow{
-\begin{split}
+\xrightarrow{\begin{split}
 -\frac{4}{3}R_{3}+R_{1},\\
 -\frac{1}{3}R_{3}+R_{2},\\
 -\frac{4}{3}R_{3}+R_{4}
-\end{split}
-}
+\end{split}}
 \begin{bmatrix}1&amp;2&amp;0&amp;1&amp;2&amp;0&amp;-\frac{7}{3}\\
 0&amp;0&amp;1&amp;1&amp;3&amp;0&amp;\frac{2}{3}\\
 0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;1\\
@@ -740,13 +750,11 @@ So, we move to the next column, with index $j=6$.</paragraphs>
 0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;1\\
 \end{bmatrix}\] </paragraphs>
                                                             <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                                                            <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \[\xrightarrow{
-\begin{split}
+                                                            <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \[\xrightarrow{\begin{split}
 \frac{7}{3}R_{4}+R_{1},\\
 -\frac{2}{3}R_{4}+R_{2},\\
 -1R_{4}+R_{3}
-\end{split}
-}
+\end{split}}
 \begin{bmatrix}1&amp;2&amp;0&amp;1&amp;2&amp;0&amp;0\\
 0&amp;0&amp;1&amp;1&amp;3&amp;0&amp;0\\
 0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;0\\
@@ -789,10 +797,11 @@ A\xrightarrow{\text{RREF}}B.
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="9" title="Reduced Row-Echelon Form is Unique" md5="a43f6fde406671a31325be34ba4c3bed" course="Math 1030" chapter="6" slide="12" item="6.9">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="Math 1030" chapter="6" section="1" subsection="" subsubsection="" serial="" slide="12">Reduced Row-Echelon Form is Unique</title>
-              <label course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="label" name="RREFU" type="Theorem"/>
+              <label wbtag="label" name="RREFU" type="Theorem"/>
               <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is an $m\times n$ matrix and that $B$ and $C$ are $m\times n$ matrices that are row-equivalent to $A$ and in reduced row-echelon form. Then $B=C$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="cb2bd230da473d02f6d9d294ec24cc63" course="Math 1030" chapter="6" slide="12" of="a43f6fde406671a31325be34ba4c3bed">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="cb2bd230da473d02f6d9d294ec24cc63" course="Math 1030" chapter="6" slide="12" of="a43f6fde406671a31325be34ba4c3bed" of-src-course="Math 1030" of-src-chapter="6" of-src-slide="12" of-type="Theorem" of-item="6.9" of-src-filename="lec6.xml" ofmd5="a43f6fde406671a31325be34ba4c3bed" of-serial="">
+              <of-title>Reduced Row-Echelon Form is Unique</of-title>
               <newcol course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> See Beezer, Ver 3.5 (print version p24). We will prove it later. You can skip the proof for now. </paragraphs>
               </newcol>
@@ -830,10 +839,11 @@ x_{1}+4x_{3}&amp;=5
 \right]
 \] </paragraphs>
                   <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \[\displaystyle\xrightarrow{7R_{1}+R_{3}}\left[\begin{array}[]{ccc|c}\boxed{1%
-}&amp;0&amp;4&amp;5\\
+                    <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \[\displaystyle\xrightarrow{7R_{1}+R_{3}}\left[\begin{array}[]{ccc|c}
+\boxed{1}&amp;0&amp;4&amp;5\\
 0&amp;5&amp;-13&amp;-1\\
-0&amp;-6&amp;16&amp;2\end{array}\right]\] </paragraphs>
+0&amp;-6&amp;16&amp;2\end{array}\right]
+\] </paragraphs>
                     <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Now, with $j=2$,
 \[\displaystyle\xrightarrow{\frac{1}{5}R_{2}}\left[\begin{array}[]{ccc|c}%
@@ -887,7 +897,10 @@ x_{1}+4x_{3}&amp;=5
             </statement>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="14" id="s14" slide="14" course="Math 1030" chapter="6" section="1" subsection="" subsubsection="" chapter_title="Reduced Row Echelon Forms" section_title="Reduced Row Echelon Form">
-            <keywords slide="14" environ="slide" chapter="6" course="Math 1030"/>
+            <keywords slide="14" environ="slide" chapter="6" course="Math 1030">
+              <keyword chapter="6" slide="14">free</keyword>
+              <keyword chapter="6" slide="14">independent</keyword>
+            </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="11" md5="24b6c564d67f5b28592ef3049cb45153" course="Math 1030" chapter="6" slide="14" item="6.11">
               <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let us find the solutions to the following system of equations,
 \[\begin{split}
@@ -931,20 +944,16 @@ First, the last row of the matrix is the equation $0=0$, which is always true, s
 For example, choose $x_{3}=1$ and see that then $x_{1}=2$ and $x_{2}=3$ will together form a solution.
 Or choose $x_{3}=0$, and then discover that $x_{1}=3$ and $x_{2}=2$ lead to a solution.
 Try it yourself: pick any value of $x_{3}$ you please, and figure out what $x_{1}$ and $x_{2}$ should be to make the first and second equations (respectively) true. We’ll wait while you do that. Because of this behavior, we say that $x_{3}$ is a </paragraphs>
-                        <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
-                          <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">free</paragraphs>
-                        </b>
+                        <inline_keyword course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol">free</inline_keyword>
                         <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> or </paragraphs>
-                        <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
-                          <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">independent</paragraphs>
-                        </b>
+                        <inline_keyword course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol">independent</inline_keyword>
                         <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> variable. But why do we vary $x_{3}$ and not some other variable? For now, notice that the third column of the augmented matrix is not a pivot column. With this idea, we can rearrange the two equations, solving each for the variable whose index is the same as the column index of a pivot column.
 \[\displaystyle x_{1}=3-x_{3}\]
 \[\displaystyle x_{2}=2+x_{3}\]
 To write the set of solution vectors in set notation, we have:</paragraphs>
                         <newline course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
                         <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                          <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \[\displaystyle 
+                          <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \[\displaystyle
 S =
 \left\{\left.\begin{bmatrix}3-x_{3}\\
 2+x_{3}\\
@@ -963,8 +972,10 @@ We will learn more in the next lecture about systems with infinitely many soluti
             </statement>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="15" id="s15" slide="15" course="Math 1030" chapter="6" section="1" subsection="" subsubsection="" chapter_title="Reduced Row Echelon Forms" section_title="Reduced Row Echelon Form">
-            <keywords slide="15" environ="slide" chapter="6" course="Math 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="12" md5="13014574facdabe70c27275d8672b70d" course="Math 1030" chapter="6" slide="15" item="6.12">
+            <keywords slide="15" environ="slide" chapter="6" course="Math 1030">
+              <keyword chapter="6" slide="15">no solutions</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="12" md5="3e81fb6afda667d112fc60e2ef29713c" course="Math 1030" chapter="6" slide="15" item="6.12">
               <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let us find the solutions to the following system of equations,
 \begin{align*}
 2x_{1}+x_{2}+7x_{3}-7x_{4} &amp;= 2\\
@@ -978,11 +989,9 @@ x_{1}+x_{2}+4x_{3}-5x_{4} &amp;= 2
 1&amp;1&amp;4&amp;-5&amp;2\\
 \end{array}\right]\]
 and work to reduced row-echelon form, first with $j=1$,
-\[\displaystyle\xrightarrow{R_{1}\leftrightarrow R_{3}}\left[\begin{array}[]{
-cccc|c}1&amp;1&amp;4&amp;-5&amp;2\\
+\[\displaystyle\xrightarrow{R_{1}\leftrightarrow R_{3}}\left[\begin{array}[]{cccc|c}1&amp;1&amp;4&amp;-5&amp;2\\
 -3&amp;4&amp;-5&amp;-6&amp;3\\
-2&amp;1&amp;7&amp;-7&amp;2\end{array}\right]\xrightarrow{3R_{1}+R_{2}}\left[\begin{array}[]{
-cccc|c}1&amp;1&amp;4&amp;-5&amp;2\\
+2&amp;1&amp;7&amp;-7&amp;2\end{array}\right]\xrightarrow{3R_{1}+R_{2}}\left[\begin{array}[]{cccc|c}1&amp;1&amp;4&amp;-5&amp;2\\
 0&amp;7&amp;7&amp;-21&amp;9\\
 2&amp;1&amp;7&amp;-7&amp;2\end{array}\right]\]
 \[\displaystyle\xrightarrow{-2R_{1}+R_{3}}\left[\begin{array}[]{cccc|c}\boxed{1}&amp;1&amp;4&amp;-5&amp;2\\
@@ -990,8 +999,7 @@ cccc|c}1&amp;1&amp;4&amp;-5&amp;2\\
 0&amp;-1&amp;-1&amp;3&amp;-2\end{array}\right]\] </paragraphs>
                 <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Now, with $j=2$,
-\[\displaystyle\xrightarrow{R_{2}\leftrightarrow R_{3}}\left[\begin{array}[]{
-cccc|c}\boxed{1}&amp;1&amp;4&amp;-5&amp;2\\
+\[\displaystyle\xrightarrow{R_{2}\leftrightarrow R_{3}}\left[\begin{array}[]{cccc|c}\boxed{1}&amp;1&amp;4&amp;-5&amp;2\\
 0&amp;-1&amp;-1&amp;3&amp;-2\\
 0&amp;7&amp;7&amp;-21&amp;9\end{array}\right]\xrightarrow{-1R_{2}}\left[\begin{array}[]{cccc|c}\boxed{1}&amp;1&amp;4&amp;-5&amp;2\\
 0&amp;1&amp;1&amp;-3&amp;2\\
@@ -1013,10 +1021,8 @@ cccc|c}\boxed{1}&amp;0&amp;3&amp;-2&amp;0\\
 0&amp;0&amp;0&amp;0&amp;\boxed{1}\end{array}\right]\] </paragraphs>
                     <collapse course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The third equation will read $0=1$. This is patently false, all the time. No choice of values for our variables will ever make it true. We are done. Since we cannot even make the last equation true, we have no hope of making all of the equations simultaneously true. So this system has </paragraphs>
-                      <b xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
-                        <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">no solutions</paragraphs>
-                      </b>
-                      <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, and its solution set is the empty set, $\emptyset=\{\ \}$
+                      <inline_keyword course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol">no solutions</inline_keyword>
+                      <paragraphs course="Math 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, and its solution set is the empty set, $\varnothing=\{\ \}$
 Notice that we could have reached this conclusion sooner. After performing the row operation
 $-7R_{2}+R_{3}$, we can see that the third equation reads $0=-5$, a false statement. Since the system represented by this matrix has no solutions, none of the systems represented has any solutions. However, for this example, we have chosen to bring the matrix all the way to reduced row-echelon form as practice.
 The above three examples
