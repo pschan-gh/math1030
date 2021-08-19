@@ -2,13 +2,13 @@
 @chapter{Determinant}
 <h5 class="notkw">Reference.</h5>
  Beezer, Ver 3.5 Chapter D (print version p261-282)
-@newline<h5 class="notkw">Exercise.</h5> Exercises with solutions can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf} (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$)Section DM p.98 - 101 all, Section PDM p.101-102 M30, T10, T15, T20
-@newline
+<h5 class="notkw">Exercise.</h5> Exercises with solutions can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf} (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$)Section DM p.98 - 101 all, Section PDM p.101-102 M30, T10, T15, T20
+
 @section{Definition of the determinant}
-@newline
+
 The @keyword{determinant} is a function that take a square matrix as an input and
 produces a scalar as an output.
-@newline
+
 @newcol
  Suppose $A$ is an $m\times n$ matrix. Then the @keyword{submatrix} $A(i|j)$ is the $(m-1)\times(n-1)$
 matrix obtained from $A$ by removing row $i$ and column $j$. 
@@ -51,7 +51,7 @@ a_{32}&amp;a_{33}&amp;a_{34}\end{bmatrix}
 @slide
 @defn
  Suppose $A$ is a square matrix. Then its @keyword{determinant}, $\det\left(A\right)$ (or denoted by $|A|$), is an element of ${\mathbb{R}}^{\hbox{}}$ defined recursively by:
-@newline<ol class="ltx_enumerate">
+<ol class="ltx_enumerate">
 <li class="ltx_item"> If $A$ is a $1\times 1$ matrix, then $\det\left(A\right)=\left[A\right]_{11}$. </li>
 <li class="ltx_item"> If $A$ is a matrix of size $n$ with $n\geq 2$, then
 \begin{align*}
@@ -83,7 +83,7 @@ A_{n1} &amp; \cdots &amp; \cdots &amp; A_{n(k-1)} &amp; A_{n(k+1)} &amp; \cdots 
 @newcol
  So to compute the determinant of a $5\times 5$ matrix we must build 5 submatrices, each of size $4$. To compute the determinants of each the $4\times 4$ matrices we need to create 4 submatrices each, these now of size $3$ and so on. To compute the determinant of a $10\times 10$ matrix would require computing the determinant of $10!=10\times 9\times 8\times 7\times 6\times 5\times 4\times 3\times 2=3,628,800$
 $1\times 1$ matrices. Fortunately ,there are better ways.
-@newline
+
 @col
  Let us compute the determinant of a reasonably sized matrix by hand. 
 @endcol
@@ -329,7 +329,7 @@ If you are interested, see Beezer, p.268.
 @qed
 @endcol
 @end
-@newline
+
 @thm
 @newcol
  Suppose $A$ is lower triangular matrix, i.e.
@@ -387,7 +387,7 @@ We will compute the determinant of this $5\times 5$ matrix by consistently expan
 @slide
 @skip
  When you consult other texts in your study of determinants, you may run into the terms @keyword{minor} and @keyword{cofactor}, especially in a discussion centered on expansion about rows and columns. We have chosen not to make these definitions formally since we have been able to get along without them. However, informally, a @keyword{minor} is a determinant of a submatrix, specifically $\det\left(A\left(i|j\right)\right)$ and is usually referenced as the minor of $\left[A\right]_{ij}$. A @keyword{cofactor} is a signed minor, specifically the cofactor of $\left[A\right]_{ij}$ is $(-1)^{i+j}\det\left(A\left(i|j\right)\right)$.
-@newline
+
 @section{Properties of Determinants of Matrices}
 @thm
 @title{Determinant for Row or Column Multiples}
@@ -509,7 +509,7 @@ $\det\left(A\right)=\det\left(A^{t}\right)$.
 a_{41}&amp;a_{42}&amp;a_{43}&amp;a_{44}\end{bmatrix}.
 \end{align*}
 Find $\det\left(A\right)$.
-@newline
+
 @newcol
  \begin{align*}
 \displaystyle \det\left(A\right) &amp;=-\begin{vmatrix}a_{41}&amp;a_{42}&amp;a_{43}&amp;a_{44}\\
@@ -879,7 +879,7 @@ a_{1}^{n-2}&amp;a_{2}^{n-2}&amp;a_{3}^{n-2}&amp;\cdots&amp;a_{n-1}^{n-2}\\
 <li class="ltx_item">
 @newcol
  Again by mathematical induction:
-@newline<strong>Step 1</strong>
+<strong>Step 1</strong>
 @newcol
  When $n=2$,
 \begin{align*}
@@ -889,7 +889,7 @@ a_{1}&amp;a_{2}\end{vmatrix}=a_{2}-a_{1}.
 @col
  So the formula is valid for $n=2$. 
 @endcol
-@newline<strong>Step 2</strong>
+<strong>Step 2</strong>
 @newcol
  Suppose the statement is true for $n=k$, i.e.
 \begin{align*}
@@ -912,7 +912,7 @@ a_{1}&amp;a_{2}\end{vmatrix}=a_{2}-a_{1}.
 @col
  The formula is valid for $n=k+1$. 
 @endcol
-@newline<strong>Step 3</strong>
+<strong>Step 3</strong>
 @newcol
  By mathematical induction, the formula is valid for all $n\geq 2$. Or without mathematical induction, you can simple repeat the steps again and again until $n=2$. 
 @endcol
@@ -1052,7 +1052,7 @@ a_{31}&amp;a_{32}&amp;a_{33}\\
 <li class="ltx_item"> Let $I_{n}\xrightarrow{R_{i}\leftrightarrow R_{j}}J$, then $\det\left(J\right)=-1$. </li>
 <li class="ltx_item"> Let $I_{n}\xrightarrow{\alpha R_{i}}J$, then $\det\left(J\right)=\alpha$. </li>
 <li class="ltx_item"> Let $I_{n}\xrightarrow{\alpha R_{i}+R_{j}}J$, then $\det\left(J\right)=1$. </li>
-@newline</ol>
+</ol>
 @end
 @slide
 @cor
@@ -1066,14 +1066,14 @@ Then $\det\left(B\right)=\det\left(JA\right)=\det\left(J\right)\det\left(A\right
 @label{thm:nonsingulardet}
  $A$ is nonsingular if and only if $\det\left(A\right)\neq 0$. 
 @end
-@newline
+
 @proof
 @newcol
  Let $B$ be the RREF of an $n\times n$ square matrix $A$.
 Then $A$ is nonsinuglar if and only if $B = I_n$.
-@newlineMoreover, if $A$ is singular, then $B$ must contain a zero row,
+Moreover, if $A$ is singular, then $B$ must contain a zero row,
 which implies that $\det(B) = 0$.
-@newline
+
 @newcol
  By @ref{thm:ROEM},
 there is a sequence of
@@ -1118,7 +1118,7 @@ $\det(B) \neq 0$ if and only if $B = I_n$.
 \end{bmatrix}
 \end{align*}
 is singular.
-@newline
+
 @newcol
  Expand along the first column
 \begin{align*}
@@ -1153,7 +1153,7 @@ is singular.
 @endcol
 @endcol
 @end
-@newline
+
 @eg
 @skip
  Let
@@ -1164,7 +1164,7 @@ f&amp;0&amp;0&amp;0\\
 g&amp;0&amp;0&amp;0\end{bmatrix}
 \end{align*}
 find $\det\left(A\right)$.
-@newline<strong>Method 1</strong>
+<strong>Method 1</strong>
 @newcol
  \begin{align*}
 \displaystyle a\begin{vmatrix}0&amp;0&amp;0\\
@@ -1184,7 +1184,7 @@ Therefore the above is
 \displaystyle a0-b0+c0-d0=0.
 \end{align*} 
 @endcol
-@newline<strong>Method 2</strong>
+<strong>Method 2</strong>
 @newcol
  If $c=0$, then column 3 is the zero column, so $\det\left(A\right)=0$. Otherwise
 \begin{align*}
@@ -1213,7 +1213,7 @@ By @ref{NPNT} the matrix $AB$ is also singular, hence:
 \[
 \det(AB) = 0 = \det(A)\det(B).
 \]
-@newline
+
 @col
  If both $A$ and $B$ are nonsingular,
 then there are elementary matrices, $J_i$ and $K_i$,
@@ -1472,7 +1472,7 @@ Expand along the $j$-th column of $M_{j}$, we have
 1&amp;1&amp;1&amp;\cdots&amp;x\end{array}}_{n}}\right]\right\}\,n
 \end{align*}
 Find $\det(A_{n})$.
-@newline
+
 @newcol
  Add columns $C_{2},C_{3},\ldots,C_{n}$ to $C_{1}$:
 \[
@@ -1582,11 +1582,11 @@ we conclude that the determinant is equal to:
 <li class="ltx_item">
 @col
  We prove the result by <strong>mathematical induction</strong>:
-@newline<strong>Step 1</strong>: 
+<strong>Step 1</strong>: 
 @newcol
  The formula is valid for $n=1$: $\det(B_{1})=1-a_{1}$. 
 @endcol
-@newline<strong>Step 2</strong>: 
+<strong>Step 2</strong>: 
 @newcol
  Suppose the formula is true for $n=k$, we want to show that the formula is true for $n=k+1$:
 \begin{align*}
@@ -1604,7 +1604,7 @@ we conclude that the determinant is equal to:
 @col
  The formula is true for $n=k+1$. 
 @endcol
-@newline<strong>Step 3</strong>: 
+<strong>Step 3</strong>: 
 @newcol
  By mathematical induction, the formula is valid for all positive integer. @keyword{Explanation}: the formula is true for $k=1$, then it is true for $k+1=2$, so true for $k+1=3$, etc. Hence true for all integers. 
 @endcol</li></ol>
@@ -1720,7 +1720,7 @@ the determinant above is equal to:
 -a&amp;-a&amp;-a&amp;\cdots&amp;-a&amp;1\end{array}}_{n}}
 \right|
 \end{align*}
-@newline\begin{align*}
+\begin{align*}
 \displaystyle =(-1)^{n+n}a
 \left.\left|
 \vphantom{\begin{array}[]{c}1\\
@@ -1735,12 +1735,12 @@ the determinant above is equal to:
 \right|
 \right\}\,n-1
 \end{align*}
-@newline(Expand along the last column.)
+(Expand along the last column.)
 \begin{align*}
 \displaystyle =a(x+a)^{n-1}
 \end{align*}
 (Determinant of upper triangular matrix.)
-@newline
+
 @col
  For the second determinant,
 \begin{align*}
@@ -1785,11 +1785,11 @@ the determinant above is equal to:
 <li class="ltx_item">
 @col
  We will prove the formula by induction.
-@newline<strong>Step 1</strong>: 
+<strong>Step 1</strong>: 
 @newcol
  When $n=1$, $C_{1}=[x]$, $\det(C_{1})=x=\frac{1}{2}((x+a)+(x-a))$. So the formula is valid for $n=1$. 
 @endcol
-@newline<strong>Step 2</strong>: 
+<strong>Step 2</strong>: 
 @newcol
  Suppose the formula is valid for $n=k$, i.e.
 \begin{align*}
@@ -1807,7 +1807,7 @@ the determinant above is equal to:
 @col
  So the formula is valid for $n=k+1$. 
 @endcol
-@newline<strong>Step 3</strong>: 
+<strong>Step 3</strong>: 
 @newcol
  By mathematical induction, the formula is valid for all integers $n\geq 1$. 
 @endcol
@@ -1815,9 +1815,9 @@ the determinant above is equal to:
 @endcol
 @end
 @section{Properties of Determinant (summary)}
-@newline
+
 Let $A$ be a square matrix with size $n$.
-@newline<ol class="ltx_enumerate">
+<ol class="ltx_enumerate">
 <li class="ltx_item"> \begin{align*}
 \displaystyle \begin{vmatrix}a&amp;b\\
 c&amp;d\end{vmatrix}=ad-bc.
@@ -1906,5 +1906,6 @@ a_{n1}&amp;\cdots&amp;a_{n,i-1}&amp;c_{n}&amp;a_{n,i+1}&amp;\cdots&amp;a_{nn}\en
 \begin{align*}
 \displaystyle \det\left(AB\right)=\det\left(A\right)\det\left(B\right).
 \end{align*} </li>
-@newline</ol>
+</ol>
+@course{MATH 1030}
 <!--DELIMITER-->

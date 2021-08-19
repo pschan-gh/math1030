@@ -1,6 +1,6 @@
 @course{MATH 1030}
 @chapter{Technique of solving system of linear equations}
-@newline
+
 <h5 class="notkw">Reference:</h5>
 @enumerate
 @item
@@ -8,7 +8,7 @@
 @item
  Robert A. Beezer, <i>A First Course in Linear Algebra</i>. Section <a target="_blank" href="http://linear.ups.edu/html/section-SSLE.html">Solving Systems of Linear Equations</a>. 
 @endenumerate
-@newline
+
 @section{Introduction}
 @label{ex2}
  In this section we give examples of systems of linear equations and solve one example. 
@@ -33,7 +33,7 @@ So $x_{2}=-1$. Substituting $x_{2}=-1$ into Equation $\eqref{eq:eg2-1}$ gives
 2x_{1}+3(-1)=3
 \]
 Hence, $x_{1}=3$ and $x_{2}=-1$ is a solution.
-@newline
+
 @col
  Indeed:
 \[2(3)+3(-1)=3\]
@@ -66,14 +66,14 @@ In fact, it is the unique solution.
 Use $\eqref{v2sube2}$, we can solve for $y$ in terms of $x$:
 \begin{equation}\label{v2sube3}y=\frac{3}{5}-\frac{4}{5}x.\end{equation}
 Substitution this into $\eqref{v2sube1}$:
-@newline\[3x+4(\frac{3}{5}-\frac{4}{5}x)=2\]
+\[3x+4(\frac{3}{5}-\frac{4}{5}x)=2\]
 \[\frac{12}{5}-\frac{x}{5}=2\]
 \[x=2.\]
 Substituting $x=2$ into $\eqref{v2sube3}$, we can solve for $y$:
 \[y=\frac{3}{5}-\frac{4}{5}\times 2=-1.\]
 So the solution is $x=2$, $y=-1$. 
 @end
-@newline
+
 @remark
 @newcol
  There are other ways to use substitution, for example 
@@ -90,7 +90,7 @@ So the solution is $x=2$, $y=-1$.
  Solve $y$ by $\eqref{v2sube2}$ in terms of $x$ and substitute it into $\eqref{v2sube2}$ (No substitution back to the original equation) 
 @item
  Solve $y$ by $\eqref{v2sube1}$ in terms of $x$ and substitute it into $\eqref{v2sube1}$
-@newline
+
 @item
  Solve $x$ by $\eqref{v2sube2}$ in terms of $y$ and substitute it into $\eqref{v2sube2}$ 
 @item
@@ -98,14 +98,14 @@ So the solution is $x=2$, $y=-1$.
 @endenumerate
 @endcol
 @end
-@newline
+
 @subsection{Elimination}
 @eg
  Again, let’s solve the system of linear equations from the previous example.
 \begin{equation}\label{v2elime1}3x+4y=2\end{equation}
 \begin{equation}\label{v2elime2}4x+5y=3\end{equation}
 Consider $\eqref{v2elime1}-\frac{3}{4}\eqref{v2elime2}$.
-@newline\begin{align*}
+\begin{align*}
 &amp; 3x &amp; + &amp; 4y &amp; = &amp; 2 \\
 -)\quad &amp; 3x &amp; + &amp; \frac{15}4 y &amp; = &amp; \frac{9}4 \\
 \hline
@@ -116,7 +116,7 @@ Thus $y=-1$. Substituting it into $\eqref{v2elime1}$:
 \[x=2.\]
 So we obtain the solution $x=2$, $y=-1$. 
 @end
-@newline
+
 @remark
 @enumerate
 @item
@@ -125,14 +125,14 @@ So we obtain the solution $x=2$, $y=-1$.
  At some point, we still need to use substitution to get the solution. 
 @endenumerate
 @end
-@newline
+
 @subsection{Substitution}
 @eg
  Solve the following system of linear equations
 \begin{equation}\label{v3sube1}x+2y+2z=4\end{equation}
 \begin{equation}\label{v3sube2}x+3y+3z=5\end{equation}
 \begin{equation}\label{v3sube3}2x+6y+5z=6\end{equation}
-@newline
+
 @newcol
  Find $x$ in terms of $y,z$ by $\eqref{v3sube1}$ :
 \begin{equation}\label{v3sube4}x=4-2y-2z.\end{equation}
@@ -199,7 +199,7 @@ Hence $x=2,y=-3,z=4$ is a solution.
 \[\displaystyle 0x+1y+1z=1\]
 \[\displaystyle 0x+0y+1z=4\]
 which can be written more clearly as:
-@newline
+
 @col
  \[\displaystyle x+2y+2z=4\]
 \[\displaystyle y+z=1\]
@@ -344,7 +344,7 @@ x_1+0x_2 +2x_3-3x_4&amp;= -1\\
 0x_1+0x_2+0x_3+0x_4&amp;=0
 \end{align*}
 which can be written more clearly as:
-@newline
+
 @col
  \begin{align*}
 x_1+2x_3 - 3x_4&amp;= -1\\
@@ -353,7 +353,7 @@ x_2-x_3+2x_4&amp;=4\\
 \end{align*} 
 @col
  The last equation $0=0$ is always true, so we can ignore it and only consider the first two equations. We can analyze the second equation without consideration of the variable $x_{1}$. It would appear that there is considerable latitude in how we can choose $x_{2}$, $x_{3}$, $x_{4}$ and make this equation true. Let us choose $x_{3}$ and $x_{4}$ to be <strong>anything</strong> we please, say $x_{3}=a$ and $x_{4}=b$.
-@newline
+
 @col
  Now we can take these arbitrary values for $x_{3}$ and $x_{4}$, substitute them in equation 1, to obtain
 \[x_{1}+2a-3b=-1\]
@@ -364,7 +364,7 @@ x_2-x_3+2x_4&amp;=4\\
 \[x_{2}=4+a-2b\] 
 @col
  So our arbitrary choices of values for $x_{3}$ and $x_{4}$ ($a$ and $b$) translate into specific values of $x_{1}$ and $x_{2}$.
-@newline
+
 @col
  Now we can easily and quickly find many more (infinitely more). Suppose we choose $a=5$ and $b=-2$, then we compute
 \[\displaystyle x_{1}=-1-2(5)+3(-2)=-17\]
@@ -407,7 +407,7 @@ x_1 &amp; {}+{} &amp;  2x_2 &amp; {}+{} &amp; 3x_3 &amp; {}+{} &amp; 2x_4 &amp; 
  Now the system of linear equations looks like an ”inverted stair”.
 We can then solve the system of linear equations by substitution.
 (A better method well be given later.)
-@newline
+
 @col
  By the last equation:
 \[x_{4}=5-x_{5}.\]
@@ -421,7 +421,7 @@ Solve $x_{2}$ in terms of other variables by equation 2:
 \[\displaystyle=4-2(-8-x_{3})-3x_{3}-2(5-x_{5})-3x_{5}\]
 \[\displaystyle=10-x_{3}-x_{5}.\]
 $x_{3},x_{5}$ can be taken as any values.
-@newline
+
 @col
  Set $x_{3}=a$, $x_{5}=b$, the solution set can be given by
 \[\{(10-a-b,-8-a,a,5-b,b)\,|\,a,b\text{ real numbers}\}.\] 
@@ -489,4 +489,5 @@ Set $x_{3}=a$, $x_{5}=b$, the solution set can be given by
 \[\{(10-a-b,-8-a,a,5-b,b)\,|\,a,b\text{ real numbers}\}.\] 
 @endcol
 @end
+@course{MATH 1030}
 <!--DELIMITER-->

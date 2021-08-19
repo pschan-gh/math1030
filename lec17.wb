@@ -39,12 +39,12 @@ and:
 @prop
 @label{ipdef}
  For any $\mathbf{v},\mathbf{w},\mathbf{u}\in{\mathbb{R}}^{m}$ and $\alpha\in{\mathbb{R}}^{\hbox{}}$. We have
-@newline<ol class="ltx_enumerate">
+<ol class="ltx_enumerate">
 <li class="ltx_item"> $\left&lt; \mathbf{v}+\mathbf{w},\mathbf{u}\right&gt;=\left&lt; \mathbf{v},\mathbf{u}\right&gt;+\left&lt; \mathbf{w},\mathbf{u}\right&gt;$. </li>
 <li class="ltx_item"> $\left&lt; \alpha\mathbf{v},\mathbf{w}\right&gt;=\alpha\left&lt; \mathbf{v},\mathbf{w}\right&gt;$. </li>
 <li class="ltx_item"> $\left&lt; \mathbf{v},\mathbf{w}\right&gt;=\left&lt; \mathbf{w},\mathbf{v}\right&gt;$. </li>
 <li class="ltx_item"> $\left&lt; \mathbf{v},\mathbf{v}\right&gt;&gt;0$ for $\mathbf{v}\neq\mathbf{0}$. </li>
-@newline</ol>
+</ol>
 @end
 @proof
 @newcol
@@ -89,21 +89,21 @@ and:
 \end{align*} 
 @col
  Noting that $\left&lt; \mathbf{v},\mathbf{v}\right&gt;=0$ if and only if $[\mathbf{v}]_{i}=0$ for all $1\leq i\leq n$, we see that $\mathbf{v}=\mathbf{0}$ </li>
-@newline</ol>
-@newline
+</ol>
+
 @qed
 @endcol
 @end
 @slide
 @prop
  Let $\alpha,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{v},\mathbf{w},\mathbf{u}\in{\mathbb{R}}^{m}$. We have
-@newline<ol class="ltx_enumerate">
+<ol class="ltx_enumerate">
 <li class="ltx_item"> $\left&lt; \alpha\mathbf{v}+\beta\mathbf{w},\mathbf{u}\right&gt;=\alpha\left&lt; \mathbf{v},\mathbf{u}\right&gt;+\beta\left&lt; \mathbf{w},\mathbf{u}\right&gt;$. </li>
 <li class="ltx_item"> $\left&lt; \mathbf{u},\alpha\mathbf{v}+\beta\mathbf{w}\right&gt;=\alpha\left&lt; \mathbf{u},\mathbf{v}\right&gt;+\beta\left&lt; \mathbf{u},\mathbf{w}\right&gt;$. </li>
 <li class="ltx_item"> $\left&lt; \mathbf{0},\mathbf{v}\right&gt;=\left&lt; \mathbf{v},\mathbf{0}\right&gt;=0$. </li>
 <li class="ltx_item"> If $\left&lt; \mathbf{v},\mathbf{x}\right&gt;=0$ for all $\mathbf{x}\in{\mathbb{R}}^{m}$, then $\mathbf{v}=\mathbf{0}$. </li>
 <li class="ltx_item"> If $\left&lt; \mathbf{v},\mathbf{x}\right&gt;=\left&lt; \mathbf{w},\mathbf{x}\right&gt;$ for all $x\in{\mathbb{R}}^{m}$, then $\mathbf{v}=\mathbf{w}$. </li>
-@newline</ol>
+</ol>
 @end
 @proof
 @newcol
@@ -148,8 +148,8 @@ and
 By Proposition   @ref{ipdef} item 4, $\mathbf{v}=\mathbf{0}$. </li>
 <li class="ltx_item"> Suppose $\left&lt; \mathbf{v},\mathbf{x}\right&gt;=\left&lt; \mathbf{w},\mathbf{x}\right&gt;$, then $0=\left&lt; \mathbf{v},\mathbf{x}\right&gt;-\left&lt; \mathbf{w},\mathbf{x}\right&gt;=\left&lt; \mathbf{v}-\mathbf{w},\mathbf{x}\right&gt;$
 for all $\mathbf{x}\in V$. By the previous part $\mathbf{v}-\mathbf{w}=\mathbf{0}$. So $\mathbf{v}=\mathbf{w}$. </li>
-@newline</ol>
-@newline
+</ol>
+
 @qed
 @endcol
 @end
@@ -183,11 +183,11 @@ and
 @slide
 @prop
  Let $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{v}\in{\mathbb{R}}^{m}$.
-@newline<ol class="ltx_enumerate">
+<ol class="ltx_enumerate">
 <li class="ltx_item"> $\|\mathbf{v}\|=0$ if and only if $\mathbf{v}=\mathbf{0}$. </li>
 <li class="ltx_item"> $\|\alpha\mathbf{v}\|=|\alpha|\|\mathbf{v}\|$. </li>
 <li class="ltx_item"> Suppose that $\mathbf{v}\neq\mathbf{0}$ and let $\alpha=\frac{1}{\|\mathbf{v}\|}$. Then $\|\alpha\mathbf{v}\|=1$. </li>
-@newline</ol>
+</ol>
 @end
 @proof
 @newcol
@@ -260,10 +260,10 @@ as
 @slide
 @defn
  A subset $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ of ${\mathbb{R}}^{m}$ is said to be @keyword{orthogonal} if the following conditions hold:
-@newline<ol class="ltx_enumerate">
+<ol class="ltx_enumerate">
 <li class="ltx_item"> $\mathbf{0}\notin S$, i.e. $\mathbf{v}_{i}\neq\mathbf{0}$ for $i=1,\ldots,k$. </li>
 <li class="ltx_item"> $\mathbf{v}_{i}\perp\mathbf{v}_{j}$ for $i\neq j$, i.e., $\left&lt; \mathbf{v}_{i},\mathbf{v}_{j}\right&gt;=0$ for $i\neq j$. </li>
-@newline</ol>
+</ol>
 @end
 @slide
 @eg
@@ -389,11 +389,11 @@ i.e.
 @endcol
 @end
 @remark
-@newline
+
 @newcol
  The advantage of using the above method is that we don’t have to solve linear equations to find the linear combination. 
 @endcol
-@newline
+
 @newcol
  In order to use the theorem, we need to ensure that $\mathbf{v}\in\left&lt; S\right&gt;$. 
 @endcol
@@ -439,7 +439,7 @@ A subset $S$ of $V$ is said to be an @keyword{orthogonal basis} for $V$ if $S$ i
 @newcol
  If $S$ is an orthogonal subset of $V$, then by Theorem   @ref{orthind}, it is automatically linearly independent.
 So in order to check if $S$ is an orthogonal basis, we need only check that $\left&lt; S\right&gt;=V$. So we have the following result.
-@newline
+
 @endcol
 @thm
 @label{checkob}
@@ -487,7 +487,7 @@ an orthogonal basis of ${\mathbb{R}}^{m}$. </li>
 Indeed, $\dim V=3$ and $S$, with 3 vectors, is linearly independent. </li>
 <li class="ltx_item"> The set $S=\left\{\mathbf{e}_{1},\mathbf{e}_{2},\ldots,\mathbf{e}_{m}\right\}$ is an orthogonal basis of ${\mathbb{R}}^{m}$.
 It is called @keyword{the standard basis} for $V$. </li>
-@newline</ol>
+</ol>
 @end
 @slide
 @defn
@@ -504,7 +504,7 @@ The subset $S$ is said to be an @keyword{orthonormal basis} for $V$ if it is ort
 @newcol
  Because an orthonormal set $S$ is orthogonal, the above theorems regarding orthogonal sets are also true for orthonormal sets.
 In particular we have the following result.
-@newline
+
 @endcol
 @slide
 @thm
@@ -553,17 +553,17 @@ Normalizing it, we obtain an orthonormal basis
 1\\
 -2\end{bmatrix}\right\}.
 \end{align*} </li>
-@newline</ol>
+</ol>
 @end
 @section{Gram-Schmidt Orthogonalization process}
-@newline
+
 Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ be an orthogonal subset of ${\mathbb{R}}^{m}$. If $\mathbf{w}\in\left&lt; S\right&gt;$, then
 \begin{align*}
 \displaystyle \mathbf{w}=\frac{\left&lt; \mathbf{w},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}+\cdots+\frac{\left&lt; \mathbf{w},\mathbf{v}_{k}\right&gt;}{\|\mathbf{v}_{k}\|^{2}}\mathbf{v}_{k}.
 \end{align*} 
 @newcol
  But what if $\mathbf{w}$ is not in $\left&lt; S\right&gt;$? Let’s compare the difference. We have the following theorem.
-@newline
+
 @endcol
 @slide
 @thm
@@ -608,9 +608,9 @@ In particular $\left&lt; S\right&gt;=\left&lt; S^{\prime}\right&gt;$. The proces
 @newcol
  We have $\left&lt; \left\{\mathbf{w}_{1}\right\}\right&gt;=\left&lt; \left\{\mathbf{v}_{1}\right\}\right&gt;$.
 We are going to add one vector at a time.
-@newlineSuppose that $\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}\right&gt;=\left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}\right&gt;$
+Suppose that $\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}\right&gt;=\left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}\right&gt;$
 and that the set $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}$ is orthogonal.
-@newlineObserve that $\vect{v}_l$ is a linear combination of $\vect{v}_1, \cdots, \vect{v}_{l-1}$ and $\vect{w}_l$.
+Observe that $\vect{v}_l$ is a linear combination of $\vect{v}_1, \cdots, \vect{v}_{l-1}$ and $\vect{w}_l$.
 Since $\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}\right&gt;=\left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}\right&gt;$, we have:
 \[
 \vect{v}_\ell \in \left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}, \vect{w}_\ell \right\}\right&gt;.
@@ -632,7 +632,7 @@ It now follows that:
 \[
 \left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right&gt; =\left&lt; \left\{\mathbf{w}_{1},\ldots, \mathbf{w}_{\ell}\right\}\right&gt;.
 \]
-@newlineBy Theorem   @ref{perp}, $\mathbf{v}_{\ell}\perp\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}$. Thus $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}$ is orthogonal.
+By Theorem   @ref{perp}, $\mathbf{v}_{\ell}\perp\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}$. Thus $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}$ is orthogonal.
 Repeating the process for the incrementing $\ell$ reaches $\ell=k$, we complete the proof. 
 @qed
 @endcol
@@ -645,7 +645,7 @@ Repeating the process for the incrementing $\ell$ reaches $\ell=k$, we complete 
 @newcol
  By Lecture 18 Theorem 8, there exists a basis $S=\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{k}\right\}$ for $V$.
 Applying Gram-Schmidt orthogonalization process to $S$, we obtain an orthogonal set $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$.
-@newlineBy Theorem   @ref{GSO}, $\left&lt; S^{\prime}\right&gt;=\left&lt; S\right&gt;=V$. By Theorem   @ref{checkob}, $S^{\prime}$ is an orthogonal basis. Normalizing $S^{\prime}$, we can also obtain an orthonormal basis. 
+By Theorem   @ref{GSO}, $\left&lt; S^{\prime}\right&gt;=\left&lt; S\right&gt;=V$. By Theorem   @ref{checkob}, $S^{\prime}$ is an orthogonal basis. Normalizing $S^{\prime}$, we can also obtain an orthonormal basis. 
 @qed
 @endcol
 @end
@@ -896,12 +896,12 @@ into the above, we obtain
 @endcol
 @end
 @remark
-@newline
+
 @newcol
  The $t$ above is obtained by minimizing the quadratic equation
 $\left&lt; \mathbf{v},\mathbf{v}\right&gt;-2t\left&lt; \mathbf{v},\mathbf{w}\right&gt;+t^{2}\left&lt; \mathbf{w},\mathbf{w}\right&gt;$. 
 @endcol
-@newline
+
 @newcol
  Following the proof, the equality occurs if (i) $\mathbf{v}=\mathbf{0}$ or (ii) $\mathbf{w}=\mathbf{0}$
 or (iii) $\mathbf{v}-t\mathbf{w}=0$ $\Leftrightarrow$ $\mathbf{v}$ and $\mathbf{w}$ are parallel,

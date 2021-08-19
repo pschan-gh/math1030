@@ -1,13 +1,13 @@
 @course{MATH 1030}
 @chapter{Linear transformations and change of basis}
-@newline
+
 @keyword{Skip this lecture}
-@newline
+
 @keyword{Warning}: the note is for reference only. It may contain typos. Read at your own risk. The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at http://linear.ups.edu/download.html.The print version can be downloaded at http://linear.ups.edu/download/fcla-3.50-print.pdf.
-@newline<h5 class="notkw">Reference.</h5> Beezer, Ver 3.5 Section VR.
-@newline
+<h5 class="notkw">Reference.</h5> Beezer, Ver 3.5 Section VR.
+
 @section{Matrices as linear transformation}
-@newline
+
 Let $A\in M_{mn}$, $\mathbf{v}\in{\mathbb{R}}^{n}$. Then $A\mathbf{v}\in{\mathbb{R}}^{m}$. We can define define a map, denoted by $L_{A}$ (stand for left multiplying), defined as
 \begin{align*}
 \displaystyle L_{A}:{\mathbb{R}}^{n}\rightarrow{\mathbb{R}}^{m}.
@@ -34,23 +34,23 @@ z\end{bmatrix})=\begin{bmatrix}x+2y+3z\\
 @end
 @newcol
  The map $L_{A}$ has the following properties:
-@newline
+
 @endcol
 @slide
 @prop
  For $\mathbf{v},\mathbf{u}\in{\mathbb{R}}^{n}$, $\alpha\in{\mathbb{R}}^{\hbox{}}$
-@newline<ol class="ltx_enumerate">
+<ol class="ltx_enumerate">
 <li class="ltx_item"> $L_{A}(\mathbf{v}+\mathbf{u})=L_{A}(\mathbf{v})+L_{A}(\mathbf{u})$ </li>
 <li class="ltx_item"> $L_{A}(\alpha\mathbf{v})=\alpha L_{A}(\mathbf{v})$. </li>
-@newline</ol>
+</ol>
 @end
 @proof
 @newcol
 <ol class="ltx_enumerate">
 <li class="ltx_item"> $L_{A}(\mathbf{v}+\mathbf{u})=A(\mathbf{v}+\mathbf{u})=A\mathbf{v}+A\mathbf{u}=L_{A}(\mathbf{v})+L_{A}(\mathbf{u})$ </li>
 <li class="ltx_item"> $L_{A}(\alpha\mathbf{v})=A(\alpha\mathbf{v})=\alpha A(\mathbf{v})=\alpha L_{A}(\mathbf{v})$. </li>
-@newline</ol>
-@newline
+</ol>
+
 @qed
 @endcol
 @end
@@ -59,19 +59,19 @@ z\end{bmatrix})=\begin{bmatrix}x+2y+3z\\
  Let $V,W$ be vector spaces (you can think of $V$ as subspace of ${\mathbb{R}}^{a}$ and $W$ as subspace of ${\mathbb{R}}^{b}$),
 $T:V\rightarrow W$.
 Then $T$ is said to be a linear transformation if for $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{u}\in W$.
-@newline<ol class="ltx_enumerate">
+<ol class="ltx_enumerate">
 <li class="ltx_item"> $T(\mathbf{v}+\mathbf{u})=T(\mathbf{v})+T(\mathbf{u})$ </li>
 <li class="ltx_item"> $T(\alpha\mathbf{v})=\alpha T(\mathbf{v})$. </li>
-@newline</ol>
+</ol>
 @end
 @section{Geometric interpretation of some linear transformations}
-@newline
+
 In below we regard $\begin{bmatrix}x\\
 y\end{bmatrix}$ as the point $(x,y)$ in the $xy$-plane. 
 @slide
 @eg
 @keyword{Rotation}
-@newline
+
 @newcol
  Let
 \begin{align*}
@@ -84,7 +84,7 @@ y\end{bmatrix}$ as the point $(x,y)$ in the $xy$-plane.
 @end
 @eg
 @keyword{Reflection}
-@newline
+
 @newcol
  Let $c$ be a real number,
 \begin{align*}
@@ -98,7 +98,7 @@ y\end{bmatrix}$ as the point $(x,y)$ in the $xy$-plane.
 @end
 @eg
 @keyword{Stretching}
-@newline
+
 @newcol
  Let $c$ be real number, then
 \begin{align*}
@@ -111,9 +111,9 @@ y\end{bmatrix}$ as the point $(x,y)$ in the $xy$-plane.
 @endcol
 @end
 @section{Coordinate vector and change of basis}
-@newline
+
 Let $V$ be a vector space(you can think of it as a subspace of ${\mathbb{R}}^{n}$). Let $B=\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\}$ be a basis for $V$. Recall the following theorem
-@newline
+
 @slide
 @thm
  Let $\mathbf{v}\in V$ and if
@@ -246,8 +246,8 @@ x_{3}\end{bmatrix}=\begin{bmatrix}2\\
 \end{align*} <ol class="ltx_enumerate">
 <li class="ltx_item"> Show that $\mathbf{u}\in\left&lt;B\right&gt;$. </li>
 <li class="ltx_item"> Hence find $\rho_{B}(\mathbf{u})$. </li>
-@newline</ol>
-@newline
+</ol>
+
 @col
  Find the solution of $\mathbf{u}=x_{1}\mathbf{v}_{1}+x_{2}\mathbf{v}_{2}+x_{3}\mathbf{v}_{3}$:
 \begin{align*}
@@ -266,10 +266,10 @@ x_{3}\end{bmatrix}=\begin{bmatrix}2\\
 @endcol
 @end
 @section{Change of basis}
-@newline
+
 Let $V$ be a vector space(you can think of it as a subspace of ${\mathbb{R}}^{n}$). Let $B=\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\}$ be a basis for $V$
 and $B^{\prime}=\{\mathbf{v}^{\prime}_{1},\ldots,\mathbf{v}^{\prime}_{k}\}$ be another basis for $V$. For $\mathbf{v}\in V$. We want to find the relation between $\rho_{B}(\mathbf{v})$ and $\rho_{B^{\prime}}(\mathbf{v})$.
-@newline
+
 @newcol
  Let
 \begin{align*}
@@ -430,7 +430,7 @@ i.e.
 @endcol
 @end
 @section{Similar matrices}
-@newline
+
 In this section, we will give the motivation of @keyword{similar matrices}.
 Let $V={\mathbb{R}}^{n}$, $B=\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\}$ be a basis for $V$.
 Let $B^{\prime}=\{\mathbf{e}_{1},\ldots,\mathbf{e}_{n}\}$. Let $Q=C_{{B},{B^{\prime}}}$.
@@ -458,6 +458,7 @@ Then for any $\mathbf{v}\in V$,
 @col
  So we say that two matrices $A_{1},A_{2}$ are similar if there exists an invertible matrix $Q$ such that $Q^{-1}A_{1}Q=A_{2}$.
 More details will be given in lecture 19.
-@newline
+
 @endcol
+@course{MATH 1030}
 <!--DELIMITER-->

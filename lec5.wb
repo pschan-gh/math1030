@@ -77,19 +77,19 @@ all matrix entries below a leftmost nonzero entry must be equal to zero.
 <strong>Terminology.</strong>
 @newcol
  A row of only zero entries is called a @keyword{zero row}.
-@newline
+
 @col
  In the case of a matrix in reduced row-echelon form,
 the leftmost nonzero entry of a nonzero row is a @keyword{leading 1}.
-@newline
+
 @col
  A column containing a leading 1 will be called a @keyword{pivot column}.
-@newline
+
 @col
  The number of nonzero rows will be denoted by $r$,
 which is also equal to the number of leading 1’s and
 the number of pivot columns.
-@newline
+
 @col
  The set of column indices for the pivot columns will be denoted by:
 \[
@@ -271,16 +271,16 @@ Consider column 1 (set $j=1$), find a nonzero entry (underline below) in the col
 \underline{2}&amp;2&amp;5&amp;9&amp;19\end{bmatrix}\] 
 @col
  Move the nonzero entry to row 1 by swapping rows $R_{1}\leftrightarrow R_{i}$.
-@newline
+
 @col
  If the entry at row 1, column 1 is nonzero, you don’t have to swap rows. But you can consider swap it with entry $=1$ or $-1$.
-@newline
+
 @col
  In this example, for column 1, 3rd entry and 4th entry are nonzero, so we can use $R_{1}\leftrightarrow R_{3}$ or $R_{1}\leftrightarrow R_{4}$.
-@newline
+
 @col
  There is nothing wrong about $R_{1}\leftrightarrow R_{4}$ but <strong>it is better to swap with the row with leading entry equal to $1$ or $-1$.</strong>
-@newline
+
 @col
  So we use $R_{1}\leftrightarrow R_{3}$.
 \[\xrightarrow{R_{1}\leftrightarrow R_{3}}\begin{bmatrix}\boxed{1}&amp;1&amp;2&amp;4&amp;8\\
@@ -289,16 +289,16 @@ Consider column 1 (set $j=1$), find a nonzero entry (underline below) in the col
 2&amp;2&amp;5&amp;9&amp;19\end{bmatrix}\]
 Also, at this point we increase $r$ to $r = 1$,
 since we now know we have at least one nonzero row.
-@newline
+
 @col
  If the boxed number is $1$, we are good to go.
-@newline
+
 @col
  If the boxed number is not equal to $1$, say it is $a$, use $\frac{1}{a}R_{1}$ to convert it to $1$.
-@newline
+
 @col
  Then use the boxed number to eliminate the nonzero entries above and below it by $\alpha R_{1}+R_{i}$.
-@newline
+
 @col
  In our example, the boxed number is $1$, so we don’t have to do anything. Use $-2R_{1}+R_{4}$ and to remove the nonzero entries below it and above it. Since we are at the first row, so there is nothing above it).
 \[\xrightarrow{-2R_{1}+R_{4}}\begin{bmatrix}\boxed{1}&amp;1&amp;2&amp;4&amp;8\\
@@ -308,9 +308,9 @@ since we now know we have at least one nonzero row.
 @col
  Now we go back to Step 1 in the proof of @ref{thm:REMEF},
 with column index $j$ increased to $2$ and $r = 1$.
-@newline<br/> In fact, we may as well ignore row 1 and column 1,
+<br/> In fact, we may as well ignore row 1 and column 1,
 and essentially apply the previous steps to the remaining $3 \times 4$ matrix:
-@newline
+
 @col
  \[
 \begin{bmatrix}*&amp;*&amp;*&amp;*&amp;*\\
@@ -319,8 +319,8 @@ and essentially apply the previous steps to the remaining $3 \times 4$ matrix:
 *&amp;\underline{0}&amp;1&amp;1&amp;3\end{bmatrix}
 \]
 The entries of column 2 are underlined.
-@newlineNone of them are nonzero, so we move to next column.
-@newline
+None of them are nonzero, so we move to next column.
+
 @col
  \[\begin{bmatrix}*&amp;*&amp;*&amp;*&amp;*\\
 *&amp;0&amp;\underline{1}&amp;1&amp;3\\
@@ -330,7 +330,7 @@ The entries of column 2 are underlined.
  Consider column 3.
 That is, set $j=3$.
 (Note that the number of nonzero rows is still $r = 1$.)
-@newline
+
 @col
  All the entries of column 3 are equal to $1$.
 So, we don’t need to do any swapping.
@@ -389,7 +389,7 @@ above it and below it and get the RREF.
 @newcol
  Set $r = 0$.
 We first consider column 1 (set $j=1$).
-@newlineFind a nonzero entry (underline below) in the column.
+Find a nonzero entry (underline below) in the column.
 \[\begin{bmatrix}\underline{0}&amp;0&amp;2&amp;2&amp;6&amp;2&amp;3\\
 \underline{2}&amp;4&amp;1&amp;3&amp;7&amp;3&amp;-1\\
 \underline{1}&amp;2&amp;2&amp;3&amp;8&amp;2&amp;1\\
@@ -397,16 +397,16 @@ We first consider column 1 (set $j=1$).
 \end{bmatrix}\] 
 @col
  Move the nonzero entry to row 1 by swapping rows $R_{1}\leftrightarrow R_{i}$.
-@newline
+
 @col
  If the entry at row 1, column 1 is nonzero, you don’t have to swap rows. But you can consider swap it with entry $=1$ or $-1$.
-@newline
+
 @col
  In this example, for column 1, 2nd entry, 3rd entry and 4th entry are nonzeros, so we can use $R_{1}\leftrightarrow R_{2}$, $R_{1}\leftrightarrow R_{3}$ or $R_{1}\leftrightarrow R_{4}$.
-@newline
+
 @col
  There is nothing wrong about $R_{1}\leftrightarrow R_{2}$ but <strong>it is better to swap with the row with entry equal to $1$ or $-1$.</strong>
-@newline
+
 @col
  So we use $R_{1}\leftrightarrow R_{3}$.
 \[\xrightarrow{R_{1}\leftrightarrow R_{3}}\begin{bmatrix}\boxed{1}&amp;2&amp;2&amp;3&amp;8&amp;2&amp;%
@@ -417,13 +417,13 @@ We first consider column 1 (set $j=1$).
 \end{bmatrix}\] 
 @col
  If the boxed number is $1$, we are good to go.
-@newline
+
 @col
  If the boxed number is not equal to $1$, say it is $a$, use $\frac{1}{a}R_{1}$ to convert it to $1$.
-@newline
+
 @col
  Then use the boxed number to eliminate the nonzero entries above and below it by $\alpha R_{1}+R_{i}$.
-@newline
+
 @col
  In our example, the boxed number is $1$, so we don’t have to do anything. Use $-2R_{1}+R_{2}$ and $-1R_{1}+R_{4}$ to remove the nonzero entries below it and above it. Since we are at the first row, so there is nothing above it.
 \[\xrightarrow{-2R_{1}+R_{2},\;-1R_{1}+R_{4}}\begin{bmatrix}1&amp;2&amp;2&amp;3&amp;8&amp;2&amp;1\\
@@ -439,7 +439,7 @@ We first consider column 1 (set $j=1$).
 *&amp;\underline{0}&amp;-3&amp;-3&amp;-9&amp;0&amp;-2\\
 \end{bmatrix}\]
 None of the entries of column 2 are nonzero.
-@newline
+
 @col
  So, we consider the next column ($j = 3$, $r = 1$).
 \[\begin{bmatrix}*&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*\\
@@ -447,12 +447,12 @@ None of the entries of column 2 are nonzero.
 *&amp;0&amp;\underline{2}&amp;2&amp;6&amp;2&amp;3\\
 *&amp;0&amp;\underline{-3}&amp;-3&amp;-9&amp;0&amp;-2\\
 \end{bmatrix}\]
-@newline
+
 @col
  Find a nonzero entry in column 3.
 In this case, all the entries are nonzero,
 so we may increase the number of nonzero rows to $r = 2$.
-@newline
+
 @col
  There is no entry equal to $1$ or $-1$.
 We don’t need to so any swapping.
@@ -485,7 +485,7 @@ We don’t need to so any swapping.
 *&amp;*&amp;*&amp;\underline{0}&amp;0&amp;1&amp;1\\
 \end{bmatrix}\]
 Consider the column with index $j = 4$.
-@newline
+
 @col
  All the entries in column 4 (underlined) are equal to zero.
 So, we move to the next column, with index $j=5$.
@@ -497,7 +497,7 @@ So, we move to the next column, with index $j=5$.
 @col
  Again, all the entries in column 5 (underlined) are equal to zero.
 So, we move to the next column, with index $j=6$.
-@newline
+
 @col
  \[\begin{bmatrix}*&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*\\
 *&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*\\
@@ -629,7 +629,7 @@ x_{1}+4x_{3}&amp;=5
 \] 
 @col
  This is now the augmented matrix of a very simple system of equations, namely $x_{1}=-3$, $x_{2}=5$, $x_{3}=2$, which has an obvious solution. Furthermore, we can see that this is the <strong>only</strong> solution to this system, so we have determined the entire solution set,
-@newline
+
 @col
  \[\displaystyle S=\left\{\begin{bmatrix}-3\\
 5\\
@@ -671,7 +671,7 @@ c}\boxed{1}&amp;0&amp;1&amp;3\\
 @col
  The system of equations represented by this augmented matrix needs to be considered a bit differently than the previous case.
 First, the last row of the matrix is the equation $0=0$, which is always true, so it imposes no restrictions on our possible solutions and therefore we can safely ignore it as we analyze the other two equations. These equations are:
-@newline
+
 @col
  \[\displaystyle x_{1}+x_{3}=3\]
 \[\displaystyle x_{2}-x_{3}=2.\] 
@@ -683,7 +683,7 @@ Try it yourself: pick any value of $x_{3}$ you please, and figure out what $x_{1
 \[\displaystyle x_{1}=3-x_{3}\]
 \[\displaystyle x_{2}=2+x_{3}\]
 To write the set of solution vectors in set notation, we have:
-@newline
+
 @col
  \[\displaystyle
 S =
@@ -810,7 +810,7 @@ For the $5\times 9$ matrix
 0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;\boxed{1}&amp;4&amp;2\\
 0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}\]
 in reduced row-echelon form we have:
-@newline
+
 @newcol
  \begin{align*}
 r&amp;=4\\
@@ -856,7 +856,7 @@ x_1 +4x_2  - x_4  + 7x_6 - 9x_7 &amp;= 3\\
 -1&amp;-4&amp;2&amp;4&amp;8&amp;-31&amp;37&amp;4\end{array}\right]\]
 The matrix is row-equivalent to the following matrix reduced row-echelon form
 (<strong>exercise</strong>: check this)
-@newline
+
 @col
  \[\left[\begin{array}[]{ccccccc|c}\boxed{1}&amp;4&amp;0&amp;0&amp;2&amp;1&amp;-3&amp;4\\
 0&amp;0&amp;\boxed{1}&amp;0&amp;1&amp;-3&amp;5&amp;2\\
@@ -865,7 +865,7 @@ The matrix is row-equivalent to the following matrix reduced row-echelon form
 So we find that $r=3$ and
 \[\displaystyle D=\{d_{1},\,d_{2},\,d_{3}\}=\{1,\,3,\,4\}\]
 Let $i$ denote any one of the $r=3$ nonzero rows. Then the index $d_{i}$ is a pivot column. It will be easy in this case to use the equation represented by row $i$ to write an expression for the variable $x_{d_{i}}$. It will be a linear function of the variables $x_{f_{1}},\,x_{f_{2}},\,x_{f_{3}},\,x_{f_{4}}$
-@newline
+
 @col
  \begin{align*}
 (i=1)&amp; &amp; x_{d_1}&amp;=x_1=4-4x_2-2x_5-x_6+3x_7\\
@@ -874,10 +874,10 @@ Let $i$ denote any one of the $r=3$ nonzero rows. Then the index $d_{i}$ is a pi
 \end{align*} 
 @col
  Each element of the set $F=\{f_{1},\,f_{2},\,f_{3},\,f_{4},\,f_{5}\}=\{2,\,5,\,6,\,7,\,8\}$ is the index of a variable, except for $f_{5}=8$. We refer to $x_{f_{1}}=x_{2}$, $x_{f_{2}}=x_{5}$, $x_{f_{3}}=x_{6}$ and $x_{f_{4}}=x_{7}$ as @keyword{free} (or @keyword{independent}) variables since they are allowed to assume any possible combination of values that we can imagine and we can continue on to build a solution to the system by solving individual equations for the values of the other (@keyword{dependent}) variables.
-@newline
+
 @col
  Each element of the set $D=\{d_{1},\,d_{2},\,d_{3}\}=\{1,\,3,\,4\}$ is the index of a variable. We refer to the variables $x_{d_{1}}=x_{1}$, $x_{d_{2}}=x_{3}$ and $x_{d_{3}}=x_{4}$ as @keyword{dependent} variables since they depend on the independent variables. More precisely, for each possible choice of values for the independent variables we get exactly one set of values for the dependent variables that combine to form a solution of the system.
-@newline
+
 @col
  To express the solutions as a set, we write
 \begin{equation}\left\{\left.\begin{bmatrix}
@@ -907,7 +907,7 @@ x_2, x_5, x_6, x_7 \in \mathbb{R}
 \] 
 @col
  The condition that $x_{2},\,x_{5},\,x_{6},\,x_{7}$ are real numbers is how we specify that the variables $x_{2},\,x_{5},\,x_{6},\,x_{7}$ are <strong>free</strong> to assume any possible values.
-@newline
+
 @col
  This systematic approach to solving a system of equations will allow us to create a precise description of the solution set for any consistent system once we have found the reduced row-echelon form of the augmented matrix. It will work just as well when the set of free variables is empty and we get just a single solution. 
 @endcol
@@ -926,7 +926,7 @@ A variable that is not dependent is called <strong>independent</strong> or <stro
 @keyword*{Free and dependent variables}
 @eg
 @label{FDV}
-@newline
+
 @newcol
  Consider the system of five equations in five variables,
 \begin{align*}
@@ -937,7 +937,7 @@ x_1 - x_2 +  x_3+  x_4 + 5 x_5 &amp;= 16 \\
 2 x_1  -2 x_ 2 +  x_3 +  x_4 + 8 x_ 5&amp;= 22
 \end{align*}
 whose augmented matrix row-reduces to:
-@newline
+
 @col
  \begin{equation}
 \left[\begin{array}[]{ccccc|c}\boxed{1}&amp;-1&amp;0&amp;0&amp;3&amp;6\\
@@ -948,7 +948,7 @@ whose augmented matrix row-reduces to:
 \end{equation} 
 @col
  Columns 1, 3 and 4 are pivot columns, so $D=\{1,\,3,\,4\}$. From this we know that the variables $x_{1}$, $x_{3}$ and $x_{4}$ will be dependent variables, and each of the $r=3$ nonzero rows of the row-reduced matrix will yield an expression for one of these three variables. The set $F$ is all the remaining column indices, $F=\{2,\,5,\,6\}$. The column index $6$ in $F$ means that the final column is not a pivot column, and thus the system is consistent (see the next theorem). The remaining indices in $F$ indicate free variables, so $x_{2}$ and $x_{5}$ (the remaining variables) are our free variables. The resulting three equations that describe our solution set are then,
-@newline
+
 @col
  \begin{align*}
 (x_{d_1}=x_1)&amp; &amp; x_1&amp;=6+x_2-3x_5\\
@@ -987,7 +987,7 @@ a system of linear equations is @keyword{consistent} if and only if the last @ke
 @newcol
  (sketch, for details, see Beezer, Ver 3.5 print version p.38, proof of theorem RCLS, you can skip the proof in the textbook)
 If the last column vector of $B$ is a pivot column, then $B$ is in the form of:
-@newline
+
 @col
  \[\begin{bmatrix}
 1 &amp; \cdots &amp; 0 &amp; \cdots &amp; 0 &amp; \cdots &amp; * &amp; 0\\
@@ -1002,7 +1002,7 @@ For the system of linear equations with the above augmented matrix, the $r+1$-st
 \[0=1.\]
 So the system of linear equations has no solution.
 Conversely, if the last column vector is not a pivot column vector, then $B$ is in the form of:
-@newline
+
 @col
  \[\begin{bmatrix}
 1 &amp; \cdots &amp; 0 &amp; \cdots &amp; 0 &amp; \cdots &amp; 0 &amp; \cdots\\
@@ -1086,7 +1086,7 @@ x_4+x_5+7 x_6 &amp;=-1
 Notice first that $B$ has $n+1$ columns, so there can be at most $n+1$ pivot columns, i.e., $r\leq n+1$.
 If $r=n+1$, then every column of $B$ is a pivot column, and in particular, the last column is a pivot column.
 So the previous theorem tells us that the system is inconsistent, contrary to our hypothesis. We are left with $r\leq n$.
-@newlineWhen $r=n$, we find $n-r=0$ free variables (i.e., $F=\{n+1\}$) and the only solution is given by setting the $n$ variables to the the first $n$ entries of column $n+1$ of $B$.
+When $r=n$, we find $n-r=0$ free variables (i.e., $F=\{n+1\}$) and the only solution is given by setting the $n$ variables to the the first $n$ entries of column $n+1$ of $B$.
 When $r &lt; n$, we have $n-r &gt; 0$ free variables. Choose one free variable and set all the other free variables to zero. Now, set the chosen free variable to any fixed value. It is possible to then determine the values of the dependent variables to create a solution to the system. By setting the chosen free variable to different values, in this manner we can create infinitely many solutions. 
 @qed
 @endcol
@@ -1104,7 +1104,7 @@ When $r &lt; n$, we have $n-r &gt; 0$ free variables. Choose one free variable a
 @enumerate
 @item
  System of linear equations with $n=3$, $m=3$.
-@newline
+
 @newcol
  \begin{align*}
 x_1 -x_2 +2x_3 &amp; =1\\
@@ -1128,7 +1128,7 @@ x_2 &amp;= 2+x_3
 @endcol
 @item
  System of linear equations with $n=3,m=3$.
-@newline
+
 @newcol
  \begin{align*}
 -7x_1 -6 x_2 - 12x_3 &amp;=-33\\
@@ -1154,7 +1154,7 @@ x_3 &amp;= 2
 @endcol
 @item
  System of linear equations with $n=2$, $m=5$.
-@newline
+
 @newcol
  \begin{align*}
 2x_1  + 3x_2  &amp;= 6 \\
@@ -1182,7 +1182,7 @@ The last column is not a pivot column. So the system of linear equations is cons
 @endcol
 @item
  System of linear equations with $n=4,m=3$.
-@newline
+
 @newcol
  \begin{align*}
 2x_1  + x_2 + 7x_3 - 7x_4 &amp;= 2 \\
@@ -1259,4 +1259,5 @@ Identify the location of the pivot columns, and the rank $r$.
 @endenumerate
 @endcol
 @endenumerate
+@course{MATH 1030}
 <!--DELIMITER-->

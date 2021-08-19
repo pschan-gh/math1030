@@ -2,8 +2,8 @@
 @chapter{Inverse}
 <h5 class="notkw">Reference.</h5>
  Beezer, Ver 3.5 Section MISLE, Section MINM (print version p149 - p161)
-@newline<h5 class="notkw">Exercise.</h5> Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdfSection MISLE (p60-64), all. Section MINM C20, C40, M10, M11, M15, M80, T25.
-@newline
+<h5 class="notkw">Exercise.</h5> Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdfSection MISLE (p60-64), all. Section MINM C20, C40, M10, M11, M15, M80, T25.
+
 @section{Solution Inverse}
 @label{SI}
  The inverse of a square matrix, and solutions to linear systems with square coefficient matrices, are intimately connected. 
@@ -72,7 +72,7 @@ and note the remarkable fact that
 \end{align*} 
 @col
  The first has no solutions, while the second has infinitely many solutions. For matrices, it is all just a little more complicated. Some matrices have inverses, some do not. And when a matrix does have an inverse, just how would we compute it? In other words, just where did that matrix $B$ in the last example come from? Are there other matrices that might have worked just as well?
-@newline
+
 @endcol
 @section{Inverse of a Matrix}
 @defn
@@ -80,7 +80,7 @@ and note the remarkable fact that
 @end
 @newcol
  Notice that if $B$ is the inverse of $A$, then we can just as easily say $A$ is the inverse of $B$, or $A$ and $B$ are inverses of each other.
-@newline
+
 @col
  Not every square matrix has an inverse. 
 @endcol
@@ -100,7 +100,7 @@ and note the remarkable fact that
 2\end{bmatrix}
 \end{align*}
 and consider the system of equations $A\mathbf{x}=\mathbf{b}$. Just as in the previous example, this vector equation would have the unique solution $\mathbf{x}=B\mathbf{b}$.
-@newline
+
 @col
  However, the system $A\mathbf{x}=\mathbf{b}$ is inconsistent. Form the augmented matrix $\left[A|\mathbf{b}\right]$ and row-reduce to
 \begin{align*}
@@ -109,7 +109,7 @@ and consider the system of equations $A\mathbf{x}=\mathbf{b}$. Just as in the pr
 0&amp;0&amp;0&amp;\boxed{1}\end{bmatrix}
 \end{align*}
 which allows us to recognize the inconsistency.
-@newline
+
 @col
  So the assumption of $A$’s inverse leads to a logical inconsistency (the system cannot be both consistent and inconsistent), so our assumption is false. $A$ is not invertible. 
 @endcol
@@ -134,7 +134,7 @@ which allows us to recognize the inconsistency.
 \end{align*} 
 @col
  So $B$ is the inverse of $A$.
-@newline
+
 @col
 <strong>2.</strong> \begin{align*}
 \displaystyle A=\left[\begin{array}[]{ccc}1&amp;1&amp;1\\
@@ -152,7 +152,7 @@ which allows us to recognize the inconsistency.
 \end{align*} 
 @col
  So $B$ is the inverse of $A$.
-@newline<strong>3.</strong> Consider the matrices,
+<strong>3.</strong> Consider the matrices,
 \begin{align*}
 \displaystyle A&amp;\displaystyle=\begin{bmatrix}1&amp;2&amp;1&amp;2&amp;1\\
 -2&amp;-3&amp;0&amp;-5&amp;-1\\
@@ -201,7 +201,7 @@ so by the definition of inverse matrix, we can say that $A$ is invertible and wr
 @newcol
  We will now concern ourselves less with whether or not an inverse of a matrix exists, but instead with how you can find one when it does exist.
 Later we will have some theorems that allow us to more quickly and easily determine just when a matrix is invertible.
-@newline
+
 @endcol
 @slide
 @thm
@@ -222,7 +222,7 @@ c&amp;d\end{bmatrix}
 @end
 @proof
 @skip
-@newline
+
 $\Leftarrow$ 
 @newcol
  Assume that $ad-bc\neq 0$. We will use the definition of the inverse of a matrix to establish that $A$ has an inverse. Note that if $ad-bc\neq 0$ then the displayed formula for $A^{-1}$ is legitimate since we are not dividing by zero).
@@ -243,7 +243,7 @@ c&amp;d\end{bmatrix}=\frac{1}{ad-bc}\begin{bmatrix}ad-bc&amp;0\\
 @col
  This is sufficient to establish that $A$ is invertible, and that the expression for $A^{-1}$ is correct. 
 @endcol
-@newline$\Rightarrow$ 
+$\Rightarrow$ 
 @newcol
  Assume that $A$ is invertible, and proceed with a proof by contradiction, by assuming also that $ad-bc=0$. This translates to $ad=bc$. Let
 \begin{align*}
@@ -251,7 +251,7 @@ c&amp;d\end{bmatrix}=\frac{1}{ad-bc}\begin{bmatrix}ad-bc&amp;0\\
 g&amp;h\end{bmatrix}
 \end{align*}
 be a putative inverse of $A$.
-@newline
+
 @col
  This means that
 \begin{align*}
@@ -276,7 +276,7 @@ ace+bcg&amp;acf+bch\end{bmatrix}
 \end{align*} 
 @col
  The matrix on the right now has two rows that are identical, and therefore the same must be true of the matrix on the left. Identical rows for the matrix on the left implies that $a=0$ and $c=0$.
-@newline
+
 @col
  With this information, the product $AB$ becomes
 \begin{align*}
@@ -293,7 +293,7 @@ dg&amp;dh\end{bmatrix}
 @end
 @newcol
  There are several ways one could try to prove this theorem, but there is a continual temptation to divide by one of the eight entries involved ($a$ through $f$), but we can never be sure if these numbers are zero or not. This could lead to an analysis by cases, which is messy, messy, messy. Note how the above proof never divides, but always multiplies, and how zero/nonzero considerations are handled. Pay attention to the expression $ad-bc$, as we will see it again in a while.
-@newline
+
 @col
  This theorem is cute, and it is nice to have a formula for the inverse, and a condition that tells us when we can use it. However, this approach becomes impractical for larger matrices, even though it is possible to demonstrate that, in theory, there is a general formula. (Think for a minute about extending this result to just $3\times 3$ matrices. For starters, we need 18 letters!) Instead, we will work column-by-column. Let us first work an example that will motivate the main theorem and remove some of the previous mystery. 
 @endcol
@@ -355,7 +355,7 @@ J_2[J_1 A | J_1 I_n] = [J_2 J_1 A | J_2J_1]
 \end{array}\right].
 \end{align*}
 Find $A^{-1}$.
-@newline
+
 @newcol
  \begin{align*}
 \displaystyle [A|I_3]=\left[\begin{array}[]{ccc|ccc}1&amp;1&amp;1&amp;1&amp;0&amp;0\\
@@ -396,7 +396,7 @@ Find $A^{-1}$.
 \end{align*} 
 @endcol
 @end
-@newline
+
 @slide
 @eg
 @title{Computing a matrix inverse}
@@ -407,7 +407,7 @@ Find $A^{-1}$.
 1&amp;0&amp;4\end{bmatrix}.
 \]
 Find $B^{-1}$.
-@newline
+
 @newcol
  \begin{align*}
 \displaystyle M=&amp;\displaystyle
@@ -435,14 +435,14 @@ Find $B^{-1}$.
 @title{Nonsingular Matrix Equivalences, Round 3}
 @label{NME3}
  Suppose that $A$ is a square matrix of size $n$. The following are equivalent.
-@newline<ol class="ltx_enumerate">
+<ol class="ltx_enumerate">
 <li class="ltx_item"> $A$ is nonsingular. </li>
 <li class="ltx_item"> $A$ row-reduces to the identity matrix. </li>
 <li class="ltx_item"> The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$. </li>
 <li class="ltx_item"> The linear system $A\mathbf{x}=\mathbf{b}$ has a unique solution for every possible choice of $\mathbf{b}$. </li>
 <li class="ltx_item"> The columns of $A$ are a linearly independent set. </li>
 <li class="ltx_item"> $A$ is invertible. </li>
-@newline</ol>
+</ol>
 @end
 @slide
 @thm
@@ -527,7 +527,7 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
 @qed
 @endcol
 @end
-@newline
+
 @slide
  When most of us dress in the morning, we put on our socks first, followed by our shoes. In the evening we must then first remove our shoes, followed by our socks. Try to connect the conclusion of the following theorem with this everyday example. 
 @thm
@@ -623,6 +623,7 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
 @end
 @newcol
  It would be tempting, for example, to think that $(A+B)^{-1}=A^{-1}+B^{-1}$, but this is false. Can you find a counterexample?
-@newline
+
 @endcol
+@course{MATH 1030}
 <!--DELIMITER-->

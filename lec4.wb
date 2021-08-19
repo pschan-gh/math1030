@@ -1,7 +1,7 @@
 @course{MATH 1030}
 @chapter{Matrices}
  The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at http://linear.ups.edu/download.htmlPrint version can be downloaded at http://linear.ups.edu/download/fcla-3.50-print.pdf
-@newline<br/><h5 class="notkw">Reference.</h5><ul>
+<br/><h5 class="notkw">Reference.</h5><ul>
 <li> Beezer, Ver 3.5 Subsection MVNSE (print version p17 - p21) </li>
 <li> Strang, Sect 1.4 </li></ul>
 @section{Introduction}
@@ -124,7 +124,7 @@ B=\begin{bmatrix}6&amp;2&amp;-4\\
 3&amp;5&amp;2\end{bmatrix}
 \]
 then:
-@newline
+
 @newcol
  \[\displaystyle A+B=\begin{bmatrix}2&amp;-3&amp;4\\
 1&amp;0&amp;-7\end{bmatrix}+\begin{bmatrix}6&amp;2&amp;-4\\
@@ -171,7 +171,7 @@ and $\lambda=7$, then
 @defn
 @title{Zero Matrix}
  The $m\times n$ @keyword{zero matrix} is written as ${\cal O}={\cal O}_{m\times n}$ and defined by $\left[{\cal O}\right]_{ij}=0$, for all $1\leq i\leq m$, $1\leq j\leq n$, i.e.
-@newline
+
 @newcol
  \[{\cal O}={\cal O}_{m\times n}=\begin{bmatrix}0&amp;0&amp;\cdots&amp;0\\
 0&amp;0&amp;\cdots&amp;0\\
@@ -179,7 +179,7 @@ and $\lambda=7$, then
 0&amp;0&amp;\cdots&amp;0\end{bmatrix}.\] 
 @endcol
 @end
-@newline
+
 @defn
 @title{Additive Inverse}
 @newcol
@@ -262,10 +262,10 @@ we have:
  As an example, we prove here property 7,
 $(\alpha+\beta)A=\alpha A+\beta A$.
 We need to establish the equality of two matrices.
-@newline
+
 @col
  For any $i$ and $j$, $1\leq i\leq m$, $1\leq j\leq n$,
-@newline
+
 @col
 @steps
 \begin{align*}
@@ -330,7 +330,7 @@ is same as:
 @eg
 @newcol
  One can also form @keyword{augmented matrices} as follows:
-@newline
+
 @col
  \[A=\begin{bmatrix}1&amp;2\\
 3&amp;4\\
@@ -451,13 +451,13 @@ x_{n}\\
 \[\displaystyle 3x_{1}+x_{2}+\quad\quad x_{4}-3x_{5}=0\]
 \[\displaystyle-2x_{1}+7x_{2}-5x_{3}+2x_{4}+2x_{5}=-3\]
 has coefficient matrix:
-@newline
+
 @col
  \[A=\left[\begin{array}[]{ccccc}2&amp;4&amp;-3&amp;5&amp;1\\
 3&amp;1&amp;0&amp;1&amp;-3\\
 -2&amp;7&amp;-5&amp;2&amp;2\end{array}\right]\]
 and vector of constants:
-@newline
+
 @col
  \[\mathbf{b}=\begin{bmatrix}9\\
 0\\
@@ -482,20 +482,20 @@ The next two definitions and the following theorem carry over these ideas to aug
 @item
 @newcol
  Swap the locations of two rows.
-@newline<strong>Notation</strong>: $R_{i}\leftrightarrow R_{j}$
-@newline(Swap the location of rows $i$ and $j$.) 
+<strong>Notation</strong>: $R_{i}\leftrightarrow R_{j}$
+(Swap the location of rows $i$ and $j$.) 
 @endcol
 @item
 @newcol
  Multiply each entry of a single row by a nonzero number.
-@newline<strong>Notation</strong>: $\alpha R_{i}$
-@newline(Multiply row $i$ by the nonzero scalar $\alpha$.) 
+<strong>Notation</strong>: $\alpha R_{i}$
+(Multiply row $i$ by the nonzero scalar $\alpha$.) 
 @endcol
 @item
 @newcol
  Multiply each entry of one row by some number, and add these values to the entries in the same columns of a second row. Leave the first row the same after this operation, but replace the second row by the new values.
-@newline<strong>Notation</strong>: $\alpha R_{i}+R_{j}$
-@newline(Multiply row $i$ by the scalar $\alpha$ and add to row $j$.) 
+<strong>Notation</strong>: $\alpha R_{i}+R_{j}$
+(Multiply row $i$ by the scalar $\alpha$ and add to row $j$.) 
 @endcol
 @endenumerate
 @end
@@ -528,7 +528,7 @@ B=\begin{bmatrix}
 \end{bmatrix}
 \end{align*}
 are row-equivalent, as can be seen from:
-@newline
+
 @newcol
 @steps
 \begin{align*}
@@ -572,7 +572,7 @@ are row-equivalent, as can be seen from:
 @proof
 @newcol
  To be shown later.
-@newlineSee also [ Beezer, Theorem REMES (Ver 3.5 print version p.20) ] 
+See also [ Beezer, Theorem REMES (Ver 3.5 print version p.20) ] 
 @endcol
 @end
 @newcol
@@ -668,7 +668,7 @@ A=
 \end{align*}
 
 @endsteps
-@newline
+
 @col
  So the matrix
 \[
@@ -682,7 +682,7 @@ A=
 \]
 is row equivalent to $A$.
 By the previous theorem (@ref{REMES}), the system of equations below has the same solution set as the original system of equations:
-@newline
+
 @col
  \begin{align*}
 x_1+2x_2+2x_3&amp;=4\\
@@ -693,4 +693,5 @@ x_3&amp;=4
  The third equation requires that $x_{3}=4$ to be true. Making this substitution into equation 2 we arrive at $x_{2}=-3$, and finally, substituting these values of $x_{2}$ and $x_{3}$ into the first equation, we find that $x_{1}=2$. 
 @endcol
 @end
+@course{MATH 1030}
 <!--DELIMITER-->

@@ -1,9 +1,9 @@
 @course{MATH 1030}
 @chapter{Homogeneous Systems of Equations and Nonsingular Matrices}
-@newline
+
 <h5 class="notkw">Reference.</h5>
  Beezer, Ver 3.5 Section HSE (print version p44 - p50)Section NM (print version p51 - p56)
-@newline<h5 class="notkw">Exercise.</h5> Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf 
+<h5 class="notkw">Exercise.</h5> Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf 
 @enumerate
 @item
  Section HSE (ex p.18-23) C21-C23, C25-C27, C30-C31, M50-M52, T10-T12, T20 
@@ -194,8 +194,8 @@ x_1 +x_2 + 4x_3 - 5x_4 &amp;=  4
 \end{align*}
 is a consistent system of equations with a nontrivial null space.
 Let $A$ denote the coefficient matrix of this system.
-@newlineConsider the following three solutions to the system:
-@newline
+Consider the following three solutions to the system:
+
 @newcol
  \begin{align*}
 \vect{y}_1=\colvector{0\\1\\2\\1}&amp;&amp;
@@ -215,7 +215,7 @@ Let $\mathbf{w}=\mathbf{y}_{1}$. Then,
 2\end{bmatrix}
 \]
 are indeed elements in ${\mathcal{N}}\!\left(A\right)$ (check!).
-@newline
+
 @col
  To find all the solutions, we may first work out
 (using Gaussian elimination on $\left[A|\mathbf{0}\right]$, for example) that:
@@ -228,7 +228,7 @@ are indeed elements in ${\mathcal{N}}\!\left(A\right)$ (check!).
 1\end{bmatrix}\,\right|\,x_{3},\,x_{4}\in{\mathbb{R}}^{\hbox{}}\right\}
 \]
 By the theorem, the solution set to the linear system is:
-@newline
+
 @col
  \[\mathbf{w}+{\mathcal{N}}\!\left(A\right)=\left\{\left.\begin{bmatrix}0\\
 1\\
@@ -252,7 +252,7 @@ then
 \[[A|\mathbf{0}]\xrightarrow{\text{same row operations}}[B|\mathbf{0}].\] 
 @newcol
  Therefore, for the homogeneous system of linear equations, we can replace the augmented matrix by the coefficient matrix. Just remember there is actually a zero column as the last column. For example:
-@newline
+
 @col
  \begin{align*}
 2x_1  + x_2 + 7x_3 - 7x_4 &amp;= 0 \\
@@ -260,26 +260,26 @@ then
 x_1 +x_2 + 4x_3 - 5x_4 &amp;=  0
 \end{align*}
 We can start with coefficient matrix:
-@newline
+
 @col
  \[A=\begin{bmatrix}2&amp;1&amp;6&amp;-7\\
 -3&amp;4&amp;-5&amp;-6\\
 1&amp;1&amp;4&amp;-5\end{bmatrix}\]
 The RREF is:
-@newline
+
 @col
  \[\left[\begin{array}[]{cccc}\boxed{1}&amp;0&amp;3&amp;-2\\
 0&amp;\boxed{1}&amp;1&amp;-3\\
 0&amp;0&amp;0&amp;0\end{array}\right]\]
 The corresponding augmented matrix is:
-@newline
+
 @col
  \[\left[\begin{array}[]{cccc|c}\boxed{1}&amp;0&amp;3&amp;-2&amp;0\\
 0&amp;\boxed{1}&amp;1&amp;-3&amp;0\\
 0&amp;0&amp;0&amp;0&amp;0\end{array}\right]\]
 The system is consistent. It has $n-r=4-2=2$ free variables.
 The solution set is:
-@newline
+
 @col
  \begin{align*}
 S&amp;=\setparts{\colvector{x_1\\x_2\\x_3\\x_4}}{x_1=-3x_3+2x_4,\,x_2=-x_3+3x_4}\\
@@ -364,14 +364,14 @@ and every possible pivot column appears once.
  Suppose that $A$ is a square matrix and $B$ is a row-equivalent matrix in reduced row-echelon form. Then $A$ is nonsingular if and only if $B$ is the identity matrix. 
 @end
 @proof
-@newline
+
 ($\Leftarrow$) 
 @newcol
  Suppose $B$ is the identity matrix. When the augmented matrix $\left[A|\mathbf{0}\right]$ is row-reduced, the result is $\left[B|\mathbf{0}\right]=\left[I_{n}|\mathbf{0}\right]$. The number of nonzero rows is equal to the number of variables in the linear system of equations $\linearsystem{A}{\mathbf{0}}$, so $n=r$ and has $n-r=0$ free variables.
 Thus, the homogeneous system $\linearsystem{A}{\mathbf{0}}$ has just one solution, which must be the trivial solution.
 This is exactly the definition of a nonsingular matrix. 
 @endcol
-@newline($\Rightarrow$) 
+($\Rightarrow$) 
 @newcol
  If $A$ is nonsingular, then the homogeneous system
 $\linearsystem{A}{\mathbf{0}}$ has a unique solution,
@@ -409,7 +409,7 @@ Since $B$ is the $3\times 3$ identity matrix, $A$ is a nonsingular matrix by the
 @label{NMI}
  For $\alpha,\beta\in{\mathbb{R}}^{\hbox{}}$, then $\alpha\beta\neq 0$ if and only if $\alpha\neq 0$ and $\beta\neq 0$.
 We have a similar result for nonsingular matrix
-@newline
+
 @slide
 @thm
 @title{Nonsingular Product has Nonsingular Terms}
@@ -419,11 +419,11 @@ We have a similar result for nonsingular matrix
 @proof
 @newcol
  ($\Rightarrow$) For this portion of the proof we will form the logically-equivalent contrapositive and prove that statement using two cases.
-@newline<blockquote> $AB$ is nonsingular implies $A$ and $B$ are both nonsingular. </blockquote> becomes
-@newline
+<blockquote> $AB$ is nonsingular implies $A$ and $B$ are both nonsingular. </blockquote> becomes
+
 @col
 <blockquote> $A$ or $B$ is singular implies $AB$ is singular. </blockquote>
-@newline
+
 @col
  Case 1. Suppose $B$ is singular. Then there is a nonzero vector $\mathbf{z}$ that is a solution to $B\mathbf{x}=\mathbf{0}$. So
 \begin{align*}
@@ -433,7 +433,7 @@ We have a similar result for nonsingular matrix
 \end{align*} 
 @col
  Then $\mathbf{z}$ is a nonzero solution to $AB\mathbf{x}=\mathbf{0}$. Thus $AB$ is singular as desired.
-@newline
+
 @col
  Case 2. Suppose $A$ is singular, and $B$ is not singular.
 Because $A$ is singular, there is a nonzero vector $\mathbf{y}$ that is a solution to $A\mathbf{x}=\mathbf{0}$. Now consider the linear system $B\mathbf{x}=\mathbf{y}$. Since $B$ is nonsingular, the system has a unique solution, which we will denote as $\mathbf{w}$. We first claim $\mathbf{w}$ is not the zero vector either. Assuming the opposite, suppose that $\mathbf{w}=\mathbf{0}$. Then
@@ -448,7 +448,7 @@ Because $A$ is singular, there is a nonzero vector $\mathbf{y}$ that is a soluti
 \end{align*} 
 @col
  So $\mathbf{w}$ is a nonzero solution to $AB\mathbf{x}=\mathbf{0}$. Thus $AB$ is singular as desired. And this conclusion holds for both cases.
-@newline($\Leftarrow$) Now assume that both $A$ and $B$ are nonsingular. Suppose that $\mathbf{x}\in{\mathbb{R}}^{n}$ is a solution to $AB\mathbf{x}=\mathbf{0}$. Then
+($\Leftarrow$) Now assume that both $A$ and $B$ are nonsingular. Suppose that $\mathbf{x}\in{\mathbb{R}}^{n}$ is a solution to $AB\mathbf{x}=\mathbf{0}$. Then
 \begin{align*}
 \displaystyle\mathbf{0}&amp;\displaystyle=\left(AB\right)\mathbf{x} \\
 &amp;\displaystyle=A\left(B\mathbf{x}\right)
@@ -460,7 +460,7 @@ Because $A$ is singular, there is a nonzero vector $\mathbf{y}$ that is a soluti
 @end
 @newcol
  The contrapositive of this entire result is equally interesting. It says that $A$ or $B$ (or both) is a singular matrix if and only if the product $AB$ is singular.
-@newline
+
 @endcol
 @slide
 @thm
@@ -468,10 +468,10 @@ Because $A$ is singular, there is a nonzero vector $\mathbf{y}$ that is a soluti
 @label{OSIS}
  Suppose $A$ and $B$ are square matrices of size $n$ such that $AB=I_{n}$. Then $BA=I_{n}$. 
 @end
-@newline
+
 @proof
  The matrix $I_{n}$ is nonsingular. So by @ref{NPNT} $A$ is nonsingular.
-@newline
+
 @newcol
  Hence, $A$ is row equivalent to the identity matrix $I_n$,
 which means there are elementary matrices $J_1, J_2, \ldots, J_k$ such that:
@@ -491,7 +491,7 @@ BA = J_k\cdots J_2 J_1 A = I_n
 @qed
 @endcol
 @end
-@newline
+
 @slide
 @thm
 @title{Nonsingularity is Invertibility}
@@ -509,7 +509,7 @@ Then, $A\vect{x} = \vect{0}$ if and only if :
 This implies that the homogeneous linear system $\mathcal{LS}(A, \vect{0})$
 only exactly one unique solution $\vect{x} = \vect{0}$.
 Hence, $A$ is nonsingular.
-@newline
+
 @col
  ($\Rightarrow$)
 Suppose $A$ is a nonsingular $n \times n$ matrix.
@@ -530,4 +530,5 @@ A^{-1} =  J_k\cdots J_2 J_1.
  So for a square matrix, the properties of having an inverse and of having a trivial null space are one and the same. Cannot have one without the other. 
 @endcol
 @end
+@course{MATH 1030}
 <!--DELIMITER-->
