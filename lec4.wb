@@ -1,71 +1,69 @@
-@course{Math 1030}
-@setchapter{4}
+@course{MATH 1030}
 @chapter{Matrices}
-The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at http://linear.ups.edu/download.htmlPrint version can be downloaded at http://linear.ups.edu/download/fcla-3.50-print.pdf
-
-<br/><h5 class="notkw">Reference.</h5><ul>
+ The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at http://linear.ups.edu/download.htmlPrint version can be downloaded at http://linear.ups.edu/download/fcla-3.50-print.pdf
+@newline<br/><h5 class="notkw">Reference.</h5><ul>
 <li> Beezer, Ver 3.5 Subsection MVNSE (print version p17 - p21) </li>
 <li> Strang, Sect 1.4 </li></ul>
 @section{Introduction}
 @itemize
 @item
-After solving a few systems of equations, you will recognize that it does not matter so much what we call our variables.
+ After solving a few systems of equations, you will recognize that it does not matter so much what we call our variables. 
 @item
-A system in the variables $x_{1},\,x_{2},\,x_{3}$ would behave the same if we changed the names of the variables to $a,\,b,\,c$ and kept all the constants the same and in the same places.
+ A system in the variables $x_{1},\,x_{2},\,x_{3}$ would behave the same if we changed the names of the variables to $a,\,b,\,c$ and kept all the constants the same and in the same places. 
 @item
-In this section, we will isolate the key bits of information about a system of equations into something called a @keyword{matrix}, and then use this matrix to systematically solve the equations. Along the way we will obtain one of our most important and useful computational tools.
+ In this section, we will isolate the key bits of information about a system of equations into something called a @keyword{matrix}, and then use this matrix to systematically solve the equations. Along the way we will obtain one of our most important and useful computational tools. 
 @enditemize
 @section{Matrix and Vector Notation for Systems of Equations}
 @defn
 @title{Matrix}
 @label{M}
-An $m\times n$ @keyword{matrix} is a rectangular layout of real numbers with $m$ rows and $n$ columns.
+ An $m\times n$ @keyword{matrix} is a rectangular layout of real numbers with $m$ rows and $n$ columns. 
 @itemize
 @item
 @newcol
-Many people use large parentheses instead of brackets – the distinction is not important.
+ Many people use large parentheses instead of brackets – the distinction is not important. 
 @endcol
 @item
 @newcol
-Rows of a matrix are indexed from the top (with the first row at the top labeled "row 1"), and columns are indexed from the left (with the first column on left labeled "column 1").
+ Rows of a matrix are indexed from the top (with the first row at the top labeled "row 1"), and columns are indexed from the left (with the first column on left labeled "column 1"). 
 @endcol
 @item
 @newcol
-For a matrix $A$, the notation $\left[A\right]_{ij}$, or $A_{ij}$, $A_{i,j}$, refers to the number in row $i$ and column $j$ of $A$.
+ For a matrix $A$, the notation $\left[A\right]_{ij}$, or $A_{ij}$, $A_{i,j}$, refers to the number in row $i$ and column $j$ of $A$. 
 @endcol
 @enditemize
 @end
 @eg
 @newcol
-\[B=\begin{bmatrix}-1&2&5&3\\
-1&0&-6&1\\
--4&2&2&-2\end{bmatrix}\]
-is a matrix with $m=3$ rows and $n=4$ columns. We can say that $\left[B\right]_{2,3}=-6$ while $\left[B\right]_{3,4}=-2$.
+ \[B=\begin{bmatrix}-1&amp;2&amp;5&amp;3\\
+1&amp;0&amp;-6&amp;1\\
+-4&amp;2&amp;2&amp;-2\end{bmatrix}\]
+is a matrix with $m=3$ rows and $n=4$ columns. We can say that $\left[B\right]_{2,3}=-6$ while $\left[B\right]_{3,4}=-2$. 
 @endcol
 @end
 @slide
-When we do equation operations on a system of equations, the names of the variables really are not very important. Whether we use $x_{1}$, $x_{2}$, $x_{3}$, or $a$, $b$, $c$, or $x$, $y$, $z$ does not matter so much. In this subsection we will describe some notation that will make it easier to describe linear systems, solve the systems and describe the solution sets.
+ When we do equation operations on a system of equations, the names of the variables really are not very important. Whether we use $x_{1}$, $x_{2}$, $x_{3}$, or $a$, $b$, $c$, or $x$, $y$, $z$ does not matter so much. In this subsection we will describe some notation that will make it easier to describe linear systems, solve the systems and describe the solution sets. 
 @slide
 @defn
 @title{Column Vector}
 @label{CV}
 @itemize
 @item
-A @keyword{column vector} of @keyword{size} $m$ is an ordered list of $m$ numbers, which is written in order vertically from top to bottom. We often refer to a column vector as simply a @keyword{vector}.
+ A @keyword{column vector} of @keyword{size} $m$ is an ordered list of $m$ numbers, which is written in order vertically from top to bottom. We often refer to a column vector as simply a @keyword{vector}. 
 @item
-The set of column vectors of size $m$ is denoted by @keyword{$\mathbb{R}^m$}.
+ The set of column vectors of size $m$ is denoted by @keyword{$\mathbb{R}^m$}. 
 @item
 @newcol
-In these notes,
-a column vector are typically represented by a bold faced, lower-case Roman letter, e.g. $\mathbf{u}$, $\mathbf{v}$, $\mathbf{w}$, $\mathbf{x}$, $\mathbf{y}$, $\mathbf{z}$, etc.
+ In these notes,
+a column vector are typically represented by a bold faced, lower-case Roman letter, e.g. $\mathbf{u}$, $\mathbf{v}$, $\mathbf{w}$, $\mathbf{x}$, $\mathbf{y}$, $\mathbf{z}$, etc. 
 @endcol
 @item
 @newcol
-Some authors prefer representing vectors with arrows, such as $\vec{u}$. Writing by hand, some like to put arrows on top of the symbol, or a tilde underneath the symbol, as in $\underset{\sim}{\textstyle u}$, or a line under the symbol, as $\underline{\textstyle u}$.
+ Some authors prefer representing vectors with arrows, such as $\vec{u}$. Writing by hand, some like to put arrows on top of the symbol, or a tilde underneath the symbol, as in $\underset{\sim}{\textstyle u}$, or a line under the symbol, as $\underline{\textstyle u}$. 
 @endcol
 @item
 @newcol
-To refer to $i$-th @keyword{entry} or @keyword{component} of a vector $\mathbf{v}$, we write $\left[\mathbf{v}\right]_{i}$ or $\mathbf{v}_i$.
+ To refer to $i$-th @keyword{entry} or @keyword{component} of a vector $\mathbf{v}$, we write $\left[\mathbf{v}\right]_{i}$ or $\mathbf{v}_i$. 
 @endcol
 @enditemize
 @end
@@ -73,233 +71,431 @@ To refer to $i$-th @keyword{entry} or @keyword{component} of a vector $\mathbf{v
 @title{(Zero Column Vector).}
 @label{ZCV}
 @newcol
-The @keyword{zero vector} of size $m$ is the column vector of size $m$ where each entry is the number zero,
+ The @keyword{zero vector} of size $m$ is the column vector of size $m$ where each entry is the number zero,
 \[\mathbf{0}=\begin{bmatrix}0\\
 0\\
 0\\
 \vdots\\
 0\end{bmatrix}\]
-or defined much more compactly, $\left[\mathbf{0}\right]_{i}=0$ for $1\leq i\leq m$.
+or defined much more compactly, $\left[\mathbf{0}\right]_{i}=0$ for $1\leq i\leq m$. 
+@endcol
+@end
+@section{Matrix Equality, Addition, Scalar Multiplication}
+@label{MEASM}
+ Recall $M_{mn}$ is the set of $m\times n$ matrices with real entries. Throughout the section, unless otherwise stated,
+\[A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{m1}&amp;a_{m2}&amp;\cdots&amp;a_{mn}\end{bmatrix},\,\,B=\begin{bmatrix}b_{11}&amp;b_{12}&amp;%
+\cdots&amp;b_{1n}\\
+b_{21}&amp;b_{22}&amp;\cdots&amp;b_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+b_{m1}&amp;b_{m2}&amp;\cdots&amp;b_{mn}\end{bmatrix}\] 
+@defn
+@title{Matrix Equality}
+@newcol
+ The $m\times n$ matrices $A$ and $B$ are @keyword{equal}, written $A=B$ provided: $\left[A\right]_{ij}=\left[B\right]_{ij}$ for all $1\leq i\leq m$, $1\leq j\leq n$, that is:
+\[
+a_{ij}=b_{ij}\quad\text{ for all } i,j.
+\] 
+@endcol
+@end
+@defn
+@title{Matrix Addition}
+@label{MA}
+@newcol
+ Given $m\times n$ matrices $A$ and $B$, define the @keyword{sum} of $A$ and $B$ as an $m\times n$ matrix, written $A+B$, according to
+\[\displaystyle\left[A+B\right]_{ij}=\left[A\right]_{ij}+\left[B\right]_{ij}\]
+i.e.,
+\[A+B=\begin{bmatrix}a_{11}+b_{11}&amp;a_{12}+b_{12}&amp;\cdots&amp;a_{1n}+b_{1n}\\
+a_{21}+b_{21}&amp;a_{22}+b_{22}&amp;\cdots&amp;a_{2n}+b_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{m1}+b_{m1}&amp;a_{m2}+b_{m2}&amp;\cdots&amp;a_{mn}+b_{mn}\end{bmatrix}\] 
+@endcol
+@end
+@slide
+@eg
+ If
+\[
+\displaystyle A=\begin{bmatrix}2&amp;-3&amp;4\\
+1&amp;0&amp;-7\end{bmatrix}
+\quad
+B=\begin{bmatrix}6&amp;2&amp;-4\\
+3&amp;5&amp;2\end{bmatrix}
+\]
+then:
+@newline
+@newcol
+ \[\displaystyle A+B=\begin{bmatrix}2&amp;-3&amp;4\\
+1&amp;0&amp;-7\end{bmatrix}+\begin{bmatrix}6&amp;2&amp;-4\\
+3&amp;5&amp;2\end{bmatrix}\] 
+@col
+ \[\displaystyle=\begin{bmatrix}2+6&amp;-3+2&amp;4+(-4)\\
+1+3&amp;0+5&amp;-7+2\end{bmatrix}=\begin{bmatrix}8&amp;-1&amp;0\\
+4&amp;5&amp;-5\end{bmatrix}\] 
+@endcol
+@end
+@slide
+@defn
+@title{Matrix Scalar Multiplication}
+ Given $m\times n$ matrix $A$
+and a scalar $\lambda\in{\mathbb{R}}$, the @keyword{scalar multiple} of $A$ by $\lambda$ is the $m\times n$ matrix, written $\lambda A$,
+defined as follows:
+\[
+\displaystyle\left[\lambda A\right]_{ij}=\lambda\left[A\right]_{ij},
+\]
+i.e.,
+\[\lambda A=\begin{bmatrix}\lambda a_{11}&amp;\lambda a_{12}&amp;\cdots&amp;\lambda a_{1n}\\
+\lambda a_{21}&amp;\lambda a_{22}&amp;\cdots&amp;\lambda a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+\lambda a_{m1}&amp;\lambda a_{m2}&amp;\cdots&amp;\lambda a_{mn}\end{bmatrix}.\] 
+@end
+ Computationally, scalar matrix multiplication is very easy. 
+@eg
+@newcol
+ If
+\[A=\begin{bmatrix}2&amp;8\\
+-3&amp;5\\
+0&amp;1\end{bmatrix}\]
+and $\lambda=7$, then
+\[\lambda A=7\begin{bmatrix}2&amp;8\\
+-3&amp;5\\
+0&amp;1\end{bmatrix}=\begin{bmatrix}7(2)&amp;7(8)\\
+7(-3)&amp;7(5)\\
+7(0)&amp;7(1)\end{bmatrix}=\begin{bmatrix}14&amp;56\\
+-21&amp;35\\
+0&amp;7\end{bmatrix}.\] 
+@endcol
+@end
+@slide
+@defn
+@title{Zero Matrix}
+ The $m\times n$ @keyword{zero matrix} is written as ${\cal O}={\cal O}_{m\times n}$ and defined by $\left[{\cal O}\right]_{ij}=0$, for all $1\leq i\leq m$, $1\leq j\leq n$, i.e.
+@newline
+@newcol
+ \[{\cal O}={\cal O}_{m\times n}=\begin{bmatrix}0&amp;0&amp;\cdots&amp;0\\
+0&amp;0&amp;\cdots&amp;0\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+0&amp;0&amp;\cdots&amp;0\end{bmatrix}.\] 
+@endcol
+@end
+@newline
+@defn
+@title{Additive Inverse}
+@newcol
+ The additive inverse of a matrix $A\in M_{mn}$, denoted by $-A$ is defined by $-A=(-1)A$, i.e.
+\[-A=\begin{bmatrix}-a_{11}&amp;-a_{12}&amp;\cdots&amp;-a_{1n}\\
+-a_{21}&amp;-a_{22}&amp;\cdots&amp;-a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+-a_{m1}&amp;-a_{m2}&amp;\cdots&amp;-a_{mn}\end{bmatrix}.\] 
+@endcol
+@end
+@slide
+ Below are some obvious properties satisfied by the addition and scalar multiplication of matrices: 
+@enumerate
+@item
+@keyword{Associativity of Matrix Addition}
+@newcol
+ For all $A,\,B,\,C\in M_{mn}$,
+we have:
+\[
+A+\left(B+C\right)=\left(A+B\right)+C.
+\] 
+@endcol
+@item
+@keyword{Commutativity of Matrix Addition}
+@newcol
+ For all $A,\,B\in M_{mn}$, we have:
+\[
+A+B=B+A.
+\] 
+@endcol
+@item
+@keyword{Additive Identity of Matrix Addition}
+@newcol
+ $A+{\cal O}=A$ for all $A\in M_{mn}$. 
+@endcol
+@item
+<strong>Existence of</strong> @keyword{Additive Inverse}
+@newcol
+ For any $m\times n$ matrix $A$, we have:
+\[
+A+(-A)={\cal O}_{m \times n}.
+\] 
+@endcol
+@item
+@keyword{Associativity of Scalar Multiplication}
+@newcol
+ For all $\alpha,\,\beta\in \mathbb{R}$
+and $A\in M_{mn}$, we have:
+\[
+\alpha(\beta A)=(\alpha\beta)A.
+\] 
+@endcol
+@item
+@keyword{Distributivity across Matrix Addition}
+@newcol
+ For all $\alpha\in\mathbb{R}$ and $A,\,B\in M_{mn}$,
+we have:
+\[
+\alpha(A+B)=\alpha A+\alpha B.
+\] 
+@endcol
+@item
+@keyword{Distributivity across Scalar Addition}
+@newcol
+ For all $\alpha,\,\beta\in \mathbb{R}$ and $A\in M_{mn}$,
+we have:
+\[
+(\alpha+\beta)A=\alpha A+\beta A.
+\] 
+@endcol
+@item
+<strong>Scalar Multiplication by $1 \in \mathbb{R}$</strong>
+@newcol
+ For all $A\in M_{mn}$, we have  $1A=A$. 
+@endcol
+@endenumerate
+@slide
+@eg
+@newcol
+ As an example, we prove here property 7,
+$(\alpha+\beta)A=\alpha A+\beta A$.
+We need to establish the equality of two matrices.
+@newline
+@col
+ For any $i$ and $j$, $1\leq i\leq m$, $1\leq j\leq n$,
+@newline
+@col
+@steps
+\begin{align*}
+\left[(\alpha+\beta)A\right]_{ij}
+&amp;= \class{steps}{\cssId{step0}{(\alpha+\beta)\left[A\right]_{ij}}}
+\\
+&amp; \class{steps}{\cssId{step1}{= \alpha\left[A\right]_{ij}+\beta\left[A\right]_{ij}}}
+\\
+&amp; \class{steps}{\cssId{step2}{= \left[\alpha A\right]_{ij}+\left[\beta A\right]_{ij}}}
+\\
+&amp; \class{steps}{\cssId{step3}{= \left[\alpha A+\beta A\right]_{ij}.}}
+\end{align*}
+
+@endsteps
+@col
+ Hence by the definition of equality of matrices, $(\alpha+\beta)A=\alpha A+\beta A$. 
 @endcol
 @end
 @section{Partition of Matrices}
-Sometimes we use horizontal or vertical lines to visually divide a matrix into different areas. (Mathematically it is still the same object.)
+ Sometimes we use horizontal or vertical lines to visually divide a matrix into different areas. (Mathematically it is still the same object.) 
 @eg
 @newcol
-The matrix
+ The matrix
 \[
 \left[\begin{array}[]{ccccc}
-1&2&3&4&3.5\\
-0&-1&1&1.1&1\\
-3&5.8&1&0&-3\\
-1&8&0&0&7\end{array}\right]
+1&amp;2&amp;3&amp;4&amp;3.5\\
+0&amp;-1&amp;1&amp;1.1&amp;1\\
+3&amp;5.8&amp;1&amp;0&amp;-3\\
+1&amp;8&amp;0&amp;0&amp;7\end{array}\right]
 \]
 is same as:
 \[
-\left[\begin{array}[]{cccc|c}1&2&3&4&3.5\\
-0&-1&1&1.1&1\\
-3&5.8&1&0&-3\\
-1&8&0&0&7\end{array}\right]
+\left[\begin{array}[]{cccc|c}1&amp;2&amp;3&amp;4&amp;3.5\\
+0&amp;-1&amp;1&amp;1.1&amp;1\\
+3&amp;5.8&amp;1&amp;0&amp;-3\\
+1&amp;8&amp;0&amp;0&amp;7\end{array}\right]
 \;,
-\left[\begin{array}[]{c|c|c|c|c}1&2&3&4&3.5\\
-0&-1&1&1.1&1\\
-3&5.8&1&0&-3\\
-1&8&0&0&7\end{array}\right],
+\left[\begin{array}[]{c|c|c|c|c}1&amp;2&amp;3&amp;4&amp;3.5\\
+0&amp;-1&amp;1&amp;1.1&amp;1\\
+3&amp;5.8&amp;1&amp;0&amp;-3\\
+1&amp;8&amp;0&amp;0&amp;7\end{array}\right],
 \]
 \[
-\left[\begin{array}[]{ccccc}1&2&3&4&3.5\\
-0&-1&1&1.1&1\\
-\hline 3&5.8&1&0&-3\\
-1&8&0&0&7\end{array}\right],
+\left[\begin{array}[]{ccccc}1&amp;2&amp;3&amp;4&amp;3.5\\
+0&amp;-1&amp;1&amp;1.1&amp;1\\
+\hline 3&amp;5.8&amp;1&amp;0&amp;-3\\
+1&amp;8&amp;0&amp;0&amp;7\end{array}\right],
 \;
-\left[\begin{array}[]{cc|ccc}1&2&3&4&3.5\\
-0&-1&1&1.1&1\\
-\hline 3&5.8&1&0&-3\\
-1&8&0&0&7\end{array}\right],
+\left[\begin{array}[]{cc|ccc}1&amp;2&amp;3&amp;4&amp;3.5\\
+0&amp;-1&amp;1&amp;1.1&amp;1\\
+\hline 3&amp;5.8&amp;1&amp;0&amp;-3\\
+1&amp;8&amp;0&amp;0&amp;7\end{array}\right],
 \]
 \[
-\left[\begin{array}[]{cc|ccc}1&2&3&4&3.5\\
-0&-1&1&1.1&1\\
-\hline 3&5.8&1&0&-3\\
-\hline 1&8&0&0&7\end{array}\right]
-\]
+\left[\begin{array}[]{cc|ccc}1&amp;2&amp;3&amp;4&amp;3.5\\
+0&amp;-1&amp;1&amp;1.1&amp;1\\
+\hline 3&amp;5.8&amp;1&amp;0&amp;-3\\
+\hline 1&amp;8&amp;0&amp;0&amp;7\end{array}\right]
+\] 
 @endcol
 @end
 @eg
 @newcol
-One can also form @keyword{augmented matrices} as follows:
-
+ One can also form @keyword{augmented matrices} as follows:
+@newline
 @col
-\[A=\begin{bmatrix}1&2\\
-3&4\\
-5&6\\
-7&8\end{bmatrix},\,\,\,\mathbf{u}=\begin{bmatrix}9\\
+ \[A=\begin{bmatrix}1&amp;2\\
+3&amp;4\\
+5&amp;6\\
+7&amp;8\end{bmatrix},\,\,\,\mathbf{u}=\begin{bmatrix}9\\
 10\\
 11\\
 12\end{bmatrix}\,\,\,\mathbf{v}=\begin{bmatrix}13\\
 14\\
 15\\
 16\end{bmatrix},\]
-\[[A|\mathbf{u}]=\left[\begin{array}[]{cc|c}1&2&9\\
-3&4&10\\
-5&6&11\\
-6&8&12\end{array}\right]=\left[\begin{array}[]{ccc}1&2&9\\
-3&4&10\\
-5&6&11\\
-6&8&12\end{array}\right],\]
-\[[A|\mathbf{u}|\mathbf{v}]=\left[\begin{array}[]{cc|c|c}1&2&9&13\\
-3&4&10&14\\
-5&6&11&15\\
-6&8&12&15\end{array}\right]=\left[\begin{array}[]{cccc}1&2&9&13\\
-3&4&10&14\\
-5&6&11&15\\
-6&8&12&15\end{array}\right],\]
+\[[A|\mathbf{u}]=\left[\begin{array}[]{cc|c}1&amp;2&amp;9\\
+3&amp;4&amp;10\\
+5&amp;6&amp;11\\
+6&amp;8&amp;12\end{array}\right]=\left[\begin{array}[]{ccc}1&amp;2&amp;9\\
+3&amp;4&amp;10\\
+5&amp;6&amp;11\\
+6&amp;8&amp;12\end{array}\right],\]
+\[[A|\mathbf{u}|\mathbf{v}]=\left[\begin{array}[]{cc|c|c}1&amp;2&amp;9&amp;13\\
+3&amp;4&amp;10&amp;14\\
+5&amp;6&amp;11&amp;15\\
+6&amp;8&amp;12&amp;15\end{array}\right]=\left[\begin{array}[]{cccc}1&amp;2&amp;9&amp;13\\
+3&amp;4&amp;10&amp;14\\
+5&amp;6&amp;11&amp;15\\
+6&amp;8&amp;12&amp;15\end{array}\right],\] 
 @endcol
 @end
 @eg
 @newcol
-\[A=\begin{bmatrix}1&2\\
-3&4\end{bmatrix},\,\,B=\begin{bmatrix}5&6&7\\
-8&9&10\end{bmatrix},\]
-\[C=\begin{bmatrix}11&12\\
-13&14\\
-15&16\end{bmatrix},D=\begin{bmatrix}21&22&23\\
-24&25&26\\
-27&28&29\end{bmatrix}.\]
-\[[A|B]=\left[\begin{array}[]{cc|ccc}1&2&5&6&7\\
-3&4&8&9&10\end{array}\right]=\left[\begin{array}[]{ccccc}1&2&5&6&7\\
-3&4&8&9&10\end{array}\right],\]
-\[\left[\begin{array}[]{c|c}A&B\\
-\hline C&D\end{array}\right]=\left[\begin{array}[]{cc|ccc}1&2&5&6&7\\
-3&4&8&9&10\\
-\hline 11&12&21&22&23\\
-13&14&24&25&26\\
-15&16&27&28&29\end{array}\right]=\left[\begin{array}[]{ccccc}1&2&5&6&7\\
-3&4&8&9&10\\
-11&12&21&22&23\\
-13&14&24&25&26\\
-15&16&27&28&29\end{array}\right]\]
+ \[A=\begin{bmatrix}1&amp;2\\
+3&amp;4\end{bmatrix},\,\,B=\begin{bmatrix}5&amp;6&amp;7\\
+8&amp;9&amp;10\end{bmatrix},\]
+\[C=\begin{bmatrix}11&amp;12\\
+13&amp;14\\
+15&amp;16\end{bmatrix},D=\begin{bmatrix}21&amp;22&amp;23\\
+24&amp;25&amp;26\\
+27&amp;28&amp;29\end{bmatrix}.\]
+\[[A|B]=\left[\begin{array}[]{cc|ccc}1&amp;2&amp;5&amp;6&amp;7\\
+3&amp;4&amp;8&amp;9&amp;10\end{array}\right]=\left[\begin{array}[]{ccccc}1&amp;2&amp;5&amp;6&amp;7\\
+3&amp;4&amp;8&amp;9&amp;10\end{array}\right],\]
+\[\left[\begin{array}[]{c|c}A&amp;B\\
+\hline C&amp;D\end{array}\right]=\left[\begin{array}[]{cc|ccc}1&amp;2&amp;5&amp;6&amp;7\\
+3&amp;4&amp;8&amp;9&amp;10\\
+\hline 11&amp;12&amp;21&amp;22&amp;23\\
+13&amp;14&amp;24&amp;25&amp;26\\
+15&amp;16&amp;27&amp;28&amp;29\end{array}\right]=\left[\begin{array}[]{ccccc}1&amp;2&amp;5&amp;6&amp;7\\
+3&amp;4&amp;8&amp;9&amp;10\\
+11&amp;12&amp;21&amp;22&amp;23\\
+13&amp;14&amp;24&amp;25&amp;26\\
+15&amp;16&amp;27&amp;28&amp;29\end{array}\right]\] 
 @endcol
 @end
 @section{Matrix Representations of Linear Systems}
-The following definitions are stated in the context of
+ The following definitions are stated in the context of
 the following system of linear equations:
 \begin{align*}
-a_{11}x_1+a_{12}x_2+a_{13}x_3+\dots+a_{1n}x_n&=b_1\\
-a_{21}x_1+a_{22}x_2+a_{23}x_3+\dots+a_{2n}x_n&=b_2\\
-a_{31}x_1+a_{32}x_2+a_{33}x_3+\dots+a_{3n}x_n&=b_3\\
-\vdots&\\
-a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\dots+a_{mn}x_n&=b_m
-\end{align*}
+a_{11}x_1+a_{12}x_2+a_{13}x_3+\dots+a_{1n}x_n&amp;=b_1\\
+a_{21}x_1+a_{22}x_2+a_{23}x_3+\dots+a_{2n}x_n&amp;=b_2\\
+a_{31}x_1+a_{32}x_2+a_{33}x_3+\dots+a_{3n}x_n&amp;=b_3\\
+\vdots&amp;\\
+a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\dots+a_{mn}x_n&amp;=b_m
+\end{align*} 
 @defn
 @title{Coefficient Matrix}
 @label{CM}
 @newcol
-The @keyword{coefficient matrix} associated with the linear system above is the $m\times n$ matrix:
-\[A=\begin{bmatrix}a_{11}&a_{12}&a_{13}&\dots&a_{1n}\\
-a_{21}&a_{22}&a_{23}&\dots&a_{2n}\\
-a_{31}&a_{32}&a_{33}&\dots&a_{3n}\\
-\vdots&\vdots&\vdots&\vdots&\vdots\\
-a_{m1}&a_{m2}&a_{m3}&\dots&a_{mn}\\
-\end{bmatrix}\]
+ The @keyword{coefficient matrix} associated with the linear system above is the $m\times n$ matrix:
+\[A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;\dots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;a_{23}&amp;\dots&amp;a_{2n}\\
+a_{31}&amp;a_{32}&amp;a_{33}&amp;\dots&amp;a_{3n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{m1}&amp;a_{m2}&amp;a_{m3}&amp;\dots&amp;a_{mn}\\
+\end{bmatrix}\] 
 @endcol
 @end
 @defn
 @title{Vector of Constants}
 @label{VOC}
 @newcol
-The @keyword{vector of constants} associated with the linear system is the following column vector of size $m$:\[\mathbf{b}=\begin{bmatrix}b_{1}\\
+ The @keyword{vector of constants} associated with the linear system is the following column vector of size $m$:\[\mathbf{b}=\begin{bmatrix}b_{1}\\
 b_{2}\\
 b_{3}\\
 \vdots\\
 b_{m}\\
-\end{bmatrix}\]
+\end{bmatrix}\] 
 @endcol
 @end
 @defn
 @title{Solution Vector}
 @label{SOLV}
 @newcol
-The @keyword{solution vector} corresponding to a solution $(x_1, x_2, \ldots, x_n)$ to the linear system is the following column vector of size $n$:\[\mathbf{x}=\begin{bmatrix}x_{1}\\
+ The @keyword{solution vector} corresponding to a solution $(x_1, x_2, \ldots, x_n)$ to the linear system is the following column vector of size $n$:\[\mathbf{x}=\begin{bmatrix}x_{1}\\
 x_{2}\\
 x_{3}\\
 \vdots\\
 x_{n}\\
-\end{bmatrix}\]
+\end{bmatrix}\] 
 @endcol
 @end
 @defn
 @title{Matrix Representation of a Linear System}
 @label{MRLS}
 @newcol
-If $A$ is the coefficient matrix of a system of linear equations and $\mathbf{b}$ is the vector of constants, then we will write $\mathcal{LS}(A,\mathbf{b})$ as a shorthand expression for the system of linear equations, which we will refer to as the @keyword{matrix representation} of the linear system.
+ If $A$ is the coefficient matrix of a system of linear equations and $\mathbf{b}$ is the vector of constants, then we will write $\mathcal{LS}(A,\mathbf{b})$ as a shorthand expression for the system of linear equations, which we will refer to as the @keyword{matrix representation} of the linear system. 
 @endcol
 @end
 @slide
 @defn
 @title{Augmented Matrix}
 @label{AM}
-Suppose we have a system of $m$ equations in $n$ variables, with coefficient matrix $A$ and vector of constants $\mathbf{b}$. Then the @keyword{augmented matrix} of the system of equations is the $m\times(n+1)$ matrix whose first $n$ columns are the columns of $A$ and whose last column ($n+1$) is the column vector $\mathbf{b}$. This matrix will be written as $\left[A|\mathbf{b}\right]$.
+ Suppose we have a system of $m$ equations in $n$ variables, with coefficient matrix $A$ and vector of constants $\mathbf{b}$. Then the @keyword{augmented matrix} of the system of equations is the $m\times(n+1)$ matrix whose first $n$ columns are the columns of $A$ and whose last column ($n+1$) is the column vector $\mathbf{b}$. This matrix will be written as $\left[A|\mathbf{b}\right]$. 
 @end
 @eg
 @title{Notation for systems of linear equations}
 @newcol
-The system of linear equations
+ The system of linear equations
 \[\displaystyle 2x_{1}+4x_{2}-3x_{3}+5x_{4}+x_{5}=9\]
 \[\displaystyle 3x_{1}+x_{2}+\quad\quad x_{4}-3x_{5}=0\]
 \[\displaystyle-2x_{1}+7x_{2}-5x_{3}+2x_{4}+2x_{5}=-3\]
 has coefficient matrix:
-
+@newline
 @col
-\[A=\left[\begin{array}[]{ccccc}2&4&-3&5&1\\
-3&1&0&1&-3\\
--2&7&-5&2&2\end{array}\right]\]
+ \[A=\left[\begin{array}[]{ccccc}2&amp;4&amp;-3&amp;5&amp;1\\
+3&amp;1&amp;0&amp;1&amp;-3\\
+-2&amp;7&amp;-5&amp;2&amp;2\end{array}\right]\]
 and vector of constants:
-
+@newline
 @col
-\[\mathbf{b}=\begin{bmatrix}9\\
+ \[\mathbf{b}=\begin{bmatrix}9\\
 0\\
 -3\end{bmatrix}\]
 and so will be referenced as $\mathcal{LS}(A, \mathbf{b})$.
 The augmented matrix is
-\[\left[A|\mathbf{b}\right]=\left[\begin{array}[]{ccccc|c}2&4&-3&5&1&9\\
-3&1&0&1&-3&0\\
--2&7&-5&2&2&-3\end{array}\right]\]
+\[\left[A|\mathbf{b}\right]=\left[\begin{array}[]{ccccc|c}2&amp;4&amp;-3&amp;5&amp;1&amp;9\\
+3&amp;1&amp;0&amp;1&amp;-3&amp;0\\
+-2&amp;7&amp;-5&amp;2&amp;2&amp;-3\end{array}\right]\] 
 @endcol
 @end
 @section{Row operations}
-An augmented matrix can be used to represent a system of linear equations and release us from writing out all the variables.
+ An augmented matrix can be used to represent a system of linear equations and release us from writing out all the variables.
 We have seen how certain operations we can perform on equations will preserve their solutions .
-The next two definitions and the following theorem carry over these ideas to augmented matrices.
+The next two definitions and the following theorem carry over these ideas to augmented matrices. 
 @defn
 @title{Row Operations}
 @label{RO}
 @label{def:RO}
-The following three operations will transform an $m\times n$ matrix into a different matrix of the same size, and each is known as an @keyword{elementary row operation}.
+ The following three operations will transform an $m\times n$ matrix into a different matrix of the same size, and each is known as an @keyword{elementary row operation}. 
 @enumerate
 @item
 @newcol
-Swap the locations of two rows.
-
-<strong>Notation</strong>: $R_{i}\leftrightarrow R_{j}$
-
-(Swap the location of rows $i$ and $j$.)
+ Swap the locations of two rows.
+@newline<strong>Notation</strong>: $R_{i}\leftrightarrow R_{j}$
+@newline(Swap the location of rows $i$ and $j$.) 
 @endcol
 @item
 @newcol
-Multiply each entry of a single row by a nonzero number.
-
-<strong>Notation</strong>: $\alpha R_{i}$
-
-(Multiply row $i$ by the nonzero scalar $\alpha$.)
+ Multiply each entry of a single row by a nonzero number.
+@newline<strong>Notation</strong>: $\alpha R_{i}$
+@newline(Multiply row $i$ by the nonzero scalar $\alpha$.) 
 @endcol
 @item
 @newcol
-Multiply each entry of one row by some number, and add these values to the entries in the same columns of a second row. Leave the first row the same after this operation, but replace the second row by the new values.
-
-<strong>Notation</strong>: $\alpha R_{i}+R_{j}$
-
-(Multiply row $i$ by the scalar $\alpha$ and add to row $j$.)
+ Multiply each entry of one row by some number, and add these values to the entries in the same columns of a second row. Leave the first row the same after this operation, but replace the second row by the new values.
+@newline<strong>Notation</strong>: $\alpha R_{i}+R_{j}$
+@newline(Multiply row $i$ by the scalar $\alpha$ and add to row $j$.) 
 @endcol
 @endenumerate
 @end
@@ -307,192 +503,194 @@ Multiply each entry of one row by some number, and add these values to the entri
 @title{Row-Equivalent Matrices}
 @label{REM}
 @newcol
-Two matrices, $A$ and $B$, are @keyword{row-equivalent} if one can be obtained from the other by a sequence of row operations.
+ Two matrices, $A$ and $B$, are @keyword{row-equivalent} if one can be obtained from the other by a sequence of row operations. 
 @endcol
 @end
 @remark
 @newcol
-Notice that each of the three row operations is reversible, so we do not have to be careful about the distinction between $A$ is row-equivalent to $B$ and $B$ is row-equivalent to $A$.
+ Notice that each of the three row operations is reversible, so we do not have to be careful about the distinction between $A$ is row-equivalent to $B$ and $B$ is row-equivalent to $A$. 
 @endcol
 @end
 @slide
 @eg
-The matrices:
+ The matrices:
 \begin{align*}
 A=\begin{bmatrix}
-2&-1&3&4\\
-5&2&-2&3\\
-1&1&0&6
+2&amp;-1&amp;3&amp;4\\
+5&amp;2&amp;-2&amp;3\\
+1&amp;1&amp;0&amp;6
 \end{bmatrix}
-&&
+&amp;&amp;
 B=\begin{bmatrix}
-1&1&0&6\\
-3&0&-2&-9\\
-2&-1&3&4
+1&amp;1&amp;0&amp;6\\
+3&amp;0&amp;-2&amp;-9\\
+2&amp;-1&amp;3&amp;4
 \end{bmatrix}
 \end{align*}
 are row-equivalent, as can be seen from:
-
+@newline
 @newcol
 @steps
 \begin{align*}
-& \begin{bmatrix}
-2&-1&3&4\\
-5&2&-2&3\\
-1&1&0&6
+&amp; \begin{bmatrix}
+2&amp;-1&amp;3&amp;4\\
+5&amp;2&amp;-2&amp;3\\
+1&amp;1&amp;0&amp;6
 \end{bmatrix}
 \\
-&
+&amp;
 \\
-@nstep{\xrightarrow{\rowopswap{1}{3}}}
-\quad&
-@nstep{\begin{bmatrix}
-1&1&0&6\\
-5&2&-2&3\\
-2&-1&3&4
-\end{bmatrix}}
+\class{steps}{\cssId{step0}{\xrightarrow{\rowopswap{1}{3}}}}
+\quad&amp;
+\class{steps}{\cssId{step1}{\begin{bmatrix}
+1&amp;1&amp;0&amp;6\\
+5&amp;2&amp;-2&amp;3\\
+2&amp;-1&amp;3&amp;4
+\end{bmatrix}}}
 \\
-&
+&amp;
 \\
-@nstep{\xrightarrow{\rowopadd{-2}{1}{2}}}
-\quad&
-@nstep{\begin{bmatrix}
-1&1&0&6\\
-3&0&-2&-9\\
-2&-1&3&4
-\end{bmatrix}}
+\class{steps}{\cssId{step2}{\xrightarrow{\rowopadd{-2}{1}{2}}}}
+\quad&amp;
+\class{steps}{\cssId{step3}{\begin{bmatrix}
+1&amp;1&amp;0&amp;6\\
+3&amp;0&amp;-2&amp;-9\\
+2&amp;-1&amp;3&amp;4
+\end{bmatrix}}}
 \end{align*}
+
 @endsteps
-In fact, any pair of these three matrices are row-equivalent.
+ In fact, any pair of these three matrices are row-equivalent. 
 @endcol
 @end
 @slide
 @thm
 @title{Row-Equivalent Matrices represent Equivalent Systems}
 @label{REMES}
-Suppose that $A$ and $B$ are row-equivalent augmented matrices. Then the systems of linear equations that they represent are equivalent systems.
+ Suppose that $A$ and $B$ are row-equivalent augmented matrices. Then the systems of linear equations that they represent are equivalent systems. 
 @end
 @proof
 @newcol
-To be shown later.
-
-See also [ Beezer, Theorem REMES (Ver 3.5 print version p.20) ]
+ To be shown later.
+@newlineSee also [ Beezer, Theorem REMES (Ver 3.5 print version p.20) ] 
 @endcol
 @end
 @newcol
-With this theorem, we now have a strategy for solving a system of linear equations:
+ With this theorem, we now have a strategy for solving a system of linear equations: 
 @enumerate
 @item
 @newcol
-Begin with a system of equations, represent the system by an augmented matrix.
+ Begin with a system of equations, represent the system by an augmented matrix. 
 @endcol
 @item
 @newcol
-perform row operations (which will preserve solutions for the system) to get a ”simpler” augmented matrix
+ perform row operations (which will preserve solutions for the system) to get a ”simpler” augmented matrix 
 @endcol
 @item
 @newcol
-convert back to a ”simpler” system of equations and then solve that system, knowing that its solutions are those of the original system.
+ convert back to a ”simpler” system of equations and then solve that system, knowing that its solutions are those of the original system. 
 @endcol
 @endenumerate
 @endcol
 @slide
 @eg
-Solve:
+ Solve:
 \begin{align*}
-x_1+2x_2+2x_3&=4\\
-x_1+3x_2+3x_3&=5\\
-2x_1+6x_2+5x_3&=6
-\end{align*}
+x_1+2x_2+2x_3&amp;=4\\
+x_1+3x_2+3x_3&amp;=5\\
+2x_1+6x_2+5x_3&amp;=6
+\end{align*} 
 @newcol
-Form the augmented matrix:
+ Form the augmented matrix:
 \begin{align*}
 A=
 \left[
 \begin{array}{ccc|c}
-1&2&2&4\\
-1&3&3&5\\
-2&6&5&6
+1&amp;2&amp;2&amp;4\\
+1&amp;3&amp;3&amp;5\\
+2&amp;6&amp;5&amp;6
 \end{array}
 \right]
-\end{align*}
+\end{align*} 
 @col
-then apply row operations:
+ then apply row operations: 
 @steps
 \begin{align*}
 \xrightarrow{\rowopadd{-1}{1}{2}}
 \quad
-&
-@nstep{\left[
+&amp;
+\class{steps}{\cssId{step0}{\left[
 \begin{array}{ccc|c}
-1&2&2&4\\
-0&1&1&1\\
-2&6&5&6
+1&amp;2&amp;2&amp;4\\
+0&amp;1&amp;1&amp;1\\
+2&amp;6&amp;5&amp;6
 \end{array}
-\right]}
+\right]}}
 \\
-&
+&amp;
 \\
-@nstep{\xrightarrow{\rowopadd{-2}{1}{3}}}
+\class{steps}{\cssId{step1}{\xrightarrow{\rowopadd{-2}{1}{3}}}}
 \quad
-&
-@nstep{\left[
+&amp;
+\class{steps}{\cssId{step2}{\left[
 \begin{array}{ccc|c}
-1&2&2&4\\
-0&1&1&1\\
-0&2&1&-2
+1&amp;2&amp;2&amp;4\\
+0&amp;1&amp;1&amp;1\\
+0&amp;2&amp;1&amp;-2
 \end{array}
-\right]}
+\right]}}
 \\
-&
+&amp;
 \\
-@nstep{\xrightarrow{\rowopadd{-2}{2}{3}}}
+\class{steps}{\cssId{step3}{\xrightarrow{\rowopadd{-2}{2}{3}}}}
 \quad
-&
-@nstep{\left[
+&amp;
+\class{steps}{\cssId{step4}{\left[
 \begin{array}{ccc|c}
-1&2&2&4\\
-0&1&1&1\\
-0&0&-1&-4
+1&amp;2&amp;2&amp;4\\
+0&amp;1&amp;1&amp;1\\
+0&amp;0&amp;-1&amp;-4
 \end{array}
-\right]}
+\right]}}
 \\
-&
+&amp;
 \\
-@nstep{\xrightarrow{\rowopmult{-1}{3}}}
+\class{steps}{\cssId{step5}{\xrightarrow{\rowopmult{-1}{3}}}}
 \quad
-&
-@nstep{\left[
+&amp;
+\class{steps}{\cssId{step6}{\left[
 \begin{array}{ccc|c}
-1&2&2&4\\
-0&1& 1&1\\
-0&0&1&4
+1&amp;2&amp;2&amp;4\\
+0&amp;1&amp; 1&amp;1\\
+0&amp;0&amp;1&amp;4
 \end{array}
-\right]}
+\right]}}
 \end{align*}
-@endsteps
 
+@endsteps
+@newline
 @col
-So the matrix
+ So the matrix
 \[
 \left[
 \begin{array}{ccc|c}
-1&2&2&4\\
-0&1& 1&1\\
-0&0&1&4
+1&amp;2&amp;2&amp;4\\
+0&amp;1&amp; 1&amp;1\\
+0&amp;0&amp;1&amp;4
 \end{array}
 \right]
 \]
 is row equivalent to $A$.
 By the previous theorem (@ref{REMES}), the system of equations below has the same solution set as the original system of equations:
-
+@newline
 @col
-\begin{align*}
-x_1+2x_2+2x_3&=4\\
-x_2+ x_3&=1\\
-x_3&=4
-\end{align*}
+ \begin{align*}
+x_1+2x_2+2x_3&amp;=4\\
+x_2+ x_3&amp;=1\\
+x_3&amp;=4
+\end{align*} 
 @col
-The third equation requires that $x_{3}=4$ to be true. Making this substitution into equation 2 we arrive at $x_{2}=-3$, and finally, substituting these values of $x_{2}$ and $x_{3}$ into the first equation, we find that $x_{1}=2$.
+ The third equation requires that $x_{3}=4$ to be true. Making this substitution into equation 2 we arrive at $x_{2}=-3$, and finally, substituting these values of $x_{2}$ and $x_{3}$ into the first equation, we find that $x_{1}=2$. 
 @endcol
 @end
+<!--DELIMITER-->

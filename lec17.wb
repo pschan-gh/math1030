@@ -1,762 +1,959 @@
-@course{Math 1030}
-@setchapter{17}
-@chapter{Inverse}
-<h5 class="notkw">Reference.</h5>
-Beezer, Ver 3.5 Section MISLE, Section MINM (print version p149 - p161)
-
-<h5 class="notkw">Exercise.</h5>
-Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdfSection MISLE (p60-64), all. Section MINM C20, C40, M10, M11, M15, M80, T25.
-
-@section{Solution Inverse}
-@label{SI}
-The inverse of a square matrix, and solutions to linear systems with square coefficient matrices, are intimately connected.
-@slide
-@eg
-\begin{align*}
-\displaystyle-7x_{1}-6x_{2}-12x_{3}&\displaystyle=-33 \\
-\displaystyle 5x_{1}+5x_{2}+7x_{3}&\displaystyle=24 \\
-\displaystyle x_{1}+4x_{3}&\displaystyle=5
-\end{align*}
-@newcol
-We can represent this system of equations as
-\begin{align*}
-\displaystyle A\mathbf{x}=\mathbf{b}
-\end{align*}
-where
-\begin{align*}
-\displaystyle A&=\begin{bmatrix}-7&-6&-12\\
-5&5&7\\
-1&0&4\end{bmatrix}
-&
-\displaystyle\mathbf{x}&=\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\end{bmatrix}&\displaystyle\mathbf{b}&=\begin{bmatrix}-33\\
-24\\
-5\end{bmatrix}
-\end{align*}
-@col
-Now, entirely unmotivated, we define the $3\times 3$ matrix $B$,
-\begin{align*}
-\displaystyle \begin{bmatrix}-10&-12&-9\\
-\frac{13}{2}&8&\frac{11}{2}\\
-\frac{5}{2}&3&\frac{5}{2}\end{bmatrix}
-\end{align*}
-and note the remarkable fact that
-\begin{align*}
-\displaystyle BA=\begin{bmatrix}1&0&0\\
-0&1&0\\
-0&0&1\end{bmatrix}
-\end{align*}
-@col
-Now apply this computation to the problem of solving the system of equations,
-\begin{align*}
-\displaystyle\mathbf{x}=I_{3}\mathbf{x}=(BA)\mathbf{x}=B(A\mathbf{x})=B\mathbf{b}
-\end{align*}
-@col
-So we have
-\begin{align*}
-\displaystyle \mathbf{x}=B\mathbf{b}=\begin{bmatrix}-3\\
-5\\
-2\end{bmatrix}
-\end{align*}
-@col
-So with the help and assistance of $B$ we have been able to determine a solution to the system represented by $A\mathbf{x}=\mathbf{b}$ through judicious use of matrix multiplication. Since the coefficient matrix in this example is nonsingular, there would be a unique solution, no matter what the choice of $\mathbf{b}$. The derivation above amplifies this result, since we were forced to conclude that $\mathbf{x}=B\mathbf{b}$ and the solution could not be anything else. You should notice that this argument would hold for any particular choice of $\mathbf{b}$.
-@endcol
-@end
-@newcol
-The matrix $B$ of the previous example is called the inverse of $A$. When $A$ and $B$ are combined via matrix multiplication, the result is the identity matrix, which can be inserted <em>in front</em> of $\mathbf{x}$ as the first step in finding the solution. This is entirely analogous to how we might solve a single linear equation like $3x=12$.
-\begin{align*}
-\displaystyle x=1x=\left(\frac{1}{3}\left(3\right)\right)x=\frac{1}{3}\left(3x\right)=\frac{1}{3}\left(12\right)=4
-\end{align*}
-@col
-Here we have obtained a solution by employing the @keyword{multiplicative inverse} of $3$, $3^{-1}=\frac{1}{3}$. This works fine for any scalar multiple of $x$, except for zero, since zero does not have a multiplicative inverse. Consider separately the two linear equations,
-\begin{align*}
-\displaystyle 0x&\displaystyle=12&\displaystyle 0x&\displaystyle=0
-\end{align*}
-@col
-The first has no solutions, while the second has infinitely many solutions. For matrices, it is all just a little more complicated. Some matrices have inverses, some do not. And when a matrix does have an inverse, just how would we compute it? In other words, just where did that matrix $B$ in the last example come from? Are there other matrices that might have worked just as well?
-
-@endcol
-@section{Inverse of a Matrix}
+@course{MATH 1030}
+@chapter{Inner Product}
+@section{Basic properties of inner products}
 @defn
-Suppose $A$ and $B$ are square matrices of size $n$ such that $AB=I_{n}$ and $BA=I_{n}$. Then $A$ is @keyword{invertible} and $B$ is the @keyword{inverse} of $A$. In this situation, we write $B=A^{-1}$.
-@end
+ Given two vectors $\mathbf{v}$ and $\mathbf{w}$ in ${\mathbb{R}}^{m}$, we define
+\begin{align}
+\label{ipdefe1}
+\displaystyle \left&lt; \mathbf{v},\mathbf{w}\right&gt;=\sum_{i=1}^{m}[\mathbf{v}]_{i}[\mathbf{w}]_{i}=[\mathbf{v}]_{1}[\mathbf{w}]_{1}+\cdots+[\mathbf{v}]_{m}[\mathbf{w}]_{m}.&amp;
+\end{align} 
 @newcol
-Notice that if $B$ is the inverse of $A$, then we can just as easily say $A$ is the inverse of $B$, or $A$ and $B$ are inverses of each other.
-
-@col
-Not every square matrix has an inverse.
-@endcol
-@slide
-@eg
-@keyword{A matrix without an inverse} Consider the coefficient matrix
-\begin{align*}
-\displaystyle A=\begin{bmatrix}1&-1&2\\
-2&1&1\\
-1&1&0\end{bmatrix}
-\end{align*}
-@newcol
-Suppose that $A$ is invertible and does have an inverse, say $B$. Choose the vector of constants
-\begin{align*}
-\displaystyle \mathbf{b}=\begin{bmatrix}1\\
-3\\
-2\end{bmatrix}
-\end{align*}
-and consider the system of equations $A\mathbf{x}=\mathbf{b}$. Just as in the previous example, this vector equation would have the unique solution $\mathbf{x}=B\mathbf{b}$.
-
-@col
-However, the system $A\mathbf{x}=\mathbf{b}$ is inconsistent. Form the augmented matrix $\left[A|\mathbf{b}\right]$ and row-reduce to
-\begin{align*}
-\displaystyle \begin{bmatrix}\boxed{1}&0&1&0\\
-0&\boxed{1}&-1&0\\
-0&0&0&\boxed{1}\end{bmatrix}
-\end{align*}
-which allows us to recognize the inconsistency.
-
-@col
-So the assumption of $A$’s inverse leads to a logical inconsistency (the system cannot be both consistent and inconsistent), so our assumption is false. $A$ is not invertible.
-@endcol
-@end
-@newcol
-Let us look at one more matrix inverse before we embark on a more systematic study.
-@endcol
-@slide
-@eg
-@keyword{Matrix inverse}
-<strong>1.</strong> \begin{align*}
-\displaystyle A=\left[\begin{array}[]{cc}1&2\\
-2&3\\
-\end{array}\right],B=\left[\begin{array}[]{cc}-3&2\\
-2&-1\\
-\end{array}\right],
-\end{align*}
-@newcol
-Then
-\begin{align*}
-\displaystyle AB=BA=I_{2}.
-\end{align*}
-@col
-So $B$ is the inverse of $A$.
-
-@col
-<strong>2.</strong> \begin{align*}
-\displaystyle A=\left[\begin{array}[]{ccc}1&1&1\\
-1&0&-1\\
-0&1&1\\
-\end{array}\right],B=\left[\begin{array}[]{ccc}1&0&-1\\
--1&1&2\\
-1&-1&-1\\
-\end{array}\right]
-\end{align*}
-@col
-Then
-\begin{align*}
-\displaystyle AB=BA=I_{3}.
-\end{align*}
-@col
-So $B$ is the inverse of $A$.
-
-<strong>3.</strong> Consider the matrices,
-\begin{align*}
-\displaystyle A&\displaystyle=\begin{bmatrix}1&2&1&2&1\\
--2&-3&0&-5&-1\\
-1&1&0&2&1\\
--2&-3&-1&-3&-2\\
--1&-3&-1&-3&1\end{bmatrix}&\displaystyle B&\displaystyle=\begin{bmatrix}-3&3&6&-1&-2\\
-0&-2&-5&-1&1\\
-1&2&4&1&-1\\
-1&0&1&1&0\\
-1&-1&-2&0&1\end{bmatrix}
-\end{align*}
-@col
-Then
-\begin{align*}
-\displaystyle AB&\displaystyle=\begin{bmatrix}1&2&1&2&1\\
--2&-3&0&-5&-1\\
-1&1&0&2&1\\
--2&-3&-1&-3&-2\\
--1&-3&-1&-3&1\end{bmatrix}\begin{bmatrix}-3&3&6&-1&-2\\
-0&-2&-5&-1&1\\
-1&2&4&1&-1\\
-1&0&1&1&0\\
-1&-1&-2&0&1\end{bmatrix}=\begin{bmatrix}1&0&0&0&0\\
-0&1&0&0&0\\
-0&0&1&0&0\\
-0&0&0&1&0\\
-0&0&0&0&1\end{bmatrix} \\
-\\
-\displaystyle BA&\displaystyle=\begin{bmatrix}-3&3&6&-1&-2\\
-0&-2&-5&-1&1\\
-1&2&4&1&-1\\
-1&0&1&1&0\\
-1&-1&-2&0&1\end{bmatrix}\begin{bmatrix}1&2&1&2&1\\
--2&-3&0&-5&-1\\
-1&1&0&2&1\\
--2&-3&-1&-3&-2\\
--1&-3&-1&-3&1\end{bmatrix}=\begin{bmatrix}1&0&0&0&0\\
-0&1&0&0&0\\
-0&0&1&0&0\\
-0&0&0&1&0\\
-0&0&0&0&1\end{bmatrix}
-\end{align*}
-so by the definition of inverse matrix, we can say that $A$ is invertible and write $B=A^{-1}$.
-@endcol
-@end
-@newcol
-We will now concern ourselves less with whether or not an inverse of a matrix exists, but instead with how you can find one when it does exist.
-Later we will have some theorems that allow us to more quickly and easily determine just when a matrix is invertible.
-
-@endcol
-@slide
-@thm
-@title{Two-by-Two Matrix Inverse}
-@label{TTMI}
-Suppose
-\begin{align*}
-\displaystyle A=\begin{bmatrix}a&b\\
-c&d\end{bmatrix}
-\end{align*}
-@newcol
-Then $A$ is invertible if and only if $ad-bc\neq 0$. When $A$ is invertible, then
-\begin{align*}
-\displaystyle A^{-1}=\frac{1}{ad-bc}\begin{bmatrix}d&-b\\
--c&a\end{bmatrix}
-\end{align*}
-@endcol
-@end
-@proof
-@skip
-
-$\Leftarrow$
-@newcol
-Assume that $ad-bc\neq 0$. We will use the definition of the inverse of a matrix to establish that $A$ has an inverse. Note that if $ad-bc\neq 0$ then the displayed formula for $A^{-1}$ is legitimate since we are not dividing by zero).
-Using this proposed formula for the inverse of $A$, we compute
-\begin{align*}
-\displaystyle AA^{-1}&\displaystyle=\begin{bmatrix}a&b\\
-c&d\end{bmatrix}\left(\frac{1}{ad-bc}\begin{bmatrix}d&-b\\
--c&a\end{bmatrix}\right)=\frac{1}{ad-bc}\begin{bmatrix}ad-bc&0\\
-0&ad-bc\end{bmatrix}=\begin{bmatrix}1&0\\
-0&1\end{bmatrix} \\
-\\
-\displaystyle A^{-1}A&\displaystyle=\frac{1}{ad-bc}\begin{bmatrix}d&-b\\
--c&a\end{bmatrix}\begin{bmatrix}a&b\\
-c&d\end{bmatrix}=\frac{1}{ad-bc}\begin{bmatrix}ad-bc&0\\
-0&ad-bc\end{bmatrix}=\begin{bmatrix}1&0\\
-0&1\end{bmatrix}
-\end{align*}
-@col
-This is sufficient to establish that $A$ is invertible, and that the expression for $A^{-1}$ is correct.
-@endcol
-
-$\Rightarrow$
-@newcol
-Assume that $A$ is invertible, and proceed with a proof by contradiction, by assuming also that $ad-bc=0$. This translates to $ad=bc$. Let
-\begin{align*}
-\displaystyle B=\begin{bmatrix}e&f\\
-g&h\end{bmatrix}
-\end{align*}
-be a putative inverse of $A$.
-
-@col
-This means that
-\begin{align*}
-\displaystyle I_{2}=AB=\begin{bmatrix}a&b\\
-c&d\end{bmatrix}\begin{bmatrix}e&f\\
-g&h\end{bmatrix}=\begin{bmatrix}ae+bg&af+bh\\
-ce+dg&cf+dh\end{bmatrix}
-\end{align*}
-@col
-Working on the matrices on two ends of this equation, we will multiply the top row by $c$ and the bottom row by $a$.
-\begin{align*}
-\displaystyle \begin{bmatrix}c&0\\
-0&a\end{bmatrix}=\begin{bmatrix}ace+bcg&acf+bch\\
-ace+adg&acf+adh\end{bmatrix}
-\end{align*}
-@col
-We are assuming that $ad=bc$, so we can replace two occurrences of $ad$ by $bc$ in the bottom row of the right matrix.
-\begin{align*}
-\displaystyle \begin{bmatrix}c&0\\
-0&a\end{bmatrix}=\begin{bmatrix}ace+bcg&acf+bch\\
-ace+bcg&acf+bch\end{bmatrix}
-\end{align*}
-@col
-The matrix on the right now has two rows that are identical, and therefore the same must be true of the matrix on the left. Identical rows for the matrix on the left implies that $a=0$ and $c=0$.
-
-@col
-With this information, the product $AB$ becomes
-\begin{align*}
-\displaystyle \begin{bmatrix}1&0\\
-0&1\end{bmatrix}=I_{2}=AB=\begin{bmatrix}ae+bg&af+bh\\
-ce+dg&cf+dh\end{bmatrix}=\begin{bmatrix}bg&bh\\
-dg&dh\end{bmatrix}
-\end{align*}
-@col
-So $bg=dh=1$ and thus $b,g,d,h$ are all nonzero. But then $bh$ and $dg$
-(the <strong>other corners</strong>) must also be nonzero, so this is (finally) a contradiction. So our assumption was false and we see that $ad-bc\neq 0$ whenever $A$ has an inverse.
-@qed
-@endcol
-@end
-@newcol
-There are several ways one could try to prove this theorem, but there is a continual temptation to divide by one of the eight entries involved ($a$ through $f$), but we can never be sure if these numbers are zero or not. This could lead to an analysis by cases, which is messy, messy, messy. Note how the above proof never divides, but always multiplies, and how zero/nonzero considerations are handled. Pay attention to the expression $ad-bc$, as we will see it again in a while.
-
-@col
-This theorem is cute, and it is nice to have a formula for the inverse, and a condition that tells us when we can use it. However, this approach becomes impractical for larger matrices, even though it is possible to demonstrate that, in theory, there is a general formula. (Think for a minute about extending this result to just $3\times 3$ matrices. For starters, we need 18 letters!) Instead, we will work column-by-column. Let us first work an example that will motivate the main theorem and remove some of the previous mystery.
-@endcol
-@section{Nonsingular Matrices are Invertible}
-@label{NMI}
-For $\alpha,\beta\in{\mathbb{R}}^{\hbox{}}$, then $\alpha\beta\neq 0$ if and only if $\alpha\neq 0$ and $\beta\neq 0$.
-We have a similar result for nonsingular matrix
-
-@slide
-@thm
-@title{Nonsingular Product has Nonsingular Terms}
-@label{NPNT}
-Suppose that $A$ and $B$ are square matrices of size $n$. The product $AB$ is nonsingular if and only if $A$ and $B$ are both nonsingular.
-@end
-@proof
-@newcol
-($\Rightarrow$) For this portion of the proof we will form the logically-equivalent contrapositive and prove that statement using two cases.
-
-<blockquote> $AB$ is nonsingular implies $A$ and $B$ are both nonsingular. </blockquote>
-becomes
-
-@col
-<blockquote> $A$ or $B$ is singular implies $AB$ is singular. </blockquote>
-
-@col
-Case 1. Suppose $B$ is singular. Then there is a nonzero vector $\mathbf{z}$ that is a solution to $B\mathbf{x}=\mathbf{0}$. So
-\begin{align*}
-\displaystyle(AB)\mathbf{z}&\displaystyle=A(B\mathbf{z}) \\
-&\displaystyle=A\mathbf{0} \\
-&\displaystyle=\mathbf{0}
-\end{align*}
-@col
-Then $\mathbf{z}$ is a nonzero solution to $AB\mathbf{x}=\mathbf{0}$. Thus $AB$ is singular as desired.
-
-@col
-Case 2. Suppose $A$ is singular, and $B$ is not singular.
-Because $A$ is singular, there is a nonzero vector $\mathbf{y}$ that is a solution to $A\mathbf{x}=\mathbf{0}$. Now consider the linear system $B\mathbf{x}=\mathbf{y}$. Since $B$ is nonsingular, the system has a unique solution, which we will denote as $\mathbf{w}$. We first claim $\mathbf{w}$ is not the zero vector either. Assuming the opposite, suppose that $\mathbf{w}=\mathbf{0}$. Then
-\begin{align*}
-\displaystyle\mathbf{y}&\displaystyle=B\mathbf{w} \\
-&\displaystyle=B\mathbf{0} \\
-&\displaystyle=\mathbf{0} \\
-\\
-\displaystyle(AB)\mathbf{w}&\displaystyle=A(B\mathbf{w}) \\
-&\displaystyle=A\mathbf{y} \\
-&\displaystyle=\mathbf{0}
-\end{align*}
-@col
-So $\mathbf{w}$ is a nonzero solution to $AB\mathbf{x}=\mathbf{0}$. Thus $AB$ is singular as desired. And this conclusion holds for both cases.
-
-($\Leftarrow$) Now assume that both $A$ and $B$ are nonsingular. Suppose that $\mathbf{x}\in{\mathbb{R}}^{n}$ is a solution to $AB\mathbf{x}=\mathbf{0}$. Then
-\begin{align*}
-\displaystyle\mathbf{0}&\displaystyle=\left(AB\right)\mathbf{x} \\
-&\displaystyle=A\left(B\mathbf{x}\right)
-\end{align*}
-@col
-So $B\mathbf{x}$ is a solution to $A\mathbf{x}=\mathbf{0}$, and by the definition of a nonsingular matrix, we conclude that $B\mathbf{x}=\mathbf{0}$. Now, by an entirely similar argument, the nonsingularity of $B$ forces us to conclude that $\mathbf{x}=\mathbf{0}$. So the only solution to $AB\mathbf{x}=\mathbf{0}$ is the zero vector and we conclude that $AB$ is nonsingular.
-@qed
-@endcol
-@end
-@newcol
-The contrapositive of this entire result is equally interesting. It says that $A$ or $B$ (or both) is a singular matrix if and only if the product $AB$ is singular.
-
-@endcol
-@slide
-@thm
-@title{One-Sided Inverse is Sufficient}
-@label{OSIS}
-Suppose $A$ and $B$ are square matrices of size $n$ such that $AB=I_{n}$. Then $BA=I_{n}$.
-@end
-
-@proof
-The matrix $I_{n}$ is nonsingular. So by @ref{NPNT} $A$ is nonsingular.
-
-@newcol
-Hence, $A$ is row equivalent to the identity matrix $I_n$,
-which means there are elementary matrices $J_1, J_2, \ldots, J_k$ such that:
-\[
-J_k\cdots J_2 J_1 A = I_n.
-\]
-@col
-Hence, $AB = I_n$ implies that:
-\[
-\underbrace{J_k\cdots J_2 J_1 A}_{I_n} B = \underbrace{J_k\cdots J_2 J_1 I_n}_{J_k\cdots J_2 J_1}
-\]
-@col
-So, $B = J_k\cdots J_2 J_1$, and:
-\[
-BA = J_k\cdots J_2 J_1 A = I_n
-\]
-@qed
-@endcol
-@end
-
-@slide
-@thm
-@title{Nonsingularity is Invertibility}
-@label{NI}
-Suppose that $A$ is a square matrix. Then $A$ is nonsingular if and only if $A$ is invertible.
-@end
-@proof
-@newcol
-($\Leftarrow$)
-Suppose $A$ is invertible.
-Then, $A\vect{x} = \vect{0}$ if and only if :
-\[
-\underbrace{A^{-1}A\vect{x}}_{\vect{x}} = A^{-1}\vect{0} = \vect{0}.
-\]
-This implies that the homogeneous linear system $\mathcal{LS}(A, \vect{0})$
-only exactly one unique solution $\vect{x} = \vect{0}$.
-Hence, $A$ is nonsingular.
-
-@col
-($\Rightarrow$)
-Suppose $A$ is a nonsingular $n \times n$ matrix.
-Then, $A$ is row-equivalent to $I_n$,
-which means there are elementary matrices $J_1, J_2, \ldots, J_k$ such that:
-\[
-J_k\cdots J_2 J_1 A = I_n
-\]
-It now follows from @ref{OSIS} that $A$ is invertible, with:
-\[
-A^{-1} =  J_k\cdots J_2 J_1.
-\]
-@qed
-@endcol
-@end
-@remark
-@newcol
-So for a square matrix, the properties of having an inverse and of having a trivial null space are one and the same. Cannot have one without the other.
-@endcol
-@end
-@section{Computing the Inverse of a Matrix}
-@thm
-@title{Computing the Inverse of a Nonsingular Matrix}
-@label{CINM}
-Suppose $A$ is a nonsingular square matrix of size $n$. Create the $n\times 2n$ matrix $M$ by placing the $n\times n$ identity matrix $I_{n}$ to the right of the matrix $A$. Let $N$ be a matrix that is row-equivalent to $M$ and in reduced row-echelon form. Finally, let $J$ be the matrix formed from the final $n$ columns of $N$. Then $JA = AJ=I_{n}$. Hence, $A^{-1} = J$.
-@end
-@remark
-@newcol
-Observe this procedure also allows one to see whether a given matrix $A$ in nonsingular.
-@endcol
-@end
-@proof
-@skip
-@newcol
-Since $A$ is nonsingular, there exist a sequence of row operations $R_1, R_2, \ldots R_k$
-such that:
-\[
-A \xrightarrow{R_1}\cdots \xrightarrow{R_2} \cdots \xrightarrow{R_k} I_n
-\]
-Recall that each row operation $R_i$ corresponds to multiplcation by an elementary matrix $J_i$
-from the left, that is:
-\[
-A \xrightarrow{R_1} J_1A \xrightarrow{R_2} J_2J_1 A \xrightarrow{R_3} \cdots \xrightarrow{R_k} J_k\cdots J_2J_1 A = I_n.
-\]
-@newcol
-Start with the augmented matrix:
-\[
-[A | I_n]
-\]
-@col
-Applying the row operation $R_1$ to the matrix above is equivalent to:
-\[
-J_1 [A | I_n] = [J_1 A | J_1 I_n] = [J_1 A | J_1]
-\]
-@col
-Further applying the row operation $R_2$ gives:
-\[
-J_2[J_1 A | J_1 I_n] = [J_2 J_1 A | J_2J_1]
-\]
-@col
-Applying the rest of the row operations which reduce $A$ to $I_n$, we have:
-\[
-[\underbrace{J_k \cdots J_2 J_1 A}_{I_n} | \underbrace{J_k \cdots J_2J_1}_{J = A^{-1}}]
-\]
-@endcol
+ It is called the @keyword{inner product} of ${\mathbb{R}}^{m}$. The vector space ${\mathbb{R}}^{m}$ together with the operation $\langle-,-\rangle$ is called an inner product space.
+If we regard $\mathbf{v}$ and $\mathbf{w}$ as $m\times 1$ matrices, then we can write:
+\begin{align}
+\label{ipdefe2}
+\displaystyle \left&lt; \mathbf{v},\mathbf{w}\right&gt;=\mathbf{v}^{t}\mathbf{w}.&amp;
+\end{align} 
 @endcol
 @end
 @slide
 @eg
-@title{Computing a matrix inverse}
-Let
+ We have:
 \begin{align*}
-\displaystyle A=\left[\begin{array}[]{ccc}1&1&1\\
-1&0&-1\\
-0&1&1\\
-\end{array}\right].
+\displaystyle \left&lt; \begin{bmatrix}1\\
+2\end{bmatrix},\begin{bmatrix}3\\
+4\end{bmatrix}\right&gt;=1\times 3+2\times 4=11
 \end{align*}
-Find $A^{-1}$.
-
+and: 
 @newcol
-\begin{align*}
-\displaystyle [A|I_3]=\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
-1&0&-1&0&1&0\\
-0&1&1&0&0&1\\
-\end{array}\right]\xrightarrow{-1R_{1}+R_{2}}\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
-0&-1&-2&-1&1&0\\
-0&1&1&0&0&1\\
-\end{array}\right]
-\end{align*}
-@col
-\begin{align*}
-\displaystyle \xrightarrow{R_{2}\leftrightarrow R_{3}}\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
-0&1&1&0&0&1\\
-0&-1&-2&-1&1&0\\
-\end{array}\right]\xrightarrow{1R_{2}+R_{3}}\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
-0&1&1&0&0&1\\
-0&0&-1&-1&1&1\\
-\end{array}\right]
-\end{align*}
-@col
-\begin{align*}
-\displaystyle \xrightarrow{-1R_{2}+R_{1}}\left[\begin{array}[]{ccc|ccc}1&0&0&1&0&-1\\
-0&1&1&0&0&1\\
-0&0&-1&-1&1&1\\
-\end{array}\right]\xrightarrow{1R_{3}+R_{2},-1R_{3}}\left[\begin{array}[]{ccc|ccc}1&0&0&1&0&-1\\
-0&1&0&-1&1&2\\
-0&0&1&1&-1&-1\\
-\end{array}\right]
-\end{align*}
-@col
-So
-\begin{align*}
-\displaystyle B=[\mathbf{B}_{1}|\mathbf{B}_{2}|\mathbf{B}_{3}]=\left[\begin{array}[]{ccc}1&0&-1\\
--1&1&2\\
-1&-1&-1\\
-\end{array}\right]
-\end{align*}
-@endcol
-@end
-
-@slide
-@eg
-@title{Computing a matrix inverse}
-Let
-\[
-\displaystyle B=\displaystyle\begin{bmatrix}-7&-6&-12\\
-5&5&7\\
-1&0&4\end{bmatrix}.
-\]
-Find $B^{-1}$.
-
-@newcol
-\begin{align*}
-\displaystyle M=&\displaystyle
-\left[\begin{array}{ccc|ccc}-7&-6&-12&1&0&0\\
-5&5&7&0&1&0\\
-1&0&4&0&0&1\end{array}\right].
-\end{align*}
-@col
-\[
-\displaystyle \xrightarrow{\text{RREF}}
-\displaystyle\left[\begin{array}{ccc|ccc}1&0&0&-10&-12&-9\\
-0&1&0&\frac{13}{2}&8&\frac{11}{2}\\
-0&0&1&\frac{5}{2}&3&\frac{5}{2}\end{array}\right]
-\]
-@col
-\[
-\displaystyle B^{-1}=\displaystyle\begin{bmatrix}-10&-12&-9\\
-\frac{13}{2}&8&\frac{11}{2}\\
-\frac{5}{2}&3&\frac{5}{2}\end{bmatrix}.
-\]
-@endcol
-@end
-@slide
-@thm
-@title{Nonsingular Matrix Equivalences, Round 3}
-@label{NME3}
-Suppose that $A$ is a square matrix of size $n$. The following are equivalent.
-
-<ol class="ltx_enumerate">
-<li class="ltx_item"> $A$ is nonsingular. </li>
-<li class="ltx_item"> $A$ row-reduces to the identity matrix. </li>
-<li class="ltx_item"> The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$. </li>
-<li class="ltx_item"> The linear system $A\mathbf{x}=\mathbf{b}$ has a unique solution for every possible choice of $\mathbf{b}$. </li>
-<li class="ltx_item"> The columns of $A$ are a linearly independent set. </li>
-<li class="ltx_item"> $A$ is invertible. </li>
-
-</ol>
-@end
-@slide
-@thm
-@title{Solution with Nonsingular Coefficient Matrix}
-Suppose that $A$ is nonsingular. Then the unique solution to $A\mathbf{x}=\mathbf{b}$ is $A^{-1}\mathbf{b}$.
-@end
-@proof
-@newcol
-We can show this by simply plug $A^{-1}\mathbf{b}$ in the solution.
-\begin{align*}
-\displaystyle A\left(A^{-1}\mathbf{b}\right)&\displaystyle=\left(AA^{-1}\right)\mathbf{b} \\
-&\displaystyle=I_{n}\mathbf{b} \\
-&\displaystyle=\mathbf{b}
-\end{align*}
-@col
-Since $A\mathbf{x}=\mathbf{b}$ is true when we substitute $A^{-1}\mathbf{b}$ for $\mathbf{x}$, $A^{-1}\mathbf{b}$ is a (the!) solution to $A\mathbf{x}=\mathbf{b}$.
-@qed
-@endcol
-@end
-@slide
-@eg
-Using the previous theorem, solve
-\begin{align*}
-\displaystyle x_{1}+x_{2}-x_{3}+4x_{4}&\displaystyle=1 \\
-\displaystyle x_{1}-x_{2}+2x_{3}+3x_{4}&\displaystyle=2 \\
-\displaystyle 2x_{1}+x_{2}+x_{3}+x_{4}&\displaystyle=0 \\
-\displaystyle 2x_{1}+2x_{2}+2x_{3}-9x_{4}&\displaystyle=-1
-\end{align*}
-@newcol
-The matrix coefficient is
-\begin{align*}
-\displaystyle A=\left[\begin{array}[]{cccc}1&1&-1&4\\
-1&-1&2&3\\
-2&1&1&1\\
-2&2&2&-9\\
-\end{array}\right].
-\end{align*}
-@col
-After some computations,
-\begin{align*}
-\displaystyle A^{-1}=\left[\begin{array}[]{cccc}-33&-22&45&-17\\
-35&23&-47&18\\
-25&17&-34&13\\
-6&4&-8&3\\
-\end{array}\right].
-\end{align*}
-@col
-Then the solution of the system of linear equations is
-\begin{align*}
-\displaystyle \begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\\
-x_{4}\end{bmatrix}=A^{-1}\begin{bmatrix}1\\
+ \begin{align*}
+\displaystyle \left&lt; \begin{bmatrix}1\\
 2\\
+3\end{bmatrix},\begin{bmatrix}4\\
+5\\
+6\end{bmatrix}\right&gt;=1\times 4+2\times 5+3\times 6=32.
+\end{align*} 
+@endcol
+@end
+@slide
+@prop
+@label{ipdef}
+ For any $\mathbf{v},\mathbf{w},\mathbf{u}\in{\mathbb{R}}^{m}$ and $\alpha\in{\mathbb{R}}^{\hbox{}}$. We have
+@newline<ol class="ltx_enumerate">
+<li class="ltx_item"> $\left&lt; \mathbf{v}+\mathbf{w},\mathbf{u}\right&gt;=\left&lt; \mathbf{v},\mathbf{u}\right&gt;+\left&lt; \mathbf{w},\mathbf{u}\right&gt;$. </li>
+<li class="ltx_item"> $\left&lt; \alpha\mathbf{v},\mathbf{w}\right&gt;=\alpha\left&lt; \mathbf{v},\mathbf{w}\right&gt;$. </li>
+<li class="ltx_item"> $\left&lt; \mathbf{v},\mathbf{w}\right&gt;=\left&lt; \mathbf{w},\mathbf{v}\right&gt;$. </li>
+<li class="ltx_item"> $\left&lt; \mathbf{v},\mathbf{v}\right&gt;&gt;0$ for $\mathbf{v}\neq\mathbf{0}$. </li>
+@newline</ol>
+@end
+@proof
+@newcol
+<ol class="ltx_enumerate">
+<li class="ltx_item"> We compute
+\begin{align*}
+\displaystyle\left&lt; \mathbf{v}+\mathbf{w},\mathbf{u}\right&gt;&amp;\displaystyle=[\mathbf{v}+\mathbf{w}]_{1}[\mathbf{u}]_{1}+[\mathbf{v}+\mathbf{w}]_{2}[\mathbf{u}]_{2}+\cdots+[\mathbf{v}+\mathbf{w}]_{m}[\mathbf{u}]_{m} \\
+&amp;\displaystyle=([\mathbf{v}]_{1}+[\mathbf{w}]_{1})[\mathbf{u}]_{1}+([\mathbf{v}]_{2}+[\mathbf{w}]_{2})[\mathbf{u}]_{2}+\cdots+([\mathbf{v}]_{n}+[\mathbf{w}]_{m})[\mathbf{u}]_{m} \\
+&amp;\displaystyle=[\mathbf{v}]_{1}[\mathbf{u}]_{1}+[\mathbf{w}]_{1}[\mathbf{u}]_{1}+[\mathbf{v}]_{2}[\mathbf{u}]_{2}+[\mathbf{w}]_{2}[\mathbf{u}]_{2}+\cdots+[\mathbf{v}]_{m}[\mathbf{u}]_{m}+[\mathbf{w}]_{m}[\mathbf{u}]_{m} \\
+&amp;\displaystyle=[\mathbf{v}]_{1}[\mathbf{u}]_{1}+\cdots+[\mathbf{v}]_{m}[\mathbf{u}]_{m}+[\mathbf{w}]_{1}[\mathbf{u}]_{1}+\cdots+[\mathbf{w}]_{m}[\mathbf{u}]_{m} \\
+&amp;\displaystyle=\left&lt; \mathbf{v},\mathbf{u}\right&gt;+\left&lt; \mathbf{w},\mathbf{u}\right&gt;.
+\end{align*} 
+@col
+ Or we can use $\eqref{ipdefe2}$:
+\begin{align*}
+\displaystyle \left&lt; \mathbf{v}+\mathbf{w},\mathbf{u}\right&gt;=(\mathbf{v}+\mathbf{w})^{t}\mathbf{u}=(\mathbf{v}^{t}+\mathbf{w}^{t})\mathbf{u}
+\end{align*}
+\begin{align*}
+\displaystyle =\mathbf{v}^{t}\mathbf{u}+\mathbf{w}^{t}\mathbf{u}=\left&lt; \mathbf{v},\mathbf{u}\right&gt;+\left&lt; \mathbf{w},\mathbf{u}\right&gt;.
+\end{align*} </li>
+<li class="ltx_item"> We compute
+\begin{align*}
+\displaystyle\left&lt; \alpha\mathbf{v},\mathbf{w}\right&gt;&amp;\displaystyle=[\alpha\mathbf{v}]_{1}[\mathbf{w}]_{1}+[\alpha\mathbf{v}]_{2}[\mathbf{w}]_{2}+\cdots+[\alpha\mathbf{v}]_{m}[\mathbf{w}]_{m} \\
+&amp;\displaystyle=\alpha[\mathbf{v}]_{1}[\mathbf{w}]_{1}+\alpha[\mathbf{v}]_{2}[\mathbf{w}]_{2}+\cdots+\alpha[\mathbf{v}]_{m}[\mathbf{w}]_{m} \\
+&amp;\displaystyle=\alpha([\mathbf{v}]_{1}[\mathbf{w}]_{1}+[\mathbf{v}]_{2}[\mathbf{w}]_{2}+\cdots+[\mathbf{v}]_{m}[\mathbf{w}]_{m}) \\
+&amp;\displaystyle=\alpha\left&lt; \mathbf{v},\mathbf{w}\right&gt;.
+\end{align*} 
+@col
+ Or we can use $\eqref{ipdefe2}$:
+\begin{align*}
+\displaystyle \left&lt; \alpha\mathbf{v},\mathbf{w}\right&gt;=(\alpha\mathbf{v})^{t}\mathbf{w}=\alpha\mathbf{v}^{t}\mathbf{w}=\alpha\left&lt; \mathbf{v},\mathbf{w}\right&gt;.
+\end{align*} </li>
+<li class="ltx_item"> We compute
+\begin{align*}
+\displaystyle\left&lt; \mathbf{v},\mathbf{w}\right&gt;&amp;\displaystyle=[\mathbf{v}]_{1}[\mathbf{w}]_{1}+[\mathbf{v}]_{2}[\mathbf{w}]_{2}+\cdots+[\mathbf{v}]_{m}[\mathbf{w}]_{m}. \\
+&amp;\displaystyle=[\mathbf{w}]_{1}[\mathbf{v}]_{1}+[\mathbf{w}]_{2}[\mathbf{v}]_{2}+\cdots+[\mathbf{w}]_{m}[\mathbf{v}]_{m}. \\
+&amp;\displaystyle=\left&lt; \mathbf{w},\mathbf{v}\right&gt;.
+\end{align*} </li>
+<li class="ltx_item"> We compute
+\begin{align*}
+\displaystyle \left&lt; \mathbf{v},\mathbf{v}\right&gt;=[\mathbf{v}]_{1}^{2}+[\mathbf{v}]_{2}^{2}+\cdots+[\mathbf{v}]_{m}^{2}\geq 0.
+\end{align*} 
+@col
+ Noting that $\left&lt; \mathbf{v},\mathbf{v}\right&gt;=0$ if and only if $[\mathbf{v}]_{i}=0$ for all $1\leq i\leq n$, we see that $\mathbf{v}=\mathbf{0}$ </li>
+@newline</ol>
+@newline
+@qed
+@endcol
+@end
+@slide
+@prop
+ Let $\alpha,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{v},\mathbf{w},\mathbf{u}\in{\mathbb{R}}^{m}$. We have
+@newline<ol class="ltx_enumerate">
+<li class="ltx_item"> $\left&lt; \alpha\mathbf{v}+\beta\mathbf{w},\mathbf{u}\right&gt;=\alpha\left&lt; \mathbf{v},\mathbf{u}\right&gt;+\beta\left&lt; \mathbf{w},\mathbf{u}\right&gt;$. </li>
+<li class="ltx_item"> $\left&lt; \mathbf{u},\alpha\mathbf{v}+\beta\mathbf{w}\right&gt;=\alpha\left&lt; \mathbf{u},\mathbf{v}\right&gt;+\beta\left&lt; \mathbf{u},\mathbf{w}\right&gt;$. </li>
+<li class="ltx_item"> $\left&lt; \mathbf{0},\mathbf{v}\right&gt;=\left&lt; \mathbf{v},\mathbf{0}\right&gt;=0$. </li>
+<li class="ltx_item"> If $\left&lt; \mathbf{v},\mathbf{x}\right&gt;=0$ for all $\mathbf{x}\in{\mathbb{R}}^{m}$, then $\mathbf{v}=\mathbf{0}$. </li>
+<li class="ltx_item"> If $\left&lt; \mathbf{v},\mathbf{x}\right&gt;=\left&lt; \mathbf{w},\mathbf{x}\right&gt;$ for all $x\in{\mathbb{R}}^{m}$, then $\mathbf{v}=\mathbf{w}$. </li>
+@newline</ol>
+@end
+@proof
+@newcol
+<ol class="ltx_enumerate">
+<li class="ltx_item"> By @ref{ipdef} item 1, we have:
+\begin{align*}
+\displaystyle \left&lt; \alpha\mathbf{v}+\beta\mathbf{w},\mathbf{u}\right&gt;=\left&lt; \alpha\mathbf{v},\mathbf{u}\right&gt;+\left&lt; \beta\mathbf{w},\mathbf{u}\right&gt;.
+\end{align*}
+By @ref{ipdef} item 2,
+\begin{align*}
+\displaystyle
+\left&lt; \alpha\mathbf{v},\mathbf{u}\right&gt;+\left&lt; \beta\mathbf{w},\mathbf{u}\right&gt;
+=
+\alpha\left&lt; \mathbf{v},\mathbf{u}\right&gt;+\beta\left&lt; \mathbf{w},\mathbf{u}\right&gt;.
+\end{align*} 
+@col
+ Or we can also use $\eqref{ipdefe2}$:
+\begin{align*}
+\displaystyle \left&lt; \alpha\mathbf{v}+\beta\mathbf{w},\mathbf{u}\right&gt;=(\alpha\mathbf{v}+\beta\mathbf{w})^{t}\mathbf{u}
+\end{align*}
+\begin{align*}
+\displaystyle =\alpha(\mathbf{v})^{t}\mathbf{u}+\beta(\mathbf{w})^{t}\mathbf{u}=\alpha\left&lt; \mathbf{v},\mathbf{u}\right&gt;+\beta\left&lt; \mathbf{w},\mathbf{u}\right&gt;.
+\end{align*} </li>
+<li class="ltx_item"> By the previous part and Proposition   @ref{ipdef} item 3, we have
+\begin{align*}
+\displaystyle \left&lt; \mathbf{u},\alpha\mathbf{v}+\beta\mathbf{w}\right&gt;=\left&lt; \alpha\mathbf{v}+\beta\mathbf{w},\mathbf{u}\right&gt;
+\end{align*}
+\begin{align*}
+\displaystyle =\alpha\left&lt; \mathbf{v},\mathbf{u}\right&gt;+\beta\left&lt; \mathbf{w},\mathbf{u}\right&gt;=\alpha\left&lt; \mathbf{u},\mathbf{v}\right&gt;+\beta\left&lt; \mathbf{u},\mathbf{w}\right&gt;.
+\end{align*} 
+@col
+ Or we can also use $\eqref{ipdefe2}$ (fill the detail). </li>
+<li class="ltx_item"> We compute
+\begin{align*}
+\displaystyle \left&lt; \mathbf{0},\mathbf{v}\right&gt;=0[\mathbf{v}]_{1}+\cdots+0[\mathbf{v}]_{m}=0
+\end{align*}
+and
+\begin{align*}
+\displaystyle \left&lt; \mathbf{v},\mathbf{0}\right&gt;=[\mathbf{v}]_{1}0+\cdots+[\mathbf{v}]_{m}0=0.
+\end{align*} </li>
+<li class="ltx_item"> Suppose $\left&lt; \mathbf{v},\mathbf{x}\right&gt;=0$ for all $\mathbf{x}\in{\mathbb{R}}^{m}$. Let $\mathbf{x}=\mathbf{v}$. Then $\left&lt; \mathbf{v},\mathbf{v}\right&gt;=0$.
+By Proposition   @ref{ipdef} item 4, $\mathbf{v}=\mathbf{0}$. </li>
+<li class="ltx_item"> Suppose $\left&lt; \mathbf{v},\mathbf{x}\right&gt;=\left&lt; \mathbf{w},\mathbf{x}\right&gt;$, then $0=\left&lt; \mathbf{v},\mathbf{x}\right&gt;-\left&lt; \mathbf{w},\mathbf{x}\right&gt;=\left&lt; \mathbf{v}-\mathbf{w},\mathbf{x}\right&gt;$
+for all $\mathbf{x}\in V$. By the previous part $\mathbf{v}-\mathbf{w}=\mathbf{0}$. So $\mathbf{v}=\mathbf{w}$. </li>
+@newline</ol>
+@newline
+@qed
+@endcol
+@end
+@slide
+@defn
+@title{Norm}
+ The @keyword{norm} (or @keyword{length}) of $\mathbf{v}\in{\mathbb{R}}^{n}$ is defined to be $\|\mathbf{v}\|=\sqrt{\left&lt; \mathbf{v},\mathbf{v}\right&gt;}$. Note that $\left&lt; \mathbf{v},\mathbf{v}\right&gt;\geq 0$. So the symbol $\sqrt{\left&lt; \mathbf{v},\mathbf{v}\right&gt;}$ is meaningful. 
+@end
+@slide
+@eg
+@label{eg:lengths}
+ Let $V={\mathbb{R}}^{3}$ with the standard inner product. Let
+\begin{align*}
+\displaystyle \mathbf{v}=\begin{bmatrix}1\\
+2\\
+3\end{bmatrix},\mathbf{w}=\begin{bmatrix}1\\
 0\\
--1\end{bmatrix}=\begin{bmatrix}-60\\
-63\\
-46\\
-11\end{bmatrix}.
-\end{align*}
-@endcol
-@end
-@section{Properties of Matrix Inverses}
-@thm
-@title{Matrix Inverse is Unique}
-@label{MIU}
-Suppose the square matrix $A$ has an inverse. Then $A^{-1}$ is unique.
-@end
-@proof
+1\end{bmatrix}.
+\end{align*} 
 @newcol
-We will assume that $A$ has two inverses. The hypothesis tells there is at least one. Suppose then that $B$ and $C$ are both inverses for $A$.
-Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
+ Then
 \begin{align*}
-\displaystyle B&\displaystyle=BI_{n} \\
-&\displaystyle=B(AC) \\
-&\displaystyle=(BA)C \\
-&\displaystyle=I_{n}C \\
-&\displaystyle=C
+\displaystyle \|\mathbf{v}\|=\sqrt{\left&lt; \mathbf{v},\mathbf{v}\right&gt;}=\sqrt{1^{2}+2^{2}+3^{2}}=\sqrt{14}
 \end{align*}
-@col
-So we conclude that $B$ and $C$ are the same, and cannot be different. So any matrix that acts like an inverse, must be the inverse.
-@qed
-@endcol
-@end
-
-@slide
-When most of us dress in the morning, we put on our socks first, followed by our shoes. In the evening we must then first remove our shoes, followed by our socks. Try to connect the conclusion of the following theorem with this everyday example.
-@thm
-@title{Socks and Shoes}
-@label{SS}
-Suppose $A$ and $B$ are invertible matrices of size $n$. Then $AB$ is an invertible matrix and $(AB)^{-1}=B^{-1}A^{-1}$.
-@end
-@proof
-@skip
-@newcol
+and
 \begin{align*}
-\displaystyle(B^{-1}A^{-1})(AB)&\displaystyle=B^{-1}(A^{-1}A)B \\
-&\displaystyle=B^{-1}I_{n}B \\
-&\displaystyle=B^{-1}B \\
-&\displaystyle=I_{n} \\
-\\
-\displaystyle(AB)(B^{-1}A^{-1})&\displaystyle=A(BB^{-1})A^{-1} \\
-&\displaystyle=AI_{n}A^{-1} \\
-&\displaystyle=AA^{-1} \\
-&\displaystyle=I_{n}
-\end{align*}
-@col
-So the matrix $B^{-1}A^{-1}$ has met all of the requirements to be $AB$’s inverse (date) and with the ensuing marriage proposal we can announce that $(AB)^{-1}=B^{-1}A^{-1}$.
-@qed
+\displaystyle \|\mathbf{w}\|=\sqrt{\left&lt; \mathbf{w},\mathbf{w}\right&gt;}=\sqrt{1^{2}+0^{2}+1^{2}}=\sqrt{2}.
+\end{align*} 
 @endcol
 @end
 @slide
-@thm
-@title{Matrix Inverse of a Matrix Inverse}
-@label{MIMI}
-Suppose $A$ is an invertible matrix. Then $A^{-1}$ is invertible and $(A^{-1})^{-1}=A$.
+@prop
+ Let $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{v}\in{\mathbb{R}}^{m}$.
+@newline<ol class="ltx_enumerate">
+<li class="ltx_item"> $\|\mathbf{v}\|=0$ if and only if $\mathbf{v}=\mathbf{0}$. </li>
+<li class="ltx_item"> $\|\alpha\mathbf{v}\|=|\alpha|\|\mathbf{v}\|$. </li>
+<li class="ltx_item"> Suppose that $\mathbf{v}\neq\mathbf{0}$ and let $\alpha=\frac{1}{\|\mathbf{v}\|}$. Then $\|\alpha\mathbf{v}\|=1$. </li>
+@newline</ol>
 @end
 @proof
-@skip
 @newcol
-As with the proof of of the previous example, we examine if $A$ is a suitable inverse for $A^{-1}$ (by definition, the opposite is true).
+@ol
+@li
+ $\|\mathbf{v}\|=0\iff 0=\|\mathbf{v}\|^{2}=\left&lt; \mathbf{v},\mathbf{v}\right&gt;$.
+By Proposition (  @ref{ipdef}), item 4, the above is true if and only if $\mathbf{v}=\mathbf{0}$. 
+@li
+ $\|\alpha\mathbf{v}\|=\sqrt{\left&lt; \alpha\mathbf{v},\alpha\mathbf{v}\right&gt;}$
+$=\sqrt{\alpha\left&lt; \mathbf{v},\alpha\mathbf{v}\right&gt;}=\sqrt{\alpha^{2}\left&lt; \mathbf{v},\mathbf{v}\right&gt;}$
+$=|\alpha|\sqrt{\left&lt; \mathbf{v},\mathbf{v}\right&gt;}=|\alpha|\|\mathbf{v}\|$. 
+@li
+ By the previous part
 \begin{align*}
-\displaystyle AA^{-1}&\displaystyle=I_{n} \\
-\\
-\displaystyle A^{-1}A&\displaystyle=I_{n}
+\displaystyle \|\alpha\mathbf{v}\|=|\alpha|\|\mathbf{v}\|=\frac{1}{\|\mathbf{v}\|}\|\mathbf{v}\|=1.
+\end{align*} 
+@endol
+@endcol
+@end
+@slide
+@defn
+@title{unit vector}
+ A vector $\mathbf{v}\in{\mathbb{R}}^{m}$ is said to be a @keyword{unit vector} if $\|\mathbf{v}\|=1$.
+A non-zero vector $\mathbf{v}$ can be @keyword{normalized} to a unit vector $\frac{\mathbf{v}}{\|\mathbf{v}\|}$ (see the previous proposition item 3). 
+@end
+@slide
+@eg
+ In @ref{eg:lengths}, the vectors $\mathbf{v}$ and $\mathbf{w}$ can be normalized to:
+\begin{align*}
+\displaystyle \frac{\mathbf{v}}{\|\mathbf{v}\|}=\frac{\mathbf{v}}{\sqrt{14}}=\begin{bmatrix}\frac{1}{\sqrt{14}}\\
+\frac{2}{\sqrt{14}}\\
+\frac{3}{\sqrt{14}}\end{bmatrix}
 \end{align*}
+and
+\begin{align*}
+\displaystyle \frac{\mathbf{w}}{\|\mathbf{w}\|}=\frac{\mathbf{w}}{\sqrt{2}}=\begin{bmatrix}\frac{1}{\sqrt{2}}\\
+0\\
+\frac{1}{\sqrt{2}}\end{bmatrix}
+\end{align*}
+respectively. 
+@end
+@section{Orthogonal sets}
+@defn
+ Two vectors $\mathbf{v}$ and $\mathbf{w}$ in $\mathbb{R}^{n}$ are said @keyword{orthogonal} or @keyword{perpendicular} if $\left&lt; \mathbf{v},\mathbf{w}\right&gt;=0$. In this case we write $\mathbf{v}\perp\mathbf{w}$. 
+@end
+@slide
+@eg
+<ol class="ltx_enumerate">
+<li class="ltx_item"> Let $V={\mathbb{R}}^{3}$. Then
+\begin{align*}
+\displaystyle \begin{bmatrix}1\\
+2\\
+3\end{bmatrix}\perp\begin{bmatrix}-1\\
+-1\\
+1\end{bmatrix},
+\end{align*}
+as
+\begin{align*}
+\displaystyle \left&lt; \begin{bmatrix}1\\
+2\\
+3\end{bmatrix},\begin{bmatrix}-1\\
+-1\\
+1\end{bmatrix}\right&gt;=1\times(-1)+2\times(-1)+3\times 1=0.
+\end{align*} </li>
+<li class="ltx_item">
+@newcol
+ Let $V={\mathbb{R}}^{m}$. Then $\mathbf{e}_{i}\perp\mathbf{e}_{j}$ if $i\neq j$. 
+@endcol</li></ol>
+@end
+@slide
+@defn
+ A subset $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ of ${\mathbb{R}}^{m}$ is said to be @keyword{orthogonal} if the following conditions hold:
+@newline<ol class="ltx_enumerate">
+<li class="ltx_item"> $\mathbf{0}\notin S$, i.e. $\mathbf{v}_{i}\neq\mathbf{0}$ for $i=1,\ldots,k$. </li>
+<li class="ltx_item"> $\mathbf{v}_{i}\perp\mathbf{v}_{j}$ for $i\neq j$, i.e., $\left&lt; \mathbf{v}_{i},\mathbf{v}_{j}\right&gt;=0$ for $i\neq j$. </li>
+@newline</ol>
+@end
+@slide
+@eg
+@label{eg:orthosets}
+<ol class="ltx_enumerate">
+<li class="ltx_item"> $S=\left\{\begin{bmatrix}1\\
+2\end{bmatrix},\begin{bmatrix}-2\\
+1\end{bmatrix}\right\}$ is orthogonal.  </li>
+<li class="ltx_item">
+@newcol
+ $S=\left\{\begin{bmatrix}1\\
+1\\
+1\end{bmatrix},\begin{bmatrix}1\\
+-1\\
+0\end{bmatrix},\begin{bmatrix}1\\
+1\\
+-2\end{bmatrix}\right\}$ is orthogonal. 
+@endcol</li>
+<li class="ltx_item">
+@newcol
+ For any $k\leq m$, the set $S=\left\{\mathbf{e}_{1},\mathbf{e}_{2},\ldots,\mathbf{e}_{k}\right\}\subset\mathbb{R}^{m}$ is orthogonal. 
+@endcol</li></ol>
+@end
+@slide
+@prop
+ Let $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2},\cdots,\mathbf{v}_{k}\right\}$ be an orthogonal subset of ${\mathbb{R}}^{m}$.
+Let
+\begin{align*}
+\displaystyle \mathbf{v}=\alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k},
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{w}=\beta_{1}\mathbf{v}_{1}+\cdots+\beta_{k}\mathbf{v}_{k}.
+\end{align*} 
+@newcol
+ Then, for $\alpha_{i},\beta_{i}\in{\mathbb{R}}^{\hbox{}}$, $i=1,\ldots k$, we have
+\begin{align*}
+\displaystyle \left&lt; \mathbf{v},\mathbf{w}\right&gt;=\alpha_{1}\beta_{1}\|\mathbf{v}_{1}\|^{2}+\cdots+\alpha_{k}\beta_{k}\|\mathbf{v}_{k}\|^{2}.
+\end{align*} 
+@endcol
+@end
+@proof
+@newcol
+ First for $1\leq i\leq k$, we compute
+\begin{align*}
+\displaystyle\left&lt; \mathbf{v},\mathbf{v}_{i}\right&gt;&amp;\displaystyle=\left&lt; \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k},\mathbf{v}_{i}\right&gt; \\
+&amp;\displaystyle=\alpha_{1}\left&lt; \mathbf{v}_{1},\mathbf{v}_{i}\right&gt;+\cdots+\alpha_{k}\left&lt; \mathbf{v}_{k},\mathbf{v}_{i}\right&gt; \\
+&amp;\displaystyle=\alpha_{i}\left&lt; \mathbf{v}_{i},\mathbf{v}_{i}\right&gt;=\alpha_{i}\|\mathbf{v}_{i}\|^{2}.
+\end{align*} 
 @col
-The matrix $A$ has met all the requirements to be the inverse of $A^{-1}$, and so is invertible and we can write $A=(A^{-1})^{-1}$.
+ The last step follows from the fact that $\left&lt; \mathbf{v}_{j},\mathbf{v}_{i}\right&gt;=0$ for $j\neq i$. But then
+\begin{align*}
+\displaystyle\left&lt; \mathbf{v},\mathbf{w}\right&gt;&amp;\displaystyle=\left&lt; \mathbf{v},\beta_{1}\mathbf{v}_{1}+\cdots+\beta_{k}\mathbf{v}_{k}\right&gt; \\
+&amp;\displaystyle=\beta_{1}\left&lt; \mathbf{v},\mathbf{v}_{1}\right&gt;+\cdots+\beta_{k}\left&lt; \mathbf{v},\mathbf{v}_{k}\right&gt; \\
+&amp;\displaystyle=\alpha_{1}\beta_{1}\|\mathbf{v}_{1}\|^{2}+\cdots+\alpha_{k}\beta_{k}\|\mathbf{v}_{k}\|^{2}.
+\end{align*} 
 @qed
 @endcol
 @end
 @slide
 @thm
-@title{Matrix Inverse of a Transpose}
-@label{MIT}
-Suppose $A$ is an invertible matrix. Then $A^{t}$ is invertible and $(A^{t})^{-1}=(A^{-1})^{t}$.
+@label{orthind}
+ Let $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2},\cdots,\mathbf{v}_{k}\right\}$ be an orthogonal subset of ${\mathbb{R}}^{m}$. Then $S$ is linearly independent. 
 @end
 @proof
-@skip
 @newcol
-As with the proof of Theorem   @ref{SS}, we see if $(A^{-1})^{t}$ is a suitable inverse for $A^{t}$.
+ Suppose that we have a relation of linear dependence:
 \begin{align*}
-\displaystyle(A^{-1})^{t}A^{t}&\displaystyle=(AA^{-1})^{t} \\
-&\displaystyle=I_{n}^{t} \\
-&\displaystyle=I_{n} \\
-\\
-\displaystyle A^{t}(A^{-1})^{t}&\displaystyle=(A^{-1}A)^{t} \\
-&\displaystyle=I_{n}^{t} \\
-&\displaystyle=I_{n}
-\end{align*}
+\displaystyle \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k}=\mathbf{0}.
+\end{align*} 
 @col
-The matrix $(A^{-1})^{t}$ has met all the requirements to be the inverse of $A^{t}$, and so is invertible and we can write $(A^{t})^{-1}=(A^{-1})^{t}$.
+ For $1\leq i\leq k$ we have
+\begin{align*}
+\displaystyle \left&lt; \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k},\mathbf{v}_{i}\right&gt;=\left&lt; \mathbf{0},\mathbf{v}_{i}\right&gt;=0.
+\end{align*}
+i.e. for $1\leq i\leq k$,
+\begin{align*}
+\displaystyle\left&lt; \mathbf{v},\mathbf{v}_{i}\right&gt;&amp;\displaystyle=\left&lt; \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k},\mathbf{v}_{i}\right&gt; \\
+&amp;\displaystyle=\alpha_{1}\left&lt; \mathbf{v}_{1},\mathbf{v}_{i}\right&gt;+\cdots+\alpha_{k}\left&lt; \mathbf{v}_{k},\mathbf{v}_{i}\right&gt; \\
+&amp;\displaystyle=\alpha_{i}\|\mathbf{v}_{i}\|^{2}=0.
+\end{align*} 
+@col
+ So for $1\leq i\leq k$ we have
+\begin{align*}
+\displaystyle \alpha_{i}=0.
+\end{align*} 
+@col
+ Therefore the relation of linear dependence is trivial. Hence $S$ is linearly independent. 
 @qed
 @endcol
 @end
 @slide
 @thm
-@title{Matrix Inverse of a Scalar Multiple}
-@label{MISM}
-Suppose $A$ is an invertible matrix and $\alpha$ is a nonzero scalar. Then $\left(\alpha A\right)^{-1}=\frac{1}{\alpha}A^{-1}$ and $\alpha A$ is invertible.
+@label{o}
+ Let $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2},\cdots,\mathbf{v}_{k}\right\}$ be an orthogonal subset of ${\mathbb{R}}^{m}$.
+Suppose that $\mathbf{v}\in\left&lt; S\right&gt;$. Write
+\begin{align*}
+\displaystyle \mathbf{v}=\alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k},
+\end{align*}
+for some $\alpha_{i}\in{\mathbb{R}}^{\hbox{}}$, $i=1,\ldots,k$.
+Then
+\begin{align*}
+\displaystyle \alpha_{i}=\frac{\left&lt; \mathbf{v},\mathbf{v}_{i}\right&gt;}{\|\mathbf{v}_{i}\|^{2}},
+\end{align*}
+i.e.
+\begin{align*}
+\displaystyle \mathbf{v}=\frac{\left&lt; \mathbf{v},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}+\cdots+\frac{\left&lt; \mathbf{v},\mathbf{v}_{k}\right&gt;}{\|\mathbf{v}_{k}\|^{2}}\mathbf{v}_{k}.
+\end{align*} 
 @end
 @proof
 @newcol
-As with the proof of Theorem   @ref{SS}, we see if $\frac{1}{\alpha}A^{-1}$ is a suitable inverse for $\alpha A$.
+ Suppose that $\mathbf{v}=\alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k}$. Then, for $1\leq i\leq k$, we compute
 \begin{align*}
-\displaystyle\left(\frac{1}{\alpha}A^{-1}\right)\left(\alpha A\right)&\displaystyle=\left(\frac{1}{\alpha}\alpha\right)\left(A^{-1}A\right) \\
-&\displaystyle=1I_{n} \\
-&\displaystyle=I_{n} \\
-\\
-\displaystyle\left(\alpha A\right)\left(\frac{1}{\alpha}A^{-1}\right)&\displaystyle=\left(\alpha\frac{1}{\alpha}\right)\left(AA^{-1}\right) \\
-&\displaystyle=1I_{n} \\
-&\displaystyle=I_{n}
-\end{align*}
+\displaystyle\left&lt; \mathbf{v},\mathbf{v}_{i}\right&gt;&amp;\displaystyle=\left&lt; \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k},\mathbf{v}_{i}\right&gt; \\
+&amp;\displaystyle=\alpha_{1}\left&lt; \mathbf{v}_{1},\mathbf{v}_{i}\right&gt;+\cdots+\alpha_{k}\left&lt; \mathbf{v}_{k},\mathbf{v}_{i}\right&gt; \\
+&amp;\displaystyle=\alpha_{i}\left&lt; \mathbf{v}_{i},\mathbf{v}_{i}\right&gt;=\alpha_{i}\|\mathbf{v}_{i}\|^{2}.
+\end{align*} 
 @col
-The matrix $\frac{1}{\alpha}A^{-1}$ has met all the requirements to be the inverse of $\alpha A$, so we can write $\left(\alpha A\right)^{-1}=\frac{1}{\alpha}A^{-1}$.
+ Hence
+\begin{align*}
+\displaystyle \alpha_{i}=\frac{\left&lt; \mathbf{v},\mathbf{v}_{i}\right&gt;}{\|\mathbf{v}_{i}\|^{2}}.
+\end{align*} 
+@qed
+@endcol
+@end
+@remark
+@newline
+@newcol
+ The advantage of using the above method is that we don’t have to solve linear equations to find the linear combination. 
+@endcol
+@newline
+@newcol
+ In order to use the theorem, we need to ensure that $\mathbf{v}\in\left&lt; S\right&gt;$. 
+@endcol
+@end
+@slide
+@eg
+ We use @ref{eg:orthosets}.
+Let $S=\left\{\mathbf{v}_{1}=\begin{bmatrix}1\\
+1\\
+1\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}1\\
+-1\\
+0\end{bmatrix},\mathbf{v}_{3}=\begin{bmatrix}1\\
+1\\
+-2\end{bmatrix}\right\}$.
+Given that
+\begin{align*}
+\displaystyle \mathbf{v}=\begin{bmatrix}1\\
+2\\
+3\end{bmatrix}
+\end{align*}
+is in $\left&lt; S\right&gt;$, we find the following linear combinations:
+\begin{align*}
+\displaystyle \alpha_{1}=\frac{\left&lt; \mathbf{v},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}=\frac{6}{3}=2.
+\end{align*}
+\begin{align*}
+\displaystyle \alpha_{2}=\frac{\left&lt; \mathbf{v},\mathbf{v}_{2}\right&gt;}{\|\mathbf{v}_{2}\|^{2}}=\frac{-1}{2}=-\frac{1}{2}.
+\end{align*}
+\begin{align*}
+\displaystyle \alpha_{3}=\frac{\left&lt; \mathbf{v},\mathbf{v}_{3}\right&gt;}{\|\mathbf{v}_{3}\|^{2}}=\frac{-3}{6}=-\frac{1}{2}.
+\end{align*} 
+@newcol
+ Hence
+\begin{align*}
+\displaystyle \mathbf{v}=2\mathbf{v}_{1}-\frac{1}{2}\mathbf{v}_{2}-\frac{1}{2}\mathbf{v}_{3}.
+\end{align*} 
+@endcol
+@end
+@slide
+@defn
+ Let $V$ be a subspace of ${\mathbb{R}}^{m}$.
+A subset $S$ of $V$ is said to be an @keyword{orthogonal basis} for $V$ if $S$ is a basis of $V$ and $S$ is orthogonal. 
+@end
+@newcol
+ If $S$ is an orthogonal subset of $V$, then by Theorem   @ref{orthind}, it is automatically linearly independent.
+So in order to check if $S$ is an orthogonal basis, we need only check that $\left&lt; S\right&gt;=V$. So we have the following result.
+@newline
+@endcol
+@thm
+@label{checkob}
+@newcol
+ Let $V$ be a subspace of ${\mathbb{R}}^{m}$.
+Suppose that $S$ is an orthogonal subset of $V$. Then $S$ is an orthogonal basis if and only if $\left&lt; S\right&gt;=V$. 
+@endcol
+@end
+@newcol
+@cor
+@newcol
+ Suppose that $S$ is an orthogonal subset of ${\mathbb{R}}^{m}$. Then $S$ is a basis of $\left&lt; S\right&gt;$. 
+@endcol
+@end
+@cor
+@newcol
+ Let $V$ be a subspace of ${\mathbb{R}}^{m}$.
+Suppose that $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\right\}$ is an orthogonal basis of $V$. Then for any $\mathbf{v}\in V$, we have
+\begin{align*}
+\displaystyle \mathbf{v}=\frac{\left&lt; \mathbf{v},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}+\cdots+\frac{\left&lt; \mathbf{v},\mathbf{v}_{n}\right&gt;}{\|\mathbf{v}_{n}\|^{2}}\mathbf{v}_{n}
+\end{align*} 
+@endcol
+@end
+@proof
+@newcol
+ This follows from @ref{o}. 
+@qed
+@endcol
+@end
+@endcol
+@slide
+@eg
+<ol class="ltx_enumerate">
+<li class="ltx_item"> The set $S=\left\{\begin{bmatrix}1\\
+2\end{bmatrix},\begin{bmatrix}-2\\
+1\end{bmatrix}\right\}$
+an orthogonal basis of ${\mathbb{R}}^{m}$. </li>
+<li class="ltx_item"> The set $S=\left\{\begin{bmatrix}1\\
+1\\
+1\end{bmatrix},\begin{bmatrix}1\\
+-1\\
+0\end{bmatrix},\begin{bmatrix}1\\
+1\\
+-2\end{bmatrix}\right\}$ is an orthogonal basis of ${\mathbb{R}}^{3}$.
+Indeed, $\dim V=3$ and $S$, with 3 vectors, is linearly independent. </li>
+<li class="ltx_item"> The set $S=\left\{\mathbf{e}_{1},\mathbf{e}_{2},\ldots,\mathbf{e}_{m}\right\}$ is an orthogonal basis of ${\mathbb{R}}^{m}$.
+It is called @keyword{the standard basis} for $V$. </li>
+@newline</ol>
+@end
+@slide
+@defn
+ A subset $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ of ${\mathbb{R}}^{m}$ is said to be @keyword{orthonormal} if it is orthogonal and every vector in $S$ is a unit vector, i.e.
+\begin{align*}
+\displaystyle \left&lt; \mathbf{v}_{i},\mathbf{v}_{j}\right&gt;=\begin{cases}1&amp;\text{if $i=j$},\\
+0&amp;\text{if $i\neq j$}.\end{cases}
+\end{align*} 
+@newcol
+ Let $V$ be a subspace of ${\mathbb{R}}^{m}$.
+The subset $S$ is said to be an @keyword{orthonormal basis} for $V$ if it is orthonormal and is a basis of $V$. 
+@endcol
+@end
+@newcol
+ Because an orthonormal set $S$ is orthogonal, the above theorems regarding orthogonal sets are also true for orthonormal sets.
+In particular we have the following result.
+@newline
+@endcol
+@slide
+@thm
+ Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ be an orthonormal subset of ${\mathbb{R}}^{m}$ and let $\mathbf{v}\in\left&lt; S\right&gt;$. Then
+\begin{align*}
+\displaystyle \mathbf{v}=\left&lt; \mathbf{v},\mathbf{v}_{1}\right&gt;\mathbf{v}_{1}+\cdots+\left&lt; \mathbf{v},\mathbf{v}_{k}\right&gt;\mathbf{v}_{k}.
+\end{align*} 
+@end
+@proof
+@newcol
+ By Theorem   @ref{o} and $\|\mathbf{v}_{i}\|=1$ for $i=1,\ldots,k$. 
 @qed
 @endcol
 @end
 @newcol
-It would be tempting, for example, to think that $(A+B)^{-1}=A^{-1}+B^{-1}$, but this is false. Can you find a counterexample?
-
+ If $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is an orthogonal subset of ${\mathbb{R}}^{m}$, then
+$\left\{\frac{\mathbf{v}_{1}}{\|\mathbf{v}_{1}\|},\ldots,\frac{\mathbf{v}_{k}}{\|\mathbf{v}_{k}\|}\right\}$
+is an orthonormal subset. The process is called @keyword{normalization}. 
 @endcol
+@slide
+@eg
+<ol class="ltx_enumerate">
+<li class="ltx_item"> The set $S=\left\{\begin{bmatrix}1\\
+2\end{bmatrix},\begin{bmatrix}-2\\
+1\end{bmatrix}\right\}$ is
+an orthogonal basis of ${\mathbb{R}}^{2}$. Normalizing it, we obtain an orthonormal basis
+\begin{align*}
+\displaystyle S^{\prime}=\left\{\frac{1}{\sqrt{5}}\begin{bmatrix}1\\
+2\end{bmatrix},\frac{1}{\sqrt{5}}\begin{bmatrix}-2\\
+1\end{bmatrix}\right\}.
+\end{align*} </li>
+<li class="ltx_item"> The set $S=\left\{\begin{bmatrix}1\\
+1\\
+1\end{bmatrix},\begin{bmatrix}1\\
+-1\\
+0\end{bmatrix},\begin{bmatrix}1\\
+1\\
+-2\end{bmatrix}\right\}$ is an orthogonal basis of ${\mathbb{R}}^{3}$.
+Normalizing it, we obtain an orthonormal basis
+\begin{align*}
+\displaystyle S^{\prime}=\left\{\frac{1}{\sqrt{3}}\begin{bmatrix}1\\
+1\\
+1\end{bmatrix},\frac{1}{\sqrt{2}}\begin{bmatrix}1\\
+-1\\
+0\end{bmatrix},\frac{1}{\sqrt{6}}\begin{bmatrix}1\\
+1\\
+-2\end{bmatrix}\right\}.
+\end{align*} </li>
+@newline</ol>
+@end
+@section{Gram-Schmidt Orthogonalization process}
+@newline
+Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ be an orthogonal subset of ${\mathbb{R}}^{m}$. If $\mathbf{w}\in\left&lt; S\right&gt;$, then
+\begin{align*}
+\displaystyle \mathbf{w}=\frac{\left&lt; \mathbf{w},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}+\cdots+\frac{\left&lt; \mathbf{w},\mathbf{v}_{k}\right&gt;}{\|\mathbf{v}_{k}\|^{2}}\mathbf{v}_{k}.
+\end{align*} 
+@newcol
+ But what if $\mathbf{w}$ is not in $\left&lt; S\right&gt;$? Let’s compare the difference. We have the following theorem.
+@newline
+@endcol
+@slide
+@thm
+@label{perp}
+ Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ be an orthogonal subset of ${\mathbb{R}}^{m}$ and let $\mathbf{w}\in{\mathbb{R}}^{m}$. Then, for each $i=1,\ldots,k$, the vector
+\begin{align*}
+\displaystyle \mathbf{v}=\mathbf{w}-\frac{\left&lt; \mathbf{w},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left&lt; \mathbf{w},\mathbf{v}_{k}\right&gt;}{\|\mathbf{v}_{k}\|^{2}}\mathbf{v}_{k}
+\end{align*}
+is perpendicular to $\mathbf{v}_{i}$. 
+@end
+@proof
+@newcol
+ For $1\leq i\leq k$, we compute
+\begin{align*}
+\displaystyle \left&lt; \mathbf{v},\mathbf{v}_{i}\right&gt;=\left&lt; \mathbf{w},\mathbf{v}_{i}\right&gt;-\frac{\left&lt; \mathbf{w},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\left&lt; \mathbf{v}_{1},\mathbf{v}_{i}\right&gt;-\cdots-\frac{\left&lt; \mathbf{w},\mathbf{v}_{k}\right&gt;}{\|\mathbf{v}_{k}\|^{2}}\left&lt; \mathbf{v}_{k},\mathbf{v}_{i}\right&gt;.
+\end{align*} 
+@col
+ Because $\left&lt; \mathbf{v}_{j},\mathbf{v}_{i}\right&gt;$ is $0$ unless $j=i$, the above becomes
+\begin{align*}
+\displaystyle \left&lt; \mathbf{w},\mathbf{v}_{i}\right&gt;-\frac{\left&lt; \mathbf{w},\mathbf{v}_{i}\right&gt;}{\|\mathbf{v}_{i}\|^{2}}\left&lt; \mathbf{v}_{i},\mathbf{v}_{i}\right&gt;=\left&lt; \mathbf{w},\mathbf{v}_{i}\right&gt;-\left&lt; \mathbf{v},\mathbf{v}_{i}\right&gt;=0.
+\end{align*} 
+@col
+ Hence $\mathbf{v}\perp\mathbf{v}_{i}$ for $i=1,\ldots,k$. 
+@qed
+@endcol
+@end
+@slide
+@thm
+@title{Gram-Schmidt Orthogonalization Process}
+@label{GSO}
+ Let $S=\left\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{k}\right\}$ be a linearly independent subset of $V$.
+Let $\mathbf{v}_{1}=\mathbf{w}_{1}$ and set
+\begin{align*}
+\displaystyle \mathbf{v}_{\ell}=\mathbf{w}_{\ell}-\frac{\left&lt; \mathbf{w}_{\ell},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left&lt; \mathbf{w}_{\ell},\mathbf{v}_{\ell-1}\right&gt;}{\|\mathbf{v}_{\ell-1}\|^{2}}\mathbf{v}_{\ell-1}\,\,\text{ for $2\leq\ell\leq k$}.
+\end{align*} 
+@newcol
+ Then $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is an orthogonal set.Moreover, $\left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}\right&gt;=\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right&gt;$ for $\ell=1,\ldots,k$.
+In particular $\left&lt; S\right&gt;=\left&lt; S^{\prime}\right&gt;$. The process of obtaining $S^{\prime}$ by the above procedure is called the @keyword{Gram-Schmidt Orthogonalization Process}. 
+@endcol
+@end
+@proof
+@newcol
+ We have $\left&lt; \left\{\mathbf{w}_{1}\right\}\right&gt;=\left&lt; \left\{\mathbf{v}_{1}\right\}\right&gt;$.
+We are going to add one vector at a time.
+@newlineSuppose that $\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}\right&gt;=\left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}\right&gt;$
+and that the set $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}$ is orthogonal.
+@newlineObserve that $\vect{v}_l$ is a linear combination of $\vect{v}_1, \cdots, \vect{v}_{l-1}$ and $\vect{w}_l$.
+Since $\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}\right&gt;=\left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}\right&gt;$, we have:
+\[
+\vect{v}_\ell \in \left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}, \vect{w}_\ell \right\}\right&gt;.
+\]
+Hence,
+\[
+\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right&gt; \subseteq \left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}\right&gt;
+\]
+Likewise, by the formula defining $\vect{v}_\ell$ we have:
+\[
+\vect{w}_\ell \in \left&lt; \left\{\mathbf{v}_{1},\ldots, \vect{v}_\ell \right\}\right&gt;.
+\]
+Hence,
+\[
+\left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}\right&gt; \subseteq
+\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right&gt;.
+\]
+It now follows that:
+\[
+\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right&gt; =\left&lt; \left\{\mathbf{w}_{1},\ldots, \mathbf{w}_{\ell}\right\}\right&gt;.
+\]
+@newlineBy Theorem   @ref{perp}, $\mathbf{v}_{\ell}\perp\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}$. Thus $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}$ is orthogonal.
+Repeating the process for the incrementing $\ell$ reaches $\ell=k$, we complete the proof. 
+@qed
+@endcol
+@end
+@slide
+@cor
+ Suppose that $V$ is a subspace of ${\mathbb{R}}^{m}$. Then there exists an orthogonal (orthonormal basis) of $V$. 
+@end
+@proof
+@newcol
+ By Lecture 18 Theorem 8, there exists a basis $S=\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{k}\right\}$ for $V$.
+Applying Gram-Schmidt orthogonalization process to $S$, we obtain an orthogonal set $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$.
+@newlineBy Theorem   @ref{GSO}, $\left&lt; S^{\prime}\right&gt;=\left&lt; S\right&gt;=V$. By Theorem   @ref{checkob}, $S^{\prime}$ is an orthogonal basis. Normalizing $S^{\prime}$, we can also obtain an orthonormal basis. 
+@qed
+@endcol
+@end
+@newcol
+ The above proof actually describes a method to find orthogonal (orthonormal) basis of $V$. 
+@endcol
+@slide
+@eg
+ Let $V={\mathbb{R}}^{4}$ with the standard inner product. Let
+\begin{align*}
+\displaystyle \mathbf{w}_{1}=\begin{bmatrix}1\\
+0\\
+1\\
+0\end{bmatrix},\mathbf{w}_{2}=\begin{bmatrix}1\\
+1\\
+1\\
+1\end{bmatrix},\mathbf{w}_{3}=\begin{bmatrix}0\\
+1\\
+2\\
+1\end{bmatrix}.
+\end{align*} 
+@newcol
+ Then $\left\{\mathbf{w}_{1},\mathbf{w}_{2},\mathbf{w}_{3}\right\}$ is linearly independent.
+We can apply Gram-Schmidt orthogonalization process to this set of vectors. Take $\mathbf{v}_{1}=\mathbf{w}_{1}=\begin{bmatrix}1\\
+0\\
+1\\
+0\end{bmatrix}$. Then
+\begin{align*}
+\displaystyle \mathbf{v}_{2}=\mathbf{w}_{2}-\frac{\left&lt; \mathbf{w}_{2},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}=\begin{bmatrix}1\\
+1\\
+1\\
+1\end{bmatrix}-\frac{2}{2}\begin{bmatrix}1\\
+0\\
+1\\
+0\end{bmatrix}=\begin{bmatrix}0\\
+1\\
+0\\
+1\end{bmatrix}.
+\end{align*} 
+@col
+ Also
+\begin{align*}
+\displaystyle \mathbf{v}_{3}=\mathbf{w}_{3}-\frac{\left&lt; \mathbf{w}_{3},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\frac{\left&lt; \mathbf{w}_{3},\mathbf{v}_{2}\right&gt;}{\|\mathbf{v}_{2}\|^{2}}\mathbf{v}_{2}=\begin{bmatrix}0\\
+1\\
+2\\
+1\end{bmatrix}-\frac{2}{2}\begin{bmatrix}1\\
+0\\
+1\\
+0\end{bmatrix}-\frac{2}{2}\begin{bmatrix}0\\
+1\\
+0\\
+1\end{bmatrix}=\begin{bmatrix}-1\\
+0\\
+1\\
+0\end{bmatrix}.
+\end{align*} 
+@col
+ The set $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\right\}$ is an orthogonal basis of $\left&lt; \left\{\mathbf{w}_{1},\mathbf{w}_{2},\mathbf{w}_{3}\right\}\right&gt;$.
+To obtain an orthonormal basis of $\left&lt; \left\{\mathbf{w}_{1},\mathbf{w}_{2},\mathbf{w}_{3}\right\}\right&gt;$, we can normalized the vectors
+\begin{align*}
+\displaystyle \mathbf{u}_{1}=\frac{\mathbf{v}_{1}}{\|\mathbf{v}_{1}\|}=\frac{1}{\sqrt{2}}\begin{bmatrix}1\\
+0\\
+1\\
+0\end{bmatrix},\mathbf{u}_{2}=\frac{\mathbf{v}_{2}}{\|\mathbf{v}_{2}\|}=\frac{1}{\sqrt{2}}\begin{bmatrix}0\\
+1\\
+0\\
+1\end{bmatrix},\mathbf{u}_{3}=\frac{\mathbf{v}_{3}}{\|\mathbf{v}_{3}\|}=\frac{1}{\sqrt{2}}\begin{bmatrix}-1\\
+0\\
+1\\
+0\end{bmatrix}.
+\end{align*} 
+@endcol
+@end
+@eg
+@newcol
+ Let $V={\mathcal{N}}\!\left(\begin{bmatrix}1&amp;1&amp;1&amp;1\end{bmatrix}\right)$. Find an orthonormal basis of $V$. The set
+\begin{align*}
+\displaystyle S=\left\{\mathbf{w}_{1}=\begin{bmatrix}-1\\
+1\\
+0\\
+0\end{bmatrix},\mathbf{w}_{2}=\begin{bmatrix}-1\\
+0\\
+1\\
+0\end{bmatrix},\mathbf{w}_{3}=\begin{bmatrix}-1\\
+0\\
+0\\
+1\end{bmatrix}\right\}
+\end{align*}
+is a basis of $V$. We apply Gram-Schmidt orthogonalization process to the set $S$:
+\begin{align*}
+\displaystyle \mathbf{v}_{1}=\mathbf{w}_{1}=\begin{bmatrix}-1\\
+1\\
+0\\
+0\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{v}_{2}=\mathbf{w}_{2}-\frac{\left&lt; \mathbf{w}_{2},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}=\begin{bmatrix}-1\\
+0\\
+1\\
+0\end{bmatrix}-\frac{1}{2}\begin{bmatrix}-1\\
+1\\
+0\\
+0\end{bmatrix}=\begin{bmatrix}-1/2\\
+-1/2\\
+1\\
+0\end{bmatrix}.
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{v}_{3}=\mathbf{w}_{3}-\frac{\left&lt; \mathbf{w}_{3},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\frac{\left&lt; \mathbf{w}_{3},\mathbf{v}_{2}\right&gt;}{\|\mathbf{v}_{2}\|^{2}}\mathbf{v}_{2}=\begin{bmatrix}-1\\
+0\\
+0\\
+1\end{bmatrix}-\frac{1}{2}\begin{bmatrix}-1\\
+1\\
+0\\
+0\end{bmatrix}-\frac{1}{3}\begin{bmatrix}-1/2\\
+-1/2\\
+1\\
+0\end{bmatrix}=\begin{bmatrix}-1/3\\
+-1/3\\
+-1/3\\
+1\end{bmatrix}.
+\end{align*} 
+@newcol
+ So
+\begin{align*}
+\displaystyle \left\{\begin{bmatrix}-1\\
+1\\
+0\\
+0\end{bmatrix},\begin{bmatrix}-1/2\\
+-1/2\\
+1\\
+0\end{bmatrix},\begin{bmatrix}-1/3\\
+-1/3\\
+-1/3\\
+1\end{bmatrix}\right\}.
+\end{align*}
+is an orthogonal basis of $V$. Normalizing it, we can obtain an orthonormal basis of $V$:
+\begin{align*}
+\displaystyle \left\{\frac{1}{\sqrt{2}}\begin{bmatrix}-1\\
+1\\
+0\\
+0\end{bmatrix},\frac{1}{\sqrt{6}}\begin{bmatrix}-1\\
+-1\\
+2\\
+0\end{bmatrix},\frac{1}{\sqrt{12}}\begin{bmatrix}-1\\
+-1\\
+-1\\
+3\end{bmatrix}\right\}.
+\end{align*} 
+@col
+ The above process will be easier if we start with another basis:
+\begin{align*}
+\displaystyle S=\left\{\mathbf{w}_{1}=\begin{bmatrix}1\\
+-1\\
+0\\
+0\end{bmatrix},\mathbf{w}_{2}=\begin{bmatrix}0\\
+0\\
+1\\
+-1\end{bmatrix},\mathbf{w}_{3}=\begin{bmatrix}0\\
+1\\
+-1\\
+0\end{bmatrix}\right\}
+\end{align*} 
+@col
+ Now the first two vectors are perpendicular. Apply Gram-Schmidt orthogonalization process to it:
+\begin{align*}
+\displaystyle \mathbf{v}_{1}=\mathbf{w}_{1}=\begin{bmatrix}1\\
+-1\\
+0\\
+0\end{bmatrix}.
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{v}_{2}=\mathbf{w}_{2}-\frac{\left&lt; \mathbf{w}_{2},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}=\mathbf{w}_{2}-0\mathbf{v}_{1}=\mathbf{w}_{2}=\begin{bmatrix}0\\
+0\\
+1\\
+-1\end{bmatrix}.
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{v}_{3}=\mathbf{w}_{3}-\frac{\left&lt; \mathbf{w}_{3},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\frac{\left&lt; \mathbf{w}_{3},\mathbf{v}_{2}\right&gt;}{\|\mathbf{v}_{2}\|^{2}}\mathbf{v}_{2}=\begin{bmatrix}1/2\\
+1/2\\
+-1/2\\
+-1/2\end{bmatrix}.
+\end{align*} 
+@col
+ So
+\begin{align*}
+\displaystyle \left\{\begin{bmatrix}1\\
+-1\\
+0\\
+0\end{bmatrix},\begin{bmatrix}0\\
+0\\
+1\\
+-1\end{bmatrix},\begin{bmatrix}1/2\\
+1/2\\
+-1/2\\
+-1/2\end{bmatrix}\right\}
+\end{align*}
+is an orthogonal basis of $V$. Normalizing it, we obtain an orthonormal basis
+\begin{align*}
+\displaystyle \left\{\frac{1}{\sqrt{2}}\begin{bmatrix}1\\
+-1\\
+0\\
+0\end{bmatrix},\frac{1}{\sqrt{2}}\begin{bmatrix}0\\
+0\\
+1\\
+-1\end{bmatrix},\begin{bmatrix}1/2\\
+1/2\\
+-1/2\\
+-1/2\end{bmatrix}\right\}.
+\end{align*} 
+@endcol
+@endcol
+@end
+@section{Cauchy-Schwarz Inequality}
+<strong>Can be skipped, will not appear in final exam</strong>
+@slide
+@thm
+@title{Cauchy-Schwarz Inequality}
+ For $\mathbf{v},\mathbf{w}\in{\mathbb{R}}^{m}$,
+\begin{align*}
+\displaystyle |\left&lt; \mathbf{v},\mathbf{w}\right&gt;|\leq\|\mathbf{v}\|\|\mathbf{w}\|.
+\end{align*} 
+@end
+@proof
+@newcol
+ The statement is trivial if $\mathbf{w}=\mathbf{0}$. Suppose $\mathbf{w}\neq\mathbf{0}$. Let $t\in{\mathbb{R}}^{\hbox{}}$, then
+\begin{align*}
+\displaystyle 0\leq\|\mathbf{v}-t\mathbf{w}\|^{2}=\left&lt; \mathbf{v}-t\mathbf{w},\mathbf{v}-t\mathbf{w}\right&gt;=\left&lt; \mathbf{v},\mathbf{v}-t\mathbf{w}\right&gt;-t\left&lt; \mathbf{w},\mathbf{v}-t\mathbf{w}\right&gt;
+\end{align*}
+\begin{align*}
+\displaystyle =\left&lt; \mathbf{v},\mathbf{v}\right&gt;-t\left&lt; \mathbf{v},\mathbf{w}\right&gt;-t\left&lt; \mathbf{w},\mathbf{v}\right&gt;+t^{2}\left&lt; \mathbf{w},\mathbf{w}\right&gt;=\left&lt; \mathbf{v},\mathbf{v}\right&gt;-2t\left&lt; \mathbf{v},\mathbf{w}\right&gt;+t^{2}\left&lt; \mathbf{w},\mathbf{w}\right&gt;
+\end{align*} 
+@col
+ Substituting
+\begin{align*}
+\displaystyle t=\frac{\left&lt; \mathbf{v},\mathbf{w}\right&gt;}{\left&lt; \mathbf{w},\mathbf{w}\right&gt;}
+\end{align*}
+into the above, we obtain
+\begin{align*}
+\displaystyle 0\leq\left&lt; \mathbf{v},\mathbf{v}\right&gt;-\frac{|\left&lt; \mathbf{v},\mathbf{w}\right&gt;|^{2}}{\left&lt; \mathbf{w},\mathbf{w}\right&gt;}=\|\mathbf{v}\|^{2}-\frac{|\left&lt; \mathbf{v},\mathbf{w}\right&gt;|^{2}}{\|\mathbf{w}\|^{2}}.
+\end{align*} 
+@col
+ Hence
+\begin{align*}
+\displaystyle |\left&lt; \mathbf{v},\mathbf{w}\right&gt;|\leq\sqrt{\|\mathbf{v}\|^{2}\|\mathbf{w}\|^{2}}=\|\mathbf{v}\|\|\mathbf{w}\|.
+\end{align*} 
+@qed
+@endcol
+@end
+@remark
+@newline
+@newcol
+ The $t$ above is obtained by minimizing the quadratic equation
+$\left&lt; \mathbf{v},\mathbf{v}\right&gt;-2t\left&lt; \mathbf{v},\mathbf{w}\right&gt;+t^{2}\left&lt; \mathbf{w},\mathbf{w}\right&gt;$. 
+@endcol
+@newline
+@newcol
+ Following the proof, the equality occurs if (i) $\mathbf{v}=\mathbf{0}$ or (ii) $\mathbf{w}=\mathbf{0}$
+or (iii) $\mathbf{v}-t\mathbf{w}=0$ $\Leftrightarrow$ $\mathbf{v}$ and $\mathbf{w}$ are parallel,
+i.e., $\mathbf{v}=\alpha\mathbf{w}$ for some scalar $\alpha\in{\mathbb{R}}^{\hbox{}}$. 
+@endcol
+@end
+@slide
+@thm
+@title{Triangle Inequality}
+ For any $\vect{v}, \vect{w} \in \mathbb{R}^n$, we have:
+\begin{align*}
+\displaystyle \|\mathbf{v}+\mathbf{w}\|\leq\|\mathbf{v}\|+\|\mathbf{w}\|.
+\end{align*} 
+@end
+@proof
+@newcol
+ \begin{align*}
+\displaystyle \|\mathbf{v}+\mathbf{w}\|^{2}=\left&lt; \mathbf{v},\mathbf{v}\right&gt;+\left&lt; \mathbf{v},\mathbf{w}\right&gt;+\left&lt; \mathbf{w},\mathbf{v}\right&gt;+\left&lt; \mathbf{w},\mathbf{w}\right&gt;=\|\mathbf{v}\|^{2}+2\left&lt; \mathbf{v},\mathbf{w}\right&gt;+\|\mathbf{w}\|^{2}.
+\end{align*} 
+@col
+ By the Cauchy-Schwarz inequality
+\begin{align*}
+\displaystyle |\left&lt; \mathbf{v},\mathbf{w}\right&gt;|\leq\|\mathbf{v}\|\|\mathbf{w}\|,
+\end{align*}
+thus
+\begin{align*}
+\displaystyle \|\mathbf{v}+\mathbf{w}\|^{2}\leq\|\mathbf{v}\|^{2}+2\|\mathbf{v}\|\|\mathbf{w}\|+\|\mathbf{w}\|^{2}=(\|\mathbf{v}\|+\|\mathbf{w}\|)^{2}.
+\end{align*} 
+@col
+ The result follows by taking square roots on both sides. 
+@qed
+@endcol
+@end
+@slide
+@eg
+ Let $\mathbf{v},\mathbf{w}\in{\mathbb{R}}^{m}$ with the standard inner product. Let
+\begin{align*}
+\displaystyle \mathbf{v}=\begin{bmatrix}v_{1}\\
+\vdots\\
+v_{m}\end{bmatrix}\qquad\mathbf{w}=\begin{bmatrix}w_{1}\\
+\vdots\\
+w_{m}\end{bmatrix}
+\end{align*} 
+@newcol
+ Cauchy-Schwarz inequality:
+\begin{align*}
+\displaystyle |v_{1}w_{1}+\cdots+v_{m}w_{m}|\leq\sqrt{v_{1}^{2}+\cdots+v_{m}^{2}}\sqrt{w_{1}^{2}+\cdots+w_{m}^{2}}.
+\end{align*} 
+@col
+ Triangle inequality:
+\begin{align*}
+\displaystyle \sqrt{(v_{1}+w_{1})^{2}+\cdots+(v_{m}+w_{m})^{2}}\leq\sqrt{v_{1}^{2}+\cdots+v_{m}^{2}}+\sqrt{w_{1}^{2}+\cdots+w_{m}^{2}}.
+\end{align*} 
+@endcol
+@end

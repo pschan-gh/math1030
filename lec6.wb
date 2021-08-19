@@ -1,760 +1,928 @@
-@course{Math 1030}
-@setchapter{6}
-@chapter{Reduced Row Echelon Forms}
-<h5 class="notkw">Reference.</h5>
-Beezer, Ver 3.5 Subsection RREF (print version p21 - p33) You can skip the proof of Thm REMEF on p.22 and Thm RREFU on p.24-27 <br/><br/><h5 class="notkw">Exercise.</h5>
-Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf
-Section SSLE (p.1-6) C30-34, C50, M30, T20. Sect RREF (p.6-13) C10-19, C31-33, M40 Part 1, T10, T11, T12.
-@section{Reduced Row Echelon Form}
-<strong>Terminology</strong>:
-@ul
-@li
-@keyword{Zero row}: A row consisting only of $0$'s.
-@li
-@keyword{Leftmost nonzero entry of a row}: The first nonzero entry of a row.
-@li
-@keyword{Index of the leftmost nonzero entry of a row}: The column index of the first nonzero entry in the row.
-@endul<strong>Notation</strong>:
-@newcol
-Denote by $d_{i}$ the index of leftmost nonzero entry of row $i$.
-@endcol
-@slide
-@eg
-The underlined entries are the leftmost nonzero entry for each row.
-\[\begin{bmatrix}0&\underline{1}&1&0&2\\
-0&0&0&0&\underline{1}\\
-0&0&0&\underline{1}&3\\
-0&0&0&0&0\end{bmatrix}\]
-@newcol
-The index of the leftmost nonzero entry of row 1 is $d_{1}=2$. The index of the leftmost nonzero entry of row 2 is $d_{2}=5$. The index of the leftmost nonzero entry of row 3 is $d_{3}=4$. row 4 is a zero row.
-@endcol
-@end
-@eg
-@newcol
-The underlined entries are the leftmost nonzero entry for each row.
-\[\begin{bmatrix}\underline{2}&0&1&2&3&4\\
-0&\underline{1}&1&-1&0&3\\
-0&0&0&0&\underline{1}&0\\
-0&\underline{-1}&0&0&0&1\\
-\end{bmatrix}\]
-The index of the leftmost nonzero entry of row 1 is $d_{1}=1$. The index of the leftmost nonzero entry of row 2 is $d_{2}=2$. The index of the leftmost nonzero entry of row 3 is $d_{3}=5$. The index of the leftmost nonzero entry of row 3 is $d_{4}=2$.
-@endcol
-@end
-@slide
-A matrix is said to be in @keyword{reduced row echelon form} if it looks like this
-( $*$ means an arbitary number)
-\[\begin{bmatrix}1&*&\cdots&0&*&\cdots&0&*&\cdots\\
-0&0&\cdots&1&*&\cdots&0&*&\cdots\\
-0&0&\cdots&0&0&\cdots&1&*&\cdots\\
-\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
-\end{bmatrix}\]
-More precisely:
-@ol
-@li
-It looks like an inverted staircase.
-@li
-Each new step down (i.e. up) gives a leading ”$1$”. Above it are $0$'s.
-@li
-The column that is at the edge a new step is call a @keyword{pivot column}.
-@endol
-@slide
+@course{MATH 1030}
+@chapter{More about matrices}
+@newline
+The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at @href{http://linear.ups.edu/download.html} .
+@newlineThe print version can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-print.pdf} .
+@newline<h5 class="notkw">Reference.</h5>
+@itemize
+@item
+ Beezer, Ver 3.5 Section Matrix Operations, Section Matrix Multiplication. 
+@item
+ Strang, Sect 1.4 and Sect 1.6. 
+@enditemize
+@newlineExercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf
+(Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$)Section MO (p52-56), all. Section MM (p57-60), all except T12 and T35. 
+@section{Matrix-Vector Product}
 @defn
-@title{Reduced Row-Echelon Form}
-@label{RREF}
-A matrix is in @keyword{reduced row-echelon form} if it meets all of the following conditions:
-@ol
-@li
-If there is a row where every entry is zero, then this row lies below any other row that contains a nonzero entry.
-@li
-The leftmost nonzero entry of a row is equal to 1.
-@li
-The leftmost nonzero entry of a row is the only nonzero entry in its column.
-@li
-If $i < j$ and both row $i$ and row $j$ are not zero rows,
-then $d_{i} < d_{j}$, i.e.
-$d_{1},d_{2},\ldots$ are in ascending order. <br/>
-In particular,
-all matrix entries below a leftmost nonzero entry must be equal to zero.
-@endol
+@title{Matrix-Vector Product}
+@label{MVP}
+ Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$ and $\mathbf{u}$ is a vector of size $n$. Then the @keyword{matrix-vector product} of $A$ with $\mathbf{u}$ is the linear combination
+\[A\mathbf{u}=\left[\mathbf{u}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{u}\right]_%
+{2}\mathbf{A}_{2}+\left[\mathbf{u}\right]_{3}\mathbf{A}_{3}+\cdots+\left[%
+\mathbf{u}\right]_{n}\mathbf{A}_{n}\] 
 @end
-<strong>Terminology.</strong>
+@newline
 @newcol
-A row of only zero entries is called a @keyword{zero row}.
-
-@col
-In the case of a matrix in reduced row-echelon form,
-the leftmost nonzero entry of a nonzero row is a @keyword{leading 1}.
-
-@col
-A column containing a leading 1 will be called a @keyword{pivot column}.
-
-@col
-The number of nonzero rows will be denoted by $r$,
-which is also equal to the number of leading 1’s and
-the number of pivot columns.
-
-@col
-The set of column indices for the pivot columns will be denoted by:
-\[
-D=\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\},
-\]
-where:
-\[
-d_{1} < d_{2} < d_{3} < \cdots < d_{r}.
-\]
-@col
-The columns that are not pivot columns will be denoted as:
-\[
-F=\{f_{1},\,f_{2},\,f_{3},\,\ldots,\,f_{n-r}\},
-\]
-where:
-\[
-f_{1} < f_{2} < f_{3} < \cdots < f_{n-r}.
-\]
-@endcol
-@slide
+ Note that an $m\times n$ matrix $A$
+times a vector of size $n$ will create a column vector of size $m$.
+@newlineIn particular, if $A$ is (non-square) rectangular,
+then the size of the vector changes. 
 @eg
-The matrix below are in reduced row echelon from
-@enumerate
-@item
+ Consider:
+\[\displaystyle A=\begin{bmatrix}1&amp;4&amp;2&amp;3&amp;4\\
+-3&amp;2&amp;0&amp;1&amp;-2\\
+1&amp;6&amp;-3&amp;-1&amp;5\end{bmatrix},\;\mathbf{u}=\begin{bmatrix}2\\
+1\\
+-2\\
+3\\
+-1\end{bmatrix}\] 
 @newcol
-\[\begin{bmatrix}1&3&0&0&1&0\\
-0&0&1&3&4&0\\
-0&0&0&0&0&1\\
-0&0&0&0&0&0\end{bmatrix}\]
-Column 1, 3, 6 are pivot columns, $r=3$, $D=\{1,3,6\}$, $d_{1}=1,d_{2}=3,d_{3}=6$,
-$F=\{2,4,5\}$, $f_{1}=2,f_{2}=4,f_{3}=5$.
-@endcol
-@item
-@newcol
-\[\begin{bmatrix}1&0&5&3&0&0&5\\
-0&1&3&6&0&0&6\\
-0&0&0&0&1&0&7\\
-0&0&0&0&0&1&3\end{bmatrix}\]
-Column 1, 2, 5, 6 are pivot columns, $r=4$, $D=\{1,2,5,6\}$, $d_{1}=1,d_{2}=2,d_{3}=5,d_{4}=6$,
-$F=\{3,4,7\}$, $f_{1}=3,f_{2}=4,f_{3}=7$.
-@endcol
-@item
-@newcol
-\[\begin{bmatrix}1&0&0\\
-0&1&0\\
-0&0&1\end{bmatrix}\]
-Column 1, 2, 3 are pivot columns, $r=3$, $D=\{1,2,3\}$, $d_{1}=1,d_{2}=2,d_{3}=3$, $F=\emptyset$ (an empty set).
-@endcol
-@item
-@newcol
-\[\begin{bmatrix}0&1&1&0&0&1&0&9&6\\
-0&0&0&0&1&1&0&8&8\\
-0&0&0&0&0&0&1&3&4\\
-0&0&0&0&0&0&0&0&0\end{bmatrix}\]
-Column 2, 5, 7 are pivot columns. Note that column 3 is <strong style="">not</strong> a pivot column. $r=3$,
-$D=\{2,5,7\}$, $d_{1}=2,d_{2}=5,d_{3}=7$,
-$F=\{1,3,4,6,8,9\}$, $f_{1}=1,f_{2}=3,f_{3}=4,f_{4}=6,f_{5}=8,f_{6}=9$.
-@endcol
-@item
-@newcol
-The matrix $C$ is in reduced row-echelon form.
-\[\displaystyle C=\begin{bmatrix}1&-3&0&6&0&0&-5&9\\
-0&0&0&0&1&0&3&-7\\
-0&0&0&0&0&1&7&3\\
-0&0&0&0&0&0&0&0\\
-0&0&0&0&0&0&0&0\end{bmatrix}\]
-This matrix has two zero rows and three pivot columns.
-So $r=3$. Columns 1, 5, and 6 are the pivot columns,
-so $D=\{1,\,5,\,6\}$, $d_{1}=1,d_{2}=5,d_{3}=6$,
-$F=\{2,\,3,\,4,\,7,\,8\}$, $f_{1}=2,f_{2}=3,f_{3}=4,f_{4}=7,f_{5}=8$.
-@endcol
-@endenumerate
-@end
-@slide
-@eg
-The following matrices are @keyword{not RREF}, explain why.
-@enumerate
-@item
-@newcol
-\[\begin{bmatrix}1&0&1&0&1&0\\
-0&1&0&1&0&2\\
-0&0&0&0&0&0\\
-0&0&0&0&1&0\\
-0&0&0&0&0&0\end{bmatrix}\]
-It fails condition 1: row 3 is a zero row but row 4, which is under row 3, is not a zero row.
-@endcol
-@item
-@newcol
-The underline entries are the leftmost nonzero entry for each row.
-\[\begin{bmatrix}\underline{1}&0&2&0\\
-0&\underline{1}&3&0\\
-0&0&0&\underline{3}\\
-0&0&0&0\\
-0&0&0&0\end{bmatrix}\]
-It fails condition 2: the leftmost nonzero entry of row 3 is not 1.
-@endcol
-@item
-@newcol
-The underline entries are the leftmost nonzero entry for each row.
-\[\begin{bmatrix}0&\underline{1}&0&0&1&2\\
-0&0&\underline{1}&0&0&1\\
-0&0&0&0&\underline{1}&3\\
-0&0&0&0&0&0\end{bmatrix}\]
-It fails condition 3: For row 3, the column consists the left most nonzero entry (i.e. column 5) has more than $1$ nonzero entries.
-@endcol
-@item
-@newcol
-The underline entries are the leftmost nonzero entry for each row.
-\[\begin{bmatrix}\underline{1}&0&0&1&2\\
-0&0&\underline{1}&0&1\\
-0&\underline{1}&0&0&3\\
-0&0&0&0&0\\
-0&0&0&0&0\\
-\end{bmatrix}\]
-It fails condition 4: The index of the leftmost nonzero entry of row 1 is $d_{1}=1$. The index of the leftmost nonzero entry of row 2 is $d_{2}=3$. The index of the leftmost nonzero entry of row 3 is $d_{2}=2$. $2 < 3$ but $d_{2} > d_{3}$.
-@endcol
-@endenumerate
-@end
-@slide
-@thm
-@title{Row-Equivalent Matrix in Echelon Form}
-@label{thm:REMEF}
-Suppose $A$ is a matrix. Then there is a matrix $B$ such that:
-@enumerate
-@item
-$A$ and $B$ are row-equivalent.
-@item
-$B$ is in reduced row-echelon form.
-@endenumerate
-@end
-@proof
-@newcol
-Suppose that $A$ has $m$ rows and $n$ columns.
-We will describe a process for converting $A$ into $B$ via row operations.
-This procedure is known as @keyword{Gaussian elimination} or sometimes called @keyword{Gauss-Jordan elimination}.
-Tracing through this procedure will be easier if you recognize that
-$i$ refers to a row that is being converted,
-$j$ refers to a column that is being converted,
-and $r$ keeps track of the number of nonzero rows.
-@ol
-@li
-Set $j=0$ and $r=0$.
-@li
-Increase $j$ by 1. If $j$ now equals $n+1$, then stop.
-@li
-Examine the entries of $A$ in column $j$ located in rows $r+1$ through $m$. If all of these entries are zero, then go to Step 2.
-@li
-Choose a row from rows $r+1$ through $m$ with a nonzero entry in column $j$. Let $i$ denote the index for this row.
-@li
-Increase $r$ by 1.
-@li
-Use the first row operation to swap rows $i$ and $r$.
-@li
-Use the second row operation to convert the entry in row $r$ and column $j$ to a 1.
-@li
-Use the third row operation with row $r$ to convert every other entry of column $j$ to zero.
-@li
-Go to Step 2.
-@endol The result of this procedure is that the matrix $A$ is converted to a matrix in reduced row-echelon form, which we will refer to as $B$.
-he matrix is only converted through row operations (Steps 6, 7, 8), so $A$ and $B$ are row-equivalent.
-We need to now prove this claim by showing that the converted matrix has the requisite properties of Theorem                     @ref{RREF}.
-We will skip the proof for now. See Beezer, Ver 3.5 (print version p23).
-@endcol
-@end
-@slide
-We will now run through some examples of using these definitions and theorems to solve some systems of equations. From now on, when we have a matrix in reduced row-echelon form, we will mark the leading 1’s with a small box.
-@eg
-Using the Gaussian elimination, find the RREF of
-\[A=\begin{bmatrix}0&0&1&1&4\\
-0&0&1&1&3\\
-1&1&2&4&8\\
-2&2&5&9&19\end{bmatrix}\]
-@newcol
-Set $r=0$.
-Consider column 1 (set $j=1$), find a nonzero entry (underline below) in the column.
-\[\begin{bmatrix}\underline{0}&0&1&1&4\\
-\underline{0}&0&1&1&3\\
-\underline{1}&1&2&4&8\\
-\underline{2}&2&5&9&19\end{bmatrix}\]
-@col
-Move the nonzero entry to row 1 by swapping rows $R_{1}\leftrightarrow R_{i}$.
-
-@col
-If the entry at row 1, column 1 is nonzero, you don’t have to swap rows. But you can consider swap it with entry $=1$ or $-1$.
-
-@col
-In this example, for column 1, 3rd entry and 4th entry are nonzero, so we can use $R_{1}\leftrightarrow R_{3}$ or $R_{1}\leftrightarrow R_{4}$.
-
-@col
-There is nothing wrong about $R_{1}\leftrightarrow R_{4}$ but <strong>it is better to swap with the row with leading entry equal to $1$ or $-1$.</strong>
-
-@col
-So we use $R_{1}\leftrightarrow R_{3}$.
-\[\xrightarrow{R_{1}\leftrightarrow R_{3}}\begin{bmatrix}\boxed{1}&1&2&4&8\\
-0&0&1&1&3\\
-0&0&1&1&4\\
-2&2&5&9&19\end{bmatrix}\]
-Also, at this point we increase $r$ to $r = 1$,
-since we now know we have at least one nonzero row.
-
-@col
-If the boxed number is $1$, we are good to go.
-
-@col
-If the boxed number is not equal to $1$, say it is $a$, use $\frac{1}{a}R_{1}$ to convert it to $1$.
-
-@col
-Then use the boxed number to eliminate the nonzero entries above and below it by $\alpha R_{1}+R_{i}$.
-
-@col
-In our example, the boxed number is $1$, so we don’t have to do anything. Use $-2R_{1}+R_{4}$ and to remove the nonzero entries below it and above it. Since we are at the first row, so there is nothing above it).
-\[\xrightarrow{-2R_{1}+R_{4}}\begin{bmatrix}\boxed{1}&1&2&4&8\\
-0&0&1&1&3\\
-0&0&1&1&4\\
-0&0&1&1&3\end{bmatrix}\]
-@col
-Now we go back to Step 1 in the proof of @ref{thm:REMEF},
-with column index $j$ increased to $2$ and $r = 1$.
-
-<br/> In fact, we may as well ignore row 1 and column 1,
-and essentially apply the previous steps to the remaining $3 \times 4$ matrix:
-
-@col
-\[
-\begin{bmatrix}*&*&*&*&*\\
-*&\underline{0}&1&1&3\\
-*&\underline{0}&1&1&4\\
-*&\underline{0}&1&1&3\end{bmatrix}
-\]
-The entries of column 2 are underlined.
-
-None of them are nonzero, so we move to next column.
-
-@col
-\[\begin{bmatrix}*&*&*&*&*\\
-*&0&\underline{1}&1&3\\
-*&0&\underline{1}&1&4\\
-*&0&\underline{1}&1&3\end{bmatrix}\]
-@col
-Consider column 3.
-That is, set $j=3$.
-(Note that the number of nonzero rows is still $r = 1$.)
-
-@col
-All the entries of column 3 are equal to $1$.
-So, we don’t need to do any swapping.
-\[\begin{bmatrix}1&1&2&4&8\\
-0&0&\boxed{1}&1&3\\
-0&0&1&1&4\\
-0&0&1&1&3\end{bmatrix}\]
-Also, now we know there are at least 2 nonzero rows, so $r = 2$.
-@col
-Use the boxed number (the pivot) to eliminate the nonzero entries above and below it by $\alpha R_{2}+R_{i}$.
-\[\xrightarrow{\begin{split}
--2R_{2}+R_{1},\\
--1R_{2}+R_{3},\\
--1R_{2}+R_{4}
-\end{split}}
-\begin{bmatrix}1&1&0&2&%
+ Then:
+\begin{align*}
+A\mathbf{u}&amp;=2\begin{bmatrix}1\\
+-3\\
+1\end{bmatrix}
++1\begin{bmatrix}4\\
 2\\
-0&0&\boxed{1}&1&3\\
-0&0&0&0&1\\
-0&0&0&0&0\end{bmatrix}\]
-@col
-Now, we may ignore rows $2$ and $3$, and columns $1$ through $3$.
-With $r = 2$, and the column index increased to $j = 4$, we repeat the whole
-process.
-\[\begin{bmatrix}*&*&*&*&*\\
-*&*&*&*&*\\
-*&*&*&\underline{0}&1\\
-*&*&*&\underline{0}&0\end{bmatrix}\]
-@col
-All the underlined entries are zeros, so we move to the next row.
-\[\begin{bmatrix}*&*&*&*&*\\
-*&*&*&*&*\\
-*&*&*&0&\underline{1}\\
-*&*&*&0&\underline{0}\end{bmatrix}\]
-@col
-We can then use the boxed number to eliminate all the nonzero entries
-above it and below it and get the RREF.
-\[\begin{bmatrix}1&1&0&2&2\\
-0&0&1&1&3\\
-0&0&0&0&\boxed{1}\\
-0&0&0&0&0\end{bmatrix}\]
-\[\xrightarrow{-2R_{3}+R_{1},\;-3R_{3}+R_{2}}\begin{bmatrix}1&1&0&2&0\\
-0&0&1&1&0\\
-0&0&0&0&1\\
-0&0&0&0&0\end{bmatrix}\]
+6\end{bmatrix}
++(-2)\begin{bmatrix}2\\
+0\\
+-3\end{bmatrix}
++3\begin{bmatrix}3\\
+1\\
+-1\end{bmatrix}
++(-1)\begin{bmatrix}4\\
+-2\\
+5\end{bmatrix}
+\\&amp;
+=\begin{bmatrix}7\\
+1\\
+6\end{bmatrix}.
+\end{align*} 
 @endcol
 @end
-@slide
-@eg
-Using the Gaussian elimination, find the RREF of
-\[A=\begin{bmatrix}0&0&2&2&6&2&3\\
-2&4&1&3&7&3&-1\\
-1&2&2&3&8&2&1\\
-1&2&-1&0&-1&2&-1\\
-\end{bmatrix}\]
+@endcol
+@subsection{Matrix Notation for Systems of Linear Equations}
+@thm
+@title{Systems of Linear Equations as Matrix Multiplication}
+@label{SLEMM}
+ The solution set to the linear system $\mathcal{LS}(A, \mathbf{b})$ is equal to the set of solutions $\mathbf{x}$ to the vector equation $A\mathbf{x}=\mathbf{b}$. 
+@end
+@proof
 @newcol
-Set $r = 0$.
-We first consider column 1 (set $j=1$).
-
-Find a nonzero entry (underline below) in the column.
-\[\begin{bmatrix}\underline{0}&0&2&2&6&2&3\\
-\underline{2}&4&1&3&7&3&-1\\
-\underline{1}&2&2&3&8&2&1\\
-\underline{1}&2&-1&0&-1&2&-1\\
-\end{bmatrix}\]
-@col
-Move the nonzero entry to row 1 by swapping rows $R_{1}\leftrightarrow R_{i}$.
-
-@col
-If the entry at row 1, column 1 is nonzero, you don’t have to swap rows. But you can consider swap it with entry $=1$ or $-1$.
-
-@col
-In this example, for column 1, 2nd entry, 3rd entry and 4th entry are nonzeros, so we can use $R_{1}\leftrightarrow R_{2}$, $R_{1}\leftrightarrow R_{3}$ or $R_{1}\leftrightarrow R_{4}$.
-
-@col
-There is nothing wrong about $R_{1}\leftrightarrow R_{2}$ but <strong>it is better to swap with the row with entry equal to $1$ or $-1$.</strong>
-
-@col
-So we use $R_{1}\leftrightarrow R_{3}$.
-\[\xrightarrow{R_{1}\leftrightarrow R_{3}}\begin{bmatrix}\boxed{1}&2&2&3&8&2&%
-1\\
-2&4&1&3&7&3&-1\\
-0&0&2&2&6&2&3\\
-1&2&-1&0&-1&2&-1\\
-\end{bmatrix}\]
-@col
-If the boxed number is $1$, we are good to go.
-
-@col
-If the boxed number is not equal to $1$, say it is $a$, use $\frac{1}{a}R_{1}$ to convert it to $1$.
-
-@col
-Then use the boxed number to eliminate the nonzero entries above and below it by $\alpha R_{1}+R_{i}$.
-
-@col
-In our example, the boxed number is $1$, so we don’t have to do anything. Use $-2R_{1}+R_{2}$ and $-1R_{1}+R_{4}$ to remove the nonzero entries below it and above it. Since we are at the first row, so there is nothing above it.
-\[\xrightarrow{-2R_{1}+R_{2},\;-1R_{1}+R_{4}}\begin{bmatrix}1&2&2&3&8&2&1\\
-0&0&-3&-3&-9&-1&-3\\
-0&0&2&2&6&2&3\\
-0&0&-3&-3&-9&0&-2\\
-\end{bmatrix}\]
-@col
-Ignore the row 1 and col 1.  Consider column 2:
-\[\begin{bmatrix}*&*&*&*&*&*&*\\
-*&\underline{0}&-3&-3&-9&-1&-3\\
-*&\underline{0}&2&2&6&2&3\\
-*&\underline{0}&-3&-3&-9&0&-2\\
-\end{bmatrix}\]
-None of the entries of column 2 are nonzero.
-
-@col
-So, we consider the next column ($j = 3$, $r = 1$).
-\[\begin{bmatrix}*&*&*&*&*&*&*\\
-*&0&\underline{-3}&-3&-9&-1&-3\\
-*&0&\underline{2}&2&6&2&3\\
-*&0&\underline{-3}&-3&-9&0&-2\\
-\end{bmatrix}\]
-
-@col
-Find a nonzero entry in column 3.
-In this case, all the entries are nonzero,
-so we may increase the number of nonzero rows to $r = 2$.
-
-@col
-There is no entry equal to $1$ or $-1$.
-We don’t need to so any swapping.
-\[\begin{bmatrix}*&*&*&*&*&*&*\\
-*&0&\boxed{-3}&-3&-9&-1&-3\\
-*&0&2&2&6&2&3\\
-*&0&-3&-3&-9&0&-2\\
-\end{bmatrix}\]
-@col
-Turn the boxed number into $1$ by $-\frac{1}{3}R_{2}$.
-\[\xrightarrow{-\frac{1}{3}R_{2}}\begin{bmatrix}1&2&2&3&8&2&1\\
-0&0&\boxed{1}&1&3&\frac{1}{3}&1\\
-0&0&2&2&6&2&3\\
-0&0&-3&-3&-9&0&-2\\
-\end{bmatrix}\]
-@col
-We then use the boxed number to remove the nonzero entries about it and below it.
-\[\xrightarrow{-2R_{2}+R_{1},\;-2R_{2}+R_{3},\;3R_{2}+R_{4}}
-\begin{bmatrix}1&2&0&1&2%
-&\frac{4}{3}&-1\\
-0&0&1&1&3&\frac{1}{3}&1\\
-0&0&0&0&0&\frac{4}{3}&1\\
-0&0&0&0&0&1&1\\
-\end{bmatrix}\]
-@col
-Now, ignore the first 2 rows and the first 3 columns.
-\[\begin{bmatrix}*&*&*&*&*&*&*\\
-*&*&*&*&*&*&*\\
-*&*&*&\underline{0}&0&\frac{4}{3}&1\\
-*&*&*&\underline{0}&0&1&1\\
-\end{bmatrix}\]
-Consider the column with index $j = 4$.
-
-@col
-All the entries in column 4 (underlined) are equal to zero.
-So, we move to the next column, with index $j=5$.
-\[\begin{bmatrix}*&*&*&*&*&*&*\\
-*&*&*&*&*&*&*\\
-*&*&*&0&\underline{0}&\frac{4}{3}&1\\
-*&*&*&0&\underline{0}&1&1\\
-\end{bmatrix}\]
-@col
-Again, all the entries in column 5 (underlined) are equal to zero.
-So, we move to the next column, with index $j=6$.
-
-@col
-\[\begin{bmatrix}*&*&*&*&*&*&*\\
-*&*&*&*&*&*&*\\
-*&*&*&0&0&\underline{\frac{4}{3}}&1\\
-*&*&*&0&0&\underline{1}&1\\
-\end{bmatrix}\]
-@col
-We continue the process without detailed explanations:
-\[\xrightarrow{R_{3}\leftrightarrow R_{4}}\begin{bmatrix}1&2&0&1&2&\frac{4}{3}&-%
-1\\
-0&0&1&1&3&\frac{1}{3}&1\\
-0&0&0&0&0&1&1\\
-0&0&0&0&0&\frac{4}{3}&1\\
-\end{bmatrix}\]
-@col
-\[
-\xrightarrow{\begin{split}
--\frac{4}{3}R_{3}+R_{1},\\
--\frac{1}{3}R_{3}+R_{2},\\
--\frac{4}{3}R_{3}+R_{4}
-\end{split}}
-\begin{bmatrix}1&2&0&1&2&0&-\frac{7}{3}\\
-0&0&1&1&3&0&\frac{2}{3}\\
-0&0&0&0&0&1&1\\
-0&0&0&0&0&0&-\frac{1}{3}\\
-\end{bmatrix}
-\]
-@col
-\[\xrightarrow{-3R_{4}}\begin{bmatrix}1&2&0&1&2&0&-\frac{7}{3}\\
-0&0&1&1&3&0&\frac{2}{3}\\
-0&0&0&0&0&1&1\\
-0&0&0&0&0&0&1\\
-\end{bmatrix}\]
-@col
-\[\xrightarrow{\begin{split}
-\frac{7}{3}R_{4}+R_{1},\\
--\frac{2}{3}R_{4}+R_{2},\\
--1R_{4}+R_{3}
-\end{split}}
-\begin{bmatrix}1&2&0&1&2&0&0\\
-0&0&1&1&3&0&0\\
-0&0&0&0&0&1&0\\
-0&0&0&0&0&0&1\\
-\end{bmatrix} = B\]
-The matrix $B$ is the reduced row echelon form of $A$.
-We write:
-\[
-A\xrightarrow{\text{RREF}}B.
-\]
+ \[\displaystyle\mathbf{x}\text{ is a solution to } \mathcal{LS}(A,\mathbf{b})\]
+\[\displaystyle\iff\left[\mathbf{x}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{x}%
+\right]_{2}\mathbf{A}_{2}+\left[\mathbf{x}\right]_{3}\mathbf{A}_{3}+\cdots+%
+\left[\mathbf{x}\right]_{n}\mathbf{A}_{n}=\mathbf{b}\]
+\[\displaystyle\iff\mathbf{x}\text{ is a solution to }A\mathbf{x}=\mathbf{b}\] 
+@endcol
+@end
+@eg
+@newcol
+ Consider the system of linear equations
+\[\displaystyle 2x_{1}+4x_{2}-3x_{3}+5x_{4}+x_{5}=9\]
+\[\displaystyle 3x_{1}+x_{2}+x_{4}-3x_{5}=0\]
+\[\displaystyle-2x_{1}+7x_{2}-5x_{3}+2x_{4}+2x_{5}=-3\]
+has coefficient matrix and vector of constants
+\[\displaystyle A=\begin{bmatrix}2&amp;4&amp;-3&amp;5&amp;1\\
+3&amp;1&amp;0&amp;1&amp;-3\\
+-2&amp;7&amp;-5&amp;2&amp;2\end{bmatrix}\qquad\mathbf{b}=\begin{bmatrix}9\\
+0\\
+-3\end{bmatrix}\]
+and so will be described compactly by the vector equation $A\mathbf{x}=\mathbf{b}$. 
 @endcol
 @end
 @slide
 @thm
-@title{Reduced Row-Echelon Form is Unique}
-@label{RREFU}
-Suppose that $A$ is an $m\times n$ matrix and that $B$ and $C$ are $m\times n$ matrices that are row-equivalent to $A$ and in reduced row-echelon form. Then $B=C$.
+@title{Equality of Matrices and Matrix-Vector Products}
+@label{EMMVP}
+ If $A$ and $B$ are $m\times n$ matrices such that $A\mathbf{x}=B\mathbf{x}$ for every $\mathbf{x}\in{\mathbb{R}}^{n}$,
+then $A=B$. 
 @end
 @proof
 @newcol
-See Beezer, Ver 3.5 (print version p24). We will prove it later. You can skip the proof for now.
+ Suppose $A\mathbf{x}=B\mathbf{x}$ for all $\mathbf{x}\in{\mathbb{R}}^{n}$.
+Then, in particular this equality holds for the standard unit vectors, defined as follows:
+@newlineFor $1\leq j\leq n$, we define the @keyword{standard unit vector} $\mathbf{e}_{j}$ to be the column vector in ${\mathbb{R}}^{n}$ with the $j$-th entry equal $1$ and all other entries equal to zero.  For any $1 \leq i \leq m$ and $1 \leq j \leq n$, we have:
+@newline
+@col
+ \begin{align*}
+\left[A\right]_{ij}
+&amp;=\left[A\mathbf{e}_{j}\right]_{i}\\
+&amp;=\left[B\mathbf{e}_{j}\right]_{i}\\
+&amp;=\left[B\right]_{ij}
+\end{align*} 
+@col
+ Hence $A = B$. 
 @endcol
 @end
-@slide
+@newline
+@remark
+@newcol
+ You might notice from studying the proof that the hypotheses of this theorem could be weakened i.e., made less restrictive). We need only suppose the equality of the matrix-vector products for the standard unit vectors or any other spanning set of ${\mathbb{R}}^{n}$. However, in practice, when we apply this theorem the stronger hypothesis will be in effect so this version of the theorem suffices for our purposes. (If we changed the statement of the theorem to have the less restrictive hypothesis, then we would call the theorem stronger.) 
+@endcol
+@end
+@section{Matrix Multiplication}
+@defn
+@title{Matrix Multiplication}
+@label{NM}
+ Suppose $A$ is an $m\times n$ matrix and $\mathbf{B}_{1},\,\mathbf{B}_{2},\,\mathbf{B}_{3},\,\ldots,\,\mathbf{B}_{p}$ are the columns of an $n\times p$ matrix $B$. Then the @keyword{matrix product} of $A$ with $B$ is the $m\times p$ matrix whose $i$th column is the matrix-vector product $A\mathbf{B}_{i}$. Symbolically,
+\[AB=A\left[\mathbf{B}_{1}|\mathbf{B}_{2}|\mathbf{B}_{3}|\ldots|\mathbf{B}_{p}%
+\right]=\left[A\mathbf{B}_{1}|A\mathbf{B}_{2}|A\mathbf{B}_{3}|\ldots|A\mathbf{%
+B}_{p}\right].\] 
+@end
 @eg
-Find the solutions to the following system of equations,
+@newcol
+ Let:
+\[\displaystyle A=\begin{bmatrix}1&amp;2&amp;-1&amp;4&amp;6\\
+0&amp;-4&amp;1&amp;2&amp;3\\
+-5&amp;1&amp;2&amp;-3&amp;4\end{bmatrix},\;
+B=\begin{bmatrix}1&amp;6&amp;2&amp;1\\
+-1&amp;4&amp;3&amp;2\\
+1&amp;1&amp;2&amp;3\\
+6&amp;4&amp;-1&amp;2\\
+1&amp;-2&amp;3&amp;0\end{bmatrix}.\] 
+@col
+ Then:
 \[
 \begin{split}
--7x_{1}-6x_{2}-12x_{3}&=-33\\
-5x_{1}+5x_{2}+7x_{3}&=24\\
-x_{1}+4x_{3}&=5
+AB&amp;=\left[A\begin{bmatrix}1\\
+-1\\
+1\\
+6\\
+1\end{bmatrix}\left\lvert A\begin{bmatrix}6\\
+4\\
+1\\
+4\\
+-2\end{bmatrix}\right.\left\lvert A\begin{bmatrix}2\\
+3\\
+2\\
+-1\\
+3\end{bmatrix}\right.\left\lvert A\begin{bmatrix}1\\
+2\\
+3\\
+2\\
+0\end{bmatrix}\right.\right]
+\\
+&amp;
+\\
+&amp;=\begin{bmatrix}28&amp;17&amp;20&amp;10\\
+20&amp;-13&amp;-3&amp;-1\\
+-18&amp;-44&amp;12&amp;-3\end{bmatrix}.
+\end{split}
+\] 
+@endcol
+@end
+@remark
+@newcol
+ Is this the definition of matrix multiplication you expected? Perhaps our previous operations for matrices caused you to think that we might multiply two matrices of the same size, entry-by-entry? Notice that our current definition uses matrices of different sizes (though the number of columns in the first must equal the number of rows in the second), and the result is of a third size.
+Notice too that in the previous example we cannot even consider the product $BA$, since the sizes of the two matrices in this order are not compatible.
+But it gets weirder than that. Many of your old ideas about multiplication will not apply to matrix multiplication, but some still will. So make no assumptions, and do not do anything until you have a theorem that says you can. Even if the sizes are right, matrix multiplication is not commutative – order matters. 
+@endcol
+@end
+@slide
+@eg
+ This example demonstrates that
+matrix multiplication is in general <strong>not</strong> commutative.
+@newline
+@newcol
+ Let:
+\[\displaystyle A=\begin{bmatrix}1&amp;3\\
+-1&amp;2\end{bmatrix},\;
+B=\begin{bmatrix}4&amp;0\\
+5&amp;1\end{bmatrix}.\] 
+@col
+ Then:
+\[\displaystyle AB=\begin{bmatrix}19&amp;3\\
+6&amp;2\end{bmatrix},\;
+BA=\begin{bmatrix}4&amp;12\\
+4&amp;17\end{bmatrix}\]
+So, $AB\neq BA$.
+@newline
+@col
+ It should not be hard for you to construct other pairs of matrices that do not commute (try a couple of $3\times 3$’s). Can you find a pair of non-identical matrices that do commute? 
+@endcol
+@end
+@slide
+@thm
+@title{Entries of Matrix Products}
+@label{EMP}
+ Suppose $A$ is an $m\times n$ matrix and $B$ is an $n\times p$ matrix. Then for $1\leq i\leq m$, $1\leq j\leq p$, the individual entries of $AB$ are given by:
+@newline
+@newcol
+ \begin{align*}
+\left[AB\right]_{ij}
+&amp;=\left[A\right]_{i1}\left[B\right]_{1j}+\left[A\right]_{i2}\left[B\right]_{2j}+\left[A\right]_{i3}\left[B\right]_{3j}+ \cdots+\left[A\right]_{in}\left[B\right]_{nj}\\
+&amp;=\sum_{k=1}^{n}\left[A\right]_{ik}\left[B\right]_{kj}
+\end{align*} 
+@endcol
+@end
+@remark
+@newcol
+ In most books, this is used as the definition of $AB$. 
+@endcol
+@end
+@proof
+@newcol
+ View the columns of $A$ as column vectors and denote them from left to right by:
+$\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$.  Similarly, denote the columns of $B$ by: $\mathbf{B}_{1},\,\mathbf{B}_{2},\,\mathbf{B}_{3},\,\ldots,\,\mathbf{B}_{p}$.
+@newline
+@col
+ Then, for $1\leq i\leq m$, $1\leq j\leq p$, we have:
+\begin{align*}
+\left[AB\right]_{ij}=\left[A\mathbf{B}_{j}\right]_{i}
+&amp;=\left[\left[\mathbf{B}_{j}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{B}_{j}\right]_{2}\mathbf{A}_{2}+\cdots+\left[\mathbf{B}_{j}\right]_{n}\mathbf{A}_{n}\right]_{i}\\
+&amp;=\left[\left[\mathbf{B}_{j}\right]_{1}\mathbf{A}_{1}\right]_{i}+
+\left[\left[\mathbf{B}_{j}\right]_{2}\mathbf{A}_{2}\right]_{i}+\cdots+\left[\left[\mathbf{B}_{j}\right]_{n}\mathbf{A}_{n}\right]_{i}\\
+&amp;=\left[\mathbf{B}_{j}\right]_{1}\left[\mathbf{A}_{1}\right]_{i}+\left[\mathbf{B}_{j}\right]_{2}\left[\mathbf{A}_{2}\right]_{i}+\cdots+\left[\mathbf{B}_{j}\right]_{n}\left[\mathbf{A}_{n}\right]_{i}\\
+&amp;=\left[B\right]_{1j}\left[A\right]_{i1}+\left[B\right]_{2j}\left[A\right]_{i2}+\cdots+\left[B\right]_{nj}\left[A\right]_{in}\\
+&amp;=\left[A\right]_{i1}\left[B\right]_{1j}+\left[A\right]_{i2}\left[B\right]_{2j}+\cdots+\left[A\right]_{in}\left[B\right]_{nj}\\
+&amp;=\sum_{k=1}^{n}\left[A\right]_{ik}\left[B\right]_{kj}
+\end{align*} 
+@endcol
+@end
+@slide
+@eg
+@title{Product of Two Matrices, Entry-by-Entry}
+ Consider the matrices:
+\[\displaystyle A=\begin{bmatrix}1&amp;2&amp;-1&amp;4&amp;6\\
+0&amp;-4&amp;1&amp;2&amp;3\\
+-5&amp;1&amp;2&amp;-3&amp;4\end{bmatrix},\;
+B=\begin{bmatrix}1&amp;6&amp;2&amp;1\\
+-1&amp;4&amp;3&amp;2\\
+1&amp;1&amp;2&amp;3\\
+6&amp;4&amp;-1&amp;2\\
+1&amp;-2&amp;3&amp;0\end{bmatrix}\] 
+@newcol
+ Suppose we just wanted the entry of $AB$ in the second row, third column:
+\begin{align*}
+\matrixentry{AB}{23}
+=&amp;
+\matrixentry{A}{21}\matrixentry{B}{13}+
+\matrixentry{A}{22}\matrixentry{B}{23}+
+\matrixentry{A}{23}\matrixentry{B}{33}+
+\matrixentry{A}{24}\matrixentry{B}{43}+
+\matrixentry{A}{25}\matrixentry{B}{53}\\
+=&amp;(0)(2)+(-4)(3)+(1)(2)+(2)(-1)+(3)(3)=-3
+\end{align*}
+Notice how there are 5 terms in the sum, since 5 is the common dimension of the two matrices (column count for $A$, row count for $B$). In the conclusion of the above theorem, it would be the index $k$ that would run from 1 to 5 in this computation. Here is a bit more practice.
+The entry of third row, first column:
+\begin{align*}
+\matrixentry{AB}{31}
+=&amp;
+\matrixentry{A}{31}\matrixentry{B}{11}+
+\matrixentry{A}{32}\matrixentry{B}{21}+
+\matrixentry{A}{33}\matrixentry{B}{31}+
+\matrixentry{A}{34}\matrixentry{B}{41}+
+\matrixentry{A}{35}\matrixentry{B}{51}\\
+=&amp;(-5)(1)+(1)(-1)+(2)(1)+(-3)(6)+(4)(1)=-18
+\end{align*}
+Try to compute all the other entries. 
+@endcol
+@end
+@slide
+<h5 class="notkw">How to memorize the formula</h5>
+ : 
+@newcol
+ To find the $(i,j)$-th entry of $AB$. (1) Find the $i$-th row of $A$ (simply called the row below)(2) Find the $j$-th column of $B$ (simply called the column below)(3) sum up the product the corresponding entries of the row and the column, i.e.
+(entry 1 of the row $\times$ entry 1 of the column) + (entry 2 of the row $\times$ entry 2 of the column) + $\cdots$ 
+@endcol
+@eg
+@newcol
+ Find the $(3,2)$ entry of $AB$ in the previous example.The $3$-rd row of $A$ is $\begin{bmatrix}-5&amp;1&amp;2&amp;-3&amp;4\end{bmatrix}$.
+@newlineThe $2$-nd column of $B$ is $\begin{bmatrix}6\\
+4\\
+1\\
+4\\
+-2\end{bmatrix}$.
+@newlineLet’s do the multiplication:
+@newline<table class="table table-bordered">
+<tbody>
+<tr>
+<td>Row</td><td>-5</td><td>1</td><td>2</td><td>-3</td><td>4</td></tr><tr>
+<td>Column</td><td>6</td><td>4</td><td>1</td><td>4</td><td>-2</td></tr><tr>
+<td>Product</td><td>-30</td><td>4</td><td>2</td><td>-12</td><td>-8</td></tr></tbody></table>
+@newlineThe sum is:
+\[-30+4+2-12-8=-44.\] 
+@endcol
+@end
+@subsection{Properties of Matrix Multiplication}
+ In this subsection, we collect properties of matrix multiplication and its interaction with
+the zero matrix, the identity matrix, matrix addition, scalar matrix multiplication and
+the transpose. 
+@thm
+@title{Matrix Multiplication and the Zero Matrix}
+@label{MMZM}
+@newcol
+ Suppose $A$ is an $m\times n$ matrix. Then 
+@enumerate
+@item
+ $A{\cal O}_{n\times p}={\cal O}_{m\times p}$ 
+@item
+ ${\cal O}_{p\times m}A={\cal O}_{p\times n}$ 
+@endenumerate
+@endcol
+@end
+@proof
+@newcol
+ We will prove (1) and leave (2) to you. Using the entry-by-entry definition of matrix multiplication, for $1\leq i\leq m$, $1\leq j\leq p$, we comoute
+\[\displaystyle\left[A{\cal O}_{n\times p}\right]_{ij}=\sum_{k=1}^{n}\left[A%
+\right]_{ik}\left[{\cal O}_{n\times p}\right]_{kj}\]
+\[\displaystyle=\sum_{k=1}^{n}\left[A\right]_{ik}0\]
+\[\displaystyle=\sum_{k=1}^{n}0\]
+\[\displaystyle=0\]
+\[\displaystyle=\left[{\cal O}_{m\times p}\right]_{ij}\]
+So the matrices $A{\cal O}_{n\times p}$ and ${\cal O}_{m\times p}$ are equal. 
+@endcol
+@end
+@slide
+@defn
+ The @keyword{identity matrix} $I_m$ is the $m \times m$ square matrix whose diagonal entries are all equal to $1$,
+and all off-diagonal entries are equal to zero. That is:
+@newline
+@newcol
+ \[
+\left[I_m\right]_{ij} = \begin{cases}
+1, &amp; \text{ if } i = j;\\
+0, &amp; \text{ if } i \neq j.
+\end{cases}
+\] 
+@col
+ For example:
+\[
+I_2 = \begin{pmatrix}
+1 &amp; 0\\
+0 &amp; 1
+\end{pmatrix},
+\quad
+I_5 = \begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}
+.
+\] 
+@endcol
+@end
+@thm
+@title{Matrix Multiplication and Identity Matrix}
+@label{MMIM}
+@newcol
+ Suppose that $A$ is an $m\times n$ matrix. Then 
+@enumerate
+@item
+ $AI_{n}=A$
+@newline
+@item
+ $I_{m}A=A$ 
+@endenumerate
+@endcol
+@end
+@proof
+@newcol
+ Again, we will prove (1) and leave (2) to you. Using the entry-by-entry definition of matrix multiplication, for $1\leq i\leq m$, $1\leq j\leq n$, we compute
+\[\displaystyle\left[AI_{n}\right]_{ij}=\sum_{k=1}^{n}\left[A\right]_{ik}\left[I%
+_{n}\right]_{kj}\]
+\[\displaystyle=\left[A\right]_{ij}\left[I_{n}\right]_{jj}+\sum_{%
+\begin{subarray}{c}k=1\\
+k\neq j\end{subarray}}^{n}\left[A\right]_{ik}\left[I_{n}\right]_{kj}\]
+\[\displaystyle=\left[A\right]_{ij}(1)+\sum_{k=1,k\neq j}^{n}\left[A\right]_{ik}%
+(0)\]
+\[\displaystyle=\left[A\right]_{ij}+\sum_{k=1,k\neq j}^{n}0\]
+\[\displaystyle=\left[A\right]_{ij}.\]
+So the matrices $A$ and $AI_{n}$ are equal entrywise. By the definition of matrix equality, they are equal matrices. 
+@endcol
+@end
+@remark
+@newcol
+ It is the previous theorem that gives the identity matrix its name. It is a matrix that behaves with matrix multiplication like the scalar 1 does with scalar multiplication. To multiply by the identity matrix is to have no effect on the other matrix. 
+@endcol
+@end
+@slide
+@thm
+@title{Matrix Multiplication Distributes Across Addition}
+@label{MMDAA}
+ Suppose that $A$ is an $m\times n$ matrix and $B$ and $C$ are $n\times p$ matrices and $D$ is a $p\times s$ matrix.
+Then: 
+@enumerate
+@item
+ $A(B+C)=AB+AC$ 
+@item
+ $(B+C)D=BD+CD$ 
+@endenumerate
+@end
+@proof
+@newcol
+ We will do (1), you do (2). Entry-by-entry, for $1\leq i\leq m$, $1\leq j\leq p$,
+\begin{align*}
+\matrixentry{A(B+C)}{ij}
+&amp;=
+\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B+C}{kj}
+\\
+&amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}(\matrixentry{B}{kj}+\matrixentry{C}{kj})
+\\
+&amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}+\matrixentry{A}{ik}\matrixentry{C}{kj}
+\\
+&amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}+\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{C}{kj}
+\\
+&amp;=\matrixentry{AB}{ij}+\matrixentry{AC}{ij}
+\\
+&amp;=\matrixentry{AB+AC}{ij}
+\\
+\end{align*}
+So the matrices $A(B+C)$ and $AB+AC$ are equal, entry-by-entry.
+Hence by the definition of matrix equality, we can say they are equal matrices. 
+@endcol
+@end
+@thm
+@title{Matrix Multiplication and Scalar Matrix Multiplication}
+@label{MMSMM}
+@newcol
+ Suppose $A$ is an $m\times n$ matrix and $B$ is an $n\times p$ matrix. Let $\alpha$ be a scalar. Then $\alpha(AB)=(\alpha A)B=A(\alpha B)$. 
+@endcol
+@end
+@proof
+@newcol
+ These are equalities of matrices. We will do the first one, the second is similar and will be good practice for you.
+For $1\leq i\leq m$, $1\leq j\leq p$,
+\begin{align*}
+\matrixentry{\alpha(AB)}{ij}
+&amp;=\alpha\matrixentry{AB}{ij}
+\\
+&amp;=\alpha\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}
+\\
+&amp;=\sum_{k=1}^{n}\alpha\matrixentry{A}{ik}\matrixentry{B}{kj}
+\\
+&amp;=\sum_{k=1}^{n}\matrixentry{\alpha A}{ik}\matrixentry{B}{kj}
+\\
+&amp;=\matrixentry{(\alpha A)B}{ij}
+\\
+\end{align*}
+So the matrices $\alpha(AB)$ and $(\alpha A)B$ are equal, entry-by-entry, and by the definition of matrix equality we can say they are equal matrices. 
+@endcol
+@end
+@slide
+@thm
+@title{Matrix Multiplication is Associative}
+@label{MMA}
+@newcol
+ Suppose $A$ is an $m\times n$ matrix, $B$ is an $n\times p$ matrix and $D$ is a $p\times s$ matrix. Then $A(BD)=(AB)D$. 
+@endcol
+@end
+@proof
+@newcol
+ A matrix equality, so we will go entry-by-entry, no surprise there. For $1\leq i\leq m$, $1\leq j\leq s$,
+\begin{align*}
+\matrixentry{A(BD)}{ij}
+&amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{BD}{kj}
+\\
+&amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}\left(\sum_{\ell=1}^{p}\matrixentry{B}{k\ell}\matrixentry{D}{\ell j}\right)
+\\
+&amp;=\sum_{k=1}^{n}\sum_{\ell=1}^{p}\matrixentry{A}{ik}\matrixentry{B}{k\ell}\matrixentry{D}{\ell j}
+\\
+\end{align*} 
+@col
+ We can switch the order of the summation since these are finite sums.
+@newline
+@col
+ \begin{align*}
+&amp;=\sum_{\ell=1}^{p}\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{k\ell}\matrixentry{D}{\ell j}
+\\
+\end{align*} 
+@col
+ As $\matrixentry{D}{\ell j}$ does not depend on the index $k$, we can use distributivity to move it outside of the inner sum.
+@newline
+@col
+ \begin{align*}
+&amp;=\sum_{\ell=1}^{p}\matrixentry{D}{\ell j}\left(\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{k\ell}\right)
+\\
+&amp;=\sum_{\ell=1}^{p}\matrixentry{D}{\ell j}\matrixentry{AB}{i\ell}
+\\
+&amp;=\sum_{\ell=1}^{p}\matrixentry{AB}{i\ell}\matrixentry{D}{\ell j}
+\\
+&amp;=\matrixentry{(AB)D}{ij}
+\\
+\end{align*} 
+@col
+ Hence, $(AB)D = A(BD)$. 
+@endcol
+@end
+@newline
+Alternatively, 
+@proof
+@newcol
+ Write:
+\[
+A = \left(
+\mathbf{A}_1 |  \mathbf{A}_2 | \cdots | \mathbf{A}_n
+\right)
+\]
+\[
+B = \left(
+\mathbf{B}_1 |  \mathbf{B}_2 | \cdots | \mathbf{B}_p
+\right)
+\]
+\[
+D = \left(
+\mathbf{D}_1 |  \mathbf{D}_2 | \cdots | \mathbf{D}_s
+\right)
+\] 
+@col
+ Then, for any $1 \leq j \leq s$,
+the $j$-th column of $A(BD)$ is the $j$-th column of:
+\[
+A
+\left(
+B\mathbf{D}_1 |  B\mathbf{D}_2 | \cdots | B\mathbf{D}_s
+\right)
+,
+\]
+which is equal to:
+\[
+A(B\mathbf{D}_j).
+\] 
+@col
+ The $j$-th column of $(AB)D$ is:
+\[
+(AB)\mathbf{D}_j.
+\] 
+@col
+ Hence, it suffices to show that:
+\[
+A(B\mathbf{D}_j) = (AB)\mathbf{D}_j
+\]
+for any $1 \leq j \leq s$.
+@newline
+@col
+ Given any $1 \leq j \leq s$,
+to simplify the notation, let $\vec{v} = \mathbf{D}_j$.
+We have:
+\[
+\begin{split}
+A(B\vec{v}) = A(v_1\mathbf{B}_1 + \cdots + v_p \mathbf{B}_p)
+&amp;= v_1 (A\mathbf{B}_1) + \cdots + v_p (A\mathbf{B}_p)
+\\&amp;= (A\mathbf{B}_1 | \cdots | A \mathbf{B}_p)\vec{v}
+\\&amp;= (AB)\vec{v}.
 \end{split}
 \]
+This completes the proof. 
+@qed
+@endcol
+@end
+@newline
+@remark
 @newcol
-First, form the augmented matrix, is
-\[\left[\begin{array}[]{ccc|c}-7&-6&-12&-33\\
-5&5&7&24\\
-1&0&4&5\\
-\end{array}\right]\]
-@col
-and work to reduced row-echelon form, first with $j=1$,
-\[\displaystyle\xrightarrow{R_{1}\leftrightarrow R_{3}}\left[\begin{array}[]{ccc%
-|c}1&0&4&5\\
-5&5&7&24\\
--7&-6&-12&-33\end{array}\right]\xrightarrow{-5R_{1}+R_{2}}
-\left[
-\begin{array}[
-]{ccc|c}1&0&4&5\\
-0&5&-13&-1\\
--7&-6&-12&-33
-\end{array}
-\right]
-\]
-@col
-\[\displaystyle\xrightarrow{7R_{1}+R_{3}}\left[\begin{array}[]{ccc|c}
-\boxed{1}&0&4&5\\
-0&5&-13&-1\\
-0&-6&16&2\end{array}\right]
-\]
-@col
-Now, with $j=2$,
-\[\displaystyle\xrightarrow{\frac{1}{5}R_{2}}\left[\begin{array}[]{ccc|c}%
-\boxed{1}&0&4&5\\
-0&1&\frac{-13}{5}&\frac{-1}{5}\\
-0&-6&16&2\end{array}\right]\xrightarrow{6R_{2}+R_{3}}\left[\begin{array}[]{ccc%
-|c}\boxed{1}&0&4&5\\
-0&\boxed{1}&\frac{-13}{5}&\frac{-1}{5}\\
-0&0&\frac{2}{5}&\frac{4}{5}\end{array}\right]\]
-@col
-And finally, with $j=3$,
-\[
-\xrightarrow{\frac{5}{2}R_{3}}
-\left[
-\begin{array}[]{ccc|c}
-\boxed{1}&0&4&5\\
-0&\boxed{1}&\frac{-13}{5}&\frac{-1}{5}\\
-0&0&1&2\end{array}
-\right]
-\xrightarrow{\frac{13}{5}R_{3}+R_{2}}
-\left[
-\begin{array}[]{ccc|c}\boxed{1}&0&4&5\\
-0&\boxed{1}&0&5\\
-0&0&1&2
-\end{array}\right]
-\]
-@col
-\[\displaystyle\xrightarrow{-4R_{3}+R_{1}}\left[\begin{array}[]{ccc|c}\boxed{1}&0&0&-3\\
-0&\boxed{1}&0&5\\
-0&0&\boxed{1}&2\end{array}\right]
-\]
-@col
-This is now the augmented matrix of a very simple system of equations, namely $x_{1}=-3$, $x_{2}=5$, $x_{3}=2$, which has an obvious solution. Furthermore, we can see that this is the <strong>only</strong> solution to this system, so we have determined the entire solution set,
-
-@col
-\[\displaystyle S=\left\{\begin{bmatrix}-3\\
-5\\
-2\end{bmatrix}\right\}\]
+ The above result says matrix multiplication is associative; it means we do not have to be careful about how we parenthesize an expression with just several matrices multiplied together. So this is where we draw the line on explaining every last detail in a proof. We will frequently add, remove, or rearrange parentheses with no comment. 
 @endcol
 @end
 @slide
-@eg
-Let us find the solutions to the following system of equations,
-\[\begin{split}
-x_{1}-x_{2}+2x_{3}&=1\\
-2x_{1}+x_{2}+x_{3}&=8\\
-x_{1}+x_{2}&=5\\
-\end{split}\]
-@newcol
-First, form the augmented matrix,
-\[\left[\begin{array}[]{ccc|c}1&-1&2&1\\
-2&1&1&8\\
-1&1&0&5\end{array}\right]\]
-\[\displaystyle\xrightarrow{-2R_{1}+R_{2}}\left[\begin{array}[]{ccc|c}1&-1&2&1\\
-0&3&-3&6\\
-1&1&0&5\end{array}\right]\xrightarrow{-1R_{1}+R_{3}}\left[\begin{array}[]{ccc|%
-c}\boxed{1}&-1&2&1\\
-0&3&-3&6\\
-0&2&-2&4\end{array}\right]\]
-@col
-Now, with $j=2$,
-\[\displaystyle\xrightarrow{\frac{1}{3}R_{2}}\left[\begin{array}[]{ccc|c}%
-\boxed{1}&-1&2&1\\
-0&1&-1&2\\
-0&2&-2&4\end{array}\right]\xrightarrow{1R_{2}+R_{1}}\left[\begin{array}[]{ccc|%
-c}\boxed{1}&0&1&3\\
-0&1&-1&2\\
-0&2&-2&4\end{array}\right]\]
-\[\displaystyle\xrightarrow{-2R_{2}+R_{3}}\left[\begin{array}[]{ccc|c}\boxed{%
-1}&0&1&3\\
-0&\boxed{1}&-1&2\\
-0&0&0&0\end{array}\right]\]
-@col
-The system of equations represented by this augmented matrix needs to be considered a bit differently than the previous case.
-First, the last row of the matrix is the equation $0=0$, which is always true, so it imposes no restrictions on our possible solutions and therefore we can safely ignore it as we analyze the other two equations. These equations are:
-
-@col
-\[\displaystyle x_{1}+x_{3}=3\]
-\[\displaystyle x_{2}-x_{3}=2.\]
-@col
-While this system is fairly easy to solve, it also appears to have a multitude of solutions.
-For example, choose $x_{3}=1$ and see that then $x_{1}=2$ and $x_{2}=3$ will together form a solution.
-Or choose $x_{3}=0$, and then discover that $x_{1}=3$ and $x_{2}=2$ lead to a solution.
-Try it yourself: pick any value of $x_{3}$ you please, and figure out what $x_{1}$ and $x_{2}$ should be to make the first and second equations (respectively) true. We’ll wait while you do that. Because of this behavior, we say that $x_{3}$ is a @keyword{free} or @keyword{independent} variable. But why do we vary $x_{3}$ and not some other variable? For now, notice that the third column of the augmented matrix is not a pivot column. With this idea, we can rearrange the two equations, solving each for the variable whose index is the same as the column index of a pivot column.
-\[\displaystyle x_{1}=3-x_{3}\]
-\[\displaystyle x_{2}=2+x_{3}\]
-To write the set of solution vectors in set notation, we have:
-
-@col
-\[\displaystyle
-S =
-\left\{\left.\begin{bmatrix}3-x_{3}\\
-2+x_{3}\\
-x_{3}\end{bmatrix}\,\right|\,x_{3}\in\mathbb{R}\right\}
-=
-\left\{\left.\colvector{3\\2\\0} + x_3\colvector{-1\\1\\1}
-\,\right|\,x_{3}\in\mathbb{R}\right\}
-\]
-We will learn more in the next lecture about systems with infinitely many solutions and how to express their solution sets.
-@endcol
+@thm
+@title{Matrix Multiplication and Transposes}
+@label{MMT}
+ Suppose $A$ is an $m\times n$ matrix and $B$ is an $n\times p$ matrix. Then $(AB)^{t}=B^{t}A^{t}$. 
 @end
-@slide
-@eg
-Let us find the solutions to the following system of equations,
-\begin{align*}
-2x_{1}+x_{2}+7x_{3}-7x_{4} &= 2\\
--3x_{1}+4x_{2}-5x_{3}-6x_{4} &= 3\\
-x_{1}+x_{2}+4x_{3}-5x_{4} &= 2
+@proof
+@newcol
+ Here we go again, entry-by-entry. For $1\leq i\leq m$, $1\leq j\leq p$,
+@newline
+@col
+ \begin{align*}
+\matrixentry{\transpose{(AB)}}{ji}=&amp;\matrixentry{AB}{ij}
+\\
+&amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}
+\\
+&amp;=\sum_{k=1}^{n}\matrixentry{B}{kj}\matrixentry{A}{ik}
+\\
+&amp;=\sum_{k=1}^{n}\matrixentry{\transpose{B}}{jk}\matrixentry{\transpose{A}}{ki}
+\\
+&amp;=\matrixentry{\transpose{B}\transpose{A}}{ji}
 \end{align*}
-@newcol
-First, form the augmented matrix,
-\[\left[\begin{array}[]{cccc|c}2&1&7&-7&2\\
--3&4&-5&-6&3\\
-1&1&4&-5&2\\
-\end{array}\right]\]
-and work to reduced row-echelon form, first with $j=1$,
-\[\displaystyle\xrightarrow{R_{1}\leftrightarrow R_{3}}\left[\begin{array}[]{cccc|c}1&1&4&-5&2\\
--3&4&-5&-6&3\\
-2&1&7&-7&2\end{array}\right]\xrightarrow{3R_{1}+R_{2}}\left[\begin{array}[]{cccc|c}1&1&4&-5&2\\
-0&7&7&-21&9\\
-2&1&7&-7&2\end{array}\right]\]
-\[\displaystyle\xrightarrow{-2R_{1}+R_{3}}\left[\begin{array}[]{cccc|c}\boxed{1}&1&4&-5&2\\
-0&7&7&-21&9\\
-0&-1&-1&3&-2\end{array}\right]\]
+@newline
 @col
-Now, with $j=2$,
-\[\displaystyle\xrightarrow{R_{2}\leftrightarrow R_{3}}\left[\begin{array}[]{cccc|c}\boxed{1}&1&4&-5&2\\
-0&-1&-1&3&-2\\
-0&7&7&-21&9\end{array}\right]\xrightarrow{-1R_{2}}\left[\begin{array}[]{cccc|c}\boxed{1}&1&4&-5&2\\
-0&1&1&-3&2\\
-0&7&7&-21&9\end{array}\right]\]
-\[\displaystyle\xrightarrow{-1R_{2}+R_{1}}\left[\begin{array}[]{cccc|c}\boxed{1}&0&3&-2&0\\
-0&1&1&-3&2\\
-0&7&7&-21&9\end{array}\right]\xrightarrow{-7R_{2}+R_{3}}\left[\begin{array}[]{%
-cccc|c}\boxed{1}&0&3&-2&0\\
-0&\boxed{1}&1&-3&2\\
-0&0&0&0&-5\end{array}\right]\]
-@col
-And finally, with $j=4$,
-\[\displaystyle\xrightarrow{-\frac{1}{5}R_{3}}\left[\begin{array}[]{cccc|c}
-\boxed{1}&0&3&-2&0\\
-0&\boxed{1}&1&-3&2\\
-0&0&0&0&1\end{array}\right]\xrightarrow{-2R_{3}+R_{2}}\left[\begin{array}[]{%
-cccc|c}\boxed{1}&0&3&-2&0\\
-0&\boxed{1}&1&-3&0\\
-0&0&0&0&\boxed{1}\end{array}\right]\]
-@col
-The third equation will read $0=1$. This is patently false, all the time. No choice of values for our variables will ever make it true. We are done. Since we cannot even make the last equation true, we have no hope of making all of the equations simultaneously true. So this system has @keyword{no solutions}, and its solution set is the empty set, $\varnothing=\{\ \}$
-Notice that we could have reached this conclusion sooner. After performing the row operation
-$-7R_{2}+R_{3}$, we can see that the third equation reads $0=-5$, a false statement. Since the system represented by this matrix has no solutions, none of the systems represented has any solutions. However, for this example, we have chosen to bring the matrix all the way to reduced row-echelon form as practice.
-The above three examples
-illustrate the full range of possibilities for a system of linear equations –
-no solutions, one solution, or infinitely many solutions.
-In the next lecture we will examine these three scenarios more closely.
+ So, $(AB)^{t} = B^{t}A^{t}$. 
 @endcol
 @end
+@section{Row Operations and Matrix Multiplication}
+ In this section, we will discuss the relation between elementary row operations and matrix multiplication.
+@newlineRecall the definition of @ref{def:RO} on matrices.
+@newline
+@thm
+@label{thm:ROEM}
+@newcol
+ Let $A\in M_{mn}$. Let $B$ be a matrix obtained by applying one of the above row operations on $A$.
+Let $J$ be a matrix obtained by applying the same row operation on $I_{m}$. Then
+\[JA=B.\] 
+@endcol
+@end
+@proof
+@newcol
+ Exercise. 
+@endcol
+@end
+@newline
+@eg
+@newcol
+ Let:
+\[A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;a_{14}&amp;a_{15}\\
+a_{21}&amp;a_{22}&amp;a_{23}&amp;a_{24}&amp;a_{25}\\
+a_{31}&amp;a_{32}&amp;a_{33}&amp;a_{34}&amp;a_{35}\\
+a_{41}&amp;a_{42}&amp;a_{43}&amp;a_{44}&amp;a_{45}\\
+\end{bmatrix}\]
+Consider the row operation $3R_{2}+R_{3}$.
+\[A\xrightarrow{3R_{2}+R_{3}}B=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;a_{14}&amp;a_{15}%
+\\
+a_{21}&amp;a_{22}&amp;a_{23}&amp;a_{24}&amp;a_{25}\\
+3a_{21}+a_{31}&amp;3a_{22}+a_{32}&amp;3a_{23}+a_{33}&amp;3a_{24}+a_{34}&amp;3a_{25}+a_{35}\\
+a_{41}&amp;a_{42}&amp;a_{43}&amp;a_{44}&amp;a_{45}\\
+\end{bmatrix}\]
+\[I_{4}\xrightarrow{3R_{2}+R_{3}}J=\begin{bmatrix}1&amp;0&amp;0&amp;0\\
+0&amp;1&amp;0&amp;0\\
+0&amp;3&amp;1&amp;0\\
+0&amp;0&amp;0&amp;1\\
+\end{bmatrix}\]
+Verify that:
+\[JA=B.\] 
+@endcol
+@end
+@newline
+@slide
+@defn
+ A matrix $J$ which corresponds to an elementary row operation as in @ref{thm:ROEM} is called an @keyword{elementary matrix}. 
+@end
+@newline
+@section{Invertible Matrices}
+@defn
+@label{def:matrixinverse}
+ An $n \times n$ square matrix $A$ is said to be @keyword{invertible} if there exists an $n \times n$ matrix $B$
+such that:
+\[
+AB = BA = I_n.
+\]
+We call $B$ an @keyword{inverse} of $A$. 
+@end
+@newline
+@thm
+@newcol
+ If $A, B, B'$ are $n \times n$ matrices such that:
+\[
+AB = BA = I_n \quad \text{and} \quad AB' = B'A = I_n,
+\]
+then $B = B'$.
+Hence, the inverse of an invertible matrix $A$ is unique. We denote it by $A^{-1}$. 
+@endcol
+@end
+@newline
+@fact
+@label{fact:matrixinverse}
+@newcol
+ Let $A$ be an $n \times n$ matrix. 
+@ul
+@li
+ If $A$ is invertible, so is $A^{-1}$, with:
+\[
+\left( A^{-1} \right)^{-1} = A.
+\] 
+@li
+ The  matrix $A$ is invertible if and only if it is row-equivalent to $I_n$. 
+@li
+ The matrix $A$ is invertible if and only if it is @keyword{nonsingular}, that is:
+\[
+A \vec{x} = \vec{0}
+\]
+if and only if $\vec{x} = \vec{0}$. 
+@li
+ If the matrix $A$ is invertible, then so is its transpose $A^t$, with:
+\[
+\left(A^t\right)^{-1} = \left(A^{-1}\right)^t.
+\] 
+@li
+ If $A$, $B$ are invertible $n \times n$ matrices, then $AB$ is also invertible, with:
+\[
+\left(AB\right)^{-1} = B^{-1}A^{-1}.
+\] 
+@endul
+@endcol
+@end
+@slide
+@thm
+ Elementary matrices are invertible. 
+@end
+@newline
+We may now prove Theorem @ref{REMES}.
+@newline
+@proof
+@newcol
+ Suppose $A = [A' | \vec{a}]$ and $B = [B' | \vec{b}]$.
+If $A$ and $B$ are row-equivalent, then there exists a sequence of elementary matrices $J_1, J_2, \ldots J_l$
+such that:
+\[
+[B' | \vec{b}] = B = J_l\cdots J_2 J_1 A = J_l\cdots J_2 J_1 [A' | \vec{a}]
+\]
+Let $J = J_l \cdots J_2 J_1$.
+Then, we have:
+\[
+B' = J A'
+\quad
+\text{ and }
+\quad
+\vec{b} = J\vec{a}.
+\] 
+@col
+ For any $\vec{v}$ which is a solution to $\mathcal{LS}(A', \vec{a})$, by definition we have:
+\[
+A' \vec{v} = \vec{a}.
+\] 
+@col
+ So,
+\[
+B'\vec{v} = JA'\vec{v} = J\vec{a} = \vec{b},
+\]
+which implies that $\vec{v}$ is also a solution to $\mathcal{LS}(B', \vec{b})$.
+@newline
+@col
+ Conversely, by @ref{fact:matrixinverse} the matrix $J$ is invertible, hence,
+\[
+A' = J^{-1} B'
+\quad
+\text{ and }
+\quad
+\vec{a} = J^{-1}\vec{b}.
+\] 
+@col
+ It then follows from the same arguments used before that any solution $\vec{v}$ to $\mathcal{LS}(B', \vec{b})$
+is also a solution to $\mathcal{LS}(A', \vec{a})$.
+@newlineWe conclude that $\mathcal{LS}(A', \vec{a})$ and  $\mathcal{LS}(B', \vec{b})$ have the same solution set,
+hence they are equivalent linear systems. 
+@endcol
+@end
+@section{Transposes and Symmetric Matrices}
+@label{TSM}
+ We now describe one more common operation which can be performed on matrices.
+Informally, to transpose a matrix is to build a new matrix by swapping its rows and columns. 
+@defn
+@title{Transpose of a Matrix}
+@label{TM}
+ Given an $m\times n$ matrix $A$, its @keyword{transpose} is the $n\times m$ matrix $A^{t}$ given by
+\[\left[A^{t}\right]_{ij}=\left[A\right]_{ji},\quad 1\leq i\leq n,\,1\leq j\leq m,\]
+i.e.
+@newline
+@newcol
+ \[
+A^t=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;\dots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;a_{23}&amp;\dots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{n1}&amp;a_{n2}&amp;a_{n3}&amp;\dots&amp;a_{nm}\\
+\end{bmatrix}^{t}
+\] 
+@col
+ \[
+=\begin{bmatrix}a_{11}&amp;a_{21}&amp;a_{31}&amp;\dots&amp;a_{m1}\\
+a_{12}&amp;a_{22}&amp;a_{32}&amp;\dots&amp;a_{m2}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{1n}&amp;a_{2n}&amp;a_{3n}&amp;\dots&amp;a_{mn}\\
+\end{bmatrix}.
+\] 
+@endcol
+@end
+@eg
+@newcol
+ Suppose:
+\[
+D=\begin{bmatrix}3&amp;7&amp;2&amp;-3\\
+-1&amp;4&amp;2&amp;8\\
+0&amp;3&amp;-2&amp;5\end{bmatrix}.\]
+Then,
+@newline
+@col
+ \[D^{t}=\begin{bmatrix}3&amp;-1&amp;0\\
+7&amp;4&amp;3\\
+2&amp;2&amp;-2\\
+-3&amp;8&amp;5\end{bmatrix}.\] 
+@endcol
+@end
+@slide
+@defn
+@title{Symmetric Matrix}
+@label{SYM}
+ A matrix $A$ is said to be @keyword{symmetric} if $A=A^{t}$, i.e.
+@newline
+@newcol
+ \[A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}\end{bmatrix}\]
+with
+\[a_{ij}=a_{ji}\text{ for all $i,j$}.\] 
+@endcol
+@end
+@eg
+@newcol
+ The matrix:
+\[E=\begin{bmatrix}2&amp;3&amp;-9&amp;5&amp;7\\
+3&amp;1&amp;6&amp;-2&amp;-3\\
+-9&amp;6&amp;0&amp;-1&amp;9\\
+5&amp;-2&amp;-1&amp;4&amp;-8\\
+7&amp;-3&amp;9&amp;-8&amp;-3\end{bmatrix}\]
+is symmetric. 
+@endcol
+@end
+@thm
+@title{Symmetric Matrices are Square}
+@label{SMS}
+ Suppose that $A$ is a symmetric matrix. Then $A$ is square. 
+@end
+@proof
+@newcol
+ Suppose $A$ is a $n\times m$ matrix. Then $A^{t}$ is a $m\times n$ matrix.
+In order for $A$ and $A^{t}$ to be equal, they must have the same dimension. Hence $n=m$. 
+@endcol
+@end
+@slide
+@defn
+ A matrix $A$ is said to be @keyword{skew-symmetric} (or @keyword{antisymmetric}) if:
+\[
+A^t = -A
+\] 
+@end
+@eg
+@newcol
+ \[
+A = \begin{bmatrix}
+0 &amp; -5 &amp; 7 &amp; 11\\
+5 &amp; 0 &amp; 8 &amp; -2\\
+-7 &amp; -8 &amp; 0 &amp; 15\\
+-11 &amp; 2 &amp; -15 &amp; 0
+\end{bmatrix}
+\] 
+@endcol
+@end
+@remark
+@newcol
+ Notice that if $A$ is skew-symmetric, then: 
+@itemize
+@item
+ It must be square. 
+@item
+ It's diagonal entries must all be equal to zero. 
+@enditemize
+@endcol
+@end
+@slide
+@thm
+@title{Transpose and Matrix Addition}
+ Suppose that $A$ and $B$ are $m\times n$ matrices. Then $(A+B)^{t}=A^{t}+B^{t}$. 
+@end
+@proof
+@newcol
+ For $1\leq i\leq n$, $1\leq j\leq m$, 
+@steps
+\[
+\begin{split}
+\left[(A+B)^{t}\right]_{ij}&amp;= \class{steps}{\cssId{step0}{\left[A+B\right]_{ji}}}\\
+&amp; \class{steps}{\cssId{step1}{=\left[A\right]_{ji}+\left[B\right]_{ji}}}\\
+&amp; \class{steps}{\cssId{step2}{=\left[A^{t}\right]_{ij}+\left[B^{t}\right]_{ij}}}\\
+&amp; \class{steps}{\cssId{step3}{=\left[A^{t}+B^{t}\right]_{ij}}}\\
+\end{split}
+\]
+
+@endsteps
+@newline
+@col
+ Since the matrices $(A+B)^{t}$ and $A^{t}+B^{t}$ agree at each entry, they are equal. 
+@endcol
+@end
+@newline
+@thm
+@title{Transpose and Matrix Scalar Multiplication}
+@newcol
+ Suppose that $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $A$ is an $m\times n$ matrix. Then $(\alpha A)^{t}=\alpha A^{t}$. 
+@endcol
+@end
+@proof
+@newcol
+ For $1\leq i\leq m$, $1\leq j\leq n$,
+\[\displaystyle\left[(\alpha A)^{t}\right]_{ji}=\left[\alpha A\right]_{ij}\]
+\[\displaystyle=\alpha\left[A\right]_{ij}\]
+\[\displaystyle=\alpha\left[A^{t}\right]_{ji}\]
+\[\displaystyle=\left[\alpha A^{t}\right]_{ji}.\]
+Since the matrices $(\alpha A)^{t}$ and $\alpha A^{t}$ agree at each entry, they are equal. 
+@endcol
+@end
+@thm
+@title{Transpose of a Transpose}
+@label{TT}
+@newcol
+ Suppose that $A$ is an $m\times n$ matrix. Then $\left(A^{t}\right)^{t}=A$. 
+@endcol
+@end
+@proof
+@newcol
+ For $1\leq i\leq m$, $1\leq j\leq n$,
+\[\displaystyle\left[\left(A^{t}\right)^{t}\right]_{ij}=\left[A^{t}\right]_{ji}\]
+\[\displaystyle=\left[A\right]_{ij}.\]
+Since the matrices $\left(A^{t}\right)^{t}$ and $A$ agree at each entry, they are equal. 
+@endcol
+@end
+<!--DELIMITER-->

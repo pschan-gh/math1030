@@ -1,188 +1,44 @@
-@course{Math 1030}
-@setchapter{8}
-@chapter{Homogeneous Systems of Equations and Nonsingular Matrices}
-
+@course{MATH 1030}
+@chapter{Vector space and subspace}
 <h5 class="notkw">Reference.</h5>
-Beezer, Ver 3.5 Section HSE (print version p44 - p50)Section NM (print version p51 - p56)
-
-<h5 class="notkw">Exercise.</h5>
-Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf
-@enumerate
-@item
-Section HSE (ex p.18-23) C21-C23, C25-C27, C30-C31, M50-M52, T10-T12, T20
-@item
-Section NM (ex p.23-27) C30-C33, C50, M30, M51-M52, T10, T12, T30, T31, T90.
-@endenumerate
-@section{Solutions of Homogeneous Systems}
-@label{SHS}
-@defn
-@title{Homogeneous System}
-@label{HS}
-A system of linear equations, $\mathcal{LS}(A, \mathbf{b})$ is @keyword{homogeneous} if the vector of constants is the zero vector, in other words, if $\mathbf{b}=\mathbf{0}$, i.e.
-\begin{align*}
-a_{11} x_1 + a_{12} x_2 + \cdots + a_{1n} x_n  &=0 \\
-a_{21} x_1 + a_{22} x_2 + \cdots + a_{2n} x_n  &=0\\
-\vdots &\\
-a_{m1} x_1 + a_{m2} x_2 + \cdots + a_{mn} x_n &= 0
-\end{align*}
-@end
-@defn
-@title{Homogeneous System corresponding to system of linear equation}
-@newcol
-The @keyword{homogeneous system} corresponding to $\linearsystem{A}{\vect{b}}$:
-\begin{align*}
-a_{11}x_1+a_{12}x_2+a_{13}x_3+\dots+a_{1n}x_n&=b_1\\
-a_{21}x_1+a_{22}x_2+a_{23}x_3+\dots+a_{2n}x_n&=b_2\\
-a_{31}x_1+a_{32}x_2+a_{33}x_3+\dots+a_{3n}x_n&=b_3\\
-\vdots&\\
-a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\dots+a_{mn}x_n&=b_m
-\end{align*}
-is $\linearsystem{A}{\vect{0}}$:
-\begin{align*}
-a_{11}x_1+a_{12}x_2+a_{13}x_3+\dots+a_{1n}x_n&=0\\
-a_{21}x_1+a_{22}x_2+a_{23}x_3+\dots+a_{2n}x_n&=0\\
-a_{31}x_1+a_{32}x_2+a_{33}x_3+\dots+a_{3n}x_n&=0\\
-\vdots&\\
-a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\dots+a_{mn}x_n&=0
-\end{align*}
-@endcol
-@end
-@slide
-@eg
-The following is a homogeneous system of linear equations:
-\begin{align*}
-x_1-2x_2+3x_3 - 4x_4 &= 0 \\
-x_2-x_4 &=0 \\
-x_1+3x_2 - 5x_3 + 5 x_4 &= 0
-\end{align*}
-It is the homogeneous system of linear equations corresponding to
-\begin{align*}
-x_1-2x_2+3x_3 - 4x_4 &= 1 \\
-x_2-x_4 &=2 \\
-x_1+3x_2 - 5x_3 + 5 x_4 &= 3
-\end{align*}
-@end
-@slide
-@thm
-@title{Homogeneous Systems are Consistent}
-@label{HSC}
-Suppose that a system of linear equations is homogeneous.
-Then the system is consistent. In fact $\mathbf{0}$ is a solution, i.e $x_{1}=x_{2}=\cdots=x_{n}=0$ is a solution. Such solution is called a @keyword{trivial solution}.
-@end
-@proof
-@newcol
-Set each variable of the system to zero. The left hand side of the all equations are zero, which are equal to the right hand side.
-@qed
-@endcol
-@end
-@slide
-@eg
-@enumerate
-@item
-<br/>
-\begin{align*}
--7x_1 -6 x_2 - 12x_3 &=0\\
-5x_1  + 5x_2 + 7x_3 &=0\\
-x_1 +4x_3 &=0
-\end{align*}
-The reduced row echelon form of the augmented matrix is
-\[\left[\begin{array}[]{ccc|c}\boxed{1}&0&0&0\\
-0&\boxed{1}&0&0\\
-0&0&\boxed{1}&0\end{array}\right]\]
-It has $n-r=3-3=0$ free variable. Hence it has only one solution.
-@item
-@newcol
-\begin{align*}
-x_1 -x_2 +2x_3 & =0\\
-2x_1+ x_2 + x_3 & =0\\
-x_1 + x_2 & =0
-\end{align*}The reduced row echelon form of the augmented matrix is
-\[\left[\begin{array}[]{ccc|c}\boxed{1}&0&1&0\\
-0&\boxed{1}&-1&0\\
-0&0&0&0\end{array}\right]\]
-The system is consistent. It has $n-r=3-2=1$ free variable. The solution set is
-\[S=\left\{\left.\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\end{bmatrix}\,\right|\,x_{1}=-x_{3},\,x_{2}=x_{3}\right\}=\left\{\left.%
-\begin{bmatrix}-x_{3}\\
-x_{3}\\
-x_{3}\end{bmatrix}\,\right|\,x_{3}\text{ real number}\right\}\]
-Geometrically, these are points in three dimensions that lie on a line through the origin.
-@endcol
-@item
-@newcol
-\begin{align*}
-2x_1  + x_2 + 7x_3 - 7x_4 &= 0 \\
--3x_1 + 4x_2 -5x_3 - 6x_4 &=  0 \\
-x_1 +x_2 + 4x_3 - 5x_4 &=  0
-\end{align*}
-The reduced row echelon form of the augmented matrix is
-\[\left[\begin{array}[]{cccc|c}\boxed{1}&0&3&-2&0\\
-0&\boxed{1}&1&-3&0\\
-0&0&0&0&0\end{array}\right]\]
-The system is consistent. It has $n-r=4-2=2$ free variables. The solution set is
-\[\displaystyle S=\left\{\left.\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\\
-x_{4}\end{bmatrix}\,\right|\,x_{1}=-3x_{3}+2x_{4},\,x_{2}=-x_{3}+3x_{4}\right\}\]
-\[\displaystyle=\left\{\left.\begin{bmatrix}-3x_{3}+2x_{4}\\
--x_{3}+3x_{4}\\
-x_{3}\\
-x_{4}\end{bmatrix}\,\right|\,x_{3},\,x_{4}\text{ real numbers}\right\}\]
-@endcol
-@endenumerate
-@end
-@slide
-Notice that when we do row operations on the augmented matrix of a homogeneous system of linear equations the last column of the matrix is all zeros. Any one of the three allowable row operations will convert zeros to zeros and thus, the final column of the matrix in reduced row-echelon form will also be all zeros. So in this case, we may be as likely to reference only the coefficient matrix and presume that we remember that the final column begins with zeros, and after any number of row operations is still zero.
-@slide
-@thm
-@label{HMVEI}
-Suppose that a homogeneous system of linear equations has $m$ equations and $n$ variables with $n>m$.
-Then the system has infinitely many solutions.
-@end
-@proof
-@newcol
-The system is homogeneous, by theorem @ref{HSC} it is consistent.
-Then the hypothesis that $n>m$, together with @ref{CMVEI}, gives infinitely many solutions.
-@qed
-@endcol
-@end
-If $n=m$, then we can have a unique solution or infinitely many solutions (see the above examples).
+ Beezer, Ver 3.5 Section VO (print version p57 - p63)Subsection VS, EVS (print version p197-203)
+Strang, Section 2.1 <p/><h5 class="notkw">Exercise.</h5> Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdfSection VO (p.28-31) All questions.C10-C15, T05-T07, T13, T17, T18, T30-T32 Section VS (p.75-77) Replace $\mathbb{C}$ (the set of complex numbers) by $\mathbb{R}$ (the set of real numbers) M11, M12, M13, M14, M15, M20.
+@newline
 @section{Null Space of a Matrix}
 @defn
 @label{NSM}
-The @keyword{null space} of a an $m \times n$ matrix $A$, denoted by ${\mathcal{N}}\!\left(A\right)$,
+ The @keyword{null space} of a an $m \times n$ matrix $A$, denoted by ${\mathcal{N}}\!\left(A\right)$,
 is the set of vectors $\vec{x} \in \mathbb{R}^n$ such that:
 \[
 A\vec{x} = \vec{0}.
-\]
+\] 
 @newcol
-Equivalently,
+ Equivalently,
 it is the set of all the vectors which are solutions to the homogeneous system $\linearsystem{A}{\mathbf{0}}$.
 That is, if:
-\[A=\begin{bmatrix}a_{11}&a_{12}&a_{13}&\dots&a_{1n}\\
-a_{21}&a_{22}&a_{23}&\dots&a_{2n}\\
-a_{31}&a_{32}&a_{33}&\dots&a_{3n}\\
-\vdots&\\
-a_{m1}&a_{m2}&a_{m3}&\dots&a_{mn}\\
+\[A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;\dots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;a_{23}&amp;\dots&amp;a_{2n}\\
+a_{31}&amp;a_{32}&amp;a_{33}&amp;\dots&amp;a_{3n}\\
+\vdots&amp;\\
+a_{m1}&amp;a_{m2}&amp;a_{m3}&amp;\dots&amp;a_{mn}\\
 \end{bmatrix}\]
 then ${\mathcal{N}}\!\left(A\right)$ is the solution set of
 \begin{align*}
-a_{11}x_1+a_{12}x_2+a_{13}x_3+\dots+a_{1n}x_n&=0\\
-a_{21}x_1+a_{22}x_2+a_{23}x_3+\dots+a_{2n}x_n&=0\\
-a_{31}x_1+a_{32}x_2+a_{33}x_3+\dots+a_{3n}x_n&=0\\
-\vdots&\\
-a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\dots+a_{mn}x_n&=0
-\end{align*}
+a_{11}x_1+a_{12}x_2+a_{13}x_3+\dots+a_{1n}x_n&amp;=0\\
+a_{21}x_1+a_{22}x_2+a_{23}x_3+\dots+a_{2n}x_n&amp;=0\\
+a_{31}x_1+a_{32}x_2+a_{33}x_3+\dots+a_{3n}x_n&amp;=0\\
+\vdots&amp;\\
+a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\dots+a_{mn}x_n&amp;=0
+\end{align*} 
 @endcol
 @end
 @slide
 @eg
-Suppose
-\[A=\begin{bmatrix}1&4&0&-1&0&7&-9\\
-2&8&-1&3&9&-13&7\\
-0&0&2&-3&-4&12&-8\\
--1&-4&2&4&8&-31&37\end{bmatrix}\]
+ Suppose
+\[A=\begin{bmatrix}1&amp;4&amp;0&amp;-1&amp;0&amp;7&amp;-9\\
+2&amp;8&amp;-1&amp;3&amp;9&amp;-13&amp;7\\
+0&amp;0&amp;2&amp;-3&amp;-4&amp;12&amp;-8\\
+-1&amp;-4&amp;2&amp;4&amp;8&amp;-31&amp;37\end{bmatrix}\]
 Then
 \[\mathbf{x}=\begin{bmatrix}3\\
 0\\
@@ -198,9 +54,9 @@ Then
 1\\
 1\end{bmatrix}\]
 are in ${\mathcal{N}}\!\left(A\right)$ as $A\mathbf{x}=\mathbf{0}$, $A\mathbf{y}=\mathbf{0}$.
-
+@newline
 @newcol
-However, the vector
+ However, the vector
 \[\mathbf{z}=\begin{bmatrix}1\\
 0\\
 0\\
@@ -212,225 +68,61 @@ is not in ${\mathcal{N}}\!\left(A\right)$ as
 \[A\mathbf{z}=\begin{bmatrix}-17\\
 16\\
 -16\\
-73\end{bmatrix}\neq\mathbf{0}.\]
+73\end{bmatrix}\neq\mathbf{0}.\] 
 @endcol
 @end
 @slide
 @eg
 @label{CNS1}
-Let us compute the null space of
-\[A=\begin{bmatrix}2&-1&7&-3&-8\\
-1&0&2&4&9\\
-2&2&-2&-1&8\end{bmatrix}\]
+ Let us compute the null space of
+\[A=\begin{bmatrix}2&amp;-1&amp;7&amp;-3&amp;-8\\
+1&amp;0&amp;2&amp;4&amp;9\\
+2&amp;2&amp;-2&amp;-1&amp;8\end{bmatrix}\]
 which we write as ${\mathcal{N}}\!\left(A\right)$. Translating @ref{NSM},
 we simply desire to solve the homogeneous system $\linearsystem{A}{\mathbf{0}}$. So we row-reduce the augmented matrix to obtain:
-
+@newline
 @newcol
-\[\left[\begin{array}[]{ccccc|c}\boxed{1}&0&2&0&1&0\\
-0&\boxed{1}&-3&0&4&0\\
-0&0&0&\boxed{1}&2&0\end{array}\right]\]
+ \[\left[\begin{array}[]{ccccc|c}\boxed{1}&amp;0&amp;2&amp;0&amp;1&amp;0\\
+0&amp;\boxed{1}&amp;-3&amp;0&amp;4&amp;0\\
+0&amp;0&amp;0&amp;\boxed{1}&amp;2&amp;0\end{array}\right]\]
 The variables (of the homogeneous system) $x_{3}$ and $x_{5}$ are free (since columns 1, 2 and 4 are pivot columns), so we arrange the equations represented by the matrix in reduced row-echelon form to:
-
+@newline
 @col
-\begin{align*}
-x_1&=-2x_3-x_5\\
-x_2&=3x_3-4x_5\\
-x_4&=-2x_5
+ \begin{align*}
+x_1&amp;=-2x_3-x_5\\
+x_2&amp;=3x_3-4x_5\\
+x_4&amp;=-2x_5
 \end{align*}
-
+@newline
 @col
-So we can write the infinite solution set as sets using column vectors,
+ So we can write the infinite solution set as sets using column vectors,
 \[{\mathcal{N}}\!\left(A\right)=\left\{\left.\begin{bmatrix}-2x_{3}-x_{5}\\
 3x_{3}-4x_{5}\\
 x_{3}\\
 -2x_{5}\\
-x_{5}\end{bmatrix}\,\right|\,x_{3},\,x_{5}\text{ real numbers}\right\}.\]
+x_{5}\end{bmatrix}\,\right|\,x_{3},\,x_{5}\text{ real numbers}\right\}.\] 
 @endcol
 @end
 @slide
 @eg
 @label{CNS2}
-Let us compute the null space of
-\[C=\begin{bmatrix}-4&6&1\\
--1&4&1\\
-5&6&7\\
-4&7&1\end{bmatrix}\]
+ Let us compute the null space of
+\[C=\begin{bmatrix}-4&amp;6&amp;1\\
+-1&amp;4&amp;1\\
+5&amp;6&amp;7\\
+4&amp;7&amp;1\end{bmatrix}\]
 which we write as ${\mathcal{N}}\!\left(C\right)$. Translating definition   @ref{NSM}, we simply desire to solve the homogeneous system
 $\linearsystem{C}{\mathbf{0}}$.
 So we row-reduce the augmented matrix to obtain
-\[\left[\begin{array}[]{ccc|c}\boxed{1}&0&0&0\\
-0&\boxed{1}&0&0\\
-0&0&\boxed{1}&0\\
-0&0&0&0\end{array}\right]\]
+\[\left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;0&amp;0\\
+0&amp;\boxed{1}&amp;0&amp;0\\
+0&amp;0&amp;\boxed{1}&amp;0\\
+0&amp;0&amp;0&amp;0\end{array}\right]\] 
 @newcol
-There are no free variables in the homogeneous system represented by the row-reduced matrix, so there is only the trivial solution, the zero vector, $\mathbf{0}$. So we can write the (trivial) solution set as
+ There are no free variables in the homogeneous system represented by the row-reduced matrix, so there is only the trivial solution, the zero vector, $\mathbf{0}$. So we can write the (trivial) solution set as
 \[{\mathcal{N}}\!\left(C\right)=\{\mathbf{0}\}=\left\{\begin{bmatrix}0\\
 0\\
-0\end{bmatrix}\right\}.\]
-@endcol
-@end
-@section{Augmented matrix vs Coefficient Matrix}
-The augmented matrix for the homogeneous of system of linear equations
-$\linearsystem{A}{\mathbf{0}}$ is $[A|\mathbf{0}]$.
-Any row operators on $[A|\mathbf{0}]$ will not change the last zero columns.
-If
-\[A\xrightarrow{\text{row operations}}B\]
-then
-\[[A|\mathbf{0}]\xrightarrow{\text{same row operations}}[B|\mathbf{0}].\]
-@newcol
-Therefore, for the homogeneous system of linear equations, we can replace the augmented matrix by the coefficient matrix. Just remember there is actually a zero column as the last column. For example:
-
-@col
-\begin{align*}
-2x_1  + x_2 + 7x_3 - 7x_4 &= 0 \\
--3x_1 + 4x_2 -5x_3 - 6x_4 &=  0 \\
-x_1 +x_2 + 4x_3 - 5x_4 &=  0
-\end{align*}
-We can start with coefficient matrix:
-
-@col
-\[A=\begin{bmatrix}2&1&6&-7\\
--3&4&-5&-6\\
-1&1&4&-5\end{bmatrix}\]
-The RREF is:
-
-@col
-\[\left[\begin{array}[]{cccc}\boxed{1}&0&3&-2\\
-0&\boxed{1}&1&-3\\
-0&0&0&0\end{array}\right]\]
-The corresponding augmented matrix is:
-
-@col
-\[\left[\begin{array}[]{cccc|c}\boxed{1}&0&3&-2&0\\
-0&\boxed{1}&1&-3&0\\
-0&0&0&0&0\end{array}\right]\]
-The system is consistent. It has $n-r=4-2=2$ free variables.
-The solution set is:
-
-@col
-\begin{align*}
-S&=\setparts{\colvector{x_1\\x_2\\x_3\\x_4}}{x_1=-3x_3+2x_4,\,x_2=-x_3+3x_4}\\
-&=\setparts{\colvector{-3x_3+2x_4\\-x_3+3x_4\\x_3\\x_4}}{ x_3,\,x_4  \text{ real numbers}}
-\end{align*}
-@endcol
-@section{Nonsingular Matrices}
-In this section we specialize further and consider matrices with equal numbers of rows and columns,
-which when considered as coefficient matrices lead to systems with equal numbers of equations and variables.
-@defn
-@title{Square Matrix}
-@label{SQM}
-A matrix with $m$ rows and $n$ columns is @keyword{square} if $m=n$.
-In this case, we say the matrix has @keyword{size} $n$.
-To emphasize the situation when a matrix is not square, we will call it @keyword{rectangular}.
-@end
-@defn
-@title{Nonsingular Matrix}
-@label{NM}
-@newcol
-Suppose $A$ is a square matrix.
-Suppose further that the solution set to the homogeneous linear system of equations $\linearsystem{A}{\mathbf{0}}$ is $\{\mathbf{0}\}$, in other words, the system has only the trivial solution.
-Then we say that $A$ is a @keyword{nonsingular} matrix. Otherwise we say $A$ is a @keyword{singular} matrix.
-@endcol
-@end
-@slide
-@eg
-@enumerate
-@item
-@newcol
-Let
-\[A=\begin{bmatrix}1&-1&2\\
-2&1&1\\
-1&1&0\end{bmatrix}.\]
-The system of linear equations $\linearsystem{A}{\mathbf{0}}$ has nontrivial solutions.
-Hence $A$ is singular.
-@endcol
-@item
-@newcol
-Let
-\[A=\begin{bmatrix}-7&-6&-12\\
-5&5&7\\
-1&0&4\end{bmatrix}.\]
-The system of linear equations $\linearsystem{A}{\mathbf{0}}$ has only trivial solutions.
-So it is nonsingular.
-@endcol
-@endenumerate
-@end
-@slide
-Recall:
-@defn
-@title{Identity Matrix}
-@label{IM}
-The $m\times m$ @keyword{identity matrix}, $I_{m}$, is defined by
-\[\displaystyle\left[I_{m}\right]_{ij}=\begin{cases}1&i=j\\
-0&i\neq j\end{cases}\quad\quad 1\leq i,\,j\leq m\]
-i.e.
-\[I_{m}=\begin{bmatrix}1&0&0&\cdots&0\\
-0&1&0&\cdots&0\\
-0&0&1&\cdots&0\\
-\vdots&\vdots&\vdots&\ddots&\vdots\\
-0&0&0&\cdots&1\end{bmatrix}.\]
-@end
-@eg
-@newcol
-The $4\times 4$ identity matrix is:
-\[I_{4}=\begin{bmatrix}1&0&0&0\\
-0&1&0&0\\
-0&0&1&0\\
-0&0&0&1\end{bmatrix}.\]
-@endcol
-@end
-@newcol
-Notice that an identity matrix is square, and in reduced row-echelon form.
-Also, every column is a pivot column,
-and every possible pivot column appears once.
-@endcol
-@slide
-@thm
-@title{Nonsingular Matrices Row Reduce to the Identity Matrix}
-@label{NMRRI}
-Suppose that $A$ is a square matrix and $B$ is a row-equivalent matrix in reduced row-echelon form. Then $A$ is nonsingular if and only if $B$ is the identity matrix.
-@end
-@proof
-
-($\Leftarrow$)
-@newcol
-Suppose $B$ is the identity matrix. When the augmented matrix $\left[A|\mathbf{0}\right]$ is row-reduced, the result is $\left[B|\mathbf{0}\right]=\left[I_{n}|\mathbf{0}\right]$. The number of nonzero rows is equal to the number of variables in the linear system of equations $\linearsystem{A}{\mathbf{0}}$, so $n=r$ and has $n-r=0$ free variables.
-Thus, the homogeneous system $\linearsystem{A}{\mathbf{0}}$ has just one solution, which must be the trivial solution.
-This is exactly the definition of a nonsingular matrix.
-@endcol
-
-($\Rightarrow$)
-@newcol
-If $A$ is nonsingular, then the homogeneous system
-$\linearsystem{A}{\mathbf{0}}$ has a unique solution,
-and has no free variables in the description of the solution set.
-The homogeneous system is consistent,
-by Lecture 4 Theorem 4, the homogeneous system has $n-r$ free variables.
-Thus, $n-r=0$, and so $n=r$. So $B$ has $n$ pivot columns among its total of $n$ columns. This is enough to force $B$ to be the $n\times n$ identity matrix $I_{n}$ (why?).
-@qed
-@endcol
-@end
-@slide
-@eg
-\[A=\begin{bmatrix}1&-1&2\\
-2&1&1\\
-1&1&0\end{bmatrix}\]
-is row equivalent to the reduced row echelon form
-\[B=\begin{bmatrix}1&0&1\\
-0&1&-1\\
-0&0&0\end{bmatrix}.\]
-Since $B$ is not the $3\times 3$ identity matrix, the above theorem tells us that $A$ is a singular matrix.
-@end
-@eg
-@newcol
-\[A=\begin{bmatrix}-7&-6&-12\\
-5&5&7\\
-1&0&4\end{bmatrix}.\]
-It is row-equivalent to the reduced row echelon form
-\[B = \begin{bmatrix}1&0&0\\
-0&1&0\\
-0&0&1\end{bmatrix}\]
-Since $B$ is the $3\times 3$ identity matrix, $A$ is a nonsingular matrix by the above theorem.
+0\end{bmatrix}\right\}.\] 
 @endcol
 @end
 @section{Null Space of a Nonsingular Matrix}
@@ -438,25 +130,25 @@ Since $B$ is the $3\times 3$ identity matrix, $A$ is a nonsingular matrix by the
 @thm
 @title{Nonsingular Matrices have Trivial Null Spaces}
 @label{NMTNS}
-Suppose that $A$ is a square matrix. Then $A$ is nonsingular if and only if the null space of $A$ is the set containing only the zero vector, i.e., ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$.
+ Suppose that $A$ is a square matrix. Then $A$ is nonsingular if and only if the null space of $A$ is the set containing only the zero vector, i.e., ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$. 
 @end
 @proof
 @newcol
-The null space of a square matrix, $A$,
+ The null space of a square matrix, $A$,
 is equal to the set of solutions to the homogeneous system,
 $\linearsystem{A}{\mathbf{0}}$. A matrix is nonsingular if and only if the set of solutions to the homogeneous system,
 $\linearsystem{A}{\mathbf{0}}$,
 has only a trivial solution.
-These two observations may be chained together to construct the two proofs necessary for each half of this theorem.
+These two observations may be chained together to construct the two proofs necessary for each half of this theorem. 
 @qed
 @endcol
 @end
 @slide
 @remark
-It is now easy to see that any nonsingular matrix $A$ is invertible:
-
+ It is now easy to see that any nonsingular matrix $A$ is invertible:
+@newline
 @newcol
-If an $n\times n$ matrix $A$ is nonsingular, then it is row-equivalent to $I_n$,
+ If an $n\times n$ matrix $A$ is nonsingular, then it is row-equivalent to $I_n$,
 which means there exists a sequence of elementary matrices $J_1, J_2, \ldots, J_l$
 (each corresponding to a row operation), such that:
 \[
@@ -464,40 +156,38 @@ J_l \cdots J_2 J_1 A = I.
 \]
 Let $J = J_l \cdots J_2 J_1$. Since each elementary matrix is invertible,
 and the product of invertible matrices is also invertible, the matrix $J$ is invertible.
-
+@newline
 @col
-Hence,
+ Hence,
 \[
 A = J^{-1}JA = J^{-1} I = J^{-1}
 \]
 The matrix $J^{-1}$, being the inverse of an invertiable matrix, is invertible.
 We conclude that $A = J^{-1}$ is invertible.
-
-(Observe that every nonsingular matrix is in particular a product of elementary matrices.)
+@newline(Observe that every nonsingular matrix is in particular a product of elementary matrices.) 
 @endcol
 @end
 @slide
 @thm
 @title{Nonsingular Matrices and Unique Solutions}
 @label{NMUS}
-Suppose that $A$ is a square matrix. $A$ is a nonsingular matrix if and only if the system $\linearsystem{A}{\mathbf{b}}$ has a unique solution for every choice of the constant vector $\mathbf{b}$.
+ Suppose that $A$ is a square matrix. $A$ is a nonsingular matrix if and only if the system $\linearsystem{A}{\mathbf{b}}$ has a unique solution for every choice of the constant vector $\mathbf{b}$. 
 @end
 @proof
-
-($\Rightarrow$)
+@newline
+($\Rightarrow$) 
 @newcol
-The hypothesis for this half of the proof is that the system
+ The hypothesis for this half of the proof is that the system
 $\linearsystem{A}{\mathbf{b}}$
 has a unique solution for every choice of the constant vector $\mathbf{b}$.
 We will make a very specific choice for $\mathbf{b}$: $\mathbf{b}=\mathbf{0}$.
 Then we know that the system $\linearsystem{A}{\mathbf{0}}$ has a unique solution.
 But this is precisely the definition of what it means for $A$
-to be nonsingular.
+to be nonsingular. 
 @endcol
-
-($\Leftarrow$)
+@newline($\Leftarrow$) 
 @newcol
-We assume that $A$ is nonsingular of size $n\times n$,
+ We assume that $A$ is nonsingular of size $n\times n$,
 so we know there is a sequence of row operations that will convert $A$
 into the identity matrix $I_{n}$ (Theorem   @ref{NMRRI}).
 Form the augmented matrix $A^{\prime}=\left[A|\mathbf{b}\right]$
@@ -509,20 +199,20 @@ system of equations $x_{i}=\left[\mathbf{c}\right]_{i}$, $1\leq i\leq n$.
 The vector $\mathbf{c}$ is clearly a solution, so the system is consistent.
 With a consistent system, we use Lecture 4 Theorem 4 to count free variables.
 We find that there are $n-r=n-n=0$ free variables,
-and so we therefore know that the solution is unique.
+and so we therefore know that the solution is unique. 
 @qed
 @endcol
 @end
-Alternatively,
+ Alternatively, 
 @proof
 @newcol
-Suppose $A \mathbf{x} = \mathbf{b}$ has a unique solution for every vector $\mathbf{b}$. Then, in particular, the only solution to $A\mathbf{x} = \mathbf{0}$
+ Suppose $A \mathbf{x} = \mathbf{b}$ has a unique solution for every vector $\mathbf{b}$. Then, in particular, the only solution to $A\mathbf{x} = \mathbf{0}$
 is $\mathbf{x} = \mathbf{0}$. This implies by definition that $A$ is nonsingular.
-
+@newline
 @col
-Conversely,
+ Conversely,
 if $A$ is nonsingular, then $A^{-1}$ exists.
-So, $A\mathbf{x} = \mathbf{b}$ implies that the unique solution is $\mathbf{x} = A^{-1}\mathbf{b}$.
+So, $A\mathbf{x} = \mathbf{b}$ implies that the unique solution is $\mathbf{x} = A^{-1}\mathbf{b}$. 
 @qed
 @endcol
 @end
@@ -530,123 +220,918 @@ So, $A\mathbf{x} = \mathbf{b}$ implies that the unique solution is $\mathbf{x} =
 @thm
 @title{Nonsingular Matrix Equivalences}
 @label{NME1}
-Suppose that $A$ is a square matrix. The following are equivalent.
+ Suppose that $A$ is a square matrix. The following are equivalent. 
 @enumerate
 @item
-$A$ is nonsingular.
+ $A$ is nonsingular. 
 @item
-$A$ row-reduces to the identity matrix.
+ $A$ row-reduces to the identity matrix. 
 @item
-The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$.
+ The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$. 
 @item
-The linear system $\linearsystem{A}{\mathbf{b}}$ has a unique solution for every possible choice of $\mathbf{b}$.
+ The linear system $\linearsystem{A}{\mathbf{b}}$ has a unique solution for every possible choice of $\mathbf{b}$. 
 @endenumerate
 @end
 @proof
 @newcol
-The statement that $A$ is nonsingular is equivalent to each of the subsequent statements by, in turn,
+ The statement that $A$ is nonsingular is equivalent to each of the subsequent statements by, in turn,
 theorems   @ref{NMRRI},   @ref{NMTNS},   @ref{NMUS}.
-So the statement of this theorem is just a convenient way to organize all these results.
+So the statement of this theorem is just a convenient way to organize all these results. 
 @qed
 @endcol
 @end
-In fact, we further have: @ref{NME3}.
-@section{Particular Solutions, Homogeneous Solutions}
-@label{PSHS}
-The next theorem tells us that in order to find all of the solutions to a linear system of equations, it is sufficient to find just one solution, and then find all of the solutions to the corresponding homogeneous system. This explains part of our interest in the null space, the set of all solutions to a homogeneous system.
-@thm
-@title{Particular Solution Plus Homogeneous Solutions}
-@label{PSPHS}
-Suppose that $\mathbf{w}$ is one solution to the linear system of equations
-$\linearsystem{A}{\mathbf{b}}$. Then $\mathbf{y}$ is a solution to
-$\linearsystem{A}{\mathbf{b}}$ if and only if $\mathbf{y}=\mathbf{w}+\mathbf{z}$ for some vector $\mathbf{z}\in{\mathcal{N}}\!\left(A\right)$, i.e.
-@enumerate
-@item
-If $\mathbf{y}$ is a solution to $A\mathbf{x}=\mathbf{b}$, then $\mathbf{y}-\mathbf{w}\in{\mathcal{N}}\!\left(A\right)$
-@item
-If $\mathbf{z} \in {\mathcal{N}}\!\left(A\right)$, then $\mathbf{w}+\mathbf{z}$ is a solution of $A\mathbf{x}=\mathbf{b}$
-@endenumerate
-In other words, there is a one-to-one correspondence between
-\[\text{solution set of $A\mathbf{x}=\mathbf{b}$}\longleftrightarrow{\mathcal{N}}\!\left(A\right),\]
-through
-\[\mathbf{y}\rightarrow\mathbf{y}-\mathbf{w},\]
-\[\mathbf{w}+\mathbf{z}\leftarrow\mathbf{z}.\]
+ In fact, we further have: @ref{NME3}. 
+@section{Vectors}
+<strong>Notation</strong>: ${\mathbb{R}}^{\hbox{}}$ is the set of real numbers.
+If $X$ is a set, $x\in X$ means $x$ is an element of the set $X$. 
+@defn
+@title{Vector Space of Column Vectors}
+@label{VSCV}
+ The vector space ${\mathbb{R}}^{m}$ is the set of all column vectors of size $m$ with entries from the set of real numbers, ${\mathbb{R}}^{\hbox{}}$. ${\mathbb{R}}^{m}$ is also called the @keyword{Euclidean $m$-space}. 
 @end
-@proof
+@newline
+@defn
+@title{Column Vector Equality}
+@label{CVE}
 @newcol
-Because $\mathbf{w}$ is one solution to the linear system of equations
-$\linearsystem{A}{\mathbf{b}}$, $A\mathbf{w}=\mathbf{b}$.
-@enumerate
-@item
-If $\mathbf{y}$ is a solution to $A\mathbf{x}=\mathbf{b}$,
-then $A\mathbf{y}=\mathbf{b}$.
-Hence $A(\mathbf{y}-\mathbf{w})=A\mathbf{y}-A\mathbf{w}=\mathbf{b}-\mathbf{b}
-=\mathbf{0}$.
-So $\mathbf{y}-\mathbf{w}\in{\mathcal{N}}\!\left(A\right)$.
-@item
-Suppose $\mathbf{z}\in{\mathcal{N}}\!\left(A\right)$, $A\mathbf{z}=\mathbf{0}$.
-So $A(\mathbf{w}+\mathbf{z})=A\mathbf{w}+A\mathbf{z}=
-\mathbf{b}+\mathbf{0}=\mathbf{b}$.
-Hence $\mathbf{w}+\mathbf{z}$ is a solution of $A\mathbf{x}=\mathbf{b}$.
-@endenumerate
-@qed
+ Suppose that $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$. Then $\mathbf{u}$ and $\mathbf{v}$ are @keyword{equal}, written $\mathbf{u}=\mathbf{v}$ if
+\begin{align*}
+\displaystyle\left[\mathbf{u}\right]_{i}&amp;\displaystyle=\left[\mathbf{v}\right]_{i}&amp;\displaystyle 1\leq i\leq m
+\end{align*}
+That is,
+\begin{align*}
+\displaystyle \begin{bmatrix}u_{1}\\
+u_{2}\\
+\vdots\\
+u_{m}\end{bmatrix}=\begin{bmatrix}v_{1}\\
+v_{2}\\
+\vdots\\
+v_{m}\end{bmatrix}
+\end{align*}
+if
+\begin{align*}
+\displaystyle u_{i}&amp;\displaystyle=v_{i}&amp;\displaystyle 1\leq i\leq m.
+\end{align*} 
 @endcol
 @end
 @slide
 @eg
+ The system of linear equations:
 \begin{align*}
-2x_1  + x_2 + 7x_3 - 7x_4 &= 8 \\
--3x_1 + 4x_2 -5x_3 - 6x_4 &=  -12 \\
-x_1 +x_2 + 4x_3 - 5x_4 &=  4
+\displaystyle-7x_{1}-6x_{2}-12x_{3}&amp;\displaystyle=-33 \\
+\displaystyle 5x_{1}+5x_{2}+7x_{3}&amp;\displaystyle=24 \\
+\displaystyle x_{1}+4x_{3}&amp;\displaystyle=5
 \end{align*}
-is a consistent system of equations with a nontrivial null space.
-Let $A$ denote the coefficient matrix of this system.
-
-Consider the following three solutions to the system:
-
+can be rewritten as:
+@newline
 @newcol
-\begin{align*}
-\vect{y}_1=\colvector{0\\1\\2\\1}&&
-\vect{y}_2=\colvector{4\\0\\0\\0}&&
-\vect{y}_3=\colvector{7\\8\\1\\3}
-\end{align*}
-Let $\mathbf{w}=\mathbf{y}_{1}$. Then,
-\[
-\mathbf{y}_{2}-\mathbf{w}=\begin{bmatrix}4\\
--1\\
--2\\
--1\end{bmatrix},
-\quad
-\mathbf{y}_{3}-\mathbf{w}=\begin{bmatrix}7\\
-7\\
--1\\
-2\end{bmatrix}
-\]
-are indeed elements in ${\mathcal{N}}\!\left(A\right)$ (check!).
-
-@col
-To find all the solutions, we may first work out
-(using Gaussian elimination on $\left[A|\mathbf{0}\right]$, for example) that:
-\[{\mathcal{N}}\!\left(A\right)=\left\{\left.x_{3}\begin{bmatrix}-3\\
--1\\
-1\\
-0\end{bmatrix}+x_{4}\begin{bmatrix}2\\
-3\\
-0\\
-1\end{bmatrix}\,\right|\,x_{3},\,x_{4}\in{\mathbb{R}}^{\hbox{}}\right\}
-\]
-By the theorem, the solution set to the linear system is:
-
-@col
-\[\mathbf{w}+{\mathcal{N}}\!\left(A\right)=\left\{\left.\begin{bmatrix}0\\
-1\\
-2\\
-1\end{bmatrix}+x_{3}\begin{bmatrix}-3\\
--1\\
-1\\
-0\end{bmatrix}+x_{4}\begin{bmatrix}2\\
-3\\
-0\\
-1\end{bmatrix}\,\right|\,x_{3},\,x_{4}\in{\mathbb{R}}^{\hbox{}}\right\}\]
+ \begin{align*}
+\displaystyle \begin{bmatrix}-7x_{1}-6x_{2}-12x_{3}\\
+5x_{1}+5x_{2}+7x_{3}\\
+x_{1}+4x_{3}\end{bmatrix}=\begin{bmatrix}-33\\
+24\\
+5\end{bmatrix}.
+\end{align*} 
 @endcol
 @end
+@slide
+@defn
+@title{Column Vector Addition}
+@label{CVA}
+ Suppose that $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$. The @keyword{sum} of $\mathbf{u}$ and $\mathbf{v}$ is the vector $\mathbf{u}+\mathbf{v}$ defined by
+\begin{align*}
+\displaystyle\left[\mathbf{u}+\mathbf{v}\right]_{i}&amp;\displaystyle=\left[\mathbf{u}\right]_{i}+\left[\mathbf{v}\right]_{i}&amp;\displaystyle 1\leq i\leq m.
+\end{align*}
+That is
+\begin{align*}
+\displaystyle \begin{bmatrix}u_{1}\\
+u_{2}\\
+\vdots\\
+u_{m}\end{bmatrix}+\begin{bmatrix}v_{1}\\
+v_{2}\\
+\vdots\\
+v_{m}\end{bmatrix}=\begin{bmatrix}u_{1}+v_{1}\\
+u_{2}+v_{2}\\
+\vdots\\
+u_{m}+v_{m}\end{bmatrix}.
+\end{align*} 
+@end
+@eg
+<strong>Addition of two vectors in ${\mathbb{R}}^{4}$</strong>
+@newline
+@newcol
+ If
+\begin{align*}
+\displaystyle\mathbf{u}=\begin{bmatrix}2\\
+-3\\
+4\\
+2\end{bmatrix}&amp;
+\quad&amp;
+\displaystyle\mathbf{v}=\begin{bmatrix}-1\\
+5\\
+2\\
+-7\end{bmatrix}
+\end{align*}
+then
+\begin{align*}
+\displaystyle \mathbf{u}+\mathbf{v}=\begin{bmatrix}2\\
+-3\\
+4\\
+2\end{bmatrix}+\begin{bmatrix}-1\\
+5\\
+2\\
+-7\end{bmatrix}=\begin{bmatrix}2+(-1)\\
+-3+5\\
+4+2\\
+2+(-7)\end{bmatrix}=\begin{bmatrix}1\\
+2\\
+6\\
+-5\end{bmatrix}
+\end{align*} 
+@endcol
+@end
+@slide
+@defn
+@title{Column Vector Scalar Multiplication}
+@label{CVSM}
+ Suppose $\mathbf{u}\in{\mathbb{R}}^{m}$ and $\alpha\in{\mathbb{R}}^{\hbox{}}$, then the @keyword{scalar multiple} of $\mathbf{u}$ by $\alpha$ is the vector $\alpha\mathbf{u}$ defined by
+\begin{align*}
+\displaystyle\left[\alpha\mathbf{u}\right]_{i}&amp;\displaystyle=\alpha\left[\mathbf{u}\right]_{i}&amp;\displaystyle 1\leq i\leq m.
+\end{align*}
+That is
+\begin{align*}
+\displaystyle \alpha\begin{bmatrix}u_{1}\\
+u_{2}\\
+\vdots\\
+u_{m}\end{bmatrix}=\begin{bmatrix}\alpha u_{1}\\
+\alpha u_{2}\\
+\vdots\\
+\alpha u_{m}\end{bmatrix}.
+\end{align*} 
+@end
+@eg
+@newcol
+ If
+\begin{align*}
+\displaystyle \mathbf{u}=\begin{bmatrix}3\\
+1\\
+-2\\
+4\\
+-1\end{bmatrix}
+\end{align*}
+and $\alpha=6$, then
+\begin{align*}
+\displaystyle \alpha\mathbf{u}=6\begin{bmatrix}3\\
+1\\
+-2\\
+4\\
+-1\end{bmatrix}=\begin{bmatrix}6(3)\\
+6(1)\\
+6(-2)\\
+6(4)\\
+6(-1)\end{bmatrix}=\begin{bmatrix}18\\
+6\\
+-12\\
+24\\
+-6\end{bmatrix}.
+\end{align*} 
+@endcol
+@end
+@slide
+@eg
+ The system of linear equations
+\begin{align*}
+\displaystyle-7x_{1}-6x_{2}-12x_{3}&amp;\displaystyle=-33 \\
+\displaystyle 5x_{1}+5x_{2}+7x_{3}&amp;\displaystyle=24 \\
+\displaystyle x_{1}+4x_{3}&amp;\displaystyle=5
+\end{align*}
+can be written as:
+@newline
+@newcol
+ \begin{align*}
+\displaystyle x_{1}\begin{bmatrix}-7\\
+5\\
+1\end{bmatrix}+x_{2}\begin{bmatrix}-6\\
+5\\
+0\end{bmatrix}+x_{3}\begin{bmatrix}-12\\
+7\\
+4\end{bmatrix}=\begin{bmatrix}-33\\
+24\\
+5\end{bmatrix}.
+\end{align*} 
+@endcol
+@end
+@section{Vector Space Properties}
+@label{VSP}
+<strong>Warning</strong>: Read the statements of Theorem @ref{VSPCV} and skip the rest of this section <strong>unless you are/going to be</strong> a math major. The material skipped will not appear in the tests and the final exam.
+With definitions of vector addition and scalar multiplication we can state, and prove, several properties of each operation, and some properties that involve their interplay. We now collect ten of them here for later reference. 
+@thm
+@title{Vector Space Properties of Column Vectors}
+@label{VSPCV}
+@label{ACC}
+@label{SCC}
+@label{CC}
+@label{AAC}
+@label{ZC}
+@label{AIC}
+@label{SMAC}
+@label{DVAC}
+@label{DSAC}
+@label{OC}
+ Suppose that ${\mathbb{R}}^{m}$ is the set of column vectors of size $m$ with addition and scalar multiplication as defined in Definition @ref{CVA} and Definition @ref{CVSM} .
+Then: <ol class="ltx_enumerate">
+<li class="ltx_item">
+@keyword{ACC} <em>Additive Closure, Column Vectors</em>
+@newlineIf $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$, then $\mathbf{u}+\mathbf{v}\in{\mathbb{R}}^{m}$. </li>
+<li class="ltx_item">
+@keyword{SCC} <em>Scalar Closure, Column Vectors</em>
+@newlineIf $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in{\mathbb{R}}^{m}$, then $\alpha\mathbf{u}\in{\mathbb{R}}^{m}$. </li>
+<li class="ltx_item">
+@keyword{CC} <em>Commutativity, Column Vectors</em>
+@newlineIf $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$, then $\mathbf{u}+\mathbf{v}=\mathbf{v}+\mathbf{u}$. </li>
+<li class="ltx_item">
+@keyword{AAC} <em>Additive Associativity, Column Vectors</em>
+@newlineIf $\mathbf{u},\,\mathbf{v},\,\mathbf{w}\in{\mathbb{R}}^{m}$, then $\mathbf{u}+\left(\mathbf{v}+\mathbf{w}\right)=\left(\mathbf{u}+\mathbf{v}\right)+\mathbf{w}$. </li>
+<li class="ltx_item">
+@keyword{ZC} <em>Zero Vector, Column Vectors</em>
+@newlineThere is a vector, $\mathbf{0}$, called the @keyword{zero vector}, such that $\mathbf{u}+\mathbf{0}=\mathbf{u}$ for all $\mathbf{u}\in{\mathbb{R}}^{m}$. </li>
+<li class="ltx_item">
+@keyword{AIC} <em>Additive Inverses, Column Vectors</em>
+@newlineIf $\mathbf{u}\in{\mathbb{R}}^{m}$, then there exists a vector $\mathbf{-u}\in{\mathbb{R}}^{m}$ so that $\mathbf{u}+(\mathbf{-u})=\mathbf{0}$. </li>
+<li class="ltx_item">
+@keyword{SMAC} <em>Scalar Multiplication Associativity, Column Vectors</em>
+@newlineIf $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in{\mathbb{R}}^{m}$, then $\alpha(\beta\mathbf{u})=(\alpha\beta)\mathbf{u}$. </li>
+<li class="ltx_item">
+@keyword{DVAC} <em>Distributivity across Vector Addition, Column Vectors</em>
+@newlineIf $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$, then $\alpha(\mathbf{u}+\mathbf{v})=\alpha\mathbf{u}+\alpha\mathbf{v}$. </li>
+<li class="ltx_item">
+@keyword{DSAC} <em>Distributivity across Scalar Addition, Column Vectors</em>
+@newlineIf $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in{\mathbb{R}}^{m}$, then
+$(\alpha+\beta)\mathbf{u}=\alpha\mathbf{u}+\beta\mathbf{u}$. </li>
+<li class="ltx_item">
+@keyword{OC} <em>One, Column Vectors</em>
+@newlineIf $\mathbf{u}\in{\mathbb{R}}^{m}$, then $1\mathbf{u}=\mathbf{u}$. </li></ol>
+@end
+@proof
+ While some of these properties seem very obvious, they all require proof. However, the proofs are not very interesting, and border on tedious.
+We will prove one version of distributivity very carefully, and you can test your proof-building skills on some of the others. We need to establish an equality, so we will do so by beginning with one side of the equality, apply various definitions and theorems (listed to the right of each step) to massage the expression from the left into the expression on the right. Here we go with a proof of Property DSAC in @ref{VSPCV}.
+For $1\leq i\leq m$,
+\begin{align*}
+\displaystyle\left[(\alpha+\beta)\mathbf{u}\right]_{i}&amp;\displaystyle=(\alpha+\beta)\left[\mathbf{u}\right]_{i}&amp;\text{definition} \\
+&amp;\displaystyle=\alpha\left[\mathbf{u}\right]_{i}+\beta\left[\mathbf{u}\right]_{i} \\
+&amp;\displaystyle=\left[\alpha\mathbf{u}\right]_{i}+\left[\beta\mathbf{u}\right]_{i}&amp;\text{definition} \\
+&amp;\displaystyle=\left[\alpha\mathbf{u}+\beta\mathbf{u}\right]_{i}&amp;\text{definition}
+\end{align*}
+Since the individual components of the vectors $(\alpha+\beta)\mathbf{u}$ and $\alpha\mathbf{u}+\beta\mathbf{u}$ are equal for all $i$, $1\leq i\leq m$, @ref{CVE} tells us the vectors are equal. 
+@qed
+@end Many of the conclusions of our theorems can be characterized as @keyword{identities}, especially when we are establishing basic properties of operations such as those in this section. Most of the properties listed in Theorem @ref{VSPCV} are examples. So some advice about the style we use for proving identities is appropriate right now.
+Be careful with the notion of the vector $\mathbf{-u}$. This is a vector that we add to $\mathbf{u}$ so that the result is the particular vector $\mathbf{0}$. This is basically a property of vector addition. It happens that we can compute $\mathbf{-u}$ using the other operation, scalar multiplication. We can prove this directly by writing that
+\begin{align*}
+\displaystyle \left[\mathbf{-u}\right]_{i}=-\left[\mathbf{u}\right]_{i}=(-1)\left[\mathbf{u}\right]_{i}=\left[(-1)\mathbf{u}\right]_{i}
+\end{align*}
+We will see later how to derive this property as a @keyword{consequence} of several of the ten properties listed in Theorem @ref{VSPCV}.
+Similarly, we will often write something you would immediately recognize as @keyword{vector subtraction}. This could be placed on a firm theoretical foundation – as you can do yourself with exercise T30.
+A final note. @ref{VSPCV} Property @keyword{AAC} implies that we do not have to be careful about how we <em>parenthesize</em> the addition of vectors. In other words, there is nothing to be gained by writing
+$\left(\mathbf{u}+\mathbf{v}\right)+\left(\mathbf{w}+\left(\mathbf{x}+\mathbf{y}\right)\right)$
+rather than
+$\mathbf{u}+\mathbf{v}+\mathbf{w}+\mathbf{x}+\mathbf{y}$, since we get the same result no matter which order we choose to perform the four additions. So we will not be careful about using parentheses this way. 
+@section{Vector Space}
+<strong>For math major only. Non-math major can skip the rest of this section. The material will not appear in the midterms or final</strong> In this section we will give an abstract definition of vector space.
+@newline<strong>Why do we need the abstract definitions?</strong> A lot of different algebraic objects (e.g. polynomials, matrices, sequences, functions) share similar properties
+with the set of column vectors. We can use
+the common properties to derive similar results.
+we therefore don’t need to reproof and restate the results.
+@newline<strong>One stone, kill many birds</strong>.
+@newline
+@defn
+@label{VS}
+ Suppose that $V$ is a set upon which we have defined two operations: (1) @keyword{vector addition}, which combines two elements of $V$ and is denoted by $+$, and (2) @keyword{scalar multiplication}, which combines a real number with an element of $V$ and is denoted by juxtaposition. Then $V$, along with the two operations, is a @keyword{vector space} over ${\mathbb{R}}^{\hbox{}}$ if the following ten properties hold. <ol class="ltx_enumerate">
+<li class="ltx_item">
+@keyword{AC}
+<em>Additive Closure</em>
+@newlineIf $\mathbf{u},\,\mathbf{v}\in V$, then $\mathbf{u}+\mathbf{v}\in V$. </li>
+<li class="ltx_item">
+@keyword{SC}
+<em>Scalar Closure</em>
+@newlineIf $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in V$, then $\alpha\mathbf{u}\in V$. </li>
+<li class="ltx_item">
+@keyword{C}
+<em>Commutativity</em>
+@newlineIf $\mathbf{u},\,\mathbf{v}\in V$, then $\mathbf{u}+\mathbf{v}=\mathbf{v}+\mathbf{u}$. </li>
+<li class="ltx_item">
+@keyword{AA}
+<em>Additive Associativity</em>
+@newlineIf $\mathbf{u},\,\mathbf{v},\,\mathbf{w}\in V$, then $\mathbf{u}+\left(\mathbf{v}+\mathbf{w}\right)=\left(\mathbf{u}+\mathbf{v}\right)+\mathbf{w}$. </li>
+<li class="ltx_item">
+@keyword{Z}
+<em>Zero Vector</em>
+@newlineThere is a vector, $\mathbf{0}$, called the @keyword{zero vector}, such that $\mathbf{u}+\mathbf{0}=\mathbf{u}$ for all $\mathbf{u}\in V$. </li>
+<li class="ltx_item">
+@keyword{AI}
+<em>Additive Inverses</em>
+@newlineIf $\mathbf{u}\in V$, then there exists a vector $\mathbf{-u}\in V$ so that $\mathbf{u}+(\mathbf{-u})=\mathbf{0}$. </li>
+<li class="ltx_item">
+@keyword{SMA}
+<em>Scalar Multiplication Associativity</em>
+@newlineIf $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in V$, then $\alpha(\beta\mathbf{u})=(\alpha\beta)\mathbf{u}$. </li>
+<li class="ltx_item">
+@keyword{DVA}
+<em>Distributivity across Vector Addition</em>
+@newlineIf $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u},\,\mathbf{v}\in V$, then $\alpha(\mathbf{u}+\mathbf{v})=\alpha\mathbf{u}+\alpha\mathbf{v}$. </li>
+<li class="ltx_item">
+@keyword{DSA}
+<em>Distributivity across Scalar Addition</em>
+@newlineIf $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in V$, then
+$(\alpha+\beta)\mathbf{u}=\alpha\mathbf{u}+\beta\mathbf{u}$. </li>
+<li class="ltx_item">
+@keyword{O}
+<em>One</em>
+@newlineIf $\mathbf{u}\in V$, then $1\mathbf{u}=\mathbf{u}$. </li></ol> The objects in $V$ are called @keyword{vectors}, no matter what else they might really be, simply by virtue of being elements of a vector space. 
+@end
+@slide
+@eg
+@keyword{column vector space} The set of column vectors ${\mathbb{R}}^{n}$ is a vector space. 
+@end
+@eg
+@keyword{Row vector space}
+@newline
+@newcol
+ The set of row vector ($1\times n$ matrices), is a vector space with the following operations: <ul class="ltx_itemize">
+<li class="ltx_item"> Vector addition: $[a_{1}\,a_{2}\,\ldots\,a_{n}]+[a_{1}\,b_{2}\,\ldots\,b_{n}]=[a_{1}+b_{1}\,a_{2}+b_{2}\,\ldots\,a_{n}+b_{n}]$ </li>
+<li class="ltx_item"> Scalar multiplication $\alpha[a_{1}\,a_{2}\,\ldots,a_{n}]=[\alpha a_{1}\,\alpha a_{2},\ldots,\alpha a_{n}]$ </li></ul>
+@endcol
+@end
+@eg
+@keyword{Matrices}
+@newline
+@newcol
+ The set of $m\times n$ matrices, denoted by $M_{mn}$, is a vector space with the following operations: <ul class="ltx_itemize">
+<li class="ltx_item"> Vector addition:
+\begin{align*}
+\displaystyle \begin{bmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{m1}&amp;a_{m2}&amp;\cdots&amp;a_{mn}\end{bmatrix}+\begin{bmatrix}b_{11}&amp;b_{12}&amp;\cdots&amp;b_{1n}\\
+b_{21}&amp;b_{22}&amp;\cdots&amp;b_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+b_{m1}&amp;b_{m2}&amp;\cdots&amp;b_{mn}\end{bmatrix}=\begin{bmatrix}a_{11}+b_{11}&amp;a_{12}+b_{12}&amp;\cdots&amp;a_{1n}+b_{1n}\\
+a_{21}+b_{21}&amp;a_{22}+b_{22}&amp;\cdots&amp;a_{2n}+b_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{m1}+b_{m1}&amp;a_{m2}+b_{m2}&amp;\cdots&amp;a_{mn}+b_{mn}\end{bmatrix}
+\end{align*} </li>
+<li class="ltx_item"> Scalar multiplication
+\begin{align*}
+\displaystyle \alpha\begin{bmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{m1}&amp;a_{m2}&amp;\cdots&amp;a_{mn}\end{bmatrix}=\begin{bmatrix}\alpha a_{11}&amp;\alpha a_{12}&amp;\cdots&amp;\alpha a_{1n}\\
+\alpha a_{21}&amp;\alpha a_{22}&amp;\cdots&amp;\alpha a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+\alpha a_{m1}&amp;\alpha a_{m2}&amp;\cdots&amp;\alpha a_{mn}\end{bmatrix}
+\end{align*} </li></ul> Property Z: The zero vector is
+\begin{align*}
+\displaystyle \begin{bmatrix}0&amp;0&amp;\cdots&amp;0\\
+0&amp;0&amp;\cdots&amp;0\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+0&amp;0&amp;\cdots&amp;0\end{bmatrix}
+\end{align*}
+Property AI:The inverse of
+\begin{align*}
+\displaystyle \begin{bmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{m1}&amp;a_{m2}&amp;\cdots&amp;a_{mn}\end{bmatrix}
+\end{align*}
+is
+\begin{align*}
+\displaystyle \begin{bmatrix}-a_{11}&amp;-a_{12}&amp;\cdots&amp;-a_{1n}\\
+-a_{21}&amp;-a_{22}&amp;\cdots&amp;-a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+-a_{m1}&amp;-a_{m2}&amp;\cdots&amp;-a_{mn}\end{bmatrix}
+\end{align*}
+You can try proving all other properties. 
+@endcol
+@end
+@eg
+@keyword{The vector space of polynomials, $P_{n}$}
+@newline
+@newcol
+ The set of all polynomials of degree $n$ or less in the variable $x$ with coefficients from ${\mathbb{R}}^{\hbox{}}$,
+denoted by $P_{n}$ is a vector space. <ul class="ltx_itemize">
+<li class="ltx_item"> Vector Addition:
+\begin{align*}
+\displaystyle (a_{0}+a_{1}x+a_{2}x^{2}+\cdots+a_{n}x^{n})+(b_{0}+b_{1}x+b_{2}x^{2}+\cdots+b_{n}x^{n})
+\end{align*}
+\begin{align*}
+\displaystyle =(a_{0}+b_{0})+(a_{1}+b_{1})x+(a_{2}+b_{2})x^{2}+\cdots+(a_{n}+b_{n})x^{n}
+\end{align*} </li>
+<li class="ltx_item"> Scalar Multiplication:
+\begin{align*}
+\displaystyle \alpha(a_{0}+a_{1}x+a_{2}x^{2}+\cdots+a_{n}x^{n})=(\alpha a_{0})+(\alpha a_{1})x+(\alpha a_{2})x^{2}+\cdots+(\alpha a_{n})x^{n}
+\end{align*} </li></ul> This set, with these operations, will fulfill the ten properties, though we will not work all the details here. However, we will make a few comments and prove one of the properties. First, the zero vector (property Z)
+is what you might expect, and you can check that it has the required property.
+\begin{align*}
+\displaystyle \mathbf{0}=0+0x+0x^{2}+\cdots+0x^{n}
+\end{align*}
+The additive inverse (Property AI) is also no surprise, though consider how we have chosen to write it.
+\begin{align*}
+\displaystyle -\left(a_{0}+a_{1}x+a_{2}x^{2}+\cdots+a_{n}x^{n}\right)=(-a_{0})+(-a_{1})x+(-a_{2})x^{2}+\cdots+(-a_{n})x^{n}
+\end{align*}
+Now let us prove the associativity of vector addition (Property AA). This is a bit tedious, though necessary. Throughout, the plus sign ($+$) does triple-duty. You might ask yourself what each plus sign represents as you work through this proof.
+\begin{align*}
+\displaystyle\mathbf{u}+&amp;\displaystyle(\mathbf{v}+\mathbf{w}) \\
+&amp;\displaystyle=(a_{0}+a_{1}x+\cdots+a_{n}x^{n})+\left((b_{0}+b_{1}x+\cdots+b_{n}x^{n})+(c_{0}+c_{1}x+\cdots+c_{n}x^{n})\right) \\
+&amp;\displaystyle=(a_{0}+a_{1}x+\cdots+a_{n}x^{n})+((b_{0}+c_{0})+(b_{1}+c_{1})x+\cdots+(b_{n}+c_{n})x^{n}) \\
+&amp;\displaystyle=(a_{0}+(b_{0}+c_{0}))+(a_{1}+(b_{1}+c_{1}))x+\cdots+(a_{n}+(b_{n}+c_{n}))x^{n} \\
+&amp;\displaystyle=((a_{0}+b_{0})+c_{0})+((a_{1}+b_{1})+c_{1})x+\cdots+((a_{n}+b_{n})+c_{n})x^{n} \\
+&amp;\displaystyle=((a_{0}+b_{0})+(a_{1}+b_{1})x+\cdots+(a_{n}+b_{n})x^{n})+(c_{0}+c_{1}x+\cdots+c_{n}x^{n}) \\
+&amp;\displaystyle=\left((a_{0}+a_{1}x+\cdots+a_{n}x^{n})+(b_{0}+b_{1}x+\cdots+b_{n}x^{n})\right)+(c_{0}+c_{1}x+\cdots+c_{n}x^{n}) \\
+&amp;\displaystyle=(\mathbf{u}+\mathbf{v})+\mathbf{w}
+\end{align*}
+You might try proving all the other properties. 
+@endcol
+@end
+@eg
+@keyword{The vector space of functions}
+@newline
+@newcol
+ Let $F$ be the set of functions for ${\mathbb{R}}^{\hbox{}}$ to ${\mathbb{R}}^{\hbox{}}$
+Equality: $f=g$ if and only if $f(x)=g(x)$ for all $x\in{\mathbb{R}}^{\hbox{}}$. <ul class="ltx_itemize">
+<li class="ltx_item"> Vector Addition: $f+g$ is the function with outputs defined by $(f+g)(x)=f(x)+g(x)$. </li>
+<li class="ltx_item"> Scalar Multiplication: $\alpha f$ is the function with outputs defined by $(\alpha f)(x)=\alpha f(x)$. </li></ul> The zero vector is a function $z$ whose definition is $z(x)=0$ for every input $x\in{\mathbb{R}}^{\hbox{}}$.
+Try proving all the other properties. 
+@endcol
+@end
+@eg
+@keyword{The crazy vector space}
+@newline
+@newcol
+ Let $C=\left\{\left.(x_{1},\,x_{2})\,\right|\,x_{1},\,x_{2}\in{\mathbb{R}}^{\hbox{}}\right\}$. <ol class="ltx_enumerate">
+<li class="ltx_item"> Vector Addition: $(x_{1},\,x_{2})+(y_{1},\,y_{2})=(x_{1}+y_{1}+1,\,x_{2}+y_{2}+1)$. </li>
+<li class="ltx_item"> Scalar Multiplication: $\alpha(x_{1},\,x_{2})=(\alpha x_{1}+\alpha-1,\,\alpha x_{2}+\alpha-1)$. </li></ol> I am free to define my set and my operations any way I please. They may not look natural, or even useful, but we will now verify that they provide us with another example of a vector space. We will check all it satisfies all the definition of vector spaces. <ul class="ltx_itemize">
+<li class="ltx_item">
+<strong>Property AC, SC</strong>
+@newlineThe result of each operation is a pair of complex numbers, so these two closure properties are fulfilled. </li>
+<li class="ltx_item">
+<strong>Property C</strong> \begin{align*}
+\displaystyle\mathbf{u}+\mathbf{v}&amp;\displaystyle=(x_{1},\,x_{2})+(y_{1},\,y_{2})=(x_{1}+y_{1}+1,\,x_{2}+y_{2}+1) \\
+&amp;\displaystyle=(y_{1}+x_{1}+1,\,y_{2}+x_{2}+1)=(y_{1},\,y_{2})+(x_{1},\,x_{2}) \\
+&amp;\displaystyle=\mathbf{v}+\mathbf{u}
+\end{align*} </li>
+<li class="ltx_item">
+<strong>Property AA</strong> \begin{align*}
+\displaystyle\mathbf{u}+(\mathbf{v}+\mathbf{w})&amp;\displaystyle=(x_{1},\,x_{2})+\left((y_{1},\,y_{2})+(z_{1},\,z_{2})\right) \\
+&amp;\displaystyle=(x_{1},\,x_{2})+(y_{1}+z_{1}+1,\,y_{2}+z_{2}+1) \\
+&amp;\displaystyle=(x_{1}+(y_{1}+z_{1}+1)+1,\,x_{2}+(y_{2}+z_{2}+1)+1) \\
+&amp;\displaystyle=(x_{1}+y_{1}+z_{1}+2,\,x_{2}+y_{2}+z_{2}+2) \\
+&amp;\displaystyle=((x_{1}+y_{1}+1)+z_{1}+1,\,(x_{2}+y_{2}+1)+z_{2}+1) \\
+&amp;\displaystyle=(x_{1}+y_{1}+1,\,x_{2}+y_{2}+1)+(z_{1},\,z_{2}) \\
+&amp;\displaystyle=\left((x_{1},\,x_{2})+(y_{1},\,y_{2})\right)+(z_{1},\,z_{2}) \\
+&amp;\displaystyle=\left(\mathbf{u}+\mathbf{v}\right)+\mathbf{w}
+\end{align*} </li>
+<li class="ltx_item">
+<strong>Property Z</strong>
+@newlineThe zero vector is $\mathbf{0}=(-1,\,-1)$ (<strong>not</strong> $(0,0)$)
+\begin{align*}
+\displaystyle \mathbf{u}+\mathbf{0}=(x_{1},\,x_{2})+(-1,\,-1)=(x_{1}+(-1)+1,\,x_{2}+(-1)+1)=(x_{1},\,x_{2})=\mathbf{u}
+\end{align*} </li>
+<li class="ltx_item">
+<strong>Property AI</strong>
+@newlineFor each vector, $\mathbf{u}$, we must locate an additive inverse, $\mathbf{-u}$. Here it is, $-(x_{1},\,x_{2})=(-x_{1}-2,\,-x_{2}-2)$. As odd as it may look, I hope you are withholding judgment. Check:
+\begin{align*}
+\displaystyle\mathbf{u}+(\mathbf{-u})&amp;\displaystyle=(x_{1},\,x_{2})+(-x_{1}-2,\,-x_{2}-2) \\
+&amp;\displaystyle=(x_{1}+(-x_{1}-2)+1,\,-x_{2}+(x_{2}-2)+1)=(-1,\,-1)=\mathbf{0}
+\end{align*} </li>
+<li class="ltx_item">
+<strong>Property SMA</strong> \begin{align*}
+\displaystyle\alpha(\beta\mathbf{u})&amp;\displaystyle=\alpha(\beta(x_{1},\,x_{2})) \\
+&amp;\displaystyle=\alpha(\beta x_{1}+\beta-1,\,\beta x_{2}+\beta-1) \\
+&amp;\displaystyle=(\alpha(\beta x_{1}+\beta-1)+\alpha-1,\,\alpha(\beta x_{2}+\beta-1)+\alpha-1) \\
+&amp;\displaystyle=((\alpha\beta x_{1}+\alpha\beta-\alpha)+\alpha-1,\,(\alpha\beta x_{2}+\alpha\beta-\alpha)+\alpha-1) \\
+&amp;\displaystyle=(\alpha\beta x_{1}+\alpha\beta-1,\,\alpha\beta x_{2}+\alpha\beta-1) \\
+&amp;\displaystyle=(\alpha\beta)(x_{1},\,x_{2}) \\
+&amp;\displaystyle=(\alpha\beta)\mathbf{u}
+\end{align*} </li>
+<li class="ltx_item">
+<strong>Property DVA</strong>
+@newlineIf you have hung on so far, here is where it gets even wilder. In the next two properties we mix and mash the two operations.
+\begin{align*}
+\displaystyle\alpha(\mathbf{u}&amp;\displaystyle+\mathbf{v}) \\
+&amp;\displaystyle=\alpha\left((x_{1},\,x_{2})+(y_{1},\,y_{2})\right) \\
+&amp;\displaystyle=\alpha(x_{1}+y_{1}+1,\,x_{2}+y_{2}+1) \\
+&amp;\displaystyle=(\alpha(x_{1}+y_{1}+1)+\alpha-1,\,\alpha(x_{2}+y_{2}+1)+\alpha-1) \\
+&amp;\displaystyle=(\alpha x_{1}+\alpha y_{1}+\alpha+\alpha-1,\,\alpha x_{2}+\alpha
+y_{2}+\alpha+\alpha-1) \\
+&amp;\displaystyle=(\alpha x_{1}+\alpha-1+\alpha y_{1}+\alpha-1+1,\,\alpha x_{2}+\alpha-1+\alpha y_{2}+\alpha-1+1) \\
+&amp;\displaystyle=((\alpha x_{1}+\alpha-1)+(\alpha y_{1}+\alpha-1)+1,\,(\alpha x_{2}+\alpha-1)+(\alpha y_{2}+\alpha-1)+1) \\
+&amp;\displaystyle=(\alpha x_{1}+\alpha-1,\,\alpha x_{2}+\alpha-1)+(\alpha y_{1}+\alpha-1,\,\alpha y_{2}+\alpha-1) \\
+&amp;\displaystyle=\alpha(x_{1},\,x_{2})+\alpha(y_{1},\,y_{2}) \\
+&amp;\displaystyle=\alpha\mathbf{u}+\alpha\mathbf{v}
+\end{align*} </li>
+<li class="ltx_item">
+<strong>Property DSA</strong> \begin{align*}
+\displaystyle(\alpha&amp;\displaystyle+\beta)\mathbf{u} \\
+&amp;\displaystyle=(\alpha+\beta)(x_{1},\,x_{2}) \\
+&amp;\displaystyle=((\alpha+\beta)x_{1}+(\alpha+\beta)-1,\,(\alpha+\beta)x_{2}+(\alpha+\beta)-1) \\
+&amp;\displaystyle=(\alpha x_{1}+\beta x_{1}+\alpha+\beta-1,\,\alpha x_{2}+\beta x_{2}+\alpha+\beta-1) \\
+&amp;\displaystyle=(\alpha x_{1}+\alpha-1+\beta x_{1}+\beta-1+1,\,\alpha x_{2}+\alpha-1+\beta x_{2}+\beta-1+1) \\
+&amp;\displaystyle=((\alpha x_{1}+\alpha-1)+(\beta x_{1}+\beta-1)+1,\,(\alpha x_{2}+\alpha-1)+(\beta x_{2}+\beta-1)+1) \\
+&amp;\displaystyle=(\alpha x_{1}+\alpha-1,\,\alpha x_{2}+\alpha-1)+(\beta x_{1}+\beta-1,\,\beta x_{2}+\beta-1) \\
+&amp;\displaystyle=\alpha(x_{1},\,x_{2})+\beta(x_{1},\,x_{2}) \\
+&amp;\displaystyle=\alpha\mathbf{u}+\beta\mathbf{u}
+\end{align*} </li>
+<li class="ltx_item">
+<strong>Property O</strong>
+@newlineAfter all that, this one is easy, but no less pleasing.
+\begin{align*}
+\displaystyle 1\mathbf{u}=1(x_{1},\,x_{2})=(x_{1}+1-1,\,x_{2}+1-1)=(x_{1},\,x_{2})=\mathbf{u}
+\end{align*} </li></ul> That is it, $C$ is a vector space, as crazy as that may seem.
+Notice that in the case of the zero vector and additive inverses, we only had to propose possibilities and then verify that they were the correct choices. You might try to discover how you would arrive at these choices, though you should understand why the process of discovering them is not a necessary component of the proof itself. 
+@endcol
+@end
+@section{Basic Properties of Vector Spaces}
+<strong>For math major only. Non-math major can skip the rest of this section. The material will not appear in the midterms or final</strong>
+@thm
+@title{Cancellation Law for Vector Addition}
+@label{cancell}
+ if $\mathbf{v}$, $\mathbf{u}$ and $\mathbf{w}$ are vectors in a vector space $V$ such that
+\begin{align*}
+\displaystyle \mathbf{v}+\mathbf{w}=\mathbf{u}+\mathbf{w},
+\end{align*}
+then $\mathbf{v}=\mathbf{u}$ 
+@end
+@proof
+ By Property AI, there exists a vector $-\mathbf{w}$ such that $\mathbf{w}+(-\mathbf{w})=\mathbf{0}$.
+Thus,
+\begin{align*}
+\displaystyle (\mathbf{v}+\mathbf{w})+(-\mathbf{w})&amp;=(\mathbf{u}+\mathbf{w})+(-\mathbf{w})\\
+\displaystyle \mathbf{v}+(\mathbf{w}+(-\mathbf{w}))&amp;=\mathbf{u}+(\mathbf{w}+(-\mathbf{w}))&amp;\text{Property AA}\\
+\displaystyle \mathbf{v}+\mathbf{0}&amp;=\mathbf{u}+\mathbf{0}&amp;\text{Property AI}\\
+\displaystyle \mathbf{v}&amp;=\mathbf{u}&amp;\text{Property Z}.
+\end{align*}
+@newline
+@qed
+@end
+@thm
+@title{Uniqueness of the zero vector}
+ Let $V$ be a vector space.
+The vector $\mathbf{0}$ described in Property Z is unique. 
+@end
+@proof
+ Suppose both $\mathbf{0}_{1}$ and $\mathbf{0}_{2}$ satisfy the property described in Property Z.
+Let $\mathbf{w}$ be an element in $V$.
+\begin{align*}
+\displaystyle \mathbf{0}_{1}+\mathbf{w}=\mathbf{w}=\mathbf{0}_{2}+\mathbf{w}\hskip 28.452756pt\text{Property Z}
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{0}_{1}=\mathbf{0}_{2}\hskip 28.452756pt\text{by the previous theorem}
+\end{align*}
+@newline
+@qed
+@end
+@thm
+@title{Uniqueness of the additive inverse}
+@label{invunique}
+ Let $V$ be a vector space and $\mathbf{v},\mathbf{u},\mathbf{w}$ are vectors of $V$. If
+both $\mathbf{v}$ and $\mathbf{u}$ satisfies
+\begin{align*}
+\displaystyle \mathbf{v}+\mathbf{w}=\mathbf{0},
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{u}+\mathbf{w}=\mathbf{0},
+\end{align*}
+i.e., both $\mathbf{u}$ and $\mathbf{v}$ are additive inverse of $\mathbf{w}$ in Property AI, then
+\begin{align*}
+\displaystyle \mathbf{v}=\mathbf{u}.
+\end{align*}
+This shows that the additive inverse is unique. 
+@end
+@proof
+ \begin{align*}
+\displaystyle \mathbf{v}+\mathbf{w}=\mathbf{0}=\mathbf{u}+\mathbf{w}.
+\end{align*}
+By @ref{cancell},
+\begin{align*}
+\displaystyle \mathbf{v}=\mathbf{u}.
+\end{align*}
+@newline
+@qed
+@end
+@thm
+ Let $V$ be a vector space, $\alpha$ a real number, $\mathbf{v}$ a vector in $V$. We have the following statement. <ol class="ltx_enumerate">
+<li class="ltx_item"> $0\mathbf{v}=\mathbf{0}$ . </li>
+<li class="ltx_item"> $a\mathbf{0}=\mathbf{0}$. </li>
+<li class="ltx_item"> $(-\alpha)\mathbf{v}=-(\alpha\mathbf{v})=\alpha(-\mathbf{v})$. </li></ol>
+@end
+@proof
+<ol class="ltx_enumerate">
+<li class="ltx_item"> \begin{align*}
+\displaystyle 0\mathbf{v}+0\mathbf{v}&amp;=(0+0)\mathbf{v} &amp; \text{Property DSA}\\
+\displaystyle 0\mathbf{v}+0\mathbf{v}=0\mathbf{v}&amp;=\mathbf{0}+0\mathbf{v} &amp; \text{Property Z}
+\end{align*}
+Hence,
+\[
+\displaystyle 0\mathbf{v}=\mathbf{0},
+\]
+by @ref{cancell}. </li>
+<li class="ltx_item">
+<br/> \begin{align*}
+\displaystyle\alpha\mathbf{0}+a\mathbf{0}&amp;\displaystyle=\alpha(\mathbf{0}+\mathbf{0}) &amp; \text{Property DVA} \\
+&amp;\displaystyle=\alpha\mathbf{0} &amp; \text{Property Z} \\
+&amp;\displaystyle=\mathbf{0}+\alpha\mathbf{0} &amp; \text{Property Z}
+\end{align*}
+By @ref{cancell},
+\begin{align*}
+\displaystyle \alpha\mathbf{0}=\mathbf{0}
+\end{align*} </li>
+<li class="ltx_item"> \begin{align*}
+\displaystyle\alpha\mathbf{v}+(-\alpha)\mathbf{v}&amp;\displaystyle=(\alpha+(-\alpha))\mathbf{v}&amp;\text{Property DSA}. \\
+&amp;\displaystyle=0\mathbf{v}&amp; \\
+&amp;\displaystyle=\mathbf{0}&amp;\text{item 1}
+\end{align*}
+By Property AI and the uniqueness of the additive inverse (@ref{invunique}),
+\begin{align*}
+\displaystyle (-\alpha)\mathbf{v}=-\alpha\mathbf{v}.
+\end{align*}
+Next
+\begin{align*}
+\displaystyle\alpha\mathbf{v}+\alpha(-\mathbf{v})&amp;\displaystyle=\alpha(\mathbf{v}+(-\mathbf{v})) &amp; \text{Property DVA}. \\
+&amp;\displaystyle=\alpha\mathbf{0} &amp; \text{Property AI} \\
+&amp;\displaystyle=\mathbf{0} &amp; \text{item 2}
+\end{align*}
+By Property AI and the uniqueness of the additive inverse (@ref{invunique}),
+\begin{align*}
+\displaystyle \alpha(-\mathbf{v})=-\alpha\mathbf{v}.
+\end{align*} </li></ol>
+@newline
+@qed
+@end
+@section{Subspaces}
+@defn
+@label{subdef}
+ Let $V$ be vector space.
+A subset $W$ of $V$ is said to be a @keyword{subspace} of $V$ if <ol class="ltx_enumerate">
+<li class="ltx_item"> $W$ is nonempty. </li>
+<li class="ltx_item"> For $\mathbf{v},\mathbf{w}\in W$, then $\mathbf{v}+\mathbf{w}\in W$. </li>
+<li class="ltx_item"> For $\alpha\in\mathbf{R}$, $\mathbf{v}\in W$, then $\alpha\mathbf{v}\in W$. </li></ol>
+@end
+@slide
+ We will prove several theorem first before we give examples. 
+@prop
+@label{0}
+ Let $V$ be a vector space and $W$ a subspace of $V$.
+Then $\mathbf{0}$
+is in $W$. 
+@end
+@proof
+@newcol
+ By @ref{subdef}, Condition 1, $W$ is nonempty. Let $\mathbf{w}\in W$.
+By @ref{subdef}, Condition 3, with $\alpha=0$,
+$0\mathbf{w}\in W$.
+On the other hand, by @ref{1d82a47b16369aec09ebc36c7afbd598}, $0\mathbf{w} = \mathbf{0}$.
+Hence, the zero vector $\mathbf{0}$ lies in $W$. 
+@qed
+@endcol
+@end
+@thm
+@label{subdef2}
+@newcol
+ Let $V$ be a vector space
+and $W$ a subset of $V$,
+then $W$ is a subspace if and only if <ol class="ltx_enumerate">
+<li class="ltx_item"> $W$ is nonempty. </li>
+<li class="ltx_item"> For any $\alpha\in\mathbf{R}$, $\mathbf{v},\mathbf{w}\in W$, $\alpha\mathbf{v}+\mathbf{w}\in W$. </li></ol>
+@endcol
+@end
+@proof
+@newline
+($\Rightarrow$) 
+@newcol
+ By @ref{subdef}, Condition 1, $W$ is nonempty. Next, for $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{w}\in W$.
+By @ref{subdef}, Condition 3, $\alpha\mathbf{v}\in W$.
+By @ref{subdef}, Condition 2, $\alpha\mathbf{v}+\mathbf{w}\in W$. 
+@endcol
+@newline($\Leftarrow$) 
+@newcol
+ By Condition 1, @ref{subdef}, Condition 1 is true.
+Because $W$ is nonempty, let $\mathbf{x}\in W$. Let $\mathbf{v}=\mathbf{w}=\mathbf{x}$ and $\alpha=-1$.
+Then by condition 2, $(-1)\mathbf{w}+\mathbf{w}=\mathbf{0}\in W.$
+@newline
+@col
+ Now we want to check @ref{subdef} Condition 2, suppose $\mathbf{v},\mathbf{w}\in W$.
+In condition 2, let $\alpha=1$, then $\mathbf{v}+\mathbf{w}=\alpha\mathbf{v}+\mathbf{w}\in W$.
+@newline
+@col
+ Next we want to check @ref{subdef} Condition 3, suppose $\mathbf{v}\in W$, $\alpha\in{\mathbb{R}}^{\hbox{}}$.
+Let $\mathbf{w}=\mathbf{0}$, then $\alpha\mathbf{v}=\alpha\mathbf{v}+\mathbf{w}\in W$. 
+@qed
+@endcol
+@end
+@section{Examples}
+@eg
+ Let $V = \mathbb{R}^3$.  Let:
+\[
+W = \left\{\left.\colvector{w_1\\0\\w_3} \;\right| \;w_1, w_3 \in \mathbb{R}\right\}.
+\]
+We now show that $W$ is a subspace of $V$:
+@newline
+@newcol
+@ol
+@li
+ Clearly, $\colvector{0\\0\\0}$ lies in $W$, hence $W$ is nonempty. 
+@li
+ Given any $\vec{v}$ and $\vec{w}$ in $W$, by definition of $W$ we have:
+\[
+\vec{v} = \colvector{v_1\\0\\v_3},\quad \vec{w} = \colvector{w_1\\0\\w_3},
+\quad v_1,v_2,w_1,w_3 \in \mathbb{R}.
+\]
+Hence,
+\[
+\vec{v} + \vec{w} = \colvector{v_1 + w_1\\0 + 0\\v_3 + w_3}
+= \colvector{v_1 + w_1\\0\\v_3 + w_3} \in W.
+\] 
+@li
+ Given any $\alpha \in \mathbb{R}$ and $\vec{w}$ in $W$, by definition of $W$ we have:
+\[
+\vec{w} = \colvector{w_1\\0\\w_3}, \quad w_1,w_3 \in \mathbb{R}.
+\]
+Hence,
+\[
+\alpha\vec{w} = \colvector{\alpha w_1\\\alpha \cdot 0\\\alpha w_3}
+= \colvector{\alpha w_1\\0\\\alpha w_3} \in W.
+\] 
+@endol
+@endcol
+@end
+@eg
+ $V = \mathbb{R}^3$.
+\[
+W = \left\{\left.\colvector{x\\y\\z} \in \mathbb{R}^3 \,\right|\, x + 2y + 3z = 0
+\right\}
+\] 
+@end
+@newline
+@slide
+@thm
+@label{thm:nullspacesubspace}
+ Let $A\in M_{mn}$, then $W=\nsp{A}$ is a subspace of $\mathbb{R}^n$. 
+@end
+@newline
+@proof
+@newcol
+ Because $\vect 0 \in \nsp{A}$, so $W$ is nonempty.
+@newline
+@col
+ For $\alpha \in \mathbb{R}$, $\vect v, \vect w \in W$.
+Then
+\[ A \vect v = \vect 0, \qquad A \vect w = \vect 0. \] 
+@col
+ Then
+\[ A(\alpha \vect v + \vect w) = \alpha A \vect v + A \vect w = \alpha \vect 0 + \vect 0 = \vect 0. \] 
+@col
+ So
+\[ \alpha \vect v + \vect w \in \nsp{A}. \]
+Thus by @ref{subdef2}, $W=\nsp{A}$ is a subspace. 
+@qed
+@endcol
+@end
+@newline
+@slide
+@eg
+<strong>Skip for now, until you learn the definition of column space.</strong>
+@newcol
+ Let $A\in M_{mn}$, then $\mathcal{C}\!\left(A\right)$ is a subspace of ${\mathbb{R}}^{m}$. 
+@endcol
+@end
+@proof
+@newcol
+ $\mathcal{C}\!\left(A\right)=\left&lt;\{\mathbf{A}_{1},\ldots,\mathbf{A}_{n}\}\right&gt;$. So by the previous theorem, $\mathcal{C}\!\left(A\right)$ is a subspace of ${\mathbb{R}}^{m}$. @keyword{Alternate proof}: Suppose For $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{w}\in W=\mathcal{C}\!\left(A\right)$.
+Recall
+\begin{align*}
+\displaystyle \mathcal{C}\!\left(A\right)=\{A\mathbf{x}\,|\,x\in{\mathbb{R}}^{m}\}.
+\end{align*}
+Then there exist $\mathbf{x},\mathbf{y}$ such that $A\mathbf{x}=\mathbf{v}$, $A\mathbf{y}=\mathbf{w}$.
+\begin{align*}
+\displaystyle \alpha\mathbf{v}+\mathbf{w}=\alpha A\mathbf{x}+A\mathbf{y}=A(\alpha\mathbf{x}+\mathbf{y})\in\mathcal{C}\!\left(A\right).
+\end{align*}
+Thus by @ref{subdef2}, $W$ is a subspace. 
+@qed
+@endcol
+@end
+@eg
+<strong>For math majors only</strong>
+@newline
+@newcol
+ Let $S_{n}$ be the set of symmetric matrices of $M_{nn}$.
+Then $S_{n}$ is a subspace of $M_{nn}$. Check that $W=S_{n}$ is a subspace: Because ${\cal O}\in W$, so $W$ is nonempty. Suppose $\alpha\in{\mathbb{R}}^{\hbox{}}$, $A,B\in W$. Then $A^{t}=A$, $B^{t}=B$.
+\begin{align*}
+\displaystyle (\alpha A+B)^{t}=\alpha A^{t}+B^{t}=\alpha A+B.
+\end{align*}
+Thus $\alpha A+B\in S_{n}$. Hence $S_{n}$ is a subspace by @ref{subdef2}. 
+@endcol
+@end
+@eg
+<strong>For math majors only</strong>
+@newline
+@newcol
+ Let
+\begin{align*}
+\displaystyle F=\{f(x)\in P_{n}\,|\,f(1)=0\}.
+\end{align*}
+Then $F$ is a subspace of $P_{n}$ Because $0\in E$, so $E$ is nonempty. Suppose $\alpha\in{\mathbb{R}}^{\hbox{}}$, $f(x),g(x)\in E$. Then $f(1)=g(1)=0$.
+Let $h=\alpha f+g$. Then
+\begin{align*}
+\displaystyle h(1)=\alpha f(1)+g(1)=\alpha 0+0=0.
+\end{align*}
+So $h\in F$. Hence $F$ is a subspace by @ref{subdef2}. 
+@endcol
+@end
+@eg
+<strong>For math majors only</strong>
+@newline
+@newcol
+ Let
+\begin{align*}
+\displaystyle E=\{f(x)\in P_{n}\,|\,f(x)=f(-x)\}.
+\end{align*}
+Then $E$ is a subspace of $P_{n}$: Because $0\in E$, so $E$ is nonempty. Suppose $\alpha\in{\mathbb{R}}^{\hbox{}}$, $f(x),g(x)\in E$. Then $f(x)=f(-x)$, $g(x)=g(-x)$.
+Let $h=\alpha f+g$. Then
+\begin{align*}
+\displaystyle h(-x)=\alpha f(-x)+g(-x)=\alpha f(x)+g(x)=h(x).
+\end{align*}
+So $h\in E$. Hence $E$ is a subspace. 
+@endcol
+@end
+@section{Non-Examples}
+ To show that $W$ is <strong>not</strong> a subspace of $V$, it suffices to show that it violates @ref{subdef} condition 1 or condition 2.
+This can be done by finding counter examples to either condition. Usually before checking those conditions, we quickly check if $\mathbf{0}_{V}\in W$
+(see @ref{0}). 
+@eg
+@newcol
+ $V={\mathbb{R}}^{m}$, $W=\{\mathbf{v}\in V\,|\,[\mathbf{v}]_{1}=1\}$.
+@newline<strong>Method 1</strong> Obviously $\mathbf{0}$ is not in $W$. So by @ref{0}, $W$ is not a subspace.
+@newline<strong>Method 2</strong> For Suppose $\mathbf{v},\mathbf{w}\in W$.
+Then $[\mathbf{v}+\mathbf{w}]_{1}=[\mathbf{v}]_{1}+[\mathbf{w}]_{1}=2$.
+So $\mathbf{v}+\mathbf{w}\not\in W$. So $W$ violates @ref{subdef} condition 1 and hence not a subspace. 
+@endcol
+@end
+@eg
+@newcol
+ $V={\mathbb{R}}^{m}$, $W=\{\mathbf{v}\in V\,|\,\sum_{i=1}^{n}[\mathbf{v}]_{i}=1\}$.
+@newline<strong>Method 1</strong> (the easiest method) Obviously $\mathbf{0}$ is not in $W$. So by @ref{0}, $W$ is not a subspace.
+@newline<strong>Method 2</strong> We will find an explicit counter example, let
+\begin{align*}
+\displaystyle \mathbf{v}=\mathbf{w}=\begin{bmatrix}1\\
+0\\
+\vdots\\
+0\end{bmatrix}.
+\end{align*}
+Then both $\mathbf{v}$ and $\mathbf{w}$ are in $W$.
+\begin{align*}
+\displaystyle \mathbf{v}+\mathbf{w}=\begin{bmatrix}2\\
+0\\
+\vdots\\
+0\end{bmatrix}.
+\end{align*}
+Obvious $\mathbf{v}+\mathbf{w}\notin W$.
+Therefore $W$ violates @ref{subdef} condition 1 and hence not a subspace. 
+@endcol
+@end
+@eg
+@newcol
+ $V=\mathbf{R}^{n}$, $W=\{\mathbf{v}\in V\,|\,[\mathbf{v}]_{1}\geq 0\}$. Let $\alpha=-1$ and
+\begin{align*}
+\displaystyle \mathbf{v}=\begin{bmatrix}1\\
+0\end{bmatrix}.
+\end{align*}
+Then $[\alpha\mathbf{v}]_{1}=\alpha[\mathbf{v}]_{1}=\alpha=-1&lt;0$.
+So $\alpha\mathbf{v}\notin W$.
+Thus $W$ violates @ref{subdef} condition 3 and hence not a subspace. 
+@endcol
+@end
+@eg
+@newcol
+ $V={\mathbb{R}}^{2}$,
+$W=\{\begin{bmatrix}v_{1}\\
+v_{2}\end{bmatrix}\in V\,|\,v_{1}v_{2}\geq 0\}$. Let $\mathbf{v}=\begin{bmatrix}1\\
+0\end{bmatrix}$ , $\mathbf{w}=\begin{bmatrix}0\\
+-1\end{bmatrix}\in W$.
+$\mathbf{v}+\mathbf{w}=\begin{bmatrix}1\\
+-1\end{bmatrix}$. Because
+$1\times(-1)=-1 &lt; 0$. So $\mathbf{v}+\mathbf{w}\notin W$.
+Thus $W$ violates @ref{subdef} condition 2 and hence not a subspace. In fact, we can show that $W$ satisfies @ref{subdef} condition 3 but fails condition 2. 
+@endcol
+@end
+@eg
+<strong>For math majors only</strong>
+@newline
+@newcol
+ Let $V=P_{n}$. Let $G$ be the set of polynomial with degree exactly equal to $n$. Let $f(x)=x^{n}$, $g(x)=-x^{n}+1$. Both $f$ and $g$ have degree exactly equal to $n$.
+But
+\begin{align*}
+\displaystyle f(x)+g(x)=1
+\end{align*}
+is a polynomial with degree $0$. So $f+g$ is not in $G$. Thus $W$ violates @ref{subdef} condition 2 and hence not a subspace. 
+@endcol
+@end
+<!--DELIMITER-->

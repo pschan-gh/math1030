@@ -1,1191 +1,745 @@
-@course{Math 1030}
-@setchapter{10}
-@chapter{Linear Combinations}
-<h5 class="notkw">Reference.</h5>
-Beezer, Ver 3.5 Section LC (print version p65 - p81)Strang: Section 2.3
+@course{MATH 1030}
+@chapter{Spanning Sets}
+@newline
+<h5 class="notkw">Reference.</h5><ul>
+<li> Beezer, Ver 3.5 Section SS (print version p83 - p94) </li>
+<li> Strang, Sect 2.3 </li></ul>
+@newline<h5 class="notkw">Exercise.</h5><ul>
+<li> Exercises with solutions can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf} Section SS (p.34-40) C40-45, C50, C60, M10, M11, M12. (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$ in the following questions) T10, T20, T21, T22. </li>
+<li> Strang, Sect 2.3. </li></ul>
+@slide
+ In this section we will provide an extremely compact way to describe an infinite set of vectors, making use of linear combinations. This will give us a convenient way to describe the solution set of a linear system, the null space of a matrix, and many other sets of vectors. 
+@section{Span of a Set of Vectors}
+@label{SSV}
+&lt;!--
+We saw that the solution set of a homogeneous system can be described as all possible linear combinations of two particular sets of vectors. This is a useful way to construct or describe infinite sets of vectors, so we encapsulate the idea in a definition.
+--&gt;
 
-<h5 class="notkw">Exercise.</h5>
-Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf
-
-Section LC (p.32-33) C40, C41, M10, M11
-@section{Linear Combinations}
-@label{LC}
 @defn
-@title{Linear Combination of Column Vectors}
-@label{LCCV}
-Given $n$ vectors $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}$ in ${\mathbb{R}}^{m}$
-and $n$ scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\ldots,\,\alpha_{n}$,
-their @keyword{linear combination} is the vector:
+@title{Span of a Set of Column Vectors}
+@label{SSCV}
+ Given a set of vectors
 \begin{align*}
-\displaystyle \alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}+\cdots+\alpha_{n}\mathbf{u}_{n}
+\displaystyle S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\},
 \end{align*}
-in $\mathbb{R}^{m}$.
-@end
-@eg
-@label{TLC}
-<strong>Two linear combinations in ${\mathbb{R}}^{6}$</strong>
-
-@newcol
-Suppose that:
-\[
-\alpha_{1}=1 \quad \alpha_{2}=-4 \quad \alpha_{3}=2 \quad \alpha_{4}=-1
-\]
-and
+their @keyword{span}, $\left&lt; S \right&gt;$, is the set of all linear combinations of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}$.
+Symbolically,
 \begin{align*}
-\displaystyle\mathbf{u}_{1}&\displaystyle=\begin{bmatrix}2\\
-4\\
--3\\
-1\\
-2\\
-9\end{bmatrix}&\displaystyle\mathbf{u}_{2}&\displaystyle=\begin{bmatrix}6\\
-3\\
-0\\
--2\\
-1\\
-4\end{bmatrix}&\displaystyle\mathbf{u}_{3}&\displaystyle=\begin{bmatrix}-5\\
-2\\
-1\\
-1\\
--3\\
-0\end{bmatrix}&\displaystyle\mathbf{u}_{4}&\displaystyle=\begin{bmatrix}3\\
-2\\
--5\\
-7\\
-1\\
-3\end{bmatrix}.
-\end{align*}
-The resulting linear combination is:
-
-@col
-@steps
-\begin{multline*}
-\displaystyle\alpha_{1}\mathbf{u_{1}}+\alpha_{2}\mathbf{u_{2}}+\alpha_{3}\mathbf{u_{3}}+\alpha_{4}\mathbf{u_{4}}
-\\
-@nstep{=
-(1)\begin{bmatrix}2\\
-4\\
--3\\
-1\\
-2\\
-9\end{bmatrix}+(-4)\begin{bmatrix}6\\
-3\\
-0\\
--2\\
-1\\
-4\end{bmatrix}+(2)\begin{bmatrix}-5\\
-2\\
-1\\
-1\\
--3\\
-0\end{bmatrix}+(-1)\begin{bmatrix}3\\
-2\\
--5\\
-7\\
-1\\
-3\end{bmatrix}}
-\\
-@nstep{=
-\begin{bmatrix}2\\
-4\\
--3\\
-1\\
-2\\
-9\end{bmatrix}+\begin{bmatrix}-24\\
--12\\
-0\\
-8\\
--4\\
--16\end{bmatrix}+\begin{bmatrix}-10\\
-4\\
-2\\
-2\\
--6\\
-0\end{bmatrix}+\begin{bmatrix}-3\\
--2\\
-5\\
--7\\
--1\\
--3\end{bmatrix}}@nstep{=
-\begin{bmatrix}-35\\
--6\\
-4\\
-4\\
--9\\
--10\end{bmatrix}}
-\end{multline*}
-@endsteps
-
-@col
-A different linear combination, but with the same set of vectors, can be formed with different scalars. Taking
-\[
-\displaystyle\beta_{1}=3 \quad \beta_{2}=0 \quad \beta_{3}=5 \quad \beta_{4}=-1
-\]
-we can form the linear combination:
-@steps
-\begin{multline*}
-\displaystyle\beta_{1}\mathbf{u_{1}}+\beta_{2}\mathbf{u_{2}}+\beta_{3}\mathbf{u_{3}}+\beta_{4}\mathbf{u_{4}}
-\\
-@nstep{=(3)\begin{bmatrix}2\\
-4\\
--3\\
-1\\
-2\\
-9\end{bmatrix}+(0)\begin{bmatrix}6\\
-3\\
-0\\
--2\\
-1\\
-4\end{bmatrix}+(5)\begin{bmatrix}-5\\
-2\\
-1\\
-1\\
--3\\
-0\end{bmatrix}+(-1)\begin{bmatrix}3\\
-2\\
--5\\
-7\\
-1\\
-3\end{bmatrix}}
-\\
-@nstep{=\begin{bmatrix}6\\
-12\\
--9\\
-3\\
-6\\
-27\end{bmatrix}+\begin{bmatrix}0\\
-0\\
-0\\
-0\\
-0\\
-0\end{bmatrix}+\begin{bmatrix}-25\\
-10\\
-5\\
-5\\
--15\\
-0\end{bmatrix}+\begin{bmatrix}-3\\
--2\\
-5\\
--7\\
--1\\
--3\end{bmatrix}}@nstep{=\begin{bmatrix}-22\\
-20\\
-1\\
-1\\
--10\\
-24\end{bmatrix}.}
-\end{multline*}
-@endsteps
-@col
-Notice how we could keep our set of vectors fixed but use a different set of scalars to construct different vectors.
-Can you create the following vector $\mathbf{w}$ with a suitable choice of four scalars?
-\begin{align*}
-\displaystyle \mathbf{w}=\begin{bmatrix}13\\
-15\\
-5\\
--17\\
-2\\
-25\end{bmatrix}
-\end{align*}
-@col
-Going further, can you create any possible vector from ${\mathbb{R}}^{6}$ by choosing the proper scalars?
-@endcol
-@end
-@slide
-@eg
-The system of linear equation:
-\begin{align*}
-\displaystyle-7x_{1}-6x_{2}-12x_{3}&\displaystyle=-33 \\
-\displaystyle 5x_{1}+5x_{2}+7x_{3}&\displaystyle=24 \\
-\displaystyle x_{1}+4x_{3}&\displaystyle=5
-\end{align*}
-
-or equivalently
-\begin{align*}
-\displaystyle \begin{bmatrix}-7x_{1}-6x_{2}-12x_{3}\\
-5x_{1}+5x_{2}+7x_{3}\\
-x_{1}+4x_{3}\end{bmatrix}=\begin{bmatrix}-33\\
-24\\
-5\end{bmatrix},
-\end{align*}
-
-can be rewritten as:
-
-@newcol
-\begin{align*}
-\displaystyle \begin{bmatrix}-7x_{1}\\
-5x_{1}\\
-x_{1}\end{bmatrix}+\begin{bmatrix}-6x_{2}\\
-5x_{2}\\
-0x_{2}\end{bmatrix}+\begin{bmatrix}-12x_{3}\\
-7x_{3}\\
-4x_{3}\end{bmatrix}=\begin{bmatrix}-33\\
-24\\
-5\end{bmatrix}
-\end{align*}
-or:
-
-@col
-\begin{align*}
-\displaystyle x_{1}\begin{bmatrix}-7\\
-5\\
-1\end{bmatrix}+x_{2}\begin{bmatrix}-6\\
-5\\
-0\end{bmatrix}+x_{3}\begin{bmatrix}-12\\
-7\\
-4\end{bmatrix}=\begin{bmatrix}-33\\
-24\\
-5\end{bmatrix}.
-\end{align*}
-
-The solution is:
-
-@col
-\[
-x_{1}=-3 \quad x_{2}=5 \quad x_{3}=2.
-\]
-@col
-So, in the context of this example, we can express the fact that these values of the variables are a solution by writing a linear combination:
-\begin{align*}
-\displaystyle (-3)\begin{bmatrix}-7\\
-5\\
-1\end{bmatrix}+(5)\begin{bmatrix}-6\\
-5\\
-0\end{bmatrix}+(2)\begin{bmatrix}-12\\
-7\\
-4\end{bmatrix}=\begin{bmatrix}-33\\
-24\\
-5\end{bmatrix}
-\end{align*}
-@col
-Furthermore, these are the only three scalars that will accomplish this equality, since they come from a unique solution.
-
-@col
-Notice how the three vectors in this example are the columns of the coefficient matrix of the system of equations. This is our first hint of the important interplay between the vectors that form the columns of a matrix, and the matrix itself.
-@endcol
-@end
-@slide
-@eg
-@skip
-The system of linear equations
-\begin{align*}
-\displaystyle x_{1}-x_{2}+2x_{3}&\displaystyle=1 \\
-\displaystyle 2x_{1}+x_{2}+x_{3}&\displaystyle=8 \\
-\displaystyle x_{1}+x_{2}&\displaystyle=5
-\end{align*}
-can be written as:
-
-@newcol
-\begin{align*}
-\displaystyle \begin{bmatrix}x_{1}-x_{2}+2x_{3}\\
-2x_{1}+x_{2}+x_{3}\\
-x_{1}+x_{2}\end{bmatrix}=\begin{bmatrix}1\\
-8\\
-5\end{bmatrix}.
-\end{align*}
-This vector equation is equivalent to:
-
-@col
-\begin{align*}
-\displaystyle x_{1}\begin{bmatrix}1\\
-2\\
-1\end{bmatrix}+x_{2}\begin{bmatrix}-1\\
-1\\
-1\end{bmatrix}+x_{3}\begin{bmatrix}2\\
-1\\
-0\end{bmatrix}=\begin{bmatrix}1\\
-8\\
-5\end{bmatrix}.
-\end{align*}
-
-@col
-Row-reducing the augmented matrix for the system leads to the conclusion that the system is consistent and has free variables, hence infinitely many solutions. So for example, the two solutions:
-\begin{eqnarray*}
-x_{1}&=2 &\quad& x_{2}=3 &\quad& x_{3}&=1 \\
-x_{1}&=3 &\quad& x_{2}=2 &\quad& x_{3}&=0
-\end{eqnarray*}
-can be used together to say that:
-
-@col
-\begin{align*}
-\displaystyle (2)\begin{bmatrix}1\\
-2\\
-1\end{bmatrix}+(3)\begin{bmatrix}-1\\
-1\\
-1\end{bmatrix}+(1)\begin{bmatrix}2\\
-1\\
-0\end{bmatrix}=\begin{bmatrix}1\\
-8\\
-5\end{bmatrix}=(3)\begin{bmatrix}1\\
-2\\
-1\end{bmatrix}+(2)\begin{bmatrix}-1\\
-1\\
-1\end{bmatrix}+(0)\begin{bmatrix}2\\
-1\\
-0\end{bmatrix}.
-\end{align*}
-
-@col
-Ignore the middle of this equation, and move all the terms to the left-hand side:
-\begin{align*}
-\displaystyle (2)\begin{bmatrix}1\\
-2\\
-1\end{bmatrix}+(3)\begin{bmatrix}-1\\
-1\\
-1\end{bmatrix}+(1)\begin{bmatrix}2\\
-1\\
-0\end{bmatrix}+(-3)\begin{bmatrix}1\\
-2\\
-1\end{bmatrix}+(-2)\begin{bmatrix}-1\\
-1\\
-1\end{bmatrix}+(-0)\begin{bmatrix}2\\
-1\\
-0\end{bmatrix}=\begin{bmatrix}0\\
-0\\
-0\end{bmatrix}.
-\end{align*}
-
-@col
-Regrouping gives:
-\begin{align*}
-\displaystyle (-1)\begin{bmatrix}1\\
-2\\
-1\end{bmatrix}+(1)\begin{bmatrix}-1\\
-1\\
-1\end{bmatrix}+(1)\begin{bmatrix}2\\
-1\\
-0\end{bmatrix}=\begin{bmatrix}0\\
-0\\
-0\end{bmatrix}.
-\end{align*}
-
-@col
-Notice that the three vectors on the left hand side are the columns of the coefficient matrix for the system of equations. This equality says that there is a linear combination of those columns that equals the vector of all zeros. Give it some thought, but this says that:
-\begin{eqnarray*}
-\displaystyle x_{1}=-1&\quad&\displaystyle x_{2}=1&\quad&\displaystyle x_{3}=1
-\end{eqnarray*}
-is a nontrivial solution to the homogeneous system of equations with the coefficient matrix of the original system. In particular, this demonstrates that this coefficient matrix is singular.
-@endcol
+\displaystyle
+\left&lt; S \right&gt;&amp;\displaystyle=\left\{\left.\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}+\cdots+\alpha_{n}\mathbf{u}_{n}\,\right|\,\alpha_{i}\in{\mathbb{R}}^{\hbox{}},\,1\leq i\leq n\right\} \\
+&amp;\displaystyle=\left\{\left.\sum_{i=1}^{n}\alpha_{i}\mathbf{u}_{i}\,\right|\,\alpha_{i}\in{\mathbb{R}}^{\hbox{}},\,1\leq i\leq n\right\}
+\end{align*} 
 @end
 @slide
 @thm
-@title{Solutions to Linear Systems are Linear Combinations}
-@label{SLSLC}
-Denote the columns of the $m\times n$ matrix $A$ as vectors $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$. Then $\mathbf{x}\in{\mathbb{R}}^{n}$ is a solution to the linear system of equations $\mathcal{LS}({A},{\mathbf{b}})$ if and only if $\mathbf{b}$ is equal to the linear combination of the columns of $A$ formed with the entries of $\mathbf{x}$,
-\begin{align*}
-\displaystyle \left[\mathbf{x}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{x}\right]_{2}\mathbf{A}_{2}+\left[\mathbf{x}\right]_{3}\mathbf{A}_{3}+\cdots+\left[\mathbf{x}\right]_{n}\mathbf{A}_{n}=\mathbf{b}
-\end{align*}
+ Let $S=\{\mathbf{u}_{1},\ldots,\mathbf{u}_{k}\}\subseteq V={\mathbb{R}}^{m}$.
+Then $\left&lt; S \right&gt;$ is a subspace of $V$. 
 @end
 @proof
 @newcol
-If $\mathbf{x}\in{\mathbb{R}}^{n}$ is a solution of $\mathcal{LS}({A},{\mathbf{b}})$, then
+ Obviously $\left&lt; S \right&gt;$ is nonempty. Let $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{w}\in W=\left&lt; S \right&gt;$.
+Then there exists $\alpha_{1},\ldots,\alpha_{k},\beta_{1},\ldots,\beta_{k}$ such that
 \begin{align*}
-\displaystyle \mathbf{b}=A\mathbf{x}=\left[\mathbf{x}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{x}\right]_{2}\mathbf{A}_{2}+\left[\mathbf{x}\right]_{3}\mathbf{A}_{3}+\cdots+\left[\mathbf{x}\right]_{n}\mathbf{A}_{n}.
+\displaystyle \mathbf{v}=\alpha_{1}\mathbf{u}_{1}+\cdots+\alpha_{k}\mathbf{u}_{k},
 \end{align*}
-@col
-Hence $\mathbf{b}$ is a linear combination of the columns of $A$.
-
-@col
-Conversely, if $\mathbf{b}$ is a linear combinations of the columns of $A$, say:
 \begin{align*}
-\displaystyle \mathbf{b}=\left[\mathbf{x}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{x}\right]_{2}\mathbf{A}_{2}+\left[\mathbf{x}\right]_{3}\mathbf{A}_{3}+\cdots+\left[\mathbf{x}\right]_{n}\mathbf{A}_{n},
+\displaystyle \mathbf{w}=\beta_{1}\mathbf{u}_{1}+\cdots+\beta_{k}\mathbf{u}_{k}.
 \end{align*}
-@col
-then
+Then
 \begin{align*}
-\displaystyle \mathbf{b}=A\mathbf{x}.
+\displaystyle \alpha\mathbf{v}+\mathbf{w}=(\alpha\alpha_{1}+\beta_{1})\mathbf{u}_{1}+\cdots+(\alpha\alpha_{k}+\beta_{k})\mathbf{u}_{k}
 \end{align*}
-@col
-So $\mathbf{x}$ is a solution of $\mathcal{LS}({A},{\mathbf{b}})$.
+is in $\left&lt; S \right&gt;$.
+Thus by @ref{b97161010780aa4b703cb89b1294f822}, $W$ is a subspace. 
 @qed
 @endcol
 @end
-@slide
-<strong>Computational question</strong>: Determine if $\mathbf{u}$ is a linear combination of $\mathbf{v}_{1},\ldots,\mathbf{v}_{n}$. That is, determine whether or not the system of linear equations:
-\begin{align*}
-\displaystyle x_{1}\mathbf{v}_{1}+\cdots+x_{n}\mathbf{v}_{n}=\mathbf{u}
-\end{align*}
-has a solution. The augmented matrix is:
-\begin{align*}
-\displaystyle [\mathbf{v}_{1}|\cdots|\mathbf{v}_{n}|\mathbf{u}].
-\end{align*}
-Then we can solve the system of linear questions by the technique you learned.
-@eg
-@newcol
-Let
-\begin{align*}
-\displaystyle \mathbf{u} =
-\begin{bmatrix}1\\
-1\\
-3\end{bmatrix},\quad
-\mathbf{v}_{1}=\begin{bmatrix}1\\
-2\\
-3\end{bmatrix},
-\mathbf{v}_{2}=\begin{bmatrix}-1\\
-1\\
-0\end{bmatrix},
-\mathbf{v}_{3}=\begin{bmatrix}2\\
-1\\
-3\end{bmatrix},
-\mathbf{v}_{4}=\begin{bmatrix}-1\\
-0\\
-1\end{bmatrix}.
-\end{align*} <ol class="ltx_enumerate">
-<li class="ltx_item">
-
-Determine if $\mathbf{u}$ is a linear combination of $\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\}$.
-If yes, find the linear combination. </li>
-<li class="ltx_item">
-
-Determine if $\mathbf{u}$ is a linear combination of $\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3},\mathbf{v}_{4}\}$.
-If yes, find the linear combination. </li></ol>
-@endcol
-@end
-@sol
+<strong>Main Questions.</strong>
 @newcol
 <ol class="ltx_enumerate">
-<li class="ltx_item">
-@col
-To determine if $\mathbf{u}$ is a linear combination of $\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\}$,
-we need to solve
-\begin{align*}
-\displaystyle x_{1}\mathbf{v}_{1}+x_{2}\mathbf{v}_{2}+x_{3}\mathbf{v}_{3}=\mathbf{u},
-\end{align*}
-@col
-i.e.
-\begin{align*}
-\displaystyle x_{1}-x_{2}+2x_{3}&\displaystyle=1 \\
-\displaystyle 2x_{1}+x+2+x_{3}&\displaystyle=1 \\
-\displaystyle 3x_{1}+3x_{3}&\displaystyle=3.
-\end{align*}
-@col
-The augmented matrix is
-\begin{align*}
-\displaystyle \left[\begin{array}[]{ccc|c}1&-1&2&1\\
-2&1&1&1\\
-3&0&3&3\end{array}\right]\xrightarrow{\operatorname{RREF}}\left[\begin{array}[]{ccc|c}1&0&1&0\\
-0&1&-1&0\\
-0&0&0&1\\
-\end{array}\right].
-\end{align*}
-@col
-Because the last column of the RREF is a pivot column, the system of linear equations is not solvable.
-Hence $\mathbf{u}$ is not a linear combination of $\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\}$. </li>
-<li class="ltx_item">
-@col
-To determine if $\mathbf{u}$ is a linear combination of $\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3},\mathbf{v}_{4}\}$,
-we need to solve
-\begin{align*}
-\displaystyle x_{1}\mathbf{v}_{1}+x_{2}\mathbf{v}_{2}+x_{3}\mathbf{v}_{3}+x_{4}\mathbf{v}_{4}=\mathbf{u}.
-\end{align*}
-@col
-The augmented matrix is:
-\begin{align*}
-\displaystyle [\mathbf{v}_{1}|\mathbf{v}_{2}|\mathbf{v}_{3}|\mathbf{v}_{4}|\mathbf{u}]=\left[\begin{array}[]{cccc|c}1&-1&2&-1&1\\
-2&1&1&0&1\\
-3&0&3&1&3\\
-\end{array}\right].
-\end{align*}
-@col
-Using the standard method, we find one solution (there are infinitely many):
-\begin{align*}
-\displaystyle x_{1}=\frac{5}{6}
-&\quad&
-x_{2}=-\frac{2}{3}
-&\quad&
-x_{3}=0
-&\quad&
-x_{4}=\frac{1}{2}
-\end{align*}
-@col
-i.e.
-\begin{align*}
-\displaystyle \mathbf{u}=\frac{5}{6}\mathbf{v}_{1}-\frac{2}{3}\mathbf{v}_{2}+\frac{1}{2}\mathbf{v}_{4}.
-\end{align*} </li></ol>
+<li class="ltx_item"> Determine if a vector $\mathbf{v}$ is an element of $\left&lt; S \right&gt;$. </li>
+<li class="ltx_item"> Describe the set $\left&lt; S \right&gt;$. </li>
+<li class="ltx_item"> Is $\left&lt; S \right&gt;$ equal to ${\mathbb{R}}^{m}$? </li></ol>
 @endcol
-@end
-@section{Vector Form of Solution Sets}
-@label{VFSS}
+@slide
 @eg
-Consider the linear system
+@label{ABS}
+ Consider the following set of 5 vectors, $S$, from ${\mathbb{R}}^{4}$:
 \begin{align*}
-\displaystyle 2x_{1}+x_{2}+7x_{3}-7x_{4}&\displaystyle=8 \\
-\displaystyle-3x_{1}+4x_{2}-5x_{3}-6x_{4}&\displaystyle=-12 \\
-\displaystyle x_{1}+x_{2}+4x_{3}-5x_{4}&\displaystyle=4.
-\end{align*}
-@newcol
-Row-reducing the augmented matrix yields
-\begin{align*}
-\displaystyle \begin{bmatrix}\boxed{1}&0&3&-2&4\\
-0&\boxed{1}&1&-3&0\\
-0&0&0&0&0\end{bmatrix}
-\end{align*}
-@col
-from which we see that there are $r=2$ pivot columns. Also, $D=\{1,\,2\}$, so that the dependent variables are $x_{1}$ and $x_{2}$, and $F=\{3,\,4,\,5\}$, so that the free variables are $x_{3}$ and $x_{4}$. We will express a generic solution for the system by two slightly different methods, though both arrive at the same conclusion.
-
-Rearranging each equation represented in the row-reduced form of the augmented matrix by solving for the dependent variable in each row yields the vector equality,
-\begin{align*}
-\displaystyle\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\\
-x_{4}\end{bmatrix}&\displaystyle=\begin{bmatrix}4-3x_{3}+2x_{4}\\
--x_{3}+3x_{4}\\
-x_{3}\\
-x_{4}\end{bmatrix}\\
-\\
-&\displaystyle=\begin{bmatrix}4\\
-0\\
-0\\
-0\end{bmatrix}+\begin{bmatrix}-3x_{3}\\
--x_{3}\\
-x_{3}\\
-0\end{bmatrix}+\begin{bmatrix}2x_{4}\\
-3x_{4}\\
-0\\
-x_{4}\end{bmatrix} \\
-&\displaystyle=\begin{bmatrix}4\\
-0\\
-0\\
-0\end{bmatrix}+x_{3}\begin{bmatrix}-3\\
--1\\
+\displaystyle S=\left\{\begin{bmatrix}1\\
 1\\
-0\end{bmatrix}+x_{4}\begin{bmatrix}2\\
 3\\
-0\\
-1\end{bmatrix}.
-\end{align*}
-
-We will develop the same linear combination a bit quicker, using three steps. While the method above is instructive, the method below will be our preferred approach.
-
-Step 1. Write the vector of variables as a fixed vector plus a linear combination of $n-r$ vectors, using the free variables as the scalars:
-\begin{align*}
-\displaystyle \mathbf{x}=\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\\
-x_{4}\end{bmatrix}=\begin{bmatrix}
-\;\\
-\;\\
-\;\\
-\end{bmatrix}+x_{3}\begin{bmatrix}
-\;\\
-\;\\
-\;\\
-\end{bmatrix}+x_{4}\begin{bmatrix}
-\;\\
-\;\\
-\;\\
-\end{bmatrix}
-\end{align*}
-
-Step 2. Use 0’s and 1’s to ensure equality for the entries of the vectors with indices in $F$ (corresponding to the free variables):
-\begin{align*}
-\displaystyle \mathbf{x}=\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\\
-x_{4}\end{bmatrix}=\begin{bmatrix}\\
-\\
-0\\
-0\end{bmatrix}+x_{3}\begin{bmatrix}\\
-\\
+1\end{bmatrix},\,\begin{bmatrix}2\\
 1\\
-0\end{bmatrix}+x_{4}\begin{bmatrix}\\
-\\
-0\\
-1\end{bmatrix}.
-\end{align*}
-
-Step 3. For each dependent variable, use the augmented matrix to formulate an equation expressing the dependent variable as a constant plus a linear combination of the free variables. Convert this equation into entries of the vectors that ensure equality for each dependent variable, one at a time.
-\begin{align*}
-\displaystyle x_{1}=4-3x_{3}+2x_{4}&\displaystyle\Rightarrow&\displaystyle\mathbf{x}=\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\\
-x_{4}\end{bmatrix}=\begin{bmatrix}4\\
-\\
-0\\
-0\end{bmatrix}+x_{3}\begin{bmatrix}-3\\
-\\
-1\\
-0\end{bmatrix}+x_{4}\begin{bmatrix}2\\
-\\
-0\\
-1\end{bmatrix} \\
-\displaystyle x_{2}=0-1x_{3}+3x_{4}&\displaystyle\Rightarrow&\displaystyle\mathbf{x}=\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\\
-x_{4}\end{bmatrix}=\begin{bmatrix}4\\
-0\\
-0\\
-0\end{bmatrix}+x_{3}\begin{bmatrix}-3\\
--1\\
-1\\
-0\end{bmatrix}+x_{4}\begin{bmatrix}2\\
-3\\
-0\\
-1\end{bmatrix}
-\end{align*}
-
-While this form is useful for quickly creating solutions, it is even better because it tells us exactly what every solution looks like. We know the solution set is infinite, which is pretty big, but now we can say that a solution is some multiple of $\begin{bmatrix}-3\\
--1\\
-1\\
-0\end{bmatrix}$ plus a multiple of $\begin{bmatrix}2\\
-3\\
-0\\
-1\end{bmatrix}$ plus the fixed vector $\begin{bmatrix}4\\
-0\\
-0\\
-0\end{bmatrix}$. Period. So it only takes us three vectors to describe the entire infinite solution set, provided we also agree on how to combine the three vectors into a linear combination.
-@endcol
-@end
-@eg
-@skip
-@newcol
-Consider a linear system of $m=5$ equations in $n=7$ variables, having the augmented matrix
-\begin{align*}
-\displaystyle A=\begin{bmatrix}2&1&-1&-2&2&1&5&21\\
-1&1&-3&1&1&1&2&-5\\
-1&2&-8&5&1&1&-6&-15\\
-3&3&-9&3&6&5&2&-24\\
--2&-1&1&2&1&1&-9&-30\end{bmatrix}.
-\end{align*}
-
-Row-reducing we obtain the matrix
-\begin{align*}
-\displaystyle B=\begin{bmatrix}\boxed{1}&0&2&-3&0&0&9&15\\
-0&\boxed{1}&-5&4&0&0&-8&-10\\
-0&0&0&0&\boxed{1}&0&-6&11\\
-0&0&0&0&0&\boxed{1}&7&-21\\
-0&0&0&0&0&0&0&0\end{bmatrix}
-\end{align*}
-
-and we see that there are $r=4$ pivot columns. Also, $D=\{1,\,2,\,5,\,6\}$ so the dependent variables are $x_{1},\,x_{2},\,x_{5},$ and $x_{6}$. Similarly, $F=\{3,\,4,\,7,\,8\}$ and the $n-r=3$ free variables are $x_{3},\,x_{4}$ and $x_{7}$. We will express a generic solution for the system by two different methods: both a decomposition and a construction.
-
-Rearranging each equation represented in the row-reduced echelon form of the augmented matrix by solving for the dependent variable in each row yields the vector equality
-\begin{align*}
-\displaystyle\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\\
-x_{4}\\
-x_{5}\\
-x_{6}\\
-x_{7}\end{bmatrix}&\displaystyle=\begin{bmatrix}15-2x_{3}+3x_{4}-9x_{7}\\
--10+5x_{3}-4x_{4}+8x_{7}\\
-x_{3}\\
-x_{4}\\
-11+6x_{7}\\
--21-7x_{7}\\
-x_{7}\end{bmatrix}. \\
-\\
-&\displaystyle=\begin{bmatrix}15\\
--10\\
-0\\
-0\\
-11\\
--21\\
-0\end{bmatrix}+\begin{bmatrix}-2x_{3}\\
-5x_{3}\\
-x_{3}\\
-0\\
-0\\
-0\\
-0\end{bmatrix}+\begin{bmatrix}3x_{4}\\
--4x_{4}\\
-0\\
-x_{4}\\
-0\\
-0\\
-0\end{bmatrix}+\begin{bmatrix}-9x_{7}\\
-8x_{7}\\
-0\\
-0\\
-6x_{7}\\
--7x_{7}\\
-x_{7}\end{bmatrix} \\
-&\displaystyle=\begin{bmatrix}15\\
--10\\
-0\\
-0\\
-11\\
--21\\
-0\end{bmatrix}+x_{3}\begin{bmatrix}-2\\
-5\\
-1\\
-0\\
-0\\
-0\\
-0\end{bmatrix}+x_{4}\begin{bmatrix}3\\
--4\\
-0\\
-1\\
-0\\
-0\\
-0\end{bmatrix}+x_{7}\begin{bmatrix}-9\\
-8\\
-0\\
-0\\
-6\\
--7\\
-1\end{bmatrix}.
-\end{align*}
-
-We will now develop the same linear combination a bit quicker, using three steps. While the method above is instructive, the method below will be our preferred approach.
-
-Step 1. Write the vector of variables as a fixed vector, plus a linear combination of $n-r$ vectors, using the free variables as the scalars:
-\begin{align*}
-\displaystyle \mathbf{x}=\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\\
-x_{4}\\
-x_{5}\\
-x_{6}\\
-x_{7}\end{bmatrix}=\begin{bmatrix}\\
-\;\\
-\;\\
-\;\\
-\;\\
-\;\\
-\end{bmatrix}+x_{3}\begin{bmatrix}\\
-\;\\
-\;\\
-\;\\
-\;\\
-\;\\
-\end{bmatrix}+x_{4}\begin{bmatrix}\\
-\;\\
-\;\\
-\;\\
-\;\\
-\;\\
-\end{bmatrix}+x_{7}\begin{bmatrix}\\
-\;\\
-\;\\
-\;\\
-\;\\
-\;\\
-\end{bmatrix}
-\end{align*}
-
-Step 2. Use 0’s and 1’s to ensure equality for the entries of the vectors with indices in $F$ (corresponding to the free variables):
-\begin{align*}
-\displaystyle \mathbf{x}=\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\\
-x_{4}\\
-x_{5}\\
-x_{6}\\
-x_{7}\end{bmatrix}=\begin{bmatrix}\\
-\\
-0\\
-0\\
-\\
-\\
-0\end{bmatrix}+x_{3}\begin{bmatrix}\\
-\\
-1\\
-0\\
-\\
-\\
-0\end{bmatrix}+x_{4}\begin{bmatrix}\\
-\\
-0\\
-1\\
-\\
-\\
-0\end{bmatrix}+x_{7}\begin{bmatrix}\\
-\\
-0\\
-0\\
-\\
-\\
-1\end{bmatrix}
-\end{align*}
-
-Step 3. For each dependent variable, use the augmented matrix to formulate an equation expressing the dependent variable as a constant plus multiples of the free variables. Convert this equation into entries of the vectors that ensure equality for each dependent variable, one at a time.
-\begin{align*}
-\displaystyle x_{1}&\displaystyle=15-2x_{3}+3x_{4}-9x_{7}\ \Rightarrow \\
-&\displaystyle\mathbf{x}=\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\\
-x_{4}\\
-x_{5}\\
-x_{6}\\
-x_{7}\end{bmatrix}=\begin{bmatrix}15\\
-\\
-0\\
-0\\
-\\
-\\
-0\end{bmatrix}+x_{3}\begin{bmatrix}-2\\
-\\
-1\\
-0\\
-\\
-\\
-0\end{bmatrix}+x_{4}\begin{bmatrix}3\\
-\\
-0\\
-1\\
-\\
-\\
-0\end{bmatrix}+x_{7}\begin{bmatrix}-9\\
-\\
-0\\
-0\\
-\\
-\\
-1\end{bmatrix} \\
-\displaystyle x_{2}&\displaystyle=-10+5x_{3}-4x_{4}+8x_{7}\ \Rightarrow \\
-&\displaystyle\mathbf{x}=\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\\
-x_{4}\\
-x_{5}\\
-x_{6}\\
-x_{7}\end{bmatrix}=\begin{bmatrix}15\\
--10\\
-0\\
-0\\
-\\
-\\
-0\end{bmatrix}+x_{3}\begin{bmatrix}-2\\
-5\\
-1\\
-0\\
-\\
-\\
-0\end{bmatrix}+x_{4}\begin{bmatrix}3\\
--4\\
-0\\
-1\\
-\\
-\\
-0\end{bmatrix}+x_{7}\begin{bmatrix}-9\\
-8\\
-0\\
-0\\
-\\
-\\
-1\end{bmatrix} \\
-\displaystyle x_{5}&\displaystyle=11+6x_{7}\ \Rightarrow \\
-&\displaystyle\mathbf{x}=\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\\
-x_{4}\\
-x_{5}\\
-x_{6}\\
-x_{7}\end{bmatrix}=\begin{bmatrix}15\\
--10\\
-0\\
-0\\
-11\\
-\\
-0\end{bmatrix}+x_{3}\begin{bmatrix}-2\\
-5\\
-1\\
-0\\
-0\\
-\\
-0\end{bmatrix}+x_{4}\begin{bmatrix}3\\
--4\\
-0\\
-1\\
-0\\
-\\
-0\end{bmatrix}+x_{7}\begin{bmatrix}-9\\
-8\\
-0\\
-0\\
-6\\
-\\
-1\end{bmatrix} \\
-\displaystyle x_{6}&\displaystyle=-21-7x_{7}\ \Rightarrow \\
-&\displaystyle\mathbf{x}=\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\\
-x_{4}\\
-x_{5}\\
-x_{6}\\
-x_{7}\end{bmatrix}=\begin{bmatrix}15\\
--10\\
-0\\
-0\\
-11\\
--21\\
-0\end{bmatrix}+x_{3}\begin{bmatrix}-2\\
-5\\
-1\\
-0\\
-0\\
-0\\
-0\end{bmatrix}+x_{4}\begin{bmatrix}3\\
--4\\
-0\\
-1\\
-0\\
-0\\
-0\end{bmatrix}+x_{7}\begin{bmatrix}-9\\
-8\\
-0\\
-0\\
-6\\
--7\\
-1\end{bmatrix}
-\end{align*}
-
-This final form of a typical solution is especially pleasing and useful. For example, we can build solutions quickly by choosing values for our free variables, and then compute a linear combination. For example
-\begin{align*}
-\displaystyle x_{3}&\displaystyle=2,\,x_{4}=-4,\,x_{7}=3\quad\quad\Rightarrow \\
-\displaystyle\mathbf{x}&\displaystyle=\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\\
-x_{4}\\
-x_{5}\\
-x_{6}\\
-x_{7}\end{bmatrix}=\begin{bmatrix}15\\
--10\\
-0\\
-0\\
-11\\
--21\\
-0\end{bmatrix}+(2)\begin{bmatrix}-2\\
-5\\
-1\\
-0\\
-0\\
-0\\
-0\end{bmatrix}+(-4)\begin{bmatrix}3\\
--4\\
-0\\
-1\\
-0\\
-0\\
-0\end{bmatrix}+(3)\begin{bmatrix}-9\\
-8\\
-0\\
-0\\
-6\\
--7\\
-1\end{bmatrix}=\begin{bmatrix}-28\\
-40\\
 2\\
--4\\
-29\\
--42\\
-3\end{bmatrix}
-\end{align*}
-
-or perhaps,
-\begin{align*}
-\displaystyle x_{3}&\displaystyle=5,\,x_{4}=2,\,x_{7}=1\quad\quad\Rightarrow \\
-\displaystyle\mathbf{x}&\displaystyle=\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\\
-x_{4}\\
-x_{5}\\
-x_{6}\\
-x_{7}\end{bmatrix}=\begin{bmatrix}15\\
--10\\
-0\\
-0\\
-11\\
--21\\
-0\end{bmatrix}+(5)\begin{bmatrix}-2\\
+-1\end{bmatrix},\,\begin{bmatrix}7\\
+3\\
 5\\
+-5\end{bmatrix},\,\begin{bmatrix}1\\
 1\\
+-1\\
+2\end{bmatrix},\,\begin{bmatrix}-1\\
 0\\
-0\\
-0\\
-0\end{bmatrix}+(2)\begin{bmatrix}3\\
--4\\
-0\\
-1\\
-0\\
-0\\
-0\end{bmatrix}+(1)\begin{bmatrix}-9\\
-8\\
-0\\
-0\\
-6\\
--7\\
-1\end{bmatrix}=\begin{bmatrix}2\\
-15\\
-5\\
-2\\
-17\\
--28\\
-1\end{bmatrix}
-\end{align*}
-
-or even,
-\begin{align*}
-\displaystyle x_{3}&\displaystyle=0,\,x_{4}=0,\,x_{7}=0\quad\quad\Rightarrow \\
-\displaystyle\mathbf{x}&\displaystyle=\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\\
-x_{4}\\
-x_{5}\\
-x_{6}\\
-x_{7}\end{bmatrix}=\begin{bmatrix}15\\
--10\\
-0\\
-0\\
-11\\
--21\\
-0\end{bmatrix}+(0)\begin{bmatrix}-2\\
-5\\
-1\\
-0\\
-0\\
-0\\
-0\end{bmatrix}+(0)\begin{bmatrix}3\\
--4\\
-0\\
-1\\
-0\\
-0\\
-0\end{bmatrix}+(0)\begin{bmatrix}-9\\
-8\\
-0\\
-0\\
-6\\
--7\\
-1\end{bmatrix}=\begin{bmatrix}15\\
--10\\
-0\\
-0\\
-11\\
--21\\
-0\end{bmatrix}.
-\end{align*}
-
-So we can compactly express all of the solutions to this linear system with just 4 fixed vectors, provided we agree how to combine them in a linear combinations to create solution vectors.
-
-Suppose you were told that the vector $\mathbf{w}$ below was a solution to this system of equations. Could you turn the problem around and write $\mathbf{w}$ as a linear combination of the four vectors $\mathbf{c}$, $\mathbf{u}_{1}$, $\mathbf{u}_{2}$, $\mathbf{u}_{3}$?
-\begin{align*}
-\displaystyle\mathbf{w}&\displaystyle=\begin{bmatrix}100\\
--75\\
-7\\
 9\\
--37\\
-35\\
--8\end{bmatrix}&\displaystyle\mathbf{c}&\displaystyle=\begin{bmatrix}15\\
--10\\
-0\\
-0\\
-11\\
--21\\
-0\end{bmatrix}&\displaystyle\mathbf{u}_{1}&\displaystyle=\begin{bmatrix}-2\\
+0\end{bmatrix}\right\}.
+\end{align*} 
+@newcol
+ Consider the infinite set of vectors $\left&lt; S \right&gt;$ formed by all linear combinations of the elements of $S$. Here are four vectors which we definitely know are elements of $\left&lt; S \right&gt;$:
+\begin{align*}
+\displaystyle \mathbf{w}=(2)\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+(1)\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+(-1)\begin{bmatrix}7\\
+3\\
 5\\
+-5\end{bmatrix}+(2)\begin{bmatrix}1\\
 1\\
+-1\\
+2\end{bmatrix}+(3)\begin{bmatrix}-1\\
 0\\
-0\\
-0\\
-0\end{bmatrix}&\displaystyle\mathbf{u}_{2}&\displaystyle=\begin{bmatrix}3\\
--4\\
-0\\
-1\\
-0\\
-0\\
-0\end{bmatrix}&\displaystyle\mathbf{u}_{3}&\displaystyle=\begin{bmatrix}-9\\
-8\\
-0\\
-0\\
-6\\
--7\\
-1\end{bmatrix}
+9\\
+0\end{bmatrix}=\begin{bmatrix}-4\\
+2\\
+28\\
+10\end{bmatrix}
 \end{align*}
+\begin{align*}
+\displaystyle \mathbf{x}=(5)\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+(-6)\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+(-3)\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+(4)\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+(2)\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\begin{bmatrix}-26\\
+-6\\
+2\\
+34\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{y}=(1)\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+(0)\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+(1)\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+(0)\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+(1)\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\begin{bmatrix}7\\
+4\\
+17\\
+-4\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{z}=(0)\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+(0)\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+(0)\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+(0)\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+(0)\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\begin{bmatrix}0\\
+0\\
+0\\
+0\end{bmatrix}.
+\end{align*} 
+@col
+<strong>Fundamental question:</strong> Determine if a given vector is an element of the set or not. Let us learn more about $\left&lt; S \right&gt;$ by investigating which vectors are elements of the set, and which are not.
+@newlineFirst, is $\mathbf{u}=\begin{bmatrix}-15\\
+-6\\
+19\\
+5\end{bmatrix}$ an element of $\left&lt; S \right&gt;$?
+@newline
+@col
+ In other words, are there scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$ such that:
+\begin{align*}
+\displaystyle \alpha_{1}\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+\alpha_{2}\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+\alpha_{3}\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+\alpha_{4}\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+\alpha_{5}\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\mathbf{u}=\begin{bmatrix}-15\\
+-6\\
+19\\
+5\end{bmatrix}?
+\end{align*} 
+@col
+ Searching for such scalars is equivalent to finding a solution to the linear system of equations with augmented matrix:
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccccc|c}1&amp;2&amp;7&amp;1&amp;-1&amp;-15\\
+1&amp;1&amp;3&amp;1&amp;0&amp;-6\\
+3&amp;2&amp;5&amp;-1&amp;9&amp;19\\
+1&amp;-1&amp;-5&amp;2&amp;0&amp;5\end{array}\right].
+\end{align*} 
+@col
+ This matrix row-reduces to
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccccc|c}\boxed{1}&amp;0&amp;-1&amp;0&amp;3&amp;10\\
+0&amp;\boxed{1}&amp;4&amp;0&amp;-1&amp;-9\\
+0&amp;0&amp;0&amp;\boxed{1}&amp;-2&amp;-7\\
+0&amp;0&amp;0&amp;0&amp;0&amp;0\end{array}\right].
+\end{align*} 
+@col
+ At this point, we see that the system is consistent, so we know there is a solution for the five scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$. This is enough evidence for us to say that $\mathbf{u}\in\left&lt; S \right&gt;$.
+@newlineMoreover, we can compute an actual solution, for example:
+@newline
+@col
+ \begin{align*}
+\displaystyle\alpha_{1}&amp;\displaystyle=2&amp;\displaystyle\alpha_{2}&amp;\displaystyle=1&amp;\displaystyle\alpha_{3}&amp;\displaystyle=-2&amp;\displaystyle\alpha_{4}&amp;\displaystyle=-3&amp;\displaystyle\alpha_{5}&amp;\displaystyle=2.
+\end{align*}
+This particular solution allows us to write
+\begin{align*}
+\displaystyle (2)\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+(1)\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+(-2)\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+(-3)\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+(2)\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\mathbf{u}=\begin{bmatrix}-15\\
+-6\\
+19\\
+5\end{bmatrix}
+\end{align*}
+making it even more obvious that $\mathbf{u}\in\left&lt; S \right&gt;$.
+@newline
+@col
+ We now determine if $\mathbf{v}=\begin{bmatrix}3\\
+1\\
+2\\
+-1\end{bmatrix}$ an element of $\left&lt; S \right&gt;$.
+@newline
+@col
+ We want to know if there are scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$ such that:
+\begin{align*}
+\displaystyle \alpha_{1}\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+\alpha_{2}\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+\alpha_{3}\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+\alpha_{4}\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+\alpha_{5}\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\mathbf{v}=\begin{bmatrix}3\\
+1\\
+2\\
+-1\end{bmatrix}
+\end{align*} 
+@col
+ Again, this is equivalent to finding a solution to the linear system of equations with augmented matrix:
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccccc|c}1&amp;2&amp;7&amp;1&amp;-1&amp;3\\
+1&amp;1&amp;3&amp;1&amp;0&amp;1\\
+3&amp;2&amp;5&amp;-1&amp;9&amp;2\\
+1&amp;-1&amp;-5&amp;2&amp;0&amp;-1\end{array}\right].
+\end{align*}
+This matrix row-reduces to
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccccc|c}\boxed{1}&amp;0&amp;-1&amp;0&amp;3&amp;0\\
+0&amp;\boxed{1}&amp;4&amp;0&amp;-1&amp;0\\
+0&amp;0&amp;0&amp;\boxed{1}&amp;-2&amp;0\\
+0&amp;0&amp;0&amp;0&amp;0&amp;\boxed{1}\end{array}\right].
+\end{align*} 
+@col
+ At this point, we see that the system is inconsistent, so we know there is no solution for the five scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$. This is enough evidence for us to say that $\mathbf{v}\not\in\left&lt; S \right&gt;$. End of story. 
 @endcol
 @end
 @slide
+ From the previous example, we have the following theorem: 
 @thm
-@title{Vector Form of Solutions to Linear Systems}
-@label{VFSLS}
-Suppose that $\left[A|\mathbf{b}\right]$ is the augmented matrix for a consistent linear system $\mathcal{LS}({A},{\mathbf{b}})$ of $m$ equations in $n$ variables.
-Let $B$ be a row-equivalent $m\times(n+1)$ matrix in reduced row-echelon form. Suppose that $B$ has $r$ pivot columns, with indices $D=\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\}$, while the $n-r$ non-pivot columns have indices in $F=\{f_{1},\,f_{2},\,f_{3},\,\ldots,\,f_{n-r},\,n+1\}$. Define vectors $\mathbf{c}$, $\mathbf{u}_{j}$, $1\leq j\leq n-r$ of size $n$ by
-\begin{align*}
-\displaystyle\left[\mathbf{c}\right]_{i}&\displaystyle=\begin{cases}0&\text{if $i\in F$}\\
-\left[B\right]_{k,n+1}&\text{if $i\in D$, $i=d_{k}$}\end{cases} \\
-\displaystyle\left[\mathbf{u}_{j}\right]_{i}&\displaystyle=\begin{cases}1&\text{if $i\in F$, $i=f_{j}$}\\
-0&\text{if $i\in F$, $i\neq f_{j}$}\\
--\left[B\right]_{k,f_{j}}&\text{if $i\in D$, $i=d_{k}$}\end{cases}.
-\end{align*}
-
-Then the set of solutions to the system of equations $\mathcal{LS}({A},{\mathbf{b}})$ is
-\begin{align*}
-\displaystyle S=\left\{\left.\mathbf{c}+\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}+\cdots+\alpha_{n-r}\mathbf{u}_{n-r}\,\right|\,\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\ldots,\,\alpha_{n-r}\in{\mathbb{R}}^{\hbox{}}.\right\}
-\end{align*}
+ Suppose that $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}$ are in $\mathbf{R}^{m}$.
+Let $A$ be the $m\times n$ matrix whose $i$-th column is $\mathbf{u}_{i}$.
+Then $\mathbf{v}\in\left&lt; S \right&gt;$ is and only if $\mathcal{LS}({A},{\mathbf{v}})$ is consistent. 
 @end
-@proof
-<strong>You can skip this proof for now, as long as you understand the examples</strong>
+@slide
+@eg
+<strong>Computational Technique.</strong>
+@newlineGiven $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\}$ in ${\mathbb{R}}^{m}$, determine if
+\begin{align*}
+\displaystyle \mathbf{v}=\begin{bmatrix}v_{1}\\
+\vdots\\
+v_{m}\end{bmatrix}\in\left&lt; S \right&gt;.
+\end{align*} 
+@end
+@sol
+@enumerate
+@item
 @newcol
-First, the equation $\mathcal{LS}({A},{\mathbf{b}})$ is equivalent to the linear system of equations that has the matrix $B$ as its augmented matrix.
-So we need only show that $S$ is the solution set for the system with $B$ as its augmented matrix. The conclusion of this theorem is that the solution set is equal to the set $S$.
-
-We begin by showing that every element of $S$ is indeed a solution to the system. Let $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\ldots,\,\alpha_{n-r}$ be one choice of the scalars used to describe elements of $S$. So an arbitrary element of $S$, which we will consider as a proposed solution, is
+ To determine if $\mathbf{v}\in\left&lt; S \right&gt;$, we need to find $\alpha_{1},\ldots,\alpha_{n}$ such that
 \begin{align*}
-\displaystyle \mathbf{x}=\mathbf{c}+\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}+\cdots+\alpha_{n-r}\mathbf{u}_{n-r}.
-\end{align*}
-
-When $r+1\leq\ell\leq m$, row $\ell$ of the matrix $B$ is a zero row, so the equation represented by that row is always true, no matter which solution vector we propose. So concentrate on rows representing equations $1\leq\ell\leq r$. We evaluate equation $\ell$ of the system represented by $B$ with the proposed solution vector $\mathbf{x}$ and refer to the value of the left-hand side of the equation as $\beta_{\ell}$:
+\displaystyle \alpha_{1}\mathbf{u}_{1}+\cdots+\alpha_{n}\mathbf{u}_{n}=\mathbf{v}.
+\end{align*} 
+@endcol
+@item
+@newcol
+ This is equivalent to solving the system of linear equations $\mathcal{LS}({A},{\mathbf{v}})$,
+where $A$ is the $m\times n$ matrix whose $i$-th column is $\mathbf{u}_{i}$. 
+@endcol
+@item
+@newcol
+ Row-reduce the augmented matrix $[A|\mathbf{v}]$ to an RREF $B$. 
+@enumerate
+@item
+@newcol
+ If the last column of $B$ is a pivot column, then the system is inconsistent and $\mathbf{v}\notin\left&lt; S \right&gt;$. 
+@endcol
+@item
+@newcol
+ If the last column of $B$ is not a pivot column, then the system is consistent and $\mathbf{v}\in\left&lt; S \right&gt;$. 
+@endcol
+@endenumerate
+@endcol
+@endenumerate
+@end
+@slide
+@eg
+ Following the previous example, determine if:
+\[
+\mathbf{v}=\begin{bmatrix}v_{1}\\
+\vdots\\
+v_{4}\end{bmatrix}\in\left&lt; S \right&gt;.
+\] 
+@newcol
+ Applying Gauss-Jordan elimination to the augmented matrix
 \begin{align*}
-\displaystyle \beta_{\ell}=\left[B\right]_{\ell 1}\left[\mathbf{x}\right]_{1}+\left[B\right]_{\ell 2}\left[\mathbf{x}\right]_{2}+\left[B\right]_{\ell 3}\left[\mathbf{x}\right]_{3}+\cdots+\left[B\right]_{\ell n}\left[\mathbf{x}\right]_{n}
+\displaystyle \left[\begin{array}[]{ccccc|c}1&amp;2&amp;7&amp;1&amp;-1&amp;v_{1}\\
+1&amp;1&amp;3&amp;1&amp;0&amp;v_{2}\\
+3&amp;2&amp;5&amp;-1&amp;9&amp;v_{3}\\
+1&amp;-1&amp;-5&amp;2&amp;0&amp;v_{4}\end{array}\right],
 \end{align*}
-
-Since $\left[B\right]_{\ell d_{i}}=0$ for all $1\leq i\leq r$, except that $\left[B\right]_{\ell d_{\ell}}=1$, we see that $\beta_{\ell}$ simplifies to
-\begin{align*}
-\displaystyle \beta_{\ell}=\left[\mathbf{x}\right]_{d_{\ell}}+\left[B\right]_{\ell f_{1}}\left[\mathbf{x}\right]_{f_{1}}+\left[B\right]_{\ell f_{2}}\left[\mathbf{x}\right]_{f_{2}}+\left[B\right]_{\ell f_{3}}\left[\mathbf{x}\right]_{f_{3}}+\cdots+\left[B\right]_{\ell f_{n-r}}\left[\mathbf{x}\right]_{f_{n-r}}.
-\end{align*}
-
-Notice that for $1\leq i\leq n-r$
-\begin{align*}
-\displaystyle\left[\mathbf{x}\right]_{f_{i}}&\displaystyle=\left[\mathbf{c}\right]_{f_{i}}+\alpha_{1}\left[\mathbf{u}_{1}\right]_{f_{i}}+\alpha_{2}\left[\mathbf{u}_{2}\right]_{f_{i}}+\cdots+\alpha_{i}\left[\mathbf{u}_{i}\right]_{f_{i}}+\cdots+\alpha_{n-r}\left[\mathbf{u_{n-r}}\right]_{f_{i}} \\
-&\displaystyle=0+\alpha_{1}(0)+\alpha_{2}(0)+\cdots+\alpha_{i}(1)+\cdots+\alpha_{n-r}(0) \\
-&\displaystyle=\alpha_{i}.
-\end{align*}
-
-So $\beta_{\ell}$ simplifies further, and we expand the first term
-\begin{align*}
-\displaystyle\beta_{\ell}&\displaystyle=\left[\mathbf{x}\right]_{d_{\ell}}+\left[B\right]_{\ell f_{1}}\alpha_{1}+\left[B\right]_{\ell f_{2}}\alpha_{2}+\left[B\right]_{\ell f_{3}}\alpha_{3}+\cdots+\left[B\right]_{\ell f_{n-r}}\alpha_{n-r} \\
-&\displaystyle=\left[\mathbf{c}+\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}+\cdots+\alpha_{n-r}\mathbf{u}_{n-r}\right]_{d_{\ell}}+ \\
-&\displaystyle\quad\quad\left[B\right]_{\ell f_{1}}\alpha_{1}+\left[B\right]_{\ell f_{2}}\alpha_{2}+\left[B\right]_{\ell f_{3}}\alpha_{3}+\cdots+\left[B\right]_{\ell f_{n-r}}\alpha_{n-r} \\
-&\displaystyle=\left[\mathbf{c}\right]_{d_{\ell}}+\alpha_{1}\left[\mathbf{u}_{1}\right]_{d_{\ell}}+\alpha_{2}\left[\mathbf{u}_{2}\right]_{d_{\ell}}+\alpha_{3}\left[\mathbf{u}_{3}\right]_{d_{\ell}}+\cdots+\alpha_{n-r}\left[\mathbf{u_{n-r}}\right]_{d_{\ell}}+ \\
-&\displaystyle\quad\quad\left[B\right]_{\ell f_{1}}\alpha_{1}+\left[B\right]_{\ell f_{2}}\alpha_{2}+\left[B\right]_{\ell f_{3}}\alpha_{3}+\cdots+\left[B\right]_{\ell f_{n-r}}\alpha_{n-r} \\
-&\displaystyle=\left[B\right]_{\ell,{n+1}}+ \\
-&\displaystyle\quad\quad\alpha_{1}(-\left[B\right]_{\ell f_{1}})+\alpha_{2}(-\left[B\right]_{\ell f_{2}})+\alpha_{3}(-\left[B\right]_{\ell f_{3}})+\cdots+\alpha_{n-r}(-\left[B\right]_{\ell f_{n-r}})+ \\
-&\displaystyle\quad\quad\left[B\right]_{\ell f_{1}}\alpha_{1}+\left[B\right]_{\ell f_{2}}\alpha_{2}+\left[B\right]_{\ell f_{3}}\alpha_{3}+\cdots+\left[B\right]_{\ell f_{n-r}}\alpha_{n-r} \\
-&\displaystyle=\left[B\right]_{\ell,{n+1}}.
-\end{align*}
-
-So $\beta_{\ell}$ began as the left-hand side of equation $\ell$ of the system represented by $B$ and we now know it equals $\left[B\right]_{\ell,{n+1}}$, the constant term for equation $\ell$ of this system. So the arbitrarily chosen vector from $S$ makes every equation of the system true, and therefore is a solution to the system. So all the elements of $S$ are solutions to the system.
-
-For the second half of the proof, assume that $\mathbf{x}$ is a solution vector for the system having $B$ as its augmented matrix. For convenience and clarity, denote the entries of $\mathbf{x}$ by $x_{i}$. In other words, $x_{i}=\left[\mathbf{x}\right]_{i}$. We desire to show that this solution vector is also an element of the set $S$. Begin with the observation that the entries of a solution vector make equation $\ell$ of the system true for all $1\leq\ell\leq m$:
-
-\begin{align*}
-\displaystyle \left[B\right]_{\ell,1}x_{1}+\left[B\right]_{\ell,2}x_{2}+\left[B\right]_{\ell,3}x_{3}+\cdots+\left[B\right]_{\ell,n}x_{n}=\left[B\right]_{\ell,n+1}
-\end{align*}
-
-When $\ell\leq r$, the pivot columns of $B$ have zero entries in row $\ell$ with the exception of column $d_{\ell}$, which will contain a $1$. So for $1\leq\ell\leq r$, equation $\ell$ simplifies to
-\begin{align*}
-\displaystyle 1x_{d_{\ell}}+\left[B\right]_{\ell,f_{1}}x_{f_{1}}+\left[B\right]_{\ell,f_{2}}x_{f_{2}}+\left[B\right]_{\ell,f_{3}}x_{f_{3}}+\cdots+\left[B\right]_{\ell,f_{n-r}}x_{f_{n-r}}=\left[B\right]_{\ell,n+1}.
-\end{align*}
-
-This allows us to write,
-\begin{align*}
-\displaystyle\left[\mathbf{x}\right]_{d_{\ell}}&\displaystyle=x_{d_{\ell}} \\
-&\displaystyle=\left[B\right]_{\ell,n+1}-\left[B\right]_{\ell,f_{1}}x_{f_{1}}-\left[B\right]_{\ell,f_{2}}x_{f_{2}}-\left[B\right]_{\ell,f_{3}}x_{f_{3}}-\cdots-\left[B\right]_{\ell,f_{n-r}}x_{f_{n-r}} \\
-&\displaystyle=\left[\mathbf{c}\right]_{d_{\ell}}+x_{f_{1}}\left[\mathbf{u}_{1}\right]_{d_{\ell}}+x_{f_{2}}\left[\mathbf{u}_{2}\right]_{d_{\ell}}+x_{f_{3}}\left[\mathbf{u}_{3}\right]_{d_{\ell}}+\cdots+x_{f_{n-r}}\left[\mathbf{u}_{n-r}\right]_{d_{\ell}} \\
-&\displaystyle=\left[\mathbf{c}+x_{f_{1}}\mathbf{u}_{1}+x_{f_{2}}\mathbf{u}_{2}+x_{f_{3}}\mathbf{u}_{3}+\cdots+x_{f_{n-r}}\mathbf{u}_{n-r}\right]_{d_{\ell}}.
-\end{align*}
-
-This tells us that the entries of the solution vector $\mathbf{x}$ corresponding to dependent variables (indices in $D$) are equal to those of a vector in the set $S$. We still need to check the other entries of the solution vector $\mathbf{x}$ corresponding to the free variables (indices in $F$) to see if they are equal to the entries of the same vector in the set $S$. To this end, suppose $i\in F$ and $i=f_{j}$. Then
-\begin{align*}
-\displaystyle\left[\mathbf{x}\right]_{i}&\displaystyle=x_{i}=x_{f_{j}} \\
-&\displaystyle=0+0x_{f_{1}}+0x_{f_{2}}+0x_{f_{3}}+\cdots+0x_{f_{j-1}}+1x_{f_{j}}+0x_{f_{j+1}}+\cdots+0x_{f_{n-r}} \\
-&\displaystyle=\left[\mathbf{c}\right]_{i}+x_{f_{1}}\left[\mathbf{u}_{1}\right]_{i}+x_{f_{2}}\left[\mathbf{u}_{2}\right]_{i}+x_{f_{3}}\left[\mathbf{u}_{3}\right]_{i}+\cdots+x_{f_{j}}\left[\mathbf{u}_{j}\right]_{i}+\cdots+x_{f_{n-r}}\left[\mathbf{u}_{n-r}\right]_{i} \\
-&\displaystyle=\left[\mathbf{c}+x_{f_{1}}\mathbf{u}_{1}+x_{f_{2}}\mathbf{u}_{2}+\cdots+x_{f_{n-r}}\mathbf{u}_{n-r}\right]_{i}.
-\end{align*}
-
-So entries of
-$\mathbf{x}$ and $\mathbf{c}+x_{f_{1}}\mathbf{u}_{1}+x_{f_{2}}\mathbf{u}_{2}+\cdots+x_{f_{n-r}}\mathbf{u}_{n-r}$
-are equal and therefore they are equal vectors. Since $x_{f_{1}},\,x_{f_{2}},\,x_{f_{3}},\,\ldots,\,x_{f_{n-r}}$ are scalars, this shows us that $\mathbf{x}$ qualifies for membership in $S$. So the set $S$ contains all of the solutions to the system.
-@qed
+we obtain
+@newline
+@col
+ \begin{align*}
+\displaystyle \left[\begin{array}[]{ccccc|c}1&amp;0&amp;-1&amp;0&amp;3&amp;-3v_{1}+5v_{2}-v_{4}\\
+0&amp;1&amp;4&amp;0&amp;-1&amp;v_{1}-v_{2}\\
+0&amp;0&amp;0&amp;1&amp;-2&amp;2v_{1}-3v_{2}+v_{4}\\
+0&amp;0&amp;0&amp;0&amp;0&amp;9v_{1}-16v_{2}+v_{3}+4v_{4}\\
+\end{array}\right].
+\end{align*} 
+@col
+ If $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$, then the last column is not a pivot column and the above is an RREF. In this case, $\mathbf{v}\in\left&lt; S \right&gt;$.
+@newline
+@col
+ If instead $9v_{1}-16v_{2}+v_{3}+4v_{4}\neq 0$, then the above matrix is not an RREF. Hence, the corresponding system of linear equations is inconsistent
+and thus $\mathbf{v}\not\in\left&lt; S \right&gt;$.
+@newline
+@col
+ We therefore conclude that $\mathbf{v}\in\left&lt; S \right&gt;$ if and only if:
+\[
+9v_{1}-16v_{2}+v_{3}+4v_{4}=0.
+\] 
 @endcol
 @end
+@slide
+@eg
+@label{SCAA}
+ Consider:
+\begin{align*}
+\displaystyle S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}\}=\left\{\begin{bmatrix}1\\
+2\\
+1\end{bmatrix},\,\begin{bmatrix}-1\\
+1\\
+1\end{bmatrix},\,\begin{bmatrix}2\\
+1\\
+0\end{bmatrix}\right\}
+\end{align*}
+and consider the infinite set $\left&lt; S \right&gt;$.
+@newline
+&lt;!-- First, as an example, note that
+\begin{align*}
+\displaystyle \mathbf{v}=(5)\begin{bmatrix}1\\
+2\\
+1\end{bmatrix}+(-3)\begin{bmatrix}-1\\
+1\\
+1\end{bmatrix}+(7)\begin{bmatrix}2\\
+1\\
+0\end{bmatrix}=\begin{bmatrix}22\\
+14\\
+2\end{bmatrix}
+\end{align*}
+is in $\left&lt; S \right&gt;$, since it is a linear combination of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}$. There is nothing magical about the scalars $\alpha_{1}=5,\,\alpha_{2}=-3,\,\alpha_{3}=7$; they can be chosen arbitrarily. So repeat this part of the example yourself, using different values of $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$. What happens if you choose all three scalars to be zero?
+So we know how to quickly construct sample elements of the set $\left&lt; S \right&gt;$. A slightly different question arises when you are handed a vector of the correct size and asked if it is an element of $\left&lt; S \right&gt;$. For example, is --&gt;
+
+@newlineDoes $\mathbf{w}=\begin{bmatrix}1\\
+8\\
+5\end{bmatrix}$ lie in $\left&lt; S \right&gt;$?
+@newline
+@newcol
+ To answer this question, we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ such that
+\begin{align*}
+\displaystyle\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}&amp;\displaystyle=\mathbf{w}.
+\end{align*}
+This is equivalent to solving the system of linear equations
+\begin{align*}
+\displaystyle\alpha_{1}-\alpha_{2}+2\alpha_{3}&amp;\displaystyle=1 \\
+\displaystyle 2\alpha_{1}+\alpha_{2}+\alpha_{3}&amp;\displaystyle=8 \\
+\displaystyle\alpha_{1}+\alpha_{2}&amp;\displaystyle=5.
+\end{align*}
+Building the augmented matrix for this linear system, and row-reducing, gives:
+@newline
+@col
+ \begin{align*}
+\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;1&amp;3\\
+0&amp;\boxed{1}&amp;-1&amp;2\\
+0&amp;0&amp;0&amp;0\end{array}\right].
+\end{align*}
+This system has infinitely many solutions (there is a free variable in $x_{3}$), but all we need is one solution vector. The solution,
+\begin{align*}
+\displaystyle\alpha_{1}&amp;\displaystyle=2&amp;\displaystyle\alpha_{2}&amp;\displaystyle=3&amp;\displaystyle\alpha_{3}&amp;\displaystyle=1
+\end{align*}
+tells us that:
+@newline
+@col
+ \begin{align*}
+\displaystyle (2)\mathbf{u}_{1}+(3)\mathbf{u}_{2}+(1)\mathbf{u}_{3}=\mathbf{w}.
+\end{align*} 
+@col
+ So we are convinced that $\mathbf{w}$ really is in $\left&lt; S \right&gt;$.
+@newline
+@col
+ Notice that there is an infinite number of ways to answer this question affirmatively. We could choose a different solution, this time choosing the free variable to be zero,
+\begin{align*}
+\displaystyle\alpha_{1}&amp;\displaystyle=3&amp;\displaystyle\alpha_{2}&amp;\displaystyle=2&amp;\displaystyle\alpha_{3}&amp;\displaystyle=0,
+\end{align*}
+showing that
+\begin{align*}
+\displaystyle (3)\mathbf{u}_{1}+(2)\mathbf{u}_{2}+(0)\mathbf{u}_{3}=\mathbf{w}.
+\end{align*}
+Verifying the arithmetic in this second solution will make it obvious that $\mathbf{w}$ is in this span. And of course, we now realize that there are an <em>infinite</em> number of ways to realize $\mathbf{w}$ as element of $\left&lt; S \right&gt;$.
+@newline
+@col
+ Let us ask the same type of question again, but this time with: $\mathbf{y}=\begin{bmatrix}2\\
+4\\
+3\end{bmatrix}$.
+@newlineIs $\mathbf{y}\in\left&lt; S \right&gt;$?
+@newline
+@col
+ So we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ such that
+\begin{align*}
+\displaystyle\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}&amp;\displaystyle=\mathbf{y}.
+\end{align*}
+This is equivalent to finding solutions to the system of equations
+\begin{align*}
+\displaystyle\alpha_{1}-\alpha_{2}+2\alpha_{3}&amp;\displaystyle=2 \\
+\displaystyle 2\alpha_{1}+\alpha_{2}+\alpha_{3}&amp;\displaystyle=4 \\
+\displaystyle\alpha_{1}+\alpha_{2}&amp;\displaystyle=3,
+\end{align*}
+Building the augmented matrix for this linear system and row-reducing gives
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;1&amp;0\\
+0&amp;\boxed{1}&amp;-1&amp;0\\
+0&amp;0&amp;0&amp;\boxed{1}\end{array}\right].
+\end{align*}
+This system is inconsistent because the last column is a pivot column.
+So there are no scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ that will create a linear combination of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}$ that equals $\mathbf{y}$. More precisely, $\mathbf{y}\not\in\left&lt; S \right&gt;$.
+@newlineThere are three things to observe in this example. <ol class="ltx_enumerate">
+<li class="ltx_item"> It is easy to construct vectors in $\left&lt; S \right&gt;$. </li>
+<li class="ltx_item"> It is possible that some vectors are in $\left&lt; S \right&gt;$ (such as $\mathbf{w}$), while others are not (such as $\mathbf{y}$). </li>
+<li class="ltx_item"> Deciding if a given vector is in $\left&lt; S \right&gt;$ leads to a linear system of equations and asking if the system is consistent. </li></ol>
+@endcol
+@end
+@slide
+@eg
+ Let
+\begin{align*}
+\displaystyle R=\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}\}=\left\{\begin{bmatrix}-7\\
+5\\
+1\end{bmatrix},\,\begin{bmatrix}-6\\
+5\\
+0\end{bmatrix},\,\begin{bmatrix}-12\\
+7\\
+4\end{bmatrix}\right\}
+\end{align*}
+and consider its span $\left&lt; R \right&gt;$. 
+&lt;!--
+First, as an example, note that
+\begin{align*}
+\displaystyle \mathbf{x}=(2)\begin{bmatrix}-7\\
+5\\
+1\end{bmatrix}+(4)\begin{bmatrix}-6\\
+5\\
+0\end{bmatrix}+(-3)\begin{bmatrix}-12\\
+7\\
+4\end{bmatrix}=\begin{bmatrix}-2\\
+9\\
+-10\end{bmatrix}
+\end{align*}
+is in $\left&lt; R \right&gt;$, since it is a linear combination of $\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}$. In other words, $\mathbf{x}\in\left&lt; R \right&gt;$. Try some different values of $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ yourself, and see what vectors you can create as elements of $\left&lt; R \right&gt;$.
+Now ask if a given vector is an element of $\left&lt; R \right&gt;$. For example, is --&gt;
+
+@newline
+@newcol
+ Does the vector $\mathbf{z}=\begin{bmatrix}-33\\
+24\\
+5\end{bmatrix}$ lie in $\left&lt; R \right&gt;$?
+@newline
+@col
+ To answer this question, we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ so that
+\begin{align*}
+\displaystyle\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\mathbf{v}_{3}&amp;\displaystyle=\mathbf{z}.
+\end{align*}
+This is equivalent to finding solutions to the following system of linear equations:
+\begin{align*}
+\displaystyle-7\alpha_{1}-6\alpha_{2}-12\alpha_{3}&amp;\displaystyle=-33 \\
+\displaystyle 5\alpha_{1}+5\alpha_{2}+7\alpha_{3}&amp;\displaystyle=24 \\
+\displaystyle\alpha_{1}+4\alpha_{3}&amp;\displaystyle=5.
+\end{align*}
+Building the augmented matrix for this linear system and row-reducing gives
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;0&amp;-3\\
+0&amp;\boxed{1}&amp;0&amp;5\\
+0&amp;0&amp;\boxed{1}&amp;2\end{array}\right].
+\end{align*}
+This system has a unique solution,
+\begin{align*}
+\displaystyle\alpha_{1}=-3\quad\displaystyle\alpha_{2}=5\quad\displaystyle\alpha_{3}=2
+\end{align*}
+telling us that
+\begin{align*}
+\displaystyle (-3)\mathbf{v}_{1}+(5)\mathbf{v}_{2}+(2)\mathbf{v}_{3}=\mathbf{z}.
+\end{align*}
+So we are convinced that $\mathbf{z}$ really is in $\left&lt; R \right&gt;$. Notice that in this case we have only one way to answer the question affirmatively, since the solution is unique.
+@newline
+@col
+ Let us ask about another vector.
+Let $\mathbf{x}=\begin{bmatrix}-7\\
+8\\
+-3\end{bmatrix}$.
+Is $\mathbf{x}$ a vector in $\left&lt; R \right&gt;$?
+@newline
+@col
+ In other words, are there scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ so that:
+\begin{align*}
+\displaystyle\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\mathbf{v}_{3}&amp;\displaystyle=\mathbf{x}
+\end{align*}
+This is equivalent to finding the solutions to the system of equations
+@newline\begin{align*}
+\displaystyle-7\alpha_{1}-6\alpha_{2}-12\alpha_{3}&amp;\displaystyle=-7 \\
+\displaystyle 5\alpha_{1}+5\alpha_{2}+7\alpha_{3}&amp;\displaystyle=8 \\
+\displaystyle\alpha_{1}+4\alpha_{3}&amp;\displaystyle=-3.
+\end{align*}
+Building the augmented matrix for this linear system and row-reducing gives
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;0&amp;1\\
+0&amp;\boxed{1}&amp;0&amp;2\\
+0&amp;0&amp;\boxed{1}&amp;-1\end{array}\right].
+\end{align*}
+This system has a unique solution,
+\begin{align*}
+\displaystyle\alpha_{1}=1\quad\displaystyle\alpha_{2}=2\quad\displaystyle\alpha_{3}=-1
+\end{align*}
+telling us that
+\begin{align*}
+\displaystyle (1)\mathbf{v}_{1}+(2)\mathbf{v}_{2}+(-1)\mathbf{v}_{3}=\mathbf{x}.
+\end{align*}
+So we are convinced that $\mathbf{x}$ really is in $\left&lt; R \right&gt;$. Notice that in this case we again have only one way to answer the question affirmatively since the solution is again unique.
+@newlineWe could continue to test other vectors for membership in $\left&lt; R \right&gt;$, but there is no point. A question about membership in $\left&lt; R \right&gt;$ inevitably leads to a system of three equations in the three variables $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ with a coefficient matrix whose columns are the vectors $\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}$. This particular coefficient matrix is nonsingular, so by @ref{NME1} the system is guaranteed to have a solution. (This solution is unique, but that is not critical here.) So no matter which vector we might have chosen for $\mathbf{z}$, we are certain to discover that it was an element of $\left&lt; R \right&gt;$.
+@newline<strong>Conclusion</strong>: Every vector of size 3 is in $\left&lt; R \right&gt;$, or $\left&lt; R \right&gt;={\mathbb{R}}^{3}$. 
+@endcol
+@end
+@slide
+ The previous example above inspires the following result: 
+@thm
+@label{thm:ANSRM}
+@newcol
+ Given $m$ vectors $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{m}\}$ in ${\mathbb{R}}^{m}$, let $A$ be the $m\times m$ square matrix whose $i$-th column is $\mathbf{u}_{i}$. Then $A$ is non-singular if and only if $\left&lt; S \right&gt;={\mathbb{R}}^{m}$. 
+@endcol
+@end
+@proof
+@newcol
+ ($\Rightarrow$) 
+@newcol
+ If $A$ is non-singular, then for every $\mathbf{b}\in{\mathbb{R}}^{m}$ the equation $\mathcal{LS}({A},{\mathbf{b}})$ is consistent
+by @ref{b25e99edb5cb21a0655d0d961da21e47}. Hence $\mathbf{b}\in\left&lt; S \right&gt;$. So ${\mathbb{R}}^{m}=\left&lt; S \right&gt;$. 
+@endcol
+@newline($\Leftarrow$) 
+@newcol
+ This part is difficult; we will only sketch the idea.
+Let the RREF of $A$ be $B$. Suppose that $A$ is singular. Then $B\neq I_{m}$ and the last row of $B$ is a zero row. So there exists $\mathbf{b}\in{\mathbb{R}}^{m}$ such that $\mathcal{LS}({B},{\mathbf{b}})$ is inconsistent.
+(e.g. $\mathbf{b}=\begin{bmatrix}0\\\vdots\\0\\1\end{bmatrix}$).
+Hence there exists $\mathbf{c}\in{\mathbb{R}}^{m}$ such that $\mathcal{LS}({A},{\mathbf{c}})$ is inconsistent (why?).
+Thus $\mathbf{c}\notin\left&lt; S \right&gt;$. So $\left&lt; S \right&gt;\neq{\mathbb{R}}^{m}$. This completes the proof. 
+<hr/> Alternatively:  
+@newcol
+ Suppose $A$ is singular. We claim that the span of $S$ is not equal to $\mathbb{R}^m$:
+@newline
+@col
+ If $A$ is singular, then there exists a sequence of elementary matrices $J_i$ such that:
+$J_lJ_{l - 1}\cdots J_2J_1 A$ is an RREF matrix $B$ whose last row is a zero row.
+@newline
+@col
+ Let $J = J_lJ_{l - 1}\cdots J_2J_1$, which is invertible.
+We claim that the vector:
+\[
+\vec{v} = J^{-1}\vec{e}_m = J^{-1}\begin{bmatrix}0\\0\\\vdots\\0\\1\end{bmatrix}
+\]
+(which incidentally is the last column of the matrix $J^{-1}$)
+does not lie in $\langle S \rangle$.
+@newline
+@col
+ Suppose $\vec{v} \in \langle S \rangle$, then exists a vector $\vec{x} \in \mathbb{R}^m$ such that:
+\[
+A\vec{x} = \vec{v} = J^{-1}\vec{e}_m
+\] 
+@col
+ Multiplying both sides with $J$ from the left, we have:
+\[
+JA\vec{x} = \vec{e}_m.
+\]
+But $JA = B$, whose last row is the zero row, which implies that the last component of the vector $JA\vec{x}$
+is equal to zero, contradicting the fact that the last component of $\vec{e}_m$ is equal to $1$.
+@newline
+@col
+ It follows that if $A$ is singular, then $\langle S \rangle \neq \mathbb{R}^m$. 
+@endcol
+@qed
+@endcol
+@endcol
+@end
+@section{Obtain Same Span Using Fewer Vectors}
+@eg
+ Begin with the following set of four vectors of size $3$:
+\begin{align*}
+\displaystyle T
+=\left\{\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3},\,\mathbf{w}_{4}\right\}
+=\left\{\begin{bmatrix}2\\
+-3\\
+1\end{bmatrix},\,\begin{bmatrix}1\\
+4\\
+1\end{bmatrix},\,\begin{bmatrix}7\\
+-5\\
+4\end{bmatrix},\,\begin{bmatrix}-7\\
+-6\\
+-5\end{bmatrix}
+\right\}.
+\end{align*} 
+@newcol
+ Let:
+\begin{align*}
+\displaystyle D=\begin{bmatrix}2&amp;1&amp;7&amp;-7\\
+-3&amp;4&amp;-5&amp;-6\\
+1&amp;1&amp;4&amp;-5\end{bmatrix}
+\end{align*}
+and consider the infinite set $W=\left&lt; T \right&gt;$. Check that the vector
+\begin{align*}
+\displaystyle \mathbf{z}_{2}=\begin{bmatrix}2\\
+3\\
+0\\
+1\end{bmatrix}
+\end{align*}
+is a solution to the homogeneous system $\mathcal{LS}({D},{\mathbf{0}})$
+@newline
+@col
+ We can write the linear combination,
+\begin{align*}
+\displaystyle 2\mathbf{w}_{1}+3\mathbf{w}_{2}+0\mathbf{w}_{3}+1\mathbf{w}_{4}=\mathbf{0}
+\end{align*}
+which we can solve for $\mathbf{w}_{4}$ as
+\begin{align*}
+\displaystyle \mathbf{w}_{4}=(-2)\mathbf{w}_{1}+(-3)\mathbf{w}_{2}.
+\end{align*} 
+@col
+ This equation says that whenever we encounter the vector $\mathbf{w}_{4}$, we can replace it with a specific linear combination of the vectors $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$. So using $\mathbf{w}_{4}$ in the set $T$, along with $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$, is excessive. An example of what we mean here can be illustrated by the computation:
+@newline
+@col
+ \begin{align*}
+\displaystyle 5\mathbf{w}_{1}&amp;\displaystyle+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+(-3)\mathbf{w}_{4} \\
+&amp;\displaystyle=5\mathbf{w}_{1}+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+(-3)\left((-2)\mathbf{w}_{1}+(-3)\mathbf{w}_{2}\right) \\
+&amp;\displaystyle=5\mathbf{w}_{1}+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+\left(6\mathbf{w}_{1}+9\mathbf{w}_{2}\right) \\
+&amp;\displaystyle=11\mathbf{w}_{1}+5\mathbf{w}_{2}+6\mathbf{w}_{3}.
+\end{align*} 
+@col
+ So, what began as a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3},\,\mathbf{w}_{4}$ has been reduced to a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3}$.
+@newlineHence: 
+@col
+ \begin{align*}
+\displaystyle W=\left&lt;\left\{\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3}\right\}\right&gt;,
+\end{align*}
+and the span of our set of vectors, $W$, has not changed, but we have described it by the span of a set of three vectors, rather than four. Furthermore, we can achieve yet another, similar, reduction.
+@newline
+@col
+ Check that the vector
+\begin{align*}
+\displaystyle \mathbf{z}_{1}=\begin{bmatrix}-3\\
+-1\\
+1\\
+0\end{bmatrix}
+\end{align*}
+is a solution to the homogeneous system $\mathcal{LS}({D},{\mathbf{0}})$.
+@newline
+@col
+ We can write the linear combination,
+\begin{align*}
+\displaystyle (-3)\mathbf{w}_{1}+(-1)\mathbf{w}_{2}+1\mathbf{w}_{3}=\mathbf{0}
+\end{align*}
+which we can solve for $\mathbf{w}_{3}$ as
+\begin{align*}
+\displaystyle \mathbf{w}_{3}=3\mathbf{w}_{1}+1\mathbf{w}_{2}.
+\end{align*} 
+@col
+ This equation says that whenever we encounter the vector $\mathbf{w}_{3}$, we can replace it with a specific linear combination of the vectors $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$. So, as before, the vector $\mathbf{w}_{3}$ is not needed in the description of $W$, provided we have $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$ available. In particular, a careful proof would show that
+\begin{align*}
+\displaystyle W=\left&lt;\left\{\mathbf{w}_{1},\,\mathbf{w}_{2}\right\}\right&gt;
+\end{align*} 
+@col
+ So $W$ began life as the span of a set of four vectors. We have now shown (utilizing solutions to a homogeneous system) that $W$ can also be described as the span of a set of just two vectors. Convince yourself that we cannot go any further. In other words, it is not possible to dismiss either $\mathbf{w}_{1}$ or $\mathbf{w}_{2}$ in a similar fashion and winnow the set down to just one vector.
+@newline
+@col
+ What was it about the original set of four vectors that allowed us to declare certain vectors as surplus? And just which vectors were we able to dismiss? And why did we have to stop once we had two vectors remaining? The answers to these questions motivate @keyword{linear independence}, our next section and next definition, and so are worth considering carefully now. 
+@endcol
+@end
+@section{Geometric Interpretation}
+<iframe width="800" height="600" allowfullscreen="" style="border: 1px solid rgb(228, 228, 228); border-radius: 4px; overflow: hidden; background: none;" frameborder="0" data-src="https://www.geogebra.org/3d/tnnuszqm?embed" rendered="0" id="iFrameResizer5" scrolling="no" src="https://www.geogebra.org/3d/tnnuszqm?embed"/>
+<!--DELIMITER-->
