@@ -42,16 +42,16 @@ Then $\mathbf{b}\in\mathcal{C}\left(A\right)$ if and only if $\mathcal{LS}({A},{
 @col
  Thus, an alternative (and popular) definition of the column space of an $m\times n$ matrix $A$ is
 \begin{align*}
-\displaystyle\mathcal{C}\left(A\right)&amp;\displaystyle=\left\{\left.\mathbf{y}\in{\mathbb{R}}^{m}\,\right|\,\mathbf{y}=A\mathbf{x}\text{ for some }\mathbf{x}\in{\mathbb{R}}^{n}\right\}=\left\{\left.A\mathbf{x}\,\right|\,\mathbf{x}\in{\mathbb{R}}^{n}\right\}\subseteq{\mathbb{R}}^{m}
+\displaystyle\mathcal{C}\left(A\right)&\displaystyle=\left\{\left.\mathbf{y}\in{\mathbb{R}}^{m}\,\right|\,\mathbf{y}=A\mathbf{x}\text{ for some }\mathbf{x}\in{\mathbb{R}}^{n}\right\}=\left\{\left.A\mathbf{x}\,\right|\,\mathbf{x}\in{\mathbb{R}}^{n}\right\}\subseteq{\mathbb{R}}^{m}
 \end{align*} 
 @endcol
 @slide
 @eg
  Consider the column space of the $3\times 4$ matrix $A$,
 \begin{align*}
-\displaystyle A=\begin{bmatrix}3&amp;2&amp;1&amp;-4\\
--1&amp;1&amp;-2&amp;3\\
-2&amp;-4&amp;6&amp;-8\end{bmatrix}
+\displaystyle A=\begin{bmatrix}3&2&1&-4\\
+-1&1&-2&3\\
+2&-4&6&-8\end{bmatrix}
 \end{align*} 
 @newcol
  Show that $\mathbf{v}=\begin{bmatrix}18\\
@@ -60,11 +60,11 @@ Then $\mathbf{b}\in\mathcal{C}\left(A\right)$ if and only if $\mathcal{LS}({A},{
 The above theorem says that we need to check the consistency of $\mathcal{LS}({A},{v})$.
 From the augmented matrix and row-reduce,
 \begin{align*}
-\displaystyle \begin{bmatrix}3&amp;2&amp;1&amp;-4&amp;18\\
--1&amp;1&amp;-2&amp;3&amp;-6\\
-2&amp;-4&amp;6&amp;-8&amp;12\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;0&amp;1&amp;-2&amp;6\\
-0&amp;\boxed{1}&amp;-1&amp;1&amp;0\\
-0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}
+\displaystyle \begin{bmatrix}3&2&1&-4&18\\
+-1&1&-2&3&-6\\
+2&-4&6&-8&12\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&1&-2&6\\
+0&\boxed{1}&-1&1&0\\
+0&0&0&0&0\end{bmatrix}
 \end{align*} 
 @col
  Since the last column is not a pivot column, so the system is consistent and hence $v\in\mathcal{C}\left(A\right)$.
@@ -79,11 +79,11 @@ In fact, we have
 The above theorem says that we need to check the consistency of $\mathcal{LS}({A},{v})$.
 From the augmented matrix and row-reduce,
 \begin{align*}
-\displaystyle \begin{bmatrix}3&amp;2&amp;1&amp;-4&amp;2\\
--1&amp;1&amp;-2&amp;3&amp;1\\
-2&amp;-4&amp;6&amp;-8&amp;-3\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;0&amp;1&amp;-2&amp;0\\
-0&amp;\boxed{1}&amp;-1&amp;1&amp;0\\
-0&amp;0&amp;0&amp;0&amp;\boxed{1}\end{bmatrix}
+\displaystyle \begin{bmatrix}3&2&1&-4&2\\
+-1&1&-2&3&1\\
+2&-4&6&-8&-3\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&1&-2&0\\
+0&\boxed{1}&-1&1&0\\
+0&0&0&0&\boxed{1}\end{bmatrix}
 \end{align*} 
 @col
  Since the final column is a pivot column, the system is inconsistent and therefore $\mathbf{w}\not\in\mathcal{C}\left(A\right)$. 
@@ -95,10 +95,10 @@ From the augmented matrix and row-reduce,
 @keyword{Describe $\mathcal{C}\left(A\right)$ as a null space}
 Let
 \begin{align*}
-\displaystyle A=\begin{bmatrix}1&amp;2&amp;7&amp;1&amp;-1\\
-1&amp;1&amp;3&amp;1&amp;0\\
-3&amp;2&amp;5&amp;-1&amp;9\\
-1&amp;-1&amp;-5&amp;2&amp;0\end{bmatrix}.
+\displaystyle A=\begin{bmatrix}1&2&7&1&-1\\
+1&1&3&1&0\\
+3&2&5&-1&9\\
+1&-1&-5&2&0\end{bmatrix}.
 \end{align*} 
 @newcol
  Find $\mathcal{C}\left(A\right)$. Let’s determine if $\mathbf{v}=\begin{bmatrix}v_{1}\\
@@ -108,18 +108,18 @@ v_{4}\end{bmatrix}\in\left&lt; S\right&gt;$.
 @col
  Applying Gauss-Jordan elimination to the augmented matrix
 \begin{align*}
-\displaystyle \begin{bmatrix}1&amp;2&amp;7&amp;1&amp;-1&amp;v_{1}\\
-1&amp;1&amp;3&amp;1&amp;0&amp;v_{2}\\
-3&amp;2&amp;5&amp;-1&amp;9&amp;v_{3}\\
-1&amp;-1&amp;-5&amp;2&amp;0&amp;v_{4}\end{bmatrix},
+\displaystyle \begin{bmatrix}1&2&7&1&-1&v_{1}\\
+1&1&3&1&0&v_{2}\\
+3&2&5&-1&9&v_{3}\\
+1&-1&-5&2&0&v_{4}\end{bmatrix},
 \end{align*} 
 @col
  we obtain
 \begin{align*}
-\displaystyle \begin{bmatrix}1&amp;0&amp;-1&amp;0&amp;3&amp;-3v_{1}+5v_{2}-v_{4}\\
-0&amp;1&amp;4&amp;0&amp;-1&amp;v_{1}-v_{2}\\
-0&amp;0&amp;0&amp;1&amp;-2&amp;2v_{1}-3v_{2}+v_{4}\\
-0&amp;0&amp;0&amp;0&amp;0&amp;9v_{1}-16v_{2}+v_{3}+4v_{4}\\
+\displaystyle \begin{bmatrix}1&0&-1&0&3&-3v_{1}+5v_{2}-v_{4}\\
+0&1&4&0&-1&v_{1}-v_{2}\\
+0&0&0&1&-2&2v_{1}-3v_{2}+v_{4}\\
+0&0&0&0&0&9v_{1}-16v_{2}+v_{3}+4v_{4}\\
 \end{bmatrix}
 \end{align*} 
 @col
@@ -139,18 +139,18 @@ v_{4}\end{bmatrix}\in\left&lt; S\right&gt;$.
 @keyword{Describe $\mathcal{C}\left(A\right)$ by basis}
 Let
 \begin{align*}
-\displaystyle A=\begin{bmatrix}1&amp;4&amp;0&amp;-1&amp;0&amp;7&amp;-9\\
-2&amp;8&amp;-1&amp;3&amp;9&amp;-13&amp;7\\
-0&amp;0&amp;2&amp;-3&amp;-4&amp;12&amp;-8\\
--1&amp;-4&amp;2&amp;4&amp;8&amp;-31&amp;37\end{bmatrix},
+\displaystyle A=\begin{bmatrix}1&4&0&-1&0&7&-9\\
+2&8&-1&3&9&-13&7\\
+0&0&2&-3&-4&12&-8\\
+-1&-4&2&4&8&-31&37\end{bmatrix},
 \end{align*} 
 @newcol
  find $\mathcal{C}\left(A\right)$.
 \begin{align*}
-\displaystyle A\xrightarrow{\text{RREF}}B=\begin{bmatrix}\boxed{1}&amp;4&amp;0&amp;0&amp;2&amp;1&amp;-3\\
-0&amp;0&amp;\boxed{1}&amp;0&amp;1&amp;-3&amp;5\\
-0&amp;0&amp;0&amp;\boxed{1}&amp;2&amp;-6&amp;6\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}.
+\displaystyle A\xrightarrow{\text{RREF}}B=\begin{bmatrix}\boxed{1}&4&0&0&2&1&-3\\
+0&0&\boxed{1}&0&1&-3&5\\
+0&0&0&\boxed{1}&2&-6&6\\
+0&0&0&0&0&0&0\end{bmatrix}.
 \end{align*} 
 @col
  The indexes of the pivot columns are $D=\left\{1,3,4\right\}$.
@@ -185,18 +185,18 @@ Hence $\mathcal{C}\left(A\right)=\left&lt; A\right&gt;=\left&lt; \left\{\mathbf{
 @newcol
  Consider $V=M_{22}$. Let:
 \begin{align*}
-\displaystyle B_{11}&amp;=\begin{bmatrix}1&amp;0\\
-0&amp;0\end{bmatrix},
-&amp;
-B_{12}&amp;=\begin{bmatrix}0&amp;1\\
-0&amp;0\end{bmatrix},
+\displaystyle B_{11}&=\begin{bmatrix}1&0\\
+0&0\end{bmatrix},
+&
+B_{12}&=\begin{bmatrix}0&1\\
+0&0\end{bmatrix},
 \end{align*}
 \begin{align*}
-\displaystyle B_{21}&amp;=\begin{bmatrix}0&amp;0\\
-1&amp;0\end{bmatrix},
-&amp;
-B_{22}&amp;=\begin{bmatrix}0&amp;0\\
-0&amp;1\end{bmatrix},
+\displaystyle B_{21}&=\begin{bmatrix}0&0\\
+1&0\end{bmatrix},
+&
+B_{22}&=\begin{bmatrix}0&0\\
+0&1\end{bmatrix},
 \end{align*} 
 @col
  Then $B=\left\{B_{11},B_{12},B_{21},B_{22}\right\}$ is a basis for $V$.
@@ -204,8 +204,8 @@ B_{22}&amp;=\begin{bmatrix}0&amp;0\\
 @col
  Check: Obviously $B$ is linearly independent (exercise). Also for any $A\in V$,
 \begin{align*}
-\displaystyle A=\begin{bmatrix}a&amp;b\\
-c&amp;d\end{bmatrix}=aB_{11}+bB_{12}+cB_{21}+dB_{22}.
+\displaystyle A=\begin{bmatrix}a&b\\
+c&d\end{bmatrix}=aB_{11}+bB_{12}+cB_{21}+dB_{22}.
 \end{align*} 
 @col
  So $\left&lt; B\right&gt;=M_{22}$. 
@@ -263,11 +263,11 @@ Column Space Spanned by Original Columns}
 @eg
  Consider the $5\times 7$ matrix $A$,
 \begin{align*}
-\displaystyle \begin{bmatrix}2&amp;4&amp;1&amp;-1&amp;1&amp;4&amp;4\\
-1&amp;2&amp;1&amp;0&amp;2&amp;4&amp;7\\
-0&amp;0&amp;1&amp;4&amp;1&amp;8&amp;7\\
-1&amp;2&amp;-1&amp;2&amp;1&amp;9&amp;6\\
--2&amp;-4&amp;1&amp;3&amp;-1&amp;-2&amp;-2\end{bmatrix}
+\displaystyle \begin{bmatrix}2&4&1&-1&1&4&4\\
+1&2&1&0&2&4&7\\
+0&0&1&4&1&8&7\\
+1&2&-1&2&1&9&6\\
+-2&-4&1&3&-1&-2&-2\end{bmatrix}
 \end{align*} 
 @newcol
  The column space of $A$ is
@@ -305,15 +305,15 @@ Column Space Spanned by Original Columns}
 @col
  While this is a concise description of an infinite set, we might be able to describe the span with fewer than seven vectors. Now we row-reduce,
 \begin{align*}
-\displaystyle \begin{bmatrix}2&amp;4&amp;1&amp;-1&amp;1&amp;4&amp;4\\
-1&amp;2&amp;1&amp;0&amp;2&amp;4&amp;7\\
-0&amp;0&amp;1&amp;4&amp;1&amp;8&amp;7\\
-1&amp;2&amp;-1&amp;2&amp;1&amp;9&amp;6\\
--2&amp;-4&amp;1&amp;3&amp;-1&amp;-2&amp;-2\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;2&amp;0&amp;0&amp;0&amp;3&amp;1\\
-0&amp;0&amp;\boxed{1}&amp;0&amp;0&amp;-1&amp;0\\
-0&amp;0&amp;0&amp;\boxed{1}&amp;0&amp;2&amp;1\\
-0&amp;0&amp;0&amp;0&amp;\boxed{1}&amp;1&amp;3\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}
+\displaystyle \begin{bmatrix}2&4&1&-1&1&4&4\\
+1&2&1&0&2&4&7\\
+0&0&1&4&1&8&7\\
+1&2&-1&2&1&9&6\\
+-2&-4&1&3&-1&-2&-2\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&2&0&0&0&3&1\\
+0&0&\boxed{1}&0&0&-1&0\\
+0&0&0&\boxed{1}&0&2&1\\
+0&0&0&0&\boxed{1}&1&3\\
+0&0&0&0&0&0&0\end{bmatrix}
 \end{align*} 
 @col
  The pivot columns are $D=\left\{1,\,3,\,4,\,5\right\}$, so we can create the set
@@ -411,18 +411,18 @@ Let
 @newcol
  Find a basis for $\left&lt; S\right&gt;$.
 \begin{align*}
-\displaystyle A=[\mathbf{v}_{1}|\cdots|\mathbf{v}_{7}]=\begin{bmatrix}1&amp;4&amp;0&amp;-1&amp;0&amp;7&amp;-9\\
-2&amp;8&amp;-1&amp;3&amp;9&amp;-13&amp;7\\
-0&amp;0&amp;2&amp;-3&amp;-4&amp;12&amp;-8\\
--1&amp;-4&amp;2&amp;4&amp;8&amp;-31&amp;37\end{bmatrix}.
+\displaystyle A=[\mathbf{v}_{1}|\cdots|\mathbf{v}_{7}]=\begin{bmatrix}1&4&0&-1&0&7&-9\\
+2&8&-1&3&9&-13&7\\
+0&0&2&-3&-4&12&-8\\
+-1&-4&2&4&8&-31&37\end{bmatrix}.
 \end{align*}
 <strong>Method 1</strong>
 @newcol
  \begin{align*}
-\displaystyle A\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;4&amp;0&amp;0&amp;2&amp;1&amp;-3\\
-0&amp;0&amp;\boxed{1}&amp;0&amp;1&amp;-3&amp;5\\
-0&amp;0&amp;0&amp;\boxed{1}&amp;2&amp;-6&amp;6\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}
+\displaystyle A\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&4&0&0&2&1&-3\\
+0&0&\boxed{1}&0&1&-3&5\\
+0&0&0&\boxed{1}&2&-6&6\\
+0&0&0&0&0&0&0\end{bmatrix}
 \end{align*} 
 @col
  Let
@@ -445,24 +445,24 @@ Let
 @newcol
  The transpose of $A$ is
 \begin{align*}
-\displaystyle \begin{bmatrix}1&amp;2&amp;0&amp;-1\\
-4&amp;8&amp;0&amp;-4\\
-0&amp;-1&amp;2&amp;2\\
--1&amp;3&amp;-3&amp;4\\
-0&amp;9&amp;-4&amp;8\\
-7&amp;-13&amp;12&amp;-31\\
--9&amp;7&amp;-8&amp;37\end{bmatrix}.
+\displaystyle \begin{bmatrix}1&2&0&-1\\
+4&8&0&-4\\
+0&-1&2&2\\
+-1&3&-3&4\\
+0&9&-4&8\\
+7&-13&12&-31\\
+-9&7&-8&37\end{bmatrix}.
 \end{align*} 
 @col
  Row-reduced this becomes,
 \begin{align*}
-\displaystyle D=\begin{bmatrix}\boxed{1}&amp;0&amp;0&amp;-\frac{31}{7}\\
-0&amp;\boxed{1}&amp;0&amp;\frac{12}{7}\\
-0&amp;0&amp;\boxed{1}&amp;\frac{13}{7}\\
-0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0\end{bmatrix}.
+\displaystyle D=\begin{bmatrix}\boxed{1}&0&0&-\frac{31}{7}\\
+0&\boxed{1}&0&\frac{12}{7}\\
+0&0&\boxed{1}&\frac{13}{7}\\
+0&0&0&0\\
+0&0&0&0\\
+0&0&0&0\\
+0&0&0&0\end{bmatrix}.
 \end{align*} 
 @col
  Then we can take
@@ -540,21 +540,21 @@ Informally, the row space is the set of all linear combinations of the rows of $
 @eg
  Find $\mathcal{R}\!\left(A\right)$ for
 \begin{align*}
-\displaystyle A=\begin{bmatrix}1&amp;4&amp;0&amp;-1&amp;0&amp;7&amp;-9\\
-2&amp;8&amp;-1&amp;3&amp;9&amp;-13&amp;7\\
-0&amp;0&amp;2&amp;-3&amp;-4&amp;12&amp;-8\\
--1&amp;-4&amp;2&amp;4&amp;8&amp;-31&amp;37\end{bmatrix}.
+\displaystyle A=\begin{bmatrix}1&4&0&-1&0&7&-9\\
+2&8&-1&3&9&-13&7\\
+0&0&2&-3&-4&12&-8\\
+-1&-4&2&4&8&-31&37\end{bmatrix}.
 \end{align*} 
 @newcol
  To build the row space, we transpose the matrix,
 \begin{align*}
-\displaystyle A^{t}=\begin{bmatrix}1&amp;2&amp;0&amp;-1\\
-4&amp;8&amp;0&amp;-4\\
-0&amp;-1&amp;2&amp;2\\
--1&amp;3&amp;-3&amp;4\\
-0&amp;9&amp;-4&amp;8\\
-7&amp;-13&amp;12&amp;-31\\
--9&amp;7&amp;-8&amp;37\end{bmatrix}
+\displaystyle A^{t}=\begin{bmatrix}1&2&0&-1\\
+4&8&0&-4\\
+0&-1&2&2\\
+-1&3&-3&4\\
+0&9&-4&8\\
+7&-13&12&-31\\
+-9&7&-8&37\end{bmatrix}
 \end{align*} 
 @col
  Then the columns of this matrix are used in a span to build the row space,
@@ -588,13 +588,13 @@ Informally, the row space is the set of all linear combinations of the rows of $
 @col
  First, row-reduce $A^{t}$,
 \begin{align*}
-\displaystyle \begin{bmatrix}\boxed{1}&amp;0&amp;0&amp;-\frac{31}{7}\\
-0&amp;\boxed{1}&amp;0&amp;\frac{12}{7}\\
-0&amp;0&amp;\boxed{1}&amp;\frac{13}{7}\\
-0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0\end{bmatrix}.
+\displaystyle \begin{bmatrix}\boxed{1}&0&0&-\frac{31}{7}\\
+0&\boxed{1}&0&\frac{12}{7}\\
+0&0&\boxed{1}&\frac{13}{7}\\
+0&0&0&0\\
+0&0&0&0\\
+0&0&0&0\\
+0&0&0&0\end{bmatrix}.
 \end{align*} 
 @col
  Since the pivot columns have indices $D=\left\{1,\,2,\,3\right\}$, the column space of $A^{t}$ can be spanned by just the first three columns of $A^{t}$,
@@ -697,17 +697,17 @@ Refer to the columns of $A^{t}$ and $B^{t}$ as $\mathbf{A}_{i}$ and $\mathbf{B}_
 @col
 Suppose that $B^{t}$ is formed from $A^{t}$ by multiplying column $\mathbf{A}_{t}$ by $\alpha\neq 0$. In other words, $\mathbf{B}_{t}=\alpha\mathbf{A}_{t}$, and $\mathbf{B}_{i}=\mathbf{A}_{i}$ for all $i\neq t$. We need to establish that two sets are equal, $\mathcal{C}\left(A^{t}\right)=\mathcal{C}\left(B^{t}\right)$. We will take a generic element of one and show that it is contained in the other.
 \begin{align*}
-\displaystyle\beta_{1}\mathbf{B}_{1}+&amp;\displaystyle\beta_{2}\mathbf{B}_{2}+\beta_{3}\mathbf{B}_{3}+\cdots+\beta_{t}\mathbf{B}_{t}+\cdots+\beta_{m}\mathbf{B}_{m} \\
-&amp;\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\beta_{3}\mathbf{A}_{3}+\cdots+\beta_{t}\left(\alpha\mathbf{A}_{t}\right)+\cdots+\beta_{m}\mathbf{A}_{m} \\
-&amp;\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\beta_{3}\mathbf{A}_{3}+\cdots+\left(\alpha\beta_{t}\right)\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m}
+\displaystyle\beta_{1}\mathbf{B}_{1}+&\displaystyle\beta_{2}\mathbf{B}_{2}+\beta_{3}\mathbf{B}_{3}+\cdots+\beta_{t}\mathbf{B}_{t}+\cdots+\beta_{m}\mathbf{B}_{m} \\
+&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\beta_{3}\mathbf{A}_{3}+\cdots+\beta_{t}\left(\alpha\mathbf{A}_{t}\right)+\cdots+\beta_{m}\mathbf{A}_{m} \\
+&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\beta_{3}\mathbf{A}_{3}+\cdots+\left(\alpha\beta_{t}\right)\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m}
 \end{align*}
 @col
 says that $\mathcal{C}\left(B^{t}\right)\subseteq\mathcal{C}\left(A^{t}\right)$. Similarly,
 \begin{align*}
-\displaystyle\gamma_{1}\mathbf{A}_{1}+&amp;\displaystyle\gamma_{2}\mathbf{A}_{2}+\gamma_{3}\mathbf{A}_{3}+\cdots+\gamma_{t}\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
-&amp;\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\gamma_{3}\mathbf{A}_{3}+\cdots+\left(\frac{\gamma_{t}}{\alpha}\alpha\right)\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
-&amp;\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\gamma_{3}\mathbf{A}_{3}+\cdots+\frac{\gamma_{t}}{\alpha}\left(\alpha\mathbf{A}_{t}\right)+\cdots+\gamma_{m}\mathbf{A}_{m} \\
-&amp;\displaystyle=\gamma_{1}\mathbf{B}_{1}+\gamma_{2}\mathbf{B}_{2}+\gamma_{3}\mathbf{B}_{3}+\cdots+\frac{\gamma_{t}}{\alpha}\mathbf{B}_{t}+\cdots+\gamma_{m}\mathbf{B}_{m}
+\displaystyle\gamma_{1}\mathbf{A}_{1}+&\displaystyle\gamma_{2}\mathbf{A}_{2}+\gamma_{3}\mathbf{A}_{3}+\cdots+\gamma_{t}\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
+&\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\gamma_{3}\mathbf{A}_{3}+\cdots+\left(\frac{\gamma_{t}}{\alpha}\alpha\right)\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
+&\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\gamma_{3}\mathbf{A}_{3}+\cdots+\frac{\gamma_{t}}{\alpha}\left(\alpha\mathbf{A}_{t}\right)+\cdots+\gamma_{m}\mathbf{A}_{m} \\
+&\displaystyle=\gamma_{1}\mathbf{B}_{1}+\gamma_{2}\mathbf{B}_{2}+\gamma_{3}\mathbf{B}_{3}+\cdots+\frac{\gamma_{t}}{\alpha}\mathbf{B}_{t}+\cdots+\gamma_{m}\mathbf{B}_{m}
 \end{align*}
 @col
 says that $\mathcal{C}\left(A^{t}\right)\subseteq\mathcal{C}\left(B^{t}\right)$. So $\mathcal{R}\!\left(A\right)=\mathcal{C}\left(A^{t}\right)=\mathcal{C}\left(B^{t}\right)=\mathcal{R}\!\left(B\right)$ when a single row operation of the second type is performed.
@@ -715,19 +715,19 @@ says that $\mathcal{C}\left(A^{t}\right)\subseteq\mathcal{C}\left(B^{t}\right)$.
 @col
 Suppose now that $B^{t}$ is formed from $A^{t}$ by replacing $\mathbf{A}_{t}$ with $\alpha\mathbf{A}_{s}+\mathbf{A}_{t}$ for some $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $s\neq t$. In other words, $\mathbf{B}_{t}=\alpha\mathbf{A}_{s}+\mathbf{A}_{t}$, and $\mathbf{B}_{i}=\mathbf{A}_{i}$ for $i\neq t$.
 \begin{align*}
-\displaystyle\beta_{1}\mathbf{B}_{1}+&amp;\displaystyle\beta_{2}\mathbf{B}_{2}+\cdots+\beta_{s}\mathbf{B}_{s}+\cdots+\beta_{t}\mathbf{B}_{t}+\cdots+\beta_{m}\mathbf{B}_{m} \\
-&amp;\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\beta_{s}\mathbf{A}_{s}+\cdots+\beta_{t}\left(\alpha\mathbf{A}_{s}+\mathbf{A}_{t}\right)+\cdots+\beta_{m}\mathbf{A}_{m} \\
-&amp;\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\beta_{s}\mathbf{A}_{s}+\cdots+\left(\beta_{t}\alpha\right)\mathbf{A}_{s}+\beta_{t}\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m} \\
-&amp;\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\beta_{s}\mathbf{A}_{s}+\left(\beta_{t}\alpha\right)\mathbf{A}_{s}+\cdots+\beta_{t}\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m} \\
-&amp;\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\left(\beta_{s}+\beta_{t}\alpha\right)\mathbf{A}_{s}+\cdots+\beta_{t}\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m}
+\displaystyle\beta_{1}\mathbf{B}_{1}+&\displaystyle\beta_{2}\mathbf{B}_{2}+\cdots+\beta_{s}\mathbf{B}_{s}+\cdots+\beta_{t}\mathbf{B}_{t}+\cdots+\beta_{m}\mathbf{B}_{m} \\
+&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\beta_{s}\mathbf{A}_{s}+\cdots+\beta_{t}\left(\alpha\mathbf{A}_{s}+\mathbf{A}_{t}\right)+\cdots+\beta_{m}\mathbf{A}_{m} \\
+&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\beta_{s}\mathbf{A}_{s}+\cdots+\left(\beta_{t}\alpha\right)\mathbf{A}_{s}+\beta_{t}\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m} \\
+&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\beta_{s}\mathbf{A}_{s}+\left(\beta_{t}\alpha\right)\mathbf{A}_{s}+\cdots+\beta_{t}\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m} \\
+&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\left(\beta_{s}+\beta_{t}\alpha\right)\mathbf{A}_{s}+\cdots+\beta_{t}\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m}
 \end{align*}
 @col
 says that $\mathcal{C}\left(B^{t}\right)\subseteq\mathcal{C}\left(A^{t}\right)$. Similarly,
 \begin{align*}
-\displaystyle\gamma_{1}&amp;\displaystyle\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\cdots+\gamma_{s}\mathbf{A}_{s}+\cdots+\gamma_{t}\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
-&amp;\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\cdots+\gamma_{s}\mathbf{A}_{s}+\cdots+\left(-\alpha\gamma_{t}\mathbf{A}_{s}+\alpha\gamma_{t}\mathbf{A}_{s}\right)+\gamma_{t}\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
-&amp;\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\cdots+\left(-\alpha\gamma_{t}+\gamma_{s}\right)\mathbf{A}_{s}+\cdots+\gamma_{t}\left(\alpha\mathbf{A}_{s}+\mathbf{A}_{t}\right)+\cdots+\gamma_{m}\mathbf{A}_{m} \\
-&amp;\displaystyle=\gamma_{1}\mathbf{B}_{1}+\gamma_{2}\mathbf{B}_{2}+\cdots+\left(-\alpha\gamma_{t}+\gamma_{s}\right)\mathbf{B}_{s}+\cdots+\gamma_{t}\mathbf{B}_{t}+\cdots+\gamma_{m}\mathbf{B}_{m}
+\displaystyle\gamma_{1}&\displaystyle\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\cdots+\gamma_{s}\mathbf{A}_{s}+\cdots+\gamma_{t}\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
+&\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\cdots+\gamma_{s}\mathbf{A}_{s}+\cdots+\left(-\alpha\gamma_{t}\mathbf{A}_{s}+\alpha\gamma_{t}\mathbf{A}_{s}\right)+\gamma_{t}\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
+&\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\cdots+\left(-\alpha\gamma_{t}+\gamma_{s}\right)\mathbf{A}_{s}+\cdots+\gamma_{t}\left(\alpha\mathbf{A}_{s}+\mathbf{A}_{t}\right)+\cdots+\gamma_{m}\mathbf{A}_{m} \\
+&\displaystyle=\gamma_{1}\mathbf{B}_{1}+\gamma_{2}\mathbf{B}_{2}+\cdots+\left(-\alpha\gamma_{t}+\gamma_{s}\right)\mathbf{B}_{s}+\cdots+\gamma_{t}\mathbf{B}_{t}+\cdots+\gamma_{m}\mathbf{B}_{m}
 \end{align*}
 @col
 says that $\mathcal{C}\left(A^{t}\right)\subseteq\mathcal{C}\left(B^{t}\right)$. So $\mathcal{R}\!\left(A\right)=\mathcal{C}\left(A^{t}\right)=\mathcal{C}\left(B^{t}\right)=\mathcal{R}\!\left(B\right)$ when a single row operation of the third type is performed.
@@ -741,11 +741,11 @@ So the row space of a matrix is preserved by each row operation, and hence row s
 @keyword{Row spaces of two row-equivalent matrices}
 The matrices
 \begin{align*}
-\displaystyle A&amp;\displaystyle=\begin{bmatrix}2&amp;-1&amp;3&amp;4\\
-5&amp;2&amp;-2&amp;3\\
-1&amp;1&amp;0&amp;6\end{bmatrix}&amp;\displaystyle B&amp;\displaystyle=\begin{bmatrix}1&amp;1&amp;0&amp;6\\
-3&amp;0&amp;-2&amp;-9\\
-2&amp;-1&amp;3&amp;4\end{bmatrix}
+\displaystyle A&\displaystyle=\begin{bmatrix}2&-1&3&4\\
+5&2&-2&3\\
+1&1&0&6\end{bmatrix}&\displaystyle B&\displaystyle=\begin{bmatrix}1&1&0&6\\
+3&0&-2&-9\\
+2&-1&3&4\end{bmatrix}
 \end{align*} 
 @newcol
  are row-equivalent via a sequence of two row operations.
@@ -793,12 +793,12 @@ Hence by the above theorem
 @col
  Now consider this vector equality in location $d_{i}$. Since $B$ is in reduced row-echelon form, the entries of column $d_{i}$ of $B$ are all zero, except for a leading 1 in row $i$. Thus, in $B^{t}$, row $d_{i}$ is all zeros, excepting a 1 in column $i$. So, for $1\leq i\leq r$,
 \begin{align*}
-\displaystyle 0&amp;\displaystyle=\left[\mathbf{0}\right]_{d_{i}} \\
-&amp;\displaystyle=\left[\alpha_{1}\mathbf{B}_{1}+\alpha_{2}\mathbf{B}_{2}+\alpha_{3}\mathbf{B}_{3}+\cdots+\alpha_{r}\mathbf{B}_{r}\right]_{d_{i}} \\
-&amp;\displaystyle=\left[\alpha_{1}\mathbf{B}_{1}\right]_{d_{i}}+\left[\alpha_{2}\mathbf{B}_{2}\right]_{d_{i}}+\left[\alpha_{3}\mathbf{B}_{3}\right]_{d_{i}}+\cdots+\left[\alpha_{r}\mathbf{B}_{r}\right]_{d_{i}} \\
-&amp;\displaystyle=\alpha_{1}\left[\mathbf{B}_{1}\right]_{d_{i}}+\alpha_{2}\left[\mathbf{B}_{2}\right]_{d_{i}}+\alpha_{3}\left[\mathbf{B}_{3}\right]_{d_{i}}+\cdots+\alpha_{r}\left[\mathbf{B}_{r}\right]_{d_{i}} \\
-&amp;\displaystyle=\alpha_{1}(0)+\alpha_{2}(0)+\alpha_{3}(0)+\cdots+\alpha_{i}(1)+\cdots+\alpha_{r}(0) \\
-&amp;\displaystyle=\alpha_{i}
+\displaystyle 0&\displaystyle=\left[\mathbf{0}\right]_{d_{i}} \\
+&\displaystyle=\left[\alpha_{1}\mathbf{B}_{1}+\alpha_{2}\mathbf{B}_{2}+\alpha_{3}\mathbf{B}_{3}+\cdots+\alpha_{r}\mathbf{B}_{r}\right]_{d_{i}} \\
+&\displaystyle=\left[\alpha_{1}\mathbf{B}_{1}\right]_{d_{i}}+\left[\alpha_{2}\mathbf{B}_{2}\right]_{d_{i}}+\left[\alpha_{3}\mathbf{B}_{3}\right]_{d_{i}}+\cdots+\left[\alpha_{r}\mathbf{B}_{r}\right]_{d_{i}} \\
+&\displaystyle=\alpha_{1}\left[\mathbf{B}_{1}\right]_{d_{i}}+\alpha_{2}\left[\mathbf{B}_{2}\right]_{d_{i}}+\alpha_{3}\left[\mathbf{B}_{3}\right]_{d_{i}}+\cdots+\alpha_{r}\left[\mathbf{B}_{r}\right]_{d_{i}} \\
+&\displaystyle=\alpha_{1}(0)+\alpha_{2}(0)+\alpha_{3}(0)+\cdots+\alpha_{i}(1)+\cdots+\alpha_{r}(0) \\
+&\displaystyle=\alpha_{i}
 \end{align*} 
 @col
  So we conclude that $\alpha_{i}=0$ for all $1\leq i\leq r$, establishing the linear independence of $S$. 
@@ -831,18 +831,18 @@ Suppose in the course of analyzing a matrix (its column space, its null space, i
 @newcol
  Let $A$ be the matrix whose rows are the vectors in $X$, so by design $X=\mathcal{R}\!\left(A\right)$,
 \begin{align*}
-\displaystyle A=\begin{bmatrix}1&amp;2&amp;1&amp;6&amp;6\\
-3&amp;-1&amp;2&amp;-1&amp;6\\
-1&amp;-1&amp;0&amp;-1&amp;-2\\
--3&amp;2&amp;-3&amp;6&amp;-10\end{bmatrix}
+\displaystyle A=\begin{bmatrix}1&2&1&6&6\\
+3&-1&2&-1&6\\
+1&-1&0&-1&-2\\
+-3&2&-3&6&-10\end{bmatrix}
 \end{align*} 
 @col
  Row-reduce $A$ to form a row-equivalent matrix in reduced row-echelon form,
 \begin{align*}
-\displaystyle B=\begin{bmatrix}\boxed{1}&amp;0&amp;0&amp;2&amp;-1\\
-0&amp;\boxed{1}&amp;0&amp;3&amp;1\\
-0&amp;0&amp;\boxed{1}&amp;-2&amp;5\\
-0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}
+\displaystyle B=\begin{bmatrix}\boxed{1}&0&0&2&-1\\
+0&\boxed{1}&0&3&1\\
+0&0&\boxed{1}&-2&5\\
+0&0&0&0&0\end{bmatrix}
 \end{align*} 
 @col
  Then the above theorem says we can grab the nonzero columns of $B^{t}$ and write
@@ -886,10 +886,10 @@ Find the column space of $A$ in @ref{cb807061818215f8c700c6df6edc1229}.
 <strong>Method 1</strong>
 @newcol
  \begin{align*}
-\displaystyle A\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;4&amp;0&amp;0&amp;2&amp;1&amp;-3\\
-0&amp;0&amp;\boxed{1}&amp;0&amp;1&amp;-3&amp;5\\
-0&amp;0&amp;0&amp;\boxed{1}&amp;2&amp;-6&amp;6\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}
+\displaystyle A\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&4&0&0&2&1&-3\\
+0&0&\boxed{1}&0&1&-3&5\\
+0&0&0&\boxed{1}&2&-6&6\\
+0&0&0&0&0&0&0\end{bmatrix}
 \end{align*} 
 @col
  Let
@@ -912,24 +912,24 @@ Find the column space of $A$ in @ref{cb807061818215f8c700c6df6edc1229}.
 @newcol
  The transpose of $A$ is
 \begin{align*}
-\displaystyle \begin{bmatrix}1&amp;2&amp;0&amp;-1\\
-4&amp;8&amp;0&amp;-4\\
-0&amp;-1&amp;2&amp;2\\
--1&amp;3&amp;-3&amp;4\\
-0&amp;9&amp;-4&amp;8\\
-7&amp;-13&amp;12&amp;-31\\
--9&amp;7&amp;-8&amp;37\end{bmatrix}.
+\displaystyle \begin{bmatrix}1&2&0&-1\\
+4&8&0&-4\\
+0&-1&2&2\\
+-1&3&-3&4\\
+0&9&-4&8\\
+7&-13&12&-31\\
+-9&7&-8&37\end{bmatrix}.
 \end{align*} 
 @col
  Row-reduced this becomes,
 \begin{align*}
-\displaystyle \begin{bmatrix}\boxed{1}&amp;0&amp;0&amp;-\frac{31}{7}\\
-0&amp;\boxed{1}&amp;0&amp;\frac{12}{7}\\
-0&amp;0&amp;\boxed{1}&amp;\frac{13}{7}\\
-0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0\end{bmatrix}.
+\displaystyle \begin{bmatrix}\boxed{1}&0&0&-\frac{31}{7}\\
+0&\boxed{1}&0&\frac{12}{7}\\
+0&0&\boxed{1}&\frac{13}{7}\\
+0&0&0&0\\
+0&0&0&0\\
+0&0&0&0\\
+0&0&0&0\end{bmatrix}.
 \end{align*} 
 @col
  Now, using Theorem    @ref{CSRST} and Theorem    @ref{BRS},
@@ -1025,9 +1025,9 @@ However in method 2, the basis is not a subset of columns. </li>
 Sets for Null Spaces
 Suppose that $A$ is an $m\times n$ matrix and $B$ is a row-equivalent matrix in reduced row-echelon form. Suppose that $B$ has $r$ pivot columns, with indices given by $D=\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\}$, while the $n-r$ non-pivot columns have indices $F=\{f_{1},\,f_{2},\,f_{3},\,\ldots,\,f_{n-r}\}$. Construct the $n-r$ vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$ of size $n$,
 \begin{align*}
-\displaystyle \left[\mathbf{z}_{j}\right]_{i}=\begin{cases}1&amp;\text{if $i\in F$, $i=f_{j}$}\\
-0&amp;\text{if $i\in F$, $i\neq f_{j}$}\\
--\left[B\right]_{k,f_{j}}&amp;\text{if $i\in D$, $i=d_{k}$}\end{cases}
+\displaystyle \left[\mathbf{z}_{j}\right]_{i}=\begin{cases}1&\text{if $i\in F$, $i=f_{j}$}\\
+0&\text{if $i\in F$, $i\neq f_{j}$}\\
+-\left[B\right]_{k,f_{j}}&\text{if $i\in D$, $i=d_{k}$}\end{cases}
 \end{align*}
 Then the null space of $A$ is given by
 \begin{align*}
@@ -1046,10 +1046,10 @@ Then the null space of $A$ is given by
 @keyword{Spanning set of a null space}
 Find a set of vectors, $S$, so that the null space of the matrix
 \begin{align*}
-\displaystyle A=\begin{bmatrix}1&amp;3&amp;3&amp;-1&amp;-5\\
-2&amp;5&amp;7&amp;1&amp;1\\
-1&amp;1&amp;5&amp;1&amp;5\\
--1&amp;-4&amp;-2&amp;0&amp;4\end{bmatrix}
+\displaystyle A=\begin{bmatrix}1&3&3&-1&-5\\
+2&5&7&1&1\\
+1&1&5&1&5\\
+-1&-4&-2&0&4\end{bmatrix}
 \end{align*}
 is the span of $S$, that is, $\left&lt; S \right&gt;={\mathcal{N}}\!\left(A\right)$. 
 <hr/>
@@ -1057,10 +1057,10 @@ is the span of $S$, that is, $\left&lt; S \right&gt;={\mathcal{N}}\!\left(A\righ
  The null space of $A$ is the set of all solutions to the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$.
 Begin by row-reducing $A$. The result is
 \begin{align*}
-\displaystyle \begin{bmatrix}\boxed{1}&amp;0&amp;6&amp;0&amp;4\\
-0&amp;\boxed{1}&amp;-1&amp;0&amp;-2\\
-0&amp;0&amp;0&amp;\boxed{1}&amp;3\\
-0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}.
+\displaystyle \begin{bmatrix}\boxed{1}&0&6&0&4\\
+0&\boxed{1}&-1&0&-2\\
+0&0&0&\boxed{1}&3\\
+0&0&0&0&0\end{bmatrix}.
 \end{align*}
 We have $D=\{1,\,2,\,4\}$ and $F=\{3,\,5\}$. Hence $x_{3}$ and $x_{5}$ are free variables and we can interpret each nonzero row as an expression for the dependent variables $x_{1}$, $x_{2}$, $x_{4}$ (respectively) in the free variables $x_{3}$ and $x_{5}$. With this we can write the vector form of a solution vector as
 \begin{align*}
@@ -1084,11 +1084,11 @@ x_{5}\end{bmatrix}=x_{3}\begin{bmatrix}-6\\
 \end{align*}
 Then, in the notation of the above theorem, we have
 \begin{align*}
-\displaystyle\mathbf{z}_{1}&amp;\displaystyle=\begin{bmatrix}-6\\
+\displaystyle\mathbf{z}_{1}&\displaystyle=\begin{bmatrix}-6\\
 1\\
 1\\
 0\\
-0\end{bmatrix}&amp;\displaystyle\mathbf{z}_{2}&amp;\displaystyle=\begin{bmatrix}-4\\
+0\end{bmatrix}&\displaystyle\mathbf{z}_{2}&\displaystyle=\begin{bmatrix}-4\\
 2\\
 0\\
 -3\\
@@ -1121,33 +1121,33 @@ and
 @newcol
  Consider the matrix:
 \begin{align*}
-\displaystyle A=\begin{bmatrix}2&amp;1&amp;5&amp;1&amp;5&amp;1\\
-1&amp;1&amp;3&amp;1&amp;6&amp;-1\\
--1&amp;1&amp;-1&amp;0&amp;4&amp;-3\\
--3&amp;2&amp;-4&amp;-4&amp;-7&amp;0\\
-3&amp;-1&amp;5&amp;2&amp;2&amp;3\end{bmatrix}.
+\displaystyle A=\begin{bmatrix}2&1&5&1&5&1\\
+1&1&3&1&6&-1\\
+-1&1&-1&0&4&-3\\
+-3&2&-4&-4&-7&0\\
+3&-1&5&2&2&3\end{bmatrix}.
 \end{align*}
 Row-reducing $A$ gives the matrix
 \begin{align*}
-\displaystyle B=\begin{bmatrix}\boxed{1}&amp;0&amp;2&amp;0&amp;-1&amp;2\\
-0&amp;\boxed{1}&amp;1&amp;0&amp;3&amp;-1\\
-0&amp;0&amp;0&amp;\boxed{1}&amp;4&amp;-2\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}.
+\displaystyle B=\begin{bmatrix}\boxed{1}&0&2&0&-1&2\\
+0&\boxed{1}&1&0&3&-1\\
+0&0&0&\boxed{1}&4&-2\\
+0&0&0&0&0&0\\
+0&0&0&0&0&0\end{bmatrix}.
 \end{align*}
 First, the non-pivot columns have indices $F=\{3,\,5,\,6\}$, so we will construct the $n-r=6-3=3$ vectors with a pattern of zeros and ones dictated by the indices in $F$. This is the realization of the first two lines of the three-case definition of the vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$.
 \begin{align*}
-\displaystyle\mathbf{z}_{1}&amp;\displaystyle=\begin{bmatrix}\\
+\displaystyle\mathbf{z}_{1}&\displaystyle=\begin{bmatrix}\\
 \\
 1\\
 \\
 0\\
-0\end{bmatrix}&amp;\displaystyle\mathbf{z}_{2}&amp;\displaystyle=\begin{bmatrix}\\
+0\end{bmatrix}&\displaystyle\mathbf{z}_{2}&\displaystyle=\begin{bmatrix}\\
 \\
 0\\
 \\
 1\\
-0\end{bmatrix}&amp;\displaystyle\mathbf{z}_{3}&amp;\displaystyle=\begin{bmatrix}\\
+0\end{bmatrix}&\displaystyle\mathbf{z}_{3}&\displaystyle=\begin{bmatrix}\\
 \\
 0\\
 \\
@@ -1156,17 +1156,17 @@ First, the non-pivot columns have indices $F=\{3,\,5,\,6\}$, so we will construc
 \end{align*}
 Each of these vectors arises due to the presence of a non-pivot column. The remaining entries of each vector are the entries of the non-pivot column, negated, and distributed into the empty slots in order (these slots have indices in the set $D$, so also refer to pivot columns). This is the realization of the third line of the three-case definition of the vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$.
 \begin{align*}
-\displaystyle\mathbf{z}_{1}&amp;\displaystyle=\begin{bmatrix}-2\\
+\displaystyle\mathbf{z}_{1}&\displaystyle=\begin{bmatrix}-2\\
 -1\\
 1\\
 0\\
 0\\
-0\end{bmatrix}&amp;\displaystyle\mathbf{z}_{2}&amp;\displaystyle=\begin{bmatrix}1\\
+0\end{bmatrix}&\displaystyle\mathbf{z}_{2}&\displaystyle=\begin{bmatrix}1\\
 -3\\
 0\\
 -4\\
 1\\
-0\end{bmatrix}&amp;\displaystyle\mathbf{z}_{3}&amp;\displaystyle=\begin{bmatrix}-2\\
+0\end{bmatrix}&\displaystyle\mathbf{z}_{3}&\displaystyle=\begin{bmatrix}-2\\
 1\\
 0\\
 2\\
@@ -1213,17 +1213,17 @@ vectors that could be used to span the null space of a matrix.
 @label{LINSB}
 @keyword{Linear independence of null space basis} Suppose that we are interested in the null space of a $3\times 7$ matrix $A$ which row-reduces to
 \begin{align*}
-\displaystyle B=\begin{bmatrix}\boxed{1}&amp;0&amp;-2&amp;4&amp;0&amp;3&amp;9\\
-0&amp;\boxed{1}&amp;5&amp;6&amp;0&amp;7&amp;1\\
-0&amp;0&amp;0&amp;0&amp;\boxed{1}&amp;8&amp;-5\end{bmatrix}.
+\displaystyle B=\begin{bmatrix}\boxed{1}&0&-2&4&0&3&9\\
+0&\boxed{1}&5&6&0&7&1\\
+0&0&0&0&\boxed{1}&8&-5\end{bmatrix}.
 \end{align*} 
 @newcol
  Then $F=\{3,\,4,\,6,\,7\}$ is the set of indices for our four free variables that would be used in a description of the solution set for the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$. Applying @ref{HMVEI}, we can begin to construct a set of four vectors whose span is the null space of $A$, a set of vectors we will refer to as $T$.
 \begin{align*}
 \displaystyle {\mathcal{N}}\!\left(A\right)
 =\left&lt; T\right&gt;
-&amp;=\left&lt; \{\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3},\,\mathbf{z}_{4}\}\right&gt;\\
-&amp;=\left&lt; \left\{\begin{bmatrix}\\
+&=\left&lt; \{\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3},\,\mathbf{z}_{4}\}\right&gt;\\
+&=\left&lt; \left\{\begin{bmatrix}\\
 \\
 1\\
 0\\
@@ -1254,14 +1254,14 @@ vectors that could be used to span the null space of a matrix.
 
 @col
  \begin{align*}
-\displaystyle\mathbf{0}&amp;\displaystyle=\alpha_{1}\mathbf{z}_{1}+\alpha_{2}\mathbf{z}_{2}+\alpha_{3}\mathbf{z}_{3}+\alpha_{4}\mathbf{z}_{4} \\
+\displaystyle\mathbf{0}&\displaystyle=\alpha_{1}\mathbf{z}_{1}+\alpha_{2}\mathbf{z}_{2}+\alpha_{3}\mathbf{z}_{3}+\alpha_{4}\mathbf{z}_{4} \\
 \displaystyle\begin{bmatrix}0\\
 0\\
 0\\
 0\\
 0\\
 0\\
-0\end{bmatrix}&amp;\displaystyle=\alpha_{1}\begin{bmatrix}\\
+0\end{bmatrix}&\displaystyle=\alpha_{1}\begin{bmatrix}\\
 \\
 1\\
 0\\
@@ -1286,7 +1286,7 @@ vectors that could be used to span the null space of a matrix.
 \\
 0\\
 1\end{bmatrix} \\
-&amp;\displaystyle=\begin{bmatrix}\\
+&\displaystyle=\begin{bmatrix}\\
 \\
 \alpha_{1}\\
 0\\
@@ -1328,9 +1328,9 @@ vectors that could be used to span the null space of a matrix.
 @label{BNS}
  Suppose that $A$ is an $m\times n$ matrix, and $B$ is a row-equivalent matrix in reduced row-echelon form with $r$ pivot columns. Let $D=\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\}$ and $F=\{f_{1},\,f_{2},\,f_{3},\,\ldots,\,f_{n-r}\}$ be the sets of column indices of $B$ which are and are not, respectively, pivot columns. Construct the $n-r$ vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$ of size $n$ as
 \begin{align*}
-\displaystyle \left[\mathbf{z}_{j}\right]_{i}=\begin{cases}1&amp;\text{if $i\in F$, $i=f_{j}$}\\
-0&amp;\text{if $i\in F$, $i\neq f_{j}$}\\
--\left[B\right]_{k,f_{j}}&amp;\text{if $i\in D$, $i=d_{k}$}\end{cases}
+\displaystyle \left[\mathbf{z}_{j}\right]_{i}=\begin{cases}1&\text{if $i\in F$, $i=f_{j}$}\\
+0&\text{if $i\in F$, $i\neq f_{j}$}\\
+-\left[B\right]_{k,f_{j}}&\text{if $i\in D$, $i=d_{k}$}\end{cases}
 \end{align*}
 (In fact $\mathbf{z}_{j}$ corresponding to the solution $x_{f_{j}}=1$ and $x_{f_{k}}=0$ for $k\neq j$.) Define the set $S=\{\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3},\,\ldots,\,\mathbf{z}_{n-r}\}$. Then <ol class="ltx_enumerate">
 <li class="ltx_item"> ${\mathcal{N}}\!\left(A\right)=\left&lt; S\right&gt;$. </li>
@@ -1345,15 +1345,15 @@ To prove the linear independence of a set, we need to start with a relation of l
 \end{align*}
 For each $j$, $1\leq j\leq n-r$, consider the equality of the individual entries of the vectors on both sides of this equality in position $f_{j}$:
 \begin{align*}
-\displaystyle 0&amp;\displaystyle=\left[\mathbf{0}\right]_{f_{j}} \\
-&amp;\displaystyle=\left[\alpha_{1}\mathbf{z}_{1}+\alpha_{2}\mathbf{z}_{2}+\alpha_{3}\mathbf{z}_{3}+\cdots+\alpha_{n-r}\mathbf{z}_{n-r}\right]_{f_{j}} \\
-&amp;\displaystyle=\left[\alpha_{1}\mathbf{z}_{1}\right]_{f_{j}}+\left[\alpha_{2}\mathbf{z}_{2}\right]_{f_{j}}+\left[\alpha_{3}\mathbf{z}_{3}\right]_{f_{j}}+\cdots+\left[\alpha_{n-r}\mathbf{z}_{n-r}\right]_{f_{j}} \\
-&amp;\displaystyle=\alpha_{1}\left[\mathbf{z}_{1}\right]_{f_{j}}+\alpha_{2}\left[\mathbf{z}_{2}\right]_{f_{j}}+\alpha_{3}\left[\mathbf{z}_{3}\right]_{f_{j}}+\cdots+ \\
-&amp;\displaystyle\quad\quad\alpha_{j-1}\left[\mathbf{z}_{j-1}\right]_{f_{j}}+\alpha_{j}\left[\mathbf{z}_{j}\right]_{f_{j}}+\alpha_{j+1}\left[\mathbf{z}_{j+1}\right]_{f_{j}}+\cdots+ \\
-&amp;\displaystyle\quad\quad\alpha_{n-r}\left[\mathbf{z}_{n-r}\right]_{f_{j}} \\
-&amp;\displaystyle=\alpha_{1}(0)+\alpha_{2}(0)+\alpha_{3}(0)+\cdots+ \\
-&amp;\displaystyle\quad\quad\alpha_{j-1}(0)+\alpha_{j}(1)+\alpha_{j+1}(0)+\cdots+\alpha_{n-r}(0)&amp; \text{ definition of } \mathbf{z}_{j} \\
-&amp;\displaystyle=\alpha_{j}
+\displaystyle 0&\displaystyle=\left[\mathbf{0}\right]_{f_{j}} \\
+&\displaystyle=\left[\alpha_{1}\mathbf{z}_{1}+\alpha_{2}\mathbf{z}_{2}+\alpha_{3}\mathbf{z}_{3}+\cdots+\alpha_{n-r}\mathbf{z}_{n-r}\right]_{f_{j}} \\
+&\displaystyle=\left[\alpha_{1}\mathbf{z}_{1}\right]_{f_{j}}+\left[\alpha_{2}\mathbf{z}_{2}\right]_{f_{j}}+\left[\alpha_{3}\mathbf{z}_{3}\right]_{f_{j}}+\cdots+\left[\alpha_{n-r}\mathbf{z}_{n-r}\right]_{f_{j}} \\
+&\displaystyle=\alpha_{1}\left[\mathbf{z}_{1}\right]_{f_{j}}+\alpha_{2}\left[\mathbf{z}_{2}\right]_{f_{j}}+\alpha_{3}\left[\mathbf{z}_{3}\right]_{f_{j}}+\cdots+ \\
+&\displaystyle\quad\quad\alpha_{j-1}\left[\mathbf{z}_{j-1}\right]_{f_{j}}+\alpha_{j}\left[\mathbf{z}_{j}\right]_{f_{j}}+\alpha_{j+1}\left[\mathbf{z}_{j+1}\right]_{f_{j}}+\cdots+ \\
+&\displaystyle\quad\quad\alpha_{n-r}\left[\mathbf{z}_{n-r}\right]_{f_{j}} \\
+&\displaystyle=\alpha_{1}(0)+\alpha_{2}(0)+\alpha_{3}(0)+\cdots+ \\
+&\displaystyle\quad\quad\alpha_{j-1}(0)+\alpha_{j}(1)+\alpha_{j+1}(0)+\cdots+\alpha_{n-r}(0)& \text{ definition of } \mathbf{z}_{j} \\
+&\displaystyle=\alpha_{j}
 \end{align*}
 So for all $j$, $1\leq j\leq n-r$, we have $\alpha_{j}=0$. Hence, the only relation of linear dependence on $S=\{\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3},\,\ldots,\,\mathbf{z}_{n-r}\}$ is the trivial one. By the definition of linear independence, the set is linearly independent, as desired. 
 @qed
@@ -1363,11 +1363,11 @@ So for all $j$, $1\leq j\leq n-r$, we have $\alpha_{j}=0$. Hence, the only relat
 @eg
  Find the null space of the matrix
 \begin{align*}
-\displaystyle A=\begin{bmatrix}-2&amp;-1&amp;-2&amp;-4&amp;4\\
--6&amp;-5&amp;-4&amp;-4&amp;6\\
-10&amp;7&amp;7&amp;10&amp;-13\\
--7&amp;-5&amp;-6&amp;-9&amp;10\\
--4&amp;-3&amp;-4&amp;-6&amp;6\\
+\displaystyle A=\begin{bmatrix}-2&-1&-2&-4&4\\
+-6&-5&-4&-4&6\\
+10&7&7&10&-13\\
+-7&-5&-6&-9&10\\
+-4&-3&-4&-6&6\\
 \end{bmatrix}.
 \end{align*} 
 @end
@@ -1375,11 +1375,11 @@ So for all $j$, $1\leq j\leq n-r$, we have $\alpha_{j}=0$. Hence, the only relat
 @newcol
  The RREF of $A$ is:
 \begin{align*}
-\displaystyle B=\begin{bmatrix}\boxed{1}&amp;0&amp;0&amp;1&amp;-2\\
-0&amp;\boxed{1}&amp;0&amp;-2&amp;2\\
-0&amp;0&amp;\boxed{1}&amp;2&amp;-1\\
-0&amp;0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}.
+\displaystyle B=\begin{bmatrix}\boxed{1}&0&0&1&-2\\
+0&\boxed{1}&0&-2&2\\
+0&0&\boxed{1}&2&-1\\
+0&0&0&0&0\\
+0&0&0&0&0\end{bmatrix}.
 \end{align*}
 The free variables are $x_{4}$ and $x_{5}$.
 Setting $x_{4}=1$ and $x_{5}=0$ gives:
@@ -1484,10 +1484,10 @@ A\left(B\vect{x}\right) = \left(AB\right)\vect{x}.
 @steps
 \[
 \begin{split}
-AB &amp;= A[\vect{w}_1 | \vect{w}_2 | \cdots | \vect{w}_m]
-\\&amp;
+AB &= A[\vect{w}_1 | \vect{w}_2 | \cdots | \vect{w}_m]
+\\&
 \class{steps}{\cssId{step0}{=[A\vect{w}_1 | A\vect{w}_2 | \cdots | A\vect{w}_m]}}
-\\&amp;
+\\&
 \class{steps}{\cssId{step1}{= [\vect{u}_1 | \vect{u}_2 | \cdots | \vect{u}_m]}}
 \end{split}
 \]
@@ -1566,19 +1566,19 @@ $\dim P_{n}=n+1$. See example 4.
 <strong>Math major only</strong>
 Let $S_{2}$ be the set of $2\times 2$ symmetric matrices. For $A\in S_{2}$,
 \begin{align*}
-\displaystyle A=\begin{bmatrix}a&amp;b\\
-b&amp;c\end{bmatrix}=a\begin{bmatrix}1&amp;0\\
-0&amp;0\end{bmatrix}+b\begin{bmatrix}0&amp;1\\
-1&amp;0\end{bmatrix}+c\begin{bmatrix}0&amp;0\\
-0&amp;1\end{bmatrix}
+\displaystyle A=\begin{bmatrix}a&b\\
+b&c\end{bmatrix}=a\begin{bmatrix}1&0\\
+0&0\end{bmatrix}+b\begin{bmatrix}0&1\\
+1&0\end{bmatrix}+c\begin{bmatrix}0&0\\
+0&1\end{bmatrix}
 \end{align*} 
 @newcol
  We can show that:
 \begin{align*}
-\displaystyle T=\left\{\begin{bmatrix}1&amp;0\\
-0&amp;0\end{bmatrix},\begin{bmatrix}0&amp;1\\
-1&amp;0\end{bmatrix},\begin{bmatrix}0&amp;0\\
-0&amp;1\end{bmatrix}\right\}
+\displaystyle T=\left\{\begin{bmatrix}1&0\\
+0&0\end{bmatrix},\begin{bmatrix}0&1\\
+1&0\end{bmatrix},\begin{bmatrix}0&0\\
+0&1\end{bmatrix}\right\}
 \end{align*} 
 @col
  is a basis for $S_{2}$. Hence $\dim S_{2}=3$. 
@@ -1746,24 +1746,24 @@ $\rank{A}=\dim(\csp{A})$.
 Let us compute the rank and nullity of
 \[
 A=\begin{bmatrix}
-2 &amp; -4 &amp; -1 &amp; 3 &amp; 2 &amp; 1 &amp; -4\\
-1 &amp; -2 &amp; 0 &amp; 0 &amp; 4 &amp; 0 &amp; 1\\
--2 &amp; 4 &amp; 1 &amp; 0 &amp; -5 &amp; -4 &amp; -8\\
-1 &amp; -2 &amp; 1 &amp; 1 &amp; 6 &amp; 1 &amp; -3\\
-2 &amp; -4 &amp; -1 &amp; 1 &amp; 4 &amp; -2 &amp; -1\\
--1 &amp; 2 &amp; 3 &amp; -1 &amp; 6 &amp; 3 &amp; -1
+2 & -4 & -1 & 3 & 2 & 1 & -4\\
+1 & -2 & 0 & 0 & 4 & 0 & 1\\
+-2 & 4 & 1 & 0 & -5 & -4 & -8\\
+1 & -2 & 1 & 1 & 6 & 1 & -3\\
+2 & -4 & -1 & 1 & 4 & -2 & -1\\
+-1 & 2 & 3 & -1 & 6 & 3 & -1
 \end{bmatrix}
 \] 
 @newcol
  To do this, we will first row-reduce the matrix since that will help us determine bases for the null space and column space.
 \[
 \begin{bmatrix}
-\leading{1} &amp; -2 &amp; 0 &amp; 0 &amp; 4 &amp; 0 &amp; 1\\
-0 &amp; 0 &amp; \leading{1} &amp; 0 &amp; 3 &amp; 0 &amp; -2\\
-0 &amp; 0 &amp; 0 &amp; \leading{1} &amp; -1 &amp; 0 &amp; -3\\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \leading{1} &amp; 1\\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0
+\leading{1} & -2 & 0 & 0 & 4 & 0 & 1\\
+0 & 0 & \leading{1} & 0 & 3 & 0 & -2\\
+0 & 0 & 0 & \leading{1} & -1 & 0 & -3\\
+0 & 0 & 0 & 0 & 0 & \leading{1} & 1\\
+0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0
 \end{bmatrix}
 \] 
 @col
@@ -1843,24 +1843,24 @@ Hence $r=r\left(A^{t}\right)$. This completes the proof.
 @eg
  The matrix
 \begin{align*}
-\displaystyle E=\begin{bmatrix}0&amp;4&amp;-1&amp;2&amp;2&amp;3&amp;1\\
-2&amp;-2&amp;1&amp;-1&amp;0&amp;-4&amp;-3\\
--2&amp;-3&amp;9&amp;-3&amp;9&amp;-1&amp;9\\
--3&amp;-4&amp;9&amp;4&amp;-1&amp;6&amp;-2\\
--3&amp;-4&amp;6&amp;-2&amp;5&amp;9&amp;-4\\
-9&amp;-3&amp;8&amp;-2&amp;-4&amp;2&amp;4\\
-8&amp;2&amp;2&amp;9&amp;3&amp;0&amp;9\end{bmatrix}
+\displaystyle E=\begin{bmatrix}0&4&-1&2&2&3&1\\
+2&-2&1&-1&0&-4&-3\\
+-2&-3&9&-3&9&-1&9\\
+-3&-4&9&4&-1&6&-2\\
+-3&-4&6&-2&5&9&-4\\
+9&-3&8&-2&-4&2&4\\
+8&2&2&9&3&0&9\end{bmatrix}
 \end{align*} 
 @newcol
  is row-equivalent to the matrix in reduced row-echelon form,
 \begin{align*}
-\displaystyle \begin{bmatrix}\boxed{1}&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\\
-0&amp;\boxed{1}&amp;0&amp;0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;\boxed{1}&amp;0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;\boxed{1}&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0&amp;\boxed{1}&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0&amp;0&amp;\boxed{1}&amp;0\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;\boxed{1}\end{bmatrix}
+\displaystyle \begin{bmatrix}\boxed{1}&0&0&0&0&0&0\\
+0&\boxed{1}&0&0&0&0&0\\
+0&0&\boxed{1}&0&0&0&0\\
+0&0&0&\boxed{1}&0&0&0\\
+0&0&0&0&\boxed{1}&0&0\\
+0&0&0&0&0&\boxed{1}&0\\
+0&0&0&0&0&0&\boxed{1}\end{bmatrix}
 \end{align*} 
 @col
  With $n=7$ columns and $r=7$ nonzero rows tells us the rank is $r\left(E\right)=7$ and the nullity is $n\left(E\right)=7-7=0$. 
@@ -1891,9 +1891,9 @@ Hence $r=r\left(A^{t}\right)$. This completes the proof.
 @newcol
  Suppose $r\left(A\right)=n$. Then the dimension formula gives
 \begin{align*}
-\displaystyle n\left(A\right)&amp;\displaystyle=n-r\left(A\right) \\
-&amp;\displaystyle=n-n \\
-&amp;\displaystyle=0
+\displaystyle n\left(A\right)&\displaystyle=n-r\left(A\right) \\
+&\displaystyle=n-n \\
+&\displaystyle=0
 \end{align*} 
 @endcol
 (3 $\Rightarrow$ 1) 
@@ -1982,8 +1982,8 @@ The following are equivalent: <ol class="ltx_enumerate">
 1\end{bmatrix}\right\}$.
 Let
 \begin{align*}
-\displaystyle A=[\mathbf{v}_{1}|\mathbf{v}_{2}]=\begin{bmatrix}1&amp;1\\
-0&amp;1\end{bmatrix}
+\displaystyle A=[\mathbf{v}_{1}|\mathbf{v}_{2}]=\begin{bmatrix}1&1\\
+0&1\end{bmatrix}
 \end{align*} 
 @newcol
 <strong>Exercise.</strong> The matrix $A$ is nonsingular.
@@ -1995,9 +1995,9 @@ Let
 @slide
 @eg
  \begin{align*}
-\displaystyle A=\begin{bmatrix}-7&amp;-6&amp;-12\\
-5&amp;5&amp;7\\
-1&amp;0&amp;4\end{bmatrix}.
+\displaystyle A=\begin{bmatrix}-7&-6&-12\\
+5&5&7\\
+1&0&4\end{bmatrix}.
 \end{align*} 
 @newcol
  It may be shown that $A$ is row equivalent to the $3\times 3$
@@ -2025,10 +2025,10 @@ Column Space of a Nonsingular Matrix}
 @eg
  Let
 \begin{align*}
-\displaystyle A=\begin{bmatrix}0&amp;1&amp;2&amp;3\\
--1&amp;1&amp;2&amp;1\\
-0&amp;1&amp;0&amp;2\\
-1&amp;1&amp;1&amp;4\\
+\displaystyle A=\begin{bmatrix}0&1&2&3\\
+-1&1&2&1\\
+0&1&0&2\\
+1&1&1&4\\
 \end{bmatrix}.
 \end{align*} 
 @newcol
@@ -2161,18 +2161,18 @@ if and only if $\mathbf{u}$ is a linear combination of $\mathbf{v}_{1},\ldots,\m
 @item
  Determine if
 \begin{align*}
-\displaystyle A_{1}=\begin{bmatrix}1&amp;2\\
-3&amp;4\end{bmatrix},A_{2}=\begin{bmatrix}1&amp;-1\\
-5&amp;6\end{bmatrix},A_{3}=\begin{bmatrix}-2&amp;0\\
--3&amp;-4\end{bmatrix}
+\displaystyle A_{1}=\begin{bmatrix}1&2\\
+3&4\end{bmatrix},A_{2}=\begin{bmatrix}1&-1\\
+5&6\end{bmatrix},A_{3}=\begin{bmatrix}-2&0\\
+-3&-4\end{bmatrix}
 \end{align*}
 is linearly independent or not. 
 @item
 @newcol
  Express
 \begin{align*}
-\displaystyle B=\begin{bmatrix}-3&amp;0\\
-4&amp;1\end{bmatrix}
+\displaystyle B=\begin{bmatrix}-3&0\\
+4&1\end{bmatrix}
 \end{align*}
 as a linear combination of $A_{1},A_{2},A_{3}$. 
 @endcol
@@ -2200,13 +2200,13 @@ as a linear combination of $A_{1},A_{2},A_{3}$.
 1\end{bmatrix}.
 \end{align*}
 \begin{align*}
-\displaystyle [\mathbf{v}_{1}|\mathbf{v}_{2}|\mathbf{v}_{3}]=\begin{bmatrix}1&amp;1&amp;-2\\
-3&amp;5&amp;-3\\
-2&amp;-1&amp;0\\
-4&amp;6&amp;-4\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}1&amp;0&amp;0\\
-0&amp;1&amp;0\\
-0&amp;0&amp;1\\
-0&amp;0&amp;0\\
+\displaystyle [\mathbf{v}_{1}|\mathbf{v}_{2}|\mathbf{v}_{3}]=\begin{bmatrix}1&1&-2\\
+3&5&-3\\
+2&-1&0\\
+4&6&-4\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}1&0&0\\
+0&1&0\\
+0&0&1\\
+0&0&0\\
 \end{bmatrix}.
 \end{align*} 
 @col
@@ -2217,14 +2217,14 @@ is linearly independent. Therefore $\left\{A_{1},A_{2},A_{3}\right\}$ is linearl
 @newcol
  Next
 \begin{align*}
-\displaystyle [\mathbf{v}_{1}|\mathbf{v}_{2}|\mathbf{v}_{3}|\mathbf{b}]=\begin{bmatrix}1&amp;1&amp;-2&amp;-3\\
-3&amp;5&amp;-3&amp;4\\
-2&amp;-1&amp;0&amp;0\\
-4&amp;6&amp;-5&amp;1\\
-\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}1&amp;0&amp;0&amp;1\\
-0&amp;1&amp;0&amp;2\\
-0&amp;0&amp;1&amp;3\\
-0&amp;0&amp;0&amp;0\\
+\displaystyle [\mathbf{v}_{1}|\mathbf{v}_{2}|\mathbf{v}_{3}|\mathbf{b}]=\begin{bmatrix}1&1&-2&-3\\
+3&5&-3&4\\
+2&-1&0&0\\
+4&6&-5&1\\
+\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}1&0&0&1\\
+0&1&0&2\\
+0&0&1&3\\
+0&0&0&0\\
 \end{bmatrix}.
 \end{align*} 
 @newcol
@@ -2264,14 +2264,14 @@ Find a basis for $\left&lt; \left\{f_{1},f_{2},f_{3},f_{4},f_{5}\right\}\right&g
 @newcol
  Then
 \begin{align*}
-\displaystyle A=[\mathbf{v}_{1}|\mathbf{v}_{2}|\mathbf{v}_{3}|\mathbf{v}_{4}|\mathbf{v}_{5}]=\begin{bmatrix}1&amp;2&amp;4&amp;0&amp;3\\
-1&amp;1&amp;3&amp;0&amp;2\\
-0&amp;1&amp;1&amp;2&amp;3\\
-1&amp;0&amp;2&amp;1&amp;2\\
-\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}1&amp;0&amp;2&amp;0&amp;1\\
-0&amp;1&amp;1&amp;0&amp;1\\
-0&amp;0&amp;0&amp;1&amp;1\\
-0&amp;0&amp;0&amp;0&amp;0\\
+\displaystyle A=[\mathbf{v}_{1}|\mathbf{v}_{2}|\mathbf{v}_{3}|\mathbf{v}_{4}|\mathbf{v}_{5}]=\begin{bmatrix}1&2&4&0&3\\
+1&1&3&0&2\\
+0&1&1&2&3\\
+1&0&2&1&2\\
+\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}1&0&2&0&1\\
+0&1&1&0&1\\
+0&0&0&1&1\\
+0&0&0&0&0\\
 \end{bmatrix}.
 \end{align*} 
 @col

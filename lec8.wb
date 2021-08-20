@@ -17,29 +17,29 @@ A\vec{x} = \vec{0}.
  Equivalently,
 it is the set of all the vectors which are solutions to the homogeneous system $\linearsystem{A}{\mathbf{0}}$.
 That is, if:
-\[A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;\dots&amp;a_{1n}\\
-a_{21}&amp;a_{22}&amp;a_{23}&amp;\dots&amp;a_{2n}\\
-a_{31}&amp;a_{32}&amp;a_{33}&amp;\dots&amp;a_{3n}\\
-\vdots&amp;\\
-a_{m1}&amp;a_{m2}&amp;a_{m3}&amp;\dots&amp;a_{mn}\\
+\[A=\begin{bmatrix}a_{11}&a_{12}&a_{13}&\dots&a_{1n}\\
+a_{21}&a_{22}&a_{23}&\dots&a_{2n}\\
+a_{31}&a_{32}&a_{33}&\dots&a_{3n}\\
+\vdots&\\
+a_{m1}&a_{m2}&a_{m3}&\dots&a_{mn}\\
 \end{bmatrix}\]
 then ${\mathcal{N}}\!\left(A\right)$ is the solution set of
 \begin{align*}
-a_{11}x_1+a_{12}x_2+a_{13}x_3+\dots+a_{1n}x_n&amp;=0\\
-a_{21}x_1+a_{22}x_2+a_{23}x_3+\dots+a_{2n}x_n&amp;=0\\
-a_{31}x_1+a_{32}x_2+a_{33}x_3+\dots+a_{3n}x_n&amp;=0\\
-\vdots&amp;\\
-a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\dots+a_{mn}x_n&amp;=0
+a_{11}x_1+a_{12}x_2+a_{13}x_3+\dots+a_{1n}x_n&=0\\
+a_{21}x_1+a_{22}x_2+a_{23}x_3+\dots+a_{2n}x_n&=0\\
+a_{31}x_1+a_{32}x_2+a_{33}x_3+\dots+a_{3n}x_n&=0\\
+\vdots&\\
+a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\dots+a_{mn}x_n&=0
 \end{align*} 
 @endcol
 @end
 @slide
 @eg
  Suppose
-\[A=\begin{bmatrix}1&amp;4&amp;0&amp;-1&amp;0&amp;7&amp;-9\\
-2&amp;8&amp;-1&amp;3&amp;9&amp;-13&amp;7\\
-0&amp;0&amp;2&amp;-3&amp;-4&amp;12&amp;-8\\
--1&amp;-4&amp;2&amp;4&amp;8&amp;-31&amp;37\end{bmatrix}\]
+\[A=\begin{bmatrix}1&4&0&-1&0&7&-9\\
+2&8&-1&3&9&-13&7\\
+0&0&2&-3&-4&12&-8\\
+-1&-4&2&4&8&-31&37\end{bmatrix}\]
 Then
 \[\mathbf{x}=\begin{bmatrix}3\\
 0\\
@@ -76,23 +76,23 @@ is not in ${\mathcal{N}}\!\left(A\right)$ as
 @eg
 @label{CNS1}
  Let us compute the null space of
-\[A=\begin{bmatrix}2&amp;-1&amp;7&amp;-3&amp;-8\\
-1&amp;0&amp;2&amp;4&amp;9\\
-2&amp;2&amp;-2&amp;-1&amp;8\end{bmatrix}\]
+\[A=\begin{bmatrix}2&-1&7&-3&-8\\
+1&0&2&4&9\\
+2&2&-2&-1&8\end{bmatrix}\]
 which we write as ${\mathcal{N}}\!\left(A\right)$. Translating @ref{NSM},
 we simply desire to solve the homogeneous system $\linearsystem{A}{\mathbf{0}}$. So we row-reduce the augmented matrix to obtain:
 
 @newcol
- \[\left[\begin{array}[]{ccccc|c}\boxed{1}&amp;0&amp;2&amp;0&amp;1&amp;0\\
-0&amp;\boxed{1}&amp;-3&amp;0&amp;4&amp;0\\
-0&amp;0&amp;0&amp;\boxed{1}&amp;2&amp;0\end{array}\right]\]
+ \[\left[\begin{array}[]{ccccc|c}\boxed{1}&0&2&0&1&0\\
+0&\boxed{1}&-3&0&4&0\\
+0&0&0&\boxed{1}&2&0\end{array}\right]\]
 The variables (of the homogeneous system) $x_{3}$ and $x_{5}$ are free (since columns 1, 2 and 4 are pivot columns), so we arrange the equations represented by the matrix in reduced row-echelon form to:
 
 @col
  \begin{align*}
-x_1&amp;=-2x_3-x_5\\
-x_2&amp;=3x_3-4x_5\\
-x_4&amp;=-2x_5
+x_1&=-2x_3-x_5\\
+x_2&=3x_3-4x_5\\
+x_4&=-2x_5
 \end{align*}
 
 @col
@@ -108,17 +108,17 @@ x_{5}\end{bmatrix}\,\right|\,x_{3},\,x_{5}\text{ real numbers}\right\}.\]
 @eg
 @label{CNS2}
  Let us compute the null space of
-\[C=\begin{bmatrix}-4&amp;6&amp;1\\
--1&amp;4&amp;1\\
-5&amp;6&amp;7\\
-4&amp;7&amp;1\end{bmatrix}\]
+\[C=\begin{bmatrix}-4&6&1\\
+-1&4&1\\
+5&6&7\\
+4&7&1\end{bmatrix}\]
 which we write as ${\mathcal{N}}\!\left(C\right)$. Translating definition   @ref{NSM}, we simply desire to solve the homogeneous system
 $\linearsystem{C}{\mathbf{0}}$.
 So we row-reduce the augmented matrix to obtain
-\[\left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;0&amp;0\\
-0&amp;\boxed{1}&amp;0&amp;0\\
-0&amp;0&amp;\boxed{1}&amp;0\\
-0&amp;0&amp;0&amp;0\end{array}\right]\] 
+\[\left[\begin{array}[]{ccc|c}\boxed{1}&0&0&0\\
+0&\boxed{1}&0&0\\
+0&0&\boxed{1}&0\\
+0&0&0&0\end{array}\right]\] 
 @newcol
  There are no free variables in the homogeneous system represented by the row-reduced matrix, so there is only the trivial solution, the zero vector, $\mathbf{0}$. So we can write the (trivial) solution set as
 \[{\mathcal{N}}\!\left(C\right)=\{\mathbf{0}\}=\left\{\begin{bmatrix}0\\
@@ -257,7 +257,7 @@ If $X$ is a set, $x\in X$ means $x$ is an element of the set $X$.
 @newcol
  Suppose that $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$. Then $\mathbf{u}$ and $\mathbf{v}$ are @keyword{equal}, written $\mathbf{u}=\mathbf{v}$ if
 \begin{align*}
-\displaystyle\left[\mathbf{u}\right]_{i}&amp;\displaystyle=\left[\mathbf{v}\right]_{i}&amp;\displaystyle 1\leq i\leq m
+\displaystyle\left[\mathbf{u}\right]_{i}&\displaystyle=\left[\mathbf{v}\right]_{i}&\displaystyle 1\leq i\leq m
 \end{align*}
 That is,
 \begin{align*}
@@ -271,7 +271,7 @@ v_{m}\end{bmatrix}
 \end{align*}
 if
 \begin{align*}
-\displaystyle u_{i}&amp;\displaystyle=v_{i}&amp;\displaystyle 1\leq i\leq m.
+\displaystyle u_{i}&\displaystyle=v_{i}&\displaystyle 1\leq i\leq m.
 \end{align*} 
 @endcol
 @end
@@ -279,9 +279,9 @@ if
 @eg
  The system of linear equations:
 \begin{align*}
-\displaystyle-7x_{1}-6x_{2}-12x_{3}&amp;\displaystyle=-33 \\
-\displaystyle 5x_{1}+5x_{2}+7x_{3}&amp;\displaystyle=24 \\
-\displaystyle x_{1}+4x_{3}&amp;\displaystyle=5
+\displaystyle-7x_{1}-6x_{2}-12x_{3}&\displaystyle=-33 \\
+\displaystyle 5x_{1}+5x_{2}+7x_{3}&\displaystyle=24 \\
+\displaystyle x_{1}+4x_{3}&\displaystyle=5
 \end{align*}
 can be rewritten as:
 
@@ -301,7 +301,7 @@ x_{1}+4x_{3}\end{bmatrix}=\begin{bmatrix}-33\\
 @label{CVA}
  Suppose that $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$. The @keyword{sum} of $\mathbf{u}$ and $\mathbf{v}$ is the vector $\mathbf{u}+\mathbf{v}$ defined by
 \begin{align*}
-\displaystyle\left[\mathbf{u}+\mathbf{v}\right]_{i}&amp;\displaystyle=\left[\mathbf{u}\right]_{i}+\left[\mathbf{v}\right]_{i}&amp;\displaystyle 1\leq i\leq m.
+\displaystyle\left[\mathbf{u}+\mathbf{v}\right]_{i}&\displaystyle=\left[\mathbf{u}\right]_{i}+\left[\mathbf{v}\right]_{i}&\displaystyle 1\leq i\leq m.
 \end{align*}
 That is
 \begin{align*}
@@ -326,8 +326,8 @@ u_{m}+v_{m}\end{bmatrix}.
 \displaystyle\mathbf{u}=\begin{bmatrix}2\\
 -3\\
 4\\
-2\end{bmatrix}&amp;
-\quad&amp;
+2\end{bmatrix}&
+\quad&
 \displaystyle\mathbf{v}=\begin{bmatrix}-1\\
 5\\
 2\\
@@ -357,7 +357,7 @@ then
 @label{CVSM}
  Suppose $\mathbf{u}\in{\mathbb{R}}^{m}$ and $\alpha\in{\mathbb{R}}^{\hbox{}}$, then the @keyword{scalar multiple} of $\mathbf{u}$ by $\alpha$ is the vector $\alpha\mathbf{u}$ defined by
 \begin{align*}
-\displaystyle\left[\alpha\mathbf{u}\right]_{i}&amp;\displaystyle=\alpha\left[\mathbf{u}\right]_{i}&amp;\displaystyle 1\leq i\leq m.
+\displaystyle\left[\alpha\mathbf{u}\right]_{i}&\displaystyle=\alpha\left[\mathbf{u}\right]_{i}&\displaystyle 1\leq i\leq m.
 \end{align*}
 That is
 \begin{align*}
@@ -402,9 +402,9 @@ and $\alpha=6$, then
 @eg
  The system of linear equations
 \begin{align*}
-\displaystyle-7x_{1}-6x_{2}-12x_{3}&amp;\displaystyle=-33 \\
-\displaystyle 5x_{1}+5x_{2}+7x_{3}&amp;\displaystyle=24 \\
-\displaystyle x_{1}+4x_{3}&amp;\displaystyle=5
+\displaystyle-7x_{1}-6x_{2}-12x_{3}&\displaystyle=-33 \\
+\displaystyle 5x_{1}+5x_{2}+7x_{3}&\displaystyle=24 \\
+\displaystyle x_{1}+4x_{3}&\displaystyle=5
 \end{align*}
 can be written as:
 
@@ -478,10 +478,10 @@ If $\mathbf{u}\in{\mathbb{R}}^{m}$, then $1\mathbf{u}=\mathbf{u}$. </li></ol>
 We will prove one version of distributivity very carefully, and you can test your proof-building skills on some of the others. We need to establish an equality, so we will do so by beginning with one side of the equality, apply various definitions and theorems (listed to the right of each step) to massage the expression from the left into the expression on the right. Here we go with a proof of Property DSAC in @ref{VSPCV}.
 For $1\leq i\leq m$,
 \begin{align*}
-\displaystyle\left[(\alpha+\beta)\mathbf{u}\right]_{i}&amp;\displaystyle=(\alpha+\beta)\left[\mathbf{u}\right]_{i}&amp;\text{definition} \\
-&amp;\displaystyle=\alpha\left[\mathbf{u}\right]_{i}+\beta\left[\mathbf{u}\right]_{i} \\
-&amp;\displaystyle=\left[\alpha\mathbf{u}\right]_{i}+\left[\beta\mathbf{u}\right]_{i}&amp;\text{definition} \\
-&amp;\displaystyle=\left[\alpha\mathbf{u}+\beta\mathbf{u}\right]_{i}&amp;\text{definition}
+\displaystyle\left[(\alpha+\beta)\mathbf{u}\right]_{i}&\displaystyle=(\alpha+\beta)\left[\mathbf{u}\right]_{i}&\text{definition} \\
+&\displaystyle=\alpha\left[\mathbf{u}\right]_{i}+\beta\left[\mathbf{u}\right]_{i} \\
+&\displaystyle=\left[\alpha\mathbf{u}\right]_{i}+\left[\beta\mathbf{u}\right]_{i}&\text{definition} \\
+&\displaystyle=\left[\alpha\mathbf{u}+\beta\mathbf{u}\right]_{i}&\text{definition}
 \end{align*}
 Since the individual components of the vectors $(\alpha+\beta)\mathbf{u}$ and $\alpha\mathbf{u}+\beta\mathbf{u}$ are equal for all $i$, $1\leq i\leq m$, @ref{CVE} tells us the vectors are equal. 
 @qed
@@ -569,46 +569,46 @@ If $\mathbf{u}\in V$, then $1\mathbf{u}=\mathbf{u}$. </li></ol> The objects in $
  The set of $m\times n$ matrices, denoted by $M_{mn}$, is a vector space with the following operations: <ul class="ltx_itemize">
 <li class="ltx_item"> Vector addition:
 \begin{align*}
-\displaystyle \begin{bmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
-a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
-\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
-a_{m1}&amp;a_{m2}&amp;\cdots&amp;a_{mn}\end{bmatrix}+\begin{bmatrix}b_{11}&amp;b_{12}&amp;\cdots&amp;b_{1n}\\
-b_{21}&amp;b_{22}&amp;\cdots&amp;b_{2n}\\
-\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
-b_{m1}&amp;b_{m2}&amp;\cdots&amp;b_{mn}\end{bmatrix}=\begin{bmatrix}a_{11}+b_{11}&amp;a_{12}+b_{12}&amp;\cdots&amp;a_{1n}+b_{1n}\\
-a_{21}+b_{21}&amp;a_{22}+b_{22}&amp;\cdots&amp;a_{2n}+b_{2n}\\
-\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
-a_{m1}+b_{m1}&amp;a_{m2}+b_{m2}&amp;\cdots&amp;a_{mn}+b_{mn}\end{bmatrix}
+\displaystyle \begin{bmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
+a_{21}&a_{22}&\cdots&a_{2n}\\
+\vdots&\vdots&\vdots&\vdots\\
+a_{m1}&a_{m2}&\cdots&a_{mn}\end{bmatrix}+\begin{bmatrix}b_{11}&b_{12}&\cdots&b_{1n}\\
+b_{21}&b_{22}&\cdots&b_{2n}\\
+\vdots&\vdots&\vdots&\vdots\\
+b_{m1}&b_{m2}&\cdots&b_{mn}\end{bmatrix}=\begin{bmatrix}a_{11}+b_{11}&a_{12}+b_{12}&\cdots&a_{1n}+b_{1n}\\
+a_{21}+b_{21}&a_{22}+b_{22}&\cdots&a_{2n}+b_{2n}\\
+\vdots&\vdots&\vdots&\vdots\\
+a_{m1}+b_{m1}&a_{m2}+b_{m2}&\cdots&a_{mn}+b_{mn}\end{bmatrix}
 \end{align*} </li>
 <li class="ltx_item"> Scalar multiplication
 \begin{align*}
-\displaystyle \alpha\begin{bmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
-a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
-\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
-a_{m1}&amp;a_{m2}&amp;\cdots&amp;a_{mn}\end{bmatrix}=\begin{bmatrix}\alpha a_{11}&amp;\alpha a_{12}&amp;\cdots&amp;\alpha a_{1n}\\
-\alpha a_{21}&amp;\alpha a_{22}&amp;\cdots&amp;\alpha a_{2n}\\
-\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
-\alpha a_{m1}&amp;\alpha a_{m2}&amp;\cdots&amp;\alpha a_{mn}\end{bmatrix}
+\displaystyle \alpha\begin{bmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
+a_{21}&a_{22}&\cdots&a_{2n}\\
+\vdots&\vdots&\vdots&\vdots\\
+a_{m1}&a_{m2}&\cdots&a_{mn}\end{bmatrix}=\begin{bmatrix}\alpha a_{11}&\alpha a_{12}&\cdots&\alpha a_{1n}\\
+\alpha a_{21}&\alpha a_{22}&\cdots&\alpha a_{2n}\\
+\vdots&\vdots&\vdots&\vdots\\
+\alpha a_{m1}&\alpha a_{m2}&\cdots&\alpha a_{mn}\end{bmatrix}
 \end{align*} </li></ul> Property Z: The zero vector is
 \begin{align*}
-\displaystyle \begin{bmatrix}0&amp;0&amp;\cdots&amp;0\\
-0&amp;0&amp;\cdots&amp;0\\
-\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
-0&amp;0&amp;\cdots&amp;0\end{bmatrix}
+\displaystyle \begin{bmatrix}0&0&\cdots&0\\
+0&0&\cdots&0\\
+\vdots&\vdots&\vdots&\vdots\\
+0&0&\cdots&0\end{bmatrix}
 \end{align*}
 Property AI:The inverse of
 \begin{align*}
-\displaystyle \begin{bmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
-a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
-\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
-a_{m1}&amp;a_{m2}&amp;\cdots&amp;a_{mn}\end{bmatrix}
+\displaystyle \begin{bmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
+a_{21}&a_{22}&\cdots&a_{2n}\\
+\vdots&\vdots&\vdots&\vdots\\
+a_{m1}&a_{m2}&\cdots&a_{mn}\end{bmatrix}
 \end{align*}
 is
 \begin{align*}
-\displaystyle \begin{bmatrix}-a_{11}&amp;-a_{12}&amp;\cdots&amp;-a_{1n}\\
--a_{21}&amp;-a_{22}&amp;\cdots&amp;-a_{2n}\\
-\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
--a_{m1}&amp;-a_{m2}&amp;\cdots&amp;-a_{mn}\end{bmatrix}
+\displaystyle \begin{bmatrix}-a_{11}&-a_{12}&\cdots&-a_{1n}\\
+-a_{21}&-a_{22}&\cdots&-a_{2n}\\
+\vdots&\vdots&\vdots&\vdots\\
+-a_{m1}&-a_{m2}&\cdots&-a_{mn}\end{bmatrix}
 \end{align*}
 You can try proving all other properties. 
 @endcol
@@ -640,14 +640,14 @@ The additive inverse (Property AI) is also no surprise, though consider how we h
 \end{align*}
 Now let us prove the associativity of vector addition (Property AA). This is a bit tedious, though necessary. Throughout, the plus sign ($+$) does triple-duty. You might ask yourself what each plus sign represents as you work through this proof.
 \begin{align*}
-\displaystyle\mathbf{u}+&amp;\displaystyle(\mathbf{v}+\mathbf{w}) \\
-&amp;\displaystyle=(a_{0}+a_{1}x+\cdots+a_{n}x^{n})+\left((b_{0}+b_{1}x+\cdots+b_{n}x^{n})+(c_{0}+c_{1}x+\cdots+c_{n}x^{n})\right) \\
-&amp;\displaystyle=(a_{0}+a_{1}x+\cdots+a_{n}x^{n})+((b_{0}+c_{0})+(b_{1}+c_{1})x+\cdots+(b_{n}+c_{n})x^{n}) \\
-&amp;\displaystyle=(a_{0}+(b_{0}+c_{0}))+(a_{1}+(b_{1}+c_{1}))x+\cdots+(a_{n}+(b_{n}+c_{n}))x^{n} \\
-&amp;\displaystyle=((a_{0}+b_{0})+c_{0})+((a_{1}+b_{1})+c_{1})x+\cdots+((a_{n}+b_{n})+c_{n})x^{n} \\
-&amp;\displaystyle=((a_{0}+b_{0})+(a_{1}+b_{1})x+\cdots+(a_{n}+b_{n})x^{n})+(c_{0}+c_{1}x+\cdots+c_{n}x^{n}) \\
-&amp;\displaystyle=\left((a_{0}+a_{1}x+\cdots+a_{n}x^{n})+(b_{0}+b_{1}x+\cdots+b_{n}x^{n})\right)+(c_{0}+c_{1}x+\cdots+c_{n}x^{n}) \\
-&amp;\displaystyle=(\mathbf{u}+\mathbf{v})+\mathbf{w}
+\displaystyle\mathbf{u}+&\displaystyle(\mathbf{v}+\mathbf{w}) \\
+&\displaystyle=(a_{0}+a_{1}x+\cdots+a_{n}x^{n})+\left((b_{0}+b_{1}x+\cdots+b_{n}x^{n})+(c_{0}+c_{1}x+\cdots+c_{n}x^{n})\right) \\
+&\displaystyle=(a_{0}+a_{1}x+\cdots+a_{n}x^{n})+((b_{0}+c_{0})+(b_{1}+c_{1})x+\cdots+(b_{n}+c_{n})x^{n}) \\
+&\displaystyle=(a_{0}+(b_{0}+c_{0}))+(a_{1}+(b_{1}+c_{1}))x+\cdots+(a_{n}+(b_{n}+c_{n}))x^{n} \\
+&\displaystyle=((a_{0}+b_{0})+c_{0})+((a_{1}+b_{1})+c_{1})x+\cdots+((a_{n}+b_{n})+c_{n})x^{n} \\
+&\displaystyle=((a_{0}+b_{0})+(a_{1}+b_{1})x+\cdots+(a_{n}+b_{n})x^{n})+(c_{0}+c_{1}x+\cdots+c_{n}x^{n}) \\
+&\displaystyle=\left((a_{0}+a_{1}x+\cdots+a_{n}x^{n})+(b_{0}+b_{1}x+\cdots+b_{n}x^{n})\right)+(c_{0}+c_{1}x+\cdots+c_{n}x^{n}) \\
+&\displaystyle=(\mathbf{u}+\mathbf{v})+\mathbf{w}
 \end{align*}
 You might try proving all the other properties. 
 @endcol
@@ -675,20 +675,20 @@ Try proving all the other properties.
 The result of each operation is a pair of complex numbers, so these two closure properties are fulfilled. </li>
 <li class="ltx_item">
 <strong>Property C</strong> \begin{align*}
-\displaystyle\mathbf{u}+\mathbf{v}&amp;\displaystyle=(x_{1},\,x_{2})+(y_{1},\,y_{2})=(x_{1}+y_{1}+1,\,x_{2}+y_{2}+1) \\
-&amp;\displaystyle=(y_{1}+x_{1}+1,\,y_{2}+x_{2}+1)=(y_{1},\,y_{2})+(x_{1},\,x_{2}) \\
-&amp;\displaystyle=\mathbf{v}+\mathbf{u}
+\displaystyle\mathbf{u}+\mathbf{v}&\displaystyle=(x_{1},\,x_{2})+(y_{1},\,y_{2})=(x_{1}+y_{1}+1,\,x_{2}+y_{2}+1) \\
+&\displaystyle=(y_{1}+x_{1}+1,\,y_{2}+x_{2}+1)=(y_{1},\,y_{2})+(x_{1},\,x_{2}) \\
+&\displaystyle=\mathbf{v}+\mathbf{u}
 \end{align*} </li>
 <li class="ltx_item">
 <strong>Property AA</strong> \begin{align*}
-\displaystyle\mathbf{u}+(\mathbf{v}+\mathbf{w})&amp;\displaystyle=(x_{1},\,x_{2})+\left((y_{1},\,y_{2})+(z_{1},\,z_{2})\right) \\
-&amp;\displaystyle=(x_{1},\,x_{2})+(y_{1}+z_{1}+1,\,y_{2}+z_{2}+1) \\
-&amp;\displaystyle=(x_{1}+(y_{1}+z_{1}+1)+1,\,x_{2}+(y_{2}+z_{2}+1)+1) \\
-&amp;\displaystyle=(x_{1}+y_{1}+z_{1}+2,\,x_{2}+y_{2}+z_{2}+2) \\
-&amp;\displaystyle=((x_{1}+y_{1}+1)+z_{1}+1,\,(x_{2}+y_{2}+1)+z_{2}+1) \\
-&amp;\displaystyle=(x_{1}+y_{1}+1,\,x_{2}+y_{2}+1)+(z_{1},\,z_{2}) \\
-&amp;\displaystyle=\left((x_{1},\,x_{2})+(y_{1},\,y_{2})\right)+(z_{1},\,z_{2}) \\
-&amp;\displaystyle=\left(\mathbf{u}+\mathbf{v}\right)+\mathbf{w}
+\displaystyle\mathbf{u}+(\mathbf{v}+\mathbf{w})&\displaystyle=(x_{1},\,x_{2})+\left((y_{1},\,y_{2})+(z_{1},\,z_{2})\right) \\
+&\displaystyle=(x_{1},\,x_{2})+(y_{1}+z_{1}+1,\,y_{2}+z_{2}+1) \\
+&\displaystyle=(x_{1}+(y_{1}+z_{1}+1)+1,\,x_{2}+(y_{2}+z_{2}+1)+1) \\
+&\displaystyle=(x_{1}+y_{1}+z_{1}+2,\,x_{2}+y_{2}+z_{2}+2) \\
+&\displaystyle=((x_{1}+y_{1}+1)+z_{1}+1,\,(x_{2}+y_{2}+1)+z_{2}+1) \\
+&\displaystyle=(x_{1}+y_{1}+1,\,x_{2}+y_{2}+1)+(z_{1},\,z_{2}) \\
+&\displaystyle=\left((x_{1},\,x_{2})+(y_{1},\,y_{2})\right)+(z_{1},\,z_{2}) \\
+&\displaystyle=\left(\mathbf{u}+\mathbf{v}\right)+\mathbf{w}
 \end{align*} </li>
 <li class="ltx_item">
 <strong>Property Z</strong>
@@ -700,46 +700,46 @@ The zero vector is $\mathbf{0}=(-1,\,-1)$ (<strong>not</strong> $(0,0)$)
 <strong>Property AI</strong>
 For each vector, $\mathbf{u}$, we must locate an additive inverse, $\mathbf{-u}$. Here it is, $-(x_{1},\,x_{2})=(-x_{1}-2,\,-x_{2}-2)$. As odd as it may look, I hope you are withholding judgment. Check:
 \begin{align*}
-\displaystyle\mathbf{u}+(\mathbf{-u})&amp;\displaystyle=(x_{1},\,x_{2})+(-x_{1}-2,\,-x_{2}-2) \\
-&amp;\displaystyle=(x_{1}+(-x_{1}-2)+1,\,-x_{2}+(x_{2}-2)+1)=(-1,\,-1)=\mathbf{0}
+\displaystyle\mathbf{u}+(\mathbf{-u})&\displaystyle=(x_{1},\,x_{2})+(-x_{1}-2,\,-x_{2}-2) \\
+&\displaystyle=(x_{1}+(-x_{1}-2)+1,\,-x_{2}+(x_{2}-2)+1)=(-1,\,-1)=\mathbf{0}
 \end{align*} </li>
 <li class="ltx_item">
 <strong>Property SMA</strong> \begin{align*}
-\displaystyle\alpha(\beta\mathbf{u})&amp;\displaystyle=\alpha(\beta(x_{1},\,x_{2})) \\
-&amp;\displaystyle=\alpha(\beta x_{1}+\beta-1,\,\beta x_{2}+\beta-1) \\
-&amp;\displaystyle=(\alpha(\beta x_{1}+\beta-1)+\alpha-1,\,\alpha(\beta x_{2}+\beta-1)+\alpha-1) \\
-&amp;\displaystyle=((\alpha\beta x_{1}+\alpha\beta-\alpha)+\alpha-1,\,(\alpha\beta x_{2}+\alpha\beta-\alpha)+\alpha-1) \\
-&amp;\displaystyle=(\alpha\beta x_{1}+\alpha\beta-1,\,\alpha\beta x_{2}+\alpha\beta-1) \\
-&amp;\displaystyle=(\alpha\beta)(x_{1},\,x_{2}) \\
-&amp;\displaystyle=(\alpha\beta)\mathbf{u}
+\displaystyle\alpha(\beta\mathbf{u})&\displaystyle=\alpha(\beta(x_{1},\,x_{2})) \\
+&\displaystyle=\alpha(\beta x_{1}+\beta-1,\,\beta x_{2}+\beta-1) \\
+&\displaystyle=(\alpha(\beta x_{1}+\beta-1)+\alpha-1,\,\alpha(\beta x_{2}+\beta-1)+\alpha-1) \\
+&\displaystyle=((\alpha\beta x_{1}+\alpha\beta-\alpha)+\alpha-1,\,(\alpha\beta x_{2}+\alpha\beta-\alpha)+\alpha-1) \\
+&\displaystyle=(\alpha\beta x_{1}+\alpha\beta-1,\,\alpha\beta x_{2}+\alpha\beta-1) \\
+&\displaystyle=(\alpha\beta)(x_{1},\,x_{2}) \\
+&\displaystyle=(\alpha\beta)\mathbf{u}
 \end{align*} </li>
 <li class="ltx_item">
 <strong>Property DVA</strong>
 If you have hung on so far, here is where it gets even wilder. In the next two properties we mix and mash the two operations.
 \begin{align*}
-\displaystyle\alpha(\mathbf{u}&amp;\displaystyle+\mathbf{v}) \\
-&amp;\displaystyle=\alpha\left((x_{1},\,x_{2})+(y_{1},\,y_{2})\right) \\
-&amp;\displaystyle=\alpha(x_{1}+y_{1}+1,\,x_{2}+y_{2}+1) \\
-&amp;\displaystyle=(\alpha(x_{1}+y_{1}+1)+\alpha-1,\,\alpha(x_{2}+y_{2}+1)+\alpha-1) \\
-&amp;\displaystyle=(\alpha x_{1}+\alpha y_{1}+\alpha+\alpha-1,\,\alpha x_{2}+\alpha
+\displaystyle\alpha(\mathbf{u}&\displaystyle+\mathbf{v}) \\
+&\displaystyle=\alpha\left((x_{1},\,x_{2})+(y_{1},\,y_{2})\right) \\
+&\displaystyle=\alpha(x_{1}+y_{1}+1,\,x_{2}+y_{2}+1) \\
+&\displaystyle=(\alpha(x_{1}+y_{1}+1)+\alpha-1,\,\alpha(x_{2}+y_{2}+1)+\alpha-1) \\
+&\displaystyle=(\alpha x_{1}+\alpha y_{1}+\alpha+\alpha-1,\,\alpha x_{2}+\alpha
 y_{2}+\alpha+\alpha-1) \\
-&amp;\displaystyle=(\alpha x_{1}+\alpha-1+\alpha y_{1}+\alpha-1+1,\,\alpha x_{2}+\alpha-1+\alpha y_{2}+\alpha-1+1) \\
-&amp;\displaystyle=((\alpha x_{1}+\alpha-1)+(\alpha y_{1}+\alpha-1)+1,\,(\alpha x_{2}+\alpha-1)+(\alpha y_{2}+\alpha-1)+1) \\
-&amp;\displaystyle=(\alpha x_{1}+\alpha-1,\,\alpha x_{2}+\alpha-1)+(\alpha y_{1}+\alpha-1,\,\alpha y_{2}+\alpha-1) \\
-&amp;\displaystyle=\alpha(x_{1},\,x_{2})+\alpha(y_{1},\,y_{2}) \\
-&amp;\displaystyle=\alpha\mathbf{u}+\alpha\mathbf{v}
+&\displaystyle=(\alpha x_{1}+\alpha-1+\alpha y_{1}+\alpha-1+1,\,\alpha x_{2}+\alpha-1+\alpha y_{2}+\alpha-1+1) \\
+&\displaystyle=((\alpha x_{1}+\alpha-1)+(\alpha y_{1}+\alpha-1)+1,\,(\alpha x_{2}+\alpha-1)+(\alpha y_{2}+\alpha-1)+1) \\
+&\displaystyle=(\alpha x_{1}+\alpha-1,\,\alpha x_{2}+\alpha-1)+(\alpha y_{1}+\alpha-1,\,\alpha y_{2}+\alpha-1) \\
+&\displaystyle=\alpha(x_{1},\,x_{2})+\alpha(y_{1},\,y_{2}) \\
+&\displaystyle=\alpha\mathbf{u}+\alpha\mathbf{v}
 \end{align*} </li>
 <li class="ltx_item">
 <strong>Property DSA</strong> \begin{align*}
-\displaystyle(\alpha&amp;\displaystyle+\beta)\mathbf{u} \\
-&amp;\displaystyle=(\alpha+\beta)(x_{1},\,x_{2}) \\
-&amp;\displaystyle=((\alpha+\beta)x_{1}+(\alpha+\beta)-1,\,(\alpha+\beta)x_{2}+(\alpha+\beta)-1) \\
-&amp;\displaystyle=(\alpha x_{1}+\beta x_{1}+\alpha+\beta-1,\,\alpha x_{2}+\beta x_{2}+\alpha+\beta-1) \\
-&amp;\displaystyle=(\alpha x_{1}+\alpha-1+\beta x_{1}+\beta-1+1,\,\alpha x_{2}+\alpha-1+\beta x_{2}+\beta-1+1) \\
-&amp;\displaystyle=((\alpha x_{1}+\alpha-1)+(\beta x_{1}+\beta-1)+1,\,(\alpha x_{2}+\alpha-1)+(\beta x_{2}+\beta-1)+1) \\
-&amp;\displaystyle=(\alpha x_{1}+\alpha-1,\,\alpha x_{2}+\alpha-1)+(\beta x_{1}+\beta-1,\,\beta x_{2}+\beta-1) \\
-&amp;\displaystyle=\alpha(x_{1},\,x_{2})+\beta(x_{1},\,x_{2}) \\
-&amp;\displaystyle=\alpha\mathbf{u}+\beta\mathbf{u}
+\displaystyle(\alpha&\displaystyle+\beta)\mathbf{u} \\
+&\displaystyle=(\alpha+\beta)(x_{1},\,x_{2}) \\
+&\displaystyle=((\alpha+\beta)x_{1}+(\alpha+\beta)-1,\,(\alpha+\beta)x_{2}+(\alpha+\beta)-1) \\
+&\displaystyle=(\alpha x_{1}+\beta x_{1}+\alpha+\beta-1,\,\alpha x_{2}+\beta x_{2}+\alpha+\beta-1) \\
+&\displaystyle=(\alpha x_{1}+\alpha-1+\beta x_{1}+\beta-1+1,\,\alpha x_{2}+\alpha-1+\beta x_{2}+\beta-1+1) \\
+&\displaystyle=((\alpha x_{1}+\alpha-1)+(\beta x_{1}+\beta-1)+1,\,(\alpha x_{2}+\alpha-1)+(\beta x_{2}+\beta-1)+1) \\
+&\displaystyle=(\alpha x_{1}+\alpha-1,\,\alpha x_{2}+\alpha-1)+(\beta x_{1}+\beta-1,\,\beta x_{2}+\beta-1) \\
+&\displaystyle=\alpha(x_{1},\,x_{2})+\beta(x_{1},\,x_{2}) \\
+&\displaystyle=\alpha\mathbf{u}+\beta\mathbf{u}
 \end{align*} </li>
 <li class="ltx_item">
 <strong>Property O</strong>
@@ -765,10 +765,10 @@ then $\mathbf{v}=\mathbf{u}$
  By Property AI, there exists a vector $-\mathbf{w}$ such that $\mathbf{w}+(-\mathbf{w})=\mathbf{0}$.
 Thus,
 \begin{align*}
-\displaystyle (\mathbf{v}+\mathbf{w})+(-\mathbf{w})&amp;=(\mathbf{u}+\mathbf{w})+(-\mathbf{w})\\
-\displaystyle \mathbf{v}+(\mathbf{w}+(-\mathbf{w}))&amp;=\mathbf{u}+(\mathbf{w}+(-\mathbf{w}))&amp;\text{Property AA}\\
-\displaystyle \mathbf{v}+\mathbf{0}&amp;=\mathbf{u}+\mathbf{0}&amp;\text{Property AI}\\
-\displaystyle \mathbf{v}&amp;=\mathbf{u}&amp;\text{Property Z}.
+\displaystyle (\mathbf{v}+\mathbf{w})+(-\mathbf{w})&=(\mathbf{u}+\mathbf{w})+(-\mathbf{w})\\
+\displaystyle \mathbf{v}+(\mathbf{w}+(-\mathbf{w}))&=\mathbf{u}+(\mathbf{w}+(-\mathbf{w}))&\text{Property AA}\\
+\displaystyle \mathbf{v}+\mathbf{0}&=\mathbf{u}+\mathbf{0}&\text{Property AI}\\
+\displaystyle \mathbf{v}&=\mathbf{u}&\text{Property Z}.
 \end{align*}
 
 @qed
@@ -827,8 +827,8 @@ By @ref{cancell},
 @proof
 <ol class="ltx_enumerate">
 <li class="ltx_item"> \begin{align*}
-\displaystyle 0\mathbf{v}+0\mathbf{v}&amp;=(0+0)\mathbf{v} &amp; \text{Property DSA}\\
-\displaystyle 0\mathbf{v}+0\mathbf{v}=0\mathbf{v}&amp;=\mathbf{0}+0\mathbf{v} &amp; \text{Property Z}
+\displaystyle 0\mathbf{v}+0\mathbf{v}&=(0+0)\mathbf{v} & \text{Property DSA}\\
+\displaystyle 0\mathbf{v}+0\mathbf{v}=0\mathbf{v}&=\mathbf{0}+0\mathbf{v} & \text{Property Z}
 \end{align*}
 Hence,
 \[
@@ -837,18 +837,18 @@ Hence,
 by @ref{cancell}. </li>
 <li class="ltx_item">
 <br/> \begin{align*}
-\displaystyle\alpha\mathbf{0}+a\mathbf{0}&amp;\displaystyle=\alpha(\mathbf{0}+\mathbf{0}) &amp; \text{Property DVA} \\
-&amp;\displaystyle=\alpha\mathbf{0} &amp; \text{Property Z} \\
-&amp;\displaystyle=\mathbf{0}+\alpha\mathbf{0} &amp; \text{Property Z}
+\displaystyle\alpha\mathbf{0}+a\mathbf{0}&\displaystyle=\alpha(\mathbf{0}+\mathbf{0}) & \text{Property DVA} \\
+&\displaystyle=\alpha\mathbf{0} & \text{Property Z} \\
+&\displaystyle=\mathbf{0}+\alpha\mathbf{0} & \text{Property Z}
 \end{align*}
 By @ref{cancell},
 \begin{align*}
 \displaystyle \alpha\mathbf{0}=\mathbf{0}
 \end{align*} </li>
 <li class="ltx_item"> \begin{align*}
-\displaystyle\alpha\mathbf{v}+(-\alpha)\mathbf{v}&amp;\displaystyle=(\alpha+(-\alpha))\mathbf{v}&amp;\text{Property DSA}. \\
-&amp;\displaystyle=0\mathbf{v}&amp; \\
-&amp;\displaystyle=\mathbf{0}&amp;\text{item 1}
+\displaystyle\alpha\mathbf{v}+(-\alpha)\mathbf{v}&\displaystyle=(\alpha+(-\alpha))\mathbf{v}&\text{Property DSA}. \\
+&\displaystyle=0\mathbf{v}& \\
+&\displaystyle=\mathbf{0}&\text{item 1}
 \end{align*}
 By Property AI and the uniqueness of the additive inverse (@ref{invunique}),
 \begin{align*}
@@ -856,9 +856,9 @@ By Property AI and the uniqueness of the additive inverse (@ref{invunique}),
 \end{align*}
 Next
 \begin{align*}
-\displaystyle\alpha\mathbf{v}+\alpha(-\mathbf{v})&amp;\displaystyle=\alpha(\mathbf{v}+(-\mathbf{v})) &amp; \text{Property DVA}. \\
-&amp;\displaystyle=\alpha\mathbf{0} &amp; \text{Property AI} \\
-&amp;\displaystyle=\mathbf{0} &amp; \text{item 2}
+\displaystyle\alpha\mathbf{v}+\alpha(-\mathbf{v})&\displaystyle=\alpha(\mathbf{v}+(-\mathbf{v})) & \text{Property DVA}. \\
+&\displaystyle=\alpha\mathbf{0} & \text{Property AI} \\
+&\displaystyle=\mathbf{0} & \text{item 2}
 \end{align*}
 By Property AI and the uniqueness of the additive inverse (@ref{invunique}),
 \begin{align*}

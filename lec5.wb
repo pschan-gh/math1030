@@ -20,10 +20,10 @@ Section SSLE (p.1-6) C30-34, C50, M30, T20. Sect RREF (p.6-13) C10-19, C31-33, M
 @slide
 @eg
  The underlined entries are the leftmost nonzero entry for each row.
-\[\begin{bmatrix}0&amp;\underline{1}&amp;1&amp;0&amp;2\\
-0&amp;0&amp;0&amp;0&amp;\underline{1}\\
-0&amp;0&amp;0&amp;\underline{1}&amp;3\\
-0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}\] 
+\[\begin{bmatrix}0&\underline{1}&1&0&2\\
+0&0&0&0&\underline{1}\\
+0&0&0&\underline{1}&3\\
+0&0&0&0&0\end{bmatrix}\] 
 @newcol
  The index of the leftmost nonzero entry of row 1 is $d_{1}=2$. The index of the leftmost nonzero entry of row 2 is $d_{2}=5$. The index of the leftmost nonzero entry of row 3 is $d_{3}=4$. row 4 is a zero row. 
 @endcol
@@ -31,10 +31,10 @@ Section SSLE (p.1-6) C30-34, C50, M30, T20. Sect RREF (p.6-13) C10-19, C31-33, M
 @eg
 @newcol
  The underlined entries are the leftmost nonzero entry for each row.
-\[\begin{bmatrix}\underline{2}&amp;0&amp;1&amp;2&amp;3&amp;4\\
-0&amp;\underline{1}&amp;1&amp;-1&amp;0&amp;3\\
-0&amp;0&amp;0&amp;0&amp;\underline{1}&amp;0\\
-0&amp;\underline{-1}&amp;0&amp;0&amp;0&amp;1\\
+\[\begin{bmatrix}\underline{2}&0&1&2&3&4\\
+0&\underline{1}&1&-1&0&3\\
+0&0&0&0&\underline{1}&0\\
+0&\underline{-1}&0&0&0&1\\
 \end{bmatrix}\]
 The index of the leftmost nonzero entry of row 1 is $d_{1}=1$. The index of the leftmost nonzero entry of row 2 is $d_{2}=2$. The index of the leftmost nonzero entry of row 3 is $d_{3}=5$. The index of the leftmost nonzero entry of row 3 is $d_{4}=2$. 
 @endcol
@@ -42,10 +42,10 @@ The index of the leftmost nonzero entry of row 1 is $d_{1}=1$. The index of the 
 @slide
  A matrix is said to be in @keyword{reduced row echelon form} if it looks like this
 ( $*$ means an arbitary number)
-\[\begin{bmatrix}1&amp;*&amp;\cdots&amp;0&amp;*&amp;\cdots&amp;0&amp;*&amp;\cdots\\
-0&amp;0&amp;\cdots&amp;1&amp;*&amp;\cdots&amp;0&amp;*&amp;\cdots\\
-0&amp;0&amp;\cdots&amp;0&amp;0&amp;\cdots&amp;1&amp;*&amp;\cdots\\
-\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+\[\begin{bmatrix}1&*&\cdots&0&*&\cdots&0&*&\cdots\\
+0&0&\cdots&1&*&\cdots&0&*&\cdots\\
+0&0&\cdots&0&0&\cdots&1&*&\cdots\\
+\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
 \end{bmatrix}\]
 More precisely: 
 @ol
@@ -116,35 +116,35 @@ f_{1} &lt; f_{2} &lt; f_{3} &lt; \cdots &lt; f_{n-r}.
 @enumerate
 @item
 @newcol
- \[\begin{bmatrix}1&amp;3&amp;0&amp;0&amp;1&amp;0\\
-0&amp;0&amp;1&amp;3&amp;4&amp;0\\
-0&amp;0&amp;0&amp;0&amp;0&amp;1\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}\]
+ \[\begin{bmatrix}1&3&0&0&1&0\\
+0&0&1&3&4&0\\
+0&0&0&0&0&1\\
+0&0&0&0&0&0\end{bmatrix}\]
 Column 1, 3, 6 are pivot columns, $r=3$, $D=\{1,3,6\}$, $d_{1}=1,d_{2}=3,d_{3}=6$,
 $F=\{2,4,5\}$, $f_{1}=2,f_{2}=4,f_{3}=5$. 
 @endcol
 @item
 @newcol
- \[\begin{bmatrix}1&amp;0&amp;5&amp;3&amp;0&amp;0&amp;5\\
-0&amp;1&amp;3&amp;6&amp;0&amp;0&amp;6\\
-0&amp;0&amp;0&amp;0&amp;1&amp;0&amp;7\\
-0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;3\end{bmatrix}\]
+ \[\begin{bmatrix}1&0&5&3&0&0&5\\
+0&1&3&6&0&0&6\\
+0&0&0&0&1&0&7\\
+0&0&0&0&0&1&3\end{bmatrix}\]
 Column 1, 2, 5, 6 are pivot columns, $r=4$, $D=\{1,2,5,6\}$, $d_{1}=1,d_{2}=2,d_{3}=5,d_{4}=6$,
 $F=\{3,4,7\}$, $f_{1}=3,f_{2}=4,f_{3}=7$. 
 @endcol
 @item
 @newcol
- \[\begin{bmatrix}1&amp;0&amp;0\\
-0&amp;1&amp;0\\
-0&amp;0&amp;1\end{bmatrix}\]
+ \[\begin{bmatrix}1&0&0\\
+0&1&0\\
+0&0&1\end{bmatrix}\]
 Column 1, 2, 3 are pivot columns, $r=3$, $D=\{1,2,3\}$, $d_{1}=1,d_{2}=2,d_{3}=3$, $F=\emptyset$ (an empty set). 
 @endcol
 @item
 @newcol
- \[\begin{bmatrix}0&amp;1&amp;1&amp;0&amp;0&amp;1&amp;0&amp;9&amp;6\\
-0&amp;0&amp;0&amp;0&amp;1&amp;1&amp;0&amp;8&amp;8\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;3&amp;4\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}\]
+ \[\begin{bmatrix}0&1&1&0&0&1&0&9&6\\
+0&0&0&0&1&1&0&8&8\\
+0&0&0&0&0&0&1&3&4\\
+0&0&0&0&0&0&0&0&0\end{bmatrix}\]
 Column 2, 5, 7 are pivot columns. Note that column 3 is <strong style="">not</strong> a pivot column. $r=3$,
 $D=\{2,5,7\}$, $d_{1}=2,d_{2}=5,d_{3}=7$,
 $F=\{1,3,4,6,8,9\}$, $f_{1}=1,f_{2}=3,f_{3}=4,f_{4}=6,f_{5}=8,f_{6}=9$. 
@@ -152,11 +152,11 @@ $F=\{1,3,4,6,8,9\}$, $f_{1}=1,f_{2}=3,f_{3}=4,f_{4}=6,f_{5}=8,f_{6}=9$.
 @item
 @newcol
  The matrix $C$ is in reduced row-echelon form.
-\[\displaystyle C=\begin{bmatrix}1&amp;-3&amp;0&amp;6&amp;0&amp;0&amp;-5&amp;9\\
-0&amp;0&amp;0&amp;0&amp;1&amp;0&amp;3&amp;-7\\
-0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;7&amp;3\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}\]
+\[\displaystyle C=\begin{bmatrix}1&-3&0&6&0&0&-5&9\\
+0&0&0&0&1&0&3&-7\\
+0&0&0&0&0&1&7&3\\
+0&0&0&0&0&0&0&0\\
+0&0&0&0&0&0&0&0\end{bmatrix}\]
 This matrix has two zero rows and three pivot columns.
 So $r=3$. Columns 1, 5, and 6 are the pivot columns,
 so $D=\{1,\,5,\,6\}$, $d_{1}=1,d_{2}=5,d_{3}=6$,
@@ -170,40 +170,40 @@ $F=\{2,\,3,\,4,\,7,\,8\}$, $f_{1}=2,f_{2}=3,f_{3}=4,f_{4}=7,f_{5}=8$.
 @enumerate
 @item
 @newcol
- \[\begin{bmatrix}1&amp;0&amp;1&amp;0&amp;1&amp;0\\
-0&amp;1&amp;0&amp;1&amp;0&amp;2\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0&amp;1&amp;0\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}\]
+ \[\begin{bmatrix}1&0&1&0&1&0\\
+0&1&0&1&0&2\\
+0&0&0&0&0&0\\
+0&0&0&0&1&0\\
+0&0&0&0&0&0\end{bmatrix}\]
 It fails condition 1: row 3 is a zero row but row 4, which is under row 3, is not a zero row. 
 @endcol
 @item
 @newcol
  The underline entries are the leftmost nonzero entry for each row.
-\[\begin{bmatrix}\underline{1}&amp;0&amp;2&amp;0\\
-0&amp;\underline{1}&amp;3&amp;0\\
-0&amp;0&amp;0&amp;\underline{3}\\
-0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0\end{bmatrix}\]
+\[\begin{bmatrix}\underline{1}&0&2&0\\
+0&\underline{1}&3&0\\
+0&0&0&\underline{3}\\
+0&0&0&0\\
+0&0&0&0\end{bmatrix}\]
 It fails condition 2: the leftmost nonzero entry of row 3 is not 1. 
 @endcol
 @item
 @newcol
  The underline entries are the leftmost nonzero entry for each row.
-\[\begin{bmatrix}0&amp;\underline{1}&amp;0&amp;0&amp;1&amp;2\\
-0&amp;0&amp;\underline{1}&amp;0&amp;0&amp;1\\
-0&amp;0&amp;0&amp;0&amp;\underline{1}&amp;3\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}\]
+\[\begin{bmatrix}0&\underline{1}&0&0&1&2\\
+0&0&\underline{1}&0&0&1\\
+0&0&0&0&\underline{1}&3\\
+0&0&0&0&0&0\end{bmatrix}\]
 It fails condition 3: For row 3, the column consists the left most nonzero entry (i.e. column 5) has more than $1$ nonzero entries. 
 @endcol
 @item
 @newcol
  The underline entries are the leftmost nonzero entry for each row.
-\[\begin{bmatrix}\underline{1}&amp;0&amp;0&amp;1&amp;2\\
-0&amp;0&amp;\underline{1}&amp;0&amp;1\\
-0&amp;\underline{1}&amp;0&amp;0&amp;3\\
-0&amp;0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0&amp;0\\
+\[\begin{bmatrix}\underline{1}&0&0&1&2\\
+0&0&\underline{1}&0&1\\
+0&\underline{1}&0&0&3\\
+0&0&0&0&0\\
+0&0&0&0&0\\
 \end{bmatrix}\]
 It fails condition 4: The index of the leftmost nonzero entry of row 1 is $d_{1}=1$. The index of the leftmost nonzero entry of row 2 is $d_{2}=3$. The index of the leftmost nonzero entry of row 3 is $d_{2}=2$. $2 &lt; 3$ but $d_{2} &gt; d_{3}$. 
 @endcol
@@ -259,17 +259,17 @@ We will skip the proof for now. See Beezer, Ver 3.5 (print version p23).
  We will now run through some examples of using these definitions and theorems to solve some systems of equations. From now on, when we have a matrix in reduced row-echelon form, we will mark the leading 1’s with a small box. 
 @eg
  Using the Gaussian elimination, find the RREF of
-\[A=\begin{bmatrix}0&amp;0&amp;1&amp;1&amp;4\\
-0&amp;0&amp;1&amp;1&amp;3\\
-1&amp;1&amp;2&amp;4&amp;8\\
-2&amp;2&amp;5&amp;9&amp;19\end{bmatrix}\] 
+\[A=\begin{bmatrix}0&0&1&1&4\\
+0&0&1&1&3\\
+1&1&2&4&8\\
+2&2&5&9&19\end{bmatrix}\] 
 @newcol
  Set $r=0$.
 Consider column 1 (set $j=1$), find a nonzero entry (underline below) in the column.
-\[\begin{bmatrix}\underline{0}&amp;0&amp;1&amp;1&amp;4\\
-\underline{0}&amp;0&amp;1&amp;1&amp;3\\
-\underline{1}&amp;1&amp;2&amp;4&amp;8\\
-\underline{2}&amp;2&amp;5&amp;9&amp;19\end{bmatrix}\] 
+\[\begin{bmatrix}\underline{0}&0&1&1&4\\
+\underline{0}&0&1&1&3\\
+\underline{1}&1&2&4&8\\
+\underline{2}&2&5&9&19\end{bmatrix}\] 
 @col
  Move the nonzero entry to row 1 by swapping rows $R_{1}\leftrightarrow R_{i}$.
 
@@ -284,10 +284,10 @@ Consider column 1 (set $j=1$), find a nonzero entry (underline below) in the col
 
 @col
  So we use $R_{1}\leftrightarrow R_{3}$.
-\[\xrightarrow{R_{1}\leftrightarrow R_{3}}\begin{bmatrix}\boxed{1}&amp;1&amp;2&amp;4&amp;8\\
-0&amp;0&amp;1&amp;1&amp;3\\
-0&amp;0&amp;1&amp;1&amp;4\\
-2&amp;2&amp;5&amp;9&amp;19\end{bmatrix}\]
+\[\xrightarrow{R_{1}\leftrightarrow R_{3}}\begin{bmatrix}\boxed{1}&1&2&4&8\\
+0&0&1&1&3\\
+0&0&1&1&4\\
+2&2&5&9&19\end{bmatrix}\]
 Also, at this point we increase $r$ to $r = 1$,
 since we now know we have at least one nonzero row.
 
@@ -302,10 +302,10 @@ since we now know we have at least one nonzero row.
 
 @col
  In our example, the boxed number is $1$, so we don’t have to do anything. Use $-2R_{1}+R_{4}$ and to remove the nonzero entries below it and above it. Since we are at the first row, so there is nothing above it).
-\[\xrightarrow{-2R_{1}+R_{4}}\begin{bmatrix}\boxed{1}&amp;1&amp;2&amp;4&amp;8\\
-0&amp;0&amp;1&amp;1&amp;3\\
-0&amp;0&amp;1&amp;1&amp;4\\
-0&amp;0&amp;1&amp;1&amp;3\end{bmatrix}\] 
+\[\xrightarrow{-2R_{1}+R_{4}}\begin{bmatrix}\boxed{1}&1&2&4&8\\
+0&0&1&1&3\\
+0&0&1&1&4\\
+0&0&1&1&3\end{bmatrix}\] 
 @col
  Now we go back to Step 1 in the proof of @ref{thm:REMEF},
 with column index $j$ increased to $2$ and $r = 1$.
@@ -314,19 +314,19 @@ and essentially apply the previous steps to the remaining $3 \times 4$ matrix:
 
 @col
  \[
-\begin{bmatrix}*&amp;*&amp;*&amp;*&amp;*\\
-*&amp;\underline{0}&amp;1&amp;1&amp;3\\
-*&amp;\underline{0}&amp;1&amp;1&amp;4\\
-*&amp;\underline{0}&amp;1&amp;1&amp;3\end{bmatrix}
+\begin{bmatrix}*&*&*&*&*\\
+*&\underline{0}&1&1&3\\
+*&\underline{0}&1&1&4\\
+*&\underline{0}&1&1&3\end{bmatrix}
 \]
 The entries of column 2 are underlined.
 None of them are nonzero, so we move to next column.
 
 @col
- \[\begin{bmatrix}*&amp;*&amp;*&amp;*&amp;*\\
-*&amp;0&amp;\underline{1}&amp;1&amp;3\\
-*&amp;0&amp;\underline{1}&amp;1&amp;4\\
-*&amp;0&amp;\underline{1}&amp;1&amp;3\end{bmatrix}\] 
+ \[\begin{bmatrix}*&*&*&*&*\\
+*&0&\underline{1}&1&3\\
+*&0&\underline{1}&1&4\\
+*&0&\underline{1}&1&3\end{bmatrix}\] 
 @col
  Consider column 3.
 That is, set $j=3$.
@@ -335,10 +335,10 @@ That is, set $j=3$.
 @col
  All the entries of column 3 are equal to $1$.
 So, we don’t need to do any swapping.
-\[\begin{bmatrix}1&amp;1&amp;2&amp;4&amp;8\\
-0&amp;0&amp;\boxed{1}&amp;1&amp;3\\
-0&amp;0&amp;1&amp;1&amp;4\\
-0&amp;0&amp;1&amp;1&amp;3\end{bmatrix}\]
+\[\begin{bmatrix}1&1&2&4&8\\
+0&0&\boxed{1}&1&3\\
+0&0&1&1&4\\
+0&0&1&1&3\end{bmatrix}\]
 Also, now we know there are at least 2 nonzero rows, so $r = 2$. 
 @col
  Use the boxed number (the pivot) to eliminate the nonzero entries above and below it by $\alpha R_{2}+R_{i}$.
@@ -347,54 +347,54 @@ Also, now we know there are at least 2 nonzero rows, so $r = 2$.
 -1R_{2}+R_{3},\\
 -1R_{2}+R_{4}
 \end{split}}
-\begin{bmatrix}1&amp;1&amp;0&amp;2&amp;%
+\begin{bmatrix}1&1&0&2&%
 2\\
-0&amp;0&amp;\boxed{1}&amp;1&amp;3\\
-0&amp;0&amp;0&amp;0&amp;1\\
-0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}\] 
+0&0&\boxed{1}&1&3\\
+0&0&0&0&1\\
+0&0&0&0&0\end{bmatrix}\] 
 @col
  Now, we may ignore rows $2$ and $3$, and columns $1$ through $3$.
 With $r = 2$, and the column index increased to $j = 4$, we repeat the whole
 process.
-\[\begin{bmatrix}*&amp;*&amp;*&amp;*&amp;*\\
-*&amp;*&amp;*&amp;*&amp;*\\
-*&amp;*&amp;*&amp;\underline{0}&amp;1\\
-*&amp;*&amp;*&amp;\underline{0}&amp;0\end{bmatrix}\] 
+\[\begin{bmatrix}*&*&*&*&*\\
+*&*&*&*&*\\
+*&*&*&\underline{0}&1\\
+*&*&*&\underline{0}&0\end{bmatrix}\] 
 @col
  All the underlined entries are zeros, so we move to the next row.
-\[\begin{bmatrix}*&amp;*&amp;*&amp;*&amp;*\\
-*&amp;*&amp;*&amp;*&amp;*\\
-*&amp;*&amp;*&amp;0&amp;\underline{1}\\
-*&amp;*&amp;*&amp;0&amp;\underline{0}\end{bmatrix}\] 
+\[\begin{bmatrix}*&*&*&*&*\\
+*&*&*&*&*\\
+*&*&*&0&\underline{1}\\
+*&*&*&0&\underline{0}\end{bmatrix}\] 
 @col
  We can then use the boxed number to eliminate all the nonzero entries
 above it and below it and get the RREF.
-\[\begin{bmatrix}1&amp;1&amp;0&amp;2&amp;2\\
-0&amp;0&amp;1&amp;1&amp;3\\
-0&amp;0&amp;0&amp;0&amp;\boxed{1}\\
-0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}\]
-\[\xrightarrow{-2R_{3}+R_{1},\;-3R_{3}+R_{2}}\begin{bmatrix}1&amp;1&amp;0&amp;2&amp;0\\
-0&amp;0&amp;1&amp;1&amp;0\\
-0&amp;0&amp;0&amp;0&amp;1\\
-0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}\] 
+\[\begin{bmatrix}1&1&0&2&2\\
+0&0&1&1&3\\
+0&0&0&0&\boxed{1}\\
+0&0&0&0&0\end{bmatrix}\]
+\[\xrightarrow{-2R_{3}+R_{1},\;-3R_{3}+R_{2}}\begin{bmatrix}1&1&0&2&0\\
+0&0&1&1&0\\
+0&0&0&0&1\\
+0&0&0&0&0\end{bmatrix}\] 
 @endcol
 @end
 @slide
 @eg
  Using the Gaussian elimination, find the RREF of
-\[A=\begin{bmatrix}0&amp;0&amp;2&amp;2&amp;6&amp;2&amp;3\\
-2&amp;4&amp;1&amp;3&amp;7&amp;3&amp;-1\\
-1&amp;2&amp;2&amp;3&amp;8&amp;2&amp;1\\
-1&amp;2&amp;-1&amp;0&amp;-1&amp;2&amp;-1\\
+\[A=\begin{bmatrix}0&0&2&2&6&2&3\\
+2&4&1&3&7&3&-1\\
+1&2&2&3&8&2&1\\
+1&2&-1&0&-1&2&-1\\
 \end{bmatrix}\] 
 @newcol
  Set $r = 0$.
 We first consider column 1 (set $j=1$).
 Find a nonzero entry (underline below) in the column.
-\[\begin{bmatrix}\underline{0}&amp;0&amp;2&amp;2&amp;6&amp;2&amp;3\\
-\underline{2}&amp;4&amp;1&amp;3&amp;7&amp;3&amp;-1\\
-\underline{1}&amp;2&amp;2&amp;3&amp;8&amp;2&amp;1\\
-\underline{1}&amp;2&amp;-1&amp;0&amp;-1&amp;2&amp;-1\\
+\[\begin{bmatrix}\underline{0}&0&2&2&6&2&3\\
+\underline{2}&4&1&3&7&3&-1\\
+\underline{1}&2&2&3&8&2&1\\
+\underline{1}&2&-1&0&-1&2&-1\\
 \end{bmatrix}\] 
 @col
  Move the nonzero entry to row 1 by swapping rows $R_{1}\leftrightarrow R_{i}$.
@@ -410,11 +410,11 @@ Find a nonzero entry (underline below) in the column.
 
 @col
  So we use $R_{1}\leftrightarrow R_{3}$.
-\[\xrightarrow{R_{1}\leftrightarrow R_{3}}\begin{bmatrix}\boxed{1}&amp;2&amp;2&amp;3&amp;8&amp;2&amp;%
+\[\xrightarrow{R_{1}\leftrightarrow R_{3}}\begin{bmatrix}\boxed{1}&2&2&3&8&2&%
 1\\
-2&amp;4&amp;1&amp;3&amp;7&amp;3&amp;-1\\
-0&amp;0&amp;2&amp;2&amp;6&amp;2&amp;3\\
-1&amp;2&amp;-1&amp;0&amp;-1&amp;2&amp;-1\\
+2&4&1&3&7&3&-1\\
+0&0&2&2&6&2&3\\
+1&2&-1&0&-1&2&-1\\
 \end{bmatrix}\] 
 @col
  If the boxed number is $1$, we are good to go.
@@ -427,26 +427,26 @@ Find a nonzero entry (underline below) in the column.
 
 @col
  In our example, the boxed number is $1$, so we don’t have to do anything. Use $-2R_{1}+R_{2}$ and $-1R_{1}+R_{4}$ to remove the nonzero entries below it and above it. Since we are at the first row, so there is nothing above it.
-\[\xrightarrow{-2R_{1}+R_{2},\;-1R_{1}+R_{4}}\begin{bmatrix}1&amp;2&amp;2&amp;3&amp;8&amp;2&amp;1\\
-0&amp;0&amp;-3&amp;-3&amp;-9&amp;-1&amp;-3\\
-0&amp;0&amp;2&amp;2&amp;6&amp;2&amp;3\\
-0&amp;0&amp;-3&amp;-3&amp;-9&amp;0&amp;-2\\
+\[\xrightarrow{-2R_{1}+R_{2},\;-1R_{1}+R_{4}}\begin{bmatrix}1&2&2&3&8&2&1\\
+0&0&-3&-3&-9&-1&-3\\
+0&0&2&2&6&2&3\\
+0&0&-3&-3&-9&0&-2\\
 \end{bmatrix}\] 
 @col
  Ignore the row 1 and col 1.  Consider column 2:
-\[\begin{bmatrix}*&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*\\
-*&amp;\underline{0}&amp;-3&amp;-3&amp;-9&amp;-1&amp;-3\\
-*&amp;\underline{0}&amp;2&amp;2&amp;6&amp;2&amp;3\\
-*&amp;\underline{0}&amp;-3&amp;-3&amp;-9&amp;0&amp;-2\\
+\[\begin{bmatrix}*&*&*&*&*&*&*\\
+*&\underline{0}&-3&-3&-9&-1&-3\\
+*&\underline{0}&2&2&6&2&3\\
+*&\underline{0}&-3&-3&-9&0&-2\\
 \end{bmatrix}\]
 None of the entries of column 2 are nonzero.
 
 @col
  So, we consider the next column ($j = 3$, $r = 1$).
-\[\begin{bmatrix}*&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*\\
-*&amp;0&amp;\underline{-3}&amp;-3&amp;-9&amp;-1&amp;-3\\
-*&amp;0&amp;\underline{2}&amp;2&amp;6&amp;2&amp;3\\
-*&amp;0&amp;\underline{-3}&amp;-3&amp;-9&amp;0&amp;-2\\
+\[\begin{bmatrix}*&*&*&*&*&*&*\\
+*&0&\underline{-3}&-3&-9&-1&-3\\
+*&0&\underline{2}&2&6&2&3\\
+*&0&\underline{-3}&-3&-9&0&-2\\
 \end{bmatrix}\]
 
 @col
@@ -457,61 +457,61 @@ so we may increase the number of nonzero rows to $r = 2$.
 @col
  There is no entry equal to $1$ or $-1$.
 We don’t need to so any swapping.
-\[\begin{bmatrix}*&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*\\
-*&amp;0&amp;\boxed{-3}&amp;-3&amp;-9&amp;-1&amp;-3\\
-*&amp;0&amp;2&amp;2&amp;6&amp;2&amp;3\\
-*&amp;0&amp;-3&amp;-3&amp;-9&amp;0&amp;-2\\
+\[\begin{bmatrix}*&*&*&*&*&*&*\\
+*&0&\boxed{-3}&-3&-9&-1&-3\\
+*&0&2&2&6&2&3\\
+*&0&-3&-3&-9&0&-2\\
 \end{bmatrix}\] 
 @col
  Turn the boxed number into $1$ by $-\frac{1}{3}R_{2}$.
-\[\xrightarrow{-\frac{1}{3}R_{2}}\begin{bmatrix}1&amp;2&amp;2&amp;3&amp;8&amp;2&amp;1\\
-0&amp;0&amp;\boxed{1}&amp;1&amp;3&amp;\frac{1}{3}&amp;1\\
-0&amp;0&amp;2&amp;2&amp;6&amp;2&amp;3\\
-0&amp;0&amp;-3&amp;-3&amp;-9&amp;0&amp;-2\\
+\[\xrightarrow{-\frac{1}{3}R_{2}}\begin{bmatrix}1&2&2&3&8&2&1\\
+0&0&\boxed{1}&1&3&\frac{1}{3}&1\\
+0&0&2&2&6&2&3\\
+0&0&-3&-3&-9&0&-2\\
 \end{bmatrix}\] 
 @col
  We then use the boxed number to remove the nonzero entries about it and below it.
 \[\xrightarrow{-2R_{2}+R_{1},\;-2R_{2}+R_{3},\;3R_{2}+R_{4}}
-\begin{bmatrix}1&amp;2&amp;0&amp;1&amp;2%
-&amp;\frac{4}{3}&amp;-1\\
-0&amp;0&amp;1&amp;1&amp;3&amp;\frac{1}{3}&amp;1\\
-0&amp;0&amp;0&amp;0&amp;0&amp;\frac{4}{3}&amp;1\\
-0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;1\\
+\begin{bmatrix}1&2&0&1&2%
+&\frac{4}{3}&-1\\
+0&0&1&1&3&\frac{1}{3}&1\\
+0&0&0&0&0&\frac{4}{3}&1\\
+0&0&0&0&0&1&1\\
 \end{bmatrix}\] 
 @col
  Now, ignore the first 2 rows and the first 3 columns.
-\[\begin{bmatrix}*&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*\\
-*&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*\\
-*&amp;*&amp;*&amp;\underline{0}&amp;0&amp;\frac{4}{3}&amp;1\\
-*&amp;*&amp;*&amp;\underline{0}&amp;0&amp;1&amp;1\\
+\[\begin{bmatrix}*&*&*&*&*&*&*\\
+*&*&*&*&*&*&*\\
+*&*&*&\underline{0}&0&\frac{4}{3}&1\\
+*&*&*&\underline{0}&0&1&1\\
 \end{bmatrix}\]
 Consider the column with index $j = 4$.
 
 @col
  All the entries in column 4 (underlined) are equal to zero.
 So, we move to the next column, with index $j=5$.
-\[\begin{bmatrix}*&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*\\
-*&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*\\
-*&amp;*&amp;*&amp;0&amp;\underline{0}&amp;\frac{4}{3}&amp;1\\
-*&amp;*&amp;*&amp;0&amp;\underline{0}&amp;1&amp;1\\
+\[\begin{bmatrix}*&*&*&*&*&*&*\\
+*&*&*&*&*&*&*\\
+*&*&*&0&\underline{0}&\frac{4}{3}&1\\
+*&*&*&0&\underline{0}&1&1\\
 \end{bmatrix}\] 
 @col
  Again, all the entries in column 5 (underlined) are equal to zero.
 So, we move to the next column, with index $j=6$.
 
 @col
- \[\begin{bmatrix}*&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*\\
-*&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*\\
-*&amp;*&amp;*&amp;0&amp;0&amp;\underline{\frac{4}{3}}&amp;1\\
-*&amp;*&amp;*&amp;0&amp;0&amp;\underline{1}&amp;1\\
+ \[\begin{bmatrix}*&*&*&*&*&*&*\\
+*&*&*&*&*&*&*\\
+*&*&*&0&0&\underline{\frac{4}{3}}&1\\
+*&*&*&0&0&\underline{1}&1\\
 \end{bmatrix}\] 
 @col
  We continue the process without detailed explanations:
-\[\xrightarrow{R_{3}\leftrightarrow R_{4}}\begin{bmatrix}1&amp;2&amp;0&amp;1&amp;2&amp;\frac{4}{3}&amp;-%
+\[\xrightarrow{R_{3}\leftrightarrow R_{4}}\begin{bmatrix}1&2&0&1&2&\frac{4}{3}&-%
 1\\
-0&amp;0&amp;1&amp;1&amp;3&amp;\frac{1}{3}&amp;1\\
-0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;1\\
-0&amp;0&amp;0&amp;0&amp;0&amp;\frac{4}{3}&amp;1\\
+0&0&1&1&3&\frac{1}{3}&1\\
+0&0&0&0&0&1&1\\
+0&0&0&0&0&\frac{4}{3}&1\\
 \end{bmatrix}\] 
 @col
  \[
@@ -520,17 +520,17 @@ So, we move to the next column, with index $j=6$.
 -\frac{1}{3}R_{3}+R_{2},\\
 -\frac{4}{3}R_{3}+R_{4}
 \end{split}}
-\begin{bmatrix}1&amp;2&amp;0&amp;1&amp;2&amp;0&amp;-\frac{7}{3}\\
-0&amp;0&amp;1&amp;1&amp;3&amp;0&amp;\frac{2}{3}\\
-0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;1\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;-\frac{1}{3}\\
+\begin{bmatrix}1&2&0&1&2&0&-\frac{7}{3}\\
+0&0&1&1&3&0&\frac{2}{3}\\
+0&0&0&0&0&1&1\\
+0&0&0&0&0&0&-\frac{1}{3}\\
 \end{bmatrix}
 \] 
 @col
- \[\xrightarrow{-3R_{4}}\begin{bmatrix}1&amp;2&amp;0&amp;1&amp;2&amp;0&amp;-\frac{7}{3}\\
-0&amp;0&amp;1&amp;1&amp;3&amp;0&amp;\frac{2}{3}\\
-0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;1\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;1\\
+ \[\xrightarrow{-3R_{4}}\begin{bmatrix}1&2&0&1&2&0&-\frac{7}{3}\\
+0&0&1&1&3&0&\frac{2}{3}\\
+0&0&0&0&0&1&1\\
+0&0&0&0&0&0&1\\
 \end{bmatrix}\] 
 @col
  \[\xrightarrow{\begin{split}
@@ -538,10 +538,10 @@ So, we move to the next column, with index $j=6$.
 -\frac{2}{3}R_{4}+R_{2},\\
 -1R_{4}+R_{3}
 \end{split}}
-\begin{bmatrix}1&amp;2&amp;0&amp;1&amp;2&amp;0&amp;0\\
-0&amp;0&amp;1&amp;1&amp;3&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;0\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;1\\
+\begin{bmatrix}1&2&0&1&2&0&0\\
+0&0&1&1&3&0&0\\
+0&0&0&0&0&1&0\\
+0&0&0&0&0&0&1\\
 \end{bmatrix} = B\]
 The matrix $B$ is the reduced row echelon form of $A$.
 We write:
@@ -566,67 +566,67 @@ A\xrightarrow{\text{RREF}}B.
  Find the solutions to the following system of equations,
 \[
 \begin{split}
--7x_{1}-6x_{2}-12x_{3}&amp;=-33\\
-5x_{1}+5x_{2}+7x_{3}&amp;=24\\
-x_{1}+4x_{3}&amp;=5
+-7x_{1}-6x_{2}-12x_{3}&=-33\\
+5x_{1}+5x_{2}+7x_{3}&=24\\
+x_{1}+4x_{3}&=5
 \end{split}
 \] 
 @newcol
  First, form the augmented matrix, is
-\[\left[\begin{array}[]{ccc|c}-7&amp;-6&amp;-12&amp;-33\\
-5&amp;5&amp;7&amp;24\\
-1&amp;0&amp;4&amp;5\\
+\[\left[\begin{array}[]{ccc|c}-7&-6&-12&-33\\
+5&5&7&24\\
+1&0&4&5\\
 \end{array}\right]\] 
 @col
  and work to reduced row-echelon form, first with $j=1$,
 \[\displaystyle\xrightarrow{R_{1}\leftrightarrow R_{3}}\left[\begin{array}[]{ccc%
-|c}1&amp;0&amp;4&amp;5\\
-5&amp;5&amp;7&amp;24\\
--7&amp;-6&amp;-12&amp;-33\end{array}\right]\xrightarrow{-5R_{1}+R_{2}}
+|c}1&0&4&5\\
+5&5&7&24\\
+-7&-6&-12&-33\end{array}\right]\xrightarrow{-5R_{1}+R_{2}}
 \left[
 \begin{array}[
-]{ccc|c}1&amp;0&amp;4&amp;5\\
-0&amp;5&amp;-13&amp;-1\\
--7&amp;-6&amp;-12&amp;-33
+]{ccc|c}1&0&4&5\\
+0&5&-13&-1\\
+-7&-6&-12&-33
 \end{array}
 \right]
 \] 
 @col
  \[\displaystyle\xrightarrow{7R_{1}+R_{3}}\left[\begin{array}[]{ccc|c}
-\boxed{1}&amp;0&amp;4&amp;5\\
-0&amp;5&amp;-13&amp;-1\\
-0&amp;-6&amp;16&amp;2\end{array}\right]
+\boxed{1}&0&4&5\\
+0&5&-13&-1\\
+0&-6&16&2\end{array}\right]
 \] 
 @col
  Now, with $j=2$,
 \[\displaystyle\xrightarrow{\frac{1}{5}R_{2}}\left[\begin{array}[]{ccc|c}%
-\boxed{1}&amp;0&amp;4&amp;5\\
-0&amp;1&amp;\frac{-13}{5}&amp;\frac{-1}{5}\\
-0&amp;-6&amp;16&amp;2\end{array}\right]\xrightarrow{6R_{2}+R_{3}}\left[\begin{array}[]{ccc%
-|c}\boxed{1}&amp;0&amp;4&amp;5\\
-0&amp;\boxed{1}&amp;\frac{-13}{5}&amp;\frac{-1}{5}\\
-0&amp;0&amp;\frac{2}{5}&amp;\frac{4}{5}\end{array}\right]\] 
+\boxed{1}&0&4&5\\
+0&1&\frac{-13}{5}&\frac{-1}{5}\\
+0&-6&16&2\end{array}\right]\xrightarrow{6R_{2}+R_{3}}\left[\begin{array}[]{ccc%
+|c}\boxed{1}&0&4&5\\
+0&\boxed{1}&\frac{-13}{5}&\frac{-1}{5}\\
+0&0&\frac{2}{5}&\frac{4}{5}\end{array}\right]\] 
 @col
  And finally, with $j=3$,
 \[
 \xrightarrow{\frac{5}{2}R_{3}}
 \left[
 \begin{array}[]{ccc|c}
-\boxed{1}&amp;0&amp;4&amp;5\\
-0&amp;\boxed{1}&amp;\frac{-13}{5}&amp;\frac{-1}{5}\\
-0&amp;0&amp;1&amp;2\end{array}
+\boxed{1}&0&4&5\\
+0&\boxed{1}&\frac{-13}{5}&\frac{-1}{5}\\
+0&0&1&2\end{array}
 \right]
 \xrightarrow{\frac{13}{5}R_{3}+R_{2}}
 \left[
-\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;4&amp;5\\
-0&amp;\boxed{1}&amp;0&amp;5\\
-0&amp;0&amp;1&amp;2
+\begin{array}[]{ccc|c}\boxed{1}&0&4&5\\
+0&\boxed{1}&0&5\\
+0&0&1&2
 \end{array}\right]
 \] 
 @col
- \[\displaystyle\xrightarrow{-4R_{3}+R_{1}}\left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;0&amp;-3\\
-0&amp;\boxed{1}&amp;0&amp;5\\
-0&amp;0&amp;\boxed{1}&amp;2\end{array}\right]
+ \[\displaystyle\xrightarrow{-4R_{3}+R_{1}}\left[\begin{array}[]{ccc|c}\boxed{1}&0&0&-3\\
+0&\boxed{1}&0&5\\
+0&0&\boxed{1}&2\end{array}\right]
 \] 
 @col
  This is now the augmented matrix of a very simple system of equations, namely $x_{1}=-3$, $x_{2}=5$, $x_{3}=2$, which has an obvious solution. Furthermore, we can see that this is the <strong>only</strong> solution to this system, so we have determined the entire solution set,
@@ -641,34 +641,34 @@ x_{1}+4x_{3}&amp;=5
 @eg
  Let us find the solutions to the following system of equations,
 \[\begin{split}
-x_{1}-x_{2}+2x_{3}&amp;=1\\
-2x_{1}+x_{2}+x_{3}&amp;=8\\
-x_{1}+x_{2}&amp;=5\\
+x_{1}-x_{2}+2x_{3}&=1\\
+2x_{1}+x_{2}+x_{3}&=8\\
+x_{1}+x_{2}&=5\\
 \end{split}\] 
 @newcol
  First, form the augmented matrix,
-\[\left[\begin{array}[]{ccc|c}1&amp;-1&amp;2&amp;1\\
-2&amp;1&amp;1&amp;8\\
-1&amp;1&amp;0&amp;5\end{array}\right]\]
-\[\displaystyle\xrightarrow{-2R_{1}+R_{2}}\left[\begin{array}[]{ccc|c}1&amp;-1&amp;2&amp;1\\
-0&amp;3&amp;-3&amp;6\\
-1&amp;1&amp;0&amp;5\end{array}\right]\xrightarrow{-1R_{1}+R_{3}}\left[\begin{array}[]{ccc|%
-c}\boxed{1}&amp;-1&amp;2&amp;1\\
-0&amp;3&amp;-3&amp;6\\
-0&amp;2&amp;-2&amp;4\end{array}\right]\] 
+\[\left[\begin{array}[]{ccc|c}1&-1&2&1\\
+2&1&1&8\\
+1&1&0&5\end{array}\right]\]
+\[\displaystyle\xrightarrow{-2R_{1}+R_{2}}\left[\begin{array}[]{ccc|c}1&-1&2&1\\
+0&3&-3&6\\
+1&1&0&5\end{array}\right]\xrightarrow{-1R_{1}+R_{3}}\left[\begin{array}[]{ccc|%
+c}\boxed{1}&-1&2&1\\
+0&3&-3&6\\
+0&2&-2&4\end{array}\right]\] 
 @col
  Now, with $j=2$,
 \[\displaystyle\xrightarrow{\frac{1}{3}R_{2}}\left[\begin{array}[]{ccc|c}%
-\boxed{1}&amp;-1&amp;2&amp;1\\
-0&amp;1&amp;-1&amp;2\\
-0&amp;2&amp;-2&amp;4\end{array}\right]\xrightarrow{1R_{2}+R_{1}}\left[\begin{array}[]{ccc|%
-c}\boxed{1}&amp;0&amp;1&amp;3\\
-0&amp;1&amp;-1&amp;2\\
-0&amp;2&amp;-2&amp;4\end{array}\right]\]
+\boxed{1}&-1&2&1\\
+0&1&-1&2\\
+0&2&-2&4\end{array}\right]\xrightarrow{1R_{2}+R_{1}}\left[\begin{array}[]{ccc|%
+c}\boxed{1}&0&1&3\\
+0&1&-1&2\\
+0&2&-2&4\end{array}\right]\]
 \[\displaystyle\xrightarrow{-2R_{2}+R_{3}}\left[\begin{array}[]{ccc|c}\boxed{%
-1}&amp;0&amp;1&amp;3\\
-0&amp;\boxed{1}&amp;-1&amp;2\\
-0&amp;0&amp;0&amp;0\end{array}\right]\] 
+1}&0&1&3\\
+0&\boxed{1}&-1&2\\
+0&0&0&0\end{array}\right]\] 
 @col
  The system of equations represented by this augmented matrix needs to be considered a bit differently than the previous case.
 First, the last row of the matrix is the equation $0=0$, which is always true, so it imposes no restrictions on our possible solutions and therefore we can safely ignore it as we analyze the other two equations. These equations are:
@@ -702,47 +702,47 @@ We will learn more in the next lecture about systems with infinitely many soluti
 @eg
  Let us find the solutions to the following system of equations,
 \begin{align*}
-2x_{1}+x_{2}+7x_{3}-7x_{4} &amp;= 2\\
--3x_{1}+4x_{2}-5x_{3}-6x_{4} &amp;= 3\\
-x_{1}+x_{2}+4x_{3}-5x_{4} &amp;= 2
+2x_{1}+x_{2}+7x_{3}-7x_{4} &= 2\\
+-3x_{1}+4x_{2}-5x_{3}-6x_{4} &= 3\\
+x_{1}+x_{2}+4x_{3}-5x_{4} &= 2
 \end{align*} 
 @newcol
  First, form the augmented matrix,
-\[\left[\begin{array}[]{cccc|c}2&amp;1&amp;7&amp;-7&amp;2\\
--3&amp;4&amp;-5&amp;-6&amp;3\\
-1&amp;1&amp;4&amp;-5&amp;2\\
+\[\left[\begin{array}[]{cccc|c}2&1&7&-7&2\\
+-3&4&-5&-6&3\\
+1&1&4&-5&2\\
 \end{array}\right]\]
 and work to reduced row-echelon form, first with $j=1$,
-\[\displaystyle\xrightarrow{R_{1}\leftrightarrow R_{3}}\left[\begin{array}[]{cccc|c}1&amp;1&amp;4&amp;-5&amp;2\\
--3&amp;4&amp;-5&amp;-6&amp;3\\
-2&amp;1&amp;7&amp;-7&amp;2\end{array}\right]\xrightarrow{3R_{1}+R_{2}}\left[\begin{array}[]{cccc|c}1&amp;1&amp;4&amp;-5&amp;2\\
-0&amp;7&amp;7&amp;-21&amp;9\\
-2&amp;1&amp;7&amp;-7&amp;2\end{array}\right]\]
-\[\displaystyle\xrightarrow{-2R_{1}+R_{3}}\left[\begin{array}[]{cccc|c}\boxed{1}&amp;1&amp;4&amp;-5&amp;2\\
-0&amp;7&amp;7&amp;-21&amp;9\\
-0&amp;-1&amp;-1&amp;3&amp;-2\end{array}\right]\] 
+\[\displaystyle\xrightarrow{R_{1}\leftrightarrow R_{3}}\left[\begin{array}[]{cccc|c}1&1&4&-5&2\\
+-3&4&-5&-6&3\\
+2&1&7&-7&2\end{array}\right]\xrightarrow{3R_{1}+R_{2}}\left[\begin{array}[]{cccc|c}1&1&4&-5&2\\
+0&7&7&-21&9\\
+2&1&7&-7&2\end{array}\right]\]
+\[\displaystyle\xrightarrow{-2R_{1}+R_{3}}\left[\begin{array}[]{cccc|c}\boxed{1}&1&4&-5&2\\
+0&7&7&-21&9\\
+0&-1&-1&3&-2\end{array}\right]\] 
 @col
  Now, with $j=2$,
-\[\displaystyle\xrightarrow{R_{2}\leftrightarrow R_{3}}\left[\begin{array}[]{cccc|c}\boxed{1}&amp;1&amp;4&amp;-5&amp;2\\
-0&amp;-1&amp;-1&amp;3&amp;-2\\
-0&amp;7&amp;7&amp;-21&amp;9\end{array}\right]\xrightarrow{-1R_{2}}\left[\begin{array}[]{cccc|c}\boxed{1}&amp;1&amp;4&amp;-5&amp;2\\
-0&amp;1&amp;1&amp;-3&amp;2\\
-0&amp;7&amp;7&amp;-21&amp;9\end{array}\right]\]
-\[\displaystyle\xrightarrow{-1R_{2}+R_{1}}\left[\begin{array}[]{cccc|c}\boxed{1}&amp;0&amp;3&amp;-2&amp;0\\
-0&amp;1&amp;1&amp;-3&amp;2\\
-0&amp;7&amp;7&amp;-21&amp;9\end{array}\right]\xrightarrow{-7R_{2}+R_{3}}\left[\begin{array}[]{%
-cccc|c}\boxed{1}&amp;0&amp;3&amp;-2&amp;0\\
-0&amp;\boxed{1}&amp;1&amp;-3&amp;2\\
-0&amp;0&amp;0&amp;0&amp;-5\end{array}\right]\] 
+\[\displaystyle\xrightarrow{R_{2}\leftrightarrow R_{3}}\left[\begin{array}[]{cccc|c}\boxed{1}&1&4&-5&2\\
+0&-1&-1&3&-2\\
+0&7&7&-21&9\end{array}\right]\xrightarrow{-1R_{2}}\left[\begin{array}[]{cccc|c}\boxed{1}&1&4&-5&2\\
+0&1&1&-3&2\\
+0&7&7&-21&9\end{array}\right]\]
+\[\displaystyle\xrightarrow{-1R_{2}+R_{1}}\left[\begin{array}[]{cccc|c}\boxed{1}&0&3&-2&0\\
+0&1&1&-3&2\\
+0&7&7&-21&9\end{array}\right]\xrightarrow{-7R_{2}+R_{3}}\left[\begin{array}[]{%
+cccc|c}\boxed{1}&0&3&-2&0\\
+0&\boxed{1}&1&-3&2\\
+0&0&0&0&-5\end{array}\right]\] 
 @col
  And finally, with $j=4$,
 \[\displaystyle\xrightarrow{-\frac{1}{5}R_{3}}\left[\begin{array}[]{cccc|c}
-\boxed{1}&amp;0&amp;3&amp;-2&amp;0\\
-0&amp;\boxed{1}&amp;1&amp;-3&amp;2\\
-0&amp;0&amp;0&amp;0&amp;1\end{array}\right]\xrightarrow{-2R_{3}+R_{2}}\left[\begin{array}[]{%
-cccc|c}\boxed{1}&amp;0&amp;3&amp;-2&amp;0\\
-0&amp;\boxed{1}&amp;1&amp;-3&amp;0\\
-0&amp;0&amp;0&amp;0&amp;\boxed{1}\end{array}\right]\] 
+\boxed{1}&0&3&-2&0\\
+0&\boxed{1}&1&-3&2\\
+0&0&0&0&1\end{array}\right]\xrightarrow{-2R_{3}+R_{2}}\left[\begin{array}[]{%
+cccc|c}\boxed{1}&0&3&-2&0\\
+0&\boxed{1}&1&-3&0\\
+0&0&0&0&\boxed{1}\end{array}\right]\] 
 @col
  The third equation will read $0=1$. This is patently false, all the time. No choice of values for our variables will ever make it true. We are done. Since we cannot even make the last equation true, we have no hope of making all of the equations simultaneously true. So this system has @keyword{no solutions}, and its solution set is the empty set, $\varnothing=\{\ \}$
 Notice that we could have reached this conclusion sooner. After performing the row operation
@@ -766,22 +766,22 @@ With these tools, we will be able to routinely solve any linear system.
 @item
  The system of linear equations
 \begin{align*}
-2x_1 + 3x_2 &amp;= 3 \\
-x_1 - x_2 &amp;= 4
+2x_1 + 3x_2 &= 3 \\
+x_1 - x_2 &= 4
 \end{align*}
 is consistent because it has solution $(x_{1},x_{2})=(1,-3)$. 
 @item
  The system of linear equations
 \begin{align*}
-2x_1+3x_2&amp;=3\\
-4x_1+6x_2&amp;=6
+2x_1+3x_2&=3\\
+4x_1+6x_2&=6
 \end{align*}
 is consistent because has infinite many solutions: $\{(t,\frac{3-2t}{3})\,|\,t\text{ real number}\}$. 
 @item
  The system of linear equations
 \begin{align*}
-2x_1+3x_2&amp;=3\\
-4x_1+6x_2&amp;=10
+2x_1+3x_2&=3\\
+4x_1+6x_2&=10
 \end{align*}
 is inconsistent because it has no solution. 
 @endenumerate
@@ -805,32 +805,32 @@ is inconsistent because it has no solution.
 @label{RREFN}
  Reduced row-echelon form notation
 For the $5\times 9$ matrix
-\[\displaystyle B=\begin{bmatrix}\boxed{1}&amp;5&amp;0&amp;0&amp;2&amp;8&amp;0&amp;5&amp;-1\\
-0&amp;0&amp;\boxed{1}&amp;0&amp;4&amp;7&amp;0&amp;2&amp;0\\
-0&amp;0&amp;0&amp;\boxed{1}&amp;3&amp;9&amp;0&amp;3&amp;-6\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;\boxed{1}&amp;4&amp;2\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}\]
+\[\displaystyle B=\begin{bmatrix}\boxed{1}&5&0&0&2&8&0&5&-1\\
+0&0&\boxed{1}&0&4&7&0&2&0\\
+0&0&0&\boxed{1}&3&9&0&3&-6\\
+0&0&0&0&0&0&\boxed{1}&4&2\\
+0&0&0&0&0&0&0&0&0\end{bmatrix}\]
 in reduced row-echelon form we have:
 
 @newcol
  \begin{align*}
-r&amp;=4\\
-d_1&amp;=1
-&amp;
-d_2&amp;=3
-&amp;
-d_3&amp;=4
-&amp;
-d_4&amp;=7\\
-f_1&amp;=2
-&amp;
-f_2&amp;=5
-&amp;
-f_3&amp;=6
-&amp;
-f_4&amp;=8
-&amp;
-f_5&amp;=9
+r&=4\\
+d_1&=1
+&
+d_2&=3
+&
+d_3&=4
+&
+d_4&=7\\
+f_1&=2
+&
+f_2&=5
+&
+f_3&=6
+&
+f_4&=8
+&
+f_5&=9
 \end{align*} 
 @col
  Notice that the sets
@@ -844,34 +844,34 @@ have nothing in common and together account for all of the columns of $B$.
  Describe the infinite solution set of the following system of linear equations
 with $m=4$ equations in $n=7$ variables.
 \begin{align*}
-x_1 +4x_2  - x_4  + 7x_6 - 9x_7 &amp;= 3\\
-2x_1 + 8x_2 - x_3 + 3x_4 + 9x_5 - 13x_6 + 7x_7 &amp;= 9\\
-2x_3 -3x_4 -4x_5 +12x_6 -8x_7 &amp;= 1\\
--x_1  - 4x_2 + 2x_3 +4x_4 + 8x_5 - 31x_6 + 37x_7 &amp;= 4
+x_1 +4x_2  - x_4  + 7x_6 - 9x_7 &= 3\\
+2x_1 + 8x_2 - x_3 + 3x_4 + 9x_5 - 13x_6 + 7x_7 &= 9\\
+2x_3 -3x_4 -4x_5 +12x_6 -8x_7 &= 1\\
+-x_1  - 4x_2 + 2x_3 +4x_4 + 8x_5 - 31x_6 + 37x_7 &= 4
 \end{align*} 
 @newcol
  This system has a $4\times 8$ augmented matrix
-\[\left[\begin{array}[]{ccccccc|c}1&amp;4&amp;0&amp;-1&amp;0&amp;7&amp;-9&amp;3\\
-2&amp;8&amp;-1&amp;3&amp;9&amp;-13&amp;7&amp;9\\
-0&amp;0&amp;2&amp;-3&amp;-4&amp;12&amp;-8&amp;1\\
--1&amp;-4&amp;2&amp;4&amp;8&amp;-31&amp;37&amp;4\end{array}\right]\]
+\[\left[\begin{array}[]{ccccccc|c}1&4&0&-1&0&7&-9&3\\
+2&8&-1&3&9&-13&7&9\\
+0&0&2&-3&-4&12&-8&1\\
+-1&-4&2&4&8&-31&37&4\end{array}\right]\]
 The matrix is row-equivalent to the following matrix reduced row-echelon form
 (<strong>exercise</strong>: check this)
 
 @col
- \[\left[\begin{array}[]{ccccccc|c}\boxed{1}&amp;4&amp;0&amp;0&amp;2&amp;1&amp;-3&amp;4\\
-0&amp;0&amp;\boxed{1}&amp;0&amp;1&amp;-3&amp;5&amp;2\\
-0&amp;0&amp;0&amp;\boxed{1}&amp;2&amp;-6&amp;6&amp;1\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{array}\right]\]
+ \[\left[\begin{array}[]{ccccccc|c}\boxed{1}&4&0&0&2&1&-3&4\\
+0&0&\boxed{1}&0&1&-3&5&2\\
+0&0&0&\boxed{1}&2&-6&6&1\\
+0&0&0&0&0&0&0&0\end{array}\right]\]
 So we find that $r=3$ and
 \[\displaystyle D=\{d_{1},\,d_{2},\,d_{3}\}=\{1,\,3,\,4\}\]
 Let $i$ denote any one of the $r=3$ nonzero rows. Then the index $d_{i}$ is a pivot column. It will be easy in this case to use the equation represented by row $i$ to write an expression for the variable $x_{d_{i}}$. It will be a linear function of the variables $x_{f_{1}},\,x_{f_{2}},\,x_{f_{3}},\,x_{f_{4}}$
 
 @col
  \begin{align*}
-(i=1)&amp; &amp; x_{d_1}&amp;=x_1=4-4x_2-2x_5-x_6+3x_7\\
-(i=2)&amp; &amp; x_{d_2}&amp;=x_3=2-x_5+3x_6-5x_7\\
-(i=3)&amp; &amp; x_{d_3}&amp;=x_4=1-2x_5+6x_6-6x_7
+(i=1)& & x_{d_1}&=x_1=4-4x_2-2x_5-x_6+3x_7\\
+(i=2)& & x_{d_2}&=x_3=2-x_5+3x_6-5x_7\\
+(i=3)& & x_{d_3}&=x_4=1-2x_5+6x_6-6x_7
 \end{align*} 
 @col
  Each element of the set $F=\{f_{1},\,f_{2},\,f_{3},\,f_{4},\,f_{5}\}=\{2,\,5,\,6,\,7,\,8\}$ is the index of a variable, except for $f_{5}=8$. We refer to $x_{f_{1}}=x_{2}$, $x_{f_{2}}=x_{5}$, $x_{f_{3}}=x_{6}$ and $x_{f_{4}}=x_{7}$ as @keyword{free} (or @keyword{independent}) variables since they are allowed to assume any possible combination of values that we can imagine and we can continue on to build a solution to the system by solving individual equations for the values of the other (@keyword{dependent}) variables.
@@ -931,30 +931,30 @@ A variable that is not dependent is called <strong>independent</strong> or <stro
 @newcol
  Consider the system of five equations in five variables,
 \begin{align*}
-x_1  - x_2  -2 x_3 +  x_4 + 11 x_5 &amp;= 13 \\
-x_1 - x_2 +  x_3+  x_4 + 5 x_5 &amp;= 16 \\
-2 x_1  -2 x_2       +  x_4 + 10 x_5 &amp;= 21 \\
-2 x_1  -2 x_2  - x_3 + 3 x_4 + 20 x_5 &amp;= 38 \\
-2 x_1  -2 x_ 2 +  x_3 +  x_4 + 8 x_ 5&amp;= 22
+x_1  - x_2  -2 x_3 +  x_4 + 11 x_5 &= 13 \\
+x_1 - x_2 +  x_3+  x_4 + 5 x_5 &= 16 \\
+2 x_1  -2 x_2       +  x_4 + 10 x_5 &= 21 \\
+2 x_1  -2 x_2  - x_3 + 3 x_4 + 20 x_5 &= 38 \\
+2 x_1  -2 x_ 2 +  x_3 +  x_4 + 8 x_ 5&= 22
 \end{align*}
 whose augmented matrix row-reduces to:
 
 @col
  \begin{equation}
-\left[\begin{array}[]{ccccc|c}\boxed{1}&amp;-1&amp;0&amp;0&amp;3&amp;6\\
-0&amp;0&amp;\boxed{1}&amp;0&amp;-2&amp;1\\
-0&amp;0&amp;0&amp;\boxed{1}&amp;4&amp;9\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0\end{array}\right]
+\left[\begin{array}[]{ccccc|c}\boxed{1}&-1&0&0&3&6\\
+0&0&\boxed{1}&0&-2&1\\
+0&0&0&\boxed{1}&4&9\\
+0&0&0&0&0&0\\
+0&0&0&0&0&0\end{array}\right]
 \end{equation} 
 @col
  Columns 1, 3 and 4 are pivot columns, so $D=\{1,\,3,\,4\}$. From this we know that the variables $x_{1}$, $x_{3}$ and $x_{4}$ will be dependent variables, and each of the $r=3$ nonzero rows of the row-reduced matrix will yield an expression for one of these three variables. The set $F$ is all the remaining column indices, $F=\{2,\,5,\,6\}$. The column index $6$ in $F$ means that the final column is not a pivot column, and thus the system is consistent (see the next theorem). The remaining indices in $F$ indicate free variables, so $x_{2}$ and $x_{5}$ (the remaining variables) are our free variables. The resulting three equations that describe our solution set are then,
 
 @col
  \begin{align*}
-(x_{d_1}=x_1)&amp; &amp; x_1&amp;=6+x_2-3x_5\\
-(x_{d_2}=x_3)&amp; &amp; x_3&amp;=1+2x_5\\
-(x_{d_3}=x_4)&amp; &amp; x_4&amp;=9-4x_5
+(x_{d_1}=x_1)& & x_1&=6+x_2-3x_5\\
+(x_{d_2}=x_3)& & x_3&=1+2x_5\\
+(x_{d_3}=x_4)& & x_4&=9-4x_5
 \end{align*} 
 @col
  Make sure you understand where these three equations came from, and notice how the location of the pivot columns determined the variables on the left-hand side of each equation. We can compactly describe the solution set as,
@@ -991,13 +991,13 @@ If the last column vector of $B$ is a pivot column, then $B$ is in the form of:
 
 @col
  \[\begin{bmatrix}
-1 &amp; \cdots &amp; 0 &amp; \cdots &amp; 0 &amp; \cdots &amp; * &amp; 0\\
-&amp;        &amp; 1 &amp; \cdots &amp; 0 &amp; \cdots &amp; * &amp; 0\\
-&amp;        &amp;   &amp;        &amp; 1 &amp; \cdots &amp; * &amp; 0\\
-\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
-0 &amp; \cdots &amp; 0 &amp; \cdots &amp; 0 &amp; \cdots &amp; 0 &amp;1\\
-0 &amp; \cdots &amp; 0 &amp; \cdots &amp; 0 &amp; \cdots &amp; 0 &amp;0\\
-&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+1 & \cdots & 0 & \cdots & 0 & \cdots & * & 0\\
+&        & 1 & \cdots & 0 & \cdots & * & 0\\
+&        &   &        & 1 & \cdots & * & 0\\
+\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
+0 & \cdots & 0 & \cdots & 0 & \cdots & 0 &1\\
+0 & \cdots & 0 & \cdots & 0 & \cdots & 0 &0\\
+&&&&&&&
 \end{bmatrix}\]
 For the system of linear equations with the above augmented matrix, the $r+1$-st equation (i.e. the last non-zero equation) is
 \[0=1.\]
@@ -1006,13 +1006,13 @@ Conversely, if the last column vector is not a pivot column vector, then $B$ is 
 
 @col
  \[\begin{bmatrix}
-1 &amp; \cdots &amp; 0 &amp; \cdots &amp; 0 &amp; \cdots &amp; 0 &amp; \cdots\\
-&amp;        &amp; 1 &amp; \cdots &amp; 0 &amp; \cdots &amp; 0 &amp; \cdots\\
-&amp;        &amp;   &amp;        &amp; 1 &amp; \cdots &amp; 0 &amp; \cdots\\
-\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
-0 &amp; \cdots &amp; 0 &amp; \cdots &amp; 0 &amp; \cdots &amp; 1 &amp; \cdots\\
-0 &amp; \cdots &amp; 0 &amp; \cdots &amp; 0 &amp; \cdots &amp; 0 &amp;0\\
-&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+1 & \cdots & 0 & \cdots & 0 & \cdots & 0 & \cdots\\
+&        & 1 & \cdots & 0 & \cdots & 0 & \cdots\\
+&        &   &        & 1 & \cdots & 0 & \cdots\\
+\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
+0 & \cdots & 0 & \cdots & 0 & \cdots & 1 & \cdots\\
+0 & \cdots & 0 & \cdots & 0 & \cdots & 0 &0\\
+&&&&&&&
 \end{bmatrix}\]
 For the system of equations with the above augmented matrix,
 we can move the variables corresponding to the non-pivot columns (i.e., $x_{f_{1}},x_{f_{2}},\ldots$) to the right hand side of the equations and therefore solve the equations.
@@ -1025,24 +1025,24 @@ Note that $x_{f_{1}},x_{f_{2}},\ldots$ are free variables.
 @eg
  Determine if the following system of linear equation is consistent.
 \begin{align*}
-x_1+x_2+2 x_3+3 x_4+2 x_5+5 x_6 &amp;=1 \\
-2 x_1+2 x_2+3 x_3-x_4 &amp;=1 \\
-3 x_1+3 x_2+5 x_3+x_4+x_5-2 x_6 &amp;=3 \\
-x_4+x_5+7 x_6 &amp;=0
+x_1+x_2+2 x_3+3 x_4+2 x_5+5 x_6 &=1 \\
+2 x_1+2 x_2+3 x_3-x_4 &=1 \\
+3 x_1+3 x_2+5 x_3+x_4+x_5-2 x_6 &=3 \\
+x_4+x_5+7 x_6 &=0
 \end{align*} 
 @newcol
  The augmented matrix is
-\[\left[\begin{array}[]{cccccc|c}1&amp;1&amp;2&amp;3&amp;2&amp;5&amp;1\\
-2&amp;2&amp;3&amp;-1&amp;0&amp;0&amp;1\\
-3&amp;3&amp;5&amp;1&amp;1&amp;-2&amp;3\\
-0&amp;0&amp;0&amp;1&amp;1&amp;7&amp;-1\\
+\[\left[\begin{array}[]{cccccc|c}1&1&2&3&2&5&1\\
+2&2&3&-1&0&0&1\\
+3&3&5&1&1&-2&3\\
+0&0&0&1&1&7&-1\\
 \end{array}\right]\] 
 @col
  The reduced row echelon form is
-\[\left[\begin{array}[]{cccccc|c}1&amp;1&amp;0&amp;0&amp;5&amp;62&amp;0\\
-0&amp;0&amp;1&amp;0&amp;-3&amp;-39&amp;0\\
-0&amp;0&amp;0&amp;1&amp;1&amp;7&amp;0\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;1\\
+\[\left[\begin{array}[]{cccccc|c}1&1&0&0&5&62&0\\
+0&0&1&0&-3&-39&0\\
+0&0&0&1&1&7&0\\
+0&0&0&0&0&0&1\\
 \end{array}\right]\] 
 @col
  The last column is a pivot column. So the system is inconsistent. 
@@ -1052,24 +1052,24 @@ x_4+x_5+7 x_6 &amp;=0
 @newcol
  Determine if the following system of linear equation is consistent.
 \begin{align*}
-x_1+x_2+2 x_3+3 x_4+2 x_5+5 x_6 &amp;=1 \\
-2 x_1+2 x_2+3 x_3-x_4 &amp;=1 \\
-3 x_1+3 x_2+5 x_3+x_4+x_5-2 x_6 &amp;=3 \\
-x_4+x_5+7 x_6 &amp;=-1
+x_1+x_2+2 x_3+3 x_4+2 x_5+5 x_6 &=1 \\
+2 x_1+2 x_2+3 x_3-x_4 &=1 \\
+3 x_1+3 x_2+5 x_3+x_4+x_5-2 x_6 &=3 \\
+x_4+x_5+7 x_6 &=-1
 \end{align*} 
 @col
  The augmented matrix is
-\[\left[\begin{array}[]{cccccc|c}1&amp;1&amp;2&amp;3&amp;2&amp;5&amp;1\\
-2&amp;2&amp;3&amp;-1&amp;0&amp;0&amp;1\\
-3&amp;3&amp;5&amp;1&amp;1&amp;-2&amp;3\\
-0&amp;0&amp;0&amp;1&amp;1&amp;7&amp;-1\\
+\[\left[\begin{array}[]{cccccc|c}1&1&2&3&2&5&1\\
+2&2&3&-1&0&0&1\\
+3&3&5&1&1&-2&3\\
+0&0&0&1&1&7&-1\\
 \end{array}\right]\] 
 @col
  The reduced row echelon form is
-\[\left[\begin{array}[]{cccccc|c}1&amp;1&amp;0&amp;0&amp;5&amp;62&amp;-12\\
-0&amp;0&amp;1&amp;0&amp;-3&amp;-39&amp;8\\
-0&amp;0&amp;0&amp;1&amp;1&amp;7&amp;-1\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\\
+\[\left[\begin{array}[]{cccccc|c}1&1&0&0&5&62&-12\\
+0&0&1&0&-3&-39&8\\
+0&0&0&1&1&7&-1\\
+0&0&0&0&0&0&0\\
 \end{array}\right]\] 
 @col
  The last column is not a pivot column. So the system is consistent. 
@@ -1108,22 +1108,22 @@ When $r &lt; n$, we have $n-r &gt; 0$ free variables. Choose one free variable a
 
 @newcol
  \begin{align*}
-x_1 -x_2 +2x_3 &amp; =1\\
-2x_1+ x_2 + x_3 &amp; =8\\
-x_1 + x_2 &amp; =5
+x_1 -x_2 +2x_3 & =1\\
+2x_1+ x_2 + x_3 & =8\\
+x_1 + x_2 & =5
 \end{align*}
 Augmented matrix
-\[\left[\begin{array}[]{ccc|c}1&amp;-1&amp;2&amp;1\\
-2&amp;1&amp;1&amp;8\\
-1&amp;1&amp;0&amp;5\end{array}\right]\]
+\[\left[\begin{array}[]{ccc|c}1&-1&2&1\\
+2&1&1&8\\
+1&1&0&5\end{array}\right]\]
 The reduced row echelon form of the augmented matrix.
-\[\left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;1&amp;3\\
-0&amp;\boxed{1}&amp;-1&amp;2\\
-0&amp;0&amp;0&amp;0\end{array}\right]\]
+\[\left[\begin{array}[]{ccc|c}\boxed{1}&0&1&3\\
+0&\boxed{1}&-1&2\\
+0&0&0&0\end{array}\right]\]
 The last column is not a pivot column. So the system of linear equations is consistent. $r=2$, there are $3-2$ free variables. In fact $D=\{1,2\}$, $F=\{3\}$. $x_{1},x_{2}$ are dependent variables, $x_{3}$ is a free variables.
 \begin{align*}
-x_1 &amp;= 3-x_3 \\
-x_2 &amp;= 2+x_3
+x_1 &= 3-x_3 \\
+x_2 &= 2+x_3
 \end{align*} 
 <hr/>
 @endcol
@@ -1132,24 +1132,24 @@ x_2 &amp;= 2+x_3
 
 @newcol
  \begin{align*}
--7x_1 -6 x_2 - 12x_3 &amp;=-33\\
-5x_1  + 5x_2 + 7x_3 &amp;=24\\
-x_1 +4x_3 &amp;=5
+-7x_1 -6 x_2 - 12x_3 &=-33\\
+5x_1  + 5x_2 + 7x_3 &=24\\
+x_1 +4x_3 &=5
 \end{align*}
 Augmented matrix
-\[\left[\begin{array}[]{ccc|c}-7&amp;-6&amp;-12&amp;-33\\
-5&amp;5&amp;7&amp;24\\
-1&amp;0&amp;4&amp;5\end{array}\right]\]
+\[\left[\begin{array}[]{ccc|c}-7&-6&-12&-33\\
+5&5&7&24\\
+1&0&4&5\end{array}\right]\]
 The reduced row echelon form of the augmented matrix.
-\[\left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;0&amp;-3\\
-0&amp;\boxed{1}&amp;0&amp;5\\
-0&amp;0&amp;\boxed{1}&amp;2\end{array}\right]\]
+\[\left[\begin{array}[]{ccc|c}\boxed{1}&0&0&-3\\
+0&\boxed{1}&0&5\\
+0&0&\boxed{1}&2\end{array}\right]\]
 The last column is not a pivot column. So the system of linear equations is consistent. $r=3$, there are $3-3=0$ free variables. So the solution is unique. In fact
 In fact
 \begin{align*}
-x_1 &amp;= -3 \\
-x_2 &amp;= 5 \\
-x_3 &amp;= 2
+x_1 &= -3 \\
+x_2 &= 5 \\
+x_3 &= 2
 \end{align*} 
 <hr/>
 @endcol
@@ -1158,24 +1158,24 @@ x_3 &amp;= 2
 
 @newcol
  \begin{align*}
-2x_1  + 3x_2  &amp;= 6 \\
--x_1 + 4x_2  &amp;=  -14 \\
-3x_1 +10x_2  &amp;=  -2  \\
-3x_1 - x_2  &amp;=  20  \\
-6x_1 + 9x_2  &amp;=  18
+2x_1  + 3x_2  &= 6 \\
+-x_1 + 4x_2  &=  -14 \\
+3x_1 +10x_2  &=  -2  \\
+3x_1 - x_2  &=  20  \\
+6x_1 + 9x_2  &=  18
 \end{align*}
 Augmented matrix
-\[\left[\begin{array}[]{cc|c}2&amp;3&amp;6\\
--1&amp;4&amp;-14\\
-3&amp;10&amp;-2\\
-3&amp;-1&amp;20\\
-6&amp;9&amp;18\end{array}\right]\]
+\[\left[\begin{array}[]{cc|c}2&3&6\\
+-1&4&-14\\
+3&10&-2\\
+3&-1&20\\
+6&9&18\end{array}\right]\]
 The reduced row echelon form of the augmented matrix.
-\[\left[\begin{array}[]{cc|c}\boxed{1}&amp;0&amp;6\\
-0&amp;\boxed{1}&amp;-2\\
-0&amp;0&amp;0\\
-0&amp;0&amp;0\\
-0&amp;0&amp;0\end{array}\right]\]
+\[\left[\begin{array}[]{cc|c}\boxed{1}&0&6\\
+0&\boxed{1}&-2\\
+0&0&0\\
+0&0&0\\
+0&0&0\end{array}\right]\]
 The last column is not a pivot column. So the system of linear equations is consistent. $r = 2$, there are $2-2=0$ free variables. So the solution is unique. In fact
 \[\displaystyle x_{1}=6\]
 \[\displaystyle x_{2}=-2\] 
@@ -1186,18 +1186,18 @@ The last column is not a pivot column. So the system of linear equations is cons
 
 @newcol
  \begin{align*}
-2x_1  + x_2 + 7x_3 - 7x_4 &amp;= 2 \\
--3x_1 + 4x_2 -5x_3 - 6x_4 &amp;=  3 \\
-x_1 +x_2 + 4x_3 - 5x_4 &amp;=  2
+2x_1  + x_2 + 7x_3 - 7x_4 &= 2 \\
+-3x_1 + 4x_2 -5x_3 - 6x_4 &=  3 \\
+x_1 +x_2 + 4x_3 - 5x_4 &=  2
 \end{align*}
 Augmented matrix
-\[\left[\begin{array}[]{cccc|c}2&amp;1&amp;7&amp;-7&amp;2\\
--3&amp;4&amp;-5&amp;-6&amp;3\\
-1&amp;1&amp;4&amp;-5&amp;2\end{array}\right]\]
+\[\left[\begin{array}[]{cccc|c}2&1&7&-7&2\\
+-3&4&-5&-6&3\\
+1&1&4&-5&2\end{array}\right]\]
 The reduced row echelon form of the augmented matrix.
-\[\left[\begin{array}[]{cccc|c}\boxed{1}&amp;0&amp;3&amp;-2&amp;0\\
-0&amp;\boxed{1}&amp;1&amp;-3&amp;0\\
-0&amp;0&amp;0&amp;0&amp;\boxed{1}\end{array}\right]\]
+\[\left[\begin{array}[]{cccc|c}\boxed{1}&0&3&-2&0\\
+0&\boxed{1}&1&-3&0\\
+0&0&0&0&\boxed{1}\end{array}\right]\]
 The last column is a pivot column. Hence the system of linear equations is inconsistent. It has no solution. 
 <hr/>
 @endcol

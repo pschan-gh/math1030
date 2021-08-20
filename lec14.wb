@@ -11,9 +11,9 @@
 @slide
 @eg
  \begin{align*}
-\displaystyle-7x_{1}-6x_{2}-12x_{3}&amp;\displaystyle=-33 \\
-\displaystyle 5x_{1}+5x_{2}+7x_{3}&amp;\displaystyle=24 \\
-\displaystyle x_{1}+4x_{3}&amp;\displaystyle=5
+\displaystyle-7x_{1}-6x_{2}-12x_{3}&\displaystyle=-33 \\
+\displaystyle 5x_{1}+5x_{2}+7x_{3}&\displaystyle=24 \\
+\displaystyle x_{1}+4x_{3}&\displaystyle=5
 \end{align*} 
 @newcol
  We can represent this system of equations as
@@ -22,28 +22,28 @@
 \end{align*}
 where
 \begin{align*}
-\displaystyle A&amp;=\begin{bmatrix}-7&amp;-6&amp;-12\\
-5&amp;5&amp;7\\
-1&amp;0&amp;4\end{bmatrix}
-&amp;
-\displaystyle\mathbf{x}&amp;=\begin{bmatrix}x_{1}\\
+\displaystyle A&=\begin{bmatrix}-7&-6&-12\\
+5&5&7\\
+1&0&4\end{bmatrix}
+&
+\displaystyle\mathbf{x}&=\begin{bmatrix}x_{1}\\
 x_{2}\\
-x_{3}\end{bmatrix}&amp;\displaystyle\mathbf{b}&amp;=\begin{bmatrix}-33\\
+x_{3}\end{bmatrix}&\displaystyle\mathbf{b}&=\begin{bmatrix}-33\\
 24\\
 5\end{bmatrix}
 \end{align*} 
 @col
  Now, entirely unmotivated, we define the $3\times 3$ matrix $B$,
 \begin{align*}
-\displaystyle \begin{bmatrix}-10&amp;-12&amp;-9\\
-\frac{13}{2}&amp;8&amp;\frac{11}{2}\\
-\frac{5}{2}&amp;3&amp;\frac{5}{2}\end{bmatrix}
+\displaystyle \begin{bmatrix}-10&-12&-9\\
+\frac{13}{2}&8&\frac{11}{2}\\
+\frac{5}{2}&3&\frac{5}{2}\end{bmatrix}
 \end{align*}
 and note the remarkable fact that
 \begin{align*}
-\displaystyle BA=\begin{bmatrix}1&amp;0&amp;0\\
-0&amp;1&amp;0\\
-0&amp;0&amp;1\end{bmatrix}
+\displaystyle BA=\begin{bmatrix}1&0&0\\
+0&1&0\\
+0&0&1\end{bmatrix}
 \end{align*} 
 @col
  Now apply this computation to the problem of solving the system of equations,
@@ -69,7 +69,7 @@ and note the remarkable fact that
 @col
  Here we have obtained a solution by employing the @keyword{multiplicative inverse} of $3$, $3^{-1}=\frac{1}{3}$. This works fine for any scalar multiple of $x$, except for zero, since zero does not have a multiplicative inverse. Consider separately the two linear equations,
 \begin{align*}
-\displaystyle 0x&amp;\displaystyle=12&amp;\displaystyle 0x&amp;\displaystyle=0
+\displaystyle 0x&\displaystyle=12&\displaystyle 0x&\displaystyle=0
 \end{align*} 
 @col
  The first has no solutions, while the second has infinitely many solutions. For matrices, it is all just a little more complicated. Some matrices have inverses, some do not. And when a matrix does have an inverse, just how would we compute it? In other words, just where did that matrix $B$ in the last example come from? Are there other matrices that might have worked just as well?
@@ -89,9 +89,9 @@ and note the remarkable fact that
 @eg
 @keyword{A matrix without an inverse} Consider the coefficient matrix
 \begin{align*}
-\displaystyle A=\begin{bmatrix}1&amp;-1&amp;2\\
-2&amp;1&amp;1\\
-1&amp;1&amp;0\end{bmatrix}
+\displaystyle A=\begin{bmatrix}1&-1&2\\
+2&1&1\\
+1&1&0\end{bmatrix}
 \end{align*} 
 @newcol
  Suppose that $A$ is invertible and does have an inverse, say $B$. Choose the vector of constants
@@ -105,9 +105,9 @@ and consider the system of equations $A\mathbf{x}=\mathbf{b}$. Just as in the pr
 @col
  However, the system $A\mathbf{x}=\mathbf{b}$ is inconsistent. Form the augmented matrix $\left[A|\mathbf{b}\right]$ and row-reduce to
 \begin{align*}
-\displaystyle \begin{bmatrix}\boxed{1}&amp;0&amp;1&amp;0\\
-0&amp;\boxed{1}&amp;-1&amp;0\\
-0&amp;0&amp;0&amp;\boxed{1}\end{bmatrix}
+\displaystyle \begin{bmatrix}\boxed{1}&0&1&0\\
+0&\boxed{1}&-1&0\\
+0&0&0&\boxed{1}\end{bmatrix}
 \end{align*}
 which allows us to recognize the inconsistency.
 
@@ -122,10 +122,10 @@ which allows us to recognize the inconsistency.
 @eg
 @keyword{Matrix inverse}
 <strong>1.</strong> \begin{align*}
-\displaystyle A=\left[\begin{array}[]{cc}1&amp;2\\
-2&amp;3\\
-\end{array}\right],B=\left[\begin{array}[]{cc}-3&amp;2\\
-2&amp;-1\\
+\displaystyle A=\left[\begin{array}[]{cc}1&2\\
+2&3\\
+\end{array}\right],B=\left[\begin{array}[]{cc}-3&2\\
+2&-1\\
 \end{array}\right],
 \end{align*} 
 @newcol
@@ -138,12 +138,12 @@ which allows us to recognize the inconsistency.
 
 @col
 <strong>2.</strong> \begin{align*}
-\displaystyle A=\left[\begin{array}[]{ccc}1&amp;1&amp;1\\
-1&amp;0&amp;-1\\
-0&amp;1&amp;1\\
-\end{array}\right],B=\left[\begin{array}[]{ccc}1&amp;0&amp;-1\\
--1&amp;1&amp;2\\
-1&amp;-1&amp;-1\\
+\displaystyle A=\left[\begin{array}[]{ccc}1&1&1\\
+1&0&-1\\
+0&1&1\\
+\end{array}\right],B=\left[\begin{array}[]{ccc}1&0&-1\\
+-1&1&2\\
+1&-1&-1\\
 \end{array}\right]
 \end{align*} 
 @col
@@ -155,46 +155,46 @@ which allows us to recognize the inconsistency.
  So $B$ is the inverse of $A$.
 <strong>3.</strong> Consider the matrices,
 \begin{align*}
-\displaystyle A&amp;\displaystyle=\begin{bmatrix}1&amp;2&amp;1&amp;2&amp;1\\
--2&amp;-3&amp;0&amp;-5&amp;-1\\
-1&amp;1&amp;0&amp;2&amp;1\\
--2&amp;-3&amp;-1&amp;-3&amp;-2\\
--1&amp;-3&amp;-1&amp;-3&amp;1\end{bmatrix}&amp;\displaystyle B&amp;\displaystyle=\begin{bmatrix}-3&amp;3&amp;6&amp;-1&amp;-2\\
-0&amp;-2&amp;-5&amp;-1&amp;1\\
-1&amp;2&amp;4&amp;1&amp;-1\\
-1&amp;0&amp;1&amp;1&amp;0\\
-1&amp;-1&amp;-2&amp;0&amp;1\end{bmatrix}
+\displaystyle A&\displaystyle=\begin{bmatrix}1&2&1&2&1\\
+-2&-3&0&-5&-1\\
+1&1&0&2&1\\
+-2&-3&-1&-3&-2\\
+-1&-3&-1&-3&1\end{bmatrix}&\displaystyle B&\displaystyle=\begin{bmatrix}-3&3&6&-1&-2\\
+0&-2&-5&-1&1\\
+1&2&4&1&-1\\
+1&0&1&1&0\\
+1&-1&-2&0&1\end{bmatrix}
 \end{align*} 
 @col
  Then
 \begin{align*}
-\displaystyle AB&amp;\displaystyle=\begin{bmatrix}1&amp;2&amp;1&amp;2&amp;1\\
--2&amp;-3&amp;0&amp;-5&amp;-1\\
-1&amp;1&amp;0&amp;2&amp;1\\
--2&amp;-3&amp;-1&amp;-3&amp;-2\\
--1&amp;-3&amp;-1&amp;-3&amp;1\end{bmatrix}\begin{bmatrix}-3&amp;3&amp;6&amp;-1&amp;-2\\
-0&amp;-2&amp;-5&amp;-1&amp;1\\
-1&amp;2&amp;4&amp;1&amp;-1\\
-1&amp;0&amp;1&amp;1&amp;0\\
-1&amp;-1&amp;-2&amp;0&amp;1\end{bmatrix}=\begin{bmatrix}1&amp;0&amp;0&amp;0&amp;0\\
-0&amp;1&amp;0&amp;0&amp;0\\
-0&amp;0&amp;1&amp;0&amp;0\\
-0&amp;0&amp;0&amp;1&amp;0\\
-0&amp;0&amp;0&amp;0&amp;1\end{bmatrix} \\
+\displaystyle AB&\displaystyle=\begin{bmatrix}1&2&1&2&1\\
+-2&-3&0&-5&-1\\
+1&1&0&2&1\\
+-2&-3&-1&-3&-2\\
+-1&-3&-1&-3&1\end{bmatrix}\begin{bmatrix}-3&3&6&-1&-2\\
+0&-2&-5&-1&1\\
+1&2&4&1&-1\\
+1&0&1&1&0\\
+1&-1&-2&0&1\end{bmatrix}=\begin{bmatrix}1&0&0&0&0\\
+0&1&0&0&0\\
+0&0&1&0&0\\
+0&0&0&1&0\\
+0&0&0&0&1\end{bmatrix} \\
 \\
-\displaystyle BA&amp;\displaystyle=\begin{bmatrix}-3&amp;3&amp;6&amp;-1&amp;-2\\
-0&amp;-2&amp;-5&amp;-1&amp;1\\
-1&amp;2&amp;4&amp;1&amp;-1\\
-1&amp;0&amp;1&amp;1&amp;0\\
-1&amp;-1&amp;-2&amp;0&amp;1\end{bmatrix}\begin{bmatrix}1&amp;2&amp;1&amp;2&amp;1\\
--2&amp;-3&amp;0&amp;-5&amp;-1\\
-1&amp;1&amp;0&amp;2&amp;1\\
--2&amp;-3&amp;-1&amp;-3&amp;-2\\
--1&amp;-3&amp;-1&amp;-3&amp;1\end{bmatrix}=\begin{bmatrix}1&amp;0&amp;0&amp;0&amp;0\\
-0&amp;1&amp;0&amp;0&amp;0\\
-0&amp;0&amp;1&amp;0&amp;0\\
-0&amp;0&amp;0&amp;1&amp;0\\
-0&amp;0&amp;0&amp;0&amp;1\end{bmatrix}
+\displaystyle BA&\displaystyle=\begin{bmatrix}-3&3&6&-1&-2\\
+0&-2&-5&-1&1\\
+1&2&4&1&-1\\
+1&0&1&1&0\\
+1&-1&-2&0&1\end{bmatrix}\begin{bmatrix}1&2&1&2&1\\
+-2&-3&0&-5&-1\\
+1&1&0&2&1\\
+-2&-3&-1&-3&-2\\
+-1&-3&-1&-3&1\end{bmatrix}=\begin{bmatrix}1&0&0&0&0\\
+0&1&0&0&0\\
+0&0&1&0&0\\
+0&0&0&1&0\\
+0&0&0&0&1\end{bmatrix}
 \end{align*}
 so by the definition of inverse matrix, we can say that $A$ is invertible and write $B=A^{-1}$. 
 @endcol
@@ -210,14 +210,14 @@ Later we will have some theorems that allow us to more quickly and easily determ
 @label{TTMI}
  Suppose
 \begin{align*}
-\displaystyle A=\begin{bmatrix}a&amp;b\\
-c&amp;d\end{bmatrix}
+\displaystyle A=\begin{bmatrix}a&b\\
+c&d\end{bmatrix}
 \end{align*} 
 @newcol
  Then $A$ is invertible if and only if $ad-bc\neq 0$. When $A$ is invertible, then
 \begin{align*}
-\displaystyle A^{-1}=\frac{1}{ad-bc}\begin{bmatrix}d&amp;-b\\
--c&amp;a\end{bmatrix}
+\displaystyle A^{-1}=\frac{1}{ad-bc}\begin{bmatrix}d&-b\\
+-c&a\end{bmatrix}
 \end{align*} 
 @endcol
 @end
@@ -229,17 +229,17 @@ $\Leftarrow$
  Assume that $ad-bc\neq 0$. We will use the definition of the inverse of a matrix to establish that $A$ has an inverse. Note that if $ad-bc\neq 0$ then the displayed formula for $A^{-1}$ is legitimate since we are not dividing by zero).
 Using this proposed formula for the inverse of $A$, we compute
 \begin{align*}
-\displaystyle AA^{-1}&amp;\displaystyle=\begin{bmatrix}a&amp;b\\
-c&amp;d\end{bmatrix}\left(\frac{1}{ad-bc}\begin{bmatrix}d&amp;-b\\
--c&amp;a\end{bmatrix}\right)=\frac{1}{ad-bc}\begin{bmatrix}ad-bc&amp;0\\
-0&amp;ad-bc\end{bmatrix}=\begin{bmatrix}1&amp;0\\
-0&amp;1\end{bmatrix} \\
+\displaystyle AA^{-1}&\displaystyle=\begin{bmatrix}a&b\\
+c&d\end{bmatrix}\left(\frac{1}{ad-bc}\begin{bmatrix}d&-b\\
+-c&a\end{bmatrix}\right)=\frac{1}{ad-bc}\begin{bmatrix}ad-bc&0\\
+0&ad-bc\end{bmatrix}=\begin{bmatrix}1&0\\
+0&1\end{bmatrix} \\
 \\
-\displaystyle A^{-1}A&amp;\displaystyle=\frac{1}{ad-bc}\begin{bmatrix}d&amp;-b\\
--c&amp;a\end{bmatrix}\begin{bmatrix}a&amp;b\\
-c&amp;d\end{bmatrix}=\frac{1}{ad-bc}\begin{bmatrix}ad-bc&amp;0\\
-0&amp;ad-bc\end{bmatrix}=\begin{bmatrix}1&amp;0\\
-0&amp;1\end{bmatrix}
+\displaystyle A^{-1}A&\displaystyle=\frac{1}{ad-bc}\begin{bmatrix}d&-b\\
+-c&a\end{bmatrix}\begin{bmatrix}a&b\\
+c&d\end{bmatrix}=\frac{1}{ad-bc}\begin{bmatrix}ad-bc&0\\
+0&ad-bc\end{bmatrix}=\begin{bmatrix}1&0\\
+0&1\end{bmatrix}
 \end{align*} 
 @col
  This is sufficient to establish that $A$ is invertible, and that the expression for $A^{-1}$ is correct. 
@@ -248,32 +248,32 @@ $\Rightarrow$
 @newcol
  Assume that $A$ is invertible, and proceed with a proof by contradiction, by assuming also that $ad-bc=0$. This translates to $ad=bc$. Let
 \begin{align*}
-\displaystyle B=\begin{bmatrix}e&amp;f\\
-g&amp;h\end{bmatrix}
+\displaystyle B=\begin{bmatrix}e&f\\
+g&h\end{bmatrix}
 \end{align*}
 be a putative inverse of $A$.
 
 @col
  This means that
 \begin{align*}
-\displaystyle I_{2}=AB=\begin{bmatrix}a&amp;b\\
-c&amp;d\end{bmatrix}\begin{bmatrix}e&amp;f\\
-g&amp;h\end{bmatrix}=\begin{bmatrix}ae+bg&amp;af+bh\\
-ce+dg&amp;cf+dh\end{bmatrix}
+\displaystyle I_{2}=AB=\begin{bmatrix}a&b\\
+c&d\end{bmatrix}\begin{bmatrix}e&f\\
+g&h\end{bmatrix}=\begin{bmatrix}ae+bg&af+bh\\
+ce+dg&cf+dh\end{bmatrix}
 \end{align*} 
 @col
  Working on the matrices on two ends of this equation, we will multiply the top row by $c$ and the bottom row by $a$.
 \begin{align*}
-\displaystyle \begin{bmatrix}c&amp;0\\
-0&amp;a\end{bmatrix}=\begin{bmatrix}ace+bcg&amp;acf+bch\\
-ace+adg&amp;acf+adh\end{bmatrix}
+\displaystyle \begin{bmatrix}c&0\\
+0&a\end{bmatrix}=\begin{bmatrix}ace+bcg&acf+bch\\
+ace+adg&acf+adh\end{bmatrix}
 \end{align*} 
 @col
  We are assuming that $ad=bc$, so we can replace two occurrences of $ad$ by $bc$ in the bottom row of the right matrix.
 \begin{align*}
-\displaystyle \begin{bmatrix}c&amp;0\\
-0&amp;a\end{bmatrix}=\begin{bmatrix}ace+bcg&amp;acf+bch\\
-ace+bcg&amp;acf+bch\end{bmatrix}
+\displaystyle \begin{bmatrix}c&0\\
+0&a\end{bmatrix}=\begin{bmatrix}ace+bcg&acf+bch\\
+ace+bcg&acf+bch\end{bmatrix}
 \end{align*} 
 @col
  The matrix on the right now has two rows that are identical, and therefore the same must be true of the matrix on the left. Identical rows for the matrix on the left implies that $a=0$ and $c=0$.
@@ -281,10 +281,10 @@ ace+bcg&amp;acf+bch\end{bmatrix}
 @col
  With this information, the product $AB$ becomes
 \begin{align*}
-\displaystyle \begin{bmatrix}1&amp;0\\
-0&amp;1\end{bmatrix}=I_{2}=AB=\begin{bmatrix}ae+bg&amp;af+bh\\
-ce+dg&amp;cf+dh\end{bmatrix}=\begin{bmatrix}bg&amp;bh\\
-dg&amp;dh\end{bmatrix}
+\displaystyle \begin{bmatrix}1&0\\
+0&1\end{bmatrix}=I_{2}=AB=\begin{bmatrix}ae+bg&af+bh\\
+ce+dg&cf+dh\end{bmatrix}=\begin{bmatrix}bg&bh\\
+dg&dh\end{bmatrix}
 \end{align*} 
 @col
  So $bg=dh=1$ and thus $b,g,d,h$ are all nonzero. But then $bh$ and $dg$
@@ -350,49 +350,49 @@ J_2[J_1 A | J_1 I_n] = [J_2 J_1 A | J_2J_1]
 @title{Computing a matrix inverse}
  Let
 \begin{align*}
-\displaystyle A=\left[\begin{array}[]{ccc}1&amp;1&amp;1\\
-1&amp;0&amp;-1\\
-0&amp;1&amp;1\\
+\displaystyle A=\left[\begin{array}[]{ccc}1&1&1\\
+1&0&-1\\
+0&1&1\\
 \end{array}\right].
 \end{align*}
 Find $A^{-1}$.
 
 @newcol
  \begin{align*}
-\displaystyle [A|I_3]=\left[\begin{array}[]{ccc|ccc}1&amp;1&amp;1&amp;1&amp;0&amp;0\\
-1&amp;0&amp;-1&amp;0&amp;1&amp;0\\
-0&amp;1&amp;1&amp;0&amp;0&amp;1\\
-\end{array}\right]\xrightarrow{-1R_{1}+R_{2}}\left[\begin{array}[]{ccc|ccc}1&amp;1&amp;1&amp;1&amp;0&amp;0\\
-0&amp;-1&amp;-2&amp;-1&amp;1&amp;0\\
-0&amp;1&amp;1&amp;0&amp;0&amp;1\\
+\displaystyle [A|I_3]=\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
+1&0&-1&0&1&0\\
+0&1&1&0&0&1\\
+\end{array}\right]\xrightarrow{-1R_{1}+R_{2}}\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
+0&-1&-2&-1&1&0\\
+0&1&1&0&0&1\\
 \end{array}\right]
 \end{align*} 
 @col
  \begin{align*}
-\displaystyle \xrightarrow{R_{2}\leftrightarrow R_{3}}\left[\begin{array}[]{ccc|ccc}1&amp;1&amp;1&amp;1&amp;0&amp;0\\
-0&amp;1&amp;1&amp;0&amp;0&amp;1\\
-0&amp;-1&amp;-2&amp;-1&amp;1&amp;0\\
-\end{array}\right]\xrightarrow{1R_{2}+R_{3}}\left[\begin{array}[]{ccc|ccc}1&amp;1&amp;1&amp;1&amp;0&amp;0\\
-0&amp;1&amp;1&amp;0&amp;0&amp;1\\
-0&amp;0&amp;-1&amp;-1&amp;1&amp;1\\
+\displaystyle \xrightarrow{R_{2}\leftrightarrow R_{3}}\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
+0&1&1&0&0&1\\
+0&-1&-2&-1&1&0\\
+\end{array}\right]\xrightarrow{1R_{2}+R_{3}}\left[\begin{array}[]{ccc|ccc}1&1&1&1&0&0\\
+0&1&1&0&0&1\\
+0&0&-1&-1&1&1\\
 \end{array}\right]
 \end{align*} 
 @col
  \begin{align*}
-\displaystyle \xrightarrow{-1R_{2}+R_{1}}\left[\begin{array}[]{ccc|ccc}1&amp;0&amp;0&amp;1&amp;0&amp;-1\\
-0&amp;1&amp;1&amp;0&amp;0&amp;1\\
-0&amp;0&amp;-1&amp;-1&amp;1&amp;1\\
-\end{array}\right]\xrightarrow{1R_{3}+R_{2},-1R_{3}}\left[\begin{array}[]{ccc|ccc}1&amp;0&amp;0&amp;1&amp;0&amp;-1\\
-0&amp;1&amp;0&amp;-1&amp;1&amp;2\\
-0&amp;0&amp;1&amp;1&amp;-1&amp;-1\\
+\displaystyle \xrightarrow{-1R_{2}+R_{1}}\left[\begin{array}[]{ccc|ccc}1&0&0&1&0&-1\\
+0&1&1&0&0&1\\
+0&0&-1&-1&1&1\\
+\end{array}\right]\xrightarrow{1R_{3}+R_{2},-1R_{3}}\left[\begin{array}[]{ccc|ccc}1&0&0&1&0&-1\\
+0&1&0&-1&1&2\\
+0&0&1&1&-1&-1\\
 \end{array}\right]
 \end{align*} 
 @col
  So
 \begin{align*}
-\displaystyle B=[\mathbf{B}_{1}|\mathbf{B}_{2}|\mathbf{B}_{3}]=\left[\begin{array}[]{ccc}1&amp;0&amp;-1\\
--1&amp;1&amp;2\\
-1&amp;-1&amp;-1\\
+\displaystyle B=[\mathbf{B}_{1}|\mathbf{B}_{2}|\mathbf{B}_{3}]=\left[\begin{array}[]{ccc}1&0&-1\\
+-1&1&2\\
+1&-1&-1\\
 \end{array}\right]
 \end{align*} 
 @endcol
@@ -403,31 +403,31 @@ Find $A^{-1}$.
 @title{Computing a matrix inverse}
  Let
 \[
-\displaystyle B=\displaystyle\begin{bmatrix}-7&amp;-6&amp;-12\\
-5&amp;5&amp;7\\
-1&amp;0&amp;4\end{bmatrix}.
+\displaystyle B=\displaystyle\begin{bmatrix}-7&-6&-12\\
+5&5&7\\
+1&0&4\end{bmatrix}.
 \]
 Find $B^{-1}$.
 
 @newcol
  \begin{align*}
-\displaystyle M=&amp;\displaystyle
-\left[\begin{array}{ccc|ccc}-7&amp;-6&amp;-12&amp;1&amp;0&amp;0\\
-5&amp;5&amp;7&amp;0&amp;1&amp;0\\
-1&amp;0&amp;4&amp;0&amp;0&amp;1\end{array}\right].
+\displaystyle M=&\displaystyle
+\left[\begin{array}{ccc|ccc}-7&-6&-12&1&0&0\\
+5&5&7&0&1&0\\
+1&0&4&0&0&1\end{array}\right].
 \end{align*} 
 @col
  \[
 \displaystyle \xrightarrow{\text{RREF}}
-\displaystyle\left[\begin{array}{ccc|ccc}1&amp;0&amp;0&amp;-10&amp;-12&amp;-9\\
-0&amp;1&amp;0&amp;\frac{13}{2}&amp;8&amp;\frac{11}{2}\\
-0&amp;0&amp;1&amp;\frac{5}{2}&amp;3&amp;\frac{5}{2}\end{array}\right]
+\displaystyle\left[\begin{array}{ccc|ccc}1&0&0&-10&-12&-9\\
+0&1&0&\frac{13}{2}&8&\frac{11}{2}\\
+0&0&1&\frac{5}{2}&3&\frac{5}{2}\end{array}\right]
 \] 
 @col
  \[
-\displaystyle B^{-1}=\displaystyle\begin{bmatrix}-10&amp;-12&amp;-9\\
-\frac{13}{2}&amp;8&amp;\frac{11}{2}\\
-\frac{5}{2}&amp;3&amp;\frac{5}{2}\end{bmatrix}.
+\displaystyle B^{-1}=\displaystyle\begin{bmatrix}-10&-12&-9\\
+\frac{13}{2}&8&\frac{11}{2}\\
+\frac{5}{2}&3&\frac{5}{2}\end{bmatrix}.
 \] 
 @endcol
 @end
@@ -454,9 +454,9 @@ Find $B^{-1}$.
 @newcol
  We can show this by simply plug $A^{-1}\mathbf{b}$ in the solution.
 \begin{align*}
-\displaystyle A\left(A^{-1}\mathbf{b}\right)&amp;\displaystyle=\left(AA^{-1}\right)\mathbf{b} \\
-&amp;\displaystyle=I_{n}\mathbf{b} \\
-&amp;\displaystyle=\mathbf{b}
+\displaystyle A\left(A^{-1}\mathbf{b}\right)&\displaystyle=\left(AA^{-1}\right)\mathbf{b} \\
+&\displaystyle=I_{n}\mathbf{b} \\
+&\displaystyle=\mathbf{b}
 \end{align*} 
 @col
  Since $A\mathbf{x}=\mathbf{b}$ is true when we substitute $A^{-1}\mathbf{b}$ for $\mathbf{x}$, $A^{-1}\mathbf{b}$ is a (the!) solution to $A\mathbf{x}=\mathbf{b}$. 
@@ -467,27 +467,27 @@ Find $B^{-1}$.
 @eg
  Using the previous theorem, solve
 \begin{align*}
-\displaystyle x_{1}+x_{2}-x_{3}+4x_{4}&amp;\displaystyle=1 \\
-\displaystyle x_{1}-x_{2}+2x_{3}+3x_{4}&amp;\displaystyle=2 \\
-\displaystyle 2x_{1}+x_{2}+x_{3}+x_{4}&amp;\displaystyle=0 \\
-\displaystyle 2x_{1}+2x_{2}+2x_{3}-9x_{4}&amp;\displaystyle=-1
+\displaystyle x_{1}+x_{2}-x_{3}+4x_{4}&\displaystyle=1 \\
+\displaystyle x_{1}-x_{2}+2x_{3}+3x_{4}&\displaystyle=2 \\
+\displaystyle 2x_{1}+x_{2}+x_{3}+x_{4}&\displaystyle=0 \\
+\displaystyle 2x_{1}+2x_{2}+2x_{3}-9x_{4}&\displaystyle=-1
 \end{align*} 
 @newcol
  The matrix coefficient is
 \begin{align*}
-\displaystyle A=\left[\begin{array}[]{cccc}1&amp;1&amp;-1&amp;4\\
-1&amp;-1&amp;2&amp;3\\
-2&amp;1&amp;1&amp;1\\
-2&amp;2&amp;2&amp;-9\\
+\displaystyle A=\left[\begin{array}[]{cccc}1&1&-1&4\\
+1&-1&2&3\\
+2&1&1&1\\
+2&2&2&-9\\
 \end{array}\right].
 \end{align*} 
 @col
  After some computations,
 \begin{align*}
-\displaystyle A^{-1}=\left[\begin{array}[]{cccc}-33&amp;-22&amp;45&amp;-17\\
-35&amp;23&amp;-47&amp;18\\
-25&amp;17&amp;-34&amp;13\\
-6&amp;4&amp;-8&amp;3\\
+\displaystyle A^{-1}=\left[\begin{array}[]{cccc}-33&-22&45&-17\\
+35&23&-47&18\\
+25&17&-34&13\\
+6&4&-8&3\\
 \end{array}\right].
 \end{align*} 
 @col
@@ -517,11 +517,11 @@ x_{4}\end{bmatrix}=A^{-1}\begin{bmatrix}1\\
  We will assume that $A$ has two inverses. The hypothesis tells there is at least one. Suppose then that $B$ and $C$ are both inverses for $A$.
 Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
 \begin{align*}
-\displaystyle B&amp;\displaystyle=BI_{n} \\
-&amp;\displaystyle=B(AC) \\
-&amp;\displaystyle=(BA)C \\
-&amp;\displaystyle=I_{n}C \\
-&amp;\displaystyle=C
+\displaystyle B&\displaystyle=BI_{n} \\
+&\displaystyle=B(AC) \\
+&\displaystyle=(BA)C \\
+&\displaystyle=I_{n}C \\
+&\displaystyle=C
 \end{align*} 
 @col
  So we conclude that $B$ and $C$ are the same, and cannot be different. So any matrix that acts like an inverse, must be the inverse. 
@@ -540,15 +540,15 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
 @skip
 @newcol
  \begin{align*}
-\displaystyle(B^{-1}A^{-1})(AB)&amp;\displaystyle=B^{-1}(A^{-1}A)B \\
-&amp;\displaystyle=B^{-1}I_{n}B \\
-&amp;\displaystyle=B^{-1}B \\
-&amp;\displaystyle=I_{n} \\
+\displaystyle(B^{-1}A^{-1})(AB)&\displaystyle=B^{-1}(A^{-1}A)B \\
+&\displaystyle=B^{-1}I_{n}B \\
+&\displaystyle=B^{-1}B \\
+&\displaystyle=I_{n} \\
 \\
-\displaystyle(AB)(B^{-1}A^{-1})&amp;\displaystyle=A(BB^{-1})A^{-1} \\
-&amp;\displaystyle=AI_{n}A^{-1} \\
-&amp;\displaystyle=AA^{-1} \\
-&amp;\displaystyle=I_{n}
+\displaystyle(AB)(B^{-1}A^{-1})&\displaystyle=A(BB^{-1})A^{-1} \\
+&\displaystyle=AI_{n}A^{-1} \\
+&\displaystyle=AA^{-1} \\
+&\displaystyle=I_{n}
 \end{align*} 
 @col
  So the matrix $B^{-1}A^{-1}$ has met all of the requirements to be $AB$’s inverse (date) and with the ensuing marriage proposal we can announce that $(AB)^{-1}=B^{-1}A^{-1}$. 
@@ -566,9 +566,9 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
 @newcol
  As with the proof of of the previous example, we examine if $A$ is a suitable inverse for $A^{-1}$ (by definition, the opposite is true).
 \begin{align*}
-\displaystyle AA^{-1}&amp;\displaystyle=I_{n} \\
+\displaystyle AA^{-1}&\displaystyle=I_{n} \\
 \\
-\displaystyle A^{-1}A&amp;\displaystyle=I_{n}
+\displaystyle A^{-1}A&\displaystyle=I_{n}
 \end{align*} 
 @col
  The matrix $A$ has met all the requirements to be the inverse of $A^{-1}$, and so is invertible and we can write $A=(A^{-1})^{-1}$. 
@@ -586,13 +586,13 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
 @newcol
  As with the proof of Theorem   @ref{SS}, we see if $(A^{-1})^{t}$ is a suitable inverse for $A^{t}$.
 \begin{align*}
-\displaystyle(A^{-1})^{t}A^{t}&amp;\displaystyle=(AA^{-1})^{t} \\
-&amp;\displaystyle=I_{n}^{t} \\
-&amp;\displaystyle=I_{n} \\
+\displaystyle(A^{-1})^{t}A^{t}&\displaystyle=(AA^{-1})^{t} \\
+&\displaystyle=I_{n}^{t} \\
+&\displaystyle=I_{n} \\
 \\
-\displaystyle A^{t}(A^{-1})^{t}&amp;\displaystyle=(A^{-1}A)^{t} \\
-&amp;\displaystyle=I_{n}^{t} \\
-&amp;\displaystyle=I_{n}
+\displaystyle A^{t}(A^{-1})^{t}&\displaystyle=(A^{-1}A)^{t} \\
+&\displaystyle=I_{n}^{t} \\
+&\displaystyle=I_{n}
 \end{align*} 
 @col
  The matrix $(A^{-1})^{t}$ has met all the requirements to be the inverse of $A^{t}$, and so is invertible and we can write $(A^{t})^{-1}=(A^{-1})^{t}$. 
@@ -609,13 +609,13 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
 @newcol
  As with the proof of Theorem   @ref{SS}, we see if $\frac{1}{\alpha}A^{-1}$ is a suitable inverse for $\alpha A$.
 \begin{align*}
-\displaystyle\left(\frac{1}{\alpha}A^{-1}\right)\left(\alpha A\right)&amp;\displaystyle=\left(\frac{1}{\alpha}\alpha\right)\left(A^{-1}A\right) \\
-&amp;\displaystyle=1I_{n} \\
-&amp;\displaystyle=I_{n} \\
+\displaystyle\left(\frac{1}{\alpha}A^{-1}\right)\left(\alpha A\right)&\displaystyle=\left(\frac{1}{\alpha}\alpha\right)\left(A^{-1}A\right) \\
+&\displaystyle=1I_{n} \\
+&\displaystyle=I_{n} \\
 \\
-\displaystyle\left(\alpha A\right)\left(\frac{1}{\alpha}A^{-1}\right)&amp;\displaystyle=\left(\alpha\frac{1}{\alpha}\right)\left(AA^{-1}\right) \\
-&amp;\displaystyle=1I_{n} \\
-&amp;\displaystyle=I_{n}
+\displaystyle\left(\alpha A\right)\left(\frac{1}{\alpha}A^{-1}\right)&\displaystyle=\left(\alpha\frac{1}{\alpha}\right)\left(AA^{-1}\right) \\
+&\displaystyle=1I_{n} \\
+&\displaystyle=I_{n}
 \end{align*} 
 @col
  The matrix $\frac{1}{\alpha}A^{-1}$ has met all the requirements to be the inverse of $\alpha A$, so we can write $\left(\alpha A\right)^{-1}=\frac{1}{\alpha}A^{-1}$. 

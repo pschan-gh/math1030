@@ -29,22 +29,22 @@ in $\mathbb{R}^{m}$.
 \]
 and
 \begin{align*}
-\displaystyle\mathbf{u}_{1}&amp;\displaystyle=\begin{bmatrix}2\\
+\displaystyle\mathbf{u}_{1}&\displaystyle=\begin{bmatrix}2\\
 4\\
 -3\\
 1\\
 2\\
-9\end{bmatrix}&amp;\displaystyle\mathbf{u}_{2}&amp;\displaystyle=\begin{bmatrix}6\\
+9\end{bmatrix}&\displaystyle\mathbf{u}_{2}&\displaystyle=\begin{bmatrix}6\\
 3\\
 0\\
 -2\\
 1\\
-4\end{bmatrix}&amp;\displaystyle\mathbf{u}_{3}&amp;\displaystyle=\begin{bmatrix}-5\\
+4\end{bmatrix}&\displaystyle\mathbf{u}_{3}&\displaystyle=\begin{bmatrix}-5\\
 2\\
 1\\
 1\\
 -3\\
-0\end{bmatrix}&amp;\displaystyle\mathbf{u}_{4}&amp;\displaystyle=\begin{bmatrix}3\\
+0\end{bmatrix}&\displaystyle\mathbf{u}_{4}&\displaystyle=\begin{bmatrix}3\\
 2\\
 -5\\
 7\\
@@ -193,9 +193,9 @@ Can you create the following vector $\mathbf{w}$ with a suitable choice of four 
 @eg
  The system of linear equation:
 \begin{align*}
-\displaystyle-7x_{1}-6x_{2}-12x_{3}&amp;\displaystyle=-33 \\
-\displaystyle 5x_{1}+5x_{2}+7x_{3}&amp;\displaystyle=24 \\
-\displaystyle x_{1}+4x_{3}&amp;\displaystyle=5
+\displaystyle-7x_{1}-6x_{2}-12x_{3}&\displaystyle=-33 \\
+\displaystyle 5x_{1}+5x_{2}+7x_{3}&\displaystyle=24 \\
+\displaystyle x_{1}+4x_{3}&\displaystyle=5
 \end{align*}
 or equivalently
 \begin{align*}
@@ -264,9 +264,9 @@ x_{1}=-3 \quad x_{2}=5 \quad x_{3}=2.
 @skip
  The system of linear equations
 \begin{align*}
-\displaystyle x_{1}-x_{2}+2x_{3}&amp;\displaystyle=1 \\
-\displaystyle 2x_{1}+x_{2}+x_{3}&amp;\displaystyle=8 \\
-\displaystyle x_{1}+x_{2}&amp;\displaystyle=5
+\displaystyle x_{1}-x_{2}+2x_{3}&\displaystyle=1 \\
+\displaystyle 2x_{1}+x_{2}+x_{3}&\displaystyle=8 \\
+\displaystyle x_{1}+x_{2}&\displaystyle=5
 \end{align*}
 can be written as:
 
@@ -296,8 +296,8 @@ This vector equation is equivalent to:
 @col
  Row-reducing the augmented matrix for the system leads to the conclusion that the system is consistent and has free variables, hence infinitely many solutions. So for example, the two solutions:
 \begin{eqnarray*}
-x_{1}&amp;=2 &amp;\quad&amp; x_{2}=3 &amp;\quad&amp; x_{3}&amp;=1 \\
-x_{1}&amp;=3 &amp;\quad&amp; x_{2}=2 &amp;\quad&amp; x_{3}&amp;=0
+x_{1}&=2 &\quad& x_{2}=3 &\quad& x_{3}&=1 \\
+x_{1}&=3 &\quad& x_{2}=2 &\quad& x_{3}&=0
 \end{eqnarray*}
 can be used together to say that:
 
@@ -357,7 +357,7 @@ can be used together to say that:
 @col
  Notice that the three vectors on the left hand side are the columns of the coefficient matrix for the system of equations. This equality says that there is a linear combination of those columns that equals the vector of all zeros. Give it some thought, but this says that:
 \begin{eqnarray*}
-\displaystyle x_{1}=-1&amp;\quad&amp;\displaystyle x_{2}=1&amp;\quad&amp;\displaystyle x_{3}=1
+\displaystyle x_{1}=-1&\quad&\displaystyle x_{2}=1&\quad&\displaystyle x_{3}=1
 \end{eqnarray*}
 is a nontrivial solution to the homogeneous system of equations with the coefficient matrix of the original system. In particular, this demonstrates that this coefficient matrix is singular. 
 @endcol
@@ -447,18 +447,18 @@ we need to solve
 @col
  i.e.
 \begin{align*}
-\displaystyle x_{1}-x_{2}+2x_{3}&amp;\displaystyle=1 \\
-\displaystyle 2x_{1}+x+2+x_{3}&amp;\displaystyle=1 \\
-\displaystyle 3x_{1}+3x_{3}&amp;\displaystyle=3.
+\displaystyle x_{1}-x_{2}+2x_{3}&\displaystyle=1 \\
+\displaystyle 2x_{1}+x+2+x_{3}&\displaystyle=1 \\
+\displaystyle 3x_{1}+3x_{3}&\displaystyle=3.
 \end{align*} 
 @col
  The augmented matrix is
 \begin{align*}
-\displaystyle \left[\begin{array}[]{ccc|c}1&amp;-1&amp;2&amp;1\\
-2&amp;1&amp;1&amp;1\\
-3&amp;0&amp;3&amp;3\end{array}\right]\xrightarrow{\operatorname{RREF}}\left[\begin{array}[]{ccc|c}1&amp;0&amp;1&amp;0\\
-0&amp;1&amp;-1&amp;0\\
-0&amp;0&amp;0&amp;1\\
+\displaystyle \left[\begin{array}[]{ccc|c}1&-1&2&1\\
+2&1&1&1\\
+3&0&3&3\end{array}\right]\xrightarrow{\operatorname{RREF}}\left[\begin{array}[]{ccc|c}1&0&1&0\\
+0&1&-1&0\\
+0&0&0&1\\
 \end{array}\right].
 \end{align*} 
 @col
@@ -474,20 +474,20 @@ we need to solve
 @col
  The augmented matrix is:
 \begin{align*}
-\displaystyle [\mathbf{v}_{1}|\mathbf{v}_{2}|\mathbf{v}_{3}|\mathbf{v}_{4}|\mathbf{u}]=\left[\begin{array}[]{cccc|c}1&amp;-1&amp;2&amp;-1&amp;1\\
-2&amp;1&amp;1&amp;0&amp;1\\
-3&amp;0&amp;3&amp;1&amp;3\\
+\displaystyle [\mathbf{v}_{1}|\mathbf{v}_{2}|\mathbf{v}_{3}|\mathbf{v}_{4}|\mathbf{u}]=\left[\begin{array}[]{cccc|c}1&-1&2&-1&1\\
+2&1&1&0&1\\
+3&0&3&1&3\\
 \end{array}\right].
 \end{align*} 
 @col
  Using the standard method, we find one solution (there are infinitely many):
 \begin{align*}
 \displaystyle x_{1}=\frac{5}{6}
-&amp;\quad&amp;
+&\quad&
 x_{2}=-\frac{2}{3}
-&amp;\quad&amp;
+&\quad&
 x_{3}=0
-&amp;\quad&amp;
+&\quad&
 x_{4}=\frac{1}{2}
 \end{align*} 
 @col
@@ -502,16 +502,16 @@ x_{4}=\frac{1}{2}
 @eg
  Consider the linear system
 \begin{align*}
-\displaystyle 2x_{1}+x_{2}+7x_{3}-7x_{4}&amp;\displaystyle=8 \\
-\displaystyle-3x_{1}+4x_{2}-5x_{3}-6x_{4}&amp;\displaystyle=-12 \\
-\displaystyle x_{1}+x_{2}+4x_{3}-5x_{4}&amp;\displaystyle=4.
+\displaystyle 2x_{1}+x_{2}+7x_{3}-7x_{4}&\displaystyle=8 \\
+\displaystyle-3x_{1}+4x_{2}-5x_{3}-6x_{4}&\displaystyle=-12 \\
+\displaystyle x_{1}+x_{2}+4x_{3}-5x_{4}&\displaystyle=4.
 \end{align*} 
 @newcol
  Row-reducing the augmented matrix yields
 \begin{align*}
-\displaystyle \begin{bmatrix}\boxed{1}&amp;0&amp;3&amp;-2&amp;4\\
-0&amp;\boxed{1}&amp;1&amp;-3&amp;0\\
-0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}
+\displaystyle \begin{bmatrix}\boxed{1}&0&3&-2&4\\
+0&\boxed{1}&1&-3&0\\
+0&0&0&0&0\end{bmatrix}
 \end{align*} 
 @col
  from which we see that there are $r=2$ pivot columns. Also, $D=\{1,\,2\}$, so that the dependent variables are $x_{1}$ and $x_{2}$, and $F=\{3,\,4,\,5\}$, so that the free variables are $x_{3}$ and $x_{4}$. We will express a generic solution for the system by two slightly different methods, though both arrive at the same conclusion.
@@ -520,12 +520,12 @@ Rearranging each equation represented in the row-reduced form of the augmented m
 \displaystyle\begin{bmatrix}x_{1}\\
 x_{2}\\
 x_{3}\\
-x_{4}\end{bmatrix}&amp;\displaystyle=\begin{bmatrix}4-3x_{3}+2x_{4}\\
+x_{4}\end{bmatrix}&\displaystyle=\begin{bmatrix}4-3x_{3}+2x_{4}\\
 -x_{3}+3x_{4}\\
 x_{3}\\
 x_{4}\end{bmatrix}\\
 \\
-&amp;\displaystyle=\begin{bmatrix}4\\
+&\displaystyle=\begin{bmatrix}4\\
 0\\
 0\\
 0\end{bmatrix}+\begin{bmatrix}-3x_{3}\\
@@ -535,7 +535,7 @@ x_{3}\\
 3x_{4}\\
 0\\
 x_{4}\end{bmatrix} \\
-&amp;\displaystyle=\begin{bmatrix}4\\
+&\displaystyle=\begin{bmatrix}4\\
 0\\
 0\\
 0\end{bmatrix}+x_{3}\begin{bmatrix}-3\\
@@ -584,7 +584,7 @@ x_{4}\end{bmatrix}=\begin{bmatrix}\\
 \end{align*}
 Step 3. For each dependent variable, use the augmented matrix to formulate an equation expressing the dependent variable as a constant plus a linear combination of the free variables. Convert this equation into entries of the vectors that ensure equality for each dependent variable, one at a time.
 \begin{align*}
-\displaystyle x_{1}=4-3x_{3}+2x_{4}&amp;\displaystyle\Rightarrow&amp;\displaystyle\mathbf{x}=\begin{bmatrix}x_{1}\\
+\displaystyle x_{1}=4-3x_{3}+2x_{4}&\displaystyle\Rightarrow&\displaystyle\mathbf{x}=\begin{bmatrix}x_{1}\\
 x_{2}\\
 x_{3}\\
 x_{4}\end{bmatrix}=\begin{bmatrix}4\\
@@ -597,7 +597,7 @@ x_{4}\end{bmatrix}=\begin{bmatrix}4\\
 \\
 0\\
 1\end{bmatrix} \\
-\displaystyle x_{2}=0-1x_{3}+3x_{4}&amp;\displaystyle\Rightarrow&amp;\displaystyle\mathbf{x}=\begin{bmatrix}x_{1}\\
+\displaystyle x_{2}=0-1x_{3}+3x_{4}&\displaystyle\Rightarrow&\displaystyle\mathbf{x}=\begin{bmatrix}x_{1}\\
 x_{2}\\
 x_{3}\\
 x_{4}\end{bmatrix}=\begin{bmatrix}4\\
@@ -628,19 +628,19 @@ While this form is useful for quickly creating solutions, it is even better beca
 @newcol
  Consider a linear system of $m=5$ equations in $n=7$ variables, having the augmented matrix
 \begin{align*}
-\displaystyle A=\begin{bmatrix}2&amp;1&amp;-1&amp;-2&amp;2&amp;1&amp;5&amp;21\\
-1&amp;1&amp;-3&amp;1&amp;1&amp;1&amp;2&amp;-5\\
-1&amp;2&amp;-8&amp;5&amp;1&amp;1&amp;-6&amp;-15\\
-3&amp;3&amp;-9&amp;3&amp;6&amp;5&amp;2&amp;-24\\
--2&amp;-1&amp;1&amp;2&amp;1&amp;1&amp;-9&amp;-30\end{bmatrix}.
+\displaystyle A=\begin{bmatrix}2&1&-1&-2&2&1&5&21\\
+1&1&-3&1&1&1&2&-5\\
+1&2&-8&5&1&1&-6&-15\\
+3&3&-9&3&6&5&2&-24\\
+-2&-1&1&2&1&1&-9&-30\end{bmatrix}.
 \end{align*}
 Row-reducing we obtain the matrix
 \begin{align*}
-\displaystyle B=\begin{bmatrix}\boxed{1}&amp;0&amp;2&amp;-3&amp;0&amp;0&amp;9&amp;15\\
-0&amp;\boxed{1}&amp;-5&amp;4&amp;0&amp;0&amp;-8&amp;-10\\
-0&amp;0&amp;0&amp;0&amp;\boxed{1}&amp;0&amp;-6&amp;11\\
-0&amp;0&amp;0&amp;0&amp;0&amp;\boxed{1}&amp;7&amp;-21\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}
+\displaystyle B=\begin{bmatrix}\boxed{1}&0&2&-3&0&0&9&15\\
+0&\boxed{1}&-5&4&0&0&-8&-10\\
+0&0&0&0&\boxed{1}&0&-6&11\\
+0&0&0&0&0&\boxed{1}&7&-21\\
+0&0&0&0&0&0&0&0\end{bmatrix}
 \end{align*}
 and we see that there are $r=4$ pivot columns. Also, $D=\{1,\,2,\,5,\,6\}$ so the dependent variables are $x_{1},\,x_{2},\,x_{5},$ and $x_{6}$. Similarly, $F=\{3,\,4,\,7,\,8\}$ and the $n-r=3$ free variables are $x_{3},\,x_{4}$ and $x_{7}$. We will express a generic solution for the system by two different methods: both a decomposition and a construction.
 Rearranging each equation represented in the row-reduced echelon form of the augmented matrix by solving for the dependent variable in each row yields the vector equality
@@ -651,7 +651,7 @@ x_{3}\\
 x_{4}\\
 x_{5}\\
 x_{6}\\
-x_{7}\end{bmatrix}&amp;\displaystyle=\begin{bmatrix}15-2x_{3}+3x_{4}-9x_{7}\\
+x_{7}\end{bmatrix}&\displaystyle=\begin{bmatrix}15-2x_{3}+3x_{4}-9x_{7}\\
 -10+5x_{3}-4x_{4}+8x_{7}\\
 x_{3}\\
 x_{4}\\
@@ -659,7 +659,7 @@ x_{4}\\
 -21-7x_{7}\\
 x_{7}\end{bmatrix}. \\
 \\
-&amp;\displaystyle=\begin{bmatrix}15\\
+&\displaystyle=\begin{bmatrix}15\\
 -10\\
 0\\
 0\\
@@ -684,7 +684,7 @@ x_{4}\\
 6x_{7}\\
 -7x_{7}\\
 x_{7}\end{bmatrix} \\
-&amp;\displaystyle=\begin{bmatrix}15\\
+&\displaystyle=\begin{bmatrix}15\\
 -10\\
 0\\
 0\\
@@ -781,8 +781,8 @@ x_{7}\end{bmatrix}=\begin{bmatrix}\\
 \end{align*}
 Step 3. For each dependent variable, use the augmented matrix to formulate an equation expressing the dependent variable as a constant plus multiples of the free variables. Convert this equation into entries of the vectors that ensure equality for each dependent variable, one at a time.
 \begin{align*}
-\displaystyle x_{1}&amp;\displaystyle=15-2x_{3}+3x_{4}-9x_{7}\ \Rightarrow \\
-&amp;\displaystyle\mathbf{x}=\begin{bmatrix}x_{1}\\
+\displaystyle x_{1}&\displaystyle=15-2x_{3}+3x_{4}-9x_{7}\ \Rightarrow \\
+&\displaystyle\mathbf{x}=\begin{bmatrix}x_{1}\\
 x_{2}\\
 x_{3}\\
 x_{4}\\
@@ -813,8 +813,8 @@ x_{7}\end{bmatrix}=\begin{bmatrix}15\\
 \\
 \\
 1\end{bmatrix} \\
-\displaystyle x_{2}&amp;\displaystyle=-10+5x_{3}-4x_{4}+8x_{7}\ \Rightarrow \\
-&amp;\displaystyle\mathbf{x}=\begin{bmatrix}x_{1}\\
+\displaystyle x_{2}&\displaystyle=-10+5x_{3}-4x_{4}+8x_{7}\ \Rightarrow \\
+&\displaystyle\mathbf{x}=\begin{bmatrix}x_{1}\\
 x_{2}\\
 x_{3}\\
 x_{4}\\
@@ -845,8 +845,8 @@ x_{7}\end{bmatrix}=\begin{bmatrix}15\\
 \\
 \\
 1\end{bmatrix} \\
-\displaystyle x_{5}&amp;\displaystyle=11+6x_{7}\ \Rightarrow \\
-&amp;\displaystyle\mathbf{x}=\begin{bmatrix}x_{1}\\
+\displaystyle x_{5}&\displaystyle=11+6x_{7}\ \Rightarrow \\
+&\displaystyle\mathbf{x}=\begin{bmatrix}x_{1}\\
 x_{2}\\
 x_{3}\\
 x_{4}\\
@@ -877,8 +877,8 @@ x_{7}\end{bmatrix}=\begin{bmatrix}15\\
 6\\
 \\
 1\end{bmatrix} \\
-\displaystyle x_{6}&amp;\displaystyle=-21-7x_{7}\ \Rightarrow \\
-&amp;\displaystyle\mathbf{x}=\begin{bmatrix}x_{1}\\
+\displaystyle x_{6}&\displaystyle=-21-7x_{7}\ \Rightarrow \\
+&\displaystyle\mathbf{x}=\begin{bmatrix}x_{1}\\
 x_{2}\\
 x_{3}\\
 x_{4}\\
@@ -912,8 +912,8 @@ x_{7}\end{bmatrix}=\begin{bmatrix}15\\
 \end{align*}
 This final form of a typical solution is especially pleasing and useful. For example, we can build solutions quickly by choosing values for our free variables, and then compute a linear combination. For example
 \begin{align*}
-\displaystyle x_{3}&amp;\displaystyle=2,\,x_{4}=-4,\,x_{7}=3\quad\quad\Rightarrow \\
-\displaystyle\mathbf{x}&amp;\displaystyle=\begin{bmatrix}x_{1}\\
+\displaystyle x_{3}&\displaystyle=2,\,x_{4}=-4,\,x_{7}=3\quad\quad\Rightarrow \\
+\displaystyle\mathbf{x}&\displaystyle=\begin{bmatrix}x_{1}\\
 x_{2}\\
 x_{3}\\
 x_{4}\\
@@ -953,8 +953,8 @@ x_{7}\end{bmatrix}=\begin{bmatrix}15\\
 \end{align*}
 or perhaps,
 \begin{align*}
-\displaystyle x_{3}&amp;\displaystyle=5,\,x_{4}=2,\,x_{7}=1\quad\quad\Rightarrow \\
-\displaystyle\mathbf{x}&amp;\displaystyle=\begin{bmatrix}x_{1}\\
+\displaystyle x_{3}&\displaystyle=5,\,x_{4}=2,\,x_{7}=1\quad\quad\Rightarrow \\
+\displaystyle\mathbf{x}&\displaystyle=\begin{bmatrix}x_{1}\\
 x_{2}\\
 x_{3}\\
 x_{4}\\
@@ -994,8 +994,8 @@ x_{7}\end{bmatrix}=\begin{bmatrix}15\\
 \end{align*}
 or even,
 \begin{align*}
-\displaystyle x_{3}&amp;\displaystyle=0,\,x_{4}=0,\,x_{7}=0\quad\quad\Rightarrow \\
-\displaystyle\mathbf{x}&amp;\displaystyle=\begin{bmatrix}x_{1}\\
+\displaystyle x_{3}&\displaystyle=0,\,x_{4}=0,\,x_{7}=0\quad\quad\Rightarrow \\
+\displaystyle\mathbf{x}&\displaystyle=\begin{bmatrix}x_{1}\\
 x_{2}\\
 x_{3}\\
 x_{4}\\
@@ -1036,31 +1036,31 @@ x_{7}\end{bmatrix}=\begin{bmatrix}15\\
 So we can compactly express all of the solutions to this linear system with just 4 fixed vectors, provided we agree how to combine them in a linear combinations to create solution vectors.
 Suppose you were told that the vector $\mathbf{w}$ below was a solution to this system of equations. Could you turn the problem around and write $\mathbf{w}$ as a linear combination of the four vectors $\mathbf{c}$, $\mathbf{u}_{1}$, $\mathbf{u}_{2}$, $\mathbf{u}_{3}$?
 \begin{align*}
-\displaystyle\mathbf{w}&amp;\displaystyle=\begin{bmatrix}100\\
+\displaystyle\mathbf{w}&\displaystyle=\begin{bmatrix}100\\
 -75\\
 7\\
 9\\
 -37\\
 35\\
--8\end{bmatrix}&amp;\displaystyle\mathbf{c}&amp;\displaystyle=\begin{bmatrix}15\\
+-8\end{bmatrix}&\displaystyle\mathbf{c}&\displaystyle=\begin{bmatrix}15\\
 -10\\
 0\\
 0\\
 11\\
 -21\\
-0\end{bmatrix}&amp;\displaystyle\mathbf{u}_{1}&amp;\displaystyle=\begin{bmatrix}-2\\
+0\end{bmatrix}&\displaystyle\mathbf{u}_{1}&\displaystyle=\begin{bmatrix}-2\\
 5\\
 1\\
 0\\
 0\\
 0\\
-0\end{bmatrix}&amp;\displaystyle\mathbf{u}_{2}&amp;\displaystyle=\begin{bmatrix}3\\
+0\end{bmatrix}&\displaystyle\mathbf{u}_{2}&\displaystyle=\begin{bmatrix}3\\
 -4\\
 0\\
 1\\
 0\\
 0\\
-0\end{bmatrix}&amp;\displaystyle\mathbf{u}_{3}&amp;\displaystyle=\begin{bmatrix}-9\\
+0\end{bmatrix}&\displaystyle\mathbf{u}_{3}&\displaystyle=\begin{bmatrix}-9\\
 8\\
 0\\
 0\\
@@ -1077,11 +1077,11 @@ Suppose you were told that the vector $\mathbf{w}$ below was a solution to this 
  Suppose that $\left[A|\mathbf{b}\right]$ is the augmented matrix for a consistent linear system $\mathcal{LS}({A},{\mathbf{b}})$ of $m$ equations in $n$ variables.
 Let $B$ be a row-equivalent $m\times(n+1)$ matrix in reduced row-echelon form. Suppose that $B$ has $r$ pivot columns, with indices $D=\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\}$, while the $n-r$ non-pivot columns have indices in $F=\{f_{1},\,f_{2},\,f_{3},\,\ldots,\,f_{n-r},\,n+1\}$. Define vectors $\mathbf{c}$, $\mathbf{u}_{j}$, $1\leq j\leq n-r$ of size $n$ by
 \begin{align*}
-\displaystyle\left[\mathbf{c}\right]_{i}&amp;\displaystyle=\begin{cases}0&amp;\text{if $i\in F$}\\
-\left[B\right]_{k,n+1}&amp;\text{if $i\in D$, $i=d_{k}$}\end{cases} \\
-\displaystyle\left[\mathbf{u}_{j}\right]_{i}&amp;\displaystyle=\begin{cases}1&amp;\text{if $i\in F$, $i=f_{j}$}\\
-0&amp;\text{if $i\in F$, $i\neq f_{j}$}\\
--\left[B\right]_{k,f_{j}}&amp;\text{if $i\in D$, $i=d_{k}$}\end{cases}.
+\displaystyle\left[\mathbf{c}\right]_{i}&\displaystyle=\begin{cases}0&\text{if $i\in F$}\\
+\left[B\right]_{k,n+1}&\text{if $i\in D$, $i=d_{k}$}\end{cases} \\
+\displaystyle\left[\mathbf{u}_{j}\right]_{i}&\displaystyle=\begin{cases}1&\text{if $i\in F$, $i=f_{j}$}\\
+0&\text{if $i\in F$, $i\neq f_{j}$}\\
+-\left[B\right]_{k,f_{j}}&\text{if $i\in D$, $i=d_{k}$}\end{cases}.
 \end{align*}
 Then the set of solutions to the system of equations $\mathcal{LS}({A},{\mathbf{b}})$ is
 \begin{align*}
@@ -1107,21 +1107,21 @@ Since $\left[B\right]_{\ell d_{i}}=0$ for all $1\leq i\leq r$, except that $\lef
 \end{align*}
 Notice that for $1\leq i\leq n-r$
 \begin{align*}
-\displaystyle\left[\mathbf{x}\right]_{f_{i}}&amp;\displaystyle=\left[\mathbf{c}\right]_{f_{i}}+\alpha_{1}\left[\mathbf{u}_{1}\right]_{f_{i}}+\alpha_{2}\left[\mathbf{u}_{2}\right]_{f_{i}}+\cdots+\alpha_{i}\left[\mathbf{u}_{i}\right]_{f_{i}}+\cdots+\alpha_{n-r}\left[\mathbf{u_{n-r}}\right]_{f_{i}} \\
-&amp;\displaystyle=0+\alpha_{1}(0)+\alpha_{2}(0)+\cdots+\alpha_{i}(1)+\cdots+\alpha_{n-r}(0) \\
-&amp;\displaystyle=\alpha_{i}.
+\displaystyle\left[\mathbf{x}\right]_{f_{i}}&\displaystyle=\left[\mathbf{c}\right]_{f_{i}}+\alpha_{1}\left[\mathbf{u}_{1}\right]_{f_{i}}+\alpha_{2}\left[\mathbf{u}_{2}\right]_{f_{i}}+\cdots+\alpha_{i}\left[\mathbf{u}_{i}\right]_{f_{i}}+\cdots+\alpha_{n-r}\left[\mathbf{u_{n-r}}\right]_{f_{i}} \\
+&\displaystyle=0+\alpha_{1}(0)+\alpha_{2}(0)+\cdots+\alpha_{i}(1)+\cdots+\alpha_{n-r}(0) \\
+&\displaystyle=\alpha_{i}.
 \end{align*}
 So $\beta_{\ell}$ simplifies further, and we expand the first term
 \begin{align*}
-\displaystyle\beta_{\ell}&amp;\displaystyle=\left[\mathbf{x}\right]_{d_{\ell}}+\left[B\right]_{\ell f_{1}}\alpha_{1}+\left[B\right]_{\ell f_{2}}\alpha_{2}+\left[B\right]_{\ell f_{3}}\alpha_{3}+\cdots+\left[B\right]_{\ell f_{n-r}}\alpha_{n-r} \\
-&amp;\displaystyle=\left[\mathbf{c}+\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}+\cdots+\alpha_{n-r}\mathbf{u}_{n-r}\right]_{d_{\ell}}+ \\
-&amp;\displaystyle\quad\quad\left[B\right]_{\ell f_{1}}\alpha_{1}+\left[B\right]_{\ell f_{2}}\alpha_{2}+\left[B\right]_{\ell f_{3}}\alpha_{3}+\cdots+\left[B\right]_{\ell f_{n-r}}\alpha_{n-r} \\
-&amp;\displaystyle=\left[\mathbf{c}\right]_{d_{\ell}}+\alpha_{1}\left[\mathbf{u}_{1}\right]_{d_{\ell}}+\alpha_{2}\left[\mathbf{u}_{2}\right]_{d_{\ell}}+\alpha_{3}\left[\mathbf{u}_{3}\right]_{d_{\ell}}+\cdots+\alpha_{n-r}\left[\mathbf{u_{n-r}}\right]_{d_{\ell}}+ \\
-&amp;\displaystyle\quad\quad\left[B\right]_{\ell f_{1}}\alpha_{1}+\left[B\right]_{\ell f_{2}}\alpha_{2}+\left[B\right]_{\ell f_{3}}\alpha_{3}+\cdots+\left[B\right]_{\ell f_{n-r}}\alpha_{n-r} \\
-&amp;\displaystyle=\left[B\right]_{\ell,{n+1}}+ \\
-&amp;\displaystyle\quad\quad\alpha_{1}(-\left[B\right]_{\ell f_{1}})+\alpha_{2}(-\left[B\right]_{\ell f_{2}})+\alpha_{3}(-\left[B\right]_{\ell f_{3}})+\cdots+\alpha_{n-r}(-\left[B\right]_{\ell f_{n-r}})+ \\
-&amp;\displaystyle\quad\quad\left[B\right]_{\ell f_{1}}\alpha_{1}+\left[B\right]_{\ell f_{2}}\alpha_{2}+\left[B\right]_{\ell f_{3}}\alpha_{3}+\cdots+\left[B\right]_{\ell f_{n-r}}\alpha_{n-r} \\
-&amp;\displaystyle=\left[B\right]_{\ell,{n+1}}.
+\displaystyle\beta_{\ell}&\displaystyle=\left[\mathbf{x}\right]_{d_{\ell}}+\left[B\right]_{\ell f_{1}}\alpha_{1}+\left[B\right]_{\ell f_{2}}\alpha_{2}+\left[B\right]_{\ell f_{3}}\alpha_{3}+\cdots+\left[B\right]_{\ell f_{n-r}}\alpha_{n-r} \\
+&\displaystyle=\left[\mathbf{c}+\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}+\cdots+\alpha_{n-r}\mathbf{u}_{n-r}\right]_{d_{\ell}}+ \\
+&\displaystyle\quad\quad\left[B\right]_{\ell f_{1}}\alpha_{1}+\left[B\right]_{\ell f_{2}}\alpha_{2}+\left[B\right]_{\ell f_{3}}\alpha_{3}+\cdots+\left[B\right]_{\ell f_{n-r}}\alpha_{n-r} \\
+&\displaystyle=\left[\mathbf{c}\right]_{d_{\ell}}+\alpha_{1}\left[\mathbf{u}_{1}\right]_{d_{\ell}}+\alpha_{2}\left[\mathbf{u}_{2}\right]_{d_{\ell}}+\alpha_{3}\left[\mathbf{u}_{3}\right]_{d_{\ell}}+\cdots+\alpha_{n-r}\left[\mathbf{u_{n-r}}\right]_{d_{\ell}}+ \\
+&\displaystyle\quad\quad\left[B\right]_{\ell f_{1}}\alpha_{1}+\left[B\right]_{\ell f_{2}}\alpha_{2}+\left[B\right]_{\ell f_{3}}\alpha_{3}+\cdots+\left[B\right]_{\ell f_{n-r}}\alpha_{n-r} \\
+&\displaystyle=\left[B\right]_{\ell,{n+1}}+ \\
+&\displaystyle\quad\quad\alpha_{1}(-\left[B\right]_{\ell f_{1}})+\alpha_{2}(-\left[B\right]_{\ell f_{2}})+\alpha_{3}(-\left[B\right]_{\ell f_{3}})+\cdots+\alpha_{n-r}(-\left[B\right]_{\ell f_{n-r}})+ \\
+&\displaystyle\quad\quad\left[B\right]_{\ell f_{1}}\alpha_{1}+\left[B\right]_{\ell f_{2}}\alpha_{2}+\left[B\right]_{\ell f_{3}}\alpha_{3}+\cdots+\left[B\right]_{\ell f_{n-r}}\alpha_{n-r} \\
+&\displaystyle=\left[B\right]_{\ell,{n+1}}.
 \end{align*}
 So $\beta_{\ell}$ began as the left-hand side of equation $\ell$ of the system represented by $B$ and we now know it equals $\left[B\right]_{\ell,{n+1}}$, the constant term for equation $\ell$ of this system. So the arbitrarily chosen vector from $S$ makes every equation of the system true, and therefore is a solution to the system. So all the elements of $S$ are solutions to the system.
 For the second half of the proof, assume that $\mathbf{x}$ is a solution vector for the system having $B$ as its augmented matrix. For convenience and clarity, denote the entries of $\mathbf{x}$ by $x_{i}$. In other words, $x_{i}=\left[\mathbf{x}\right]_{i}$. We desire to show that this solution vector is also an element of the set $S$. Begin with the observation that the entries of a solution vector make equation $\ell$ of the system true for all $1\leq\ell\leq m$:
@@ -1134,17 +1134,17 @@ When $\ell\leq r$, the pivot columns of $B$ have zero entries in row $\ell$ with
 \end{align*}
 This allows us to write,
 \begin{align*}
-\displaystyle\left[\mathbf{x}\right]_{d_{\ell}}&amp;\displaystyle=x_{d_{\ell}} \\
-&amp;\displaystyle=\left[B\right]_{\ell,n+1}-\left[B\right]_{\ell,f_{1}}x_{f_{1}}-\left[B\right]_{\ell,f_{2}}x_{f_{2}}-\left[B\right]_{\ell,f_{3}}x_{f_{3}}-\cdots-\left[B\right]_{\ell,f_{n-r}}x_{f_{n-r}} \\
-&amp;\displaystyle=\left[\mathbf{c}\right]_{d_{\ell}}+x_{f_{1}}\left[\mathbf{u}_{1}\right]_{d_{\ell}}+x_{f_{2}}\left[\mathbf{u}_{2}\right]_{d_{\ell}}+x_{f_{3}}\left[\mathbf{u}_{3}\right]_{d_{\ell}}+\cdots+x_{f_{n-r}}\left[\mathbf{u}_{n-r}\right]_{d_{\ell}} \\
-&amp;\displaystyle=\left[\mathbf{c}+x_{f_{1}}\mathbf{u}_{1}+x_{f_{2}}\mathbf{u}_{2}+x_{f_{3}}\mathbf{u}_{3}+\cdots+x_{f_{n-r}}\mathbf{u}_{n-r}\right]_{d_{\ell}}.
+\displaystyle\left[\mathbf{x}\right]_{d_{\ell}}&\displaystyle=x_{d_{\ell}} \\
+&\displaystyle=\left[B\right]_{\ell,n+1}-\left[B\right]_{\ell,f_{1}}x_{f_{1}}-\left[B\right]_{\ell,f_{2}}x_{f_{2}}-\left[B\right]_{\ell,f_{3}}x_{f_{3}}-\cdots-\left[B\right]_{\ell,f_{n-r}}x_{f_{n-r}} \\
+&\displaystyle=\left[\mathbf{c}\right]_{d_{\ell}}+x_{f_{1}}\left[\mathbf{u}_{1}\right]_{d_{\ell}}+x_{f_{2}}\left[\mathbf{u}_{2}\right]_{d_{\ell}}+x_{f_{3}}\left[\mathbf{u}_{3}\right]_{d_{\ell}}+\cdots+x_{f_{n-r}}\left[\mathbf{u}_{n-r}\right]_{d_{\ell}} \\
+&\displaystyle=\left[\mathbf{c}+x_{f_{1}}\mathbf{u}_{1}+x_{f_{2}}\mathbf{u}_{2}+x_{f_{3}}\mathbf{u}_{3}+\cdots+x_{f_{n-r}}\mathbf{u}_{n-r}\right]_{d_{\ell}}.
 \end{align*}
 This tells us that the entries of the solution vector $\mathbf{x}$ corresponding to dependent variables (indices in $D$) are equal to those of a vector in the set $S$. We still need to check the other entries of the solution vector $\mathbf{x}$ corresponding to the free variables (indices in $F$) to see if they are equal to the entries of the same vector in the set $S$. To this end, suppose $i\in F$ and $i=f_{j}$. Then
 \begin{align*}
-\displaystyle\left[\mathbf{x}\right]_{i}&amp;\displaystyle=x_{i}=x_{f_{j}} \\
-&amp;\displaystyle=0+0x_{f_{1}}+0x_{f_{2}}+0x_{f_{3}}+\cdots+0x_{f_{j-1}}+1x_{f_{j}}+0x_{f_{j+1}}+\cdots+0x_{f_{n-r}} \\
-&amp;\displaystyle=\left[\mathbf{c}\right]_{i}+x_{f_{1}}\left[\mathbf{u}_{1}\right]_{i}+x_{f_{2}}\left[\mathbf{u}_{2}\right]_{i}+x_{f_{3}}\left[\mathbf{u}_{3}\right]_{i}+\cdots+x_{f_{j}}\left[\mathbf{u}_{j}\right]_{i}+\cdots+x_{f_{n-r}}\left[\mathbf{u}_{n-r}\right]_{i} \\
-&amp;\displaystyle=\left[\mathbf{c}+x_{f_{1}}\mathbf{u}_{1}+x_{f_{2}}\mathbf{u}_{2}+\cdots+x_{f_{n-r}}\mathbf{u}_{n-r}\right]_{i}.
+\displaystyle\left[\mathbf{x}\right]_{i}&\displaystyle=x_{i}=x_{f_{j}} \\
+&\displaystyle=0+0x_{f_{1}}+0x_{f_{2}}+0x_{f_{3}}+\cdots+0x_{f_{j-1}}+1x_{f_{j}}+0x_{f_{j+1}}+\cdots+0x_{f_{n-r}} \\
+&\displaystyle=\left[\mathbf{c}\right]_{i}+x_{f_{1}}\left[\mathbf{u}_{1}\right]_{i}+x_{f_{2}}\left[\mathbf{u}_{2}\right]_{i}+x_{f_{3}}\left[\mathbf{u}_{3}\right]_{i}+\cdots+x_{f_{j}}\left[\mathbf{u}_{j}\right]_{i}+\cdots+x_{f_{n-r}}\left[\mathbf{u}_{n-r}\right]_{i} \\
+&\displaystyle=\left[\mathbf{c}+x_{f_{1}}\mathbf{u}_{1}+x_{f_{2}}\mathbf{u}_{2}+\cdots+x_{f_{n-r}}\mathbf{u}_{n-r}\right]_{i}.
 \end{align*}
 So entries of
 $\mathbf{x}$ and $\mathbf{c}+x_{f_{1}}\mathbf{u}_{1}+x_{f_{2}}\mathbf{u}_{2}+\cdots+x_{f_{n-r}}\mathbf{u}_{n-r}$

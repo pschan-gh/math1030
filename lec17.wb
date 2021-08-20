@@ -6,14 +6,14 @@
  Given two vectors $\mathbf{v}$ and $\mathbf{w}$ in ${\mathbb{R}}^{m}$, we define
 \begin{align}
 \label{ipdefe1}
-\displaystyle \left&lt; \mathbf{v},\mathbf{w}\right&gt;=\sum_{i=1}^{m}[\mathbf{v}]_{i}[\mathbf{w}]_{i}=[\mathbf{v}]_{1}[\mathbf{w}]_{1}+\cdots+[\mathbf{v}]_{m}[\mathbf{w}]_{m}.&amp;
+\displaystyle \left&lt; \mathbf{v},\mathbf{w}\right&gt;=\sum_{i=1}^{m}[\mathbf{v}]_{i}[\mathbf{w}]_{i}=[\mathbf{v}]_{1}[\mathbf{w}]_{1}+\cdots+[\mathbf{v}]_{m}[\mathbf{w}]_{m}.&
 \end{align} 
 @newcol
  It is called the @keyword{inner product} of ${\mathbb{R}}^{m}$. The vector space ${\mathbb{R}}^{m}$ together with the operation $\langle-,-\rangle$ is called an inner product space.
 If we regard $\mathbf{v}$ and $\mathbf{w}$ as $m\times 1$ matrices, then we can write:
 \begin{align}
 \label{ipdefe2}
-\displaystyle \left&lt; \mathbf{v},\mathbf{w}\right&gt;=\mathbf{v}^{t}\mathbf{w}.&amp;
+\displaystyle \left&lt; \mathbf{v},\mathbf{w}\right&gt;=\mathbf{v}^{t}\mathbf{w}.&
 \end{align} 
 @endcol
 @end
@@ -52,11 +52,11 @@ and:
 <ol class="ltx_enumerate">
 <li class="ltx_item"> We compute
 \begin{align*}
-\displaystyle\left&lt; \mathbf{v}+\mathbf{w},\mathbf{u}\right&gt;&amp;\displaystyle=[\mathbf{v}+\mathbf{w}]_{1}[\mathbf{u}]_{1}+[\mathbf{v}+\mathbf{w}]_{2}[\mathbf{u}]_{2}+\cdots+[\mathbf{v}+\mathbf{w}]_{m}[\mathbf{u}]_{m} \\
-&amp;\displaystyle=([\mathbf{v}]_{1}+[\mathbf{w}]_{1})[\mathbf{u}]_{1}+([\mathbf{v}]_{2}+[\mathbf{w}]_{2})[\mathbf{u}]_{2}+\cdots+([\mathbf{v}]_{n}+[\mathbf{w}]_{m})[\mathbf{u}]_{m} \\
-&amp;\displaystyle=[\mathbf{v}]_{1}[\mathbf{u}]_{1}+[\mathbf{w}]_{1}[\mathbf{u}]_{1}+[\mathbf{v}]_{2}[\mathbf{u}]_{2}+[\mathbf{w}]_{2}[\mathbf{u}]_{2}+\cdots+[\mathbf{v}]_{m}[\mathbf{u}]_{m}+[\mathbf{w}]_{m}[\mathbf{u}]_{m} \\
-&amp;\displaystyle=[\mathbf{v}]_{1}[\mathbf{u}]_{1}+\cdots+[\mathbf{v}]_{m}[\mathbf{u}]_{m}+[\mathbf{w}]_{1}[\mathbf{u}]_{1}+\cdots+[\mathbf{w}]_{m}[\mathbf{u}]_{m} \\
-&amp;\displaystyle=\left&lt; \mathbf{v},\mathbf{u}\right&gt;+\left&lt; \mathbf{w},\mathbf{u}\right&gt;.
+\displaystyle\left&lt; \mathbf{v}+\mathbf{w},\mathbf{u}\right&gt;&\displaystyle=[\mathbf{v}+\mathbf{w}]_{1}[\mathbf{u}]_{1}+[\mathbf{v}+\mathbf{w}]_{2}[\mathbf{u}]_{2}+\cdots+[\mathbf{v}+\mathbf{w}]_{m}[\mathbf{u}]_{m} \\
+&\displaystyle=([\mathbf{v}]_{1}+[\mathbf{w}]_{1})[\mathbf{u}]_{1}+([\mathbf{v}]_{2}+[\mathbf{w}]_{2})[\mathbf{u}]_{2}+\cdots+([\mathbf{v}]_{n}+[\mathbf{w}]_{m})[\mathbf{u}]_{m} \\
+&\displaystyle=[\mathbf{v}]_{1}[\mathbf{u}]_{1}+[\mathbf{w}]_{1}[\mathbf{u}]_{1}+[\mathbf{v}]_{2}[\mathbf{u}]_{2}+[\mathbf{w}]_{2}[\mathbf{u}]_{2}+\cdots+[\mathbf{v}]_{m}[\mathbf{u}]_{m}+[\mathbf{w}]_{m}[\mathbf{u}]_{m} \\
+&\displaystyle=[\mathbf{v}]_{1}[\mathbf{u}]_{1}+\cdots+[\mathbf{v}]_{m}[\mathbf{u}]_{m}+[\mathbf{w}]_{1}[\mathbf{u}]_{1}+\cdots+[\mathbf{w}]_{m}[\mathbf{u}]_{m} \\
+&\displaystyle=\left&lt; \mathbf{v},\mathbf{u}\right&gt;+\left&lt; \mathbf{w},\mathbf{u}\right&gt;.
 \end{align*} 
 @col
  Or we can use $\eqref{ipdefe2}$:
@@ -68,10 +68,10 @@ and:
 \end{align*} </li>
 <li class="ltx_item"> We compute
 \begin{align*}
-\displaystyle\left&lt; \alpha\mathbf{v},\mathbf{w}\right&gt;&amp;\displaystyle=[\alpha\mathbf{v}]_{1}[\mathbf{w}]_{1}+[\alpha\mathbf{v}]_{2}[\mathbf{w}]_{2}+\cdots+[\alpha\mathbf{v}]_{m}[\mathbf{w}]_{m} \\
-&amp;\displaystyle=\alpha[\mathbf{v}]_{1}[\mathbf{w}]_{1}+\alpha[\mathbf{v}]_{2}[\mathbf{w}]_{2}+\cdots+\alpha[\mathbf{v}]_{m}[\mathbf{w}]_{m} \\
-&amp;\displaystyle=\alpha([\mathbf{v}]_{1}[\mathbf{w}]_{1}+[\mathbf{v}]_{2}[\mathbf{w}]_{2}+\cdots+[\mathbf{v}]_{m}[\mathbf{w}]_{m}) \\
-&amp;\displaystyle=\alpha\left&lt; \mathbf{v},\mathbf{w}\right&gt;.
+\displaystyle\left&lt; \alpha\mathbf{v},\mathbf{w}\right&gt;&\displaystyle=[\alpha\mathbf{v}]_{1}[\mathbf{w}]_{1}+[\alpha\mathbf{v}]_{2}[\mathbf{w}]_{2}+\cdots+[\alpha\mathbf{v}]_{m}[\mathbf{w}]_{m} \\
+&\displaystyle=\alpha[\mathbf{v}]_{1}[\mathbf{w}]_{1}+\alpha[\mathbf{v}]_{2}[\mathbf{w}]_{2}+\cdots+\alpha[\mathbf{v}]_{m}[\mathbf{w}]_{m} \\
+&\displaystyle=\alpha([\mathbf{v}]_{1}[\mathbf{w}]_{1}+[\mathbf{v}]_{2}[\mathbf{w}]_{2}+\cdots+[\mathbf{v}]_{m}[\mathbf{w}]_{m}) \\
+&\displaystyle=\alpha\left&lt; \mathbf{v},\mathbf{w}\right&gt;.
 \end{align*} 
 @col
  Or we can use $\eqref{ipdefe2}$:
@@ -80,9 +80,9 @@ and:
 \end{align*} </li>
 <li class="ltx_item"> We compute
 \begin{align*}
-\displaystyle\left&lt; \mathbf{v},\mathbf{w}\right&gt;&amp;\displaystyle=[\mathbf{v}]_{1}[\mathbf{w}]_{1}+[\mathbf{v}]_{2}[\mathbf{w}]_{2}+\cdots+[\mathbf{v}]_{m}[\mathbf{w}]_{m}. \\
-&amp;\displaystyle=[\mathbf{w}]_{1}[\mathbf{v}]_{1}+[\mathbf{w}]_{2}[\mathbf{v}]_{2}+\cdots+[\mathbf{w}]_{m}[\mathbf{v}]_{m}. \\
-&amp;\displaystyle=\left&lt; \mathbf{w},\mathbf{v}\right&gt;.
+\displaystyle\left&lt; \mathbf{v},\mathbf{w}\right&gt;&\displaystyle=[\mathbf{v}]_{1}[\mathbf{w}]_{1}+[\mathbf{v}]_{2}[\mathbf{w}]_{2}+\cdots+[\mathbf{v}]_{m}[\mathbf{w}]_{m}. \\
+&\displaystyle=[\mathbf{w}]_{1}[\mathbf{v}]_{1}+[\mathbf{w}]_{2}[\mathbf{v}]_{2}+\cdots+[\mathbf{w}]_{m}[\mathbf{v}]_{m}. \\
+&\displaystyle=\left&lt; \mathbf{w},\mathbf{v}\right&gt;.
 \end{align*} </li>
 <li class="ltx_item"> We compute
 \begin{align*}
@@ -309,16 +309,16 @@ Let
 @newcol
  First for $1\leq i\leq k$, we compute
 \begin{align*}
-\displaystyle\left&lt; \mathbf{v},\mathbf{v}_{i}\right&gt;&amp;\displaystyle=\left&lt; \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k},\mathbf{v}_{i}\right&gt; \\
-&amp;\displaystyle=\alpha_{1}\left&lt; \mathbf{v}_{1},\mathbf{v}_{i}\right&gt;+\cdots+\alpha_{k}\left&lt; \mathbf{v}_{k},\mathbf{v}_{i}\right&gt; \\
-&amp;\displaystyle=\alpha_{i}\left&lt; \mathbf{v}_{i},\mathbf{v}_{i}\right&gt;=\alpha_{i}\|\mathbf{v}_{i}\|^{2}.
+\displaystyle\left&lt; \mathbf{v},\mathbf{v}_{i}\right&gt;&\displaystyle=\left&lt; \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k},\mathbf{v}_{i}\right&gt; \\
+&\displaystyle=\alpha_{1}\left&lt; \mathbf{v}_{1},\mathbf{v}_{i}\right&gt;+\cdots+\alpha_{k}\left&lt; \mathbf{v}_{k},\mathbf{v}_{i}\right&gt; \\
+&\displaystyle=\alpha_{i}\left&lt; \mathbf{v}_{i},\mathbf{v}_{i}\right&gt;=\alpha_{i}\|\mathbf{v}_{i}\|^{2}.
 \end{align*} 
 @col
  The last step follows from the fact that $\left&lt; \mathbf{v}_{j},\mathbf{v}_{i}\right&gt;=0$ for $j\neq i$. But then
 \begin{align*}
-\displaystyle\left&lt; \mathbf{v},\mathbf{w}\right&gt;&amp;\displaystyle=\left&lt; \mathbf{v},\beta_{1}\mathbf{v}_{1}+\cdots+\beta_{k}\mathbf{v}_{k}\right&gt; \\
-&amp;\displaystyle=\beta_{1}\left&lt; \mathbf{v},\mathbf{v}_{1}\right&gt;+\cdots+\beta_{k}\left&lt; \mathbf{v},\mathbf{v}_{k}\right&gt; \\
-&amp;\displaystyle=\alpha_{1}\beta_{1}\|\mathbf{v}_{1}\|^{2}+\cdots+\alpha_{k}\beta_{k}\|\mathbf{v}_{k}\|^{2}.
+\displaystyle\left&lt; \mathbf{v},\mathbf{w}\right&gt;&\displaystyle=\left&lt; \mathbf{v},\beta_{1}\mathbf{v}_{1}+\cdots+\beta_{k}\mathbf{v}_{k}\right&gt; \\
+&\displaystyle=\beta_{1}\left&lt; \mathbf{v},\mathbf{v}_{1}\right&gt;+\cdots+\beta_{k}\left&lt; \mathbf{v},\mathbf{v}_{k}\right&gt; \\
+&\displaystyle=\alpha_{1}\beta_{1}\|\mathbf{v}_{1}\|^{2}+\cdots+\alpha_{k}\beta_{k}\|\mathbf{v}_{k}\|^{2}.
 \end{align*} 
 @qed
 @endcol
@@ -341,9 +341,9 @@ Let
 \end{align*}
 i.e. for $1\leq i\leq k$,
 \begin{align*}
-\displaystyle\left&lt; \mathbf{v},\mathbf{v}_{i}\right&gt;&amp;\displaystyle=\left&lt; \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k},\mathbf{v}_{i}\right&gt; \\
-&amp;\displaystyle=\alpha_{1}\left&lt; \mathbf{v}_{1},\mathbf{v}_{i}\right&gt;+\cdots+\alpha_{k}\left&lt; \mathbf{v}_{k},\mathbf{v}_{i}\right&gt; \\
-&amp;\displaystyle=\alpha_{i}\|\mathbf{v}_{i}\|^{2}=0.
+\displaystyle\left&lt; \mathbf{v},\mathbf{v}_{i}\right&gt;&\displaystyle=\left&lt; \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k},\mathbf{v}_{i}\right&gt; \\
+&\displaystyle=\alpha_{1}\left&lt; \mathbf{v}_{1},\mathbf{v}_{i}\right&gt;+\cdots+\alpha_{k}\left&lt; \mathbf{v}_{k},\mathbf{v}_{i}\right&gt; \\
+&\displaystyle=\alpha_{i}\|\mathbf{v}_{i}\|^{2}=0.
 \end{align*} 
 @col
  So for $1\leq i\leq k$ we have
@@ -377,9 +377,9 @@ i.e.
 @newcol
  Suppose that $\mathbf{v}=\alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k}$. Then, for $1\leq i\leq k$, we compute
 \begin{align*}
-\displaystyle\left&lt; \mathbf{v},\mathbf{v}_{i}\right&gt;&amp;\displaystyle=\left&lt; \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k},\mathbf{v}_{i}\right&gt; \\
-&amp;\displaystyle=\alpha_{1}\left&lt; \mathbf{v}_{1},\mathbf{v}_{i}\right&gt;+\cdots+\alpha_{k}\left&lt; \mathbf{v}_{k},\mathbf{v}_{i}\right&gt; \\
-&amp;\displaystyle=\alpha_{i}\left&lt; \mathbf{v}_{i},\mathbf{v}_{i}\right&gt;=\alpha_{i}\|\mathbf{v}_{i}\|^{2}.
+\displaystyle\left&lt; \mathbf{v},\mathbf{v}_{i}\right&gt;&\displaystyle=\left&lt; \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k},\mathbf{v}_{i}\right&gt; \\
+&\displaystyle=\alpha_{1}\left&lt; \mathbf{v}_{1},\mathbf{v}_{i}\right&gt;+\cdots+\alpha_{k}\left&lt; \mathbf{v}_{k},\mathbf{v}_{i}\right&gt; \\
+&\displaystyle=\alpha_{i}\left&lt; \mathbf{v}_{i},\mathbf{v}_{i}\right&gt;=\alpha_{i}\|\mathbf{v}_{i}\|^{2}.
 \end{align*} 
 @col
  Hence
@@ -494,8 +494,8 @@ It is called @keyword{the standard basis} for $V$. </li>
 @defn
  A subset $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ of ${\mathbb{R}}^{m}$ is said to be @keyword{orthonormal} if it is orthogonal and every vector in $S$ is a unit vector, i.e.
 \begin{align*}
-\displaystyle \left&lt; \mathbf{v}_{i},\mathbf{v}_{j}\right&gt;=\begin{cases}1&amp;\text{if $i=j$},\\
-0&amp;\text{if $i\neq j$}.\end{cases}
+\displaystyle \left&lt; \mathbf{v}_{i},\mathbf{v}_{j}\right&gt;=\begin{cases}1&\text{if $i=j$},\\
+0&\text{if $i\neq j$}.\end{cases}
 \end{align*} 
 @newcol
  Let $V$ be a subspace of ${\mathbb{R}}^{m}$.
@@ -722,7 +722,7 @@ To obtain an orthonormal basis of $\left&lt; \left\{\mathbf{w}_{1},\mathbf{w}_{2
 @end
 @eg
 @newcol
- Let $V={\mathcal{N}}\!\left(\begin{bmatrix}1&amp;1&amp;1&amp;1\end{bmatrix}\right)$. Find an orthonormal basis of $V$. The set
+ Let $V={\mathcal{N}}\!\left(\begin{bmatrix}1&1&1&1\end{bmatrix}\right)$. Find an orthonormal basis of $V$. The set
 \begin{align*}
 \displaystyle S=\left\{\mathbf{w}_{1}=\begin{bmatrix}-1\\
 1\\

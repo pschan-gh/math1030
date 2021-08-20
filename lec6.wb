@@ -30,9 +30,9 @@ In particular, if $A$ is (non-square) rectangular,
 then the size of the vector changes. 
 @eg
  Consider:
-\[\displaystyle A=\begin{bmatrix}1&amp;4&amp;2&amp;3&amp;4\\
--3&amp;2&amp;0&amp;1&amp;-2\\
-1&amp;6&amp;-3&amp;-1&amp;5\end{bmatrix},\;\mathbf{u}=\begin{bmatrix}2\\
+\[\displaystyle A=\begin{bmatrix}1&4&2&3&4\\
+-3&2&0&1&-2\\
+1&6&-3&-1&5\end{bmatrix},\;\mathbf{u}=\begin{bmatrix}2\\
 1\\
 -2\\
 3\\
@@ -40,7 +40,7 @@ then the size of the vector changes.
 @newcol
  Then:
 \begin{align*}
-A\mathbf{u}&amp;=2\begin{bmatrix}1\\
+A\mathbf{u}&=2\begin{bmatrix}1\\
 -3\\
 1\end{bmatrix}
 +1\begin{bmatrix}4\\
@@ -55,7 +55,7 @@ A\mathbf{u}&amp;=2\begin{bmatrix}1\\
 +(-1)\begin{bmatrix}4\\
 -2\\
 5\end{bmatrix}
-\\&amp;
+\\&
 =\begin{bmatrix}7\\
 1\\
 6\end{bmatrix}.
@@ -85,9 +85,9 @@ A\mathbf{u}&amp;=2\begin{bmatrix}1\\
 \[\displaystyle 3x_{1}+x_{2}+x_{4}-3x_{5}=0\]
 \[\displaystyle-2x_{1}+7x_{2}-5x_{3}+2x_{4}+2x_{5}=-3\]
 has coefficient matrix and vector of constants
-\[\displaystyle A=\begin{bmatrix}2&amp;4&amp;-3&amp;5&amp;1\\
-3&amp;1&amp;0&amp;1&amp;-3\\
--2&amp;7&amp;-5&amp;2&amp;2\end{bmatrix}\qquad\mathbf{b}=\begin{bmatrix}9\\
+\[\displaystyle A=\begin{bmatrix}2&4&-3&5&1\\
+3&1&0&1&-3\\
+-2&7&-5&2&2\end{bmatrix}\qquad\mathbf{b}=\begin{bmatrix}9\\
 0\\
 -3\end{bmatrix}\]
 and so will be described compactly by the vector equation $A\mathbf{x}=\mathbf{b}$. 
@@ -109,9 +109,9 @@ For $1\leq j\leq n$, we define the @keyword{standard unit vector} $\mathbf{e}_{j
 @col
  \begin{align*}
 \left[A\right]_{ij}
-&amp;=\left[A\mathbf{e}_{j}\right]_{i}\\
-&amp;=\left[B\mathbf{e}_{j}\right]_{i}\\
-&amp;=\left[B\right]_{ij}
+&=\left[A\mathbf{e}_{j}\right]_{i}\\
+&=\left[B\mathbf{e}_{j}\right]_{i}\\
+&=\left[B\right]_{ij}
 \end{align*} 
 @col
  Hence $A = B$. 
@@ -135,19 +135,19 @@ B}_{p}\right].\]
 @eg
 @newcol
  Let:
-\[\displaystyle A=\begin{bmatrix}1&amp;2&amp;-1&amp;4&amp;6\\
-0&amp;-4&amp;1&amp;2&amp;3\\
--5&amp;1&amp;2&amp;-3&amp;4\end{bmatrix},\;
-B=\begin{bmatrix}1&amp;6&amp;2&amp;1\\
--1&amp;4&amp;3&amp;2\\
-1&amp;1&amp;2&amp;3\\
-6&amp;4&amp;-1&amp;2\\
-1&amp;-2&amp;3&amp;0\end{bmatrix}.\] 
+\[\displaystyle A=\begin{bmatrix}1&2&-1&4&6\\
+0&-4&1&2&3\\
+-5&1&2&-3&4\end{bmatrix},\;
+B=\begin{bmatrix}1&6&2&1\\
+-1&4&3&2\\
+1&1&2&3\\
+6&4&-1&2\\
+1&-2&3&0\end{bmatrix}.\] 
 @col
  Then:
 \[
 \begin{split}
-AB&amp;=\left[A\begin{bmatrix}1\\
+AB&=\left[A\begin{bmatrix}1\\
 -1\\
 1\\
 6\\
@@ -165,11 +165,11 @@ AB&amp;=\left[A\begin{bmatrix}1\\
 2\\
 0\end{bmatrix}\right.\right]
 \\
-&amp;
+&
 \\
-&amp;=\begin{bmatrix}28&amp;17&amp;20&amp;10\\
-20&amp;-13&amp;-3&amp;-1\\
--18&amp;-44&amp;12&amp;-3\end{bmatrix}.
+&=\begin{bmatrix}28&17&20&10\\
+20&-13&-3&-1\\
+-18&-44&12&-3\end{bmatrix}.
 \end{split}
 \] 
 @endcol
@@ -188,16 +188,16 @@ matrix multiplication is in general <strong>not</strong> commutative.
 
 @newcol
  Let:
-\[\displaystyle A=\begin{bmatrix}1&amp;3\\
--1&amp;2\end{bmatrix},\;
-B=\begin{bmatrix}4&amp;0\\
-5&amp;1\end{bmatrix}.\] 
+\[\displaystyle A=\begin{bmatrix}1&3\\
+-1&2\end{bmatrix},\;
+B=\begin{bmatrix}4&0\\
+5&1\end{bmatrix}.\] 
 @col
  Then:
-\[\displaystyle AB=\begin{bmatrix}19&amp;3\\
-6&amp;2\end{bmatrix},\;
-BA=\begin{bmatrix}4&amp;12\\
-4&amp;17\end{bmatrix}\]
+\[\displaystyle AB=\begin{bmatrix}19&3\\
+6&2\end{bmatrix},\;
+BA=\begin{bmatrix}4&12\\
+4&17\end{bmatrix}\]
 So, $AB\neq BA$.
 
 @col
@@ -213,8 +213,8 @@ So, $AB\neq BA$.
 @newcol
  \begin{align*}
 \left[AB\right]_{ij}
-&amp;=\left[A\right]_{i1}\left[B\right]_{1j}+\left[A\right]_{i2}\left[B\right]_{2j}+\left[A\right]_{i3}\left[B\right]_{3j}+ \cdots+\left[A\right]_{in}\left[B\right]_{nj}\\
-&amp;=\sum_{k=1}^{n}\left[A\right]_{ik}\left[B\right]_{kj}
+&=\left[A\right]_{i1}\left[B\right]_{1j}+\left[A\right]_{i2}\left[B\right]_{2j}+\left[A\right]_{i3}\left[B\right]_{3j}+ \cdots+\left[A\right]_{in}\left[B\right]_{nj}\\
+&=\sum_{k=1}^{n}\left[A\right]_{ik}\left[B\right]_{kj}
 \end{align*} 
 @endcol
 @end
@@ -232,13 +232,13 @@ $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$.  S
  Then, for $1\leq i\leq m$, $1\leq j\leq p$, we have:
 \begin{align*}
 \left[AB\right]_{ij}=\left[A\mathbf{B}_{j}\right]_{i}
-&amp;=\left[\left[\mathbf{B}_{j}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{B}_{j}\right]_{2}\mathbf{A}_{2}+\cdots+\left[\mathbf{B}_{j}\right]_{n}\mathbf{A}_{n}\right]_{i}\\
-&amp;=\left[\left[\mathbf{B}_{j}\right]_{1}\mathbf{A}_{1}\right]_{i}+
+&=\left[\left[\mathbf{B}_{j}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{B}_{j}\right]_{2}\mathbf{A}_{2}+\cdots+\left[\mathbf{B}_{j}\right]_{n}\mathbf{A}_{n}\right]_{i}\\
+&=\left[\left[\mathbf{B}_{j}\right]_{1}\mathbf{A}_{1}\right]_{i}+
 \left[\left[\mathbf{B}_{j}\right]_{2}\mathbf{A}_{2}\right]_{i}+\cdots+\left[\left[\mathbf{B}_{j}\right]_{n}\mathbf{A}_{n}\right]_{i}\\
-&amp;=\left[\mathbf{B}_{j}\right]_{1}\left[\mathbf{A}_{1}\right]_{i}+\left[\mathbf{B}_{j}\right]_{2}\left[\mathbf{A}_{2}\right]_{i}+\cdots+\left[\mathbf{B}_{j}\right]_{n}\left[\mathbf{A}_{n}\right]_{i}\\
-&amp;=\left[B\right]_{1j}\left[A\right]_{i1}+\left[B\right]_{2j}\left[A\right]_{i2}+\cdots+\left[B\right]_{nj}\left[A\right]_{in}\\
-&amp;=\left[A\right]_{i1}\left[B\right]_{1j}+\left[A\right]_{i2}\left[B\right]_{2j}+\cdots+\left[A\right]_{in}\left[B\right]_{nj}\\
-&amp;=\sum_{k=1}^{n}\left[A\right]_{ik}\left[B\right]_{kj}
+&=\left[\mathbf{B}_{j}\right]_{1}\left[\mathbf{A}_{1}\right]_{i}+\left[\mathbf{B}_{j}\right]_{2}\left[\mathbf{A}_{2}\right]_{i}+\cdots+\left[\mathbf{B}_{j}\right]_{n}\left[\mathbf{A}_{n}\right]_{i}\\
+&=\left[B\right]_{1j}\left[A\right]_{i1}+\left[B\right]_{2j}\left[A\right]_{i2}+\cdots+\left[B\right]_{nj}\left[A\right]_{in}\\
+&=\left[A\right]_{i1}\left[B\right]_{1j}+\left[A\right]_{i2}\left[B\right]_{2j}+\cdots+\left[A\right]_{in}\left[B\right]_{nj}\\
+&=\sum_{k=1}^{n}\left[A\right]_{ik}\left[B\right]_{kj}
 \end{align*} 
 @endcol
 @end
@@ -246,37 +246,37 @@ $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$.  S
 @eg
 @title{Product of Two Matrices, Entry-by-Entry}
  Consider the matrices:
-\[\displaystyle A=\begin{bmatrix}1&amp;2&amp;-1&amp;4&amp;6\\
-0&amp;-4&amp;1&amp;2&amp;3\\
--5&amp;1&amp;2&amp;-3&amp;4\end{bmatrix},\;
-B=\begin{bmatrix}1&amp;6&amp;2&amp;1\\
--1&amp;4&amp;3&amp;2\\
-1&amp;1&amp;2&amp;3\\
-6&amp;4&amp;-1&amp;2\\
-1&amp;-2&amp;3&amp;0\end{bmatrix}\] 
+\[\displaystyle A=\begin{bmatrix}1&2&-1&4&6\\
+0&-4&1&2&3\\
+-5&1&2&-3&4\end{bmatrix},\;
+B=\begin{bmatrix}1&6&2&1\\
+-1&4&3&2\\
+1&1&2&3\\
+6&4&-1&2\\
+1&-2&3&0\end{bmatrix}\] 
 @newcol
  Suppose we just wanted the entry of $AB$ in the second row, third column:
 \begin{align*}
 \matrixentry{AB}{23}
-=&amp;
+=&
 \matrixentry{A}{21}\matrixentry{B}{13}+
 \matrixentry{A}{22}\matrixentry{B}{23}+
 \matrixentry{A}{23}\matrixentry{B}{33}+
 \matrixentry{A}{24}\matrixentry{B}{43}+
 \matrixentry{A}{25}\matrixentry{B}{53}\\
-=&amp;(0)(2)+(-4)(3)+(1)(2)+(2)(-1)+(3)(3)=-3
+=&(0)(2)+(-4)(3)+(1)(2)+(2)(-1)+(3)(3)=-3
 \end{align*}
 Notice how there are 5 terms in the sum, since 5 is the common dimension of the two matrices (column count for $A$, row count for $B$). In the conclusion of the above theorem, it would be the index $k$ that would run from 1 to 5 in this computation. Here is a bit more practice.
 The entry of third row, first column:
 \begin{align*}
 \matrixentry{AB}{31}
-=&amp;
+=&
 \matrixentry{A}{31}\matrixentry{B}{11}+
 \matrixentry{A}{32}\matrixentry{B}{21}+
 \matrixentry{A}{33}\matrixentry{B}{31}+
 \matrixentry{A}{34}\matrixentry{B}{41}+
 \matrixentry{A}{35}\matrixentry{B}{51}\\
-=&amp;(-5)(1)+(1)(-1)+(2)(1)+(-3)(6)+(4)(1)=-18
+=&(-5)(1)+(1)(-1)+(2)(1)+(-3)(6)+(4)(1)=-18
 \end{align*}
 Try to compute all the other entries. 
 @endcol
@@ -290,7 +290,7 @@ Try to compute all the other entries.
 @endcol
 @eg
 @newcol
- Find the $(3,2)$ entry of $AB$ in the previous example.The $3$-rd row of $A$ is $\begin{bmatrix}-5&amp;1&amp;2&amp;-3&amp;4\end{bmatrix}$.
+ Find the $(3,2)$ entry of $AB$ in the previous example.The $3$-rd row of $A$ is $\begin{bmatrix}-5&1&2&-3&4\end{bmatrix}$.
 The $2$-nd column of $B$ is $\begin{bmatrix}6\\
 4\\
 1\\
@@ -344,24 +344,24 @@ and all off-diagonal entries are equal to zero. That is:
 @newcol
  \[
 \left[I_m\right]_{ij} = \begin{cases}
-1, &amp; \text{ if } i = j;\\
-0, &amp; \text{ if } i \neq j.
+1, & \text{ if } i = j;\\
+0, & \text{ if } i \neq j.
 \end{cases}
 \] 
 @col
  For example:
 \[
 I_2 = \begin{pmatrix}
-1 &amp; 0\\
-0 &amp; 1
+1 & 0\\
+0 & 1
 \end{pmatrix},
 \quad
 I_5 = \begin{pmatrix}
-1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
-0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; 1 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 1
+1 & 0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 1
 \end{pmatrix}
 .
 \] 
@@ -419,18 +419,18 @@ Then:
  We will do (1), you do (2). Entry-by-entry, for $1\leq i\leq m$, $1\leq j\leq p$,
 \begin{align*}
 \matrixentry{A(B+C)}{ij}
-&amp;=
+&=
 \sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B+C}{kj}
 \\
-&amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}(\matrixentry{B}{kj}+\matrixentry{C}{kj})
+&=\sum_{k=1}^{n}\matrixentry{A}{ik}(\matrixentry{B}{kj}+\matrixentry{C}{kj})
 \\
-&amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}+\matrixentry{A}{ik}\matrixentry{C}{kj}
+&=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}+\matrixentry{A}{ik}\matrixentry{C}{kj}
 \\
-&amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}+\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{C}{kj}
+&=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}+\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{C}{kj}
 \\
-&amp;=\matrixentry{AB}{ij}+\matrixentry{AC}{ij}
+&=\matrixentry{AB}{ij}+\matrixentry{AC}{ij}
 \\
-&amp;=\matrixentry{AB+AC}{ij}
+&=\matrixentry{AB+AC}{ij}
 \\
 \end{align*}
 So the matrices $A(B+C)$ and $AB+AC$ are equal, entry-by-entry.
@@ -450,15 +450,15 @@ Hence by the definition of matrix equality, we can say they are equal matrices.
 For $1\leq i\leq m$, $1\leq j\leq p$,
 \begin{align*}
 \matrixentry{\alpha(AB)}{ij}
-&amp;=\alpha\matrixentry{AB}{ij}
+&=\alpha\matrixentry{AB}{ij}
 \\
-&amp;=\alpha\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}
+&=\alpha\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}
 \\
-&amp;=\sum_{k=1}^{n}\alpha\matrixentry{A}{ik}\matrixentry{B}{kj}
+&=\sum_{k=1}^{n}\alpha\matrixentry{A}{ik}\matrixentry{B}{kj}
 \\
-&amp;=\sum_{k=1}^{n}\matrixentry{\alpha A}{ik}\matrixentry{B}{kj}
+&=\sum_{k=1}^{n}\matrixentry{\alpha A}{ik}\matrixentry{B}{kj}
 \\
-&amp;=\matrixentry{(\alpha A)B}{ij}
+&=\matrixentry{(\alpha A)B}{ij}
 \\
 \end{align*}
 So the matrices $\alpha(AB)$ and $(\alpha A)B$ are equal, entry-by-entry, and by the definition of matrix equality we can say they are equal matrices. 
@@ -477,11 +477,11 @@ So the matrices $\alpha(AB)$ and $(\alpha A)B$ are equal, entry-by-entry, and by
  A matrix equality, so we will go entry-by-entry, no surprise there. For $1\leq i\leq m$, $1\leq j\leq s$,
 \begin{align*}
 \matrixentry{A(BD)}{ij}
-&amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{BD}{kj}
+&=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{BD}{kj}
 \\
-&amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}\left(\sum_{\ell=1}^{p}\matrixentry{B}{k\ell}\matrixentry{D}{\ell j}\right)
+&=\sum_{k=1}^{n}\matrixentry{A}{ik}\left(\sum_{\ell=1}^{p}\matrixentry{B}{k\ell}\matrixentry{D}{\ell j}\right)
 \\
-&amp;=\sum_{k=1}^{n}\sum_{\ell=1}^{p}\matrixentry{A}{ik}\matrixentry{B}{k\ell}\matrixentry{D}{\ell j}
+&=\sum_{k=1}^{n}\sum_{\ell=1}^{p}\matrixentry{A}{ik}\matrixentry{B}{k\ell}\matrixentry{D}{\ell j}
 \\
 \end{align*} 
 @col
@@ -489,7 +489,7 @@ So the matrices $\alpha(AB)$ and $(\alpha A)B$ are equal, entry-by-entry, and by
 
 @col
  \begin{align*}
-&amp;=\sum_{\ell=1}^{p}\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{k\ell}\matrixentry{D}{\ell j}
+&=\sum_{\ell=1}^{p}\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{k\ell}\matrixentry{D}{\ell j}
 \\
 \end{align*} 
 @col
@@ -497,13 +497,13 @@ So the matrices $\alpha(AB)$ and $(\alpha A)B$ are equal, entry-by-entry, and by
 
 @col
  \begin{align*}
-&amp;=\sum_{\ell=1}^{p}\matrixentry{D}{\ell j}\left(\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{k\ell}\right)
+&=\sum_{\ell=1}^{p}\matrixentry{D}{\ell j}\left(\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{k\ell}\right)
 \\
-&amp;=\sum_{\ell=1}^{p}\matrixentry{D}{\ell j}\matrixentry{AB}{i\ell}
+&=\sum_{\ell=1}^{p}\matrixentry{D}{\ell j}\matrixentry{AB}{i\ell}
 \\
-&amp;=\sum_{\ell=1}^{p}\matrixentry{AB}{i\ell}\matrixentry{D}{\ell j}
+&=\sum_{\ell=1}^{p}\matrixentry{AB}{i\ell}\matrixentry{D}{\ell j}
 \\
-&amp;=\matrixentry{(AB)D}{ij}
+&=\matrixentry{(AB)D}{ij}
 \\
 \end{align*} 
 @col
@@ -563,9 +563,9 @@ We have:
 \[
 \begin{split}
 A(B\vec{v}) = A(v_1\mathbf{B}_1 + \cdots + v_p \mathbf{B}_p)
-&amp;= v_1 (A\mathbf{B}_1) + \cdots + v_p (A\mathbf{B}_p)
-\\&amp;= (A\mathbf{B}_1 | \cdots | A \mathbf{B}_p)\vec{v}
-\\&amp;= (AB)\vec{v}.
+&= v_1 (A\mathbf{B}_1) + \cdots + v_p (A\mathbf{B}_p)
+\\&= (A\mathbf{B}_1 | \cdots | A \mathbf{B}_p)\vec{v}
+\\&= (AB)\vec{v}.
 \end{split}
 \]
 This completes the proof. 
@@ -590,15 +590,15 @@ This completes the proof.
 
 @col
  \begin{align*}
-\matrixentry{\transpose{(AB)}}{ji}=&amp;\matrixentry{AB}{ij}
+\matrixentry{\transpose{(AB)}}{ji}=&\matrixentry{AB}{ij}
 \\
-&amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}
+&=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}
 \\
-&amp;=\sum_{k=1}^{n}\matrixentry{B}{kj}\matrixentry{A}{ik}
+&=\sum_{k=1}^{n}\matrixentry{B}{kj}\matrixentry{A}{ik}
 \\
-&amp;=\sum_{k=1}^{n}\matrixentry{\transpose{B}}{jk}\matrixentry{\transpose{A}}{ki}
+&=\sum_{k=1}^{n}\matrixentry{\transpose{B}}{jk}\matrixentry{\transpose{A}}{ki}
 \\
-&amp;=\matrixentry{\transpose{B}\transpose{A}}{ji}
+&=\matrixentry{\transpose{B}\transpose{A}}{ji}
 \end{align*}
 
 @col
@@ -626,22 +626,22 @@ Let $J$ be a matrix obtained by applying the same row operation on $I_{m}$. Then
 @eg
 @newcol
  Let:
-\[A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;a_{14}&amp;a_{15}\\
-a_{21}&amp;a_{22}&amp;a_{23}&amp;a_{24}&amp;a_{25}\\
-a_{31}&amp;a_{32}&amp;a_{33}&amp;a_{34}&amp;a_{35}\\
-a_{41}&amp;a_{42}&amp;a_{43}&amp;a_{44}&amp;a_{45}\\
+\[A=\begin{bmatrix}a_{11}&a_{12}&a_{13}&a_{14}&a_{15}\\
+a_{21}&a_{22}&a_{23}&a_{24}&a_{25}\\
+a_{31}&a_{32}&a_{33}&a_{34}&a_{35}\\
+a_{41}&a_{42}&a_{43}&a_{44}&a_{45}\\
 \end{bmatrix}\]
 Consider the row operation $3R_{2}+R_{3}$.
-\[A\xrightarrow{3R_{2}+R_{3}}B=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;a_{14}&amp;a_{15}%
+\[A\xrightarrow{3R_{2}+R_{3}}B=\begin{bmatrix}a_{11}&a_{12}&a_{13}&a_{14}&a_{15}%
 \\
-a_{21}&amp;a_{22}&amp;a_{23}&amp;a_{24}&amp;a_{25}\\
-3a_{21}+a_{31}&amp;3a_{22}+a_{32}&amp;3a_{23}+a_{33}&amp;3a_{24}+a_{34}&amp;3a_{25}+a_{35}\\
-a_{41}&amp;a_{42}&amp;a_{43}&amp;a_{44}&amp;a_{45}\\
+a_{21}&a_{22}&a_{23}&a_{24}&a_{25}\\
+3a_{21}+a_{31}&3a_{22}+a_{32}&3a_{23}+a_{33}&3a_{24}+a_{34}&3a_{25}+a_{35}\\
+a_{41}&a_{42}&a_{43}&a_{44}&a_{45}\\
 \end{bmatrix}\]
-\[I_{4}\xrightarrow{3R_{2}+R_{3}}J=\begin{bmatrix}1&amp;0&amp;0&amp;0\\
-0&amp;1&amp;0&amp;0\\
-0&amp;3&amp;1&amp;0\\
-0&amp;0&amp;0&amp;1\\
+\[I_{4}\xrightarrow{3R_{2}+R_{3}}J=\begin{bmatrix}1&0&0&0\\
+0&1&0&0\\
+0&3&1&0\\
+0&0&0&1\\
 \end{bmatrix}\]
 Verify that:
 \[JA=B.\] 
@@ -771,18 +771,18 @@ i.e.
 
 @newcol
  \[
-A^t=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;\dots&amp;a_{1n}\\
-a_{21}&amp;a_{22}&amp;a_{23}&amp;\dots&amp;a_{2n}\\
-\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
-a_{n1}&amp;a_{n2}&amp;a_{n3}&amp;\dots&amp;a_{nm}\\
+A^t=\begin{bmatrix}a_{11}&a_{12}&a_{13}&\dots&a_{1n}\\
+a_{21}&a_{22}&a_{23}&\dots&a_{2n}\\
+\vdots&\vdots&\vdots&\vdots&\vdots\\
+a_{n1}&a_{n2}&a_{n3}&\dots&a_{nm}\\
 \end{bmatrix}^{t}
 \] 
 @col
  \[
-=\begin{bmatrix}a_{11}&amp;a_{21}&amp;a_{31}&amp;\dots&amp;a_{m1}\\
-a_{12}&amp;a_{22}&amp;a_{32}&amp;\dots&amp;a_{m2}\\
-\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
-a_{1n}&amp;a_{2n}&amp;a_{3n}&amp;\dots&amp;a_{mn}\\
+=\begin{bmatrix}a_{11}&a_{21}&a_{31}&\dots&a_{m1}\\
+a_{12}&a_{22}&a_{32}&\dots&a_{m2}\\
+\vdots&\vdots&\vdots&\vdots&\vdots\\
+a_{1n}&a_{2n}&a_{3n}&\dots&a_{mn}\\
 \end{bmatrix}.
 \] 
 @endcol
@@ -791,16 +791,16 @@ a_{1n}&amp;a_{2n}&amp;a_{3n}&amp;\dots&amp;a_{mn}\\
 @newcol
  Suppose:
 \[
-D=\begin{bmatrix}3&amp;7&amp;2&amp;-3\\
--1&amp;4&amp;2&amp;8\\
-0&amp;3&amp;-2&amp;5\end{bmatrix}.\]
+D=\begin{bmatrix}3&7&2&-3\\
+-1&4&2&8\\
+0&3&-2&5\end{bmatrix}.\]
 Then,
 
 @col
- \[D^{t}=\begin{bmatrix}3&amp;-1&amp;0\\
-7&amp;4&amp;3\\
-2&amp;2&amp;-2\\
--3&amp;8&amp;5\end{bmatrix}.\] 
+ \[D^{t}=\begin{bmatrix}3&-1&0\\
+7&4&3\\
+2&2&-2\\
+-3&8&5\end{bmatrix}.\] 
 @endcol
 @end
 @slide
@@ -810,10 +810,10 @@ Then,
  A matrix $A$ is said to be @keyword{symmetric} if $A=A^{t}$, i.e.
 
 @newcol
- \[A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
-a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
-\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
-a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}\end{bmatrix}\]
+ \[A=\begin{bmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
+a_{21}&a_{22}&\cdots&a_{2n}\\
+\vdots&\vdots&\vdots&\vdots\\
+a_{n1}&a_{n2}&\cdots&a_{nn}\end{bmatrix}\]
 with
 \[a_{ij}=a_{ji}\text{ for all $i,j$}.\] 
 @endcol
@@ -821,11 +821,11 @@ with
 @eg
 @newcol
  The matrix:
-\[E=\begin{bmatrix}2&amp;3&amp;-9&amp;5&amp;7\\
-3&amp;1&amp;6&amp;-2&amp;-3\\
--9&amp;6&amp;0&amp;-1&amp;9\\
-5&amp;-2&amp;-1&amp;4&amp;-8\\
-7&amp;-3&amp;9&amp;-8&amp;-3\end{bmatrix}\]
+\[E=\begin{bmatrix}2&3&-9&5&7\\
+3&1&6&-2&-3\\
+-9&6&0&-1&9\\
+5&-2&-1&4&-8\\
+7&-3&9&-8&-3\end{bmatrix}\]
 is symmetric. 
 @endcol
 @end
@@ -851,10 +851,10 @@ A^t = -A
 @newcol
  \[
 A = \begin{bmatrix}
-0 &amp; -5 &amp; 7 &amp; 11\\
-5 &amp; 0 &amp; 8 &amp; -2\\
--7 &amp; -8 &amp; 0 &amp; 15\\
--11 &amp; 2 &amp; -15 &amp; 0
+0 & -5 & 7 & 11\\
+5 & 0 & 8 & -2\\
+-7 & -8 & 0 & 15\\
+-11 & 2 & -15 & 0
 \end{bmatrix}
 \] 
 @endcol
@@ -881,10 +881,10 @@ A = \begin{bmatrix}
 @steps
 \[
 \begin{split}
-\left[(A+B)^{t}\right]_{ij}&amp;= \class{steps}{\cssId{step0}{\left[A+B\right]_{ji}}}\\
-&amp; \class{steps}{\cssId{step1}{=\left[A\right]_{ji}+\left[B\right]_{ji}}}\\
-&amp; \class{steps}{\cssId{step2}{=\left[A^{t}\right]_{ij}+\left[B^{t}\right]_{ij}}}\\
-&amp; \class{steps}{\cssId{step3}{=\left[A^{t}+B^{t}\right]_{ij}}}\\
+\left[(A+B)^{t}\right]_{ij}&= \class{steps}{\cssId{step0}{\left[A+B\right]_{ji}}}\\
+& \class{steps}{\cssId{step1}{=\left[A\right]_{ji}+\left[B\right]_{ji}}}\\
+& \class{steps}{\cssId{step2}{=\left[A^{t}\right]_{ij}+\left[B^{t}\right]_{ij}}}\\
+& \class{steps}{\cssId{step3}{=\left[A^{t}+B^{t}\right]_{ij}}}\\
 \end{split}
 \]
 

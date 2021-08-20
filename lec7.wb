@@ -18,10 +18,10 @@
 @label{HS}
  A system of linear equations, $\mathcal{LS}(A, \mathbf{b})$ is @keyword{homogeneous} if the vector of constants is the zero vector, in other words, if $\mathbf{b}=\mathbf{0}$, i.e.
 \begin{align*}
-a_{11} x_1 + a_{12} x_2 + \cdots + a_{1n} x_n  &amp;=0 \\
-a_{21} x_1 + a_{22} x_2 + \cdots + a_{2n} x_n  &amp;=0\\
-\vdots &amp;\\
-a_{m1} x_1 + a_{m2} x_2 + \cdots + a_{mn} x_n &amp;= 0
+a_{11} x_1 + a_{12} x_2 + \cdots + a_{1n} x_n  &=0 \\
+a_{21} x_1 + a_{22} x_2 + \cdots + a_{2n} x_n  &=0\\
+\vdots &\\
+a_{m1} x_1 + a_{m2} x_2 + \cdots + a_{mn} x_n &= 0
 \end{align*} 
 @end
 @defn
@@ -29,19 +29,19 @@ a_{m1} x_1 + a_{m2} x_2 + \cdots + a_{mn} x_n &amp;= 0
 @newcol
  The @keyword{homogeneous system} corresponding to $\linearsystem{A}{\vect{b}}$:
 \begin{align*}
-a_{11}x_1+a_{12}x_2+a_{13}x_3+\dots+a_{1n}x_n&amp;=b_1\\
-a_{21}x_1+a_{22}x_2+a_{23}x_3+\dots+a_{2n}x_n&amp;=b_2\\
-a_{31}x_1+a_{32}x_2+a_{33}x_3+\dots+a_{3n}x_n&amp;=b_3\\
-\vdots&amp;\\
-a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\dots+a_{mn}x_n&amp;=b_m
+a_{11}x_1+a_{12}x_2+a_{13}x_3+\dots+a_{1n}x_n&=b_1\\
+a_{21}x_1+a_{22}x_2+a_{23}x_3+\dots+a_{2n}x_n&=b_2\\
+a_{31}x_1+a_{32}x_2+a_{33}x_3+\dots+a_{3n}x_n&=b_3\\
+\vdots&\\
+a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\dots+a_{mn}x_n&=b_m
 \end{align*}
 is $\linearsystem{A}{\vect{0}}$:
 \begin{align*}
-a_{11}x_1+a_{12}x_2+a_{13}x_3+\dots+a_{1n}x_n&amp;=0\\
-a_{21}x_1+a_{22}x_2+a_{23}x_3+\dots+a_{2n}x_n&amp;=0\\
-a_{31}x_1+a_{32}x_2+a_{33}x_3+\dots+a_{3n}x_n&amp;=0\\
-\vdots&amp;\\
-a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\dots+a_{mn}x_n&amp;=0
+a_{11}x_1+a_{12}x_2+a_{13}x_3+\dots+a_{1n}x_n&=0\\
+a_{21}x_1+a_{22}x_2+a_{23}x_3+\dots+a_{2n}x_n&=0\\
+a_{31}x_1+a_{32}x_2+a_{33}x_3+\dots+a_{3n}x_n&=0\\
+\vdots&\\
+a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\dots+a_{mn}x_n&=0
 \end{align*} 
 @endcol
 @end
@@ -49,15 +49,15 @@ a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\dots+a_{mn}x_n&amp;=0
 @eg
  The following is a homogeneous system of linear equations:
 \begin{align*}
-x_1-2x_2+3x_3 - 4x_4 &amp;= 0 \\
-x_2-x_4 &amp;=0 \\
-x_1+3x_2 - 5x_3 + 5 x_4 &amp;= 0
+x_1-2x_2+3x_3 - 4x_4 &= 0 \\
+x_2-x_4 &=0 \\
+x_1+3x_2 - 5x_3 + 5 x_4 &= 0
 \end{align*}
 It is the homogeneous system of linear equations corresponding to
 \begin{align*}
-x_1-2x_2+3x_3 - 4x_4 &amp;= 1 \\
-x_2-x_4 &amp;=2 \\
-x_1+3x_2 - 5x_3 + 5 x_4 &amp;= 3
+x_1-2x_2+3x_3 - 4x_4 &= 1 \\
+x_2-x_4 &=2 \\
+x_1+3x_2 - 5x_3 + 5 x_4 &= 3
 \end{align*} 
 @end
 @slide
@@ -79,25 +79,25 @@ Then the system is consistent. In fact $\mathbf{0}$ is a solution, i.e $x_{1}=x_
 @item
 <br/>
  \begin{align*}
--7x_1 -6 x_2 - 12x_3 &amp;=0\\
-5x_1  + 5x_2 + 7x_3 &amp;=0\\
-x_1 +4x_3 &amp;=0
+-7x_1 -6 x_2 - 12x_3 &=0\\
+5x_1  + 5x_2 + 7x_3 &=0\\
+x_1 +4x_3 &=0
 \end{align*}
 The reduced row echelon form of the augmented matrix is
-\[\left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;0&amp;0\\
-0&amp;\boxed{1}&amp;0&amp;0\\
-0&amp;0&amp;\boxed{1}&amp;0\end{array}\right]\]
+\[\left[\begin{array}[]{ccc|c}\boxed{1}&0&0&0\\
+0&\boxed{1}&0&0\\
+0&0&\boxed{1}&0\end{array}\right]\]
 It has $n-r=3-3=0$ free variable. Hence it has only one solution. 
 @item
 @newcol
  \begin{align*}
-x_1 -x_2 +2x_3 &amp; =0\\
-2x_1+ x_2 + x_3 &amp; =0\\
-x_1 + x_2 &amp; =0
+x_1 -x_2 +2x_3 & =0\\
+2x_1+ x_2 + x_3 & =0\\
+x_1 + x_2 & =0
 \end{align*}The reduced row echelon form of the augmented matrix is
-\[\left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;1&amp;0\\
-0&amp;\boxed{1}&amp;-1&amp;0\\
-0&amp;0&amp;0&amp;0\end{array}\right]\]
+\[\left[\begin{array}[]{ccc|c}\boxed{1}&0&1&0\\
+0&\boxed{1}&-1&0\\
+0&0&0&0\end{array}\right]\]
 The system is consistent. It has $n-r=3-2=1$ free variable. The solution set is
 \[S=\left\{\left.\begin{bmatrix}x_{1}\\
 x_{2}\\
@@ -110,14 +110,14 @@ Geometrically, these are points in three dimensions that lie on a line through t
 @item
 @newcol
  \begin{align*}
-2x_1  + x_2 + 7x_3 - 7x_4 &amp;= 0 \\
--3x_1 + 4x_2 -5x_3 - 6x_4 &amp;=  0 \\
-x_1 +x_2 + 4x_3 - 5x_4 &amp;=  0
+2x_1  + x_2 + 7x_3 - 7x_4 &= 0 \\
+-3x_1 + 4x_2 -5x_3 - 6x_4 &=  0 \\
+x_1 +x_2 + 4x_3 - 5x_4 &=  0
 \end{align*}
 The reduced row echelon form of the augmented matrix is
-\[\left[\begin{array}[]{cccc|c}\boxed{1}&amp;0&amp;3&amp;-2&amp;0\\
-0&amp;\boxed{1}&amp;1&amp;-3&amp;0\\
-0&amp;0&amp;0&amp;0&amp;0\end{array}\right]\]
+\[\left[\begin{array}[]{cccc|c}\boxed{1}&0&3&-2&0\\
+0&\boxed{1}&1&-3&0\\
+0&0&0&0&0\end{array}\right]\]
 The system is consistent. It has $n-r=4-2=2$ free variables. The solution set is
 \[\displaystyle S=\left\{\left.\begin{bmatrix}x_{1}\\
 x_{2}\\
@@ -189,9 +189,9 @@ Hence $\mathbf{w}+\mathbf{z}$ is a solution of $A\mathbf{x}=\mathbf{b}$.
 @slide
 @eg
  \begin{align*}
-2x_1  + x_2 + 7x_3 - 7x_4 &amp;= 8 \\
--3x_1 + 4x_2 -5x_3 - 6x_4 &amp;=  -12 \\
-x_1 +x_2 + 4x_3 - 5x_4 &amp;=  4
+2x_1  + x_2 + 7x_3 - 7x_4 &= 8 \\
+-3x_1 + 4x_2 -5x_3 - 6x_4 &=  -12 \\
+x_1 +x_2 + 4x_3 - 5x_4 &=  4
 \end{align*}
 is a consistent system of equations with a nontrivial null space.
 Let $A$ denote the coefficient matrix of this system.
@@ -199,8 +199,8 @@ Consider the following three solutions to the system:
 
 @newcol
  \begin{align*}
-\vect{y}_1=\colvector{0\\1\\2\\1}&amp;&amp;
-\vect{y}_2=\colvector{4\\0\\0\\0}&amp;&amp;
+\vect{y}_1=\colvector{0\\1\\2\\1}&&
+\vect{y}_2=\colvector{4\\0\\0\\0}&&
 \vect{y}_3=\colvector{7\\8\\1\\3}
 \end{align*}
 Let $\mathbf{w}=\mathbf{y}_{1}$. Then,
@@ -256,35 +256,35 @@ then
 
 @col
  \begin{align*}
-2x_1  + x_2 + 7x_3 - 7x_4 &amp;= 0 \\
--3x_1 + 4x_2 -5x_3 - 6x_4 &amp;=  0 \\
-x_1 +x_2 + 4x_3 - 5x_4 &amp;=  0
+2x_1  + x_2 + 7x_3 - 7x_4 &= 0 \\
+-3x_1 + 4x_2 -5x_3 - 6x_4 &=  0 \\
+x_1 +x_2 + 4x_3 - 5x_4 &=  0
 \end{align*}
 We can start with coefficient matrix:
 
 @col
- \[A=\begin{bmatrix}2&amp;1&amp;6&amp;-7\\
--3&amp;4&amp;-5&amp;-6\\
-1&amp;1&amp;4&amp;-5\end{bmatrix}\]
+ \[A=\begin{bmatrix}2&1&6&-7\\
+-3&4&-5&-6\\
+1&1&4&-5\end{bmatrix}\]
 The RREF is:
 
 @col
- \[\left[\begin{array}[]{cccc}\boxed{1}&amp;0&amp;3&amp;-2\\
-0&amp;\boxed{1}&amp;1&amp;-3\\
-0&amp;0&amp;0&amp;0\end{array}\right]\]
+ \[\left[\begin{array}[]{cccc}\boxed{1}&0&3&-2\\
+0&\boxed{1}&1&-3\\
+0&0&0&0\end{array}\right]\]
 The corresponding augmented matrix is:
 
 @col
- \[\left[\begin{array}[]{cccc|c}\boxed{1}&amp;0&amp;3&amp;-2&amp;0\\
-0&amp;\boxed{1}&amp;1&amp;-3&amp;0\\
-0&amp;0&amp;0&amp;0&amp;0\end{array}\right]\]
+ \[\left[\begin{array}[]{cccc|c}\boxed{1}&0&3&-2&0\\
+0&\boxed{1}&1&-3&0\\
+0&0&0&0&0\end{array}\right]\]
 The system is consistent. It has $n-r=4-2=2$ free variables.
 The solution set is:
 
 @col
  \begin{align*}
-S&amp;=\setparts{\colvector{x_1\\x_2\\x_3\\x_4}}{x_1=-3x_3+2x_4,\,x_2=-x_3+3x_4}\\
-&amp;=\setparts{\colvector{-3x_3+2x_4\\-x_3+3x_4\\x_3\\x_4}}{ x_3,\,x_4  \text{ real numbers}}
+S&=\setparts{\colvector{x_1\\x_2\\x_3\\x_4}}{x_1=-3x_3+2x_4,\,x_2=-x_3+3x_4}\\
+&=\setparts{\colvector{-3x_3+2x_4\\-x_3+3x_4\\x_3\\x_4}}{ x_3,\,x_4  \text{ real numbers}}
 \end{align*} 
 @endcol
 @section{Nonsingular Matrices}
@@ -312,18 +312,18 @@ Then we say that $A$ is a @keyword{nonsingular} matrix. Otherwise we say $A$ is 
 @item
 @newcol
  Let
-\[A=\begin{bmatrix}1&amp;-1&amp;2\\
-2&amp;1&amp;1\\
-1&amp;1&amp;0\end{bmatrix}.\]
+\[A=\begin{bmatrix}1&-1&2\\
+2&1&1\\
+1&1&0\end{bmatrix}.\]
 The system of linear equations $\linearsystem{A}{\mathbf{0}}$ has nontrivial solutions.
 Hence $A$ is singular. 
 @endcol
 @item
 @newcol
  Let
-\[A=\begin{bmatrix}-7&amp;-6&amp;-12\\
-5&amp;5&amp;7\\
-1&amp;0&amp;4\end{bmatrix}.\]
+\[A=\begin{bmatrix}-7&-6&-12\\
+5&5&7\\
+1&0&4\end{bmatrix}.\]
 The system of linear equations $\linearsystem{A}{\mathbf{0}}$ has only trivial solutions.
 So it is nonsingular. 
 @endcol
@@ -335,22 +335,22 @@ So it is nonsingular.
 @title{Identity Matrix}
 @label{IM}
  The $m\times m$ @keyword{identity matrix}, $I_{m}$, is defined by
-\[\displaystyle\left[I_{m}\right]_{ij}=\begin{cases}1&amp;i=j\\
-0&amp;i\neq j\end{cases}\quad\quad 1\leq i,\,j\leq m\]
+\[\displaystyle\left[I_{m}\right]_{ij}=\begin{cases}1&i=j\\
+0&i\neq j\end{cases}\quad\quad 1\leq i,\,j\leq m\]
 i.e.
-\[I_{m}=\begin{bmatrix}1&amp;0&amp;0&amp;\cdots&amp;0\\
-0&amp;1&amp;0&amp;\cdots&amp;0\\
-0&amp;0&amp;1&amp;\cdots&amp;0\\
-\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
-0&amp;0&amp;0&amp;\cdots&amp;1\end{bmatrix}.\] 
+\[I_{m}=\begin{bmatrix}1&0&0&\cdots&0\\
+0&1&0&\cdots&0\\
+0&0&1&\cdots&0\\
+\vdots&\vdots&\vdots&\ddots&\vdots\\
+0&0&0&\cdots&1\end{bmatrix}.\] 
 @end
 @eg
 @newcol
  The $4\times 4$ identity matrix is:
-\[I_{4}=\begin{bmatrix}1&amp;0&amp;0&amp;0\\
-0&amp;1&amp;0&amp;0\\
-0&amp;0&amp;1&amp;0\\
-0&amp;0&amp;0&amp;1\end{bmatrix}.\] 
+\[I_{4}=\begin{bmatrix}1&0&0&0\\
+0&1&0&0\\
+0&0&1&0\\
+0&0&0&1\end{bmatrix}.\] 
 @endcol
 @end
 @newcol
@@ -385,24 +385,24 @@ Thus, $n-r=0$, and so $n=r$. So $B$ has $n$ pivot columns among its total of $n$
 @end
 @slide
 @eg
- \[A=\begin{bmatrix}1&amp;-1&amp;2\\
-2&amp;1&amp;1\\
-1&amp;1&amp;0\end{bmatrix}\]
+ \[A=\begin{bmatrix}1&-1&2\\
+2&1&1\\
+1&1&0\end{bmatrix}\]
 is row equivalent to the reduced row echelon form
-\[B=\begin{bmatrix}1&amp;0&amp;1\\
-0&amp;1&amp;-1\\
-0&amp;0&amp;0\end{bmatrix}.\]
+\[B=\begin{bmatrix}1&0&1\\
+0&1&-1\\
+0&0&0\end{bmatrix}.\]
 Since $B$ is not the $3\times 3$ identity matrix, the above theorem tells us that $A$ is a singular matrix. 
 @end
 @eg
 @newcol
- \[A=\begin{bmatrix}-7&amp;-6&amp;-12\\
-5&amp;5&amp;7\\
-1&amp;0&amp;4\end{bmatrix}.\]
+ \[A=\begin{bmatrix}-7&-6&-12\\
+5&5&7\\
+1&0&4\end{bmatrix}.\]
 It is row-equivalent to the reduced row echelon form
-\[B = \begin{bmatrix}1&amp;0&amp;0\\
-0&amp;1&amp;0\\
-0&amp;0&amp;1\end{bmatrix}\]
+\[B = \begin{bmatrix}1&0&0\\
+0&1&0\\
+0&0&1\end{bmatrix}\]
 Since $B$ is the $3\times 3$ identity matrix, $A$ is a nonsingular matrix by the above theorem. 
 @endcol
 @end
@@ -428,9 +428,9 @@ We have a similar result for nonsingular matrix
 @col
  Case 1. Suppose $B$ is singular. Then there is a nonzero vector $\mathbf{z}$ that is a solution to $B\mathbf{x}=\mathbf{0}$. So
 \begin{align*}
-\displaystyle(AB)\mathbf{z}&amp;\displaystyle=A(B\mathbf{z}) \\
-&amp;\displaystyle=A\mathbf{0} \\
-&amp;\displaystyle=\mathbf{0}
+\displaystyle(AB)\mathbf{z}&\displaystyle=A(B\mathbf{z}) \\
+&\displaystyle=A\mathbf{0} \\
+&\displaystyle=\mathbf{0}
 \end{align*} 
 @col
  Then $\mathbf{z}$ is a nonzero solution to $AB\mathbf{x}=\mathbf{0}$. Thus $AB$ is singular as desired.
@@ -439,20 +439,20 @@ We have a similar result for nonsingular matrix
  Case 2. Suppose $A$ is singular, and $B$ is not singular.
 Because $A$ is singular, there is a nonzero vector $\mathbf{y}$ that is a solution to $A\mathbf{x}=\mathbf{0}$. Now consider the linear system $B\mathbf{x}=\mathbf{y}$. Since $B$ is nonsingular, the system has a unique solution, which we will denote as $\mathbf{w}$. We first claim $\mathbf{w}$ is not the zero vector either. Assuming the opposite, suppose that $\mathbf{w}=\mathbf{0}$. Then
 \begin{align*}
-\displaystyle\mathbf{y}&amp;\displaystyle=B\mathbf{w} \\
-&amp;\displaystyle=B\mathbf{0} \\
-&amp;\displaystyle=\mathbf{0} \\
+\displaystyle\mathbf{y}&\displaystyle=B\mathbf{w} \\
+&\displaystyle=B\mathbf{0} \\
+&\displaystyle=\mathbf{0} \\
 \\
-\displaystyle(AB)\mathbf{w}&amp;\displaystyle=A(B\mathbf{w}) \\
-&amp;\displaystyle=A\mathbf{y} \\
-&amp;\displaystyle=\mathbf{0}
+\displaystyle(AB)\mathbf{w}&\displaystyle=A(B\mathbf{w}) \\
+&\displaystyle=A\mathbf{y} \\
+&\displaystyle=\mathbf{0}
 \end{align*} 
 @col
  So $\mathbf{w}$ is a nonzero solution to $AB\mathbf{x}=\mathbf{0}$. Thus $AB$ is singular as desired. And this conclusion holds for both cases.
 ($\Leftarrow$) Now assume that both $A$ and $B$ are nonsingular. Suppose that $\mathbf{x}\in{\mathbb{R}}^{n}$ is a solution to $AB\mathbf{x}=\mathbf{0}$. Then
 \begin{align*}
-\displaystyle\mathbf{0}&amp;\displaystyle=\left(AB\right)\mathbf{x} \\
-&amp;\displaystyle=A\left(B\mathbf{x}\right)
+\displaystyle\mathbf{0}&\displaystyle=\left(AB\right)\mathbf{x} \\
+&\displaystyle=A\left(B\mathbf{x}\right)
 \end{align*} 
 @col
  So $B\mathbf{x}$ is a solution to $A\mathbf{x}=\mathbf{0}$, and by the definition of a nonsingular matrix, we conclude that $B\mathbf{x}=\mathbf{0}$. Now, by an entirely similar argument, the nonsingularity of $B$ forces us to conclude that $\mathbf{x}=\mathbf{0}$. So the only solution to $AB\mathbf{x}=\mathbf{0}$ is the zero vector and we conclude that $AB$ is nonsingular. 

@@ -111,15 +111,15 @@ $\mathcal{LS}(A, \mathbf{0})$, where the columns of $A$ consist of the vectors i
 @col
  Row-reducing the matrix $A$ gives:
 \begin{align*}
-\displaystyle A=\begin{bmatrix}2&amp;1&amp;2&amp;-6\\
--1&amp;2&amp;1&amp;7\\
-3&amp;-1&amp;-3&amp;-1\\
-1&amp;5&amp;6&amp;0\\
-2&amp;2&amp;1&amp;1\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;0&amp;0&amp;-2\\
-0&amp;\boxed{1}&amp;0&amp;4\\
-0&amp;0&amp;\boxed{1}&amp;-3\\
-0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0\end{bmatrix}.
+\displaystyle A=\begin{bmatrix}2&1&2&-6\\
+-1&2&1&7\\
+3&-1&-3&-1\\
+1&5&6&0\\
+2&2&1&1\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&-2\\
+0&\boxed{1}&0&4\\
+0&0&\boxed{1}&-3\\
+0&0&0&0\\
+0&0&0&0\end{bmatrix}.
 \end{align*}
 We could solve the corresponding homogeneous system completely, but for this example all we need is one nontrivial solution. Setting the lone free variable to any nonzero value, such as $x_{4}=1$, yields the nontrivial solution:
 \begin{align*}
@@ -202,15 +202,15 @@ To determine linear independence we first form an arbitrary relation of linear d
  We want to know if there are solutions to the equation above besides the trivial one: $\alpha_{1}=\alpha_{2}=\alpha_{3}=\alpha_{4}=0$.
 Row-reducing the associated matrix gives:
 \begin{align*}
-\displaystyle B=\begin{bmatrix}2&amp;1&amp;2&amp;-6\\
--1&amp;2&amp;1&amp;7\\
-3&amp;-1&amp;-3&amp;-1\\
-1&amp;5&amp;6&amp;1\\
-2&amp;2&amp;1&amp;1\end{bmatrix}&amp;\displaystyle\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;0&amp;0&amp;0\\
-0&amp;\boxed{1}&amp;0&amp;0\\
-0&amp;0&amp;\boxed{1}&amp;0\\
-0&amp;0&amp;0&amp;\boxed{1}\\
-0&amp;0&amp;0&amp;0\end{bmatrix}.
+\displaystyle B=\begin{bmatrix}2&1&2&-6\\
+-1&2&1&7\\
+3&-1&-3&-1\\
+1&5&6&1\\
+2&2&1&1\end{bmatrix}&\displaystyle\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&0\\
+0&\boxed{1}&0&0\\
+0&0&\boxed{1}&0\\
+0&0&0&\boxed{1}\\
+0&0&0&0\end{bmatrix}.
 \end{align*} 
 @col
  From the form of this matrix, we see that there are no free variables. Hence the associated homogeneous linear system has only the trivial solution. So we now know that there is but one way to combine the four vectors of $T$ into a relation of linear dependence, and that this one way is the easy and obvious way. Hence, the set $T$ is <strong>linearly independent</strong>. 
@@ -262,15 +262,15 @@ linearly independent or linearly dependent?
 
 @col
  \begin{align*}
-\displaystyle A=\begin{bmatrix}2&amp;6&amp;4\\
--1&amp;2&amp;3\\
-3&amp;-1&amp;-4\\
-4&amp;3&amp;5\\
-2&amp;4&amp;1\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;0&amp;0\\
-0&amp;\boxed{1}&amp;0\\
-0&amp;0&amp;\boxed{1}\\
-0&amp;0&amp;0\\
-0&amp;0&amp;0\end{bmatrix}.
+\displaystyle A=\begin{bmatrix}2&6&4\\
+-1&2&3\\
+3&-1&-4\\
+4&3&5\\
+2&4&1\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0\\
+0&\boxed{1}&0\\
+0&0&\boxed{1}\\
+0&0&0\\
+0&0&0\end{bmatrix}.
 \end{align*} 
 @col
  We have $r=3$, so there are $n-r=3-3=0$ free variables. Hence $\mathcal{LS}({A},{\mathbf{0}})$ has a unique solution. By the above theorem, the set $S$ is linearly independent. 
@@ -310,15 +310,15 @@ linearly independent or linearly dependent?
 @newcol
  Theorem @ref{LIVHS} suggests that we study the matrix $A$ whose columns are the vectors in $S$. Specifically, we are interested in the size of the solution set of the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$. Row-reducing $A$ gives
 \begin{align*}
-\displaystyle A=\begin{bmatrix}2&amp;6&amp;4\\
--1&amp;2&amp;3\\
-3&amp;-1&amp;-4\\
-4&amp;3&amp;-1\\
-2&amp;4&amp;2\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;0&amp;-1\\
-0&amp;\boxed{1}&amp;1\\
-0&amp;0&amp;0\\
-0&amp;0&amp;0\\
-0&amp;0&amp;0\end{bmatrix}.
+\displaystyle A=\begin{bmatrix}2&6&4\\
+-1&2&3\\
+3&-1&-4\\
+4&3&-1\\
+2&4&2\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&-1\\
+0&\boxed{1}&1\\
+0&0&0\\
+0&0&0\\
+0&0&0\end{bmatrix}.
 \end{align*}
 We have $r=2$, so there are $n-r=3-2=1$ free variables. Hence $\mathcal{LS}({A},{\mathbf{0}})$ has infinitely many solutions. By
 Theorem @ref{LIVHS}, the set $S$ is linearly dependent. 
@@ -351,9 +351,9 @@ Review the previous two examples. They are very similar, differing only in the l
 \end{align*}
 Suppose that $\alpha_{t}$ is nonzero. Then,
 \begin{align*}
-\displaystyle\mathbf{u}_{t}&amp;\displaystyle=\frac{-1}{\alpha_{t}}\left(-\alpha_{t}\mathbf{u}_{t}\right) \\
-&amp;\displaystyle=\frac{-1}{\alpha_{t}}\left(\alpha_{1}\mathbf{u}_{1}+\cdots+\alpha_{t-1}\mathbf{u}_{t-1}+\alpha_{t+1}\mathbf{u}_{t+1}+\cdots+\alpha_{n}\mathbf{u}_{n}\right) \\
-&amp;\displaystyle=\frac{-\alpha_{1}}{\alpha_{t}}\mathbf{u}_{1}+\cdots+\frac{-\alpha_{t-1}}{\alpha_{t}}\mathbf{u}_{t-1}+\frac{-\alpha_{t+1}}{\alpha_{t}}\mathbf{u}_{t+1}+\cdots+\frac{-\alpha_{n}}{\alpha_{t}}\mathbf{u}_{n}.
+\displaystyle\mathbf{u}_{t}&\displaystyle=\frac{-1}{\alpha_{t}}\left(-\alpha_{t}\mathbf{u}_{t}\right) \\
+&\displaystyle=\frac{-1}{\alpha_{t}}\left(\alpha_{1}\mathbf{u}_{1}+\cdots+\alpha_{t-1}\mathbf{u}_{t-1}+\alpha_{t+1}\mathbf{u}_{t+1}+\cdots+\alpha_{n}\mathbf{u}_{n}\right) \\
+&\displaystyle=\frac{-\alpha_{1}}{\alpha_{t}}\mathbf{u}_{1}+\cdots+\frac{-\alpha_{t-1}}{\alpha_{t}}\mathbf{u}_{t-1}+\frac{-\alpha_{t+1}}{\alpha_{t}}\mathbf{u}_{t+1}+\cdots+\frac{-\alpha_{n}}{\alpha_{t}}\mathbf{u}_{n}.
 \end{align*}
 Since $\frac{\alpha_{i}}{\alpha_{t}}$ is again a scalar, we have expressed $\mathbf{u}_{t}$ as a linear combination of the other elements of $S$. 
 @endcol
@@ -361,16 +361,16 @@ Since $\frac{\alpha_{i}}{\alpha_{t}}$ is again a scalar, we have expressed $\mat
 @newcol
  Assume that the vector $\mathbf{u}_{t}$ is a linear combination of the other vectors in $S$. Write such a linear combination as
 \begin{align*}
-\displaystyle\mathbf{u_{t}}&amp;\displaystyle=\beta_{1}\mathbf{u}_{1}+\beta_{2}\mathbf{u}_{2}+\cdots+\beta_{t-1}\mathbf{u}_{t-1}+\beta_{t+1}\mathbf{u}_{t+1}+\cdots+\beta_{n}\mathbf{u}_{n}.
+\displaystyle\mathbf{u_{t}}&\displaystyle=\beta_{1}\mathbf{u}_{1}+\beta_{2}\mathbf{u}_{2}+\cdots+\beta_{t-1}\mathbf{u}_{t-1}+\beta_{t+1}\mathbf{u}_{t+1}+\cdots+\beta_{n}\mathbf{u}_{n}.
 \end{align*} 
 @col
  Then we have
 \begin{align*}
-\displaystyle\beta_{1}\mathbf{u}_{1}&amp;\displaystyle+\cdots+\beta_{t-1}\mathbf{u}_{t-1}+(-1)\mathbf{u}_{t}+\beta_{t+1}\mathbf{u}_{t+1}+\cdots+\beta_{n}\mathbf{u}_{n} \\
-&amp;\displaystyle=\mathbf{u}_{t}+(-1)\mathbf{u}_{t} \\
-&amp;\displaystyle=\left(1+\left(-1\right)\right)\mathbf{u}_{t} \\
-&amp;\displaystyle=0\mathbf{u}_{t} \\
-&amp;\displaystyle=\mathbf{0}.
+\displaystyle\beta_{1}\mathbf{u}_{1}&\displaystyle+\cdots+\beta_{t-1}\mathbf{u}_{t-1}+(-1)\mathbf{u}_{t}+\beta_{t+1}\mathbf{u}_{t+1}+\cdots+\beta_{n}\mathbf{u}_{n} \\
+&\displaystyle=\mathbf{u}_{t}+(-1)\mathbf{u}_{t} \\
+&\displaystyle=\left(1+\left(-1\right)\right)\mathbf{u}_{t} \\
+&\displaystyle=0\mathbf{u}_{t} \\
+&\displaystyle=\mathbf{0}.
 \end{align*} 
 @col
  So the scalars $\beta_{1},\,\beta_{2},\,\beta_{3},\,\ldots,\,\beta_{t-1},\,\beta_{t}=-1,\beta_{t+1},\,\,\ldots,\,\beta_{n}$ provide a nontrivial relation of linear dependence of the vectors in $S$, thus establishing that $S$ is a linearly dependent set. 
@@ -412,15 +412,15 @@ Define $V=\left&lt;  R\right&gt;$.
 @newcol
  We form a $5\times 4$ matrix, $D$, and row-reduce it to understand the solutions to the homogeneous system $\mathcal{LS}({D},{\mathbf{0}})$:
 \begin{align*}
-\displaystyle D=\begin{bmatrix}1&amp;2&amp;0&amp;4\\
-2&amp;1&amp;-7&amp;1\\
--1&amp;3&amp;6&amp;2\\
-3&amp;1&amp;-11&amp;1\\
-2&amp;2&amp;-2&amp;6\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;0&amp;0&amp;4\\
-0&amp;\boxed{1}&amp;0&amp;0\\
-0&amp;0&amp;\boxed{1}&amp;1\\
-0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0\end{bmatrix}.
+\displaystyle D=\begin{bmatrix}1&2&0&4\\
+2&1&-7&1\\
+-1&3&6&2\\
+3&1&-11&1\\
+2&2&-2&6\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&4\\
+0&\boxed{1}&0&0\\
+0&0&\boxed{1}&1\\
+0&0&0&0\\
+0&0&0&0\end{bmatrix}.
 \end{align*} 
 @col
  We can find infinitely many solutions to the system $\mathcal{LS}({D},{\mathbf{0}})$, most of which are nontrivial. Choose any nontrivial solution to build a nontrivial relation of linear dependence on $R$. Let us begin with $x_{4}=1$, to find the solution
@@ -452,10 +452,10 @@ First show that $V^{\prime}\subseteq V$. Since every vector of $R^{\prime}$ is i
 @col
  Next show that $V\subseteq V^{\prime}$. Choose any $\mathbf{v}$ from $V$. So there are scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4}$ such that
 \begin{align*}
-\displaystyle\mathbf{v}&amp;\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\mathbf{v}_{3}+\alpha_{4}\mathbf{v}_{4} \\
-&amp;\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\left((-4)\mathbf{v}_{1}+1\mathbf{v}_{4}\right)+\alpha_{4}\mathbf{v}_{4} \\
-&amp;\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\left((-4\alpha_{3})\mathbf{v}_{1}+\alpha_{3}\mathbf{v}_{4}\right)+\alpha_{4}\mathbf{v}_{4} \\
-&amp;\displaystyle=\left(\alpha_{1}-4\alpha_{3}\right)\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\left(\alpha_{3}+\alpha_{4}\right)\mathbf{v}_{4}.
+\displaystyle\mathbf{v}&\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\mathbf{v}_{3}+\alpha_{4}\mathbf{v}_{4} \\
+&\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\left((-4)\mathbf{v}_{1}+1\mathbf{v}_{4}\right)+\alpha_{4}\mathbf{v}_{4} \\
+&\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\left((-4\alpha_{3})\mathbf{v}_{1}+\alpha_{3}\mathbf{v}_{4}\right)+\alpha_{4}\mathbf{v}_{4} \\
+&\displaystyle=\left(\alpha_{1}-4\alpha_{3}\right)\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\left(\alpha_{3}+\alpha_{4}\right)\mathbf{v}_{4}.
 \end{align*} 
 @col
  This equation says that $\mathbf{v}$ can be written as a linear combination of the vectors in $R^{\prime}$ and hence qualifies for membership in $V^{\prime}$. So $V\subseteq V^{\prime}$ and we have established that $V=V^{\prime}$.
@@ -522,17 +522,17 @@ linearly independent or linearly dependent?
 @newcol
  Theorem @ref{LIVRN} suggests that we take the vectors of $S$ as the columns of a matrix and then analyze its reduced row-echelon form:
 \begin{align*}
-\displaystyle \begin{bmatrix}2&amp;9&amp;1&amp;-3&amp;6\\
--1&amp;-6&amp;1&amp;1&amp;-2\\
-3&amp;-2&amp;1&amp;4&amp;1\\
-1&amp;3&amp;0&amp;2&amp;4\\
-0&amp;2&amp;0&amp;1&amp;3\\
-3&amp;1&amp;1&amp;2&amp;2\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;0&amp;0&amp;0&amp;-1\\
-0&amp;\boxed{1}&amp;0&amp;0&amp;1\\
-0&amp;0&amp;\boxed{1}&amp;0&amp;2\\
-0&amp;0&amp;0&amp;\boxed{1}&amp;1\\
-0&amp;0&amp;0&amp;0&amp;0\\
-0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}.
+\displaystyle \begin{bmatrix}2&9&1&-3&6\\
+-1&-6&1&1&-2\\
+3&-2&1&4&1\\
+1&3&0&2&4\\
+0&2&0&1&3\\
+3&1&1&2&2\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&0&-1\\
+0&\boxed{1}&0&0&1\\
+0&0&\boxed{1}&0&2\\
+0&0&0&\boxed{1}&1\\
+0&0&0&0&0\\
+0&0&0&0&0\end{bmatrix}.
 \end{align*}
 Now we need only compute that
 $r=4&lt;5=n$
@@ -579,10 +579,10 @@ to recognize, via Theorem @ref{LIVRN}, that $S$ is a linearly dependent set. Boo
 @col
  To employ Theorem @ref{LIVHS}, we form a $4\times 9$ matrix $C$ whose columns are the vectors in $R$:
 \begin{align*}
-\displaystyle C=\begin{bmatrix}-1&amp;7&amp;1&amp;0&amp;5&amp;2&amp;3&amp;1&amp;-6\\
-3&amp;1&amp;2&amp;4&amp;-2&amp;1&amp;0&amp;1&amp;-1\\
-1&amp;-3&amp;-1&amp;2&amp;4&amp;-6&amp;-3&amp;5&amp;1\\
-2&amp;6&amp;-2&amp;9&amp;3&amp;4&amp;1&amp;3&amp;1\end{bmatrix}.
+\displaystyle C=\begin{bmatrix}-1&7&1&0&5&2&3&1&-6\\
+3&1&2&4&-2&1&0&1&-1\\
+1&-3&-1&2&4&-6&-3&5&1\\
+2&6&-2&9&3&4&1&3&1\end{bmatrix}.
 \end{align*} 
 @col
  To determine if the homogeneous system $\mathcal{LS}({C},{\mathbf{0}})$ has a unique solution or not, we would normally row-reduce this matrix. But in this particular example, we can do better:
@@ -611,9 +611,9 @@ and $n &gt; m$, there are infinitely many solutions. Since there is not a unique
 @eg
 @keyword{Linearly dependent columns} Do the columns of the matrix
 \begin{align*}
-\displaystyle \begin{bmatrix}1&amp;-1&amp;2\\
-2&amp;1&amp;1\\
-1&amp;1&amp;0\end{bmatrix}
+\displaystyle \begin{bmatrix}1&-1&2\\
+2&1&1\\
+1&1&0\end{bmatrix}
 \end{align*}
 form a linearly independent or dependent set? 
 @end
@@ -630,9 +630,9 @@ According to the definition of nonsingular matrices, the homogeneous system $\ma
 @newcol
  Do the columns of this matrix
 \begin{align*}
-\displaystyle B=\begin{bmatrix}-7&amp;-6&amp;-12\\
-5&amp;5&amp;7\\
-1&amp;0&amp;4\end{bmatrix}
+\displaystyle B=\begin{bmatrix}-7&-6&-12\\
+5&5&7\\
+1&0&4\end{bmatrix}
 \end{align*}
 form a linearly independent or dependent set? 
 @endcol
@@ -654,9 +654,9 @@ form a linearly independent or dependent set?
 @newcol
  This is a proof where we can chain together equivalences, rather than proving the two halves separately.
 \begin{align*}
-A \text{ nonsingular} &amp;\displaystyle\iff\text{$\mathcal{LS}({A},{\mathbf{0}})$ has a unique solution} \\
-&amp;\displaystyle\iff A\vec{x} = \vec{0} \text{ has a unique solution }     \vec{x}\\
-&amp;\displaystyle\iff\text{columns of $A$ are linearly independent}
+A \text{ nonsingular} &\displaystyle\iff\text{$\mathcal{LS}({A},{\mathbf{0}})$ has a unique solution} \\
+&\displaystyle\iff A\vec{x} = \vec{0} \text{ has a unique solution }     \vec{x}\\
+&\displaystyle\iff\text{columns of $A$ are linearly independent}
 \end{align*} 
 @qed
 @endcol
@@ -704,27 +704,27 @@ A \text{ nonsingular} &amp;\displaystyle\iff\text{$\mathcal{LS}({A},{\mathbf{0}}
 @newcol
  Let
 \begin{align*}
-\displaystyle A=\begin{bmatrix}1&amp;2&amp;1&amp;8&amp;1&amp;17\\
-1&amp;2&amp;2&amp;13&amp;3&amp;37\\
-1&amp;2&amp;0&amp;3&amp;-2&amp;-10\\
+\displaystyle A=\begin{bmatrix}1&2&1&8&1&17\\
+1&2&2&13&3&37\\
+1&2&0&3&-2&-10\\
 \end{bmatrix}.
 \end{align*} 
 @col
  Then $A$ can be row reduced to
 \begin{align*}
-\displaystyle B=\begin{bmatrix}1&amp;2&amp;0&amp;3&amp;0&amp;4\\
-0&amp;0&amp;1&amp;5&amp;0&amp;6\\
-0&amp;0&amp;0&amp;0&amp;1&amp;7\end{bmatrix}.
+\displaystyle B=\begin{bmatrix}1&2&0&3&0&4\\
+0&0&1&5&0&6\\
+0&0&0&0&1&7\end{bmatrix}.
 \end{align*}
 Let $\mathbf{A}_{i}$ (resp. $\mathbf{B}_{i}$) be the $i$-th column of $A$ (resp. $B$) for $i=1,\ldots,6$.
 By the equivalence of system of linear equation $\mathcal{LS}({A},{\mathbf{0}})$ and $\mathcal{LS}({B},{\mathbf{0}})$, we have
 \begin{align}
-\displaystyle x_{1}\mathbf{A}_{1}+x_{2}\mathbf{A}_{2}+\cdots+x_{6}\mathbf{A}_{6}=\mathbf{0}&amp;
+\displaystyle x_{1}\mathbf{A}_{1}+x_{2}\mathbf{A}_{2}+\cdots+x_{6}\mathbf{A}_{6}=\mathbf{0}&
 \end{align}
 if and only if
 \begin{align}
 \label{eq:B}
-\displaystyle x_{1}\mathbf{B}_{1}+x_{2}\mathbf{B}_{2}+\cdots+x_{6}\mathbf{B}_{6}=\mathbf{0}.&amp;
+\displaystyle x_{1}\mathbf{B}_{1}+x_{2}\mathbf{B}_{2}+\cdots+x_{6}\mathbf{B}_{6}=\mathbf{0}.&
 \end{align} 
 @col
 <strong>Step 1</strong>
@@ -809,10 +809,10 @@ Equivalently
 @newcol
  Row reduce
 \begin{align*}
-\displaystyle A=\begin{bmatrix}1&amp;1&amp;3&amp;1&amp;0&amp;0&amp;4\\
-2&amp;1&amp;5&amp;1&amp;1&amp;2&amp;7\\
-1&amp;-1&amp;1&amp;2&amp;1&amp;-3&amp;10\\
-1&amp;3&amp;5&amp;1&amp;-1&amp;1&amp;1\\
+\displaystyle A=\begin{bmatrix}1&1&3&1&0&0&4\\
+2&1&5&1&1&2&7\\
+1&-1&1&2&1&-3&10\\
+1&3&5&1&-1&1&1\\
 \end{bmatrix}
 \end{align*}
 to a RREF $B$ by the above technique. Let $\mathbf{A}_{i}$ (resp. $\mathbf{B}_{i}$) be the $i$-th column of $A$ (resp. $B$) for $i=1,\ldots,7$.
@@ -911,10 +911,10 @@ to a RREF $B$ by the above technique. Let $\mathbf{A}_{i}$ (resp. $\mathbf{B}_{i
 @col
  Hence the RREF of $A$ is
 \begin{align*}
-\displaystyle \begin{bmatrix}1&amp;0&amp;2&amp;0&amp;0&amp;1&amp;2\\
-0&amp;1&amp;1&amp;0&amp;0&amp;1&amp;-1\\
-0&amp;0&amp;0&amp;1&amp;0&amp;-2&amp;3\\
-0&amp;0&amp;0&amp;0&amp;1&amp;1&amp;1\\
+\displaystyle \begin{bmatrix}1&0&2&0&0&1&2\\
+0&1&1&0&0&1&-1\\
+0&0&0&1&0&-2&3\\
+0&0&0&0&1&1&1\\
 \end{bmatrix}.
 \end{align*} 
 @endcol

@@ -27,8 +27,8 @@ their @keyword{span}, $\left&lt; S \right&gt;$, is the set of all linear combina
 Symbolically,
 \begin{align*}
 \displaystyle
-\left&lt; S \right&gt;&amp;\displaystyle=\left\{\left.\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}+\cdots+\alpha_{n}\mathbf{u}_{n}\,\right|\,\alpha_{i}\in{\mathbb{R}}^{\hbox{}},\,1\leq i\leq n\right\} \\
-&amp;\displaystyle=\left\{\left.\sum_{i=1}^{n}\alpha_{i}\mathbf{u}_{i}\,\right|\,\alpha_{i}\in{\mathbb{R}}^{\hbox{}},\,1\leq i\leq n\right\}
+\left&lt; S \right&gt;&\displaystyle=\left\{\left.\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}+\cdots+\alpha_{n}\mathbf{u}_{n}\,\right|\,\alpha_{i}\in{\mathbb{R}}^{\hbox{}},\,1\leq i\leq n\right\} \\
+&\displaystyle=\left\{\left.\sum_{i=1}^{n}\alpha_{i}\mathbf{u}_{i}\,\right|\,\alpha_{i}\in{\mathbb{R}}^{\hbox{}},\,1\leq i\leq n\right\}
 \end{align*} 
 @end
 @slide
@@ -203,18 +203,18 @@ First, is $\mathbf{u}=\begin{bmatrix}-15\\
 @col
  Searching for such scalars is equivalent to finding a solution to the linear system of equations with augmented matrix:
 \begin{align*}
-\displaystyle \left[\begin{array}[]{ccccc|c}1&amp;2&amp;7&amp;1&amp;-1&amp;-15\\
-1&amp;1&amp;3&amp;1&amp;0&amp;-6\\
-3&amp;2&amp;5&amp;-1&amp;9&amp;19\\
-1&amp;-1&amp;-5&amp;2&amp;0&amp;5\end{array}\right].
+\displaystyle \left[\begin{array}[]{ccccc|c}1&2&7&1&-1&-15\\
+1&1&3&1&0&-6\\
+3&2&5&-1&9&19\\
+1&-1&-5&2&0&5\end{array}\right].
 \end{align*} 
 @col
  This matrix row-reduces to
 \begin{align*}
-\displaystyle \left[\begin{array}[]{ccccc|c}\boxed{1}&amp;0&amp;-1&amp;0&amp;3&amp;10\\
-0&amp;\boxed{1}&amp;4&amp;0&amp;-1&amp;-9\\
-0&amp;0&amp;0&amp;\boxed{1}&amp;-2&amp;-7\\
-0&amp;0&amp;0&amp;0&amp;0&amp;0\end{array}\right].
+\displaystyle \left[\begin{array}[]{ccccc|c}\boxed{1}&0&-1&0&3&10\\
+0&\boxed{1}&4&0&-1&-9\\
+0&0&0&\boxed{1}&-2&-7\\
+0&0&0&0&0&0\end{array}\right].
 \end{align*} 
 @col
  At this point, we see that the system is consistent, so we know there is a solution for the five scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$. This is enough evidence for us to say that $\mathbf{u}\in\left&lt; S \right&gt;$.
@@ -222,7 +222,7 @@ Moreover, we can compute an actual solution, for example:
 
 @col
  \begin{align*}
-\displaystyle\alpha_{1}&amp;\displaystyle=2&amp;\displaystyle\alpha_{2}&amp;\displaystyle=1&amp;\displaystyle\alpha_{3}&amp;\displaystyle=-2&amp;\displaystyle\alpha_{4}&amp;\displaystyle=-3&amp;\displaystyle\alpha_{5}&amp;\displaystyle=2.
+\displaystyle\alpha_{1}&\displaystyle=2&\displaystyle\alpha_{2}&\displaystyle=1&\displaystyle\alpha_{3}&\displaystyle=-2&\displaystyle\alpha_{4}&\displaystyle=-3&\displaystyle\alpha_{5}&\displaystyle=2.
 \end{align*}
 This particular solution allows us to write
 \begin{align*}
@@ -280,17 +280,17 @@ making it even more obvious that $\mathbf{u}\in\left&lt; S \right&gt;$.
 @col
  Again, this is equivalent to finding a solution to the linear system of equations with augmented matrix:
 \begin{align*}
-\displaystyle \left[\begin{array}[]{ccccc|c}1&amp;2&amp;7&amp;1&amp;-1&amp;3\\
-1&amp;1&amp;3&amp;1&amp;0&amp;1\\
-3&amp;2&amp;5&amp;-1&amp;9&amp;2\\
-1&amp;-1&amp;-5&amp;2&amp;0&amp;-1\end{array}\right].
+\displaystyle \left[\begin{array}[]{ccccc|c}1&2&7&1&-1&3\\
+1&1&3&1&0&1\\
+3&2&5&-1&9&2\\
+1&-1&-5&2&0&-1\end{array}\right].
 \end{align*}
 This matrix row-reduces to
 \begin{align*}
-\displaystyle \left[\begin{array}[]{ccccc|c}\boxed{1}&amp;0&amp;-1&amp;0&amp;3&amp;0\\
-0&amp;\boxed{1}&amp;4&amp;0&amp;-1&amp;0\\
-0&amp;0&amp;0&amp;\boxed{1}&amp;-2&amp;0\\
-0&amp;0&amp;0&amp;0&amp;0&amp;\boxed{1}\end{array}\right].
+\displaystyle \left[\begin{array}[]{ccccc|c}\boxed{1}&0&-1&0&3&0\\
+0&\boxed{1}&4&0&-1&0\\
+0&0&0&\boxed{1}&-2&0\\
+0&0&0&0&0&\boxed{1}\end{array}\right].
 \end{align*} 
 @col
  At this point, we see that the system is inconsistent, so we know there is no solution for the five scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$. This is enough evidence for us to say that $\mathbf{v}\not\in\left&lt; S \right&gt;$. End of story. 
@@ -354,19 +354,19 @@ v_{4}\end{bmatrix}\in\left&lt; S \right&gt;.
 @newcol
  Applying Gauss-Jordan elimination to the augmented matrix
 \begin{align*}
-\displaystyle \left[\begin{array}[]{ccccc|c}1&amp;2&amp;7&amp;1&amp;-1&amp;v_{1}\\
-1&amp;1&amp;3&amp;1&amp;0&amp;v_{2}\\
-3&amp;2&amp;5&amp;-1&amp;9&amp;v_{3}\\
-1&amp;-1&amp;-5&amp;2&amp;0&amp;v_{4}\end{array}\right],
+\displaystyle \left[\begin{array}[]{ccccc|c}1&2&7&1&-1&v_{1}\\
+1&1&3&1&0&v_{2}\\
+3&2&5&-1&9&v_{3}\\
+1&-1&-5&2&0&v_{4}\end{array}\right],
 \end{align*}
 we obtain
 
 @col
  \begin{align*}
-\displaystyle \left[\begin{array}[]{ccccc|c}1&amp;0&amp;-1&amp;0&amp;3&amp;-3v_{1}+5v_{2}-v_{4}\\
-0&amp;1&amp;4&amp;0&amp;-1&amp;v_{1}-v_{2}\\
-0&amp;0&amp;0&amp;1&amp;-2&amp;2v_{1}-3v_{2}+v_{4}\\
-0&amp;0&amp;0&amp;0&amp;0&amp;9v_{1}-16v_{2}+v_{3}+4v_{4}\\
+\displaystyle \left[\begin{array}[]{ccccc|c}1&0&-1&0&3&-3v_{1}+5v_{2}-v_{4}\\
+0&1&4&0&-1&v_{1}-v_{2}\\
+0&0&0&1&-2&2v_{1}-3v_{2}+v_{4}\\
+0&0&0&0&0&9v_{1}-16v_{2}+v_{3}+4v_{4}\\
 \end{array}\right].
 \end{align*} 
 @col
@@ -420,25 +420,25 @@ Does $\mathbf{w}=\begin{bmatrix}1\\
 @newcol
  To answer this question, we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ such that
 \begin{align*}
-\displaystyle\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}&amp;\displaystyle=\mathbf{w}.
+\displaystyle\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}&\displaystyle=\mathbf{w}.
 \end{align*}
 This is equivalent to solving the system of linear equations
 \begin{align*}
-\displaystyle\alpha_{1}-\alpha_{2}+2\alpha_{3}&amp;\displaystyle=1 \\
-\displaystyle 2\alpha_{1}+\alpha_{2}+\alpha_{3}&amp;\displaystyle=8 \\
-\displaystyle\alpha_{1}+\alpha_{2}&amp;\displaystyle=5.
+\displaystyle\alpha_{1}-\alpha_{2}+2\alpha_{3}&\displaystyle=1 \\
+\displaystyle 2\alpha_{1}+\alpha_{2}+\alpha_{3}&\displaystyle=8 \\
+\displaystyle\alpha_{1}+\alpha_{2}&\displaystyle=5.
 \end{align*}
 Building the augmented matrix for this linear system, and row-reducing, gives:
 
 @col
  \begin{align*}
-\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;1&amp;3\\
-0&amp;\boxed{1}&amp;-1&amp;2\\
-0&amp;0&amp;0&amp;0\end{array}\right].
+\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&0&1&3\\
+0&\boxed{1}&-1&2\\
+0&0&0&0\end{array}\right].
 \end{align*}
 This system has infinitely many solutions (there is a free variable in $x_{3}$), but all we need is one solution vector. The solution,
 \begin{align*}
-\displaystyle\alpha_{1}&amp;\displaystyle=2&amp;\displaystyle\alpha_{2}&amp;\displaystyle=3&amp;\displaystyle\alpha_{3}&amp;\displaystyle=1
+\displaystyle\alpha_{1}&\displaystyle=2&\displaystyle\alpha_{2}&\displaystyle=3&\displaystyle\alpha_{3}&\displaystyle=1
 \end{align*}
 tells us that:
 
@@ -452,7 +452,7 @@ tells us that:
 @col
  Notice that there is an infinite number of ways to answer this question affirmatively. We could choose a different solution, this time choosing the free variable to be zero,
 \begin{align*}
-\displaystyle\alpha_{1}&amp;\displaystyle=3&amp;\displaystyle\alpha_{2}&amp;\displaystyle=2&amp;\displaystyle\alpha_{3}&amp;\displaystyle=0,
+\displaystyle\alpha_{1}&\displaystyle=3&\displaystyle\alpha_{2}&\displaystyle=2&\displaystyle\alpha_{3}&\displaystyle=0,
 \end{align*}
 showing that
 \begin{align*}
@@ -469,19 +469,19 @@ Is $\mathbf{y}\in\left&lt; S \right&gt;$?
 @col
  So we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ such that
 \begin{align*}
-\displaystyle\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}&amp;\displaystyle=\mathbf{y}.
+\displaystyle\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}&\displaystyle=\mathbf{y}.
 \end{align*}
 This is equivalent to finding solutions to the system of equations
 \begin{align*}
-\displaystyle\alpha_{1}-\alpha_{2}+2\alpha_{3}&amp;\displaystyle=2 \\
-\displaystyle 2\alpha_{1}+\alpha_{2}+\alpha_{3}&amp;\displaystyle=4 \\
-\displaystyle\alpha_{1}+\alpha_{2}&amp;\displaystyle=3,
+\displaystyle\alpha_{1}-\alpha_{2}+2\alpha_{3}&\displaystyle=2 \\
+\displaystyle 2\alpha_{1}+\alpha_{2}+\alpha_{3}&\displaystyle=4 \\
+\displaystyle\alpha_{1}+\alpha_{2}&\displaystyle=3,
 \end{align*}
 Building the augmented matrix for this linear system and row-reducing gives
 \begin{align*}
-\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;1&amp;0\\
-0&amp;\boxed{1}&amp;-1&amp;0\\
-0&amp;0&amp;0&amp;\boxed{1}\end{array}\right].
+\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&0&1&0\\
+0&\boxed{1}&-1&0\\
+0&0&0&\boxed{1}\end{array}\right].
 \end{align*}
 This system is inconsistent because the last column is a pivot column.
 So there are no scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ that will create a linear combination of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}$ that equals $\mathbf{y}$. More precisely, $\mathbf{y}\not\in\left&lt; S \right&gt;$.
@@ -528,19 +528,19 @@ Now ask if a given vector is an element of $\left&lt; R \right&gt;$. For example
 @col
  To answer this question, we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ so that
 \begin{align*}
-\displaystyle\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\mathbf{v}_{3}&amp;\displaystyle=\mathbf{z}.
+\displaystyle\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\mathbf{v}_{3}&\displaystyle=\mathbf{z}.
 \end{align*}
 This is equivalent to finding solutions to the following system of linear equations:
 \begin{align*}
-\displaystyle-7\alpha_{1}-6\alpha_{2}-12\alpha_{3}&amp;\displaystyle=-33 \\
-\displaystyle 5\alpha_{1}+5\alpha_{2}+7\alpha_{3}&amp;\displaystyle=24 \\
-\displaystyle\alpha_{1}+4\alpha_{3}&amp;\displaystyle=5.
+\displaystyle-7\alpha_{1}-6\alpha_{2}-12\alpha_{3}&\displaystyle=-33 \\
+\displaystyle 5\alpha_{1}+5\alpha_{2}+7\alpha_{3}&\displaystyle=24 \\
+\displaystyle\alpha_{1}+4\alpha_{3}&\displaystyle=5.
 \end{align*}
 Building the augmented matrix for this linear system and row-reducing gives
 \begin{align*}
-\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;0&amp;-3\\
-0&amp;\boxed{1}&amp;0&amp;5\\
-0&amp;0&amp;\boxed{1}&amp;2\end{array}\right].
+\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&0&0&-3\\
+0&\boxed{1}&0&5\\
+0&0&\boxed{1}&2\end{array}\right].
 \end{align*}
 This system has a unique solution,
 \begin{align*}
@@ -562,19 +562,19 @@ Is $\mathbf{x}$ a vector in $\left&lt; R \right&gt;$?
 @col
  In other words, are there scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ so that:
 \begin{align*}
-\displaystyle\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\mathbf{v}_{3}&amp;\displaystyle=\mathbf{x}
+\displaystyle\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\mathbf{v}_{3}&\displaystyle=\mathbf{x}
 \end{align*}
 This is equivalent to finding the solutions to the system of equations
 \begin{align*}
-\displaystyle-7\alpha_{1}-6\alpha_{2}-12\alpha_{3}&amp;\displaystyle=-7 \\
-\displaystyle 5\alpha_{1}+5\alpha_{2}+7\alpha_{3}&amp;\displaystyle=8 \\
-\displaystyle\alpha_{1}+4\alpha_{3}&amp;\displaystyle=-3.
+\displaystyle-7\alpha_{1}-6\alpha_{2}-12\alpha_{3}&\displaystyle=-7 \\
+\displaystyle 5\alpha_{1}+5\alpha_{2}+7\alpha_{3}&\displaystyle=8 \\
+\displaystyle\alpha_{1}+4\alpha_{3}&\displaystyle=-3.
 \end{align*}
 Building the augmented matrix for this linear system and row-reducing gives
 \begin{align*}
-\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;0&amp;1\\
-0&amp;\boxed{1}&amp;0&amp;2\\
-0&amp;0&amp;\boxed{1}&amp;-1\end{array}\right].
+\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&0&0&1\\
+0&\boxed{1}&0&2\\
+0&0&\boxed{1}&-1\end{array}\right].
 \end{align*}
 This system has a unique solution,
 \begin{align*}
@@ -668,9 +668,9 @@ is equal to zero, contradicting the fact that the last component of $\vec{e}_m$ 
 @newcol
  Let:
 \begin{align*}
-\displaystyle D=\begin{bmatrix}2&amp;1&amp;7&amp;-7\\
--3&amp;4&amp;-5&amp;-6\\
-1&amp;1&amp;4&amp;-5\end{bmatrix}
+\displaystyle D=\begin{bmatrix}2&1&7&-7\\
+-3&4&-5&-6\\
+1&1&4&-5\end{bmatrix}
 \end{align*}
 and consider the infinite set $W=\left&lt; T \right&gt;$. Check that the vector
 \begin{align*}
@@ -695,10 +695,10 @@ which we can solve for $\mathbf{w}_{4}$ as
 
 @col
  \begin{align*}
-\displaystyle 5\mathbf{w}_{1}&amp;\displaystyle+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+(-3)\mathbf{w}_{4} \\
-&amp;\displaystyle=5\mathbf{w}_{1}+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+(-3)\left((-2)\mathbf{w}_{1}+(-3)\mathbf{w}_{2}\right) \\
-&amp;\displaystyle=5\mathbf{w}_{1}+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+\left(6\mathbf{w}_{1}+9\mathbf{w}_{2}\right) \\
-&amp;\displaystyle=11\mathbf{w}_{1}+5\mathbf{w}_{2}+6\mathbf{w}_{3}.
+\displaystyle 5\mathbf{w}_{1}&\displaystyle+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+(-3)\mathbf{w}_{4} \\
+&\displaystyle=5\mathbf{w}_{1}+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+(-3)\left((-2)\mathbf{w}_{1}+(-3)\mathbf{w}_{2}\right) \\
+&\displaystyle=5\mathbf{w}_{1}+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+\left(6\mathbf{w}_{1}+9\mathbf{w}_{2}\right) \\
+&\displaystyle=11\mathbf{w}_{1}+5\mathbf{w}_{2}+6\mathbf{w}_{3}.
 \end{align*} 
 @col
  So, what began as a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3},\,\mathbf{w}_{4}$ has been reduced to a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3}$.
