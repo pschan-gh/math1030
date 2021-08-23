@@ -2,6 +2,7 @@
 @setchapter{4}
 @chapter{Matrices}
  The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at http://linear.ups.edu/download.htmlPrint version can be downloaded at http://linear.ups.edu/download/fcla-3.50-print.pdf
+
 <br/><h5 class="notkw">Reference.</h5><ul>
 <li> Beezer, Ver 3.5 Subsection MVNSE (print version p17 - p21) </li>
 <li> Strang, Sect 1.4 </li></ul>
@@ -483,19 +484,25 @@ The next two definitions and the following theorem carry over these ideas to aug
 @item
 @newcol
  Swap the locations of two rows.
+
 <strong>Notation</strong>: $R_{i}\leftrightarrow R_{j}$
+
 (Swap the location of rows $i$ and $j$.) 
 @endcol
 @item
 @newcol
  Multiply each entry of a single row by a nonzero number.
+
 <strong>Notation</strong>: $\alpha R_{i}$
+
 (Multiply row $i$ by the nonzero scalar $\alpha$.) 
 @endcol
 @item
 @newcol
  Multiply each entry of one row by some number, and add these values to the entries in the same columns of a second row. Leave the first row the same after this operation, but replace the second row by the new values.
+
 <strong>Notation</strong>: $\alpha R_{i}+R_{j}$
+
 (Multiply row $i$ by the scalar $\alpha$ and add to row $j$.) 
 @endcol
 @endenumerate
@@ -573,6 +580,7 @@ are row-equivalent, as can be seen from:
 @proof
 @newcol
  To be shown later.
+
 See also [ Beezer, Theorem REMES (Ver 3.5 print version p.20) ] 
 @endcol
 @end
@@ -694,5 +702,4 @@ x_3&=4
  The third equation requires that $x_{3}=4$ to be true. Making this substitution into equation 2 we arrive at $x_{2}=-3$, and finally, substituting these values of $x_{2}$ and $x_{3}$ into the first equation, we find that $x_{1}=2$. 
 @endcol
 @end
-@course{MATH 1030}
 <!--DELIMITER-->

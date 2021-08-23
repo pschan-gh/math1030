@@ -165,6 +165,7 @@ A = J^{-1}JA = J^{-1} I = J^{-1}
 \]
 The matrix $J^{-1}$, being the inverse of an invertiable matrix, is invertible.
 We conclude that $A = J^{-1}$ is invertible.
+
 (Observe that every nonsingular matrix is in particular a product of elementary matrices.) 
 @endcol
 @end
@@ -186,6 +187,7 @@ Then we know that the system $\linearsystem{A}{\mathbf{0}}$ has a unique solutio
 But this is precisely the definition of what it means for $A$
 to be nonsingular. 
 @endcol
+
 ($\Leftarrow$) 
 @newcol
  We assume that $A$ is nonsingular of size $n\times n$,
@@ -443,34 +445,44 @@ With definitions of vector addition and scalar multiplication we can state, and 
 Then: <ol class="ltx_enumerate">
 <li class="ltx_item">
 @keyword{ACC} <em>Additive Closure, Column Vectors</em>
+
 If $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$, then $\mathbf{u}+\mathbf{v}\in{\mathbb{R}}^{m}$. </li>
 <li class="ltx_item">
 @keyword{SCC} <em>Scalar Closure, Column Vectors</em>
+
 If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in{\mathbb{R}}^{m}$, then $\alpha\mathbf{u}\in{\mathbb{R}}^{m}$. </li>
 <li class="ltx_item">
 @keyword{CC} <em>Commutativity, Column Vectors</em>
+
 If $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$, then $\mathbf{u}+\mathbf{v}=\mathbf{v}+\mathbf{u}$. </li>
 <li class="ltx_item">
 @keyword{AAC} <em>Additive Associativity, Column Vectors</em>
+
 If $\mathbf{u},\,\mathbf{v},\,\mathbf{w}\in{\mathbb{R}}^{m}$, then $\mathbf{u}+\left(\mathbf{v}+\mathbf{w}\right)=\left(\mathbf{u}+\mathbf{v}\right)+\mathbf{w}$. </li>
 <li class="ltx_item">
 @keyword{ZC} <em>Zero Vector, Column Vectors</em>
+
 There is a vector, $\mathbf{0}$, called the @keyword{zero vector}, such that $\mathbf{u}+\mathbf{0}=\mathbf{u}$ for all $\mathbf{u}\in{\mathbb{R}}^{m}$. </li>
 <li class="ltx_item">
 @keyword{AIC} <em>Additive Inverses, Column Vectors</em>
+
 If $\mathbf{u}\in{\mathbb{R}}^{m}$, then there exists a vector $\mathbf{-u}\in{\mathbb{R}}^{m}$ so that $\mathbf{u}+(\mathbf{-u})=\mathbf{0}$. </li>
 <li class="ltx_item">
 @keyword{SMAC} <em>Scalar Multiplication Associativity, Column Vectors</em>
+
 If $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in{\mathbb{R}}^{m}$, then $\alpha(\beta\mathbf{u})=(\alpha\beta)\mathbf{u}$. </li>
 <li class="ltx_item">
 @keyword{DVAC} <em>Distributivity across Vector Addition, Column Vectors</em>
+
 If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$, then $\alpha(\mathbf{u}+\mathbf{v})=\alpha\mathbf{u}+\alpha\mathbf{v}$. </li>
 <li class="ltx_item">
 @keyword{DSAC} <em>Distributivity across Scalar Addition, Column Vectors</em>
+
 If $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in{\mathbb{R}}^{m}$, then
 $(\alpha+\beta)\mathbf{u}=\alpha\mathbf{u}+\beta\mathbf{u}$. </li>
 <li class="ltx_item">
 @keyword{OC} <em>One, Column Vectors</em>
+
 If $\mathbf{u}\in{\mathbb{R}}^{m}$, then $1\mathbf{u}=\mathbf{u}$. </li></ol>
 @end
 @proof
@@ -498,10 +510,12 @@ rather than
 $\mathbf{u}+\mathbf{v}+\mathbf{w}+\mathbf{x}+\mathbf{y}$, since we get the same result no matter which order we choose to perform the four additions. So we will not be careful about using parentheses this way. 
 @section{Vector Space}
 <strong>For math major only. Non-math major can skip the rest of this section. The material will not appear in the midterms or final</strong> In this section we will give an abstract definition of vector space.
+
 <strong>Why do we need the abstract definitions?</strong> A lot of different algebraic objects (e.g. polynomials, matrices, sequences, functions) share similar properties
 with the set of column vectors. We can use
 the common properties to derive similar results.
 we therefore don’t need to reproof and restate the results.
+
 <strong>One stone, kill many birds</strong>.
 
 @defn
@@ -510,43 +524,53 @@ we therefore don’t need to reproof and restate the results.
 <li class="ltx_item">
 @keyword{AC}
 <em>Additive Closure</em>
+
 If $\mathbf{u},\,\mathbf{v}\in V$, then $\mathbf{u}+\mathbf{v}\in V$. </li>
 <li class="ltx_item">
 @keyword{SC}
 <em>Scalar Closure</em>
+
 If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in V$, then $\alpha\mathbf{u}\in V$. </li>
 <li class="ltx_item">
 @keyword{C}
 <em>Commutativity</em>
+
 If $\mathbf{u},\,\mathbf{v}\in V$, then $\mathbf{u}+\mathbf{v}=\mathbf{v}+\mathbf{u}$. </li>
 <li class="ltx_item">
 @keyword{AA}
 <em>Additive Associativity</em>
+
 If $\mathbf{u},\,\mathbf{v},\,\mathbf{w}\in V$, then $\mathbf{u}+\left(\mathbf{v}+\mathbf{w}\right)=\left(\mathbf{u}+\mathbf{v}\right)+\mathbf{w}$. </li>
 <li class="ltx_item">
 @keyword{Z}
 <em>Zero Vector</em>
+
 There is a vector, $\mathbf{0}$, called the @keyword{zero vector}, such that $\mathbf{u}+\mathbf{0}=\mathbf{u}$ for all $\mathbf{u}\in V$. </li>
 <li class="ltx_item">
 @keyword{AI}
 <em>Additive Inverses</em>
+
 If $\mathbf{u}\in V$, then there exists a vector $\mathbf{-u}\in V$ so that $\mathbf{u}+(\mathbf{-u})=\mathbf{0}$. </li>
 <li class="ltx_item">
 @keyword{SMA}
 <em>Scalar Multiplication Associativity</em>
+
 If $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in V$, then $\alpha(\beta\mathbf{u})=(\alpha\beta)\mathbf{u}$. </li>
 <li class="ltx_item">
 @keyword{DVA}
 <em>Distributivity across Vector Addition</em>
+
 If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u},\,\mathbf{v}\in V$, then $\alpha(\mathbf{u}+\mathbf{v})=\alpha\mathbf{u}+\alpha\mathbf{v}$. </li>
 <li class="ltx_item">
 @keyword{DSA}
 <em>Distributivity across Scalar Addition</em>
+
 If $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in V$, then
 $(\alpha+\beta)\mathbf{u}=\alpha\mathbf{u}+\beta\mathbf{u}$. </li>
 <li class="ltx_item">
 @keyword{O}
 <em>One</em>
+
 If $\mathbf{u}\in V$, then $1\mathbf{u}=\mathbf{u}$. </li></ol> The objects in $V$ are called @keyword{vectors}, no matter what else they might really be, simply by virtue of being elements of a vector space. 
 @end
 @slide
@@ -672,6 +696,7 @@ Try proving all the other properties.
 <li class="ltx_item"> Scalar Multiplication: $\alpha(x_{1},\,x_{2})=(\alpha x_{1}+\alpha-1,\,\alpha x_{2}+\alpha-1)$. </li></ol> I am free to define my set and my operations any way I please. They may not look natural, or even useful, but we will now verify that they provide us with another example of a vector space. We will check all it satisfies all the definition of vector spaces. <ul class="ltx_itemize">
 <li class="ltx_item">
 <strong>Property AC, SC</strong>
+
 The result of each operation is a pair of complex numbers, so these two closure properties are fulfilled. </li>
 <li class="ltx_item">
 <strong>Property C</strong> \begin{align*}
@@ -692,12 +717,14 @@ The result of each operation is a pair of complex numbers, so these two closure 
 \end{align*} </li>
 <li class="ltx_item">
 <strong>Property Z</strong>
+
 The zero vector is $\mathbf{0}=(-1,\,-1)$ (<strong>not</strong> $(0,0)$)
 \begin{align*}
 \displaystyle \mathbf{u}+\mathbf{0}=(x_{1},\,x_{2})+(-1,\,-1)=(x_{1}+(-1)+1,\,x_{2}+(-1)+1)=(x_{1},\,x_{2})=\mathbf{u}
 \end{align*} </li>
 <li class="ltx_item">
 <strong>Property AI</strong>
+
 For each vector, $\mathbf{u}$, we must locate an additive inverse, $\mathbf{-u}$. Here it is, $-(x_{1},\,x_{2})=(-x_{1}-2,\,-x_{2}-2)$. As odd as it may look, I hope you are withholding judgment. Check:
 \begin{align*}
 \displaystyle\mathbf{u}+(\mathbf{-u})&\displaystyle=(x_{1},\,x_{2})+(-x_{1}-2,\,-x_{2}-2) \\
@@ -715,6 +742,7 @@ For each vector, $\mathbf{u}$, we must locate an additive inverse, $\mathbf{-u}$
 \end{align*} </li>
 <li class="ltx_item">
 <strong>Property DVA</strong>
+
 If you have hung on so far, here is where it gets even wilder. In the next two properties we mix and mash the two operations.
 \begin{align*}
 \displaystyle\alpha(\mathbf{u}&\displaystyle+\mathbf{v}) \\
@@ -743,6 +771,7 @@ y_{2}+\alpha+\alpha-1) \\
 \end{align*} </li>
 <li class="ltx_item">
 <strong>Property O</strong>
+
 After all that, this one is easy, but no less pleasing.
 \begin{align*}
 \displaystyle 1\mathbf{u}=1(x_{1},\,x_{2})=(x_{1}+1-1,\,x_{2}+1-1)=(x_{1},\,x_{2})=\mathbf{u}
@@ -912,6 +941,7 @@ then $W$ is a subspace if and only if <ol class="ltx_enumerate">
 By @ref{subdef}, Condition 3, $\alpha\mathbf{v}\in W$.
 By @ref{subdef}, Condition 2, $\alpha\mathbf{v}+\mathbf{w}\in W$. 
 @endcol
+
 ($\Leftarrow$) 
 @newcol
  By Condition 1, @ref{subdef}, Condition 1 is true.
@@ -1006,7 +1036,7 @@ Thus by @ref{subdef2}, $W=\nsp{A}$ is a subspace.
 @end
 @proof
 @newcol
- $\mathcal{C}\!\left(A\right)=\left&lt;\{\mathbf{A}_{1},\ldots,\mathbf{A}_{n}\}\right&gt;$. So by the previous theorem, $\mathcal{C}\!\left(A\right)$ is a subspace of ${\mathbb{R}}^{m}$. @keyword{Alternate proof}: Suppose For $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{w}\in W=\mathcal{C}\!\left(A\right)$.
+ $\mathcal{C}\!\left(A\right)=\left<\{\mathbf{A}_{1},\ldots,\mathbf{A}_{n}\}\right>$. So by the previous theorem, $\mathcal{C}\!\left(A\right)$ is a subspace of ${\mathbb{R}}^{m}$. @keyword{Alternate proof}: Suppose For $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{w}\in W=\mathcal{C}\!\left(A\right)$.
 Recall
 \begin{align*}
 \displaystyle \mathcal{C}\!\left(A\right)=\{A\mathbf{x}\,|\,x\in{\mathbb{R}}^{m}\}.
@@ -1070,7 +1100,9 @@ This can be done by finding counter examples to either condition. Usually before
 @eg
 @newcol
  $V={\mathbb{R}}^{m}$, $W=\{\mathbf{v}\in V\,|\,[\mathbf{v}]_{1}=1\}$.
+
 <strong>Method 1</strong> Obviously $\mathbf{0}$ is not in $W$. So by @ref{0}, $W$ is not a subspace.
+
 <strong>Method 2</strong> For Suppose $\mathbf{v},\mathbf{w}\in W$.
 Then $[\mathbf{v}+\mathbf{w}]_{1}=[\mathbf{v}]_{1}+[\mathbf{w}]_{1}=2$.
 So $\mathbf{v}+\mathbf{w}\not\in W$. So $W$ violates @ref{subdef} condition 1 and hence not a subspace. 
@@ -1079,7 +1111,9 @@ So $\mathbf{v}+\mathbf{w}\not\in W$. So $W$ violates @ref{subdef} condition 1 an
 @eg
 @newcol
  $V={\mathbb{R}}^{m}$, $W=\{\mathbf{v}\in V\,|\,\sum_{i=1}^{n}[\mathbf{v}]_{i}=1\}$.
+
 <strong>Method 1</strong> (the easiest method) Obviously $\mathbf{0}$ is not in $W$. So by @ref{0}, $W$ is not a subspace.
+
 <strong>Method 2</strong> We will find an explicit counter example, let
 \begin{align*}
 \displaystyle \mathbf{v}=\mathbf{w}=\begin{bmatrix}1\\
@@ -1105,7 +1139,7 @@ Therefore $W$ violates @ref{subdef} condition 1 and hence not a subspace.
 \displaystyle \mathbf{v}=\begin{bmatrix}1\\
 0\end{bmatrix}.
 \end{align*}
-Then $[\alpha\mathbf{v}]_{1}=\alpha[\mathbf{v}]_{1}=\alpha=-1&lt;0$.
+Then $[\alpha\mathbf{v}]_{1}=\alpha[\mathbf{v}]_{1}=\alpha=-1<0$.
 So $\alpha\mathbf{v}\notin W$.
 Thus $W$ violates @ref{subdef} condition 3 and hence not a subspace. 
 @endcol
@@ -1119,7 +1153,7 @@ v_{2}\end{bmatrix}\in V\,|\,v_{1}v_{2}\geq 0\}$. Let $\mathbf{v}=\begin{bmatrix}
 -1\end{bmatrix}\in W$.
 $\mathbf{v}+\mathbf{w}=\begin{bmatrix}1\\
 -1\end{bmatrix}$. Because
-$1\times(-1)=-1 &lt; 0$. So $\mathbf{v}+\mathbf{w}\notin W$.
+$1\times(-1)=-1 < 0$. So $\mathbf{v}+\mathbf{w}\notin W$.
 Thus $W$ violates @ref{subdef} condition 2 and hence not a subspace. In fact, we can show that $W$ satisfies @ref{subdef} condition 3 but fails condition 2. 
 @endcol
 @end
@@ -1135,5 +1169,4 @@ But
 is a polynomial with degree $0$. So $f+g$ is not in $G$. Thus $W$ violates @ref{subdef} condition 2 and hence not a subspace. 
 @endcol
 @end
-@course{MATH 1030}
 <!--DELIMITER-->

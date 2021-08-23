@@ -3,7 +3,9 @@
 @chapter{More about matrices}
 
 The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at @href{http://linear.ups.edu/download.html} .
+
 The print version can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-print.pdf} .
+
 <h5 class="notkw">Reference.</h5>
 @itemize
 @item
@@ -11,6 +13,7 @@ The print version can be downloaded at @href{http://linear.ups.edu/download/fcla
 @item
  Strang, Sect 1.4 and Sect 1.6. 
 @enditemize
+
 Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf
 (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$)Section MO (p52-56), all. Section MM (p57-60), all except T12 and T35. 
 @section{Matrix-Vector Product}
@@ -26,6 +29,7 @@ Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcl
 @newcol
  Note that an $m\times n$ matrix $A$
 times a vector of size $n$ will create a column vector of size $m$.
+
 In particular, if $A$ is (non-square) rectangular,
 then the size of the vector changes. 
 @eg
@@ -104,6 +108,7 @@ then $A=B$.
 @newcol
  Suppose $A\mathbf{x}=B\mathbf{x}$ for all $\mathbf{x}\in{\mathbb{R}}^{n}$.
 Then, in particular this equality holds for the standard unit vectors, defined as follows:
+
 For $1\leq j\leq n$, we define the @keyword{standard unit vector} $\mathbf{e}_{j}$ to be the column vector in ${\mathbb{R}}^{n}$ with the $j$-th entry equal $1$ and all other entries equal to zero.  For any $1 \leq i \leq m$ and $1 \leq j \leq n$, we have:
 
 @col
@@ -291,18 +296,22 @@ Try to compute all the other entries.
 @eg
 @newcol
  Find the $(3,2)$ entry of $AB$ in the previous example.The $3$-rd row of $A$ is $\begin{bmatrix}-5&1&2&-3&4\end{bmatrix}$.
+
 The $2$-nd column of $B$ is $\begin{bmatrix}6\\
 4\\
 1\\
 4\\
 -2\end{bmatrix}$.
+
 Let’s do the multiplication:
+
 <table class="table table-bordered">
 <tbody>
 <tr>
 <td>Row</td><td>-5</td><td>1</td><td>2</td><td>-3</td><td>4</td></tr><tr>
 <td>Column</td><td>6</td><td>4</td><td>1</td><td>4</td><td>-2</td></tr><tr>
 <td>Product</td><td>-30</td><td>4</td><td>2</td><td>-12</td><td>-8</td></tr></tbody></table>
+
 The sum is:
 \[-30+4+2-12-8=-44.\] 
 @endcol
@@ -607,6 +616,7 @@ This completes the proof.
 @end
 @section{Row Operations and Matrix Multiplication}
  In this section, we will discuss the relation between elementary row operations and matrix multiplication.
+
 Recall the definition of @ref{def:RO} on matrices.
 
 @thm
@@ -754,6 +764,7 @@ A' = J^{-1} B'
 @col
  It then follows from the same arguments used before that any solution $\vec{v}$ to $\mathcal{LS}(B', \vec{b})$
 is also a solution to $\mathcal{LS}(A', \vec{a})$.
+
 We conclude that $\mathcal{LS}(A', \vec{a})$ and  $\mathcal{LS}(B', \vec{b})$ have the same solution set,
 hence they are equivalent linear systems. 
 @endcol
@@ -926,5 +937,4 @@ Since the matrices $(\alpha A)^{t}$ and $\alpha A^{t}$ agree at each entry, they
 Since the matrices $\left(A^{t}\right)^{t}$ and $A$ agree at each entry, they are equal. 
 @endcol
 @end
-@course{MATH 1030}
 <!--DELIMITER-->

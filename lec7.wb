@@ -4,6 +4,7 @@
 
 <h5 class="notkw">Reference.</h5>
  Beezer, Ver 3.5 Section HSE (print version p44 - p50)Section NM (print version p51 - p56)
+
 <h5 class="notkw">Exercise.</h5> Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf 
 @enumerate
 @item
@@ -135,13 +136,13 @@ x_{4}\end{bmatrix}\,\right|\,x_{3},\,x_{4}\text{ real numbers}\right\}\]
 @slide
 @thm
 @label{HMVEI}
- Suppose that a homogeneous system of linear equations has $m$ equations and $n$ variables with $n&gt;m$.
+ Suppose that a homogeneous system of linear equations has $m$ equations and $n$ variables with $n>m$.
 Then the system has infinitely many solutions. 
 @end
 @proof
 @newcol
  The system is homogeneous, by theorem @ref{HSC} it is consistent.
-Then the hypothesis that $n&gt;m$, together with @ref{CMVEI}, gives infinitely many solutions. 
+Then the hypothesis that $n>m$, together with @ref{CMVEI}, gives infinitely many solutions. 
 @qed
 @endcol
 @end
@@ -195,6 +196,7 @@ x_1 +x_2 + 4x_3 - 5x_4 &=  4
 \end{align*}
 is a consistent system of equations with a nontrivial null space.
 Let $A$ denote the coefficient matrix of this system.
+
 Consider the following three solutions to the system:
 
 @newcol
@@ -372,6 +374,7 @@ and every possible pivot column appears once.
 Thus, the homogeneous system $\linearsystem{A}{\mathbf{0}}$ has just one solution, which must be the trivial solution.
 This is exactly the definition of a nonsingular matrix. 
 @endcol
+
 ($\Rightarrow$) 
 @newcol
  If $A$ is nonsingular, then the homogeneous system
@@ -420,6 +423,7 @@ We have a similar result for nonsingular matrix
 @proof
 @newcol
  ($\Rightarrow$) For this portion of the proof we will form the logically-equivalent contrapositive and prove that statement using two cases.
+
 <blockquote> $AB$ is nonsingular implies $A$ and $B$ are both nonsingular. </blockquote> becomes
 
 @col
@@ -449,6 +453,7 @@ Because $A$ is singular, there is a nonzero vector $\mathbf{y}$ that is a soluti
 \end{align*} 
 @col
  So $\mathbf{w}$ is a nonzero solution to $AB\mathbf{x}=\mathbf{0}$. Thus $AB$ is singular as desired. And this conclusion holds for both cases.
+
 ($\Leftarrow$) Now assume that both $A$ and $B$ are nonsingular. Suppose that $\mathbf{x}\in{\mathbb{R}}^{n}$ is a solution to $AB\mathbf{x}=\mathbf{0}$. Then
 \begin{align*}
 \displaystyle\mathbf{0}&\displaystyle=\left(AB\right)\mathbf{x} \\
@@ -531,5 +536,4 @@ A^{-1} =  J_k\cdots J_2 J_1.
  So for a square matrix, the properties of having an inverse and of having a trivial null space are one and the same. Cannot have one without the other. 
 @endcol
 @end
-@course{MATH 1030}
 <!--DELIMITER-->

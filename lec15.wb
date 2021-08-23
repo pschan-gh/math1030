@@ -3,6 +3,7 @@
 @chapter{Determinant}
 <h5 class="notkw">Reference.</h5>
  Beezer, Ver 3.5 Chapter D (print version p261-282)
+
 <h5 class="notkw">Exercise.</h5> Exercises with solutions can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf} (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$)Section DM p.98 - 101 all, Section PDM p.101-102 M30, T10, T15, T20
 
 @section{Definition of the determinant}
@@ -52,6 +53,7 @@ a_{32}&a_{33}&a_{34}\end{bmatrix}
 @slide
 @defn
  Suppose $A$ is a square matrix. Then its @keyword{determinant}, $\det\left(A\right)$ (or denoted by $|A|$), is an element of ${\mathbb{R}}^{\hbox{}}$ defined recursively by:
+
 <ol class="ltx_enumerate">
 <li class="ltx_item"> If $A$ is a $1\times 1$ matrix, then $\det\left(A\right)=\left[A\right]_{11}$. </li>
 <li class="ltx_item"> If $A$ is a matrix of size $n$ with $n\geq 2$, then
@@ -363,7 +365,7 @@ a_{n1}&a_{n2}&a_{n3}&\cdots&a_{nn}\end{bmatrix}
  Then, $\det(T) = 2(-1)(3)(-1)(5)=30$. 
 @endcol
 @end
-&lt;!--@newcol
+<!--@newcol
 We will compute the determinant of this $5\times 5$ matrix by consistently expanding about the first column for each submatrix that arises and does not have a zero entry multiplying it.
 \begin{align*}
 \displaystyle\det\left(T\right)&\displaystyle=\begin{vmatrix}2&3&-1&3&3\\
@@ -383,7 +385,7 @@ We will compute the determinant of this $5\times 5$ matrix by consistently expan
 &\displaystyle=2(-1)(3)(-1)(-1)^{1+1}\begin{vmatrix}5\end{vmatrix} \\
 &\displaystyle=2(-1)(3)(-1)(5)=30
 \end{align*}
-@endcol--&gt;
+@endcol-->
 
 @slide
 @skip
@@ -406,11 +408,11 @@ We will compute the determinant of this $5\times 5$ matrix by consistently expan
 &= \alpha \sum_{k = 1}^n (-1)^{i+1} [A]_{ik}\det\left(B(i|k)\right)\\
 &= \alpha \det(A).
 \end{align*} 
-&lt;!--
+<!--
 \begin{align*}
 \displaystyle =\alpha((-1)^{i+1}[A]_{i1}\det\left(A(i|1)\right)+(-1)^{i+1}[A]_{i2}\det\left(A(i|2)\right)+\cdots+(-1)^{i+n}[A]_{in}\det\left(A(i|n)\right))=\det\left(A\right).
 \end{align*}
---&gt;
+-->
 
 @qed
 @endcol
@@ -475,7 +477,7 @@ a_{31}&a_{32}&a_{33}\end{vmatrix}\qquad(\frac{1}{4}C_{3})
 @qed
 @endcol
 @end
-&lt;!--@newcol
+<!--@newcol
 Suppose that $A$ is a square matrix of size $n$ and row $i$ has every entry equal to zero. We compute $\det\left(A\right)$ via expansion about row $i$.
 \begin{align*}
 \displaystyle\det\left(A\right)&\displaystyle=\sum_{j=1}^{n}(-1)^{i+j}\left[A\right]_{ij}\det\left(A\left(i|j\right)\right) \\
@@ -485,7 +487,7 @@ Suppose that $A$ is a square matrix of size $n$ and row $i$ has every entry equa
 @col
 The proof for the case of a zero column is entirely similar, or could be derived by the fact that
 $\det\left(A\right)=\det\left(A^{t}\right)$.
-@qed@endcol@end--&gt;
+@qed@endcol@end-->
 
 @slide
 @thm
@@ -544,9 +546,9 @@ so by the previous theorem we have:
 \det(A) = -\det(A)
 \]
 It follows that $\det(A) = 0$. 
-&lt;!--@newcol
+<!--@newcol
 Skip the proof. If you are interested, see Beezer p.274.
---&gt;
+-->
 
 @qed
 @endcol
@@ -713,7 +715,7 @@ Then:
 \vect{A}_{n}
 \end{bmatrix}
 \] 
-&lt;!--
+<!--
 \begin{align*}
 \displaystyle \begin{vmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
 \vdots&\vdots&\cdots&\vdots\\
@@ -738,7 +740,7 @@ a_{i+1,1}&a_{i+1,2}&\cdots&a_{i+1,n}\\
 a_{n1}&a_{n2}&\cdots&a_{nn}\\
 \end{vmatrix}
 \end{align*}
---&gt;
+-->
 
 @newcol
  Similarly, for column vectors $\vect{A}_i$, $\vect{B}, \vect{C}$ in $\mathbb{R}^n$,
@@ -750,7 +752,7 @@ we have:
 \\+
 \det \left[\vect{A}_1|\cdots|\vect{A}_{i -  1}|\vect{C}|\vect{A}_{i + 1}|\cdots|\vect{A}_n\right]
 \end{multline*} 
-&lt;!--
+<!--
 \begin{align*}
 \displaystyle \begin{vmatrix}a_{11}&\cdots&a_{1,i-1}&b_{1}+c_{1}&a_{1,i+1}&\cdots&a_{1n}\\
 a_{21}&\cdots&a_{2,i-1}&b_{2}+c_{2}&a_{2,i+1}&\cdots&a_{2n}\\
@@ -766,7 +768,7 @@ a_{21}&\cdots&a_{2,i-1}&c_{2}&a_{2,i+1}&\cdots&a_{2n}\\
 \vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
 a_{n1}&\cdots&a_{n,i-1}&c_{n}&a_{n,i+1}&\cdots&a_{nn}\end{vmatrix}
 \end{align*}
---&gt;
+-->
 
 @endcol
 @end
@@ -831,7 +833,7 @@ a_{1}^{n-1}&a_{2}^{n-1}&a_{3}^{n-1}&\cdots&a_{n}^{n-1}\end{bmatrix}
 @item
  $\det(V_{n})=\det(V_{n-1})\prod_{i=1}^{n-1}(a_{n}-a_{i})$. 
 @item
- $\det(V_{n})=\prod_{1\leq i &lt; j\leq n}(a_{j}-a_{i})$ for $n\geq 2$. 
+ $\det(V_{n})=\prod_{1\leq i < j\leq n}(a_{j}-a_{i})$ for $n\geq 2$. 
 @endenumerate
 @endcol
 @end
@@ -880,6 +882,7 @@ a_{1}^{n-2}&a_{2}^{n-2}&a_{3}^{n-2}&\cdots&a_{n-1}^{n-2}\\
 <li class="ltx_item">
 @newcol
  Again by mathematical induction:
+
 <strong>Step 1</strong>
 @newcol
  When $n=2$,
@@ -890,11 +893,12 @@ a_{1}&a_{2}\end{vmatrix}=a_{2}-a_{1}.
 @col
  So the formula is valid for $n=2$. 
 @endcol
+
 <strong>Step 2</strong>
 @newcol
  Suppose the statement is true for $n=k$, i.e.
 \begin{align*}
-\displaystyle \det(V_{k})=\prod_{1\leq i &lt; j\leq k}(a_{j}-a_{i}).
+\displaystyle \det(V_{k})=\prod_{1\leq i < j\leq k}(a_{j}-a_{i}).
 \end{align*} 
 @col
  Then for $n=k+1$
@@ -902,17 +906,18 @@ a_{1}&a_{2}\end{vmatrix}=a_{2}-a_{1}.
 \displaystyle \det(V_{k+1})=\det(V_{k})\prod_{i=1}^{k}(a_{k+1}-a_{i})
 \end{align*}
 \begin{align*}
-\displaystyle =\prod_{1\leq i &lt; j\leq k}(a_{j}-a_{i})\prod_{i=1}^{k}(a_{k+1}-a_{i})
+\displaystyle =\prod_{1\leq i < j\leq k}(a_{j}-a_{i})\prod_{i=1}^{k}(a_{k+1}-a_{i})
 \end{align*}
 \begin{align*}
-\displaystyle =\prod_{1\leq i &lt; j\leq k+1}(a_{j}-a_{i})
+\displaystyle =\prod_{1\leq i < j\leq k+1}(a_{j}-a_{i})
 \end{align*}
 \begin{align*}
-\displaystyle =\prod_{1\leq 1 &lt; j\leq n}(a_{j}-a_{i}).
+\displaystyle =\prod_{1\leq 1 < j\leq n}(a_{j}-a_{i}).
 \end{align*} 
 @col
  The formula is valid for $n=k+1$. 
 @endcol
+
 <strong>Step 3</strong>
 @newcol
  By mathematical induction, the formula is valid for all $n\geq 2$. Or without mathematical induction, you can simple repeat the steps again and again until $n=2$. 
@@ -1053,6 +1058,7 @@ a_{31}&a_{32}&a_{33}\\
 <li class="ltx_item"> Let $I_{n}\xrightarrow{R_{i}\leftrightarrow R_{j}}J$, then $\det\left(J\right)=-1$. </li>
 <li class="ltx_item"> Let $I_{n}\xrightarrow{\alpha R_{i}}J$, then $\det\left(J\right)=\alpha$. </li>
 <li class="ltx_item"> Let $I_{n}\xrightarrow{\alpha R_{i}+R_{j}}J$, then $\det\left(J\right)=1$. </li>
+
 </ol>
 @end
 @slide
@@ -1072,6 +1078,7 @@ Then $\det\left(B\right)=\det\left(JA\right)=\det\left(J\right)\det\left(A\right
 @newcol
  Let $B$ be the RREF of an $n\times n$ square matrix $A$.
 Then $A$ is nonsinuglar if and only if $B = I_n$.
+
 Moreover, if $A$ is singular, then $B$ must contain a zero row,
 which implies that $\det(B) = 0$.
 
@@ -1165,6 +1172,7 @@ f&0&0&0\\
 g&0&0&0\end{bmatrix}
 \end{align*}
 find $\det\left(A\right)$.
+
 <strong>Method 1</strong>
 @newcol
  \begin{align*}
@@ -1185,6 +1193,7 @@ Therefore the above is
 \displaystyle a0-b0+c0-d0=0.
 \end{align*} 
 @endcol
+
 <strong>Method 2</strong>
 @newcol
  If $c=0$, then column 3 is the zero column, so $\det\left(A\right)=0$. Otherwise
@@ -1583,10 +1592,12 @@ we conclude that the determinant is equal to:
 <li class="ltx_item">
 @col
  We prove the result by <strong>mathematical induction</strong>:
+
 <strong>Step 1</strong>: 
 @newcol
  The formula is valid for $n=1$: $\det(B_{1})=1-a_{1}$. 
 @endcol
+
 <strong>Step 2</strong>: 
 @newcol
  Suppose the formula is true for $n=k$, we want to show that the formula is true for $n=k+1$:
@@ -1605,6 +1616,7 @@ we conclude that the determinant is equal to:
 @col
  The formula is true for $n=k+1$. 
 @endcol
+
 <strong>Step 3</strong>: 
 @newcol
  By mathematical induction, the formula is valid for all positive integer. @keyword{Explanation}: the formula is true for $k=1$, then it is true for $k+1=2$, so true for $k+1=3$, etc. Hence true for all integers. 
@@ -1721,6 +1733,7 @@ the determinant above is equal to:
 -a&-a&-a&\cdots&-a&1\end{array}}_{n}}
 \right|
 \end{align*}
+
 \begin{align*}
 \displaystyle =(-1)^{n+n}a
 \left.\left|
@@ -1736,6 +1749,7 @@ the determinant above is equal to:
 \right|
 \right\}\,n-1
 \end{align*}
+
 (Expand along the last column.)
 \begin{align*}
 \displaystyle =a(x+a)^{n-1}
@@ -1786,10 +1800,12 @@ the determinant above is equal to:
 <li class="ltx_item">
 @col
  We will prove the formula by induction.
+
 <strong>Step 1</strong>: 
 @newcol
  When $n=1$, $C_{1}=[x]$, $\det(C_{1})=x=\frac{1}{2}((x+a)+(x-a))$. So the formula is valid for $n=1$. 
 @endcol
+
 <strong>Step 2</strong>: 
 @newcol
  Suppose the formula is valid for $n=k$, i.e.
@@ -1808,6 +1824,7 @@ the determinant above is equal to:
 @col
  So the formula is valid for $n=k+1$. 
 @endcol
+
 <strong>Step 3</strong>: 
 @newcol
  By mathematical induction, the formula is valid for all integers $n\geq 1$. 
@@ -1818,6 +1835,7 @@ the determinant above is equal to:
 @section{Properties of Determinant (summary)}
 
 Let $A$ be a square matrix with size $n$.
+
 <ol class="ltx_enumerate">
 <li class="ltx_item"> \begin{align*}
 \displaystyle \begin{vmatrix}a&b\\
@@ -1907,6 +1925,6 @@ a_{n1}&\cdots&a_{n,i-1}&c_{n}&a_{n,i+1}&\cdots&a_{nn}\end{vmatrix}
 \begin{align*}
 \displaystyle \det\left(AB\right)=\det\left(A\right)\det\left(B\right).
 \end{align*} </li>
+
 </ol>
-@course{MATH 1030}
 <!--DELIMITER-->

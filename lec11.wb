@@ -49,6 +49,7 @@ x_1 = x_2 = \cdots = x_n = 0.
 @newcol
  Suppose that $\mathcal{LS}({A},{\mathbf{0}})$ has a unique solution. Since it is a homogeneous system, this solution must be the trivial solution, $\mathbf{x}=\mathbf{0}$. This means that the only relation of linear dependence on $S$ is the trivial one. So $S$ is linearly independent. 
 @endcol
+
 ($\Rightarrow$) 
 @newcol
  We will prove the contrapositive. Suppose that $\mathcal{LS}({A},{\mathbf{0}})$ does not have a unique solution. Since it is a homogeneous system, it is consistent. And so must have infinitely many solutions. One of these infinitely many solutions must be nontrivial (in fact, almost all of them are); choose one. This nontrivial solution will give a nontrivial relation of linear dependence on $S$. We therefore conclude that $S$ is a linearly dependent set. 
@@ -61,6 +62,7 @@ x_1 = x_2 = \cdots = x_n = 0.
 @eg
 @label{LDS}
 @keyword{Linearly dependent set in ${\mathbb{R}}^{5}$}
+
 Consider the following set of $n=4$ vectors in ${\mathbb{R}}^{5}$:
 \begin{align*}
 \displaystyle S=
@@ -105,6 +107,7 @@ Consider the following set of $n=4$ vectors in ${\mathbb{R}}^{5}$:
 1\end{bmatrix}=\mathbf{0}
 \end{align*}
 We know that $\alpha_{1}=\alpha_{2}=\alpha_{3}=\alpha_{4}=0$ is a solution to this equation, but that is of no interest whatsoever. That is always the case, no matter what four vectors we might have chosen. We are curious to know if there are other, nontrivial, solutions.
+
 In other words, are there nontrivial solutions to the homogeneous linear system
 $\mathcal{LS}(A, \mathbf{0})$, where the columns of $A$ consist of the vectors in $S$.
 
@@ -156,6 +159,7 @@ This is a relation of linear dependence on $S$ that is not trivial, so we conclu
 @label{LIS}
 @newcol
 @keyword{Linearly independent set in ${\mathbb{R}}^{5}$}
+
 Consider the following set of $n=4$ vectors in ${\mathbb{R}}^{5}$:
 \begin{align*}
 \displaystyle T=
@@ -200,6 +204,7 @@ To determine linear independence we first form an arbitrary relation of linear d
 \end{align*} 
 @col
  We want to know if there are solutions to the equation above besides the trivial one: $\alpha_{1}=\alpha_{2}=\alpha_{3}=\alpha_{4}=0$.
+
 Row-reducing the associated matrix gives:
 \begin{align*}
 \displaystyle B=\begin{bmatrix}2&1&2&-6\\
@@ -329,6 +334,7 @@ Theorem @ref{LIVHS}, the set $S$ is linearly dependent.
 @slide
 @skip
  Theorem @ref{LIVHS} gives us a straightforward way to determine if a set of vectors is linearly independent or dependent.
+
 Review the previous two examples. They are very similar, differing only in the last two slots of the third vector. This resulted in slightly different matrices when row-reduced, and different values of $r$, the number of nonzero rows. Notice, too, that we are less interested in the actual solution set, and more interested in its form or size. These observations allow us to make a slight improvement on Theorem @ref{LIVHS}.
 
 @section{Linearly Dependent Sets and Spans}
@@ -357,6 +363,7 @@ Suppose that $\alpha_{t}$ is nonzero. Then,
 \end{align*}
 Since $\frac{\alpha_{i}}{\alpha_{t}}$ is again a scalar, we have expressed $\mathbf{u}_{t}$ as a linear combination of the other elements of $S$. 
 @endcol
+
 ($\Leftarrow$) 
 @newcol
  Assume that the vector $\mathbf{u}_{t}$ is a linear combination of the other vectors in $S$. Write such a linear combination as
@@ -385,6 +392,7 @@ In the next example we will examine some of the subtleties.
 @eg
 @label{RSC5}
 @keyword{Reducing the generating set of a span in ${\mathbb{R}}^{5}$}
+
 Consider the following set of $n=4$ vectors in ${\mathbb{R}}^{5}$,
 \begin{align*}
 \displaystyle R=
@@ -407,7 +415,7 @@ Consider the following set of $n=4$ vectors in ${\mathbb{R}}^{5}$,
 1\\
 6\end{bmatrix}\right\}.\\
 \end{align*}
-Define $V=\left&lt;  R\right&gt;$.
+Define $V=\left<  R\right>$.
 
 @newcol
  We form a $5\times 4$ matrix, $D$, and row-reduce it to understand the solutions to the homogeneous system $\mathcal{LS}({D},{\mathbf{0}})$:
@@ -437,6 +445,7 @@ Define $V=\left&lt;  R\right&gt;$.
 \end{align*} 
 @col
  The theorem above guarantees that we can solve this relation of linear dependence for some vector in $R$, but the choice of which one is up to us. Notice however that $\mathbf{v}_{2}$ has a zero coefficient. In this case, we cannot choose to solve for $\mathbf{v}_{2}$. Maybe some other relation of linear dependence would produce a nonzero coefficient for $\mathbf{v}_{2}$ if we just had to solve for this vector. Unfortunately, this example has been engineered to always produce a zero coefficient here, as you can see from solving the homogeneous system. Every solution has $x_{2}=0$!
+
 OK, if we are convinced that we cannot solve for $\mathbf{v}_{2}$, let us instead solve for $\mathbf{v}_{3}$:
 \begin{align*}
 \displaystyle \mathbf{v}_{3}=(-4)\mathbf{v}_{1}+0\mathbf{v}_{2}+1\mathbf{v}_{4}=(-4)\mathbf{v}_{1}+1\mathbf{v}_{4}
@@ -444,9 +453,10 @@ OK, if we are convinced that we cannot solve for $\mathbf{v}_{2}$, let us instea
 @col
  We claim that this particular equation will allow us to write
 \begin{align*}
-\displaystyle V=\left&lt; R\right&gt;=\left&lt; \left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\mathbf{v}_{4}\right\}\right&gt;=\left&lt; \left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{4}\right\}\right&gt;,
+\displaystyle V=\left< R\right>=\left< \left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\mathbf{v}_{4}\right\}\right>=\left< \left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{4}\right\}\right>,
 \end{align*}
-in essence declaring $\mathbf{v}_{3}$ as surplus for the task of building $V$ as a span of $R$. This claim is an equality of two sets. Let $R^{\prime}=\left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{4}\right\}$ and $V^{\prime}=\left&lt; R^{\prime}\right&gt;$. We want to show that $V=V^{\prime}$.
+in essence declaring $\mathbf{v}_{3}$ as surplus for the task of building $V$ as a span of $R$. This claim is an equality of two sets. Let $R^{\prime}=\left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{4}\right\}$ and $V^{\prime}=\left< R^{\prime}\right>$. We want to show that $V=V^{\prime}$.
+
 First show that $V^{\prime}\subseteq V$. Since every vector of $R^{\prime}$ is in $R$, any vector we can construct in $V^{\prime}$ as a linear combination of vectors from $R^{\prime}$ can also be constructed as a vector in $V$ by the same linear combination of the same vectors in $R$. That was easy, now turn it around.
 
 @col
@@ -459,6 +469,7 @@ First show that $V^{\prime}\subseteq V$. Since every vector of $R^{\prime}$ is i
 \end{align*} 
 @col
  This equation says that $\mathbf{v}$ can be written as a linear combination of the vectors in $R^{\prime}$ and hence qualifies for membership in $V^{\prime}$. So $V\subseteq V^{\prime}$ and we have established that $V=V^{\prime}$.
+
 If $R^{\prime}$ was also linearly dependent (in fact, it is not), we could reduce the set $R^{\prime}$ even further. Notice that we could have chosen to eliminate any one of $\mathbf{v}_{1}$, $\mathbf{v}_{3}$ or $\mathbf{v}_{4}$, but somehow $\mathbf{v}_{2}$ is essential to the creation of $V$ since it cannot be replaced by any linear combination of $\mathbf{v}_{1}$, $\mathbf{v}_{3}$ or $\mathbf{v}_{4}$. 
 @endcol
 @end
@@ -535,7 +546,7 @@ linearly independent or linearly dependent?
 0&0&0&0&0\end{bmatrix}.
 \end{align*}
 Now we need only compute that
-$r=4&lt;5=n$
+$r=4<5=n$
 to recognize, via Theorem @ref{LIVRN}, that $S$ is a linearly dependent set. Boom! 
 @qed
 @endcol
@@ -589,7 +600,7 @@ to recognize, via Theorem @ref{LIVRN}, that $S$ is a linearly dependent set. Boo
 
 @col
  Since the system is homogeneous with $n=9$ variables in $m=4$ equations,
-and $n &gt; m$, there are infinitely many solutions. Since there is not a unique solution, Theorem @ref{LIVHS} says the set $R$ is linearly dependent. 
+and $n > m$, there are infinitely many solutions. Since there is not a unique solution, Theorem @ref{LIVHS} says the set $R$ is linearly dependent. 
 @endcol
 @end
 @slide
@@ -597,7 +608,7 @@ and $n &gt; m$, there are infinitely many solutions. Since there is not a unique
 @thm
 @title{More Vectors than Size implies Linear Dependence}
 @label{MVSLD}
- Suppose that $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\}\subseteq{\mathbb{R}}^{m}$ and $n&gt;m$. Then $S$ is a linearly dependent set. 
+ Suppose that $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\}\subseteq{\mathbb{R}}^{m}$ and $n>m$. Then $S$ is a linearly dependent set. 
 @end
 @proof
 @newcol
@@ -711,6 +722,7 @@ A \text{ nonsingular} &\displaystyle\iff\text{$\mathcal{LS}({A},{\mathbf{0}})$ h
 \end{align*} 
 @col
  Then $A$ can be row reduced to
+
 \begin{align*}
 \displaystyle B=\begin{bmatrix}1&2&0&3&0&4\\
 0&0&1&5&0&6\\
@@ -740,6 +752,7 @@ if and only if
 \end{align*}
 It has only the trivial solution, i.e. $\left\{\mathbf{A}_{1}\right\}$ is linearly independent. Hence $d_{1}=1$ is a pivot column. 
 @endcol
+
 <strong>Step 2</strong>
 @newcol
  Let’s move to $x_{2}$. Suppose that
@@ -762,6 +775,7 @@ or equivalently
 \displaystyle \mathbf{A}_{2}=2\mathbf{A}_{1}.
 \end{align*} 
 @endcol
+
 <strong>Step 3</strong>
 @newcol
  Consider $x_{3}$. Let $(x_{1},x_{2},x_{3},x_{4},x_{5},x_{6})=(x_{1},0,x_{3},0,0,0)$. Then
@@ -770,6 +784,7 @@ or equivalently
 \end{align*}
 has only trivial solution. Equivalently $\left\{\mathbf{A}_{1},\mathbf{A}_{3}\right\}$ is linearly independent.Column $3$ of $B$ is a pivot column. 
 @endcol
+
 <strong>Step 4</strong>
 @newcol
  Consder
@@ -783,10 +798,12 @@ or equivalently
 @col
  The relation of columns of $A$ gives the entries of the column 4 of $B$. 
 @endcol
+
 <strong>Step 5</strong>
 @newcol
  $\mathbf{B}_{5}$ is not in span of $\mathbf{B}_{1}$ and $\mathbf{B}_{3}$. Equivalently $\mathbf{A}_{5}$ is not in span of $\mathbf{A}_{1}$ and $\mathbf{A}_{3}$. Column $5$ of $B$ is a pivot column. 
 @endcol
+
 <strong>Step 6</strong>
 @newcol
  Consider
@@ -828,9 +845,10 @@ to a RREF $B$ by the above technique. Let $\mathbf{A}_{i}$ (resp. $\mathbf{B}_{i
 0\end{bmatrix}.
 \end{align*} 
 @endcol
+
 <strong>Step 2</strong>
 @newcol
- $\mathbf{A}_{2}$ is not in $\left&lt; \left\{\mathbf{A}_{d_{1}}\right\}\right&gt;$. So the index $d_{2}=2$ corresponds to a pivot column. We have
+ $\mathbf{A}_{2}$ is not in $\left< \left\{\mathbf{A}_{d_{1}}\right\}\right>$. So the index $d_{2}=2$ corresponds to a pivot column. We have
 \begin{align*}
 \displaystyle \mathbf{B}_{2}=\begin{bmatrix}0\\
 1\\
@@ -838,6 +856,7 @@ to a RREF $B$ by the above technique. Let $\mathbf{A}_{i}$ (resp. $\mathbf{B}_{i
 0\end{bmatrix}.
 \end{align*} 
 @endcol
+
 <strong>Step 3</strong>
 @newcol
  Consider
@@ -853,9 +872,10 @@ to a RREF $B$ by the above technique. Let $\mathbf{A}_{i}$ (resp. $\mathbf{B}_{i
 0\end{bmatrix}.
 \end{align*} 
 @endcol
+
 <strong>Step 4</strong>
 @newcol
- $\mathbf{A}_{4}$ is not in $\left&lt; \left\{\mathbf{A}_{d_{1}},\mathbf{A}_{d_{2}}\right\}\right&gt;$.
+ $\mathbf{A}_{4}$ is not in $\left< \left\{\mathbf{A}_{d_{1}},\mathbf{A}_{d_{2}}\right\}\right>$.
 
 @col
  So the index $d_{3}=4$ corresponds to a pivot column. We have
@@ -866,9 +886,10 @@ to a RREF $B$ by the above technique. Let $\mathbf{A}_{i}$ (resp. $\mathbf{B}_{i
 0\end{bmatrix}.
 \end{align*} 
 @endcol
+
 <strong>Step 5</strong>
 @newcol
- $\mathbf{A}_{5}$ is not in $\left&lt; \left\{\mathbf{A}_{d_{1}},\mathbf{A}_{d_{3}},\mathbf{A}_{d_{3}}\right\}\right&gt;$.
+ $\mathbf{A}_{5}$ is not in $\left< \left\{\mathbf{A}_{d_{1}},\mathbf{A}_{d_{3}},\mathbf{A}_{d_{3}}\right\}\right>$.
 
 @col
  So the index $d_{4}=5$ corresponds to a pivot column. We have
@@ -879,6 +900,7 @@ to a RREF $B$ by the above technique. Let $\mathbf{A}_{i}$ (resp. $\mathbf{B}_{i
 1\end{bmatrix}.
 \end{align*} 
 @endcol
+
 <strong>Step 6</strong>
 @newcol
  Consider
@@ -894,6 +916,7 @@ to a RREF $B$ by the above technique. Let $\mathbf{A}_{i}$ (resp. $\mathbf{B}_{i
 1\end{bmatrix}
 \end{align*} 
 @endcol
+
 <strong>Step 7</strong>
 @newcol
  Consider
@@ -927,5 +950,4 @@ to a RREF $B$ by the above technique. Let $\mathbf{A}_{i}$ (resp. $\mathbf{B}_{i
 
 @endcol
 @end
-@course{MATH 1030}
 <!--DELIMITER-->

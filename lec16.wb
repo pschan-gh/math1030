@@ -4,7 +4,9 @@
 
 <h5 class="notkw">Reference.</h5>
  Beezer, Ver 3.5 Subsection EEM (print version p283-285), Subsection CEE and ECEE (print version p289-297)
+
 <h5 class="notkw">Exercise.</h5> Exercises with solutions can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf}
+
 (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$)Section EE, p103-108, all except C22, M60. Note that for the questions regarding diagonalizability, use our method instead of the method in the solution manual.
 
 @section{Eigenvalues and Eigenvectors of a Matrix}
@@ -230,19 +232,20 @@ $\mathbf{x}\in{\mathcal{E}}_{A}\left(\lambda\right)\iff A\mathbf{x}=\lambda\math
 
 @col
  $\iff\mathbf{x}\in{\mathcal{N}}\left(A-\lambda I_{n}\right)$.
+
 This completes the proof. 
 @qed
 @endcol
 @end
 @section{Existence of Eigenvalues and Eigenvectors}
-&lt;!--
+<!--
 Observe that
 \begin{align*}
 \displaystyle A\mathbf{x}=\lambda\mathbf{x}\iff A\mathbf{x}-\lambda I_{n}\mathbf{x}=\mathbf{0}\iff\left(A-\lambda I_{n}\right)\mathbf{x}=\mathbf{0}.
 \end{align*}
 @newcol
 So, any eigenvector $x$ with eigenvalue $\lambda$ is a nonzero element of the null space of $A-\lambda I_{n}$. In particular, the matrix $A-\lambda I_{n}$ is necessarily singular, therefore having zero determinant. These ideas motivate the following definition and example.
-@endcol--&gt;
+@endcol-->
 
 @defn
 @title{Characteristic Polynomial}
@@ -275,6 +278,7 @@ a_{n1}&a_{n2}&\cdots&a_{nn}-x\end{vmatrix}.
 \displaystyle (a_{11}-x)(a_{22}-x)\cdots(a_{nn}-x),
 \end{align*}
 which has degree $n$.
+
 <strong>Remark:</strong> We can also see that the leading coefficient is $(-1)^{n}$. 
 @qed
 @endcol
@@ -295,7 +299,7 @@ ${\mathcal{E}}_{A}\left(\lambda\right) = \mathcal{N}(A - \lambda I_n)$ is not th
 
 @col
  $\iff$ $0 = \det\left(A-\lambda I_{n}\right) = p_{A}\left(\lambda\right)$. 
-&lt;!--@newcol
+<!--@newcol
 We have the following equivalences:
 $\lambda$ is an eigenvalue of $A$
 $\iff$ there exists $\mathbf{x}\neq\mathbf{0}$ so that $A\mathbf{x}=\lambda\mathbf{x}$
@@ -304,7 +308,7 @@ $\iff$ there exists $\mathbf{x}\neq\mathbf{0}$ so that $A\mathbf{x}-\lambda I_{n
 $\iff$ there exists $\mathbf{x}\neq\mathbf{0}$ so that $(A-\lambda I_{n})\mathbf{x}=\mathbf{0}$
 $\iff$ $A-\lambda I_{n}$ is singular
 $\iff$ $p_{A}\left(\lambda\right)=\det\left(A-\lambda I_{n}\right)=0$.
---&gt;
+-->
 
 @qed
 @endcol
@@ -383,11 +387,11 @@ $F-\lambda I_{3}$ in order to find all solutions to the homogeneous system $F-\l
 0&0&0\end{bmatrix}
 \end{align*}
 \begin{align*}
-\displaystyle{\mathcal{E}}_{F}\left(3\right)&\displaystyle={\mathcal{N}}\left(F-3I_{3}\right)=\left&lt; \left\{\begin{bmatrix}-\frac{1}{2}\\
+\displaystyle{\mathcal{E}}_{F}\left(3\right)&\displaystyle={\mathcal{N}}\left(F-3I_{3}\right)=\left< \left\{\begin{bmatrix}-\frac{1}{2}\\
 \frac{1}{2}\\
-1\end{bmatrix}\right\}\right&gt;=\left&lt; \left\{\begin{bmatrix}-1\\
+1\end{bmatrix}\right\}\right>=\left< \left\{\begin{bmatrix}-1\\
 1\\
-2\end{bmatrix}\right\}\right&gt;
+2\end{bmatrix}\right\}\right>
 \end{align*} 
 @col
  \begin{align*}
@@ -398,15 +402,15 @@ $F-\lambda I_{3}$ in order to find all solutions to the homogeneous system $F-\l
 0&0&0\end{bmatrix}
 \end{align*}
 \begin{align*}
-\displaystyle{\mathcal{E}}_{F}\left(-1\right)&\displaystyle={\mathcal{N}}\left(F+1I_{3}\right)=\left&lt; \left\{\begin{bmatrix}-\frac{2}{3}\\
+\displaystyle{\mathcal{E}}_{F}\left(-1\right)&\displaystyle={\mathcal{N}}\left(F+1I_{3}\right)=\left< \left\{\begin{bmatrix}-\frac{2}{3}\\
 1\\
 0\end{bmatrix},\,\begin{bmatrix}-\frac{1}{3}\\
 0\\
-1\end{bmatrix}\right\}\right&gt;=\left&lt; \left\{\begin{bmatrix}-2\\
+1\end{bmatrix}\right\}\right>=\left< \left\{\begin{bmatrix}-2\\
 3\\
 0\end{bmatrix},\,\begin{bmatrix}-1\\
 0\\
-3\end{bmatrix}\right\}\right&gt;
+3\end{bmatrix}\right\}\right>
 \end{align*} 
 @col
  Eigenspaces in hand, we can easily compute eigenvectors by forming nontrivial linear combinations of the basis vectors describing each eigenspace. In particular, notice that we can pretty up our basis vectors by using scalar multiples to clear out fractions. 
@@ -442,13 +446,13 @@ Computing eigenvectors, we find
 0&0&0&0\end{bmatrix}
 \end{align*}
 \begin{align*}
-\displaystyle{\mathcal{E}}_{B}\left(1\right)&\displaystyle={\mathcal{N}}\left(B-1I_{4}\right)=\left&lt; \left\{\begin{bmatrix}-\frac{1}{3}\\
+\displaystyle{\mathcal{E}}_{B}\left(1\right)&\displaystyle={\mathcal{N}}\left(B-1I_{4}\right)=\left< \left\{\begin{bmatrix}-\frac{1}{3}\\
 1\\
 1\\
-0\end{bmatrix}\right\}\right&gt;=\left&lt; \left\{\begin{bmatrix}-1\\
+0\end{bmatrix}\right\}\right>=\left< \left\{\begin{bmatrix}-1\\
 3\\
 3\\
-0\end{bmatrix}\right\}\right&gt;
+0\end{bmatrix}\right\}\right>
 \end{align*}
 \begin{align*}
 \displaystyle\lambda&\displaystyle=2:&\displaystyle B-2I_{4}&\displaystyle=\begin{bmatrix}-4&1&-2&-4\\
@@ -460,13 +464,13 @@ Computing eigenvectors, we find
 0&0&0&0\end{bmatrix}
 \end{align*}
 \begin{align*}
-\displaystyle{\mathcal{E}}_{B}\left(2\right)&\displaystyle={\mathcal{N}}\left(B-2I_{4}\right)=\left&lt; \left\{\begin{bmatrix}-\frac{1}{2}\\
+\displaystyle{\mathcal{E}}_{B}\left(2\right)&\displaystyle={\mathcal{N}}\left(B-2I_{4}\right)=\left< \left\{\begin{bmatrix}-\frac{1}{2}\\
 1\\
 -\frac{1}{2}\\
-1\end{bmatrix}\right\}\right&gt;=\left&lt; \left\{\begin{bmatrix}-1\\
+1\end{bmatrix}\right\}\right>=\left< \left\{\begin{bmatrix}-1\\
 2\\
 -1\\
-2\end{bmatrix}\right\}\right&gt;
+2\end{bmatrix}\right\}\right>
 \end{align*} 
 @endcol
 @end
@@ -498,10 +502,10 @@ Computing eigenvectors, we find
 0&0&0&0\end{bmatrix}
 \end{align*}
 \begin{align*}
-\displaystyle{\mathcal{E}}_{C}\left(3\right)&\displaystyle={\mathcal{N}}\left(C-3I_{4}\right)=\left&lt; \left\{\begin{bmatrix}1\\
+\displaystyle{\mathcal{E}}_{C}\left(3\right)&\displaystyle={\mathcal{N}}\left(C-3I_{4}\right)=\left< \left\{\begin{bmatrix}1\\
 1\\
 1\\
-1\end{bmatrix}\right\}\right&gt;
+1\end{bmatrix}\right\}\right>
 \end{align*}
 \begin{align*}
 \displaystyle\lambda&\displaystyle=1:&\displaystyle C-1I_{4}&\displaystyle=\begin{bmatrix}0&0&1&1\\
@@ -513,13 +517,13 @@ Computing eigenvectors, we find
 0&0&0&0\end{bmatrix}
 \end{align*}
 \begin{align*}
-\displaystyle{\mathcal{E}}_{C}\left(1\right)&\displaystyle={\mathcal{N}}\left(C-1I_{4}\right)=\left&lt; \left\{\begin{bmatrix}-1\\
+\displaystyle{\mathcal{E}}_{C}\left(1\right)&\displaystyle={\mathcal{N}}\left(C-1I_{4}\right)=\left< \left\{\begin{bmatrix}-1\\
 1\\
 0\\
 0\end{bmatrix},\,\begin{bmatrix}0\\
 0\\
 -1\\
-1\end{bmatrix}\right\}\right&gt;
+1\end{bmatrix}\right\}\right>
 \end{align*}
 \begin{align*}
 \displaystyle\lambda&\displaystyle=-1:&\displaystyle C+1I_{4}&\displaystyle=\begin{bmatrix}2&0&1&1\\
@@ -531,10 +535,10 @@ Computing eigenvectors, we find
 0&0&0&0\end{bmatrix}
 \end{align*}
 \begin{align*}
-\displaystyle{\mathcal{E}}_{C}\left(-1\right)&\displaystyle={\mathcal{N}}\left(C+1I_{4}\right)=\left&lt; \left\{\begin{bmatrix}-1\\
+\displaystyle{\mathcal{E}}_{C}\left(-1\right)&\displaystyle={\mathcal{N}}\left(C+1I_{4}\right)=\left< \left\{\begin{bmatrix}-1\\
 -1\\
 1\\
-1\end{bmatrix}\right\}\right&gt;
+1\end{bmatrix}\right\}\right>
 \end{align*} 
 @endcol
 @end
@@ -569,7 +573,7 @@ Computing eigenvectors, we find
 0&0&\boxed{1}&0&-1\\
 0&0&0&0&0\\
 0&0&0&0&0\end{bmatrix} \\
-\displaystyle{\mathcal{E}}_{E}\left(2\right)&\displaystyle={\mathcal{N}}\left(E-2I_{5}\right)=\left&lt; \left\{\begin{bmatrix}-1\\
+\displaystyle{\mathcal{E}}_{E}\left(2\right)&\displaystyle={\mathcal{N}}\left(E-2I_{5}\right)=\left< \left\{\begin{bmatrix}-1\\
 \frac{3}{2}\\
 0\\
 1\\
@@ -577,7 +581,7 @@ Computing eigenvectors, we find
 \frac{1}{2}\\
 1\\
 0\\
-1\end{bmatrix}\right\}\right&gt;=\left&lt; \left\{\begin{bmatrix}-2\\
+1\end{bmatrix}\right\}\right>=\left< \left\{\begin{bmatrix}-2\\
 3\\
 0\\
 2\\
@@ -585,7 +589,7 @@ Computing eigenvectors, we find
 1\\
 2\\
 0\\
-2\end{bmatrix}\right\}\right&gt; \\
+2\end{bmatrix}\right\}\right> \\
 \displaystyle\lambda&\displaystyle=-1: \\
 \displaystyle E+1I_{5}&\displaystyle=\begin{bmatrix}30&14&2&6&-9\\
 -47&-21&-1&-11&13\\
@@ -596,11 +600,11 @@ Computing eigenvectors, we find
 0&0&\boxed{1}&1&0\\
 0&0&0&0&\boxed{1}\\
 0&0&0&0&0\end{bmatrix} \\
-\displaystyle{\mathcal{E}}_{E}\left(-1\right)&\displaystyle={\mathcal{N}}\left(E+1I_{5}\right)=\left&lt; \left\{\begin{bmatrix}-2\\
+\displaystyle{\mathcal{E}}_{E}\left(-1\right)&\displaystyle={\mathcal{N}}\left(E+1I_{5}\right)=\left< \left\{\begin{bmatrix}-2\\
 4\\
 -1\\
 1\\
-0\end{bmatrix}\right\}\right&gt;
+0\end{bmatrix}\right\}\right>
 \end{align*} 
 @endcol
 @end
@@ -635,11 +639,11 @@ Computing eigenvectors, we find
 0&0&\boxed{1}&0&2\\
 0&0&0&\boxed{1}&1\\
 0&0&0&0&0\end{bmatrix} \\
-&\displaystyle{\mathcal{E}}_{H}\left(2\right)={\mathcal{N}}\left(H-2I_{5}\right)=\left&lt; \left\{\begin{bmatrix}1\\
+&\displaystyle{\mathcal{E}}_{H}\left(2\right)={\mathcal{N}}\left(H-2I_{5}\right)=\left< \left\{\begin{bmatrix}1\\
 -1\\
 -2\\
 -1\\
-1\end{bmatrix}\right\}\right&gt;
+1\end{bmatrix}\right\}\right>
 \end{align*}
 \begin{align*}
 \displaystyle\lambda&\displaystyle=1: \\
@@ -652,15 +656,15 @@ Computing eigenvectors, we find
 0&0&\boxed{1}&0&\frac{1}{2}\\
 0&0&0&\boxed{1}&1\\
 0&0&0&0&0\end{bmatrix} \\
-&\displaystyle{\mathcal{E}}_{H}\left(1\right)={\mathcal{N}}\left(H-1I_{5}\right)=\left&lt; \left\{\begin{bmatrix}\frac{1}{2}\\
+&\displaystyle{\mathcal{E}}_{H}\left(1\right)={\mathcal{N}}\left(H-1I_{5}\right)=\left< \left\{\begin{bmatrix}\frac{1}{2}\\
 0\\
 -\frac{1}{2}\\
 -1\\
-1\end{bmatrix}\right\}\right&gt;=\left&lt; \left\{\begin{bmatrix}1\\
+1\end{bmatrix}\right\}\right>=\left< \left\{\begin{bmatrix}1\\
 0\\
 -1\\
 -2\\
-2\end{bmatrix}\right\}\right&gt;
+2\end{bmatrix}\right\}\right>
 \end{align*}
 \begin{align*}
 \displaystyle\lambda&\displaystyle=0: \\
@@ -673,11 +677,11 @@ Computing eigenvectors, we find
 0&0&\boxed{1}&0&-2\\
 0&0&0&\boxed{1}&0\\
 0&0&0&0&0\end{bmatrix} \\
-&\displaystyle{\mathcal{E}}_{H}\left(0\right)={\mathcal{N}}\left(H-0I_{5}\right)=\left&lt; \left\{\begin{bmatrix}-1\\
+&\displaystyle{\mathcal{E}}_{H}\left(0\right)={\mathcal{N}}\left(H-0I_{5}\right)=\left< \left\{\begin{bmatrix}-1\\
 2\\
 2\\
 0\\
-1\end{bmatrix}\right\}\right&gt;
+1\end{bmatrix}\right\}\right>
 \end{align*}
 \begin{align*}
 \displaystyle\lambda&\displaystyle=-1: \\
@@ -690,15 +694,15 @@ Computing eigenvectors, we find
 0&0&\boxed{1}&0&0\\
 0&0&0&\boxed{1}&1/2\\
 0&0&0&0&0\end{bmatrix} \\
-&\displaystyle{\mathcal{E}}_{H}\left(-1\right)={\mathcal{N}}\left(H+1I_{5}\right)=\left&lt; \left\{\begin{bmatrix}\frac{1}{2}\\
+&\displaystyle{\mathcal{E}}_{H}\left(-1\right)={\mathcal{N}}\left(H+1I_{5}\right)=\left< \left\{\begin{bmatrix}\frac{1}{2}\\
 0\\
 0\\
 -\frac{1}{2}\\
-1\end{bmatrix}\right\}\right&gt;=\left&lt; \left\{\begin{bmatrix}1\\
+1\end{bmatrix}\right\}\right>=\left< \left\{\begin{bmatrix}1\\
 0\\
 0\\
 -1\\
-2\end{bmatrix}\right\}\right&gt;
+2\end{bmatrix}\right\}\right>
 \end{align*}
 \begin{align*}
 \displaystyle\lambda&\displaystyle=-3: \\
@@ -711,15 +715,15 @@ Computing eigenvectors, we find
 0&0&\boxed{1}&0&1\\
 0&0&0&\boxed{1}&2\\
 0&0&0&0&0\end{bmatrix} \\
-&\displaystyle{\mathcal{E}}_{H}\left(-3\right)={\mathcal{N}}\left(H+3I_{5}\right)=\left&lt; \left\{\begin{bmatrix}1\\
+&\displaystyle{\mathcal{E}}_{H}\left(-3\right)={\mathcal{N}}\left(H+3I_{5}\right)=\left< \left\{\begin{bmatrix}1\\
 -\frac{1}{2}\\
 -1\\
 -2\\
-1\end{bmatrix}\right\}\right&gt;=\left&lt; \left\{\begin{bmatrix}-2\\
+1\end{bmatrix}\right\}\right>=\left< \left\{\begin{bmatrix}-2\\
 1\\
 2\\
 4\\
--2\end{bmatrix}\right\}\right&gt;
+-2\end{bmatrix}\right\}\right>
 \end{align*} 
 @endcol
 @end
@@ -1065,6 +1069,7 @@ or equivalently
  Obviously $\mathbf{S}_{i}\neq\mathbf{0}$, because $S$ is nonsingular. So $\mathbf{S}_{i}$ is an eigenvector with eigenvalue $\lambda_{i}$.
 Hence $T$ is a linearly independent set consisting of eigenvectors of $A$. 
 @endcol
+
 ($\Leftarrow$) 
 @newcol
  Suppose that $T=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\right\}$ is a linearly independent set consisting of eigenvectors of $A$
@@ -1104,14 +1109,14 @@ Let
 \end{align*}
 from previous examples. The eigenvalues and eigenspaces of $F$’s are
 \begin{align*}
-\displaystyle\lambda&\displaystyle=3&\displaystyle{\mathcal{E}}_{F}\left(3\right)&\displaystyle=\left&lt; \left\{\begin{bmatrix}-\frac{1}{2}\\
+\displaystyle\lambda&\displaystyle=3&\displaystyle{\mathcal{E}}_{F}\left(3\right)&\displaystyle=\left< \left\{\begin{bmatrix}-\frac{1}{2}\\
 \frac{1}{2}\\
-1\end{bmatrix}\right\}\right&gt; \\
-\displaystyle\lambda&\displaystyle=-1&\displaystyle{\mathcal{E}}_{F}\left(-1\right)&\displaystyle=\left&lt; \left\{\begin{bmatrix}-\frac{2}{3}\\
+1\end{bmatrix}\right\}\right> \\
+\displaystyle\lambda&\displaystyle=-1&\displaystyle{\mathcal{E}}_{F}\left(-1\right)&\displaystyle=\left< \left\{\begin{bmatrix}-\frac{2}{3}\\
 1\\
 0\end{bmatrix},\,\begin{bmatrix}-\frac{1}{3}\\
 0\\
-1\end{bmatrix}\right\}\right&gt;
+1\end{bmatrix}\right\}\right>
 \end{align*} 
 @newcol
  Define the matrix $S$ to be the $3\times 3$ matrix whose columns are the three basis vectors in the eigenspaces for $F$:
@@ -1122,6 +1127,7 @@ from previous examples. The eigenvalues and eigenspaces of $F$’s are
 \end{align*} 
 @col
  Check that $S$ is nonsingular (row-reduces to the identity matrix, or has a nonzero determinant).
+
 <strong>Remark</strong>: After we introduce Theorem @ref{diagcond}, you don’t need to check that $S$ is nonsingular. See examples below).
 
 @col
@@ -1295,6 +1301,7 @@ By the computation in @ref{eg:example7diag}, $C$ is diagonalizable. By the compu
 \end{align*} 
 @newcol
  Then $S^{-1}CS=\operatorname{diag}(3,1,1,-1)$.
+
 <strong>Remark</strong>:
 Note that the invertibility of $S$ is guaranteed by Theorem @ref{diagcond}. 
 @endcol
@@ -1356,6 +1363,7 @@ is diagonalizable. If it is diagonalizable, find $S$ such that $S^{-1}JS$ is dia
 @newcol
  $p_{J}\left(x\right)=-x^{3}+6x^{2}-9x+4=-(x-4)(x-1)^{2}$. All the distinct eigenvalues of $J$ is $\lambda_{1}=4$, $\lambda_{2}=1$. 
 @endcol
+
 <strong style="">Step 2</strong>: 
 @newcol
  \begin{align*}
@@ -1384,6 +1392,7 @@ is diagonalizable. If it is diagonalizable, find $S$ such that $S^{-1}JS$ is dia
 @col
  By Theorem @ref{diagcond}, $J$ is diagonalizable. 
 @endcol
+
 <strong style="">Step 3</strong>: 
 @newcol
  $\left\{\begin{bmatrix}1\\
@@ -1430,6 +1439,7 @@ is diagonalizable and if it is diagonalizable, find $S$ such that $S^{-1}KS$ is 
 @col
  The eigenvalues are $\lambda_{1}=-1,\lambda_{2}=1$ and $\lambda_{3}=2$. 
 @endcol
+
 <strong style="">Step 2</strong>: 
 @newcol
  \begin{align*}
@@ -1476,6 +1486,7 @@ is diagonalizable and if it is diagonalizable, find $S$ such that $S^{-1}KS$ is 
 @col
  By Theorem @ref{diagcond}, $K$ is diagonalizable. 
 @endcol
+
 <strong style="">Step 3</strong>: 
 @newcol
  A basis for ${\mathcal{E}}_{K}\left(-1\right)={\mathcal{N}}\left(K+I_{6}\right)$ is
@@ -1757,15 +1768,19 @@ we find
 @section{Summary}
 
 In below $A$ always denote a square matrix of size $n$
+
 <ol class="ltx_enumerate">
 <li class="ltx_item"> If $\mathbf{x}\neq 0$ and $A\mathbf{x}=\lambda x$, then $\mathbf{x}$ is called
 an @keyword{eigenvector} of $A$ with eigenvalue $\lambda$. </li>
 <li class="ltx_item"> $p_{A}(x)=\det(A-xI_{n})$ is called the @keyword{characteristic function} of $A$.
+
 <ol class="ltx_enumerate">
 <li class="ltx_item"> It is a polynomial of degree $n$ with leading coefficient $(-1)^{n}$. </li>
 <li class="ltx_item"> $\lambda$ is an eigenvalue if and only if $p_{A}(\lambda)=0$, i.e., $\lambda$ is a root of $p_{A}(x)$. </li>
+
 </ol></li>
 <li class="ltx_item"> ${\mathcal{E}}_{A}\left(\lambda\right)$: @keyword{eigenspace} of $A$ for an eigenvalue $\lambda$.
+
 <ol class="ltx_enumerate">
 <li class="ltx_item"> It is the set of of all eigenvectors of $A$ for $\lambda$, together with the zero vector,
 i.e.
@@ -1774,27 +1789,33 @@ i.e.
 \end{align*} </li>
 <li class="ltx_item"> ${\mathcal{E}}_{\lambda}\left(A\right)={\mathcal{N}}\left(A-\lambda I_{n}\right)$. </li>
 <li class="ltx_item"> ${\mathcal{E}}_{\lambda}\left(A\right)$ is a subspace of ${\mathbb{R}}^{n}$. </li>
+
 </ol></li>
 <li class="ltx_item"> $\alpha_{A}\left(\lambda\right)$: @keyword{algebraic multiplicity}. The power of $(x-\lambda)$ in the factorization of $p_{A}(x)$. </li>
 <li class="ltx_item"> $\gamma_{A}\left(\lambda\right)$: @keyword{geometric multiplicity}. It is $\dim{\mathcal{E}}_{A}\left(\lambda\right)=n\left(A-\lambda I_{n}\right)$. </li>
 <li class="ltx_item"> Basic properties. Suppose $\lambda$ is an eigenvalue of $A$ and $\mathbf{x}$ is an eigenvector of $A$ with eigenvalue $\lambda$.
+
 <ol class="ltx_enumerate">
 <li class="ltx_item"> $A$ is invertible if and only if $\lambda=0$ is not an eigenvalue. </li>
 <li class="ltx_item"> For positive integer $s$, $\mathbf{x}$ is an eigenvector of $A^{s}$ with eigenvalue $\lambda^{s}$. </li>
 <li class="ltx_item"> If $\lambda\neq 0$, $\mathbf{x}$ is an eigenvector of $A^{-1}$ with eigenvalue $\lambda^{-1}$. </li>
 <li class="ltx_item"> $\lambda$ is an eigenvector of $A^{t}$ (but $\mathbf{x}$ may <strong>not</strong> be an eigenvector of $A$) </li>
+
 </ol></li>
 <li class="ltx_item"> Computational questions
+
 <ol class="ltx_enumerate">
 <li class="ltx_item"> Find all the eigenvalues of $A$: find all the roots of $p_{A}(x)$. </li>
 <li class="ltx_item"> Find ${\mathcal{E}}_{A}\left(\lambda\right)$: find ${\mathcal{N}}\left(A-\lambda I_{n}\right)$, this can be done by finding the RREF of $A-\lambda I_{n}$.
+
 </li>
 <li class="ltx_item"> Find $\alpha_{A}\left(\lambda\right)$: Find the power of $x-\lambda$ in the factorization of $p_{A}(x)$. </li>
 <li class="ltx_item"> Find a basis for ${\mathcal{E}}_{A}\left(\lambda\right)$: again, this is same as finding basis of ${\mathcal{N}}\left(A-\lambda I_{n}\right)$. This can be done by $A-\lambda I_{n}\xrightarrow{\text{RREF}}B$ and use the standard method
 in finding basis (see Lecture 8 Theorem 4, @ref{eg:example6}). </li>
 <li class="ltx_item"> Find $\gamma_{A}\left(\lambda\right)$: same as finding $n\left(A-\lambda I_{n}\right)=n-r\left(A-\lambda I_{n}\right)$. Suppose $A-\lambda I_{n}\xrightarrow{\text{RREF}}B$.
 Then $\gamma_{A}\left(\lambda\right)=n-r\left(B\right)=n-\text{ number of pivot columns of $B$}$. </li>
+
 </ol></li>
+
 </ol>
-@course{MATH 1030}
 <!--DELIMITER-->

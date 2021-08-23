@@ -3,6 +3,7 @@
 @chapter{Inverse}
 <h5 class="notkw">Reference.</h5>
  Beezer, Ver 3.5 Section MISLE, Section MINM (print version p149 - p161)
+
 <h5 class="notkw">Exercise.</h5> Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdfSection MISLE (p60-64), all. Section MINM C20, C40, M10, M11, M15, M80, T25.
 
 @section{Solution Inverse}
@@ -153,6 +154,7 @@ which allows us to recognize the inconsistency.
 \end{align*} 
 @col
  So $B$ is the inverse of $A$.
+
 <strong>3.</strong> Consider the matrices,
 \begin{align*}
 \displaystyle A&\displaystyle=\begin{bmatrix}1&2&1&2&1\\
@@ -244,6 +246,7 @@ c&d\end{bmatrix}=\frac{1}{ad-bc}\begin{bmatrix}ad-bc&0\\
 @col
  This is sufficient to establish that $A$ is invertible, and that the expression for $A^{-1}$ is correct. 
 @endcol
+
 $\Rightarrow$ 
 @newcol
  Assume that $A$ is invertible, and proceed with a proof by contradiction, by assuming also that $ad-bc=0$. This translates to $ad=bc$. Let
@@ -436,6 +439,7 @@ Find $B^{-1}$.
 @title{Nonsingular Matrix Equivalences, Round 3}
 @label{NME3}
  Suppose that $A$ is a square matrix of size $n$. The following are equivalent.
+
 <ol class="ltx_enumerate">
 <li class="ltx_item"> $A$ is nonsingular. </li>
 <li class="ltx_item"> $A$ row-reduces to the identity matrix. </li>
@@ -443,6 +447,7 @@ Find $B^{-1}$.
 <li class="ltx_item"> The linear system $A\mathbf{x}=\mathbf{b}$ has a unique solution for every possible choice of $\mathbf{b}$. </li>
 <li class="ltx_item"> The columns of $A$ are a linearly independent set. </li>
 <li class="ltx_item"> $A$ is invertible. </li>
+
 </ol>
 @end
 @slide
@@ -626,5 +631,4 @@ Then $AB=BA=I_{n}$ and $AC=CA=I_{n}$. Then we have,
  It would be tempting, for example, to think that $(A+B)^{-1}=A^{-1}+B^{-1}$, but this is false. Can you find a counterexample?
 
 @endcol
-@course{MATH 1030}
 <!--DELIMITER-->

@@ -69,8 +69,8 @@ More precisely:
 @li
  The leftmost nonzero entry of a row is the only nonzero entry in its column. 
 @li
- If $i &lt; j$ and both row $i$ and row $j$ are not zero rows,
-then $d_{i} &lt; d_{j}$, i.e.
+ If $i < j$ and both row $i$ and row $j$ are not zero rows,
+then $d_{i} < d_{j}$, i.e.
 $d_{1},d_{2},\ldots$ are in ascending order. <br/> In particular,
 all matrix entries below a leftmost nonzero entry must be equal to zero. 
 @endol
@@ -98,7 +98,7 @@ D=\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\},
 \]
 where:
 \[
-d_{1} &lt; d_{2} &lt; d_{3} &lt; \cdots &lt; d_{r}.
+d_{1} < d_{2} < d_{3} < \cdots < d_{r}.
 \] 
 @col
  The columns that are not pivot columns will be denoted as:
@@ -107,7 +107,7 @@ F=\{f_{1},\,f_{2},\,f_{3},\,\ldots,\,f_{n-r}\},
 \]
 where:
 \[
-f_{1} &lt; f_{2} &lt; f_{3} &lt; \cdots &lt; f_{n-r}.
+f_{1} < f_{2} < f_{3} < \cdots < f_{n-r}.
 \] 
 @endcol
 @slide
@@ -205,7 +205,7 @@ It fails condition 3: For row 3, the column consists the left most nonzero entry
 0&0&0&0&0\\
 0&0&0&0&0\\
 \end{bmatrix}\]
-It fails condition 4: The index of the leftmost nonzero entry of row 1 is $d_{1}=1$. The index of the leftmost nonzero entry of row 2 is $d_{2}=3$. The index of the leftmost nonzero entry of row 3 is $d_{2}=2$. $2 &lt; 3$ but $d_{2} &gt; d_{3}$. 
+It fails condition 4: The index of the leftmost nonzero entry of row 1 is $d_{1}=1$. The index of the leftmost nonzero entry of row 2 is $d_{2}=3$. The index of the leftmost nonzero entry of row 3 is $d_{2}=2$. $2 < 3$ but $d_{2} > d_{3}$. 
 @endcol
 @endenumerate
 @end
@@ -309,6 +309,7 @@ since we now know we have at least one nonzero row.
 @col
  Now we go back to Step 1 in the proof of @ref{thm:REMEF},
 with column index $j$ increased to $2$ and $r = 1$.
+
 <br/> In fact, we may as well ignore row 1 and column 1,
 and essentially apply the previous steps to the remaining $3 \times 4$ matrix:
 
@@ -320,6 +321,7 @@ and essentially apply the previous steps to the remaining $3 \times 4$ matrix:
 *&\underline{0}&1&1&3\end{bmatrix}
 \]
 The entries of column 2 are underlined.
+
 None of them are nonzero, so we move to next column.
 
 @col
@@ -390,6 +392,7 @@ above it and below it and get the RREF.
 @newcol
  Set $r = 0$.
 We first consider column 1 (set $j=1$).
+
 Find a nonzero entry (underline below) in the column.
 \[\begin{bmatrix}\underline{0}&0&2&2&6&2&3\\
 \underline{2}&4&1&3&7&3&-1\\
@@ -794,10 +797,10 @@ is inconsistent because it has no solution.
  The number of non-zero rows is called the @keyword{rank} of $A$ and is denoted by $r$. 
 @item
  The set of the column indexes for the pivot columns is denoted by
-\[D=\{(d_{1},d_{2},d_{3},\ldots,d_{r})\,|\,d_{1} &lt; d_{2} &lt; d_{3} &lt; \cdots &lt; d_{r}.\}\] 
+\[D=\{(d_{1},d_{2},d_{3},\ldots,d_{r})\,|\,d_{1} < d_{2} < d_{3} < \cdots < d_{r}.\}\] 
 @item
  The set of column indexes that are not pivot columns is denoted by
-\[F=\{(f_{1},f_{2},f_{3},\ldots,f_{n-r})\,|\,f_{1} &lt; f_{2} &lt; f_{3}&lt; \cdots &lt; f_{n-r}.\}\] 
+\[F=\{(f_{1},f_{2},f_{3},\ldots,f_{n-r})\,|\,f_{1} < f_{2} < f_{3}< \cdots < f_{n-r}.\}\] 
 @endenumerate
 @endcol
 @slide
@@ -1079,7 +1082,7 @@ x_4+x_5+7 x_6 &=-1
 @thm
 @title{Consistent Systems, $r$ and $n$}
 @label{CSRN}
- Suppose $A$ is the augmented matrix of a consistent system of linear equations with $n$ variables. Suppose also that $B$ is a row-equivalent matrix in reduced row-echelon form with $r$ pivot columns. Then $r\leq n$. If $r=n$, then the system has a unique solution, and if $r &lt; n$, then the system has infinitely many solutions. 
+ Suppose $A$ is the augmented matrix of a consistent system of linear equations with $n$ variables. Suppose also that $B$ is a row-equivalent matrix in reduced row-echelon form with $r$ pivot columns. Then $r\leq n$. If $r=n$, then the system has a unique solution, and if $r < n$, then the system has infinitely many solutions. 
 @end
 @proof
 @newcol
@@ -1087,8 +1090,9 @@ x_4+x_5+7 x_6 &=-1
 Notice first that $B$ has $n+1$ columns, so there can be at most $n+1$ pivot columns, i.e., $r\leq n+1$.
 If $r=n+1$, then every column of $B$ is a pivot column, and in particular, the last column is a pivot column.
 So the previous theorem tells us that the system is inconsistent, contrary to our hypothesis. We are left with $r\leq n$.
+
 When $r=n$, we find $n-r=0$ free variables (i.e., $F=\{n+1\}$) and the only solution is given by setting the $n$ variables to the the first $n$ entries of column $n+1$ of $B$.
-When $r &lt; n$, we have $n-r &gt; 0$ free variables. Choose one free variable and set all the other free variables to zero. Now, set the chosen free variable to any fixed value. It is possible to then determine the values of the dependent variables to create a solution to the system. By setting the chosen free variable to different values, in this manner we can create infinitely many solutions. 
+When $r < n$, we have $n-r > 0$ free variables. Choose one free variable and set all the other free variables to zero. Now, set the chosen free variable to any fixed value. It is possible to then determine the values of the dependent variables to create a solution to the system. By setting the chosen free variable to different values, in this manner we can create infinitely many solutions. 
 @qed
 @endcol
 @end
@@ -1220,15 +1224,15 @@ If it has $\geq 1$ free variables, it has infinite many solutions.
 @title{Consistent, More Variables than Equations, Infinite solutions}
 @label{CMVEI}
 @newcol
- Suppose a consistent system of linear equations has $m$ equations in $n$ variables. If $n&gt;m$, then the system has infinitely many solutions. 
+ Suppose a consistent system of linear equations has $m$ equations in $n$ variables. If $n>m$, then the system has infinitely many solutions. 
 @endcol
 @end
 @proof
 @newcol
  Suppose that the augmented matrix of the system of equations is row-equivalent to $B$, a matrix in reduced row-echelon form with $r$ nonzero rows.
 Because $B$ has $m$ rows in total, the number of nonzero rows is less than or equal to $m$. In other words, $r\leq m$.
-Follow this with the hypothesis that $n&gt;m$ and we find that the system has a solution set described by at least one free variable because
-\[n-r\geq n-m&gt;0.\]
+Follow this with the hypothesis that $n>m$ and we find that the system has a solution set described by at least one free variable because
+\[n-r\geq n-m>0.\]
 A consistent system with free variables will have an infinite number of solutions, as given by Theorem        @ref{CSRN}. 
 @qed
 @endcol
@@ -1256,9 +1260,8 @@ Identify the location of the pivot columns, and the rank $r$.
 @item
  $r=n$ and the solution is unique. It can be read off directly from the entries in rows 1 through $n$ of column $n+1$. 
 @item
- $r &lt; n$ and there are infinitely many solutions. we can describe the solution sets by the free variables. 
+ $r < n$ and there are infinitely many solutions. we can describe the solution sets by the free variables. 
 @endenumerate
 @endcol
 @endenumerate
-@course{MATH 1030}
 <!--DELIMITER-->

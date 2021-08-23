@@ -2,6 +2,7 @@
 @setchapter{3}
 @chapter{System of linear equations}
  The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at http://linear.ups.edu/download.html Print version can be downloaded at http://linear.ups.edu/download/fcla-3.50-print.pdf
+
 <h5 class="notkw">Reference.</h5> Beezer, Ver 3.5 Sect SSLE (print version p7 - p14) 
 @section{Introduction}
 @defn
@@ -42,6 +43,7 @@ a_{11}&=1 & a_{12}&=2 & a_{13}&=0 & a_{14}&=1 & b_{1}&=7\\
 a_{21}&=1 & a_{22}&=1 & a_{23}&=1 & a_{24}&=-1 & b_{2}&=3\\
 a_{31}&=3 & a_{32}&=1 & a_{33}&=5 & a_{34}&=-7 & b_{3}&=1
 \end{align*}One solution is given by $x_{1}=-2$, $x_{2}=4$, $x_{3}=2$, $x_{4}=1$. In fact, from the previous lecture this system of equations has infinitely many solutions.
+
 The solution set may be descrbied as follows:
 
 @col
@@ -65,6 +67,7 @@ The solution set may be descrbied as follows:
 x_1-x_2&=4
 \end{align*}
 The solution set is $(x_{1},x_{2})=(3,-1)$.
+
 Since the solution set is nonempty, the system is <strong>consistent</strong>. 
 @item
 @newcol
@@ -74,6 +77,7 @@ Since the solution set is nonempty, the system is <strong>consistent</strong>.
 4x_1+6x_2&=6
 \end{align*}
 The solution set is $\{(x_{1},x_{2})=(t,\frac{3-2t}{3})\}$, where $t$ is any real number.
+
 Since the solution set is nonempty, the system is <strong>consistent</strong>. 
 @endcol
 @item
@@ -84,6 +88,7 @@ Since the solution set is nonempty, the system is <strong>consistent</strong>.
 4x_1+6x_2&=10
 \end{align*}
 The solution set is empty.
+
 So, the system is <strong>inconsistent</strong>. 
 @endcol
 @endenumerate
@@ -146,5 +151,4 @@ x_{1}-x_{2}=4\end{cases}\]
  This will be clear after we have established Theorem @ref{REMES} in a later chapter. 
 @endcol
 @end
-@course{MATH 1030}
 <!--DELIMITER-->

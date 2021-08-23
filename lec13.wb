@@ -5,6 +5,7 @@
 @keyword{Skip this lecture}
 
 @keyword{Warning}: the note is for reference only. It may contain typos. Read at your own risk. The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at http://linear.ups.edu/download.html.The print version can be downloaded at http://linear.ups.edu/download/fcla-3.50-print.pdf.
+
 <h5 class="notkw">Reference.</h5> Beezer, Ver 3.5 Section VR.
 
 @section{Matrices as linear transformation}
@@ -40,9 +41,11 @@ z\end{bmatrix})=\begin{bmatrix}x+2y+3z\\
 @slide
 @prop
  For $\mathbf{v},\mathbf{u}\in{\mathbb{R}}^{n}$, $\alpha\in{\mathbb{R}}^{\hbox{}}$
+
 <ol class="ltx_enumerate">
 <li class="ltx_item"> $L_{A}(\mathbf{v}+\mathbf{u})=L_{A}(\mathbf{v})+L_{A}(\mathbf{u})$ </li>
 <li class="ltx_item"> $L_{A}(\alpha\mathbf{v})=\alpha L_{A}(\mathbf{v})$. </li>
+
 </ol>
 @end
 @proof
@@ -50,6 +53,7 @@ z\end{bmatrix})=\begin{bmatrix}x+2y+3z\\
 <ol class="ltx_enumerate">
 <li class="ltx_item"> $L_{A}(\mathbf{v}+\mathbf{u})=A(\mathbf{v}+\mathbf{u})=A\mathbf{v}+A\mathbf{u}=L_{A}(\mathbf{v})+L_{A}(\mathbf{u})$ </li>
 <li class="ltx_item"> $L_{A}(\alpha\mathbf{v})=A(\alpha\mathbf{v})=\alpha A(\mathbf{v})=\alpha L_{A}(\mathbf{v})$. </li>
+
 </ol>
 
 @qed
@@ -60,9 +64,11 @@ z\end{bmatrix})=\begin{bmatrix}x+2y+3z\\
  Let $V,W$ be vector spaces (you can think of $V$ as subspace of ${\mathbb{R}}^{a}$ and $W$ as subspace of ${\mathbb{R}}^{b}$),
 $T:V\rightarrow W$.
 Then $T$ is said to be a linear transformation if for $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{u}\in W$.
+
 <ol class="ltx_enumerate">
 <li class="ltx_item"> $T(\mathbf{v}+\mathbf{u})=T(\mathbf{v})+T(\mathbf{u})$ </li>
 <li class="ltx_item"> $T(\alpha\mathbf{v})=\alpha T(\mathbf{v})$. </li>
+
 </ol>
 @end
 @section{Geometric interpretation of some linear transformations}
@@ -245,8 +251,9 @@ x_{3}\end{bmatrix}=\begin{bmatrix}2\\
 11\\
 8\end{bmatrix}.
 \end{align*} <ol class="ltx_enumerate">
-<li class="ltx_item"> Show that $\mathbf{u}\in\left&lt;B\right&gt;$. </li>
+<li class="ltx_item"> Show that $\mathbf{u}\in\left<B\right>$. </li>
 <li class="ltx_item"> Hence find $\rho_{B}(\mathbf{u})$. </li>
+
 </ol>
 
 @col
@@ -461,5 +468,4 @@ Then for any $\mathbf{v}\in V$,
 More details will be given in lecture 19.
 
 @endcol
-@course{MATH 1030}
 <!--DELIMITER-->
