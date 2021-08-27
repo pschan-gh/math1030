@@ -1,0 +1,692 @@
+<?xml version="1.0"?>
+<document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
+  <course environment="" chapter_type="" type="Course" wbtag="course" title="MATH 1030">
+    <keywords slide="all" environ="course" chapter="" course="MATH 1030"/>
+    <title environment="title" chapter_type="" wbtag="course" scope="course" course="MATH 1030" chapter="" section="" subsection="" subsubsection="" serial="" slide="">MATH 1030</title>
+    <slides environment="" chapter_type="">
+      <slide environment="" chapter_type="" canon_num="1" scope="course" course="MATH 1030" title="MATH 1030" id="s1" slide="1" chapter="" section="" subsection="" subsubsection="" chapter_title="" section_title="">
+        <title environment="title" chapter_type="" wbtag="course" scope="course" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="1">MATH 1030</title>
+        <keywords slide="1" environ="slide" chapter="" course="MATH 1030"/>
+        <setchapter course="MATH 1030" chapter="" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="setchapter" argument="1"/>
+      </slide>
+    </slides>
+    <chapter environment="" chapter_type="Chapter" type="Chapter" wbtag="chapter" num="1" title="Technique of solving system of linear equations" course="MATH 1030" serial="1">
+      <keywords slide="all" environ="chapter" chapter="1" course="MATH 1030"/>
+      <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="MATH 1030" chapter="1" section="" subsection="" subsubsection="" serial="" slide="">Technique of solving system of linear equations</title>
+      <slides environment="" chapter_type="">
+        <slide environment="" chapter_type="Chapter" canon_num="2" scope="chapter" id="s2" slide="2" course="MATH 1030" chapter="1" section="" subsection="" subsubsection="" chapter_title="Technique of solving system of linear equations" section_title="">
+          <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="2">Technique of solving system of linear equations</title>
+          <keywords slide="2" environ="slide" chapter="1" course="MATH 1030"/>
+          <newline course="MATH 1030" chapter="1" chapter_type="" section="" subsection="" subsubsection="" environment=""/>
+          <h5 xmlns="http://www.w3.org/1999/xhtml" class="notkw" environment="">
+            <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="1" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">Reference:</paragraphs>
+          </h5>
+          <enumerate course="MATH 1030" chapter="1" chapter_type="" section="" subsection="" subsubsection="" environment="enumerate" wbtag="enumerate">
+            <item course="MATH 1030" chapter="1" chapter_type="" section="" subsection="" subsubsection="" environment="enumerate" wbtag="item">
+              <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs">  Gilbert Strang, </paragraphs>
+              <i xmlns="http://www.w3.org/1999/xhtml" environment="enumerate">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="1" chapter_type="" section="" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs">Linear Algebra and Its Applications</paragraphs>
+              </i>
+              <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs">. Section 1.3.  </paragraphs>
+            </item>
+            <item course="MATH 1030" chapter="1" chapter_type="" section="" subsection="" subsubsection="" environment="enumerate" wbtag="item">
+              <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs">  Robert A. Beezer, </paragraphs>
+              <i xmlns="http://www.w3.org/1999/xhtml" environment="enumerate">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="1" chapter_type="" section="" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs">A First Course in Linear Algebra</paragraphs>
+              </i>
+              <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs">. Section </paragraphs>
+              <a xmlns="http://www.w3.org/1999/xhtml" target="_blank" href="http://linear.ups.edu/html/section-SSLE.html" environment="enumerate">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="1" chapter_type="" section="" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs">Solving Systems of Linear Equations</paragraphs>
+              </a>
+              <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs">.  </paragraphs>
+            </item>
+          </enumerate>
+          <newline course="MATH 1030" chapter="1" chapter_type="" section="" subsection="" subsubsection="" environment=""/>
+        </slide>
+      </slides>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Introduction" course="MATH 1030" chapter="1" num="1" serial="1.1">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="1" section="1" subsection="" subsubsection="" serial="" slide="">
+          <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Introduction</paragraphs>
+        </title>
+        <label wbtag="label" name="ex2" type="Section"/>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="3" scope="section" id="s3" slide="3" course="MATH 1030" chapter="1" section="1" subsection="" subsubsection="" chapter_title="Technique of solving system of linear equations" section_title="Introduction">
+            <keywords slide="3" environ="slide" chapter="1" course="MATH 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="1" section="1" subsection="" subsubsection="" serial="" slide="3">
+              <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Introduction</paragraphs>
+            </title>
+            <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs">  In this section we give examples of systems of linear equations and solve one example.  </paragraphs>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="1" md5="e05f03a153c037dda34d0d9271255645" course="MATH 1030" chapter="1" slide="3" item="1.1">
+              <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  Solve the system of equations:
+\begin{eqnarray}
+\label{eq:eg2-1}
+2x_{1}+3x_{2}&amp;=3\\
+\label{eq:eg2-2}
+x_{1}-x_{2}&amp;=4\\
+\end{eqnarray}  </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Solution" wbtag="sol" md5="1f481128acf016648786a4c5c7107bbe" course="MATH 1030" chapter="1" slide="3">
+              <newcol course="MATH 1030" chapter="1" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Adding Equation $\eqref{eq:eg2-1}$ to $-2$ $\times$
+Equation $\eqref{eq:eg2-2}$ gives:
+\[
+5x_{2}=-5.
+\]
+So $x_{2}=-1$. Substituting $x_{2}=-1$ into Equation $\eqref{eq:eg2-1}$ gives
+\[
+2x_{1}+3(-1)=3
+\]
+Hence, $x_{1}=3$ and $x_{2}=-1$ is a solution.</paragraphs>
+                <newline course="MATH 1030" chapter="1" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="MATH 1030" chapter="1" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Indeed:
+\[2(3)+3(-1)=3\]
+\[(3)-(-1)=4.\]
+In fact, it is the unique solution.  </paragraphs>
+                </collapse>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="4" id="s4" slide="4" course="MATH 1030" chapter="1" section="1" subsection="" subsubsection="" chapter_title="Technique of solving system of linear equations" section_title="Introduction">
+            <keywords slide="4" environ="slide" chapter="1" course="MATH 1030"/>
+            <strong xmlns="http://www.w3.org/1999/xhtml" environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="1" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs">Main goal</paragraphs>
+            </strong>
+            <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs">: One of the main goals of this course is to solve systems of linear equations with more variables and more equations.  </paragraphs>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="2" md5="ab6efe948a924f1ab4876b4bb8278108" course="MATH 1030" chapter="1" slide="4" item="1.2">
+              <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  \begin{align*}
+\displaystyle x_{1}+2x_{2}+2x_{3}&amp;=4\\
+\displaystyle x_{1}+3x_{2}+3x_{3}&amp;=5\\
+\displaystyle 2x_{1}+6x_{2}+5x_{3}&amp;=6
+\end{align*}  </paragraphs>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="3" md5="902490b20fc8496037015e9634ea1a23" course="MATH 1030" chapter="1" slide="4" item="1.3">
+              <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  \begin{align*}
+\displaystyle x_{1}+2x_{2}+x_{4}&amp;=7\\
+\displaystyle x_{1}+x_{2}+x_{3}-x_{4}&amp;=3\\
+\displaystyle 3x_{1}+x_{2}+5x_{3}-7x_{4}&amp;=1
+\end{align*}  </paragraphs>
+            </statement>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="System of linear equations of two unknowns" course="MATH 1030" chapter="1" num="2" serial="1.2">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="1" section="2" subsection="" subsubsection="" serial="" slide="">
+          <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">System of linear equations of two unknowns</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="5" scope="section" id="s5" slide="5" course="MATH 1030" chapter="1" section="2" subsection="" subsubsection="" chapter_title="Technique of solving system of linear equations" section_title="System of linear equations of two unknowns">
+            <keywords slide="5" environ="slide" chapter="1" course="MATH 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="1" section="2" subsection="" subsubsection="" serial="" slide="5">
+              <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">System of linear equations of two unknowns</paragraphs>
+            </title>
+            <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">  You should all be very familiar with the procedure of solving a system equations of two unknowns.  </paragraphs>
+          </slide>
+        </slides>
+        <subsection environment="" chapter_type="" type="Section" wbtag="subsection" title="Substitution" course="MATH 1030" chapter="1" section="2" num="1" serial="1.2.1">
+          <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="MATH 1030" chapter="1" section="2" subsection="" subsubsection="" serial="1.2.1" slide="">
+            <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Substitution</paragraphs>
+          </title>
+          <slides environment="" chapter_type="">
+            <slide environment="" chapter_type="Chapter" canon_num="6" scope="subsection" id="s6" slide="6" course="MATH 1030" chapter="1" section="2" subsection="1" subsubsection="" chapter_title="Technique of solving system of linear equations" section_title="System of linear equations of two unknowns">
+              <keywords slide="6" environ="slide" chapter="1" course="MATH 1030"/>
+              <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="MATH 1030" chapter="1" section="2" subsection="1" subsubsection="" serial="" slide="6">
+                <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="title" wbtag="paragraphs">Substitution</paragraphs>
+              </title>
+              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="4" md5="c0978a5b47c33086e0c55378e9e6d9bd" course="MATH 1030" chapter="1" slide="6" item="1.4">
+                <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs">  \begin{equation}\label{v2sube1}3x+4y=2\end{equation}
+\begin{equation}\label{v2sube2}4x+5y=3\end{equation}
+Use $\eqref{v2sube2}$, we can solve for $y$ in terms of $x$:
+\begin{equation}\label{v2sube3}y=\frac{3}{5}-\frac{4}{5}x.\end{equation}
+Substitution this into $\eqref{v2sube1}$:</paragraphs>
+                <newline course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="statement"/>
+                <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs">\[3x+4(\frac{3}{5}-\frac{4}{5}x)=2\]
+\[\frac{12}{5}-\frac{x}{5}=2\]
+\[x=2.\]
+Substituting $x=2$ into $\eqref{v2sube3}$, we can solve for $y$:
+\[y=\frac{3}{5}-\frac{4}{5}\times 2=-1.\]
+So the solution is $x=2$, $y=-1$.  </paragraphs>
+              </statement>
+              <newline course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment=""/>
+              <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="96de9389dca667727e5ee220f94d456b" course="MATH 1030" chapter="1" slide="6">
+                <newcol course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs">  There are other ways to use substitution, for example  </paragraphs>
+                  <enumerate course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="enumerate" wbtag="enumerate">
+                    <item course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="enumerate" wbtag="item">
+                      <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="enumerate" wbtag="paragraphs">  Solve $x$ by $\eqref{v2sube2}$ in terms of $y$ and substitute it into $\eqref{v2sube1}$  </paragraphs>
+                    </item>
+                    <item course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="enumerate" wbtag="item">
+                      <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="enumerate" wbtag="paragraphs">  Solve $y$ by $\eqref{v2sube1}$ in terms of $x$ and substitute it into $\eqref{v2sube2}$  </paragraphs>
+                    </item>
+                    <item course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="enumerate" wbtag="item">
+                      <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="enumerate" wbtag="paragraphs">  Solve $x$ by $\eqref{v2sube1}$ in terms of $y$ and substitute it into $\eqref{v2sube2}$  </paragraphs>
+                    </item>
+                  </enumerate>
+                  <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> But you </paragraphs>
+                  <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs">cannot</paragraphs>
+                  </strong>
+                  <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> get the solution by  </paragraphs>
+                  <enumerate course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="enumerate" wbtag="enumerate">
+                    <item course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="enumerate" wbtag="item">
+                      <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="enumerate" wbtag="paragraphs">  Solve $y$ by $\eqref{v2sube2}$ in terms of $x$ and substitute it into $\eqref{v2sube2}$ (No substitution back to the original equation)  </paragraphs>
+                    </item>
+                    <item course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="enumerate" wbtag="item">
+                      <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="enumerate" wbtag="paragraphs">  Solve $y$ by $\eqref{v2sube1}$ in terms of $x$ and substitute it into $\eqref{v2sube1}$</paragraphs>
+                      <newline course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="enumerate"/>
+                    </item>
+                    <item course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="enumerate" wbtag="item">
+                      <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="enumerate" wbtag="paragraphs">  Solve $x$ by $\eqref{v2sube2}$ in terms of $y$ and substitute it into $\eqref{v2sube2}$  </paragraphs>
+                    </item>
+                    <item course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="enumerate" wbtag="item">
+                      <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment="enumerate" wbtag="paragraphs">  Solve $x$ by $\eqref{v2sube1}$ in terms of $y$ and substitute it into $\eqref{v2sube1}$  </paragraphs>
+                    </item>
+                  </enumerate>
+                </newcol>
+              </substatement>
+              <newline course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="1" subsubsection="" environment=""/>
+            </slide>
+          </slides>
+        </subsection>
+        <subsection environment="" chapter_type="" type="Section" wbtag="subsection" title="Elimination" course="MATH 1030" chapter="1" section="2" num="2" serial="1.2.2">
+          <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="MATH 1030" chapter="1" section="2" subsection="" subsubsection="" serial="1.2.2" slide="">
+            <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Elimination</paragraphs>
+          </title>
+          <slides environment="" chapter_type="">
+            <slide environment="" chapter_type="Chapter" canon_num="7" scope="subsection" id="s7" slide="7" course="MATH 1030" chapter="1" section="2" subsection="2" subsubsection="" chapter_title="Technique of solving system of linear equations" section_title="System of linear equations of two unknowns">
+              <keywords slide="7" environ="slide" chapter="1" course="MATH 1030"/>
+              <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="MATH 1030" chapter="1" section="2" subsection="2" subsubsection="" serial="" slide="7">
+                <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="2" subsubsection="" environment="title" wbtag="paragraphs">Elimination</paragraphs>
+              </title>
+              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="5" md5="de814b8113f364aaf2f1850642fc0c9f" course="MATH 1030" chapter="1" slide="7" item="1.5">
+                <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="2" subsubsection="" environment="statement" wbtag="paragraphs">  Again, let’s solve the system of linear equations from the previous example.
+\begin{equation}\label{v2elime1}3x+4y=2\end{equation}
+\begin{equation}\label{v2elime2}4x+5y=3\end{equation}
+Consider $\eqref{v2elime1}-\frac{3}{4}\eqref{v2elime2}$.</paragraphs>
+                <newline course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="2" subsubsection="" environment="statement"/>
+                <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="2" subsubsection="" environment="statement" wbtag="paragraphs">\begin{align*}
+&amp; 3x &amp; + &amp; 4y &amp; = &amp; 2 \\
+-)\quad &amp; 3x &amp; + &amp; \frac{15}4 y &amp; = &amp; \frac{9}4 \\
+\hline
+&amp;   &amp;  &amp; \frac{1}{4} y &amp;= &amp;-\frac{1}{4}
+\end{align*}
+Thus $y=-1$. Substituting it into $\eqref{v2elime1}$:
+\[3x+4(-1)=2\]
+\[x=2.\]
+So we obtain the solution $x=2$, $y=-1$.  </paragraphs>
+              </statement>
+              <newline course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="2" subsubsection="" environment=""/>
+              <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="340adadda21a12c6d241f5149471dcf9" course="MATH 1030" chapter="1" slide="7">
+                <enumerate course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="2" subsubsection="" environment="enumerate" wbtag="enumerate">
+                  <item course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="2" subsubsection="" environment="enumerate" wbtag="item">
+                    <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="2" subsubsection="" environment="enumerate" wbtag="paragraphs">  The number $\frac{3}{4}$ is so chosen such that the coefficient of $x$ is eliminated.  </paragraphs>
+                  </item>
+                  <item course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="2" subsubsection="" environment="enumerate" wbtag="item">
+                    <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="2" subsubsection="" environment="enumerate" wbtag="paragraphs">  At some point, we still need to use substitution to get the solution.  </paragraphs>
+                  </item>
+                </enumerate>
+              </substatement>
+              <newline course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="2" subsubsection="" environment=""/>
+            </slide>
+          </slides>
+        </subsection>
+        <subsection environment="" chapter_type="" type="Section" wbtag="subsection" title="Substitution" course="MATH 1030" chapter="1" section="2" num="3" serial="1.2.3">
+          <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="MATH 1030" chapter="1" section="2" subsection="" subsubsection="" serial="1.2.3" slide="">
+            <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Substitution</paragraphs>
+          </title>
+          <slides environment="" chapter_type="">
+            <slide environment="" chapter_type="Chapter" canon_num="8" scope="subsection" id="s8" slide="8" course="MATH 1030" chapter="1" section="2" subsection="3" subsubsection="" chapter_title="Technique of solving system of linear equations" section_title="System of linear equations of two unknowns">
+              <keywords slide="8" environ="slide" chapter="1" course="MATH 1030"/>
+              <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="MATH 1030" chapter="1" section="2" subsection="3" subsubsection="" serial="" slide="8">
+                <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="3" subsubsection="" environment="title" wbtag="paragraphs">Substitution</paragraphs>
+              </title>
+              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="6" md5="1b371e06004d09ae1d723d41f7f76612" course="MATH 1030" chapter="1" slide="8" item="1.6">
+                <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="3" subsubsection="" environment="statement" wbtag="paragraphs">  Solve the following system of linear equations
+\begin{equation}\label{v3sube1}x+2y+2z=4\end{equation}
+\begin{equation}\label{v3sube2}x+3y+3z=5\end{equation}
+\begin{equation}\label{v3sube3}2x+6y+5z=6\end{equation}</paragraphs>
+                <newline course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="3" subsubsection="" environment="statement"/>
+                <newcol course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="3" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="3" subsubsection="" environment="newcol" wbtag="paragraphs">  Find $x$ in terms of $y,z$ by $\eqref{v3sube1}$ :
+\begin{equation}\label{v3sube4}x=4-2y-2z.\end{equation}
+Substituting $\eqref{v3sube4}$ into $\eqref{v3sube2}$, we obtain
+\[(4-2y-2z)+3y+3z=5\]
+i.e.,
+\begin{equation}
+\label{v3sube5}y+z=1.
+\end{equation}  </paragraphs>
+                  <collapse course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="3" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="3" subsubsection="" environment="newcol" wbtag="paragraphs">  Substituting $\eqref{v3sube4}$ into $\eqref{v3sube3}$, we obtain
+\[2(4-2y-2z)+6y+5z=6,\]
+i.e.,
+\begin{equation}\label{v3sube6}2y+z=-2\end{equation}
+The equations are reduced to solving a linear system of equations with two unknowns:
+\[
+\begin{cases}
+y+z=1\\
+2y+z=-2
+\end{cases}
+\]  </paragraphs>
+                    <collapse course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="3" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="3" subsubsection="" environment="newcol" wbtag="paragraphs">  Solve $y$ in terms of $z$ by $\eqref{v3sube5}$:
+\begin{equation}\label{v3sube7}y=1-z\end{equation}
+Then substitute $y=1-z$ into $\eqref{v3sube6}$:
+\[2(1-z)+z=-2\]
+i.e.
+\[
+z=4.
+\]  </paragraphs>
+                      <collapse course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="3" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="3" subsubsection="" environment="newcol" wbtag="paragraphs">  By $\eqref{v3sube7}$
+\[y=1-z=-3.\]
+Substitute $y=-3$, $z=4$ into $\eqref{v3sube4}$,
+\[x=4-2y-2z=4-2\times(-3)-2\times 4=2.\]
+Hence $x=2,y=-3,z=4$ is a solution.  </paragraphs>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </newcol>
+              </statement>
+            </slide>
+          </slides>
+        </subsection>
+        <subsection environment="" chapter_type="" type="Section" wbtag="subsection" title="Elimination" course="MATH 1030" chapter="1" section="2" num="4" serial="1.2.4">
+          <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="MATH 1030" chapter="1" section="2" subsection="" subsubsection="" serial="1.2.4" slide="">
+            <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Elimination</paragraphs>
+          </title>
+          <slides environment="" chapter_type="">
+            <slide environment="" chapter_type="Chapter" canon_num="9" scope="subsection" id="s9" slide="9" course="MATH 1030" chapter="1" section="2" subsection="4" subsubsection="" chapter_title="Technique of solving system of linear equations" section_title="System of linear equations of two unknowns">
+              <keywords slide="9" environ="slide" chapter="1" course="MATH 1030"/>
+              <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="MATH 1030" chapter="1" section="2" subsection="4" subsubsection="" serial="" slide="9">
+                <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="4" subsubsection="" environment="title" wbtag="paragraphs">Elimination</paragraphs>
+              </title>
+              <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="4" subsubsection="" environment="" wbtag="paragraphs">  Using substitution all the way to solve linear equations is not the best way. Instead, we can use elimination to simplify the system of linear equations first.  </paragraphs>
+              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="7" md5="60f7320d5ebfe0d66a893c04ac2e3bc0" course="MATH 1030" chapter="1" slide="9" item="1.7">
+                <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="4" subsubsection="" environment="statement" wbtag="paragraphs">  We solve the following system by a sequence of equation operations.
+\[\displaystyle x+2y+2z=4 \tag{1}\]
+\[\displaystyle x+3y+3z=5 \tag{2}\]
+\[\displaystyle 2x+6y+5z=6 \tag{3}\]  </paragraphs>
+                <newcol course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="4" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="4" subsubsection="" environment="newcol" wbtag="paragraphs">  $-1$ times equation 1, add to equation 2:
+\[\displaystyle x+2y+2z=4\]
+\[\displaystyle 0x+1y+1z=1\]
+\[\displaystyle 2x+6y+5z=6\]  </paragraphs>
+                  <collapse course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="4" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="4" subsubsection="" environment="newcol" wbtag="paragraphs">  $-2$ times equation 1, add to equation 3:
+\[\displaystyle x+2y+2z=4\]
+\[\displaystyle 0x+1y+1z=1\]
+\[\displaystyle 0x+2y+1z=-2\]  </paragraphs>
+                    <collapse course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="4" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="4" subsubsection="" environment="newcol" wbtag="paragraphs">  $-2$ times equation 2, add to equation 3:
+\[\displaystyle x+2y+2z=4\]
+\[\displaystyle 0x+1y+1z=1\]
+\[\displaystyle 0x+0y-1z=-4\]  </paragraphs>
+                      <collapse course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="4" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="4" subsubsection="" environment="newcol" wbtag="paragraphs">  $-1$ times equation 3:
+\[\displaystyle x+2y+2z=4\]
+\[\displaystyle 0x+1y+1z=1\]
+\[\displaystyle 0x+0y+1z=4\]
+which can be written more clearly as:</paragraphs>
+                        <newline course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="4" subsubsection="" environment="newcol"/>
+                        <collapse course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="4" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="4" subsubsection="" environment="newcol" wbtag="paragraphs">  \[\displaystyle x+2y+2z=4\]
+\[\displaystyle y+z=1\]
+\[\displaystyle z=4\]  </paragraphs>
+                          <collapse course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="4" subsubsection="" environment="newcol" wbtag="collapse">
+                            <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="4" subsubsection="" environment="newcol" wbtag="paragraphs">  The third equation requires that $z=4$ to be true. Making this substitution into equation 2 we arrive at $y=-3$, and finally, substituting these values of $y$ and $z$ into the first equation, we find that $x=2$.  </paragraphs>
+                          </collapse>
+                        </collapse>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </newcol>
+              </statement>
+              <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="bab56abc382edc1829bb73afed2cc561" course="MATH 1030" chapter="1" slide="9">
+                <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="2" subsection="4" subsubsection="" environment="substatement" wbtag="paragraphs">  We can add several more eliminations to solve $x,y,z$ without substitution:
+\[\displaystyle x+2y+2z=4\]
+\[\displaystyle 0x+1y+1z=1\]
+\[\displaystyle 0x+0y+1z=4\]
+$-1$ times equation 3, add to equation 2 and $-2$ times equation 3, add to equation 1
+\[\displaystyle x+2y+0z=-4\]
+\[\displaystyle 0x+1y+0z=-3\]
+\[\displaystyle 0x+0y+1z=4\]
+$-2$ times equation 2, add to equation 1
+\[\displaystyle x+0y+0z=2\]
+\[\displaystyle 0x+1y+0z=-3\]
+\[\displaystyle 0x+0y+1z=4\]
+So $x=2,y=-3,z=4$ is a solution.  </paragraphs>
+              </substatement>
+            </slide>
+          </slides>
+        </subsection>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="More Examples" course="MATH 1030" chapter="1" num="3" serial="1.3">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="1" section="3" subsection="" subsubsection="" serial="" slide="">
+          <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">More Examples</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="10" scope="section" id="s10" slide="10" course="MATH 1030" chapter="1" section="3" subsection="" subsubsection="" chapter_title="Technique of solving system of linear equations" section_title="More Examples">
+            <keywords slide="10" environ="slide" chapter="1" course="MATH 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="1" section="3" subsection="" subsubsection="" serial="" slide="10">
+              <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">More Examples</paragraphs>
+            </title>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="8" md5="6d0972bf488da29acaf91983069fbe67" course="MATH 1030" chapter="1" slide="10" item="1.8">
+              <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  Solve:
+\begin{align}
+\displaystyle x_{1}-5x_{2}+3x_{3}&amp;=1 \tag{1}\\
+\displaystyle 2x_{1}-4x_{2}+x_{3}&amp;=0 \tag{2}\\
+\displaystyle x_{1}+x_{2}-2x_{3}&amp;=-1 \tag{3}
+\end{align}  </paragraphs>
+              <newcol course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  $-2$ times equation 1, add to equation 2:
+\begin{align*}
+x_1 - 5x_2 +  3x_3 &amp;= 1 \\
+0x_1  + 6x_2 -5 x_3 &amp;= -2 \\
+x_1 + x_2 -2x_3  &amp;= -1
+\end{align*}  </paragraphs>
+                <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  $-1$ times equation 1, add to equation 3:
+\begin{align*}
+x_1 - 5x_2 +  3x_3 &amp;= 1 \\
+0x_1+ 6x_2 -5 x_3 &amp;= -2 \\
+0x_1+ 6x_2 -5x_3  &amp;= -2
+\end{align*}  </paragraphs>
+                  <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  $-1$ times equation 2, add to equation 3:
+\begin{align*}
+x_1 - 5x_2 +  3x_3 &amp;= 1 \\
+0x_1+ 6x_2 -5 x_3 &amp;= -2 \\
+0x_1+0x_2+0x_3 &amp;= 0
+\end{align*}
+$\frac{5}{6}$ times equation 2, add to equation 1:
+\begin{align*}
+x_1 +0x_2 -\frac{7}{6}x_3 &amp;= -\frac{2}{3} \\
+0x_1+ 6x_2 -5 x_3 &amp;= -2 \\
+0x_1+0x_2+0x_3 &amp;= 0
+\end{align*}  </paragraphs>
+                    <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  We can express $x_{1},x_{2}$ in terms of $x_{3}$:
+\[\displaystyle x_{1}=-\frac{2}{3}+\frac{7}{6}x_{3}\]
+\[\displaystyle x_{2}=-\frac{1}{3}+\frac{5}{6}x_{3}\]  </paragraphs>
+                      <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  The solution set is:
+\[\left\{(-\frac{2}{3}+\frac{7}{6}a,-\frac{1}{3}+\frac{5}{6}a,a)\,|\,a\text{ real numbers}.\right\}\]  </paragraphs>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="11" id="s11" slide="11" course="MATH 1030" chapter="1" section="3" subsection="" subsubsection="" chapter_title="Technique of solving system of linear equations" section_title="More Examples">
+            <keywords slide="11" environ="slide" chapter="1" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="9" md5="c80d4b93749104c199f19d39e0ba900a" course="MATH 1030" chapter="1" slide="11" item="1.9">
+              <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  Solve:
+\begin{align*}
+x_1 - 5x_2 +  3x_3 &amp;= 1 \\
+2x_1 - 4x_2 + x_3 &amp;= 0 \\
+x_1 + x_2 -2x_3  &amp;= -2
+\end{align*}  </paragraphs>
+              <newcol course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  $-2$ times equation 1, add to equation 2:
+\begin{align*}
+x_1 - 5x_2 +  3x_3 &amp;= 1 \\
+0x_1+6x_2 -5 x_3 &amp;= -2 \\
+x_1 + x_2 -2x_3  &amp;= -2
+\end{align*}  </paragraphs>
+                <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  $-1$ times equation 1, add to equation 3:
+\begin{align*}
+x_1 - 5x_2 +  3x_3 &amp;= 1 \\
+0x_1+6x_2 -5 x_3 &amp;= -2 \\
+0x_1+6x_2 -5x_3  &amp;= -3
+\end{align*}  </paragraphs>
+                  <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  $-1$ times equation 2, add to equation 3:
+\begin{align*}
+x_1 - 5x_2 +  3x_3 &amp;= 1 \\
+0x_1+6x_2 -5 x_3 &amp;= -2 \\
+0x_1+0x_2+0x_3 &amp;= -1
+\end{align*}  </paragraphs>
+                    <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  The last equation, $0=-1$ has no solution. So the system of linear equations has no solution.  </paragraphs>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="12" id="s12" slide="12" course="MATH 1030" chapter="1" section="3" subsection="" subsubsection="" chapter_title="Technique of solving system of linear equations" section_title="More Examples">
+            <keywords slide="12" environ="slide" chapter="1" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="10" md5="622ecea1cde9099bd77067aa715ff5cc" course="MATH 1030" chapter="1" slide="12" item="1.10">
+              <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  Solve:
+\begin{align*}
+x_1+2x_2 +0x_3+ x_4&amp;= 7\\
+x_1+x_2+x_3-x_4&amp;=3\\
+3x_1+x_2+5x_3-7x_4&amp;=1
+\end{align*}  </paragraphs>
+              <newcol course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  $-1$ times equation 1, add to equation 2:
+\begin{align*}
+x_1+2x_2 +0x_3+ x_4&amp;= 7\\
+0x_1-x_2+x_3-2x_4&amp;=-4\\
+3x_1+x_2+5x_3-7x_4&amp;=1
+\end{align*}  </paragraphs>
+                <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  $-3$ times equation 1, add to equation 3:
+\begin{align*}
+x_1+2x_2 +0x_3+ x_4&amp;= 7\\
+0x_1-x_2+x_3-2x_4&amp;=-4\\
+0x_1-5x_2+5x_3-10x_4&amp;=-20
+\end{align*}  </paragraphs>
+                  <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  $-5$ times equation 2, add to equation 3:
+\begin{align*}
+x_1+2x_2 +0x_3+ x_4&amp;= 7\\
+0x_1-x_2+x_3-2x_4&amp;=-4\\
+0x_1+0x_2+0x_3+0x_4&amp;=0
+\end{align*}  </paragraphs>
+                    <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  $-1$ times equation 2:
+\begin{align*}
+x_1+2x_2 +0x_3+ x_4&amp;= 7\\
+0x_1+x_2-x_3+2x_4&amp;=4\\
+0x_1+0x_2+0x_3+0x_4&amp;=0
+\end{align*}  </paragraphs>
+                      <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  $-2$ times equation 2, add to equation 1:
+\begin{align*}
+x_1+0x_2 +2x_3-3x_4&amp;= -1\\
+0x_1+x_2-x_3+2x_4&amp;=4\\
+0x_1+0x_2+0x_3+0x_4&amp;=0
+\end{align*}
+which can be written more clearly as:</paragraphs>
+                        <newline course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                        <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  \begin{align*}
+x_1+2x_3 - 3x_4&amp;= -1\\
+x_2-x_3+2x_4&amp;=4\\
+0&amp;=0
+\end{align*}  </paragraphs>
+                          <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                            <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  The last equation $0=0$ is always true, so we can ignore it and only consider the first two equations. We can analyze the second equation without consideration of the variable $x_{1}$. It would appear that there is considerable latitude in how we can choose $x_{2}$, $x_{3}$, $x_{4}$ and make this equation true. Let us choose $x_{3}$ and $x_{4}$ to be </paragraphs>
+                            <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">anything</paragraphs>
+                            </strong>
+                            <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> we please, say $x_{3}=a$ and $x_{4}=b$.</paragraphs>
+                            <newline course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                            <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                              <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Now we can take these arbitrary values for $x_{3}$ and $x_{4}$, substitute them in equation 1, to obtain
+\[x_{1}+2a-3b=-1\]
+\[x_{1}=-1-2a+3b\]  </paragraphs>
+                              <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Similarly, equation 2 becomes
+\[x_{2}-a+2b=4\]
+\[x_{2}=4+a-2b\]  </paragraphs>
+                                <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                  <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  So our arbitrary choices of values for $x_{3}$ and $x_{4}$ ($a$ and $b$) translate into specific values of $x_{1}$ and $x_{2}$.</paragraphs>
+                                  <newline course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                                  <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                    <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Now we can easily and quickly find many more (infinitely more). Suppose we choose $a=5$ and $b=-2$, then we compute
+\[\displaystyle x_{1}=-1-2(5)+3(-2)=-17\]
+\[\displaystyle x_{2}=4+5-2(-2)=13\]  </paragraphs>
+                                    <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                      <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  and you can verify that $(x_{1},\,x_{2},\,x_{3},\,x_{4})=(-17,\,13,\,5,\,-2)$ makes all three equations true. The entire solution set is written as
+\[\{(-1-2a+3b,\,4+a-2b,\,a,\,b)\,|\,a,b\text{ real numbers}\}.\]  </paragraphs>
+                                    </collapse>
+                                  </collapse>
+                                </collapse>
+                              </collapse>
+                            </collapse>
+                          </collapse>
+                        </collapse>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="13" id="s13" slide="13" course="MATH 1030" chapter="1" section="3" subsection="" subsubsection="" chapter_title="Technique of solving system of linear equations" section_title="More Examples">
+            <keywords slide="13" environ="slide" chapter="1" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="11" md5="540ab3f62927ff3ef5f81892e26b2bf5" course="MATH 1030" chapter="1" slide="13" item="1.11">
+              <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  Solve the following system of linear equations:
+\[\begin{alignedat}{6}
+&amp; {} {} &amp;  x_2 &amp; {}+{} &amp; x_3 &amp; {}+{} &amp; 2x_4   &amp; {}+{} &amp; 2x_5 &amp;{}={} &amp; 2 \\
+x_1 &amp; {}+{} &amp;  2x_2 &amp; {}+{} &amp; 3x_3 &amp; {}+{} &amp; 2x_4 &amp;  {}+{}&amp;  3x_5&amp;{}={} &amp; 4 \\
+-2x_1 &amp; {}-{} &amp;  x_2 &amp; {}-{} &amp; 3x_3 &amp; {}+{} &amp; 3x_4 &amp; {}+{} &amp;  x_5   &amp;{}={} &amp; 3
+\end{alignedat}\]  </paragraphs>
+              <newcol course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Swap equation 1 and equation 2:
+\[\begin{alignedat}{6}
+x_1 &amp; {}+{} &amp;  2x_2 &amp; {}+{} &amp; 3x_3 &amp; {}+{} &amp; 2x_4 &amp;  {}+{}&amp;  3x_5&amp;{}={} &amp; 4 \\
+&amp; {} {} &amp;  x_2 &amp; {}+{} &amp; x_3 &amp; {}+{} &amp; 2x_4   &amp; {}+{} &amp; 2x_5 &amp;{}={} &amp; 2 \\
+-2x_1 &amp; {}-{} &amp;  x_2 &amp; {}-{} &amp; 3x_3 &amp; {}+{} &amp; 3x_4 &amp; {}+{} &amp;  x_5   &amp;{}={} &amp; 3
+\end{alignedat}\]  </paragraphs>
+                <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  2 times equation 1, and add it to equation 3:
+\[\begin{alignedat}{6}
+x_1 &amp; {}+{} &amp;  2x_2 &amp; {}+{} &amp; 3x_3 &amp; {}+{} &amp; 2x_4 &amp;  {}+{}&amp;  3x_5&amp;{}={} &amp; 4 \\
+&amp; {} {} &amp;  x_2 &amp; {}+{} &amp; x_3 &amp; {}+{} &amp; 2x_4   &amp; {}+{} &amp; 2x_5 &amp;{}={} &amp; 2 \\
+&amp; {} {} &amp; 3x_2 &amp; {}+{} &amp; 3x_3 &amp; {}+{} &amp; 7x_4 &amp;  {}+{} &amp;7x_5     &amp;{}={} &amp; 11
+\end{alignedat}\]  </paragraphs>
+                  <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  -3 times equation 2 and add it to equation 3:
+\[\begin{alignedat}{6}
+x_1 &amp; {}+{} &amp;  2x_2 &amp; {}+{} &amp; 3x_3 &amp; {}+{} &amp; 2x_4 &amp;  {}+{}&amp;  3x_5&amp;{}={} &amp; 4 \\
+&amp; {} {} &amp;  x_2 &amp; {}+{} &amp; x_3 &amp; {}+{} &amp; 2x_4   &amp; {}+{} &amp; 2x_5 &amp;{}={} &amp; 2 \\
+&amp; {} {} &amp;     &amp; {}  {} &amp;     &amp; {} {} &amp; x_4 &amp;  {}+{}  &amp; x_5 &amp;{}={} &amp; 5
+\end{alignedat}\]  </paragraphs>
+                    <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Now the system of linear equations looks like an ”inverted stair”.
+We can then solve the system of linear equations by substitution.
+(A better method well be given later.)</paragraphs>
+                      <newline course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                      <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  By the last equation:
+\[x_{4}=5-x_{5}.\]
+Solve $x_{2}$ in terms of other variables by equation 2:
+\[\displaystyle x_{2}=2-x_{3}-2x_{4}-2x_{5}\]
+\[\displaystyle=2-x_{3}-2(5-x_{5})-2x_{5}\]
+\[\displaystyle=-8-x_{3}\]  </paragraphs>
+                        <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Solve $x_{1}$ in terms of other variables by equation 1:
+\[\displaystyle x_{1}=4-2x_{2}-3x_{3}-2x_{4}-3x_{5}\]
+\[\displaystyle=4-2(-8-x_{3})-3x_{3}-2(5-x_{5})-3x_{5}\]
+\[\displaystyle=10-x_{3}-x_{5}.\]
+$x_{3},x_{5}$ can be taken as any values.</paragraphs>
+                          <newline course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                          <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                            <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Set $x_{3}=a$, $x_{5}=b$, the solution set can be given by
+\[\{(10-a-b,-8-a,a,5-b,b)\,|\,a,b\text{ real numbers}\}.\]  </paragraphs>
+                            <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                              <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">A better method:</paragraphs>
+                              </strong>
+                              <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Instead of subsitution, we could use more elimination:
+\[\begin{alignedat}{6}
+x_1 &amp; {}+{} &amp;  2x_2 &amp; {}+{} &amp; 3x_3 &amp; {}+{} &amp; 2x_4 &amp;  {}+{}&amp;  3x_5&amp;{}={} &amp; 4 \\
+&amp; {} {} &amp;  x_2 &amp; {}+{} &amp; x_3 &amp; {}+{} &amp; 2x_4   &amp; {}+{} &amp; 2x_5 &amp;{}={} &amp; 2 \\
+&amp; {} {} &amp;     &amp; {}  {} &amp;     &amp; {} {} &amp; x_4 &amp;  {}+{}  &amp; x_5 &amp;{}={} &amp; 5
+\end{alignedat}\]  </paragraphs>
+                              <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  -2 times equation 3 and add it to equation 2:
+\[\begin{alignedat}{6}
+x_1 &amp; {}+{} &amp;  2x_2 &amp; {}+{} &amp; 3x_3 &amp; {}+{} &amp; 2x_4 &amp;  {}+{}&amp;  3x_5&amp;{}={} &amp; 4 \\
+&amp; {} {} &amp;  x_2 &amp; {}+{} &amp; x_3 &amp; {} {} &amp;   &amp; {} {} &amp;  &amp;{}={} &amp; -8 \\
+&amp; {} {} &amp;     &amp; {}  {} &amp;     &amp; {} {} &amp; x_4 &amp;  {}+{}  &amp; x_5 &amp;{}={} &amp; 5
+\end{alignedat}\]  </paragraphs>
+                                <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                  <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  -2 times equation 3 and add it to equation 1:
+\[\begin{alignedat}{6}
+x_1 &amp; {}+{} &amp;  2x_2 &amp; {}+{} &amp; 3x_3 &amp; {}+{} &amp;     &amp;  {}+{}&amp;  x_5&amp;{}={} &amp; -6 \\
+&amp; {} {} &amp;  x_2 &amp; {}+{} &amp; x_3 &amp; {} {} &amp;   &amp; {} {} &amp;  &amp;{}={} &amp; -8 \\
+&amp; {} {} &amp;     &amp; {}  {} &amp;     &amp; {} {} &amp; x_4 &amp;  {}+{}  &amp; x_5 &amp;{}={} &amp; 5
+\end{alignedat}\]  </paragraphs>
+                                  <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                    <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  -2 times equation 2 and add it to equation 1:
+\[\begin{alignedat}{6}
+x_1 &amp; {}+{} &amp;      &amp; {}+{} &amp; x_3 &amp; {} {} &amp;     &amp;  {}+{}&amp;  x_5&amp;{}={} &amp;10 \\
+&amp; {} {} &amp;  x_2 &amp; {}+{} &amp; x_3 &amp; {} {} &amp;   &amp; {} {} &amp;  &amp;{}={} &amp; -8 \\
+&amp; {} {} &amp;     &amp; {}  {} &amp;     &amp; {} {} &amp; x_4 &amp;  {}+{}  &amp; x_5 &amp;{}={} &amp; 5
+\end{alignedat}\]  </paragraphs>
+                                    <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                      <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Notice the following:  </paragraphs>
+                                      <enumerate course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="enumerate" wbtag="enumerate">
+                                        <item course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="enumerate" wbtag="item">
+                                          <newcol course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                                            <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  The system of equations looks like an ”inverted” stairs.  </paragraphs>
+                                          </newcol>
+                                        </item>
+                                        <item course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="enumerate" wbtag="item">
+                                          <newcol course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                                            <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  The leftmost variables in the equations are $x_{1}$, $x_{2}$ and $x_{4}$.  </paragraphs>
+                                          </newcol>
+                                        </item>
+                                        <item course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="enumerate" wbtag="item">
+                                          <newcol course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                                            <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Only the first equation has variable $x_{1}$.  </paragraphs>
+                                          </newcol>
+                                        </item>
+                                        <item course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="enumerate" wbtag="item">
+                                          <newcol course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                                            <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Only the second equation has variable $x_{2}$.  </paragraphs>
+                                          </newcol>
+                                        </item>
+                                        <item course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="enumerate" wbtag="item">
+                                          <newcol course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                                            <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Only the third equation has variable $x_{4}$.  </paragraphs>
+                                          </newcol>
+                                        </item>
+                                      </enumerate>
+                                      <collapse course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                        <paragraphs course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Move $x_{3},x_{5}$ to another side.
+\begin{align*}
+x_1 &amp;= 10-x_3-x_5\\
+x_2 &amp;= -8-x_3\\
+x_4 &amp;= 5-x_5
+\end{align*}
+The right hand sides have $x_{3},x_{5}$ as variables only and $x_{3},x_{5}$ can be taken as any values.
+Set $x_{3}=a$, $x_{5}=b$, the solution set can be given by
+\[\{(10-a-b,-8-a,a,5-b,b)\,|\,a,b\text{ real numbers}\}.\]  </paragraphs>
+                                      </collapse>
+                                    </collapse>
+                                  </collapse>
+                                </collapse>
+                              </collapse>
+                            </collapse>
+                          </collapse>
+                        </collapse>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+            <comment course="MATH 1030" chapter="1" chapter_type="" section="3" subsection="" subsubsection="" environment="">DELIMITER</comment>
+          </slide>
+        </slides>
+      </section>
+    </chapter>
+  </course>
+</document>

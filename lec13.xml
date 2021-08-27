@@ -1,0 +1,652 @@
+<?xml version="1.0"?>
+<document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
+  <course environment="" chapter_type="" type="Course" wbtag="course" title="MATH 1030">
+    <keywords slide="all" environ="course" chapter="" course="MATH 1030">
+      <keyword chapter="" slide="all">Skip this lecture</keyword>
+      <keyword chapter="" slide="all">Warning</keyword>
+      <keyword chapter="" slide="all">Rotation</keyword>
+      <keyword chapter="" slide="all">Reflection</keyword>
+      <keyword chapter="" slide="all">Stretching</keyword>
+      <keyword chapter="" slide="all">change-of-basis matrix from $S$ to $S^{\prime}$</keyword>
+      <keyword chapter="" slide="all">similar matrices</keyword>
+    </keywords>
+    <title environment="title" chapter_type="" wbtag="course" scope="course" course="MATH 1030" chapter="" section="" subsection="" subsubsection="" serial="" slide="">MATH 1030</title>
+    <slides environment="" chapter_type="">
+      <slide environment="" chapter_type="" canon_num="1" scope="course" course="MATH 1030" title="MATH 1030" id="s1" slide="1" chapter="" section="" subsection="" subsubsection="" chapter_title="" section_title="">
+        <title environment="title" chapter_type="" wbtag="course" scope="course" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="1">MATH 1030</title>
+        <keywords slide="1" environ="slide" chapter="" course="MATH 1030"/>
+        <setchapter course="MATH 1030" chapter="" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="setchapter" argument="13"/>
+      </slide>
+    </slides>
+    <chapter environment="" chapter_type="Chapter" type="Chapter" wbtag="chapter" num="13" title="Linear transformations and change of basis" course="MATH 1030" serial="13">
+      <keywords slide="all" environ="chapter" chapter="13" course="MATH 1030">
+        <keyword chapter="13" slide="all">Skip this lecture</keyword>
+        <keyword chapter="13" slide="all">Warning</keyword>
+        <keyword chapter="13" slide="all">Rotation</keyword>
+        <keyword chapter="13" slide="all">Reflection</keyword>
+        <keyword chapter="13" slide="all">Stretching</keyword>
+        <keyword chapter="13" slide="all">change-of-basis matrix from $S$ to $S^{\prime}$</keyword>
+        <keyword chapter="13" slide="all">similar matrices</keyword>
+      </keywords>
+      <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="MATH 1030" chapter="13" section="" subsection="" subsubsection="" serial="" slide="">Linear transformations and change of basis</title>
+      <slides environment="" chapter_type="">
+        <slide environment="" chapter_type="Chapter" canon_num="2" scope="chapter" id="s2" slide="2" course="MATH 1030" chapter="13" section="" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="">
+          <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="2">Linear transformations and change of basis</title>
+          <keywords slide="2" environ="slide" chapter="13" course="MATH 1030">
+            <keyword chapter="13" slide="2">Skip this lecture</keyword>
+            <keyword chapter="13" slide="2">Warning</keyword>
+          </keywords>
+          <newline course="MATH 1030" chapter="13" chapter_type="" section="" subsection="" subsubsection="" environment=""/>
+          <inline_keyword course="MATH 1030" chapter="13" chapter_type="" section="" subsection="" subsubsection="" environment="">Skip this lecture</inline_keyword>
+          <newline course="MATH 1030" chapter="13" chapter_type="" section="" subsection="" subsubsection="" environment=""/>
+          <inline_keyword course="MATH 1030" chapter="13" chapter_type="" section="" subsection="" subsubsection="" environment="">Warning</inline_keyword>
+          <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">: the note is for reference only. It may contain typos. Read at your own risk. The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at http://linear.ups.edu/download.html.The print version can be downloaded at http://linear.ups.edu/download/fcla-3.50-print.pdf.</paragraphs>
+          <newline course="MATH 1030" chapter="13" chapter_type="" section="" subsection="" subsubsection="" environment=""/>
+          <h5 xmlns="http://www.w3.org/1999/xhtml" class="notkw" environment="">
+            <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">Reference.</paragraphs>
+          </h5>
+          <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Beezer, Ver 3.5 Section VR.</paragraphs>
+          <newline course="MATH 1030" chapter="13" chapter_type="" section="" subsection="" subsubsection="" environment=""/>
+        </slide>
+      </slides>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Matrices as linear transformation" course="MATH 1030" chapter="13" num="1" serial="13.1">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="13" section="1" subsection="" subsubsection="" serial="" slide="">
+          <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Matrices as linear transformation</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="3" scope="section" id="s3" slide="3" course="MATH 1030" chapter="13" section="1" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Matrices as linear transformation">
+            <keywords slide="3" environ="slide" chapter="13" course="MATH 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="13" section="1" subsection="" subsubsection="" serial="" slide="3">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Matrices as linear transformation</paragraphs>
+            </title>
+            <newline course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment=""/>
+            <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs">Let $A\in M_{mn}$, $\mathbf{v}\in{\mathbb{R}}^{n}$. Then $A\mathbf{v}\in{\mathbb{R}}^{m}$. We can define define a map, denoted by $L_{A}$ (stand for left multiplying), defined as
+\begin{align*}
+\displaystyle L_{A}:{\mathbb{R}}^{n}\rightarrow{\mathbb{R}}^{m}.
+\end{align*}
+\begin{align*}
+\displaystyle L_{A}(\mathbf{v})=A\mathbf{v}.
+\end{align*}  </paragraphs>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="4" id="s4" slide="4" course="MATH 1030" chapter="13" section="1" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Matrices as linear transformation">
+            <keywords slide="4" environ="slide" chapter="13" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="1" md5="f51809486d400eb3be081d8662729f49" course="MATH 1030" chapter="13" slide="4" item="13.1">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&amp;2&amp;3\\
+4&amp;5&amp;6\end{bmatrix}.
+\end{align*}  </paragraphs>
+              <newcol course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Then $L_{A}$ is a map from ${\mathbb{R}}^{3}\rightarrow{\mathbb{R}}^{2}$. Define by
+\begin{align*}
+\displaystyle L_{A}(\begin{bmatrix}x\\
+y\\
+z\end{bmatrix})=\begin{bmatrix}x+2y+3z\\
+4x+5y+6z\end{bmatrix}.
+\end{align*}  </paragraphs>
+              </newcol>
+            </statement>
+            <newcol course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  The map $L_{A}$ has the following properties:</paragraphs>
+              <newline course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+            </newcol>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="5" id="s5" slide="5" course="MATH 1030" chapter="13" section="1" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Matrices as linear transformation">
+            <keywords slide="5" environ="slide" chapter="13" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Proposition" wbtag="prop" num="2" md5="97ededd2c16402291f0570f570677a3e" course="MATH 1030" chapter="13" slide="5" item="13.2">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  For $\mathbf{v},\mathbf{u}\in{\mathbb{R}}^{n}$, $\alpha\in{\mathbb{R}}^{\hbox{}}$</paragraphs>
+              <newline course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $L_{A}(\mathbf{v}+\mathbf{u})=L_{A}(\mathbf{v})+L_{A}(\mathbf{u})$ </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $L_{A}(\alpha\mathbf{v})=\alpha L_{A}(\mathbf{v})$. </paragraphs>
+                </li>
+                <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              </ol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="97df82664b671feda7e0c4b502a7d732" course="MATH 1030" chapter="13" slide="5" of="97ededd2c16402291f0570f570677a3e" of-src-course="MATH 1030" of-src-chapter="13" of-src-slide="5" of-type="Proposition" of-item="13.2" of-src-filename="lec13.xml" ofmd5="97ededd2c16402291f0570f570677a3e" of-serial="">
+              <of-title hidden="true">Proposition 13.2</of-title>
+              <newcol course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="newcol">
+                  <li class="ltx_item" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $L_{A}(\mathbf{v}+\mathbf{u})=A(\mathbf{v}+\mathbf{u})=A\mathbf{v}+A\mathbf{u}=L_{A}(\mathbf{v})+L_{A}(\mathbf{u})$ </paragraphs>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $L_{A}(\alpha\mathbf{v})=A(\alpha\mathbf{v})=\alpha A(\mathbf{v})=\alpha L_{A}(\mathbf{v})$. </paragraphs>
+                  </li>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                </ol>
+                <newline course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                <qed course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="6" id="s6" slide="6" course="MATH 1030" chapter="13" section="1" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Matrices as linear transformation">
+            <keywords slide="6" environ="slide" chapter="13" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="3" md5="3a7a61770541d71ffc2c61ac1f96fcf2" course="MATH 1030" chapter="13" slide="6" item="13.3">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  Let $V,W$ be vector spaces (you can think of $V$ as subspace of ${\mathbb{R}}^{a}$ and $W$ as subspace of ${\mathbb{R}}^{b}$),
+$T:V\rightarrow W$.
+Then $T$ is said to be a linear transformation if for $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{u}\in W$.</paragraphs>
+              <newline course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $T(\mathbf{v}+\mathbf{u})=T(\mathbf{v})+T(\mathbf{u})$ </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $T(\alpha\mathbf{v})=\alpha T(\mathbf{v})$. </paragraphs>
+                </li>
+                <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              </ol>
+            </statement>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Geometric interpretation of some linear transformations" course="MATH 1030" chapter="13" num="2" serial="13.2">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="13" section="2" subsection="" subsubsection="" serial="" slide="">
+          <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Geometric interpretation of some linear transformations</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="7" scope="section" id="s7" slide="7" course="MATH 1030" chapter="13" section="2" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Geometric interpretation of some linear transformations">
+            <keywords slide="7" environ="slide" chapter="13" course="MATH 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="13" section="2" subsection="" subsubsection="" serial="" slide="7">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Geometric interpretation of some linear transformations</paragraphs>
+            </title>
+            <newline course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
+            <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">In below we regard $\begin{bmatrix}x\\
+y\end{bmatrix}$ as the point $(x,y)$ in the $xy$-plane.  </paragraphs>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="8" id="s8" slide="8" course="MATH 1030" chapter="13" section="2" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Geometric interpretation of some linear transformations">
+            <keywords slide="8" environ="slide" chapter="13" course="MATH 1030">
+              <keyword chapter="13" slide="8">Rotation</keyword>
+              <keyword chapter="13" slide="8">Reflection</keyword>
+              <keyword chapter="13" slide="8">Stretching</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="4" md5="05ce73a9771eefa40552541124701e72" course="MATH 1030" chapter="13" slide="8" item="13.4">
+              <inline_keyword course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">Rotation</inline_keyword>
+              <newline course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}\cos\theta&amp;-\sin\theta\\
+\sin\theta&amp;\cos\theta\end{bmatrix}.
+\end{align*}  </paragraphs>
+                <collapse course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Then $L_{A}$ is $\theta$ degree anticlockwise rotation.  </paragraphs>
+                </collapse>
+              </newcol>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="5" md5="7c53a4e3bd3e4d97ffc9b2faee41ceff" course="MATH 1030" chapter="13" slide="8" item="13.5">
+              <inline_keyword course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">Reflection</inline_keyword>
+              <newline course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Let $c$ be a real number,
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&amp;0\\
+0&amp;-1\end{bmatrix}\,\,\,(\text{resp.}A=\begin{bmatrix}-1&amp;0\\
+0&amp;1\end{bmatrix})
+\end{align*}  </paragraphs>
+                <collapse course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Then $L_{A}$ is a reflection through the $x$-axis (resp. $y$-axis).  </paragraphs>
+                </collapse>
+              </newcol>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="6" md5="da34235efdaf7abd97715177029c4d48" course="MATH 1030" chapter="13" slide="8" item="13.6">
+              <inline_keyword course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">Stretching</inline_keyword>
+              <newline course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Let $c$ be real number, then
+\begin{align*}
+\displaystyle A=\begin{bmatrix}k&amp;0\\
+0&amp;1\end{bmatrix}\,\,\,(\text{resp.}A=\begin{bmatrix}1&amp;0\\
+0&amp;k\end{bmatrix})
+\end{align*}  </paragraphs>
+                <collapse course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Then $L_{A}$ is a stretching of $x$-axis (resp. $y$-axis) by a factor of $k$.  </paragraphs>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Coordinate vector and change of basis" course="MATH 1030" chapter="13" num="3" serial="13.3">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="13" section="3" subsection="" subsubsection="" serial="" slide="">
+          <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Coordinate vector and change of basis</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="9" scope="section" id="s9" slide="9" course="MATH 1030" chapter="13" section="3" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Coordinate vector and change of basis">
+            <keywords slide="9" environ="slide" chapter="13" course="MATH 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="13" section="3" subsection="" subsubsection="" serial="" slide="9">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Coordinate vector and change of basis</paragraphs>
+            </title>
+            <newline course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment=""/>
+            <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="" wbtag="paragraphs">Let $V$ be a vector space(you can think of it as a subspace of ${\mathbb{R}}^{n}$). Let $B=\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\}$ be a basis for $V$. Recall the following theorem</paragraphs>
+            <newline course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment=""/>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="MATH 1030" chapter="13" section="3" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Coordinate vector and change of basis">
+            <keywords slide="10" environ="slide" chapter="13" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="7" md5="9cfabfff8a295f5cea21e7a7b44c7caa" course="MATH 1030" chapter="13" slide="10" item="13.7">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  Let $\mathbf{v}\in V$ and if
+\begin{align*}
+\displaystyle \mathbf{v}=\alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k},\,\,\alpha_{i}\in{\mathbb{R}}^{\hbox{}}&amp;
+\end{align*}
+then $\alpha_{1},\cdots,\alpha_{k}$ are unique, i.e.
+\begin{align*}
+\displaystyle \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k}=\beta_{1}\mathbf{v}_{1}+\cdots+\beta_{k}\mathbf{v}_{k},&amp;
+\end{align*}
+then
+\begin{align*}
+\displaystyle \alpha_{i}=\beta_{i},\,\,\,i=1,\ldots,k.
+\end{align*}  </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="6e09031ad3062839fdb7102e76c0c33c" course="MATH 1030" chapter="13" slide="10" of="9cfabfff8a295f5cea21e7a7b44c7caa" of-src-course="MATH 1030" of-src-chapter="13" of-src-slide="10" of-type="Theorem" of-item="13.7" of-src-filename="lec13.xml" ofmd5="9cfabfff8a295f5cea21e7a7b44c7caa" of-serial="">
+              <of-title hidden="true">Theorem 13.7</of-title>
+              <newcol course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  If (  </paragraphs>
+                <ref environment="newcol" chapter_type="" label="vlin2" wbtag="ref" course="MATH 1030" chapter="13" slide="10" referrer-type="Proof" referrer-md5="6e09031ad3062839fdb7102e76c0c33c">
+                  <title>UNDEFINED</title>
+                </ref>
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">) is true, then
+\begin{align*}
+\displaystyle (\alpha_{1}-\beta_{1})\mathbf{v}_{1}+\cdots+(\alpha_{k}-\beta_{k})\mathbf{v}_{k}=\mathbf{0}.
+\end{align*}  </paragraphs>
+                <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Because $S$ is a basis, it is linearly independent. Therefore
+\begin{align*}
+\displaystyle \alpha_{i}-\beta_{i}=0.
+\end{align*}  </paragraphs>
+                  <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Hence
+\begin{align*}
+\displaystyle \alpha_{i}=\beta_{i}.
+\end{align*}  </paragraphs>
+                    <qed course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </substatement>
+            <newcol course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  By the theorem, using notation in (  </paragraphs>
+              <ref environment="newcol" chapter_type="" label="vlin" wbtag="ref" course="MATH 1030" chapter="13" slide="10">
+                <title>UNDEFINED</title>
+              </ref>
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">), we can define
+\begin{align*}
+\displaystyle \rho_{B}(\mathbf{v})=\begin{bmatrix}\alpha_{1}\\
+\alpha_{2}\\
+\vdots\\
+\alpha_{k}\end{bmatrix}.
+\end{align*}  </paragraphs>
+            </newcol>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="11" id="s11" slide="11" course="MATH 1030" chapter="13" section="3" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Coordinate vector and change of basis">
+            <keywords slide="11" environ="slide" chapter="13" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="8" md5="36940979666479e210bd0bb401a30e43" course="MATH 1030" chapter="13" slide="11" item="13.8">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  Let $V={\mathbb{R}}^{3}$, $B=\{\mathbf{e}_{1},\mathbf{e}_{2},\mathbf{e}_{3}\}$.
+Then
+\begin{align*}
+\displaystyle \mathbf{v}=\begin{bmatrix}x\\
+y\\
+z\end{bmatrix}=x\mathbf{e}_{1}+y\mathbf{e}_{2}+z\mathbf{e}_{3}.
+\end{align*}  </paragraphs>
+              <newcol course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Hence
+\begin{align*}
+\displaystyle \rho_{B}(\mathbf{v})=\begin{bmatrix}x\\
+y\\
+z\end{bmatrix}.
+\end{align*}  </paragraphs>
+              </newcol>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="9" md5="33a2b12b5b35c6e38c6441ccc615f21e" course="MATH 1030" chapter="13" slide="11" item="13.9">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  Generally if $V={\mathbb{R}}^{n}$, $B=\{\mathbf{e}_{1},\ldots,\mathbf{e}_{n}\}$, then
+\begin{align*}
+\displaystyle \rho_{B}(\mathbf{v})=\mathbf{v}.
+\end{align*}  </paragraphs>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="10" md5="37e1d13f92ab3b2b1fe6bc10b28f426f" course="MATH 1030" chapter="13" slide="11" item="13.10">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  Let $V={\mathbb{R}}^{3}$,
+\begin{align*}
+\displaystyle B=\{\mathbf{v}_{1}=\begin{bmatrix}1\\
+1\\
+0\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}1\\
+1\\
+1\end{bmatrix},\mathbf{v}_{3}=\begin{bmatrix}1\\
+2\\
+3\end{bmatrix}\}.
+\end{align*}  </paragraphs>
+              <newcol course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  We can show that $B$ is linearly independent (exercise). Hence $B$ is a basis for $V$.
+Let
+\begin{align*}
+\displaystyle \mathbf{u}=\begin{bmatrix}3\\
+4\\
+3\end{bmatrix}.
+\end{align*}  </paragraphs>
+                <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Find $\rho_{B}(\mathbf{u})$. To find $\rho_{B}(\mathbf{u})$, we compute the coefficient
+\begin{align*}
+\displaystyle \mathbf{u}=x_{1}\mathbf{v}_{1}+x_{2}\mathbf{v}_{2}+x_{3}\mathbf{v}_{3},
+\end{align*}
+i.e.
+\begin{align*}
+\displaystyle x_{1}+x_{2}+x_{3}&amp;\displaystyle=3 \\
+\displaystyle x_{1}+x+2+2x_{3}&amp;\displaystyle=4 \\
+\displaystyle x+2+3x_{3}&amp;\displaystyle=3
+\end{align*}  </paragraphs>
+                  <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Solve the system of linear equations, we have $x_{1}=2$, $x_{2}=0$, $x_{3}=1$. Hence
+\begin{align*}
+\displaystyle \rho_{B}(\mathbf{u})=\begin{bmatrix}x_{1}\\
+x_{2}\\
+x_{3}\end{bmatrix}=\begin{bmatrix}2\\
+0\\
+1\end{bmatrix}.
+\end{align*}  </paragraphs>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="11" md5="abdd341a4e5b9918ca4453e79075312e" course="MATH 1030" chapter="13" slide="11" item="13.11">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  Let
+\begin{align*}
+\displaystyle B=\{\mathbf{v}_{1}=\begin{bmatrix}1\\
+2\\
+3\\
+4\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}1\\
+-1\\
+1\\
+-1\end{bmatrix},\mathbf{v}_{3}=\begin{bmatrix}-1\\
+1\\
+2\\
+2\end{bmatrix}.\}.
+\end{align*}  </paragraphs>
+              <newcol course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Let
+\begin{align*}
+\displaystyle \mathbf{u}=\begin{bmatrix}0\\
+3\\
+11\\
+8\end{bmatrix}.
+\end{align*} </paragraphs>
+                <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="newcol">
+                  <li class="ltx_item" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Show that $\mathbf{u}\in\left&lt;B\right&gt;$. </paragraphs>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence find $\rho_{B}(\mathbf{u})$. </paragraphs>
+                  </li>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                </ol>
+                <newline course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Find the solution of $\mathbf{u}=x_{1}\mathbf{v}_{1}+x_{2}\mathbf{v}_{2}+x_{3}\mathbf{v}_{3}$:
+\begin{align*}
+\displaystyle x_{1}+x_{2}-x_{3}&amp;\displaystyle=0 \\
+\displaystyle 2x_{1}-x_{2}+x_{3}&amp;\displaystyle=3 \\
+\displaystyle 3x_{1}+x_{2}+2x_{3}&amp;\displaystyle=11 \\
+\displaystyle 4x_{1}-x_{2}+2x_{3}&amp;\displaystyle=8
+\end{align*}  </paragraphs>
+                  <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  We find solution $x_{1}=1,x_{2}=2,x_{3}=3$. Hence
+\begin{align*}
+\displaystyle \rho_{B}(\mathbf{u})=\begin{bmatrix}1\\
+2\\
+3\end{bmatrix}.
+\end{align*}  </paragraphs>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Change of basis" course="MATH 1030" chapter="13" num="4" serial="13.4">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="13" section="4" subsection="" subsubsection="" serial="" slide="">
+          <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Change of basis</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="12" scope="section" id="s12" slide="12" course="MATH 1030" chapter="13" section="4" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Change of basis">
+            <keywords slide="12" environ="slide" chapter="13" course="MATH 1030">
+              <keyword chapter="13" slide="12">change-of-basis matrix from $S$ to $S^{\prime}$</keyword>
+            </keywords>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="13" section="4" subsection="" subsubsection="" serial="" slide="12">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Change of basis</paragraphs>
+            </title>
+            <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment=""/>
+            <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="" wbtag="paragraphs">Let $V$ be a vector space(you can think of it as a subspace of ${\mathbb{R}}^{n}$). Let $B=\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\}$ be a basis for $V$
+and $B^{\prime}=\{\mathbf{v}^{\prime}_{1},\ldots,\mathbf{v}^{\prime}_{k}\}$ be another basis for $V$. For $\mathbf{v}\in V$. We want to find the relation between $\rho_{B}(\mathbf{v})$ and $\rho_{B^{\prime}}(\mathbf{v})$.</paragraphs>
+            <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment=""/>
+            <newcol course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Let
+\begin{align*}
+\displaystyle \mathbf{v}_{i}=a_{1i}\mathbf{v}^{\prime}_{1}+a_{2i}\mathbf{v}^{\prime}_{2}+\cdots+a_{ki}\mathbf{v}^{\prime}_{k},&amp;
+\end{align*}
+i.e.
+\begin{align*}
+\displaystyle \rho_{B^{\prime}}(\mathbf{v}_{i})=\begin{bmatrix}a_{1i}\\
+a_{2i}\\
+\vdots\\
+a_{ki}\end{bmatrix}.
+\end{align*}  </paragraphs>
+              <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Define the </paragraphs>
+                <inline_keyword course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol">change-of-basis matrix from $S$ to $S^{\prime}$</inline_keyword>
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> as
+\begin{align*}
+\displaystyle C_{{B},{B^{\prime}}}=[\rho_{B^{\prime}}(\mathbf{v}_{1})|\rho_{B^{\prime}}(\mathbf{v}_{2})|\cdots|\rho_{B^{\prime}}(\mathbf{v}_{k})]=\begin{bmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1k}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2k}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{k1}&amp;a_{k2}&amp;\cdots&amp;a_{kk}\end{bmatrix}.
+\end{align*}  </paragraphs>
+              </collapse>
+            </newcol>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="13" id="s13" slide="13" course="MATH 1030" chapter="13" section="4" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Change of basis">
+            <keywords slide="13" environ="slide" chapter="13" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="12" md5="91f342c0abcf6f5b43e4de63b98d574f" course="MATH 1030" chapter="13" slide="13" item="13.12">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  For $\mathbf{v}\in V$,
+\begin{align*}
+\displaystyle \rho_{B^{\prime}}(\mathbf{v})=C_{{B},{B^{\prime}}}\rho_{B}(\mathbf{v}).
+\end{align*}  </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="cbdf166aaf87732a6b0b5df789ed4964" course="MATH 1030" chapter="13" slide="13" of="91f342c0abcf6f5b43e4de63b98d574f" of-src-course="MATH 1030" of-src-chapter="13" of-src-slide="13" of-type="Theorem" of-item="13.12" of-src-filename="lec13.xml" ofmd5="91f342c0abcf6f5b43e4de63b98d574f" of-serial="">
+              <of-title hidden="true">Theorem 13.12</of-title>
+              <newcol course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Let
+\begin{align*}
+\displaystyle \rho_{B}(\mathbf{v})=\begin{bmatrix}\alpha_{1}\\
+\alpha_{2}\\
+\vdots\\
+\alpha_{k}\end{bmatrix},\,\rho_{B^{\prime}}(\mathbf{v})=\begin{bmatrix}\alpha^{\prime}_{1}\\
+\alpha^{\prime}_{2}\\
+\vdots\\
+\alpha^{\prime}_{k}\end{bmatrix},
+\end{align*}
+i.e.
+\begin{align*}
+\displaystyle\mathbf{v}&amp;\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\cdots+\alpha_{k}\mathbf{v}_{k} \\
+&amp;\displaystyle=\alpha^{\prime}_{1}\mathbf{v}^{\prime}_{1}+\alpha^{\prime}_{2}\mathbf{v}^{\prime}_{2}+\cdots+\alpha^{\prime}_{k}\mathbf{v}^{\prime}_{k}.
+\end{align*}  </paragraphs>
+                <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  By   </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="vv'" wbtag="ref" course="MATH 1030" chapter="13" slide="13" referrer-type="Proof" referrer-md5="cbdf166aaf87732a6b0b5df789ed4964">
+                    <title>UNDEFINED</title>
+                  </ref>
+                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">,
+\begin{align*}
+\displaystyle\mathbf{v}&amp;\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\cdots+\alpha_{k}\mathbf{v}_{k} \\
+&amp;\displaystyle=\alpha_{1}(a_{11}\mathbf{v}^{\prime}_{1}+a_{21}\mathbf{v}^{\prime}_{2}+\cdots+a_{k1}\mathbf{v}^{\prime}_{k}) \\
+&amp;\displaystyle+\alpha_{2}(a_{12}\mathbf{v}^{\prime}_{1}+a_{22}\mathbf{v}^{\prime}_{2}+\cdots+a_{k2}\mathbf{v}^{\prime}_{k}) \\
+&amp;\displaystyle+\cdots \\
+&amp;\displaystyle+\alpha_{2}(a_{1k}\mathbf{v}^{\prime}_{1}+a_{2k}\mathbf{v}^{\prime}_{2}+\cdots+a_{kk}\mathbf{v}^{\prime}_{k}) \\
+&amp;\displaystyle=(a_{11}\alpha_{1}+a_{12}\alpha_{2}+\cdots+a_{1k}\alpha_{k})\mathbf{v}^{\prime}_{1} \\
+&amp;\displaystyle+(a_{21}\alpha_{1}+a_{22}\alpha_{2}+\cdots+a_{2k}\alpha_{k})\mathbf{v}^{\prime}_{2} \\
+&amp;\displaystyle+\cdots \\
+&amp;\displaystyle+(a_{k1}\alpha_{1}+a_{k2}\alpha_{2}+\cdots+a_{kk}\alpha_{k})\mathbf{v}^{\prime}_{2}
+\end{align*}  </paragraphs>
+                  <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Thus
+\begin{align*}
+\displaystyle \rho_{B^{\prime}}(\mathbf{v})=\begin{bmatrix}\alpha^{\prime}_{1}\\
+\alpha^{\prime}_{2}\\
+\vdots\\
+\alpha^{\prime}_{k}\end{bmatrix}=\begin{bmatrix}a_{11}\alpha_{1}+a_{12}\alpha_{2}+\cdots+a_{1k}\alpha_{k}\\
+a_{21}\alpha_{1}+a_{22}\alpha_{2}+\cdots+a_{2k}\alpha_{k}\\
+\vdots\\
+a_{k1}\alpha_{1}+a_{k2}\alpha_{2}+\cdots+a_{kk}\alpha_{k}\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle =\begin{bmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1k}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2k}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{k1}&amp;a_{k2}&amp;\cdots&amp;a_{kk}\end{bmatrix}\begin{bmatrix}\alpha_{1}\\
+\alpha_{2}\\
+\vdots\\
+\alpha_{k}\end{bmatrix}=C_{{B},{B^{\prime}}}\rho_{B}(\mathbf{v})
+\end{align*}  </paragraphs>
+                    <qed course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="14" id="s14" slide="14" course="MATH 1030" chapter="13" section="4" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Change of basis">
+            <keywords slide="14" environ="slide" chapter="13" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="13" md5="642ffb307fc38c1366c64eb97d948c01" course="MATH 1030" chapter="13" slide="14" item="13.13">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  In example 7,
+let $V={\mathbb{R}}^{3}$,
+\begin{align*}
+\displaystyle B=\{\mathbf{v}_{1}=\begin{bmatrix}1\\
+1\\
+0\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}1\\
+1\\
+1\end{bmatrix},\mathbf{v}_{3}=\begin{bmatrix}1\\
+2\\
+3\end{bmatrix}\},
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{u}=\begin{bmatrix}3\\
+4\\
+3\end{bmatrix}.
+\end{align*}  </paragraphs>
+              <newcol course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Then
+\begin{align*}
+\displaystyle \rho_{B}(\mathbf{u})=\begin{bmatrix}2\\
+0\\
+1\end{bmatrix}.
+\end{align*}
+\begin{align*}
+\displaystyle B^{\prime}=\{\mathbf{v}^{\prime}_{1}=\begin{bmatrix}0\\
+0\\
+1\end{bmatrix},\mathbf{v}^{\prime}_{2}=\begin{bmatrix}1\\
+0\\
+1\end{bmatrix},\mathbf{v}^{\prime}_{3}=\begin{bmatrix}1\\
+1\\
+-1\end{bmatrix}\}.
+\end{align*}  </paragraphs>
+                <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Then
+\begin{align*}
+\displaystyle\mathbf{v}_{1}&amp;\displaystyle=\mathbf{v}^{\prime}_{1}+\mathbf{v}^{\prime}_{3} \\
+\displaystyle\mathbf{v}_{2}&amp;\displaystyle=2\mathbf{v}^{\prime}_{1}+\mathbf{v}^{\prime}_{3} \\
+\displaystyle\mathbf{v}_{3}&amp;\displaystyle=6\mathbf{v}^{\prime}_{1}-\mathbf{v}^{\prime}_{2}+2\mathbf{v}^{\prime}_{3}.
+\end{align*}  </paragraphs>
+                  <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Then
+\begin{align*}
+\displaystyle C_{{B},{B^{\prime}}}=\begin{bmatrix}1&amp;2&amp;6\\
+0&amp;0&amp;-1\\
+1&amp;1&amp;2\end{bmatrix}
+\end{align*}  </paragraphs>
+                    <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  So
+\begin{align*}
+\displaystyle \rho_{B^{\prime}}(\mathbf{u})=C_{{B},{B^{\prime}}}\rho_{B}(\mathbf{u})=\begin{bmatrix}1&amp;2&amp;6\\
+0&amp;0&amp;-1\\
+1&amp;1&amp;2\end{bmatrix}\begin{bmatrix}2\\
+0\\
+1\end{bmatrix}=\begin{bmatrix}8\\
+-1\\
+4\end{bmatrix}.
+\end{align*}  </paragraphs>
+                      <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Verification:
+\begin{align*}
+\displaystyle \mathbf{u}=8\mathbf{v}^{\prime}_{1}-\mathbf{v}^{\prime}_{2}+4\mathbf{v}^{\prime}_{3},
+\end{align*}
+i.e.
+\begin{align*}
+\displaystyle \begin{bmatrix}3\\
+4\\
+3\end{bmatrix}=8\begin{bmatrix}0\\
+0\\
+1\end{bmatrix}-\begin{bmatrix}1\\
+0\\
+1\end{bmatrix}+4\begin{bmatrix}1\\
+1\\
+-1\end{bmatrix}.
+\end{align*}  </paragraphs>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Similar matrices" course="MATH 1030" chapter="13" num="5" serial="13.5">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="13" section="5" subsection="" subsubsection="" serial="" slide="">
+          <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Similar matrices</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="15" scope="section" id="s15" slide="15" course="MATH 1030" chapter="13" section="5" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Similar matrices">
+            <keywords slide="15" environ="slide" chapter="13" course="MATH 1030">
+              <keyword chapter="13" slide="15">similar matrices</keyword>
+            </keywords>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="13" section="5" subsection="" subsubsection="" serial="" slide="15">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Similar matrices</paragraphs>
+            </title>
+            <newline course="MATH 1030" chapter="13" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
+            <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs">In this section, we will give the motivation of </paragraphs>
+            <inline_keyword course="MATH 1030" chapter="13" chapter_type="" section="5" subsection="" subsubsection="" environment="">similar matrices</inline_keyword>
+            <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs">.
+Let $V={\mathbb{R}}^{n}$, $B=\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\}$ be a basis for $V$.
+Let $B^{\prime}=\{\mathbf{e}_{1},\ldots,\mathbf{e}_{n}\}$. Let $Q=C_{{B},{B^{\prime}}}$.
+Then for any $\mathbf{v}\in V$,
+\begin{align*}
+\displaystyle \rho_{B^{\prime}}(\mathbf{v})=C_{{B},{B^{\prime}}}\rho_{B}(\mathbf{v})
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{v}=Q\rho_{B}(\mathbf{v}).
+\end{align*}  </paragraphs>
+            <newcol course="MATH 1030" chapter="13" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  Let $\mathbf{w}=L_{A}(\mathbf{v})=A\mathbf{v}$. Then
+\begin{align*}
+\displaystyle \rho_{B^{\prime}}(\mathbf{w})=\rho_{B^{\prime}}(A\mathbf{v})
+\end{align*}
+\begin{align*}
+\displaystyle \rho_{B^{\prime}}(\mathbf{w})=A\mathbf{v}=A\rho_{B^{\prime}}(\mathbf{v})
+\end{align*}
+\begin{align*}
+\displaystyle Q\rho_{B}(\mathbf{w})=AQ\rho_{B}(\mathbf{v}).
+\end{align*}
+\begin{align*}
+\displaystyle \rho_{B}(\mathbf{w})=Q^{-1}AQ\rho_{B}(\mathbf{v}).
+\end{align*}  </paragraphs>
+              <collapse course="MATH 1030" chapter="13" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">  So we say that two matrices $A_{1},A_{2}$ are similar if there exists an invertible matrix $Q$ such that $Q^{-1}A_{1}Q=A_{2}$.
+More details will be given in lecture 19.</paragraphs>
+                <newline course="MATH 1030" chapter="13" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+              </collapse>
+            </newcol>
+            <comment course="MATH 1030" chapter="13" chapter_type="" section="5" subsection="" subsubsection="" environment="">DELIMITER</comment>
+          </slide>
+        </slides>
+      </section>
+    </chapter>
+  </course>
+</document>
