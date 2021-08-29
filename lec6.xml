@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="MATH 1030">
     <keywords slide="all" environ="course" chapter="" course="MATH 1030">
@@ -123,9 +122,7 @@
               <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$ and $\mathbf{u}$ is a vector of size $n$. Then the </paragraphs>
               <inline_keyword course="MATH 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">matrix-vector product</inline_keyword>
               <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$ with $\mathbf{u}$ is the linear combination
-\[A\mathbf{u}=\left[\mathbf{u}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{u}\right]_%
-{2}\mathbf{A}_{2}+\left[\mathbf{u}\right]_{3}\mathbf{A}_{3}+\cdots+\left[%
-\mathbf{u}\right]_{n}\mathbf{A}_{n}\]  </paragraphs>
+\[A\mathbf{u}=\left[\mathbf{u}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{u}\right]_{2}\mathbf{A}_{2}+\left[\mathbf{u}\right]_{3}\mathbf{A}_{3}+\cdots+\left[\mathbf{u}\right]_{n}\mathbf{A}_{n}\]  </paragraphs>
             </statement>
             <newline course="MATH 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment=""/>
             <newcol course="MATH 1030" chapter="6" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
@@ -192,9 +189,7 @@ A\mathbf{u}&amp;=2\begin{bmatrix}1\\
                 <of-title hidden="true">Systems of Linear Equations as Matrix Multiplication</of-title>
                 <newcol course="MATH 1030" chapter="6" chapter_type="" section="1" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="1" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs">  \[\displaystyle\mathbf{x}\text{ is a solution to } \mathcal{LS}(A,\mathbf{b})\]
-\[\displaystyle\iff\left[\mathbf{x}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{x}%
-\right]_{2}\mathbf{A}_{2}+\left[\mathbf{x}\right]_{3}\mathbf{A}_{3}+\cdots+%
-\left[\mathbf{x}\right]_{n}\mathbf{A}_{n}=\mathbf{b}\]
+\[\displaystyle\iff\left[\mathbf{x}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{x}\right]_{2}\mathbf{A}_{2}+\left[\mathbf{x}\right]_{3}\mathbf{A}_{3}+\cdots+\left[\mathbf{x}\right]_{n}\mathbf{A}_{n}=\mathbf{b}\]
 \[\displaystyle\iff\mathbf{x}\text{ is a solution to }A\mathbf{x}=\mathbf{b}\]  </paragraphs>
                 </newcol>
               </substatement>
@@ -277,9 +272,7 @@ Then, in particular this equality holds for the standard unit vectors, defined a
               <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">  Suppose $A$ is an $m\times n$ matrix and $\mathbf{B}_{1},\,\mathbf{B}_{2},\,\mathbf{B}_{3},\,\ldots,\,\mathbf{B}_{p}$ are the columns of an $n\times p$ matrix $B$. Then the </paragraphs>
               <inline_keyword course="MATH 1030" chapter="6" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">matrix product</inline_keyword>
               <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$ with $B$ is the $m\times p$ matrix whose $i$th column is the matrix-vector product $A\mathbf{B}_{i}$. Symbolically,
-\[AB=A\left[\mathbf{B}_{1}|\mathbf{B}_{2}|\mathbf{B}_{3}|\ldots|\mathbf{B}_{p}%
-\right]=\left[A\mathbf{B}_{1}|A\mathbf{B}_{2}|A\mathbf{B}_{3}|\ldots|A\mathbf{%
-B}_{p}\right].\]  </paragraphs>
+\[AB=A\left[\mathbf{B}_{1}|\mathbf{B}_{2}|\mathbf{B}_{3}|\ldots|\mathbf{B}_{p}\right]=\left[A\mathbf{B}_{1}|A\mathbf{B}_{2}|A\mathbf{B}_{3}|\ldots|A\mathbf{B}_{p}\right].\]  </paragraphs>
             </statement>
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="7" md5="2f993a5e110753e5d756f6181a85713c" course="MATH 1030" chapter="6" slide="6" item="6.7">
               <newcol course="MATH 1030" chapter="6" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
@@ -577,8 +570,7 @@ the transpose.  </paragraphs>
                 <of-title hidden="true">Matrix Multiplication and the Zero Matrix</of-title>
                 <newcol course="MATH 1030" chapter="6" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs">  We will prove (1) and leave (2) to you. Using the entry-by-entry definition of matrix multiplication, for $1\leq i\leq m$, $1\leq j\leq p$, we comoute
-\[\displaystyle\left[A{\cal O}_{n\times p}\right]_{ij}=\sum_{k=1}^{n}\left[A%
-\right]_{ik}\left[{\cal O}_{n\times p}\right]_{kj}\]
+\[\displaystyle\left[A{\cal O}_{n\times p}\right]_{ij}=\sum_{k=1}^{n}\left[A\right]_{ik}\left[{\cal O}_{n\times p}\right]_{kj}\]
 \[\displaystyle=\sum_{k=1}^{n}\left[A\right]_{ik}0\]
 \[\displaystyle=\sum_{k=1}^{n}0\]
 \[\displaystyle=0\]
@@ -645,13 +637,10 @@ I_5 = \begin{pmatrix}
                 <of-title hidden="true">Matrix Multiplication and Identity Matrix</of-title>
                 <newcol course="MATH 1030" chapter="6" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs">  Again, we will prove (1) and leave (2) to you. Using the entry-by-entry definition of matrix multiplication, for $1\leq i\leq m$, $1\leq j\leq n$, we compute
-\[\displaystyle\left[AI_{n}\right]_{ij}=\sum_{k=1}^{n}\left[A\right]_{ik}\left[I%
-_{n}\right]_{kj}\]
-\[\displaystyle=\left[A\right]_{ij}\left[I_{n}\right]_{jj}+\sum_{%
-\begin{subarray}{c}k=1\\
+\[\displaystyle\left[AI_{n}\right]_{ij}=\sum_{k=1}^{n}\left[A\right]_{ik}\left[I_{n}\right]_{kj}\]
+\[\displaystyle=\left[A\right]_{ij}\left[I_{n}\right]_{jj}+\sum_{\begin{subarray}{c}k=1\\
 k\neq j\end{subarray}}^{n}\left[A\right]_{ik}\left[I_{n}\right]_{kj}\]
-\[\displaystyle=\left[A\right]_{ij}(1)+\sum_{k=1,k\neq j}^{n}\left[A\right]_{ik}%
-(0)\]
+\[\displaystyle=\left[A\right]_{ij}(1)+\sum_{k=1,k\neq j}^{n}\left[A\right]_{ik}(0)\]
 \[\displaystyle=\left[A\right]_{ij}+\sum_{k=1,k\neq j}^{n}0\]
 \[\displaystyle=\left[A\right]_{ij}.\]
 So the matrices $A$ and $AI_{n}$ are equal entrywise. By the definition of matrix equality, they are equal matrices.  </paragraphs>
@@ -943,8 +932,7 @@ a_{31}&amp;a_{32}&amp;a_{33}&amp;a_{34}&amp;a_{35}\\
 a_{41}&amp;a_{42}&amp;a_{43}&amp;a_{44}&amp;a_{45}\\
 \end{bmatrix}\]
 Consider the row operation $3R_{2}+R_{3}$.
-\[A\xrightarrow{3R_{2}+R_{3}}B=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;a_{14}&amp;a_{15}%
-\\
+\[A\xrightarrow{3R_{2}+R_{3}}B=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;a_{14}&amp;a_{15}\\
 a_{21}&amp;a_{22}&amp;a_{23}&amp;a_{24}&amp;a_{25}\\
 3a_{21}+a_{31}&amp;3a_{22}+a_{32}&amp;3a_{23}+a_{33}&amp;3a_{24}+a_{34}&amp;3a_{25}+a_{35}\\
 a_{41}&amp;a_{42}&amp;a_{43}&amp;a_{44}&amp;a_{45}\\
