@@ -1,1649 +1,955 @@
 @course{MATH 1030}
 @setchapter{12}
-@chapter{Basis}
-<h5 class="notkw">Reference.</h5>
- Beezer, Ver 3.5 Section B (print version p233-238), Section D (print version p245-253)
-
-<h5 class="notkw">Exercise.</h5><ul>
-<li> Exercises with solutions can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf} (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$)
-
-Section B p.88-92 C10, C11, C12, M20 Section D
-p.92-96 C21, C23, C30, C31, C35, C36, C37, M20, M21. </li></ul>
-
-@section{Basis}
+@chapter{Linear Dependence and Span}
+<h5 class="notkw">Reference.</h5><ul>
+<li> Beezer, Ver 3.5 Section LDS (print version p105 - p113) </li>
+<li> Strang, Sect 2.3 </li></ul><h5 class="notkw">Exercise</h5><ul>
+<li> Exercises with solutions can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf} Section LI (p.48-51) (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$ in the following questions)
+C20, C40, C50, C51, C52, C55, C70, M10, T40. </li>
+<li> Strang, Sect 2.3 </li></ul>
+@section{Linearly Independent Sets of Vectors}
+@label{LISV}
 @defn
- Let $V$ be a vector space. Then a subset $S$ of $V$ is said to be a @keyword{basis} for $V$ if <ol class="ltx_enumerate">
-<li class="ltx_item"> $S$ is linearly independent. </li>
-<li class="ltx_item"> $\left< S\right>=V$, i.e. $S$ spans $V$. </li></ol>
+@title{Relation of Linear Dependence}
+@label{RLDCV}
+  Given a set of vectors $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\}$, an equality of the form
+\begin{align*}
+\displaystyle \alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}+\cdots+\alpha_{n}\mathbf{u}_{n}=\mathbf{0}
+\end{align*}
+is a @keyword{relation of linear dependence} on $S$. If this equality is formed in a trivial fashion, i.e., $\alpha_{i}=0$, $1\leq i\leq n$, then we say that it is the @keyword{trivial relation of linear dependence} on $S$.  
+@end
+@defn
+@title{Linear Independence}
+@label{LICV}
+@newcol
+  The set of vectors $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\}$ is @keyword{linearly dependent} if there is a relation of linear dependence on $S$ that is not trivial. In the case where the only relation of linear dependence on $S$ is the trivial one, then $S$ is a @keyword{linearly independent} set of vectors.  
+@endcol
 @end
 @remark
 @newcol
- Most of the time $V$ is a subspace of ${\mathbb{R}}^{m}$. Occasionally $V$ is assumed to be a subspace of $M_{mn}$ or $P_{n}$. It does not hurt to assume $V$ is a subspace of ${\mathbb{R}}^{m}$. 
+  In short, a set of vectors $\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\}$ is linearly independent if and only if the only solution to:
+\[
+x_1 \mathbf{u}_1 + x_2 \mathbf{u}_2 + \cdots + x_n \mathbf{u}_n = \mathbf{0}
+\]
+is:
+\[
+x_1 = x_2 = \cdots = x_n = 0.
+\]  
 @endcol
 @end
 @slide
-@eg
- Let $V={\mathbb{R}}^{m}$, then $B=\left\{\mathbf{e}_{1},\ldots,\mathbf{e}_{m}\right\}$ is a basis for $V$.
-(recall all the entries of $\mathbf{e}_{i}$ is zero, except the $i$-th entry being $1$).
+@thm
+@title{Linearly Independent Vectors and Homogeneous Systems}
+@label{LIVHS}
+  Suppose that $S=\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\ldots,\,\mathbf{v}_{n}\}\subseteq{\mathbb{R}}^{m}$ is a set of vectors and that $A$ is the $m\times n$ matrix whose columns are the vectors in $S$. Then $S$ is a linearly independent set if and only if the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$ has a unique solution.  
+@end
+@proof
 
+($\Leftarrow$)  
 @newcol
- It is called the @keyword{standard basis}: Obviously $B$ is linearly independent. Also, for any $\mathbf{v}\in V$, $\mathbf{v}=[\mathbf{v}]_{1}\mathbf{e}_{1}+\cdots+[\mathbf{v}]_{m}\mathbf{e}_{m}\in\left< B\right>$. So $\left< B\right>=V$. 
+  Suppose that $\mathcal{LS}({A},{\mathbf{0}})$ has a unique solution. Since it is a homogeneous system, this solution must be the trivial solution, $\mathbf{x}=\mathbf{0}$. This means that the only relation of linear dependence on $S$ is the trivial one. So $S$ is linearly independent.  
+@endcol
+
+($\Rightarrow$)  
+@newcol
+  We will prove the contrapositive. Suppose that $\mathcal{LS}({A},{\mathbf{0}})$ does not have a unique solution. Since it is a homogeneous system, it is consistent. And so must have infinitely many solutions. One of these infinitely many solutions must be nontrivial (in fact, almost all of them are); choose one. This nontrivial solution will give a nontrivial relation of linear dependence on $S$. We therefore conclude that $S$ is a linearly dependent set.  
+@endcol
+@qed
+@end
+@slide
+  Since the above theorem is an "if-and-only-if" statement, we can use it to determine the linear independence or dependence of any set of column vectors, just by creating a matrix and analyzing its row-reduced echelon form. Let us illustrate this with two more examples.  
+@slide
+@eg
+@label{LDS}
+@keyword{Linearly dependent set in ${\mathbb{R}}^{5}$}
+
+Consider the following set of $n=4$ vectors in ${\mathbb{R}}^{5}$:
+\begin{align*}
+\displaystyle S=
+\left\{\begin{bmatrix}2\\
+-1\\
+3\\
+1\\
+2\end{bmatrix},\,\begin{bmatrix}1\\
+2\\
+-1\\
+5\\
+2\end{bmatrix},\,\begin{bmatrix}2\\
+1\\
+-3\\
+6\\
+1\end{bmatrix},\,\begin{bmatrix}-6\\
+7\\
+-1\\
+0\\
+1\end{bmatrix}
+\right\}
+\end{align*}  
+@newcol
+  To determine linear independence, we first form an arbitrary relation of linear dependence,
+\begin{align*}
+\displaystyle \alpha_{1}\begin{bmatrix}2\\
+-1\\
+3\\
+1\\
+2\end{bmatrix}+\alpha_{2}\begin{bmatrix}1\\
+2\\
+-1\\
+5\\
+2\end{bmatrix}+\alpha_{3}\begin{bmatrix}2\\
+1\\
+-3\\
+6\\
+1\end{bmatrix}+\alpha_{4}\begin{bmatrix}-6\\
+7\\
+-1\\
+0\\
+1\end{bmatrix}=\mathbf{0}
+\end{align*}
+We know that $\alpha_{1}=\alpha_{2}=\alpha_{3}=\alpha_{4}=0$ is a solution to this equation, but that is of no interest whatsoever. That is always the case, no matter what four vectors we might have chosen. We are curious to know if there are other, nontrivial, solutions.
+
+In other words, are there nontrivial solutions to the homogeneous linear system
+$\mathcal{LS}(A, \mathbf{0})$, where the columns of $A$ consist of the vectors in $S$.
+
+@col
+  Row-reducing the matrix $A$ gives:
+\begin{align*}
+\displaystyle A=\begin{bmatrix}2&1&2&-6\\
+-1&2&1&7\\
+3&-1&-3&-1\\
+1&5&6&0\\
+2&2&1&1\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&-2\\
+0&\boxed{1}&0&4\\
+0&0&\boxed{1}&-3\\
+0&0&0&0\\
+0&0&0&0\end{bmatrix}.
+\end{align*}
+We could solve the corresponding homogeneous system completely, but for this example all we need is one nontrivial solution. Setting the lone free variable to any nonzero value, such as $x_{4}=1$, yields the nontrivial solution:
+\begin{align*}
+\displaystyle \mathbf{x}=\begin{bmatrix}2\\
+-4\\
+3\\
+1\end{bmatrix}.
+\end{align*}  
+@col
+  Hence,
+\begin{align*}
+\displaystyle 2\begin{bmatrix}2\\
+-1\\
+3\\
+1\\
+2\end{bmatrix}+(-4)\begin{bmatrix}1\\
+2\\
+-1\\
+5\\
+2\end{bmatrix}+3\begin{bmatrix}2\\
+1\\
+-3\\
+6\\
+1\end{bmatrix}+1\begin{bmatrix}-6\\
+7\\
+-1\\
+0\\
+1\end{bmatrix}=\mathbf{0}.
+\end{align*}
+This is a relation of linear dependence on $S$ that is not trivial, so we conclude that $S$ is <strong>linearly dependent</strong>.  
 @endcol
 @end
+@eg
+@label{LIS}
+@newcol
+@keyword{Linearly independent set in ${\mathbb{R}}^{5}$}
+
+Consider the following set of $n=4$ vectors in ${\mathbb{R}}^{5}$:
+\begin{align*}
+\displaystyle T=
+\left\{\begin{bmatrix}2\\
+-1\\
+3\\
+1\\
+2\end{bmatrix},\,\begin{bmatrix}1\\
+2\\
+-1\\
+5\\
+2\end{bmatrix},\,\begin{bmatrix}2\\
+1\\
+-3\\
+6\\
+1\end{bmatrix},\,\begin{bmatrix}-6\\
+7\\
+-1\\
+1\\
+1\end{bmatrix}
+\right\}.
+\end{align*}
+To determine linear independence we first form an arbitrary relation of linear dependence,
+\begin{align*}
+\displaystyle \alpha_{1}\begin{bmatrix}2\\
+-1\\
+3\\
+1\\
+2\end{bmatrix}+\alpha_{2}\begin{bmatrix}1\\
+2\\
+-1\\
+5\\
+2\end{bmatrix}+\alpha_{3}\begin{bmatrix}2\\
+1\\
+-3\\
+6\\
+1\end{bmatrix}+\alpha_{4}\begin{bmatrix}-6\\
+7\\
+-1\\
+1\\
+1\end{bmatrix}=\mathbf{0}.
+\end{align*}  
+@col
+  We want to know if there are solutions to the equation above besides the trivial one: $\alpha_{1}=\alpha_{2}=\alpha_{3}=\alpha_{4}=0$.
+
+Row-reducing the associated matrix gives:
+\begin{align*}
+\displaystyle B=\begin{bmatrix}2&1&2&-6\\
+-1&2&1&7\\
+3&-1&-3&-1\\
+1&5&6&1\\
+2&2&1&1\end{bmatrix}&\displaystyle\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&0\\
+0&\boxed{1}&0&0\\
+0&0&\boxed{1}&0\\
+0&0&0&\boxed{1}\\
+0&0&0&0\end{bmatrix}.
+\end{align*}  
+@col
+  From the form of this matrix, we see that there are no free variables. Hence the associated homogeneous linear system has only the trivial solution. So we now know that there is but one way to combine the four vectors of $T$ into a relation of linear dependence, and that this one way is the easy and obvious way. Hence, the set $T$ is <strong>linearly independent</strong>.  
+@endcol
+@end
+
+@subsection{More Examples}
 @slide
 @skip
 @eg
-<strong>Math major only</strong>
+@label{LIHS}
+@keyword{Linearly independent}
 
 @newcol
- Consider $V=M_{22}$. Let:
+  Is the set of vectors:
 \begin{align*}
-\displaystyle B_{11}&=\begin{bmatrix}1&0\\
-0&0\end{bmatrix},
-&
-B_{12}&=\begin{bmatrix}0&1\\
-0&0\end{bmatrix},
-\end{align*}
-
-\begin{align*}
-\displaystyle B_{21}&=\begin{bmatrix}0&0\\
-1&0\end{bmatrix},
-&
-B_{22}&=\begin{bmatrix}0&0\\
-0&1\end{bmatrix},
-\end{align*} 
-@col
- Then $B=\left\{B_{11},B_{12},B_{21},B_{22}\right\}$ is a basis for $V$.
-
-@col
- Check: Obviously $B$ is linearly independent (exercise). Also for any $A\in V$,
-\begin{align*}
-\displaystyle A=\begin{bmatrix}a&b\\
-c&d\end{bmatrix}=aB_{11}+bB_{12}+cB_{21}+dB_{22}.
-\end{align*} 
-@col
- So $\left< B\right>=M_{22}$. 
-@endcol
-@end
-
-@ex
-<strong>Math major only</strong>
-
-@newcol
- Let $V=M_{mn}$.
-
-For $1\leq i\leq m$, $1\leq j\leq n$,
-let $B_{ij}$ be the $m\times n$ matrix with $(i,j)$-th entry equal to $1$ and all other entries equal to $0$.
-
-Then $\left\{ B_{ij} | 1\leq i \leq m, 1\leq j\leq n\right\}$ is a basis for $V$. 
-@endcol
-@end
-
-@eg
-<strong>Math major only</strong>
-
-@newcol
- Let $V=P_{n}$. Then $1,x,x^{2},\ldots,x^{n}$ is a basis. It is easy to show that $S=\left\{1,x,x^{2},\ldots,x^{n}\right\}$ is linearly independent. Also any polynomial
-\begin{align*}
-\displaystyle f(x)=a_{0}+a_{1}x+a_{2}x^{2}+\cdots+a_{n}x^{n}
-\end{align*} 
-@col
- is a linear combinations of $S$.
-
-@endcol
-@end
-@slide
-@eg
- A vector space can have different bases.
-
-Consider the vector space $V={\mathbb{R}}^{2}$.
-
-Then,
-\[
-S=\left\{\mathbf{e}_{1},\mathbf{e}_{2}\right\}
-\]
-is a basis for $V$, and:
-
-@newcol
- \[
-S^{\prime}=\left\{\begin{bmatrix}1\\
-0\end{bmatrix},\begin{bmatrix}1\\
-1\end{bmatrix}\right\}
-\]
-is also a basis. 
-@endcol
-@end
-@section{Bases for spans of column vectors}
-
-Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\right\}$ be a subset of ${\mathbb{R}}^{m}$
-Recall from lecture 14,
-that there are several methods to find a subset
-$T\subseteq \{ S \}$.
-
-@newcol
- Such that (i) $T$ is linearly independent (ii) $\left< T\right>=\left< S\right>$. (In other words $T$ is a basis for $\left< S\right>$.)
-
-<strong style="">Method 1</strong>
-@newcol
- Let $A=[\mathbf{v}_{1}|\cdots|\mathbf{v}_{n}]\xrightarrow{\text{RREF}}B$.
-
-@col
- Suppose $D=\left\{d_{1},\ldots,d_{r}\right\}$ be the indexes of the pivot columns of $B$.
-
-@col
- Let $T=\left\{\mathbf{v}_{d_{1}},\ldots,\mathbf{v}_{d_{r}}\right\}$. Then $T$ is a basis for $\left< S\right>=\mathcal{C}\left(A\right)$ 
-@endcol
-
-<strong style="">Method 2</strong>
-@newcol
- Let $A=[\mathbf{v}_{1}|\cdots|\mathbf{v}_{n}]$. Suppose $A^{t}\xrightarrow{\text{RREF}}B$.
-
-@col
- Let $T$ be the nonzero columns of $B^{t}$. Then $T$ is a basis for $\left< S\right>=\mathcal{C}\left(A\right)$
-
-This is an example from Lecture 14. 
-@endcol
-@endcol
-@slide
-@eg
-@keyword{Column space from row operations}
-
-Let
-\begin{align*}
-\displaystyle S=\left\{\mathbf{v}_{1}=\begin{bmatrix}1\\
+\displaystyle S=
+\left\{\begin{bmatrix}
 2\\
-0\\
--1\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}4\\
-8\\
-0\\
--4\end{bmatrix},\mathbf{v}_{3}=\begin{bmatrix}0\\
 -1\\
-2\\
-2\end{bmatrix},\mathbf{v}_{4}=\begin{bmatrix}-1\\
 3\\
--3\\
-4\end{bmatrix},\mathbf{v}_{5}=\begin{bmatrix}0\\
-9\\
--4\\
-8\end{bmatrix},\mathbf{v}_{6}=\begin{bmatrix}7\\
--13\\
-12\\
--31\end{bmatrix},\mathbf{v}_{7}=\begin{bmatrix}-9\\
-7\\
--8\\
-37\end{bmatrix}\right\}.
-\end{align*} 
-@newcol
- Find a basis for $\left< S\right>$.
-\begin{align*}
-\displaystyle A=[\mathbf{v}_{1}|\cdots|\mathbf{v}_{7}]=\begin{bmatrix}1&4&0&-1&0&7&-9\\
-2&8&-1&3&9&-13&7\\
-0&0&2&-3&-4&12&-8\\
--1&-4&2&4&8&-31&37\end{bmatrix}.
-\end{align*}
-
-<strong>Method 1</strong>
-@newcol
- \begin{align*}
-\displaystyle A\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&4&0&0&2&1&-3\\
-0&0&\boxed{1}&0&1&-3&5\\
-0&0&0&\boxed{1}&2&-6&6\\
-0&0&0&0&0&0&0\end{bmatrix}
-\end{align*} 
-@col
- Let
-\begin{align*}
-\displaystyle T=\left\{\mathbf{v}_{1},\mathbf{v}_{3},\mathbf{v}_{4}\right\}=\left\{\begin{bmatrix}1\\
-2\\
-0\\
--1\end{bmatrix},\begin{bmatrix}0\\
--1\\
-2\\
-2\end{bmatrix},\begin{bmatrix}-1\\
-3\\
--3\\
-4\end{bmatrix}\right\}.
-\end{align*} 
-@col
- Then $T$ is a basis for $\left< S\right>=\mathcal{C}\left(A\right)$. 
-@endcol
-
-<strong>Method 2</strong>
-@newcol
- The transpose of $A$ is
-\begin{align*}
-\displaystyle \begin{bmatrix}1&2&0&-1\\
-4&8&0&-4\\
-0&-1&2&2\\
--1&3&-3&4\\
-0&9&-4&8\\
-7&-13&12&-31\\
--9&7&-8&37\end{bmatrix}.
-\end{align*} 
-@col
- Row-reduced this becomes,
-\begin{align*}
-\displaystyle D=\begin{bmatrix}\boxed{1}&0&0&-\frac{31}{7}\\
-0&\boxed{1}&0&\frac{12}{7}\\
-0&0&\boxed{1}&\frac{13}{7}\\
-0&0&0&0\\
-0&0&0&0\\
-0&0&0&0\\
-0&0&0&0\end{bmatrix}.
-\end{align*} 
-@col
- Then we can take
-\begin{align*}
-\displaystyle T=\left\{\begin{bmatrix}1\\
-0\\
-0\\
--\frac{31}{7}\end{bmatrix},\,\begin{bmatrix}0\\
-1\\
-0\\
-\frac{12}{7}\end{bmatrix},\,\begin{bmatrix}0\\
-0\\
-1\\
-\frac{13}{7}\end{bmatrix}\right\}.
-\end{align*}
-
-$T$ is a basis for $\mathcal{C}\left(A\right)=\left< S\right>$. 
-@endcol
-@endcol
-@end
-@slide
-@thm
-@label{basisexists}
- Let $S$ be a finite subset of ${\mathbb{R}}^{m}$.
-Then, a basis for $\left< S\right>$ exists.
-
-@newcol
- In fact, there exists a subset $T$ of $S$ such that $T$ is a basis for $\left< S\right>$ (see @ref{BCS}). 
-@endcol
-@end
-@section{
-
-Row Space of a Matrix}
-<!--@slide@defn
-Let $n$ be a positive integer.
-A @keyword{row vector} or size $n$ is an array of real numbers of the form:
-\[
-\left(v_1, v_2, \ldots, v_n\right),\quad v_i \in \mathbb{R}.
-\]
-In the context of this course, it is perfectly reasonable to view a row vector
-as simply a $1 \times n$ matrix.
-
-@col
-In fact,
-the standard laws of addition and scalar multiplication on row vectors
-of size $n$ are those defined for $1 \times n$ matrices (see @ref{MEASM}).
-That is:
-\begin{multline*}
-\left(v_1 , v_2 , \ldots , v_n\right) + \left(w_1, w_2, \ldots, w_n\right)
-= \left(v_1 + w_1, v_2 + w_2, \ldots, v_n + w_n\right),\\
- \quad v_i, w_i \in \mathbb{R};
-\end{multline*}
-\[
-\alpha\left(v_1, v_2, \ldots, v_n\right)
-=
-\left(\alpha v_1, \alpha v_2, \ldots, \alpha v_n\right), \quad v_i, \alpha \in \mathbb{R}.
-\]
-@col
-For any fixed positive integer $n$,
-by @ref{fb1ac45c60c8c59135e7173658dededc} the set of all row vectors of size $n$
-is a vector space under the laws of addition and scalar multiplication defined above.
-@end@slide-->
-
-@defn
-@title{Row Space of a Matrix}
- Suppose $A$ is an $m\times n$ matrix.
-The @keyword{row space} of $A$,
-$\mathcal{R}\!\left(A\right)$ is column space $\mathcal{C}\left(A^t\right)$ of $A^t$. 
-@end
-
-Informally, the row space is the set of all linear combinations of the rows of $A$. However, we write the rows as column vectors, thus the necessity of using the transpose to make the rows into columns. Additionally, with the row space defined in terms of the column space, all of the previous results of this section can be applied to row spaces.
-
-@newcol
- Notice that if $A$ is a rectangular $m\times n$ matrix, then $\mathcal{C}\left(A\right)\subseteq{\mathbb{R}}^{m}$, while $\mathcal{R}\!\left(A\right)\subseteq{\mathbb{R}}^{n}$ and the two sets are not comparable since they do not even hold objects of the same type. However, when $A$ is square of size $n$, both $\mathcal{C}\left(A\right)$ and $\mathcal{R}\!\left(A\right)$ are subsets of ${\mathbb{R}}^{n}$, though usually the sets will not be equal. 
-@endcol
-@slide
-@eg
- Find $\mathcal{R}\!\left(A\right)$ for
-\begin{align*}
-\displaystyle A=\begin{bmatrix}1&4&0&-1&0&7&-9\\
-2&8&-1&3&9&-13&7\\
-0&0&2&-3&-4&12&-8\\
--1&-4&2&4&8&-31&37\end{bmatrix}.
-\end{align*} 
-@newcol
- To build the row space, we transpose the matrix,
-\begin{align*}
-\displaystyle A^{t}=\begin{bmatrix}1&2&0&-1\\
-4&8&0&-4\\
-0&-1&2&2\\
--1&3&-3&4\\
-0&9&-4&8\\
-7&-13&12&-31\\
--9&7&-8&37\end{bmatrix}
-\end{align*} 
-@col
- Then the columns of this matrix are used in a span to build the row space,
-\begin{align*}
-\displaystyle \mathcal{R}\!\left(A\right)=\mathcal{C}\left(A^{t}\right)=\left< \left\{\begin{bmatrix}1\\
 4\\
-0\\
--1\\
-0\\
-7\\
--9\end{bmatrix},\,\begin{bmatrix}2\\
-8\\
--1\\
-3\\
-9\\
--13\\
-7\end{bmatrix},\,\begin{bmatrix}0\\
-0\\
-2\\
--3\\
--4\\
-12\\
--8\end{bmatrix},\,\begin{bmatrix}-1\\
--4\\
-2\\
-4\\
-8\\
--31\\
-37\end{bmatrix}\right\}\right>.
-\end{align*} 
-@col
- First, row-reduce $A^{t}$,
-\begin{align*}
-\displaystyle \begin{bmatrix}\boxed{1}&0&0&-\frac{31}{7}\\
-0&\boxed{1}&0&\frac{12}{7}\\
-0&0&\boxed{1}&\frac{13}{7}\\
-0&0&0&0\\
-0&0&0&0\\
-0&0&0&0\\
-0&0&0&0\end{bmatrix}.
-\end{align*} 
-@col
- Since the pivot columns have indices $D=\left\{1,\,2,\,3\right\}$, the column space of $A^{t}$ can be spanned by just the first three columns of $A^{t}$,
-\begin{align*}
-\displaystyle \mathcal{R}\!\left(A\right)=\mathcal{C}\left(A^{t}\right)=\left< \left\{\begin{bmatrix}1\\
-4\\
-0\\
--1\\
-0\\
-7\\
--9\end{bmatrix},\,\begin{bmatrix}2\\
-8\\
--1\\
-3\\
-9\\
--13\\
-7\end{bmatrix},\,\begin{bmatrix}0\\
-0\\
-2\\
--3\\
--4\\
-12\\
--8\end{bmatrix}\right\}\right>.
-\end{align*} 
-@endcol
-@end
-@slide
-@thm
-@title{Row-Equivalent Matrices have Equal Row Spaces}
-@label{REMRS}
- Suppose $A$ and $B$ are row-equivalent matrices. Then $\mathcal{R}\!\left(A\right)=\mathcal{R}\!\left(B\right)$. 
-@end
-@proof
-@newcol
- Observe that if $B$ is obtained from $A$ via a row operation of the type
-$R_i \leftrightarrow R_j$,
-then the rows of $B$ are the same as the rows of $A$,
-and hence the columns of $B^t$ are still the same as the columns of $A^t$,
-only with the order changed.  Hence,
-\[
-\mathcal{R}(B) = \mathcal{C}\left(B^t\right) = \mathcal{C}\left(A^t\right) = \mathcal{R}(A).
-\]
-
-@col
- If $B$ is obtained from $A$ via a row operation of the type $\alpha R_i$ ($\alpha \neq 0$),
-then the $i$-th column of $B^t$ is equal to $\alpha$ times the $i$-th column of $A^t$,
-and the other columns remain the same as those of $A^t$ with the corresponding indices.
-
-In paricular, the $i$-th column of $B^t$ is a linear combination of the columns of $A^t$.
-
-@col
- Hence, the columns of $B^t$ all lie in $\mathcal{C}(A^t)$, which in turn implies that:
-\[
-\mathcal{R}(B) = \mathcal{C}\left(B^t\right) \subseteq \mathcal{C}\left(A^t\right) = \mathcal{R}(A).
-\] 
-@col
- On the other hand, if $B$ is obtained from $A$ via $\alpha R_i$, then $A$ is obtained
-from $B$ via $\left(\frac{1}{\alpha}\right) R_i$.  So, by the same argument as before we have:
-\[
-\mathcal{R}(A) = \mathcal{C}\left(A^t\right) \subseteq \mathcal{C}\left(B^t\right) = \mathcal{R}(B).
-\]
-Hence, $\mathcal{R}(B) = \mathcal{R}(A)$.
-
-@col
- If $B$ is obtained from $A$ via a row operation of the type $\alpha R_i + R_j$,
-then:
-\[
-\left[B^t\right]_j = \alpha\left[A^t\right]_i + \left[A^t\right]_j,
-\]
-and the other columns of $B^t$ remain the same as those of $A^t$
-with the corresponding indices.
-
-In paricular, the $i$-th column of $B^t$ is a linear combination of the columns of $A^t$.
-
-@col
- Hence, the columns of $B^t$ all lie in $\mathcal{C}(A^t)$, which in turn implies that:
-\[
-\mathcal{R}(B) = \mathcal{C}\left(B^t\right) \subseteq \mathcal{C}\left(A^t\right) = \mathcal{R}(A).
-\] 
-@col
- On the other hand, if $B$ is obtained from $A$ via $\alpha R_i + R_j$, then $A$ is obtained
-from $B$ via $(-\alpha) R_i + R_j$.  So, by the same argument as before we have:
-\[
-\mathcal{R}(A) = \mathcal{C}\left(A^t\right) \subseteq \mathcal{C}(B^t) = \mathcal{R}(B).
-\]
-Hence, $\mathcal{R}(B) = \mathcal{R}(A)$.
-
-@col
- We now see that the row space of a matrix remains unchanged after any application
-of a row operation.
-
-Hence, $\mathcal{R}(B) = \mathcal{R}(A)$ if $B$ is row-equivalent to $A$,
-since by the definition of row-equivalence (@ref{dacc247eacab6b0b430f64f7de449ebe}) $B$ is obtained by $A$ via a series
-of row operations. 
-@endcol
-@end
-<!--@proof@col
-Two matrices are row-equivalent if one can be obtained from another by a sequence of (possibly many) row operations. We will prove the theorem for two matrices that differ by a single row operation, and then this result can be applied repeatedly to get the full statement of the theorem. The row spaces of $A$ and $B$ are spans of the columns of their transposes. For each row operation we perform on a matrix, we can define an analogous operation on the columns. Perhaps we should call these @keyword{column operations}. Instead, we will still call them row operations, but we will apply them to the columns of the transposes.
-
-@col
-Refer to the columns of $A^{t}$ and $B^{t}$ as $\mathbf{A}_{i}$ and $\mathbf{B}_{i}$, $1\leq i\leq m$. The row operation that switches rows will just switch columns of the transposed matrices. This will have no effect on the possible linear combinations formed by the columns.
-
-@col
-Suppose that $B^{t}$ is formed from $A^{t}$ by multiplying column $\mathbf{A}_{t}$ by $\alpha\neq 0$. In other words, $\mathbf{B}_{t}=\alpha\mathbf{A}_{t}$, and $\mathbf{B}_{i}=\mathbf{A}_{i}$ for all $i\neq t$. We need to establish that two sets are equal, $\mathcal{C}\left(A^{t}\right)=\mathcal{C}\left(B^{t}\right)$. We will take a generic element of one and show that it is contained in the other.
-\begin{align*}
-\displaystyle\beta_{1}\mathbf{B}_{1}+&\displaystyle\beta_{2}\mathbf{B}_{2}+\beta_{3}\mathbf{B}_{3}+\cdots+\beta_{t}\mathbf{B}_{t}+\cdots+\beta_{m}\mathbf{B}_{m} \\
-&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\beta_{3}\mathbf{A}_{3}+\cdots+\beta_{t}\left(\alpha\mathbf{A}_{t}\right)+\cdots+\beta_{m}\mathbf{A}_{m} \\
-&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\beta_{3}\mathbf{A}_{3}+\cdots+\left(\alpha\beta_{t}\right)\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m}
-\end{align*}
-@col
-says that $\mathcal{C}\left(B^{t}\right)\subseteq\mathcal{C}\left(A^{t}\right)$. Similarly,
-\begin{align*}
-\displaystyle\gamma_{1}\mathbf{A}_{1}+&\displaystyle\gamma_{2}\mathbf{A}_{2}+\gamma_{3}\mathbf{A}_{3}+\cdots+\gamma_{t}\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
-&\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\gamma_{3}\mathbf{A}_{3}+\cdots+\left(\frac{\gamma_{t}}{\alpha}\alpha\right)\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
-&\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\gamma_{3}\mathbf{A}_{3}+\cdots+\frac{\gamma_{t}}{\alpha}\left(\alpha\mathbf{A}_{t}\right)+\cdots+\gamma_{m}\mathbf{A}_{m} \\
-&\displaystyle=\gamma_{1}\mathbf{B}_{1}+\gamma_{2}\mathbf{B}_{2}+\gamma_{3}\mathbf{B}_{3}+\cdots+\frac{\gamma_{t}}{\alpha}\mathbf{B}_{t}+\cdots+\gamma_{m}\mathbf{B}_{m}
-\end{align*}
-@col
-says that $\mathcal{C}\left(A^{t}\right)\subseteq\mathcal{C}\left(B^{t}\right)$. So $\mathcal{R}\!\left(A\right)=\mathcal{C}\left(A^{t}\right)=\mathcal{C}\left(B^{t}\right)=\mathcal{R}\!\left(B\right)$ when a single row operation of the second type is performed.
-
-@col
-Suppose now that $B^{t}$ is formed from $A^{t}$ by replacing $\mathbf{A}_{t}$ with $\alpha\mathbf{A}_{s}+\mathbf{A}_{t}$ for some $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $s\neq t$. In other words, $\mathbf{B}_{t}=\alpha\mathbf{A}_{s}+\mathbf{A}_{t}$, and $\mathbf{B}_{i}=\mathbf{A}_{i}$ for $i\neq t$.
-\begin{align*}
-\displaystyle\beta_{1}\mathbf{B}_{1}+&\displaystyle\beta_{2}\mathbf{B}_{2}+\cdots+\beta_{s}\mathbf{B}_{s}+\cdots+\beta_{t}\mathbf{B}_{t}+\cdots+\beta_{m}\mathbf{B}_{m} \\
-&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\beta_{s}\mathbf{A}_{s}+\cdots+\beta_{t}\left(\alpha\mathbf{A}_{s}+\mathbf{A}_{t}\right)+\cdots+\beta_{m}\mathbf{A}_{m} \\
-&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\beta_{s}\mathbf{A}_{s}+\cdots+\left(\beta_{t}\alpha\right)\mathbf{A}_{s}+\beta_{t}\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m} \\
-&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\beta_{s}\mathbf{A}_{s}+\left(\beta_{t}\alpha\right)\mathbf{A}_{s}+\cdots+\beta_{t}\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m} \\
-&\displaystyle=\beta_{1}\mathbf{A}_{1}+\beta_{2}\mathbf{A}_{2}+\cdots+\left(\beta_{s}+\beta_{t}\alpha\right)\mathbf{A}_{s}+\cdots+\beta_{t}\mathbf{A}_{t}+\cdots+\beta_{m}\mathbf{A}_{m}
-\end{align*}
-@col
-says that $\mathcal{C}\left(B^{t}\right)\subseteq\mathcal{C}\left(A^{t}\right)$. Similarly,
-\begin{align*}
-\displaystyle\gamma_{1}&\displaystyle\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\cdots+\gamma_{s}\mathbf{A}_{s}+\cdots+\gamma_{t}\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
-&\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\cdots+\gamma_{s}\mathbf{A}_{s}+\cdots+\left(-\alpha\gamma_{t}\mathbf{A}_{s}+\alpha\gamma_{t}\mathbf{A}_{s}\right)+\gamma_{t}\mathbf{A}_{t}+\cdots+\gamma_{m}\mathbf{A}_{m} \\
-&\displaystyle=\gamma_{1}\mathbf{A}_{1}+\gamma_{2}\mathbf{A}_{2}+\cdots+\left(-\alpha\gamma_{t}+\gamma_{s}\right)\mathbf{A}_{s}+\cdots+\gamma_{t}\left(\alpha\mathbf{A}_{s}+\mathbf{A}_{t}\right)+\cdots+\gamma_{m}\mathbf{A}_{m} \\
-&\displaystyle=\gamma_{1}\mathbf{B}_{1}+\gamma_{2}\mathbf{B}_{2}+\cdots+\left(-\alpha\gamma_{t}+\gamma_{s}\right)\mathbf{B}_{s}+\cdots+\gamma_{t}\mathbf{B}_{t}+\cdots+\gamma_{m}\mathbf{B}_{m}
-\end{align*}
-@col
-says that $\mathcal{C}\left(A^{t}\right)\subseteq\mathcal{C}\left(B^{t}\right)$. So $\mathcal{R}\!\left(A\right)=\mathcal{C}\left(A^{t}\right)=\mathcal{C}\left(B^{t}\right)=\mathcal{R}\!\left(B\right)$ when a single row operation of the third type is performed.
-
-@col
-So the row space of a matrix is preserved by each row operation, and hence row spaces of row-equivalent matrices are equal sets.
-@qed@end-->
-
-@slide
-@eg
-@keyword{Row spaces of two row-equivalent matrices}
-
-The matrices
-\begin{align*}
-\displaystyle A&\displaystyle=\begin{bmatrix}2&-1&3&4\\
-5&2&-2&3\\
-1&1&0&6\end{bmatrix}&\displaystyle B&\displaystyle=\begin{bmatrix}1&1&0&6\\
-3&0&-2&-9\\
-2&-1&3&4\end{bmatrix}
-\end{align*} 
-@newcol
- are row-equivalent via a sequence of two row operations.
-
-Hence by the above theorem
-\begin{align*}
-\displaystyle \mathcal{R}\!\left(A\right)=\left< \left\{\begin{bmatrix}2\\
--1\\
-3\\
-4\end{bmatrix},\,\begin{bmatrix}5\\
-2\\
--2\\
-3\end{bmatrix},\,\begin{bmatrix}1\\
-1\\
-0\\
-6\end{bmatrix}\right\}\right>=\left< \left\{\begin{bmatrix}1\\
-1\\
-0\\
-6\end{bmatrix},\,\begin{bmatrix}3\\
-0\\
--2\\
--9\end{bmatrix},\,\begin{bmatrix}2\\
--1\\
-3\\
-4\end{bmatrix}\right\}\right>=\mathcal{R}\!\left(B\right)
-\end{align*} 
-@endcol
-@end
-@slide
-@thm
-@title{Basis for the Row Space}
-@label{BRS}
- Suppose that $A$ is a matrix and $B$ is a row-equivalent matrix in reduced row-echelon form. Let $S$ be the set of nonzero columns of $B^{t}$. Then <ol class="ltx_enumerate">
-<li class="ltx_item"> $\mathcal{R}\!\left(A\right)=\left< S\right>$. </li>
-<li class="ltx_item"> $S$ is a linearly independent set. </li></ol>
-@end
-@proof
-@newcol
- From Theorem    @ref{REMRS}. we know that $\mathcal{R}\!\left(A\right)=\mathcal{R}\!\left(B\right)$. If $B$ has any zero rows, these are columns of $B^{t}$ that are the zero vector. We can safely toss out the zero vector in the span construction, since it can be recreated from the nonzero vectors by a linear combination where all the scalars are zero. So $\mathcal{R}\!\left(A\right)=\left< S\right>$.
-
-@col
- Suppose $B$ has $r$ nonzero rows and let $D=\left\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\right\}$ denote the indices of the pivot columns of $B$. Denote the $r$ column vectors of $B^{t}$, the vectors in $S$, as $\mathbf{B}_{1},\,\mathbf{B}_{2},\,\mathbf{B}_{3},\,\ldots,\,\mathbf{B}_{r}$. To show that $S$ is linearly independent, start with a relation of linear dependence
-\begin{align*}
-\displaystyle \alpha_{1}\mathbf{B}_{1}+\alpha_{2}\mathbf{B}_{2}+\alpha_{3}\mathbf{B}_{3}+\cdots+\alpha_{r}\mathbf{B}_{r}=\mathbf{0}
-\end{align*} 
-@col
- Now consider this vector equality in location $d_{i}$. Since $B$ is in reduced row-echelon form, the entries of column $d_{i}$ of $B$ are all zero, except for a leading 1 in row $i$. Thus, in $B^{t}$, row $d_{i}$ is all zeros, excepting a 1 in column $i$. So, for $1\leq i\leq r$,
-\begin{align*}
-\displaystyle 0&\displaystyle=\left[\mathbf{0}\right]_{d_{i}} \\
-&\displaystyle=\left[\alpha_{1}\mathbf{B}_{1}+\alpha_{2}\mathbf{B}_{2}+\alpha_{3}\mathbf{B}_{3}+\cdots+\alpha_{r}\mathbf{B}_{r}\right]_{d_{i}} \\
-&\displaystyle=\left[\alpha_{1}\mathbf{B}_{1}\right]_{d_{i}}+\left[\alpha_{2}\mathbf{B}_{2}\right]_{d_{i}}+\left[\alpha_{3}\mathbf{B}_{3}\right]_{d_{i}}+\cdots+\left[\alpha_{r}\mathbf{B}_{r}\right]_{d_{i}} \\
-&\displaystyle=\alpha_{1}\left[\mathbf{B}_{1}\right]_{d_{i}}+\alpha_{2}\left[\mathbf{B}_{2}\right]_{d_{i}}+\alpha_{3}\left[\mathbf{B}_{3}\right]_{d_{i}}+\cdots+\alpha_{r}\left[\mathbf{B}_{r}\right]_{d_{i}} \\
-&\displaystyle=\alpha_{1}(0)+\alpha_{2}(0)+\alpha_{3}(0)+\cdots+\alpha_{i}(1)+\cdots+\alpha_{r}(0) \\
-&\displaystyle=\alpha_{i}
-\end{align*} 
-@col
- So we conclude that $\alpha_{i}=0$ for all $1\leq i\leq r$, establishing the linear independence of $S$. 
-@qed
-@endcol
-@end
-@slide
-@eg
-@keyword{Improving a span}
-
-Suppose in the course of analyzing a matrix (its column space, its null space, its ...) we encounter the following set of vectors, described by a span
-\begin{align*}
-\displaystyle X=\left< \left\{\begin{bmatrix}1\\
-2\\
-1\\
+2
+\end{bmatrix},
+\,
+\begin{bmatrix}
 6\\
-6\end{bmatrix},\,\begin{bmatrix}3\\
--1\\
 2\\
 -1\\
-6\end{bmatrix},\,\begin{bmatrix}1\\
--1\\
-0\\
--1\\
--2\end{bmatrix},\,\begin{bmatrix}-3\\
-2\\
--3\\
-6\\
--10\end{bmatrix}\right\}\right>
-\end{align*} 
-@newcol
- Let $A$ be the matrix whose rows are the vectors in $X$, so by design $X=\mathcal{R}\!\left(A\right)$,
-\begin{align*}
-\displaystyle A=\begin{bmatrix}1&2&1&6&6\\
-3&-1&2&-1&6\\
-1&-1&0&-1&-2\\
--3&2&-3&6&-10\end{bmatrix}
-\end{align*} 
-@col
- Row-reduce $A$ to form a row-equivalent matrix in reduced row-echelon form,
-\begin{align*}
-\displaystyle B=\begin{bmatrix}\boxed{1}&0&0&2&-1\\
-0&\boxed{1}&0&3&1\\
-0&0&\boxed{1}&-2&5\\
-0&0&0&0&0\end{bmatrix}
-\end{align*} 
-@col
- Then the above theorem says we can grab the nonzero columns of $B^{t}$ and write
-\begin{align*}
-\displaystyle X=\mathcal{R}\!\left(A\right)=\mathcal{R}\!\left(B\right)=\left< \left\{\begin{bmatrix}1\\
-0\\
-0\\
-2\\
--1\end{bmatrix},\,\begin{bmatrix}0\\
-1\\
-0\\
 3\\
-1\end{bmatrix},\,\begin{bmatrix}0\\
-0\\
-1\\
--2\\
-5\end{bmatrix}\right\}\right>
-\end{align*} 
-@col
- These three vectors provide a much-improved description of $X$. There are fewer vectors, and the pattern of zeros and ones in the first three entries makes it easier to determine membership in $X$. 
-@endcol
-@end
-@slide
-@thm
-@title{Column Space, Row Space, Transpose}
-@label{CSRST}
- Suppose $A$ is a matrix. Then $\mathcal{C}\left(A\right)=\mathcal{R}\!\left(A^{t}\right)$. 
-@end
-@proof
-@newcol
- \begin{align*}
-\displaystyle \mathcal{C}\left(A\right)=\mathcal{C}\left(\left(A^{t}\right)^{t}\right)=\mathcal{R}\!\left(A^{t}\right)
-\end{align*} 
-@qed
-@endcol
-@end
-@slide
-@eg
-@keyword{Column space from row operations}
-
-Find the column space of $A$ in @ref{cb807061818215f8c700c6df6edc1229}.
-
-<strong>Method 1</strong>
-@newcol
- \begin{align*}
-\displaystyle A\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&4&0&0&2&1&-3\\
-0&0&\boxed{1}&0&1&-3&5\\
-0&0&0&\boxed{1}&2&-6&6\\
-0&0&0&0&0&0&0\end{bmatrix}
-\end{align*} 
-@col
- Let
-\begin{align*}
-\displaystyle T=\left\{\mathbf{A}_{1},\mathbf{A}_{3},\mathbf{A}_{4}\right\}=\left\{\begin{bmatrix}1\\
-2\\
-0\\
--1\end{bmatrix},\begin{bmatrix}0\\
--1\\
-2\\
-2\end{bmatrix},\begin{bmatrix}-1\\
+4
+\end{bmatrix},
+\,
+\begin{bmatrix}
+4\\
 3\\
--3\\
-4\end{bmatrix}\right\}.
-\end{align*} 
-@col
- Then $T$ is linear independent and $\mathcal{C}\left(A\right)=\left< T\right>$. 
-@endcol
-
-<strong>Method 2</strong>
-@newcol
- The transpose of $A$ is
-\begin{align*}
-\displaystyle \begin{bmatrix}1&2&0&-1\\
-4&8&0&-4\\
-0&-1&2&2\\
--1&3&-3&4\\
-0&9&-4&8\\
-7&-13&12&-31\\
--9&7&-8&37\end{bmatrix}.
-\end{align*} 
-@col
- Row-reduced this becomes,
-\begin{align*}
-\displaystyle \begin{bmatrix}\boxed{1}&0&0&-\frac{31}{7}\\
-0&\boxed{1}&0&\frac{12}{7}\\
-0&0&\boxed{1}&\frac{13}{7}\\
-0&0&0&0\\
-0&0&0&0\\
-0&0&0&0\\
-0&0&0&0\end{bmatrix}.
-\end{align*} 
-@col
- Now, using Theorem    @ref{CSRST} and Theorem    @ref{BRS},
-\begin{align*}
-\displaystyle \mathcal{C}\left(A\right)=\mathcal{R}\!\left(A^{t}\right)=\left< \left\{\begin{bmatrix}1\\
-0\\
-0\\
--\frac{31}{7}\end{bmatrix},\,\begin{bmatrix}0\\
-1\\
-0\\
-\frac{12}{7}\end{bmatrix},\,\begin{bmatrix}0\\
-0\\
-1\\
-\frac{13}{7}\end{bmatrix}\right\}\right>.
-\end{align*} 
-@col
- This is a very nice description of the column space. Fewer vectors than the 7 involved in the definition, and the pattern of the zeros and ones in the first 3 slots can be used to advantage. For example,
-let’s check if
-\begin{align*}
-\displaystyle \mathbf{b}=\begin{bmatrix}3\\
-9\\
-1\\
-4\end{bmatrix}
+-4\\
+5\\
+1
+\end{bmatrix}
+\right\}
 \end{align*}
-is in $\mathcal{C}\left(A\right)$ or not.
-
-@col
- If it is, then
-\begin{align*}
-\displaystyle \mathbf{b}=\begin{bmatrix}3\\
-9\\
-1\\
-4\end{bmatrix}=x\begin{bmatrix}1\\
-0\\
-0\\
--\frac{31}{7}\end{bmatrix}+y\begin{bmatrix}0\\
-1\\
-0\\
-\frac{12}{7}\end{bmatrix}+z\begin{bmatrix}0\\
-0\\
-1\\
-\frac{13}{7}\end{bmatrix}=\begin{bmatrix}x\\
-y\\
-z\\
--\frac{31}{7}x+\frac{12}{7}y+\frac{13}{7}z\end{bmatrix}.
-\end{align*} 
-@col
- From the first three coordinate $x=3,y=9,z=1$. Let’s check the last coordinate:
-\begin{align*}
-\displaystyle -\frac{31}{7}\times 3+\frac{12}{7}\times 9+\frac{13}{7}\times 1=4.
-\end{align*} 
-@col
- So
-\begin{align*}
-\displaystyle \mathbf{b}=\begin{bmatrix}3\\
-9\\
-1\\
-4\end{bmatrix}=3\begin{bmatrix}1\\
-0\\
-0\\
--\frac{31}{7}\end{bmatrix}+9\begin{bmatrix}0\\
-1\\
-0\\
-\frac{12}{7}\end{bmatrix}+1\begin{bmatrix}0\\
-0\\
-1\\
-\frac{13}{7}\end{bmatrix}
-\end{align*} 
-@col
- and hence $\mathbf{b}\in\mathcal{C}\left(A\right)$. 
+linearly independent or linearly dependent?  
 @endcol
-@end
-
-@remark
-@newcol
- Both methods describe algorithms to find bases
-(i.e., linear independent set the generate the column space)
-for the column space.
-Here are the differences. <ol class="ltx_enumerate">
-<li class="ltx_item"> In method 1, we find a subset of columns that forms a basis.
-However in method 2, the basis is not a subset of columns. </li>
-<li class="ltx_item"> Given a vector $\mathbf{b}\in\mathcal{C}\left(A\right)$, it is easier to express it as a linear combination of the basis given by method 2. </li></ol>
-@endcol
-@end
-@section{Null Spaces, Spans, Linear Independence}
-
-In this section, we will find a linearly independent set that spans a null space.
-Recall that, by @ref{SSNS},
-there exists a particular set of $n-r$
-vectors that could be used to span the null space of a matrix.
-
-@eg
-@label{LINSB}
-@keyword{Linear independence of null space basis} Suppose that we are interested in the null space of a $3\times 7$ matrix $A$ which row-reduces to
-\begin{align*}
-\displaystyle B=\begin{bmatrix}\boxed{1}&0&-2&4&0&3&9\\
-0&\boxed{1}&5&6&0&7&1\\
-0&0&0&0&\boxed{1}&8&-5\end{bmatrix}.
-\end{align*} 
-@newcol
- Then $F=\{3,\,4,\,6,\,7\}$ is the set of indices for our four free variables that would be used in a description of the solution set for the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$. Applying @ref{HMVEI}, we can begin to construct a set of four vectors whose span is the null space of $A$, a set of vectors we will refer to as $T$.
-\begin{align*}
-\displaystyle {\mathcal{N}}\!\left(A\right)
-=\left< T\right>
-&=\left< \{\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3},\,\mathbf{z}_{4}\}\right>\\
-&=\left< \left\{\begin{bmatrix}\\
-\\
-1\\
-0\\
-\\
-0\\
-0\end{bmatrix},\,\begin{bmatrix}\\
-\\
-0\\
-1\\
-\\
-0\\
-0\end{bmatrix},\,\begin{bmatrix}\\
-\\
-0\\
-0\\
-\\
-1\\
-0\end{bmatrix},\,\begin{bmatrix}\\
-\\
-0\\
-0\\
-\\
-0\\
-1\end{bmatrix}\right\}\right>
-\end{align*} 
-@col
- So far, we have constructed as much of these individual vectors as we can, based just on the knowledge of the contents of the set $F$. This has allowed us to determine the entries in slots 3, 4, 6 and 7, while we have left slots 1, 2 and 5 blank. Without doing any more, let us ask if $T$ is linearly independent? Begin with a relation of linear dependence on $T$, and see what we can learn about the scalars.
-
-@col
- \begin{align*}
-\displaystyle\mathbf{0}&\displaystyle=\alpha_{1}\mathbf{z}_{1}+\alpha_{2}\mathbf{z}_{2}+\alpha_{3}\mathbf{z}_{3}+\alpha_{4}\mathbf{z}_{4} \\
-\displaystyle\begin{bmatrix}0\\
-0\\
-0\\
-0\\
-0\\
-0\\
-0\end{bmatrix}&\displaystyle=\alpha_{1}\begin{bmatrix}\\
-\\
-1\\
-0\\
-\\
-0\\
-0\end{bmatrix}+\alpha_{2}\begin{bmatrix}\\
-\\
-0\\
-1\\
-\\
-0\\
-0\end{bmatrix}+\alpha_{3}\begin{bmatrix}\\
-\\
-0\\
-0\\
-\\
-1\\
-0\end{bmatrix}+\alpha_{4}\begin{bmatrix}\\
-\\
-0\\
-0\\
-\\
-0\\
-1\end{bmatrix} \\
-&\displaystyle=\begin{bmatrix}\\
-\\
-\alpha_{1}\\
-0\\
-\\
-0\\
-0\end{bmatrix}+\begin{bmatrix}\\
-\\
-0\\
-\alpha_{2}\\
-\\
-0\\
-0\end{bmatrix}+\begin{bmatrix}\\
-\\
-0\\
-0\\
-\\
-\alpha_{3}\\
-0\end{bmatrix}+\begin{bmatrix}\\
-\\
-0\\
-0\\
-\\
-0\\
-\alpha_{4}\end{bmatrix}=\begin{bmatrix}\\
-\\
-\alpha_{1}\\
-\alpha_{2}\\
-\\
-\alpha_{3}\\
-\alpha_{4}\end{bmatrix}
-\end{align*} 
-@col
- Applying the equalities of vectors, we see that $\alpha_{1}=\alpha_{2}=\alpha_{3}=\alpha_{4}=0$. So the only relation of linear dependence on the set $T$ is the trivial one. By the definition of linear independence, the set $T$ is linearly independent. The important feature of this example is how the @keyword{pattern of zeros and ones} in the four vectors led to the conclusion of linear independence. 
-@endcol
-@end
-@slide
-@thm
-@title{Basis for Null Spaces}
-@label{BNS}
- Suppose that $A$ is an $m\times n$ matrix, and $B$ is a row-equivalent matrix in reduced row-echelon form with $r$ pivot columns. Let $D=\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\}$ and $F=\{f_{1},\,f_{2},\,f_{3},\,\ldots,\,f_{n-r}\}$ be the sets of column indices of $B$ which are and are not, respectively, pivot columns. Construct the $n-r$ vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$ of size $n$ as
-\begin{align*}
-\displaystyle \left[\mathbf{z}_{j}\right]_{i}=\begin{cases}1&\text{if $i\in F$, $i=f_{j}$}\\
-0&\text{if $i\in F$, $i\neq f_{j}$}\\
--\left[B\right]_{k,f_{j}}&\text{if $i\in D$, $i=d_{k}$}\end{cases}
-\end{align*}
-(In fact $\mathbf{z}_{j}$ corresponding to the solution $x_{f_{j}}=1$ and $x_{f_{k}}=0$ for $k\neq j$.) Define the set $S=\{\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3},\,\ldots,\,\mathbf{z}_{n-r}\}$. Then <ol class="ltx_enumerate">
-<li class="ltx_item"> ${\mathcal{N}}\!\left(A\right)=\left< S\right>$. </li>
-<li class="ltx_item"> $S$ is a linearly independent set. </li></ol>
-@end
-@proof
-@newcol
- Study the above example. You can skip the proof for now. Notice first that the vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$, are the same as the $n-r$ vectors defined in @ref{SSNS}. Also, the hypotheses of @ref{SSNS} are the same as the hypotheses of the theorem we are currently proving. So @ref{SSNS} tells us that ${\mathcal{N}}\!\left(A\right)=\left< S\right>$. That was the easy half, but the second part is not much harder. What is new here is the claim that $S$ is a linearly independent set.
-
-To prove the linear independence of a set, we need to start with a relation of linear dependence and somehow conclude that the scalars involved must all be zero, i.e., that the relation of linear dependence is trivial. So, we start with and equation of the form
-\begin{align*}
-\displaystyle \alpha_{1}\mathbf{z}_{1}+\alpha_{2}\mathbf{z}_{2}+\alpha_{3}\mathbf{z}_{3}+\cdots+\alpha_{n-r}\mathbf{z}_{n-r}=\mathbf{0}.
-\end{align*}
-For each $j$, $1\leq j\leq n-r$, consider the equality of the individual entries of the vectors on both sides of this equality in position $f_{j}$:
-\begin{align*}
-\displaystyle 0&\displaystyle=\left[\mathbf{0}\right]_{f_{j}} \\
-&\displaystyle=\left[\alpha_{1}\mathbf{z}_{1}+\alpha_{2}\mathbf{z}_{2}+\alpha_{3}\mathbf{z}_{3}+\cdots+\alpha_{n-r}\mathbf{z}_{n-r}\right]_{f_{j}} \\
-&\displaystyle=\left[\alpha_{1}\mathbf{z}_{1}\right]_{f_{j}}+\left[\alpha_{2}\mathbf{z}_{2}\right]_{f_{j}}+\left[\alpha_{3}\mathbf{z}_{3}\right]_{f_{j}}+\cdots+\left[\alpha_{n-r}\mathbf{z}_{n-r}\right]_{f_{j}} \\
-&\displaystyle=\alpha_{1}\left[\mathbf{z}_{1}\right]_{f_{j}}+\alpha_{2}\left[\mathbf{z}_{2}\right]_{f_{j}}+\alpha_{3}\left[\mathbf{z}_{3}\right]_{f_{j}}+\cdots+ \\
-&\displaystyle\quad\quad\alpha_{j-1}\left[\mathbf{z}_{j-1}\right]_{f_{j}}+\alpha_{j}\left[\mathbf{z}_{j}\right]_{f_{j}}+\alpha_{j+1}\left[\mathbf{z}_{j+1}\right]_{f_{j}}+\cdots+ \\
-&\displaystyle\quad\quad\alpha_{n-r}\left[\mathbf{z}_{n-r}\right]_{f_{j}} \\
-&\displaystyle=\alpha_{1}(0)+\alpha_{2}(0)+\alpha_{3}(0)+\cdots+ \\
-&\displaystyle\quad\quad\alpha_{j-1}(0)+\alpha_{j}(1)+\alpha_{j+1}(0)+\cdots+\alpha_{n-r}(0)& \text{ definition of } \mathbf{z}_{j} \\
-&\displaystyle=\alpha_{j}
-\end{align*}
-So for all $j$, $1\leq j\leq n-r$, we have $\alpha_{j}=0$. Hence, the only relation of linear dependence on $S=\{\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3},\,\ldots,\,\mathbf{z}_{n-r}\}$ is the trivial one. By the definition of linear independence, the set is linearly independent, as desired. 
-@qed
-@endcol
-@end
-@slide
-@eg
- Find the null space of the matrix
-\begin{align*}
-\displaystyle A=\begin{bmatrix}-2&-1&-2&-4&4\\
--6&-5&-4&-4&6\\
-10&7&7&10&-13\\
--7&-5&-6&-9&10\\
--4&-3&-4&-6&6\\
-\end{bmatrix}.
-\end{align*} 
 @end
 @sol
 @newcol
- The RREF of $A$ is:
+  The above theorem suggests that we study the matrix $A$ whose columns are the vectors in $S$. Specifically, we are interested in the size of the solution set of the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$. Row-reducing $A$ gives:
+
+@col
+  \begin{align*}
+\displaystyle A=\begin{bmatrix}2&6&4\\
+-1&2&3\\
+3&-1&-4\\
+4&3&5\\
+2&4&1\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0\\
+0&\boxed{1}&0\\
+0&0&\boxed{1}\\
+0&0&0\\
+0&0&0\end{bmatrix}.
+\end{align*}  
+@col
+  We have $r=3$, so there are $n-r=3-3=0$ free variables. Hence $\mathcal{LS}({A},{\mathbf{0}})$ has a unique solution. By the above theorem, the set $S$ is linearly independent.  
+@endcol
+@end
+
+@slide
+@skip
+@eg
+@label{LDHS}
+@keyword{Linearly dependent}
+
+@newcol
+  Is the set of vectors:
 \begin{align*}
-\displaystyle B=\begin{bmatrix}\boxed{1}&0&0&1&-2\\
-0&\boxed{1}&0&-2&2\\
-0&0&\boxed{1}&2&-1\\
+\displaystyle S=
+\left\{\begin{bmatrix}2\\
+-1\\
+3\\
+4\\
+2\end{bmatrix},\,\begin{bmatrix}6\\
+2\\
+-1\\
+3\\
+4\end{bmatrix},\,\begin{bmatrix}4\\
+3\\
+-4\\
+-1\\
+2\end{bmatrix}
+\right\}
+\end{align*}
+linearly independent or linearly dependent?  
+@endcol
+@end
+@sol
+
+@newcol
+  Theorem @ref{LIVHS} suggests that we study the matrix $A$ whose columns are the vectors in $S$. Specifically, we are interested in the size of the solution set of the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$. Row-reducing $A$ gives
+\begin{align*}
+\displaystyle A=\begin{bmatrix}2&6&4\\
+-1&2&3\\
+3&-1&-4\\
+4&3&-1\\
+2&4&2\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&-1\\
+0&\boxed{1}&1\\
+0&0&0\\
+0&0&0\\
+0&0&0\end{bmatrix}.
+\end{align*}
+We have $r=2$, so there are $n-r=3-2=1$ free variables. Hence $\mathcal{LS}({A},{\mathbf{0}})$ has infinitely many solutions. By
+Theorem @ref{LIVHS}, the set $S$ is linearly dependent.  
+@qed
+@endcol
+@end
+
+@slide
+@skip
+  Theorem @ref{LIVHS} gives us a straightforward way to determine if a set of vectors is linearly independent or dependent.
+
+Review the previous two examples. They are very similar, differing only in the last two slots of the third vector. This resulted in slightly different matrices when row-reduced, and different values of $r$, the number of nonzero rows. Notice, too, that we are less interested in the actual solution set, and more interested in its form or size. These observations allow us to make a slight improvement on Theorem @ref{LIVHS}.
+
+@section{Linearly Dependent Sets and Spans}
+@slide
+@skip
+  If we use a linearly dependent set to construct a span, then we can always create the same infinite set by starting with a set that is one vector smaller in size. We will illustrate this behaviour in @ref{RSC5}. However, this will not be possible if we build a span from a linearly independent set. So, in a certain sense, using a linearly independent set to formulate a span is the best possible way – there are no any extra vectors being used to build up all the necessary linear combinations. OK, here is the theorem, and then the example.  
+@slide
+@thm
+@title{Dependency in Linearly Dependent Sets}
+@label{DLDS}
+  Suppose that $S=\left\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\right\}$ is a set of vectors. Then $S$ is a linearly dependent set if and only if there is an index $t$, $1\leq t\leq n$, such that $\mathbf{u_{t}}$ is a linear combination of the vectors $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{t-1},\,\mathbf{u}_{t+1},\,\ldots,\,\mathbf{u}_{n}$.  
+@end
+@proof
+
+($\Rightarrow$)  
+@newcol
+  Suppose that $S$ is linearly dependent. Then there exists a nontrivial relation of linear dependence (Lecture 12 Definition 1). That is, there are scalars, $\alpha_{i}$, $1\leq i\leq n$, not all of which are zero, such that
+\begin{align*}
+\displaystyle \alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}+\cdots+\alpha_{n}\mathbf{u}_{n}=\mathbf{0}.
+\end{align*}
+Suppose that $\alpha_{t}$ is nonzero. Then,
+\begin{align*}
+\displaystyle\mathbf{u}_{t}&\displaystyle=\frac{-1}{\alpha_{t}}\left(-\alpha_{t}\mathbf{u}_{t}\right) \\
+&\displaystyle=\frac{-1}{\alpha_{t}}\left(\alpha_{1}\mathbf{u}_{1}+\cdots+\alpha_{t-1}\mathbf{u}_{t-1}+\alpha_{t+1}\mathbf{u}_{t+1}+\cdots+\alpha_{n}\mathbf{u}_{n}\right) \\
+&\displaystyle=\frac{-\alpha_{1}}{\alpha_{t}}\mathbf{u}_{1}+\cdots+\frac{-\alpha_{t-1}}{\alpha_{t}}\mathbf{u}_{t-1}+\frac{-\alpha_{t+1}}{\alpha_{t}}\mathbf{u}_{t+1}+\cdots+\frac{-\alpha_{n}}{\alpha_{t}}\mathbf{u}_{n}.
+\end{align*}
+Since $\frac{\alpha_{i}}{\alpha_{t}}$ is again a scalar, we have expressed $\mathbf{u}_{t}$ as a linear combination of the other elements of $S$.  
+@endcol
+
+($\Leftarrow$)  
+@newcol
+  Assume that the vector $\mathbf{u}_{t}$ is a linear combination of the other vectors in $S$. Write such a linear combination as
+\begin{align*}
+\displaystyle\mathbf{u_{t}}&\displaystyle=\beta_{1}\mathbf{u}_{1}+\beta_{2}\mathbf{u}_{2}+\cdots+\beta_{t-1}\mathbf{u}_{t-1}+\beta_{t+1}\mathbf{u}_{t+1}+\cdots+\beta_{n}\mathbf{u}_{n}.
+\end{align*}  
+@col
+  Then we have
+\begin{align*}
+\displaystyle\beta_{1}\mathbf{u}_{1}&\displaystyle+\cdots+\beta_{t-1}\mathbf{u}_{t-1}+(-1)\mathbf{u}_{t}+\beta_{t+1}\mathbf{u}_{t+1}+\cdots+\beta_{n}\mathbf{u}_{n} \\
+&\displaystyle=\mathbf{u}_{t}+(-1)\mathbf{u}_{t} \\
+&\displaystyle=\left(1+\left(-1\right)\right)\mathbf{u}_{t} \\
+&\displaystyle=0\mathbf{u}_{t} \\
+&\displaystyle=\mathbf{0}.
+\end{align*}  
+@col
+  So the scalars $\beta_{1},\,\beta_{2},\,\beta_{3},\,\ldots,\,\beta_{t-1},\,\beta_{t}=-1,\beta_{t+1},\,\,\ldots,\,\beta_{n}$ provide a nontrivial relation of linear dependence of the vectors in $S$, thus establishing that $S$ is a linearly dependent set.  
+@endcol
+@qed
+@end
+@newcol
+  This theorem can be used, sometimes repeatedly, to whittle down the size of a set of vectors used in a span construction.
+In the next example we will examine some of the subtleties.  
+@endcol
+@slide
+@eg
+@label{RSC5}
+@keyword{Reducing the generating set of a span in ${\mathbb{R}}^{5}$}
+
+Consider the following set of $n=4$ vectors in ${\mathbb{R}}^{5}$,
+\begin{align*}
+\displaystyle R=
+\left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\mathbf{v}_{4}\right\}
+=\left\{\begin{bmatrix}1\\
+2\\
+-1\\
+3\\
+2\end{bmatrix},\,\begin{bmatrix}2\\
+1\\
+3\\
+1\\
+2\end{bmatrix},\,\begin{bmatrix}0\\
+-7\\
+6\\
+-11\\
+-2\end{bmatrix},\,\begin{bmatrix}4\\
+1\\
+2\\
+1\\
+6\end{bmatrix}\right\}.\\
+\end{align*}
+Define $V=\left<  R\right>$.
+
+@newcol
+  We form a $5\times 4$ matrix, $D$, and row-reduce it to understand the solutions to the homogeneous system $\mathcal{LS}({D},{\mathbf{0}})$:
+\begin{align*}
+\displaystyle D=\begin{bmatrix}1&2&0&4\\
+2&1&-7&1\\
+-1&3&6&2\\
+3&1&-11&1\\
+2&2&-2&6\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&4\\
+0&\boxed{1}&0&0\\
+0&0&\boxed{1}&1\\
+0&0&0&0\\
+0&0&0&0\end{bmatrix}.
+\end{align*}  
+@col
+  We can find infinitely many solutions to the system $\mathcal{LS}({D},{\mathbf{0}})$, most of which are nontrivial. Choose any nontrivial solution to build a nontrivial relation of linear dependence on $R$. Let us begin with $x_{4}=1$, to find the solution
+\begin{align*}
+\displaystyle \begin{bmatrix}-4\\
+0\\
+-1\\
+1\end{bmatrix}.
+\end{align*}  
+@col
+  The corresponding relation of linear dependence is
+\begin{align*}
+\displaystyle (-4)\mathbf{v}_{1}+0\mathbf{v}_{2}+(-1)\mathbf{v}_{3}+1\mathbf{v}_{4}=\mathbf{0}.
+\end{align*}  
+@col
+  The theorem above guarantees that we can solve this relation of linear dependence for some vector in $R$, but the choice of which one is up to us. Notice however that $\mathbf{v}_{2}$ has a zero coefficient. In this case, we cannot choose to solve for $\mathbf{v}_{2}$. Maybe some other relation of linear dependence would produce a nonzero coefficient for $\mathbf{v}_{2}$ if we just had to solve for this vector. Unfortunately, this example has been engineered to always produce a zero coefficient here, as you can see from solving the homogeneous system. Every solution has $x_{2}=0$!
+
+OK, if we are convinced that we cannot solve for $\mathbf{v}_{2}$, let us instead solve for $\mathbf{v}_{3}$:
+\begin{align*}
+\displaystyle \mathbf{v}_{3}=(-4)\mathbf{v}_{1}+0\mathbf{v}_{2}+1\mathbf{v}_{4}=(-4)\mathbf{v}_{1}+1\mathbf{v}_{4}
+\end{align*}  
+@col
+  We claim that this particular equation will allow us to write
+\begin{align*}
+\displaystyle V=\left< R\right>=\left< \left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\mathbf{v}_{4}\right\}\right>=\left< \left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{4}\right\}\right>,
+\end{align*}
+in essence declaring $\mathbf{v}_{3}$ as surplus for the task of building $V$ as a span of $R$. This claim is an equality of two sets. Let $R^{\prime}=\left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{4}\right\}$ and $V^{\prime}=\left< R^{\prime}\right>$. We want to show that $V=V^{\prime}$.
+
+First show that $V^{\prime}\subseteq V$. Since every vector of $R^{\prime}$ is in $R$, any vector we can construct in $V^{\prime}$ as a linear combination of vectors from $R^{\prime}$ can also be constructed as a vector in $V$ by the same linear combination of the same vectors in $R$. That was easy, now turn it around.
+
+@col
+  Next show that $V\subseteq V^{\prime}$. Choose any $\mathbf{v}$ from $V$. So there are scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4}$ such that
+\begin{align*}
+\displaystyle\mathbf{v}&\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\mathbf{v}_{3}+\alpha_{4}\mathbf{v}_{4} \\
+&\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\left((-4)\mathbf{v}_{1}+1\mathbf{v}_{4}\right)+\alpha_{4}\mathbf{v}_{4} \\
+&\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\left((-4\alpha_{3})\mathbf{v}_{1}+\alpha_{3}\mathbf{v}_{4}\right)+\alpha_{4}\mathbf{v}_{4} \\
+&\displaystyle=\left(\alpha_{1}-4\alpha_{3}\right)\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\left(\alpha_{3}+\alpha_{4}\right)\mathbf{v}_{4}.
+\end{align*}  
+@col
+  This equation says that $\mathbf{v}$ can be written as a linear combination of the vectors in $R^{\prime}$ and hence qualifies for membership in $V^{\prime}$. So $V\subseteq V^{\prime}$ and we have established that $V=V^{\prime}$.
+
+If $R^{\prime}$ was also linearly dependent (in fact, it is not), we could reduce the set $R^{\prime}$ even further. Notice that we could have chosen to eliminate any one of $\mathbf{v}_{1}$, $\mathbf{v}_{3}$ or $\mathbf{v}_{4}$, but somehow $\mathbf{v}_{2}$ is essential to the creation of $V$ since it cannot be replaced by any linear combination of $\mathbf{v}_{1}$, $\mathbf{v}_{3}$ or $\mathbf{v}_{4}$.  
+@endcol
+@end
+@section{Relation between Linear Independence and the Number of Pivot Columns}
+@thm
+@title{Linearly Independent Vectors, $r$ and $n$}
+@label{LIVRN}
+  Suppose that
+\begin{align*}
+\displaystyle S=\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\ldots,\,\mathbf{v}_{n}\}\subseteq{\mathbb{R}}^{m}
+\end{align*}
+is a set of vectors and that $A$ is the $m\times n$ matrix whose columns are the vectors in $S$. Let $B$ be a matrix in reduced row-echelon form that is row-equivalent to $A$ and let $r$ denote the number of pivot columns in $B$. Then $S$ is linearly independent if and only if $n=r$.  
+@end
+@proof
+@newcol
+  Theorem @ref{LIVHS} says the linear independence of $S$ is equivalent to the homogeneous linear system $\mathcal{LS}({A},{\mathbf{0}})$ having a unique solution. Since the zero vector is a solution of $\mathcal{LS}({A},{\mathbf{0}})$,
+$\mathcal{LS}({A},{\mathbf{0}})$ is consistent. We can therefore can apply @ref{CSRN} to see that the solution is unique exactly when $n=r$.  
+@qed
+@endcol
+@end
+@slide
+  Here is an example of the most straightforward way to determine if a set of column vectors is linearly independent or linearly dependent. While this method can be quick and easy, do not forget the logical progression from the definition of linear independence through homogeneous system of equations which makes it possible.  
+@eg
+@keyword{Linear dependence, $r$ and $n$}
+
+@newcol
+  Is the set of vectors:
+\begin{align*}
+\displaystyle S=
+\left\{\begin{bmatrix}2\\
+-1\\
+3\\
+1\\
+0\\
+3\end{bmatrix},\,\begin{bmatrix}9\\
+-6\\
+-2\\
+3\\
+2\\
+1\end{bmatrix},\,\begin{bmatrix}1\\
+1\\
+1\\
+0\\
+0\\
+1\end{bmatrix},\,\begin{bmatrix}-3\\
+1\\
+4\\
+2\\
+1\\
+2\end{bmatrix},\,\begin{bmatrix}6\\
+-2\\
+1\\
+4\\
+3\\
+2\end{bmatrix}\right\}
+\end{align*}
+linearly independent or linearly dependent?  
+@endcol
+@end
+@sol
+@newcol
+  Theorem @ref{LIVRN} suggests that we take the vectors of $S$ as the columns of a matrix and then analyze its reduced row-echelon form:
+\begin{align*}
+\displaystyle \begin{bmatrix}2&9&1&-3&6\\
+-1&-6&1&1&-2\\
+3&-2&1&4&1\\
+1&3&0&2&4\\
+0&2&0&1&3\\
+3&1&1&2&2\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&0&-1\\
+0&\boxed{1}&0&0&1\\
+0&0&\boxed{1}&0&2\\
+0&0&0&\boxed{1}&1\\
 0&0&0&0&0\\
 0&0&0&0&0\end{bmatrix}.
 \end{align*}
-The free variables are $x_{4}$ and $x_{5}$.
+Now we need only compute that
+$r=4<5=n$
+to recognize, via Theorem @ref{LIVRN}, that $S$ is a linearly dependent set. Boom!  
+@qed
+@endcol
+@end
+@slide
+@eg
+@keyword{Large linearly dependent set in ${\mathbb{R}}^{4}$}
 
-Setting $x_{4}=1$ and $x_{5}=0$ gives:
+@newcol
+  Consider the set of $n=9$ vectors from ${\mathbb{R}}^{4}$,
+\begin{align*}
+\displaystyle R=\left\{\begin{bmatrix}-1\\
+3\\
+1\\
+2\end{bmatrix},\,\begin{bmatrix}7\\
+1\\
+-3\\
+6\end{bmatrix},\,\begin{bmatrix}1\\
+2\\
+-1\\
+-2\end{bmatrix},\,\begin{bmatrix}0\\
+4\\
+2\\
+9\end{bmatrix},\,\begin{bmatrix}5\\
+-2\\
+4\\
+3\end{bmatrix},\,\begin{bmatrix}2\\
+1\\
+-6\\
+4\end{bmatrix},\,\begin{bmatrix}3\\
+0\\
+-3\\
+1\end{bmatrix},\,\begin{bmatrix}1\\
+1\\
+5\\
+3\end{bmatrix},\,\begin{bmatrix}-6\\
+-1\\
+1\\
+1\end{bmatrix}\right\}.
+\end{align*}  
+@col
+  To employ Theorem @ref{LIVHS}, we form a $4\times 9$ matrix $C$ whose columns are the vectors in $R$:
+\begin{align*}
+\displaystyle C=\begin{bmatrix}-1&7&1&0&5&2&3&1&-6\\
+3&1&2&4&-2&1&0&1&-1\\
+1&-3&-1&2&4&-6&-3&5&1\\
+2&6&-2&9&3&4&1&3&1\end{bmatrix}.
+\end{align*}  
+@col
+  To determine if the homogeneous system $\mathcal{LS}({C},{\mathbf{0}})$ has a unique solution or not, we would normally row-reduce this matrix. But in this particular example, we can do better:
 
 @col
- \begin{align*}
-\displaystyle \mathbf{z}_{1}=\begin{bmatrix}-1\\
-2\\
--2\\
+  Since the system is homogeneous with $n=9$ variables in $m=4$ equations,
+and $n > m$, there are infinitely many solutions. Since there is not a unique solution, Theorem @ref{LIVHS} says the set $R$ is linearly dependent.  
+@endcol
+@end
+@slide
+  The following theorem generalizes the previous example.  
+@thm
+@title{More Vectors than Size implies Linear Dependence}
+@label{MVSLD}
+  Suppose that $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\}\subseteq{\mathbb{R}}^{m}$ and $n>m$. Then $S$ is a linearly dependent set.  
+@end
+@proof
+@newcol
+  Form the $m\times n$ matrix $A$ whose columns are $\mathbf{u}_{i}$, $1\leq i\leq n$. Consider the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$. By @ref{HMVEI} this system has infinitely many solutions. Since the system does not have a unique solution, Theorem @ref{LIVHS} says the columns of $A$ form a linearly dependent set, as desired.  
+@qed
+@endcol
+@end
+@section{Linear Independence and Nonsingular Matrices}
+@label{LINM}
+  We will now specialize to sets of $n$ vectors in ${\mathbb{R}}^{n}$.  
+@eg
+@keyword{Linearly dependent columns} Do the columns of the matrix
+\begin{align*}
+\displaystyle \begin{bmatrix}1&-1&2\\
+2&1&1\\
+1&1&0\end{bmatrix}
+\end{align*}
+form a linearly independent or dependent set?  
+@end
+@sol
+@newcol
+  We can show that $A$ is singular.
+According to the definition of nonsingular matrices, the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$ has infinitely many solutions. So, by Theorem @ref{LIVHS}, the columns of $A$ form a linearly dependent set.  
+@qed
+@endcol
+@end
+@eg
+@keyword{Linearly independent columns}
+
+@newcol
+  Do the columns of this matrix
+\begin{align*}
+\displaystyle B=\begin{bmatrix}-7&-6&-12\\
+5&5&7\\
+1&0&4\end{bmatrix}
+\end{align*}
+form a linearly independent or dependent set?  
+@endcol
+@end
+@sol
+@newcol
+  We can show that $B$ is nonsingular. According to the definition of nonsingular matrices, the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$ has a unique solution. So, by Theorem @ref{LIVHS}, the columns of $B$ form a linearly independent set.  
+@qed
+@endcol
+@end
+@slide
+  That the previous two examples have opposite properties for the columns of their coefficient matrices is no accident. Here is the theorem, and then we will update our equivalences for nonsingular matrices.  
+@thm
+@title{Nonsingular Matrices have Linearly Independent Columns}
+@label{NMLIC}
+  Suppose that $A$ is a <em style="">square</em> matrix. Then $A$ is nonsingular if and only if the columns of $A$ form a linearly independent set.  
+@end
+@proof
+@newcol
+  This is a proof where we can chain together equivalences, rather than proving the two halves separately.
+\begin{align*}
+A \text{ nonsingular} &\displaystyle\iff\text{$\mathcal{LS}({A},{\mathbf{0}})$ has a unique solution} \\
+&\displaystyle\iff A\vec{x} = \vec{0} \text{ has a unique solution }     \vec{x}\\
+&\displaystyle\iff\text{columns of $A$ are linearly independent}
+\end{align*}  
+@qed
+@endcol
+@end
+@slide
+  Here is the update to @ref{NME1}
+@thm
+@title{Nonsingular Matrix Equivalences, Round 2}
+@label{NME2}
+  Suppose that $A$ is a square matrix. The following are equivalent. <ol class="ltx_enumerate">
+<li class="ltx_item">
+@newcol
+  $A$ is nonsingular.  
+@endcol</li>
+<li class="ltx_item">
+@newcol
+  $A$ row-reduces to the identity matrix.  
+@endcol</li>
+<li class="ltx_item">
+@newcol
+  The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$.  
+@endcol</li>
+<li class="ltx_item">
+@newcol
+  The linear system $\mathcal{LS}({A},{\mathbf{b}})$ has a unique solution for every possible choice of $\mathbf{b}$.  
+@endcol</li>
+<li class="ltx_item">
+@newcol
+  The columns of $A$ form a linearly independent set.  
+@endcol</li></ol>
+@end
+@proof
+@newcol
+  This follows directly from @ref{NMLIC} and @ref{NME2}.  
+@qed
+@endcol
+@end
+@section{Uniqueness of RREF}
+@slide
+@skip
+<strong>Math Major only. You can skip this section. Similar concept appears in the classworks. </strong>
+@eg
+@keyword{Entries of RREF $B$ gives relationship of columns of $A$}
+
+@newcol
+  Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&2&1&8&1&17\\
+1&2&2&13&3&37\\
+1&2&0&3&-2&-10\\
+\end{bmatrix}.
+\end{align*}  
+@col
+  Then $A$ can be row reduced to
+
+\begin{align*}
+\displaystyle B=\begin{bmatrix}1&2&0&3&0&4\\
+0&0&1&5&0&6\\
+0&0&0&0&1&7\end{bmatrix}.
+\end{align*}
+Let $\mathbf{A}_{i}$ (resp. $\mathbf{B}_{i}$) be the $i$-th column of $A$ (resp. $B$) for $i=1,\ldots,6$.
+By the equivalence of system of linear equation $\mathcal{LS}({A},{\mathbf{0}})$ and $\mathcal{LS}({B},{\mathbf{0}})$, we have
+\begin{align}
+\displaystyle x_{1}\mathbf{A}_{1}+x_{2}\mathbf{A}_{2}+\cdots+x_{6}\mathbf{A}_{6}=\mathbf{0}&
+\end{align}
+if and only if
+\begin{align}
+\label{eq:B}
+\displaystyle x_{1}\mathbf{B}_{1}+x_{2}\mathbf{B}_{2}+\cdots+x_{6}\mathbf{B}_{6}=\mathbf{0}.&
+\end{align}  
+@col
+<strong>Step 1</strong>
+@newcol
+  First of all, if $(x_{1},x_{2},x_{3},x_{4},x_{5},x_{6})=(x_{1},0,0,0,0,0)$ is a solution of $\eqref{eq:B}$, then
+\begin{align*}
+\displaystyle x_{1}\mathbf{B}_{1}=\mathbf{0}.
+\end{align*}  
+@col
+  So $x_{1}$ is zero. This is equivalent to
+\begin{align*}
+\displaystyle x_{1}\mathbf{A}_{1}=\mathbf{0}.
+\end{align*}
+It has only the trivial solution, i.e. $\left\{\mathbf{A}_{1}\right\}$ is linearly independent. Hence $d_{1}=1$ is a pivot column.  
+@endcol
+
+<strong>Step 2</strong>
+@newcol
+  Let’s move to $x_{2}$. Suppose that
+$(x_{1},x_{2},x_{3},x_{4},x_{5},x_{6})=(x_{1},x_{2},0,0,0,0)$.
+
+@col
+  Then
+\begin{align*}
+\displaystyle x_{1}\mathbf{B}_{1}+x_{2}\mathbf{B}_{1}=\mathbf{0}
+\end{align*}
+has nontrivial solution. Say $(x_{1},x_{2})=(-2,1)$.
+
+@col
+  These can also be seen as
+\begin{align*}
+\displaystyle -2\mathbf{A}_{1}+\mathbf{A}_{2}=\mathbf{0}
+\end{align*}
+or equivalently
+\begin{align*}
+\displaystyle \mathbf{A}_{2}=2\mathbf{A}_{1}.
+\end{align*}  
+@endcol
+
+<strong>Step 3</strong>
+@newcol
+  Consider $x_{3}$. Let $(x_{1},x_{2},x_{3},x_{4},x_{5},x_{6})=(x_{1},0,x_{3},0,0,0)$. Then
+\begin{align*}
+\displaystyle x_{1}\mathbf{B}_{1}+x_{3}\mathbf{B}_{3}=\mathbf{0}
+\end{align*}
+has only trivial solution. Equivalently $\left\{\mathbf{A}_{1},\mathbf{A}_{3}\right\}$ is linearly independent.Column $3$ of $B$ is a pivot column.  
+@endcol
+
+<strong>Step 4</strong>
+@newcol
+  Consder
+\begin{align*}
+\displaystyle \mathbf{B}_{4}=3\mathbf{B}_{1}+5\mathbf{B}_{3},
+\end{align*}
+or equivalently
+\begin{align*}
+\displaystyle \mathbf{A}_{4}=3\mathbf{A}_{1}+5\mathbf{A}_{3}.
+\end{align*}  
+@col
+  The relation of columns of $A$ gives the entries of the column 4 of $B$.  
+@endcol
+
+<strong>Step 5</strong>
+@newcol
+  $\mathbf{B}_{5}$ is not in span of $\mathbf{B}_{1}$ and $\mathbf{B}_{3}$. Equivalently $\mathbf{A}_{5}$ is not in span of $\mathbf{A}_{1}$ and $\mathbf{A}_{3}$. Column $5$ of $B$ is a pivot column.  
+@endcol
+
+<strong>Step 6</strong>
+@newcol
+  Consider
+\begin{align*}
+\displaystyle \mathbf{B}_{6}=4\mathbf{B}_{1}+6\mathbf{B}_{3}+7\mathbf{B}_{5}.
+\end{align*}
+Equivalently
+\begin{align*}
+\displaystyle \mathbf{A}_{6}=4\mathbf{A}_{1}+6\mathbf{A}_{3}+7\mathbf{A}_{5}.
+\end{align*}  
+@col
+  The relation of columns of $A$ gives the entries of the column 6 of $B$.  
+@endcol
+@endcol
+@end
+
+@eg
+@keyword{Relationship of columns of $A$ determine entries of $B$}
+
+@newcol
+  Row reduce
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&1&3&1&0&0&4\\
+2&1&5&1&1&2&7\\
+1&-1&1&2&1&-3&10\\
+1&3&5&1&-1&1&1\\
+\end{bmatrix}
+\end{align*}
+to a RREF $B$ by the above technique. Let $\mathbf{A}_{i}$ (resp. $\mathbf{B}_{i}$) be the $i$-th column of $A$ (resp. $B$) for $i=1,\ldots,7$.
+
+@col
+<strong>Step 1</strong>
+@newcol
+  $\mathbf{A}_{1}$ is nonzero column. So the index $d_{1}=1$ corresponds to a pivot column. We have
+\begin{align*}
+\displaystyle \mathbf{B}_{1}=\begin{bmatrix}1\\
+0\\
+0\\
+0\end{bmatrix}.
+\end{align*}  
+@endcol
+
+<strong>Step 2</strong>
+@newcol
+  $\mathbf{A}_{2}$ is not in $\left< \left\{\mathbf{A}_{d_{1}}\right\}\right>$. So the index $d_{2}=2$ corresponds to a pivot column. We have
+\begin{align*}
+\displaystyle \mathbf{B}_{2}=\begin{bmatrix}0\\
+1\\
+0\\
+0\end{bmatrix}.
+\end{align*}  
+@endcol
+
+<strong>Step 3</strong>
+@newcol
+  Consider
+\begin{align*}
+\displaystyle \mathbf{A}_{3}=2\mathbf{A}_{d_{1}}+\mathbf{A}_{d_{2}}.
+\end{align*}  
+@col
+  So we have
+\begin{align*}
+\displaystyle \mathbf{B}_{3}=2\mathbf{B}_{d_{1}}+\mathbf{B}_{d_{2}}=\begin{bmatrix}2\\
+1\\
+0\\
+0\end{bmatrix}.
+\end{align*}  
+@endcol
+
+<strong>Step 4</strong>
+@newcol
+  $\mathbf{A}_{4}$ is not in $\left< \left\{\mathbf{A}_{d_{1}},\mathbf{A}_{d_{2}}\right\}\right>$.
+
+@col
+  So the index $d_{3}=4$ corresponds to a pivot column. We have
+\begin{align*}
+\displaystyle \mathbf{B}_{4}=\begin{bmatrix}0\\
+0\\
 1\\
 0\end{bmatrix}.
-\end{align*} 
+\end{align*}  
+@endcol
+
+<strong>Step 5</strong>
+@newcol
+  $\mathbf{A}_{5}$ is not in $\left< \left\{\mathbf{A}_{d_{1}},\mathbf{A}_{d_{3}},\mathbf{A}_{d_{3}}\right\}\right>$.
+
 @col
- Setting instead $x_{4}=0$ and $x_{5}=1$ gives
+  So the index $d_{4}=5$ corresponds to a pivot column. We have
 \begin{align*}
-\displaystyle \mathbf{z}_{2}=\begin{bmatrix}2\\
--2\\
-1\\
+\displaystyle \mathbf{B}_{5}=\begin{bmatrix}0\\
+0\\
 0\\
 1\end{bmatrix}.
-\end{align*}
-Hence
+\end{align*}  
+@endcol
+
+<strong>Step 6</strong>
+@newcol
+  Consider
 \begin{align*}
-\displaystyle {\mathcal{N}}\!\left(A\right)=\left< \begin{bmatrix}-1\\
-2\\
--2\\
+\displaystyle \mathbf{A}_{6}=\mathbf{A}_{d_{1}}+\mathbf{A}_{d_{2}}-2\mathbf{A}_{d_{3}}+\mathbf{A}_{d_{4}}.
+\end{align*}  
+@col
+  So, we have
+\begin{align*}
+\displaystyle \mathbf{B}_{6}=\mathbf{B}_{d_{1}}+\mathbf{B}_{d_{2}}-2\mathbf{B}_{d_{3}}+\mathbf{B}_{d_{4}}=\begin{bmatrix}1\\
 1\\
-0\end{bmatrix},\begin{bmatrix}2\\
 -2\\
-1\\
-0\\
-1\end{bmatrix}\right>.
-\end{align*} 
-@qed
+1\end{bmatrix}
+\end{align*}  
 @endcol
-@end
-@section{Dimension}
 
-@defn
-@title{Dimension}
- Let $V$ be a vector space.
-
-Suppose a finite set of vectors $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{t}\right\}$ is a basis for $V$.
-
-Then, we say that $V$ is a @keyword{finite dimensional vector space}.
-
-The number $t$ (namely the number of vectors in the basis)
-is called the @keyword{dimension} of $V$.
-
-The dimension of the zero vector space $\{\vect{0}\}$ is defined to be $0$. 
-@end
-@remark
+<strong>Step 7</strong>
 @newcol
- It is a non-trivial fact that the dimension is well-defined, i.e.,
-If both $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{t}\right\}$
-and $\left\{\mathbf{u}_{1},\ldots,\mathbf{u}_{s}\right\}$
-are bases for $V$,
-then $s=t$. 
-@endcol
-@end
-@slide
-@thm
-@label{SSLD}
- Suppose that $S=\left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\ldots,\,\mathbf{v}_{t}\right\}$ is a finite set of vectors which spans the vector space $V$. Then any set of $t+1$ or more vectors from $V$ is linearly dependent. 
-@end
-@proof
-@newcol
- Let $\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_m$ be $m$ vectors in $V$,
-where $m \geq t + 1$.
-Let $A = [\vect{v}_1 | \vect{v}_2 | \cdots | \vect{v}_t ]$.
-Since $S$ spans $V$, for every $\vect{u}_i$ ($1\leq i \leq m$)
-there exists
-$\vect{w}_i \in \mathbb{R}^t$ such that:
-\[
-A\vect{w}_i = \vect{u}_i.
-\]
-
-@col
- Now, consider the matrix:
-\[
-B = [\vect{w}_1 | \vect{w}_2 | \cdots | \vect{w}_m].
-\]
-This is a $t \times m$ matrix.
-In particular, it has more columns than rows,
-due to the assumption that $m > t$.
-
-@col
- Hence, the homogeneous linear system $\mathcal{LS}(B, \vect{0})$
-has a non-trivial solution $\vect{x} \in \mathbb{R}^m$.  That is:
-\[
-B\vect{x} = \vect{0}.
-\]
-
-@col
- The above equation implies that:
-\[
-A\left(B\vect{x}\right) = A\vect{0} = \vect{0}.
-\] 
-@col
- By the associativity of matrix multiplication, we have:
-\[
-A\left(B\vect{x}\right) = \left(AB\right)\vect{x}.
-\] 
-@col
- On the other hand: 
-@steps
-\[
-\begin{split}
-AB &= A[\vect{w}_1 | \vect{w}_2 | \cdots | \vect{w}_m]
-\\&
-\class{steps}{\cssId{step0}{=[A\vect{w}_1 | A\vect{w}_2 | \cdots | A\vect{w}_m]}}
-\\&
-\class{steps}{\cssId{step1}{= [\vect{u}_1 | \vect{u}_2 | \cdots | \vect{u}_m]}}
-\end{split}
-\]
-
-@endsteps
-@col
- Hence,
-\[
-\left(AB\right)\vect{x} = \vect{0}
-\]
-is equivalent to:
-\[
-[\vect{u}_1 | \vect{u}_2 | \cdots | \vect{u}_m]\vect{x} = \vect{0}
-\] 
-@col
- which is in turn equivalent to:
-\[
-x_1 \vect{u}_1 + x_2 \vect{u}_2 + \cdots x_m \vect{u}_m = \vect{0}.
-\]
-Since, $\vect{x}$ is not the zero vector,
-not all the $x_i$'s are equal to zero.
-We conclude that the vectors
-$\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_m$ are linearly dependent. 
-@qed
-@endcol
-@end
-
-@slide
-@thm
- Suppose that $V$ is a vector space with a finite basis $B$ and a second basis $C$.
-
-@newcol
- Then $B$ and $C$ have the same size. 
-@endcol
-@end
-@proof
-@newcol
- Denote the size of $B$ by $t$. If $C$ has $\geq t+1$ vectors,
-then by the previous theorem, $C$ is linearly dependent,
-in contradiction to the condition that $C$ is a basis.
-
-@col
- By the same reasoning, the linearly independent set $B$ must also not
-have more vectors than $C$.
-
-@col
- So, $B$ and $C$ have the same number of vectors. 
-@qed
-@endcol
-@end
-@remark
-@newcol
- The above theorem shows that the dimension is well-defined. No matter which basis we choose, the size is always the same. 
-@endcol
-@end
-@slide
-@eg
- It follows from @ref{d848ac74d9e041feff51c974a9969985} that:
-\[
-\dim{\mathbb{R}}^{m}=m.
-\] 
-@end
-@slide
-@skip
-@eg
-<strong>Math major only</strong>
-
-$\dim M_{mn}=mn$. See example 3. 
-@end
-
-@eg
-<strong>Math major only</strong>
-
-$\dim P_{n}=n+1$. See example 4. 
-@end
-
-@eg
-<strong>Math major only</strong>
-
-Let $S_{2}$ be the set of $2\times 2$ symmetric matrices. For $A\in S_{2}$,
+  Consider
 \begin{align*}
-\displaystyle A=\begin{bmatrix}a&b\\
-b&c\end{bmatrix}=a\begin{bmatrix}1&0\\
-0&0\end{bmatrix}+b\begin{bmatrix}0&1\\
-1&0\end{bmatrix}+c\begin{bmatrix}0&0\\
-0&1\end{bmatrix}
-\end{align*} 
-@newcol
- We can show that:
+\displaystyle \mathbf{A}_{7}=2\mathbf{A}_{d_{1}}-\mathbf{A}_{d_{2}}+3\mathbf{A}_{d_{3}}+\mathbf{A}_{d_{4}}.
+\end{align*}  
+@col
+  So, we have
 \begin{align*}
-\displaystyle T=\left\{\begin{bmatrix}1&0\\
-0&0\end{bmatrix},\begin{bmatrix}0&1\\
-1&0\end{bmatrix},\begin{bmatrix}0&0\\
-0&1\end{bmatrix}\right\}
-\end{align*} 
+\displaystyle \mathbf{B}_{7}=\mathbf{B}_{d_{1}}+\mathbf{B}_{d_{2}}-2\mathbf{B}_{d_{3}}+\mathbf{B}_{d_{4}}=\begin{bmatrix}2\\
+-1\\
+3\\
+1\end{bmatrix}
+\end{align*}  
 @col
- is a basis for $S_{2}$. Hence $\dim S_{2}=3$. 
-@endcol
-@end
-
-@eg
-<strong>Math major only</strong>
-
-Let $P$ be the set of all real polynomials. As $\left\{1,x,x^{2},x^{3},\ldots\right\}$ is linearly independent,
-so $\dim P$ does not exists (or we can write $\dim P=\infty$). 
-@end
-@slide
-@lemma
- Let $V$ be a vector space and $\mathbf{v}_{1},\ldots,\mathbf{v}_{k},\mathbf{u}\in V$.
-
-@newcol
- Suppose
-$S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is linearly independent and $\mathbf{u}\notin\left< S\right>$. Then
-$S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k},\mathbf{u}\right\}$ is linearly independent. 
-@endcol
-@end
-@proof
-@newcol
- Let the relation of linear dependence of $S^{\prime}$ be
+  Hence the RREF of $A$ is
 \begin{align*}
-\displaystyle \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k}+\alpha\mathbf{u}=\mathbf{0}.
-\end{align*} 
-@col
- Suppose $\alpha\neq 0$, then
-\begin{align*}
-\displaystyle \mathbf{u}=-\frac{\alpha_{1}}{\alpha}\mathbf{v}_{1}-\cdots-\frac{\alpha_{k}}{\alpha}\mathbf{v}_{k}\in\left< S\right>.
-\end{align*} 
-@col
- Contradiction.
-
-@col
- So $\alpha=0$, then
-\begin{align*}
-\displaystyle \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k}=\mathbf{0}.
-\end{align*} 
-@col
- By the linear independence of $S$, $\alpha_{i}=0$ for all $i$. Hence the above relation of dependence of $S^{\prime}$ is trivial. 
-@qed
-@endcol
-@end
-@slide
-@thm
-@label{basisexists2}
- Let $V$ be a nonzero subspace of ${\mathbb{R}}^{m}$. (That is, $V \neq \{\vect{0}\}$.)
-
-Then, there exists a basis for $V$. 
-@end
-@proof
-@newcol
- Let $V$ be a nonzero vector space.
-Let $\mathbf{v}_{1}$ be a nonzero vector in $V$. If $V=\left< \left\{\mathbf{v}_{1}\right\}\right>$, we can take $S=\left\{\mathbf{v}_{1}\right\}$. Then obviously $\left\{\mathbf{v}_{1}\right\}$ is linearly independent and hence $S$ is a basis for $V$.
-
-@col
- Otherwise, let $\mathbf{v}_{2}\in V$ but not in $\left< \left\{\mathbf{v}_{1}\right\}\right>$.
-
-@col
- By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$ is linearly independent. If $V=\left< \left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}\right>$, we can take $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$.
-
-@col
- So $S$ is a basis for $V$.
-
-@col
- Otherwise, let $\mathbf{v}_{3}\in V$ but not in $\left< \left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}\right>$.
-
-@col
- By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\right\}$ is linearly independent. Repeat the above process, inductive we can define $\mathbf{v}_{k+1}$ as following: If $V=\left< \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}\right>$,
-we can take $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$.
-
-@col
- Because $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$ is linearly independent, $S$ is a basis for $V$.
-
-@col
- Otherwise defined $\mathbf{v}_{k+1}\not\in\left< \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}\right>$.
-
-@col
- By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k+1}\right\}$ is linearly independent.
-
-@col
- If the process stops, say at step $k$, i.e., $V=\left< \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}\right>$.
-
-@col
- Then we can take $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$.
-
-@col
- Because $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$ is linearly independent, it is a basis for $V$.
-
-@col
- This completes the proof.
-
-@col
- Otherwise, the process continues infinitely, in particular, we can take $k=m+1$ and
-$V\neq\left< \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{m+1}\right\}\right>$ and
-$\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{m+1}\right\}$ is linearly independent.
-
-@col
- Since $\left\langle\left\{\mathbf{e}_{1},\ldots,\mathbf{e}_{m}\right\}\right\rangle = \mathbb{R}^m$,
-by @ref{SSLD} the vectors $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{m+1}\right\}$ are linearly dependent. Contradiction. 
-@qed
-@endcol
-@end
-@slide
-@prop
-@label{basisexistsprop}
- Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\right\}\subseteq{\mathbb{R}}^{m}$. Then
-\begin{align*}
-\displaystyle \dim\left< S\right>\leq n.
-\end{align*} 
-@end
-@proof
-@newcol
- By Theorem    @ref{basisexists}, there exists a subset $T$ of $S$ such that $T$ is a basis for $\left< S\right>$.
-\begin{align*}
-\displaystyle \dim\left< S\right>
-=
-\text{number of vectors in $T$}
-\leq
-\text{number of vectors in $S$}=n.
-\end{align*} 
-@qed
-@endcol
-@end
-@remark
-@newcol
- Both @ref{basisexists} and @ref{basisexistsprop} is valid
-if we replace ${\mathbb{R}}^{m}$ by $P_{n}$, $M_{mn}$
-or any finite dimensional vector space. 
-@endcol
-@end
-
-@slide
-@thm
- Suppose a vector space $V$ has dimension $n$.
-Then, any linearly independent set with $n$ vectors in $V$
-is a basis for $V$. 
-@end
-@thm
- Suppose a vector space $V$ has dimension $n$.
-Suppose $S$ is a set of $n$ vectors in $V$ which spans $V$
-(That is, $\left\langle S \right\rangle = V$).
-
-Then, $S$ is a basis for $V$. 
-@end
-
-@section{Rank and nullity of a matrix}
-@defn
-@title{Nullity of a matrix}
-@label{NOM}
- Suppose that $A \in M_{mn}$. Then the @keyword{nullity} of $A$ is the dimension of the null space of $A$,
-$\nullity{A}=\dim(\nsp{A})$. 
-@end
-
-@defn
-@title{Rank of a matrix}
-@label{ROM}
- Suppose that $A \in M_{mn}$. Then the @keyword{rank} of $A$ is the dimension of the column space of $A$,
-$\rank{A}=\dim(\csp{A})$. 
-@end
-
-@slide
-@eg
-@keyword{Rank and nullity of a matrix}
-
-Let us compute the rank and nullity of
-\[
-A=\begin{bmatrix}
-2 & -4 & -1 & 3 & 2 & 1 & -4\\
-1 & -2 & 0 & 0 & 4 & 0 & 1\\
--2 & 4 & 1 & 0 & -5 & -4 & -8\\
-1 & -2 & 1 & 1 & 6 & 1 & -3\\
-2 & -4 & -1 & 1 & 4 & -2 & -1\\
--1 & 2 & 3 & -1 & 6 & 3 & -1
-\end{bmatrix}
-\] 
-@newcol
- To do this, we will first row-reduce the matrix since that will help us determine bases for the null space and column space.
-\[
-\begin{bmatrix}
-\leading{1} & -2 & 0 & 0 & 4 & 0 & 1\\
-0 & 0 & \leading{1} & 0 & 3 & 0 & -2\\
-0 & 0 & 0 & \leading{1} & -1 & 0 & -3\\
-0 & 0 & 0 & 0 & 0 & \leading{1} & 1\\
-0 & 0 & 0 & 0 & 0 & 0 & 0\\
-0 & 0 & 0 & 0 & 0 & 0 & 0
-\end{bmatrix}
-\] 
-@col
- From this row-equivalent matrix in reduced row-echelon form we record $D=\set{1,\,3,\,4,\,6}$ and $F=\set{2,\,5,\,7}$.
-
-@col
- By @ref{BCS}, for each index in $D$, we can create a single basis vector.
-In fact $T=\{\vect{A}_1, \vect{A}_3, \vect{A}_4, \vect{A}_6\}$ is a basis for $\csp{A}$.
-In total the basis will have $4$ vectors, so the column space of $A$ will have dimension $4$ and we write $\rank{A}=4$.
-
-@col
- By @ref{SSNS}, for each index in $F$, we can create a single basis vector.  In total the basis will have $3$ vectors, so the null space of $A$ will have dimension $3$ and we write $\nullity{A}=3$. In fact:
-
-@col
- \[
-R = \left\{\colvector{ 2 \\ 1 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0},
-\colvector{ -4 \\ 0 \\ -3 \\ 1 \\ 1 \\ 0 \\ 0},
-\colvector{-1 \\ 0 \\ 2 \\ 3 \\ 0 \\ -1 \\ 1}
-\right\}
-\]
-is a basis for $\nsp{A}$. 
-@endcol
-@end
-
-@slide
-@thm
-@title{Computing rank and nullity}
- Suppose $A \in M_{mn}$ and $A \rref B$.
-Let $r$ denote the number of pivot columns ($=$ number of nonzero rows).
-Then $\rank{A}=r$ and $\nullity{A}=n-r$. 
-@end
-@proof
-@newcol
- Let $D=\{d_1, \ldots, d_r\}$ be the indexes of the pivot columns of $B$.
-By @ref{BCS}, $\{\vect{A}_{d_1}, \ldots, \vect{A}_{d_r}\}$ is a basis for $\csp{A}$.
-So $\rank{A}=r$.
-
-By @ref{SSNS}, each free variable corresponding to a single basis vector for the null space.
-So $\nullity{A}$ is the number of free variables $=n-r$. 
-@endcol
-@end
-
-@cor
-@title{Dimension formulaRank-Nullity Theorem}
- Suppose $A\in M_{mn}$, then
-\begin{align*}
-\displaystyle r\left(A\right)+n\left(A\right)=n.
-\end{align*} 
-@end
-@slide
-@thm
- Let $A$ be a $m\times n$ matrix. Then
-\begin{align*}
-\displaystyle r\left(A\right)=r\left(A^{t}\right).
-\end{align*} 
-@newcol
- Equivalently
-\begin{align*}
-\displaystyle \dim\mathcal{C}\left(A\right)=\dim\mathcal{R}\!\left(A\right).
-\end{align*} 
-@endcol
-@end
-@proof
-@newcol
- Let $A\xrightarrow{\text{RREF}}B$.
-
-@col
- Let $r$ denote the number of pivot columns ($=$ number of nonzero rows).
-
-@col
- Then by the above discussion $r=r\left(A\right)$. By @ref{BRS}, the first $r$ columns of $B^{t}$ form a basis for $\mathcal{R}\!\left(A\right) = \mathcal{C}(A^t)$.
-Hence $r=r\left(A^{t}\right)$. This completes the proof. 
-@qed
-@endcol
-@end
- Let us take a look at the rank and nullity of a square matrix. 
-@slide
-@eg
- The matrix
-\begin{align*}
-\displaystyle E=\begin{bmatrix}0&4&-1&2&2&3&1\\
-2&-2&1&-1&0&-4&-3\\
--2&-3&9&-3&9&-1&9\\
--3&-4&9&4&-1&6&-2\\
--3&-4&6&-2&5&9&-4\\
-9&-3&8&-2&-4&2&4\\
-8&2&2&9&3&0&9\end{bmatrix}
-\end{align*} 
-@newcol
- is row-equivalent to the matrix in reduced row-echelon form,
-\begin{align*}
-\displaystyle \begin{bmatrix}\boxed{1}&0&0&0&0&0&0\\
-0&\boxed{1}&0&0&0&0&0\\
-0&0&\boxed{1}&0&0&0&0\\
-0&0&0&\boxed{1}&0&0&0\\
-0&0&0&0&\boxed{1}&0&0\\
-0&0&0&0&0&\boxed{1}&0\\
-0&0&0&0&0&0&\boxed{1}\end{bmatrix}
-\end{align*} 
-@col
- With $n=7$ columns and $r=7$ nonzero rows tells us the rank is $r\left(E\right)=7$ and the nullity is $n\left(E\right)=7-7=0$. 
-@endcol
-@end
- The value of either the nullity or the rank are enough to characterize a nonsingular matrix.
-
-@slide
-@thm
-@title{Rank and Nullity of a Nonsingular Matrix}
-@label{RNNM}
- Suppose that $A$ is a square matrix of size $n$. The following are equivalent. <ol class="ltx_enumerate">
-<li class="ltx_item"> A is nonsingular. </li>
-<li class="ltx_item"> The rank of $A$ is $n$, $r\left(A\right)=n$. </li>
-<li class="ltx_item"> The nullity of $A$ is zero, $n\left(A\right)=0$. </li></ol>
-@end
-@proof
-@skip
-@newcol
- (1 $\Rightarrow$ 2) 
-@newcol
- If $A$ is nonsingular then $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$.
-
-@col
- If $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$, then the column space has dimension $n$, so the rank of $A$ is $n$. 
-@endcol
-
-(2 $\Rightarrow$ 3) 
-@newcol
- Suppose $r\left(A\right)=n$. Then the dimension formula gives
-\begin{align*}
-\displaystyle n\left(A\right)&\displaystyle=n-r\left(A\right) \\
-&\displaystyle=n-n \\
-&\displaystyle=0
-\end{align*} 
-@endcol
-
-(3 $\Rightarrow$ 1) 
-@newcol
- Suppose $n\left(A\right)=0$, so a basis for the null space of $A$ is the empty set. This implies that ${\mathcal{N}}\!\left(A\right)=\left\{\mathbf{0}\right\}$ and hence $A$ is nonsingular. 
-@endcol
-@qed
-@endcol
-@end
- With a new equivalence for a nonsingular matrix, we can update our list of equivalences which now becomes a list requiring double digits to number. 
-@slide
-@thm
- Suppose that $A$ is a square matrix of size $n$. The following are equivalent. <ol class="ltx_enumerate">
-<li class="ltx_item"> $A$ is nonsingular. </li>
-<li class="ltx_item"> $A$ row-reduces to the identity matrix. </li>
-<li class="ltx_item"> The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\left\{\mathbf{0}\right\}$. </li>
-<li class="ltx_item"> The linear system $\mathcal{LS}({A},{\mathbf{b}})$ has a unique solution for every possible choice of $\mathbf{b}$. </li>
-<li class="ltx_item"> The columns of $A$ are a linearly independent set. </li>
-<li class="ltx_item"> $A$ is invertible. </li>
-<li class="ltx_item"> The column space of $A$ is ${\mathbb{R}}^{n}$, $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$. </li>
-<li class="ltx_item"> The columns of $A$ are a basis for ${\mathbb{R}}^{n}$. </li>
-<li class="ltx_item"> The rank of $A$ is $n$, $r\left(A\right)=n$. </li>
-<li class="ltx_item"> The nullity of $A$ is zero, $n\left(A\right)=0$. </li></ol>
-@end
-
-@section{Bases and nonsingular matrices}
-@slide
-@thm
- Suppose that $A$ is a square matrix of size $m$.
-
-Then, the columns of $A$ is a basis for ${\mathbb{R}}^{m}$ if and only if $A$ is nonsingular. 
-@end
-@proof
-@newcol
- This is a direct consequence of the theorem  @ref{NME2}:
-
-@col
- If columns of $A$ form a basis,
-then in particular they are linearly independent.
-So, item 5 of the theorem holds.
-
-It now follows from the theorem that item 1,
-namely that $A$ is nonsingular, also holds.
-
-@col
- Conversely, suppose $A$ is nonsingular.
-
-@col
- Then, by Item 5 of @ref{NME2} the columns of $A$ are linearly independent,
-and by Item 4 they span $\mathbb{R}^m$.
-Hence, the columns of $A$ is a basis for $\mathbb{R}^m$. 
-@qed
-@endcol
-@end
-@slide
- In fact, we may further extend @ref{NME2} as follows: 
-@thm
-@title{Nonsingular Matrix Equivalences}
-@label{NME25}
-@newcol
- Suppose that $A$ is an $m\times m$ square matrix.
-The following are equivalent: <ol class="ltx_enumerate">
-<li class="ltx_item">
-@col
- $A$ is nonsingular. </li>
-<li class="ltx_item">
-@col
- $A$ row-reduces to the identity matrix. </li>
-<li class="ltx_item">
-@col
- The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$. </li>
-<li class="ltx_item">
-@col
- The linear system $\mathcal{LS}({A},{\mathbf{b}})$ has a unique solution for every possible choice of $\mathbf{b}$. </li>
-<li class="ltx_item">
-@col
- The columns of $A$ form a linearly independent set. </li>
-<li class="ltx_item">
-@col
- The columns of $A$ form a basis for $\mathbb{R}^m$. </li></ol>
-@endcol
-@end
-@slide
-@skip
-@eg
- Consider $S^{\prime}=\left\{\mathbf{v}_{1}=\begin{bmatrix}1\\
-0\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}1\\
-1\end{bmatrix}\right\}$.
-
-Let
-\begin{align*}
-\displaystyle A=[\mathbf{v}_{1}|\mathbf{v}_{2}]=\begin{bmatrix}1&1\\
-0&1\end{bmatrix}
-\end{align*} 
-@newcol
-<strong>Exercise.</strong> The matrix $A$ is nonsingular.
-
-@col
- Hence, $S^{\prime}$ is a basis for ${\mathbb{R}}^{2}$. 
-@endcol
-@end
-@slide
-@eg
- \begin{align*}
-\displaystyle A=\begin{bmatrix}-7&-6&-12\\
-5&5&7\\
-1&0&4\end{bmatrix}.
-\end{align*} 
-@newcol
- It may be shown that $A$ is row equivalent to the $3\times 3$
-identity matrix.
-
-@col
- Hence $A$ is nonsingular,
-so the columns of $A$ form a basis for ${\mathbb{R}}^{3}$. 
-@endcol
-@end
-@section{
-
-Column Space of a Nonsingular Matrix}
-@slide
-@thm
-@title{Column Space of a Nonsingular Matrix}
- Suppose $A$ is a square matrix of size $n$. Then $A$ is nonsingular if and only if $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$. 
-@end
-@proof
-@newcol
- See @ref{thm:ANSRM}. 
-@qed
-@endcol
-@end
-@slide
-@eg
- Let
-\begin{align*}
-\displaystyle A=\begin{bmatrix}0&1&2&3\\
--1&1&2&1\\
-0&1&0&2\\
-1&1&1&4\\
+\displaystyle \begin{bmatrix}1&0&2&0&0&1&2\\
+0&1&1&0&0&1&-1\\
+0&0&0&1&0&-2&3\\
+0&0&0&0&1&1&1\\
 \end{bmatrix}.
-\end{align*} 
-@newcol
- We can show that $A$ is nonsingular as $A\xrightarrow{\text{RREF}}I_{4}$.
-So $\mathcal{C}\left(A\right)={\mathbb{R}}^{4}$. 
+\end{align*}  
+@endcol
+
+@col
+<strong>Important remark</strong>: from the above computation, the entries of $B$ are uniquely determined by $A$.
+
+@col
+  So the RREF $B$ is unique.
+
 @endcol
 @end
+
+
 <!--DELIMITER-->

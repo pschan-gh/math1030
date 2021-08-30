@@ -1,953 +1,1187 @@
 @course{MATH 1030}
 @setchapter{11}
-@chapter{Linear Dependence and Span}
+@chapter{Spanning Sets}
+
 <h5 class="notkw">Reference.</h5><ul>
-<li> Beezer, Ver 3.5 Section LDS (print version p105 - p113) </li>
-<li> Strang, Sect 2.3 </li></ul><h5 class="notkw">Exercise</h5><ul>
-<li> Exercises with solutions can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf} Section LI (p.48-51) (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$ in the following questions)
-C20, C40, C50, C51, C52, C55, C70, M10, T40. </li>
+<li> Beezer, Ver 3.5 Section SS (print version p83 - p94) </li>
 <li> Strang, Sect 2.3 </li></ul>
-@section{Linearly Independent Sets of Vectors}
-@label{LISV}
+
+<h5 class="notkw">Exercise.</h5><ul>
+<li> Exercises with solutions can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf} Section SS (p.34-40) C40-45, C50, C60, M10, M11, M12. (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$ in the following questions) T10, T20, T21, T22. </li>
+<li> Strang, Sect 2.3. </li></ul>
+@slide
+  In this section we will provide an extremely compact way to describe an infinite set of vectors, making use of linear combinations. This will give us a convenient way to describe the solution set of a linear system, the null space of a matrix, and many other sets of vectors.  
+@section{Span of a Set of Vectors}
+@label{SSV}
+<!--
+We saw that the solution set of a homogeneous system can be described as all possible linear combinations of two particular sets of vectors. This is a useful way to construct or describe infinite sets of vectors, so we encapsulate the idea in a definition.
+-->
+
+
+
 @defn
-@title{Relation of Linear Dependence}
-@label{RLDCV}
- Given a set of vectors $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\}$, an equality of the form
+@title{Span of a Set of Column Vectors}
+@label{SSCV}
+  Given a set of vectors
 \begin{align*}
-\displaystyle \alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}+\cdots+\alpha_{n}\mathbf{u}_{n}=\mathbf{0}
+\displaystyle S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\},
 \end{align*}
-is a @keyword{relation of linear dependence} on $S$. If this equality is formed in a trivial fashion, i.e., $\alpha_{i}=0$, $1\leq i\leq n$, then we say that it is the @keyword{trivial relation of linear dependence} on $S$. 
-@end
-@defn
-@title{Linear Independence}
-@label{LICV}
-@newcol
- The set of vectors $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\}$ is @keyword{linearly dependent} if there is a relation of linear dependence on $S$ that is not trivial. In the case where the only relation of linear dependence on $S$ is the trivial one, then $S$ is a @keyword{linearly independent} set of vectors. 
-@endcol
-@end
-@remark
-@newcol
- In short, a set of vectors $\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\}$ is linearly independent if and only if the only solution to:
-\[
-x_1 \mathbf{u}_1 + x_2 \mathbf{u}_2 + \cdots + x_n \mathbf{u}_n = \mathbf{0}
-\]
-is:
-\[
-x_1 = x_2 = \cdots = x_n = 0.
-\] 
-@endcol
+their @keyword{span}, $\mathrm{Span}\,S$, is the set of all linear combinations of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}$.
+Symbolically,
+\begin{align*}
+\displaystyle
+\mathrm{Span}\,S&\displaystyle=\left\{\left.\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}+\cdots+\alpha_{n}\mathbf{u}_{n}\,\right|\,\alpha_{i}\in{\mathbb{R}}^{\hbox{}},\,1\leq i\leq n\right\} \\
+&\displaystyle=\left\{\left.\sum_{i=1}^{n}\alpha_{i}\mathbf{u}_{i}\,\right|\,\alpha_{i}\in{\mathbb{R}}^{\hbox{}},\,1\leq i\leq n\right\}
+\end{align*}  
 @end
 @slide
 @thm
-@title{Linearly Independent Vectors and Homogeneous Systems}
-@label{LIVHS}
- Suppose that $S=\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\ldots,\,\mathbf{v}_{n}\}\subseteq{\mathbb{R}}^{m}$ is a set of vectors and that $A$ is the $m\times n$ matrix whose columns are the vectors in $S$. Then $S$ is a linearly independent set if and only if the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$ has a unique solution. 
-@end
-@proof
-
-($\Leftarrow$) 
-@newcol
- Suppose that $\mathcal{LS}({A},{\mathbf{0}})$ has a unique solution. Since it is a homogeneous system, this solution must be the trivial solution, $\mathbf{x}=\mathbf{0}$. This means that the only relation of linear dependence on $S$ is the trivial one. So $S$ is linearly independent. 
-@endcol
-
-($\Rightarrow$) 
-@newcol
- We will prove the contrapositive. Suppose that $\mathcal{LS}({A},{\mathbf{0}})$ does not have a unique solution. Since it is a homogeneous system, it is consistent. And so must have infinitely many solutions. One of these infinitely many solutions must be nontrivial (in fact, almost all of them are); choose one. This nontrivial solution will give a nontrivial relation of linear dependence on $S$. We therefore conclude that $S$ is a linearly dependent set. 
-@endcol
-@qed
-@end
-@slide
- Since the above theorem is an "if-and-only-if" statement, we can use it to determine the linear independence or dependence of any set of column vectors, just by creating a matrix and analyzing its row-reduced echelon form. Let us illustrate this with two more examples. 
-@slide
-@eg
-@label{LDS}
-@keyword{Linearly dependent set in ${\mathbb{R}}^{5}$}
-
-Consider the following set of $n=4$ vectors in ${\mathbb{R}}^{5}$:
-\begin{align*}
-\displaystyle S=
-\left\{\begin{bmatrix}2\\
--1\\
-3\\
-1\\
-2\end{bmatrix},\,\begin{bmatrix}1\\
-2\\
--1\\
-5\\
-2\end{bmatrix},\,\begin{bmatrix}2\\
-1\\
--3\\
-6\\
-1\end{bmatrix},\,\begin{bmatrix}-6\\
-7\\
--1\\
-0\\
-1\end{bmatrix}
-\right\}
-\end{align*} 
-@newcol
- To determine linear independence, we first form an arbitrary relation of linear dependence,
-\begin{align*}
-\displaystyle \alpha_{1}\begin{bmatrix}2\\
--1\\
-3\\
-1\\
-2\end{bmatrix}+\alpha_{2}\begin{bmatrix}1\\
-2\\
--1\\
-5\\
-2\end{bmatrix}+\alpha_{3}\begin{bmatrix}2\\
-1\\
--3\\
-6\\
-1\end{bmatrix}+\alpha_{4}\begin{bmatrix}-6\\
-7\\
--1\\
-0\\
-1\end{bmatrix}=\mathbf{0}
-\end{align*}
-We know that $\alpha_{1}=\alpha_{2}=\alpha_{3}=\alpha_{4}=0$ is a solution to this equation, but that is of no interest whatsoever. That is always the case, no matter what four vectors we might have chosen. We are curious to know if there are other, nontrivial, solutions.
-
-In other words, are there nontrivial solutions to the homogeneous linear system
-$\mathcal{LS}(A, \mathbf{0})$, where the columns of $A$ consist of the vectors in $S$.
-
-@col
- Row-reducing the matrix $A$ gives:
-\begin{align*}
-\displaystyle A=\begin{bmatrix}2&1&2&-6\\
--1&2&1&7\\
-3&-1&-3&-1\\
-1&5&6&0\\
-2&2&1&1\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&-2\\
-0&\boxed{1}&0&4\\
-0&0&\boxed{1}&-3\\
-0&0&0&0\\
-0&0&0&0\end{bmatrix}.
-\end{align*}
-We could solve the corresponding homogeneous system completely, but for this example all we need is one nontrivial solution. Setting the lone free variable to any nonzero value, such as $x_{4}=1$, yields the nontrivial solution:
-\begin{align*}
-\displaystyle \mathbf{x}=\begin{bmatrix}2\\
--4\\
-3\\
-1\end{bmatrix}.
-\end{align*} 
-@col
- Hence,
-\begin{align*}
-\displaystyle 2\begin{bmatrix}2\\
--1\\
-3\\
-1\\
-2\end{bmatrix}+(-4)\begin{bmatrix}1\\
-2\\
--1\\
-5\\
-2\end{bmatrix}+3\begin{bmatrix}2\\
-1\\
--3\\
-6\\
-1\end{bmatrix}+1\begin{bmatrix}-6\\
-7\\
--1\\
-0\\
-1\end{bmatrix}=\mathbf{0}.
-\end{align*}
-This is a relation of linear dependence on $S$ that is not trivial, so we conclude that $S$ is <strong>linearly dependent</strong>. 
-@endcol
-@end
-@eg
-@label{LIS}
-@newcol
-@keyword{Linearly independent set in ${\mathbb{R}}^{5}$}
-
-Consider the following set of $n=4$ vectors in ${\mathbb{R}}^{5}$:
-\begin{align*}
-\displaystyle T=
-\left\{\begin{bmatrix}2\\
--1\\
-3\\
-1\\
-2\end{bmatrix},\,\begin{bmatrix}1\\
-2\\
--1\\
-5\\
-2\end{bmatrix},\,\begin{bmatrix}2\\
-1\\
--3\\
-6\\
-1\end{bmatrix},\,\begin{bmatrix}-6\\
-7\\
--1\\
-1\\
-1\end{bmatrix}
-\right\}.
-\end{align*}
-To determine linear independence we first form an arbitrary relation of linear dependence,
-\begin{align*}
-\displaystyle \alpha_{1}\begin{bmatrix}2\\
--1\\
-3\\
-1\\
-2\end{bmatrix}+\alpha_{2}\begin{bmatrix}1\\
-2\\
--1\\
-5\\
-2\end{bmatrix}+\alpha_{3}\begin{bmatrix}2\\
-1\\
--3\\
-6\\
-1\end{bmatrix}+\alpha_{4}\begin{bmatrix}-6\\
-7\\
--1\\
-1\\
-1\end{bmatrix}=\mathbf{0}.
-\end{align*} 
-@col
- We want to know if there are solutions to the equation above besides the trivial one: $\alpha_{1}=\alpha_{2}=\alpha_{3}=\alpha_{4}=0$.
-
-Row-reducing the associated matrix gives:
-\begin{align*}
-\displaystyle B=\begin{bmatrix}2&1&2&-6\\
--1&2&1&7\\
-3&-1&-3&-1\\
-1&5&6&1\\
-2&2&1&1\end{bmatrix}&\displaystyle\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&0\\
-0&\boxed{1}&0&0\\
-0&0&\boxed{1}&0\\
-0&0&0&\boxed{1}\\
-0&0&0&0\end{bmatrix}.
-\end{align*} 
-@col
- From the form of this matrix, we see that there are no free variables. Hence the associated homogeneous linear system has only the trivial solution. So we now know that there is but one way to combine the four vectors of $T$ into a relation of linear dependence, and that this one way is the easy and obvious way. Hence, the set $T$ is <strong>linearly independent</strong>. 
-@endcol
-@end
-
-@subsection{More Examples}
-@slide
-@skip
-@eg
-@label{LIHS}
-@keyword{Linearly independent}
-
-@newcol
- Is the set of vectors:
-\begin{align*}
-\displaystyle S=
-\left\{\begin{bmatrix}
-2\\
--1\\
-3\\
-4\\
-2
-\end{bmatrix},
-\,
-\begin{bmatrix}
-6\\
-2\\
--1\\
-3\\
-4
-\end{bmatrix},
-\,
-\begin{bmatrix}
-4\\
-3\\
--4\\
-5\\
-1
-\end{bmatrix}
-\right\}
-\end{align*}
-linearly independent or linearly dependent? 
-@endcol
-@end
-@sol
-@newcol
- The above theorem suggests that we study the matrix $A$ whose columns are the vectors in $S$. Specifically, we are interested in the size of the solution set of the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$. Row-reducing $A$ gives:
-
-@col
- \begin{align*}
-\displaystyle A=\begin{bmatrix}2&6&4\\
--1&2&3\\
-3&-1&-4\\
-4&3&5\\
-2&4&1\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0\\
-0&\boxed{1}&0\\
-0&0&\boxed{1}\\
-0&0&0\\
-0&0&0\end{bmatrix}.
-\end{align*} 
-@col
- We have $r=3$, so there are $n-r=3-3=0$ free variables. Hence $\mathcal{LS}({A},{\mathbf{0}})$ has a unique solution. By the above theorem, the set $S$ is linearly independent. 
-@endcol
-@end
-
-@slide
-@skip
-@eg
-@label{LDHS}
-@keyword{Linearly dependent}
-
-@newcol
- Is the set of vectors:
-\begin{align*}
-\displaystyle S=
-\left\{\begin{bmatrix}2\\
--1\\
-3\\
-4\\
-2\end{bmatrix},\,\begin{bmatrix}6\\
-2\\
--1\\
-3\\
-4\end{bmatrix},\,\begin{bmatrix}4\\
-3\\
--4\\
--1\\
-2\end{bmatrix}
-\right\}
-\end{align*}
-linearly independent or linearly dependent? 
-@endcol
-@end
-@sol
-
-@newcol
- Theorem @ref{LIVHS} suggests that we study the matrix $A$ whose columns are the vectors in $S$. Specifically, we are interested in the size of the solution set of the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$. Row-reducing $A$ gives
-\begin{align*}
-\displaystyle A=\begin{bmatrix}2&6&4\\
--1&2&3\\
-3&-1&-4\\
-4&3&-1\\
-2&4&2\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&-1\\
-0&\boxed{1}&1\\
-0&0&0\\
-0&0&0\\
-0&0&0\end{bmatrix}.
-\end{align*}
-We have $r=2$, so there are $n-r=3-2=1$ free variables. Hence $\mathcal{LS}({A},{\mathbf{0}})$ has infinitely many solutions. By
-Theorem @ref{LIVHS}, the set $S$ is linearly dependent. 
-@qed
-@endcol
-@end
-
-@slide
-@skip
- Theorem @ref{LIVHS} gives us a straightforward way to determine if a set of vectors is linearly independent or dependent.
-
-Review the previous two examples. They are very similar, differing only in the last two slots of the third vector. This resulted in slightly different matrices when row-reduced, and different values of $r$, the number of nonzero rows. Notice, too, that we are less interested in the actual solution set, and more interested in its form or size. These observations allow us to make a slight improvement on Theorem @ref{LIVHS}.
-
-@section{Linearly Dependent Sets and Spans}
-@slide
-@skip
- If we use a linearly dependent set to construct a span, then we can always create the same infinite set by starting with a set that is one vector smaller in size. We will illustrate this behaviour in @ref{RSC5}. However, this will not be possible if we build a span from a linearly independent set. So, in a certain sense, using a linearly independent set to formulate a span is the best possible way – there are no any extra vectors being used to build up all the necessary linear combinations. OK, here is the theorem, and then the example. 
-@slide
-@thm
-@title{Dependency in Linearly Dependent Sets}
-@label{DLDS}
- Suppose that $S=\left\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\right\}$ is a set of vectors. Then $S$ is a linearly dependent set if and only if there is an index $t$, $1\leq t\leq n$, such that $\mathbf{u_{t}}$ is a linear combination of the vectors $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{t-1},\,\mathbf{u}_{t+1},\,\ldots,\,\mathbf{u}_{n}$. 
-@end
-@proof
-
-($\Rightarrow$) 
-@newcol
- Suppose that $S$ is linearly dependent. Then there exists a nontrivial relation of linear dependence (Lecture 12 Definition 1). That is, there are scalars, $\alpha_{i}$, $1\leq i\leq n$, not all of which are zero, such that
-\begin{align*}
-\displaystyle \alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}+\cdots+\alpha_{n}\mathbf{u}_{n}=\mathbf{0}.
-\end{align*}
-Suppose that $\alpha_{t}$ is nonzero. Then,
-\begin{align*}
-\displaystyle\mathbf{u}_{t}&\displaystyle=\frac{-1}{\alpha_{t}}\left(-\alpha_{t}\mathbf{u}_{t}\right) \\
-&\displaystyle=\frac{-1}{\alpha_{t}}\left(\alpha_{1}\mathbf{u}_{1}+\cdots+\alpha_{t-1}\mathbf{u}_{t-1}+\alpha_{t+1}\mathbf{u}_{t+1}+\cdots+\alpha_{n}\mathbf{u}_{n}\right) \\
-&\displaystyle=\frac{-\alpha_{1}}{\alpha_{t}}\mathbf{u}_{1}+\cdots+\frac{-\alpha_{t-1}}{\alpha_{t}}\mathbf{u}_{t-1}+\frac{-\alpha_{t+1}}{\alpha_{t}}\mathbf{u}_{t+1}+\cdots+\frac{-\alpha_{n}}{\alpha_{t}}\mathbf{u}_{n}.
-\end{align*}
-Since $\frac{\alpha_{i}}{\alpha_{t}}$ is again a scalar, we have expressed $\mathbf{u}_{t}$ as a linear combination of the other elements of $S$. 
-@endcol
-
-($\Leftarrow$) 
-@newcol
- Assume that the vector $\mathbf{u}_{t}$ is a linear combination of the other vectors in $S$. Write such a linear combination as
-\begin{align*}
-\displaystyle\mathbf{u_{t}}&\displaystyle=\beta_{1}\mathbf{u}_{1}+\beta_{2}\mathbf{u}_{2}+\cdots+\beta_{t-1}\mathbf{u}_{t-1}+\beta_{t+1}\mathbf{u}_{t+1}+\cdots+\beta_{n}\mathbf{u}_{n}.
-\end{align*} 
-@col
- Then we have
-\begin{align*}
-\displaystyle\beta_{1}\mathbf{u}_{1}&\displaystyle+\cdots+\beta_{t-1}\mathbf{u}_{t-1}+(-1)\mathbf{u}_{t}+\beta_{t+1}\mathbf{u}_{t+1}+\cdots+\beta_{n}\mathbf{u}_{n} \\
-&\displaystyle=\mathbf{u}_{t}+(-1)\mathbf{u}_{t} \\
-&\displaystyle=\left(1+\left(-1\right)\right)\mathbf{u}_{t} \\
-&\displaystyle=0\mathbf{u}_{t} \\
-&\displaystyle=\mathbf{0}.
-\end{align*} 
-@col
- So the scalars $\beta_{1},\,\beta_{2},\,\beta_{3},\,\ldots,\,\beta_{t-1},\,\beta_{t}=-1,\beta_{t+1},\,\,\ldots,\,\beta_{n}$ provide a nontrivial relation of linear dependence of the vectors in $S$, thus establishing that $S$ is a linearly dependent set. 
-@endcol
-@qed
-@end
-@newcol
- This theorem can be used, sometimes repeatedly, to whittle down the size of a set of vectors used in a span construction.
-In the next example we will examine some of the subtleties. 
-@endcol
-@slide
-@eg
-@label{RSC5}
-@keyword{Reducing the generating set of a span in ${\mathbb{R}}^{5}$}
-
-Consider the following set of $n=4$ vectors in ${\mathbb{R}}^{5}$,
-\begin{align*}
-\displaystyle R=
-\left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\mathbf{v}_{4}\right\}
-=\left\{\begin{bmatrix}1\\
-2\\
--1\\
-3\\
-2\end{bmatrix},\,\begin{bmatrix}2\\
-1\\
-3\\
-1\\
-2\end{bmatrix},\,\begin{bmatrix}0\\
--7\\
-6\\
--11\\
--2\end{bmatrix},\,\begin{bmatrix}4\\
-1\\
-2\\
-1\\
-6\end{bmatrix}\right\}.\\
-\end{align*}
-Define $V=\left<  R\right>$.
-
-@newcol
- We form a $5\times 4$ matrix, $D$, and row-reduce it to understand the solutions to the homogeneous system $\mathcal{LS}({D},{\mathbf{0}})$:
-\begin{align*}
-\displaystyle D=\begin{bmatrix}1&2&0&4\\
-2&1&-7&1\\
--1&3&6&2\\
-3&1&-11&1\\
-2&2&-2&6\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&4\\
-0&\boxed{1}&0&0\\
-0&0&\boxed{1}&1\\
-0&0&0&0\\
-0&0&0&0\end{bmatrix}.
-\end{align*} 
-@col
- We can find infinitely many solutions to the system $\mathcal{LS}({D},{\mathbf{0}})$, most of which are nontrivial. Choose any nontrivial solution to build a nontrivial relation of linear dependence on $R$. Let us begin with $x_{4}=1$, to find the solution
-\begin{align*}
-\displaystyle \begin{bmatrix}-4\\
-0\\
--1\\
-1\end{bmatrix}.
-\end{align*} 
-@col
- The corresponding relation of linear dependence is
-\begin{align*}
-\displaystyle (-4)\mathbf{v}_{1}+0\mathbf{v}_{2}+(-1)\mathbf{v}_{3}+1\mathbf{v}_{4}=\mathbf{0}.
-\end{align*} 
-@col
- The theorem above guarantees that we can solve this relation of linear dependence for some vector in $R$, but the choice of which one is up to us. Notice however that $\mathbf{v}_{2}$ has a zero coefficient. In this case, we cannot choose to solve for $\mathbf{v}_{2}$. Maybe some other relation of linear dependence would produce a nonzero coefficient for $\mathbf{v}_{2}$ if we just had to solve for this vector. Unfortunately, this example has been engineered to always produce a zero coefficient here, as you can see from solving the homogeneous system. Every solution has $x_{2}=0$!
-
-OK, if we are convinced that we cannot solve for $\mathbf{v}_{2}$, let us instead solve for $\mathbf{v}_{3}$:
-\begin{align*}
-\displaystyle \mathbf{v}_{3}=(-4)\mathbf{v}_{1}+0\mathbf{v}_{2}+1\mathbf{v}_{4}=(-4)\mathbf{v}_{1}+1\mathbf{v}_{4}
-\end{align*} 
-@col
- We claim that this particular equation will allow us to write
-\begin{align*}
-\displaystyle V=\left< R\right>=\left< \left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\mathbf{v}_{4}\right\}\right>=\left< \left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{4}\right\}\right>,
-\end{align*}
-in essence declaring $\mathbf{v}_{3}$ as surplus for the task of building $V$ as a span of $R$. This claim is an equality of two sets. Let $R^{\prime}=\left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{4}\right\}$ and $V^{\prime}=\left< R^{\prime}\right>$. We want to show that $V=V^{\prime}$.
-
-First show that $V^{\prime}\subseteq V$. Since every vector of $R^{\prime}$ is in $R$, any vector we can construct in $V^{\prime}$ as a linear combination of vectors from $R^{\prime}$ can also be constructed as a vector in $V$ by the same linear combination of the same vectors in $R$. That was easy, now turn it around.
-
-@col
- Next show that $V\subseteq V^{\prime}$. Choose any $\mathbf{v}$ from $V$. So there are scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4}$ such that
-\begin{align*}
-\displaystyle\mathbf{v}&\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\mathbf{v}_{3}+\alpha_{4}\mathbf{v}_{4} \\
-&\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\left((-4)\mathbf{v}_{1}+1\mathbf{v}_{4}\right)+\alpha_{4}\mathbf{v}_{4} \\
-&\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\left((-4\alpha_{3})\mathbf{v}_{1}+\alpha_{3}\mathbf{v}_{4}\right)+\alpha_{4}\mathbf{v}_{4} \\
-&\displaystyle=\left(\alpha_{1}-4\alpha_{3}\right)\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\left(\alpha_{3}+\alpha_{4}\right)\mathbf{v}_{4}.
-\end{align*} 
-@col
- This equation says that $\mathbf{v}$ can be written as a linear combination of the vectors in $R^{\prime}$ and hence qualifies for membership in $V^{\prime}$. So $V\subseteq V^{\prime}$ and we have established that $V=V^{\prime}$.
-
-If $R^{\prime}$ was also linearly dependent (in fact, it is not), we could reduce the set $R^{\prime}$ even further. Notice that we could have chosen to eliminate any one of $\mathbf{v}_{1}$, $\mathbf{v}_{3}$ or $\mathbf{v}_{4}$, but somehow $\mathbf{v}_{2}$ is essential to the creation of $V$ since it cannot be replaced by any linear combination of $\mathbf{v}_{1}$, $\mathbf{v}_{3}$ or $\mathbf{v}_{4}$. 
-@endcol
-@end
-@section{Relation between Linear Independence and the Number of Pivot Columns}
-@thm
-@title{Linearly Independent Vectors, $r$ and $n$}
-@label{LIVRN}
- Suppose that
-\begin{align*}
-\displaystyle S=\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\ldots,\,\mathbf{v}_{n}\}\subseteq{\mathbb{R}}^{m}
-\end{align*}
-is a set of vectors and that $A$ is the $m\times n$ matrix whose columns are the vectors in $S$. Let $B$ be a matrix in reduced row-echelon form that is row-equivalent to $A$ and let $r$ denote the number of pivot columns in $B$. Then $S$ is linearly independent if and only if $n=r$. 
+  Let $S=\{\mathbf{u}_{1},\ldots,\mathbf{u}_{k}\}\subseteq V={\mathbb{R}}^{m}$.
+Then $\mathrm{Span}\,S$ is a subspace of $V$.  
 @end
 @proof
 @newcol
- Theorem @ref{LIVHS} says the linear independence of $S$ is equivalent to the homogeneous linear system $\mathcal{LS}({A},{\mathbf{0}})$ having a unique solution. Since the zero vector is a solution of $\mathcal{LS}({A},{\mathbf{0}})$,
-$\mathcal{LS}({A},{\mathbf{0}})$ is consistent. We can therefore can apply @ref{CSRN} to see that the solution is unique exactly when $n=r$. 
+  Obviously $\mathrm{Span}\,S$ is nonempty. Let $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{w}\in W=\mathrm{Span}\,S$.
+Then there exists $\alpha_{1},\ldots,\alpha_{k},\beta_{1},\ldots,\beta_{k}$ such that
+\begin{align*}
+\displaystyle \mathbf{v}=\alpha_{1}\mathbf{u}_{1}+\cdots+\alpha_{k}\mathbf{u}_{k},
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{w}=\beta_{1}\mathbf{u}_{1}+\cdots+\beta_{k}\mathbf{u}_{k}.
+\end{align*}
+Then
+\begin{align*}
+\displaystyle \alpha\mathbf{v}+\mathbf{w}=(\alpha\alpha_{1}+\beta_{1})\mathbf{u}_{1}+\cdots+(\alpha\alpha_{k}+\beta_{k})\mathbf{u}_{k}
+\end{align*}
+is in $\mathrm{Span}\,S$.
+Thus by @ref{b97161010780aa4b703cb89b1294f822}, $W$ is a subspace.  
 @qed
 @endcol
 @end
-@slide
- Here is an example of the most straightforward way to determine if a set of column vectors is linearly independent or linearly dependent. While this method can be quick and easy, do not forget the logical progression from the definition of linear independence through homogeneous system of equations which makes it possible. 
-@eg
-@keyword{Linear dependence, $r$ and $n$}
-
+<strong>Main Questions.</strong>
 @newcol
- Is the set of vectors:
+<ol class="ltx_enumerate">
+<li class="ltx_item"> Determine if a vector $\mathbf{v}$ is an element of $\mathrm{Span}\,S$. </li>
+<li class="ltx_item"> Describe the set $\mathrm{Span}\,S$. </li>
+<li class="ltx_item"> Is $\mathrm{Span}\,S$ equal to ${\mathbb{R}}^{m}$? </li></ol>
+@endcol
+@slide
+@eg
+@label{ABS}
+  Consider the following set of 5 vectors, $S$, from ${\mathbb{R}}^{4}$:
 \begin{align*}
-\displaystyle S=
-\left\{\begin{bmatrix}2\\
--1\\
-3\\
+\displaystyle S=\left\{\begin{bmatrix}1\\
 1\\
+3\\
+1\end{bmatrix},\,\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix},\,\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix},\,\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix},\,\begin{bmatrix}-1\\
 0\\
-3\end{bmatrix},\,\begin{bmatrix}9\\
+9\\
+0\end{bmatrix}\right\}.
+\end{align*}  
+@newcol
+  Consider the infinite set of vectors $\mathrm{Span}\,S$ formed by all linear combinations of the elements of $S$. Here are four vectors which we definitely know are elements of $\mathrm{Span}\,S$:
+\begin{align*}
+\displaystyle \mathbf{w}=(2)\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+(1)\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+(-1)\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+(2)\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+(3)\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\begin{bmatrix}-4\\
+2\\
+28\\
+10\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{x}=(5)\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+(-6)\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+(-3)\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+(4)\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+(2)\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\begin{bmatrix}-26\\
 -6\\
--2\\
-3\\
 2\\
-1\end{bmatrix},\,\begin{bmatrix}1\\
-1\\
-1\\
-0\\
-0\\
-1\end{bmatrix},\,\begin{bmatrix}-3\\
-1\\
-4\\
-2\\
-1\\
-2\end{bmatrix},\,\begin{bmatrix}6\\
--2\\
-1\\
-4\\
-3\\
-2\end{bmatrix}\right\}
+34\end{bmatrix}
 \end{align*}
-linearly independent or linearly dependent? 
+\begin{align*}
+\displaystyle \mathbf{y}=(1)\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+(0)\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+(1)\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+(0)\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+(1)\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\begin{bmatrix}7\\
+4\\
+17\\
+-4\end{bmatrix}
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{z}=(0)\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+(0)\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+(0)\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+(0)\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+(0)\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\begin{bmatrix}0\\
+0\\
+0\\
+0\end{bmatrix}.
+\end{align*}  
+@col
+<strong>Fundamental question:</strong> Determine if a given vector is an element of the set or not. Let us learn more about $\mathrm{Span}\,S$ by investigating which vectors are elements of the set, and which are not.
+
+First, is $\mathbf{u}=\begin{bmatrix}-15\\
+-6\\
+19\\
+5\end{bmatrix}$ an element of $\mathrm{Span}\,S$?
+
+@col
+  In other words, are there scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$ such that:
+\begin{align*}
+\displaystyle \alpha_{1}\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+\alpha_{2}\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+\alpha_{3}\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+\alpha_{4}\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+\alpha_{5}\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\mathbf{u}=\begin{bmatrix}-15\\
+-6\\
+19\\
+5\end{bmatrix}?
+\end{align*}  
+@col
+  Searching for such scalars is equivalent to finding a solution to the linear system of equations with augmented matrix:
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccccc|c}1&2&7&1&-1&-15\\
+1&1&3&1&0&-6\\
+3&2&5&-1&9&19\\
+1&-1&-5&2&0&5\end{array}\right].
+\end{align*}  
+@col
+  This matrix row-reduces to
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccccc|c}\boxed{1}&0&-1&0&3&10\\
+0&\boxed{1}&4&0&-1&-9\\
+0&0&0&\boxed{1}&-2&-7\\
+0&0&0&0&0&0\end{array}\right].
+\end{align*}  
+@col
+  At this point, we see that the system is consistent, so we know there is a solution for the five scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$. This is enough evidence for us to say that $\mathbf{u}\in\mathrm{Span}\,S$.
+
+Moreover, we can compute an actual solution, for example:
+
+@col
+  \begin{align*}
+\displaystyle\alpha_{1}&\displaystyle=2&\displaystyle\alpha_{2}&\displaystyle=1&\displaystyle\alpha_{3}&\displaystyle=-2&\displaystyle\alpha_{4}&\displaystyle=-3&\displaystyle\alpha_{5}&\displaystyle=2.
+\end{align*}
+This particular solution allows us to write
+\begin{align*}
+\displaystyle (2)\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+(1)\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+(-2)\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+(-3)\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+(2)\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\mathbf{u}=\begin{bmatrix}-15\\
+-6\\
+19\\
+5\end{bmatrix}
+\end{align*}
+making it even more obvious that $\mathbf{u}\in\mathrm{Span}\,S$.
+
+@col
+  We now determine if $\mathbf{v}=\begin{bmatrix}3\\
+1\\
+2\\
+-1\end{bmatrix}$ an element of $\mathrm{Span}\,S$.
+
+@col
+  We want to know if there are scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$ such that:
+\begin{align*}
+\displaystyle \alpha_{1}\begin{bmatrix}1\\
+1\\
+3\\
+1\end{bmatrix}+\alpha_{2}\begin{bmatrix}2\\
+1\\
+2\\
+-1\end{bmatrix}+\alpha_{3}\begin{bmatrix}7\\
+3\\
+5\\
+-5\end{bmatrix}+\alpha_{4}\begin{bmatrix}1\\
+1\\
+-1\\
+2\end{bmatrix}+\alpha_{5}\begin{bmatrix}-1\\
+0\\
+9\\
+0\end{bmatrix}=\mathbf{v}=\begin{bmatrix}3\\
+1\\
+2\\
+-1\end{bmatrix}
+\end{align*}  
+@col
+  Again, this is equivalent to finding a solution to the linear system of equations with augmented matrix:
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccccc|c}1&2&7&1&-1&3\\
+1&1&3&1&0&1\\
+3&2&5&-1&9&2\\
+1&-1&-5&2&0&-1\end{array}\right].
+\end{align*}
+This matrix row-reduces to
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccccc|c}\boxed{1}&0&-1&0&3&0\\
+0&\boxed{1}&4&0&-1&0\\
+0&0&0&\boxed{1}&-2&0\\
+0&0&0&0&0&\boxed{1}\end{array}\right].
+\end{align*}  
+@col
+  At this point, we see that the system is inconsistent, so we know there is no solution for the five scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$. This is enough evidence for us to say that $\mathbf{v}\not\in\mathrm{Span}\,S$. End of story.  
 @endcol
 @end
-@sol
-@newcol
- Theorem @ref{LIVRN} suggests that we take the vectors of $S$ as the columns of a matrix and then analyze its reduced row-echelon form:
+@slide
+  From the previous example, we have the following theorem:  
+@thm
+  Suppose that $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}$ are in $\mathbf{R}^{m}$.
+Let $A$ be the $m\times n$ matrix whose $i$-th column is $\mathbf{u}_{i}$.
+Then $\mathbf{v}\in\mathrm{Span}\,S$ is and only if $\mathcal{LS}({A},{\mathbf{v}})$ is consistent.  
+@end
+@slide
+@eg
+<strong>Computational Technique.</strong>
+
+Given $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\}$ in ${\mathbb{R}}^{m}$, determine if
 \begin{align*}
-\displaystyle \begin{bmatrix}2&9&1&-3&6\\
--1&-6&1&1&-2\\
-3&-2&1&4&1\\
-1&3&0&2&4\\
-0&2&0&1&3\\
-3&1&1&2&2\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&0&0&-1\\
-0&\boxed{1}&0&0&1\\
-0&0&\boxed{1}&0&2\\
-0&0&0&\boxed{1}&1\\
-0&0&0&0&0\\
+\displaystyle \mathbf{v}=\begin{bmatrix}v_{1}\\
+\vdots\\
+v_{m}\end{bmatrix}\in\mathrm{Span}\,S.
+\end{align*}  
+@end
+@sol
+@enumerate
+@item
+@newcol
+  To determine if $\mathbf{v}\in\mathrm{Span}\,S$, we need to find $\alpha_{1},\ldots,\alpha_{n}$ such that
+\begin{align*}
+\displaystyle \alpha_{1}\mathbf{u}_{1}+\cdots+\alpha_{n}\mathbf{u}_{n}=\mathbf{v}.
+\end{align*}  
+@endcol
+@item
+@newcol
+  This is equivalent to solving the system of linear equations $\mathcal{LS}({A},{\mathbf{v}})$,
+where $A$ is the $m\times n$ matrix whose $i$-th column is $\mathbf{u}_{i}$.  
+@endcol
+@item
+@newcol
+  Row-reduce the augmented matrix $[A|\mathbf{v}]$ to an RREF $B$.  
+@enumerate
+@item
+@newcol
+  If the last column of $B$ is a pivot column, then the system is inconsistent and $\mathbf{v}\notin\mathrm{Span}\,S$.  
+@endcol
+@item
+@newcol
+  If the last column of $B$ is not a pivot column, then the system is consistent and $\mathbf{v}\in\mathrm{Span}\,S$.  
+@endcol
+@endenumerate
+@endcol
+@endenumerate
+@end
+@slide
+@eg
+  Following the previous example, determine if:
+\[
+\mathbf{v}=\begin{bmatrix}v_{1}\\
+\vdots\\
+v_{4}\end{bmatrix}\in\mathrm{Span}\,S.
+\]  
+@newcol
+  Applying Gauss-Jordan elimination to the augmented matrix
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccccc|c}1&2&7&1&-1&v_{1}\\
+1&1&3&1&0&v_{2}\\
+3&2&5&-1&9&v_{3}\\
+1&-1&-5&2&0&v_{4}\end{array}\right],
+\end{align*}
+we obtain
+
+@col
+  \begin{align*}
+\displaystyle \left[\begin{array}[]{ccccc|c}1&0&-1&0&3&-3v_{1}+5v_{2}-v_{4}\\
+0&1&4&0&-1&v_{1}-v_{2}\\
+0&0&0&1&-2&2v_{1}-3v_{2}+v_{4}\\
+0&0&0&0&0&9v_{1}-16v_{2}+v_{3}+4v_{4}\\
+\end{array}\right].
+\end{align*}  
+@col
+  If $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$, then the last column is not a pivot column and the above is an RREF. In this case, $\mathbf{v}\in\mathrm{Span}\,S$.
+
+@col
+  If instead $9v_{1}-16v_{2}+v_{3}+4v_{4}\neq 0$, then the above matrix is not an RREF. Hence, the corresponding system of linear equations is inconsistent
+and thus $\mathbf{v}\not\in\mathrm{Span}\,S$.
+
+@col
+  We therefore conclude that $\mathbf{v}\in\mathrm{Span}\,S$ if and only if:
+\[
+9v_{1}-16v_{2}+v_{3}+4v_{4}=0.
+\]  
+@endcol
+@end
+@slide
+@eg
+@label{SCAA}
+  Consider:
+\begin{align*}
+\displaystyle S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}\}=\left\{\begin{bmatrix}1\\
+2\\
+1\end{bmatrix},\,\begin{bmatrix}-1\\
+1\\
+1\end{bmatrix},\,\begin{bmatrix}2\\
+1\\
+0\end{bmatrix}\right\}
+\end{align*}
+and consider the infinite set $\mathrm{Span}\,S$.
+
+<!-- First, as an example, note that
+\begin{align*}
+\displaystyle \mathbf{v}=(5)\begin{bmatrix}1\\
+2\\
+1\end{bmatrix}+(-3)\begin{bmatrix}-1\\
+1\\
+1\end{bmatrix}+(7)\begin{bmatrix}2\\
+1\\
+0\end{bmatrix}=\begin{bmatrix}22\\
+14\\
+2\end{bmatrix}
+\end{align*}
+is in $\mathrm{Span}\,S$, since it is a linear combination of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}$. There is nothing magical about the scalars $\alpha_{1}=5,\,\alpha_{2}=-3,\,\alpha_{3}=7$; they can be chosen arbitrarily. So repeat this part of the example yourself, using different values of $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$. What happens if you choose all three scalars to be zero?
+So we know how to quickly construct sample elements of the set $\mathrm{Span}\,S$. A slightly different question arises when you are handed a vector of the correct size and asked if it is an element of $\mathrm{Span}\,S$. For example, is -->
+
+
+
+Does $\mathbf{w}=\begin{bmatrix}1\\
+8\\
+5\end{bmatrix}$ lie in $\mathrm{Span}\,S$?
+
+@newcol
+  To answer this question, we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ such that
+\begin{align*}
+\displaystyle\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}&\displaystyle=\mathbf{w}.
+\end{align*}
+This is equivalent to solving the system of linear equations
+\begin{align*}
+\displaystyle\alpha_{1}-\alpha_{2}+2\alpha_{3}&\displaystyle=1 \\
+\displaystyle 2\alpha_{1}+\alpha_{2}+\alpha_{3}&\displaystyle=8 \\
+\displaystyle\alpha_{1}+\alpha_{2}&\displaystyle=5.
+\end{align*}
+Building the augmented matrix for this linear system, and row-reducing, gives:
+
+@col
+  \begin{align*}
+\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&0&1&3\\
+0&\boxed{1}&-1&2\\
+0&0&0&0\end{array}\right].
+\end{align*}
+This system has infinitely many solutions (there is a free variable in $x_{3}$), but all we need is one solution vector. The solution,
+\begin{align*}
+\displaystyle\alpha_{1}&\displaystyle=2&\displaystyle\alpha_{2}&\displaystyle=3&\displaystyle\alpha_{3}&\displaystyle=1
+\end{align*}
+tells us that:
+
+@col
+  \begin{align*}
+\displaystyle (2)\mathbf{u}_{1}+(3)\mathbf{u}_{2}+(1)\mathbf{u}_{3}=\mathbf{w}.
+\end{align*}  
+@col
+  So we are convinced that $\mathbf{w}$ really is in $\mathrm{Span}\,S$.
+
+@col
+  Notice that there is an infinite number of ways to answer this question affirmatively. We could choose a different solution, this time choosing the free variable to be zero,
+\begin{align*}
+\displaystyle\alpha_{1}&\displaystyle=3&\displaystyle\alpha_{2}&\displaystyle=2&\displaystyle\alpha_{3}&\displaystyle=0,
+\end{align*}
+showing that
+\begin{align*}
+\displaystyle (3)\mathbf{u}_{1}+(2)\mathbf{u}_{2}+(0)\mathbf{u}_{3}=\mathbf{w}.
+\end{align*}
+Verifying the arithmetic in this second solution will make it obvious that $\mathbf{w}$ is in this span. And of course, we now realize that there are an <em>infinite</em> number of ways to realize $\mathbf{w}$ as element of $\mathrm{Span}\,S$.
+
+@col
+  Let us ask the same type of question again, but this time with: $\mathbf{y}=\begin{bmatrix}2\\
+4\\
+3\end{bmatrix}$.
+
+Is $\mathbf{y}\in\mathrm{Span}\,S$?
+
+@col
+  So we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ such that
+\begin{align*}
+\displaystyle\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}&\displaystyle=\mathbf{y}.
+\end{align*}
+This is equivalent to finding solutions to the system of equations
+\begin{align*}
+\displaystyle\alpha_{1}-\alpha_{2}+2\alpha_{3}&\displaystyle=2 \\
+\displaystyle 2\alpha_{1}+\alpha_{2}+\alpha_{3}&\displaystyle=4 \\
+\displaystyle\alpha_{1}+\alpha_{2}&\displaystyle=3,
+\end{align*}
+Building the augmented matrix for this linear system and row-reducing gives
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&0&1&0\\
+0&\boxed{1}&-1&0\\
+0&0&0&\boxed{1}\end{array}\right].
+\end{align*}
+This system is inconsistent because the last column is a pivot column.
+So there are no scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ that will create a linear combination of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}$ that equals $\mathbf{y}$. More precisely, $\mathbf{y}\not\in\mathrm{Span}\,S$.
+
+There are three things to observe in this example. <ol class="ltx_enumerate">
+<li class="ltx_item"> It is easy to construct vectors in $\mathrm{Span}\,S$. </li>
+<li class="ltx_item"> It is possible that some vectors are in $\mathrm{Span}\,S$ (such as $\mathbf{w}$), while others are not (such as $\mathbf{y}$). </li>
+<li class="ltx_item"> Deciding if a given vector is in $\mathrm{Span}\,S$ leads to a linear system of equations and asking if the system is consistent. </li></ol>
+@endcol
+@end
+@slide
+@eg
+  Let
+\begin{align*}
+\displaystyle R=\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}\}=\left\{\begin{bmatrix}-7\\
+5\\
+1\end{bmatrix},\,\begin{bmatrix}-6\\
+5\\
+0\end{bmatrix},\,\begin{bmatrix}-12\\
+7\\
+4\end{bmatrix}\right\}
+\end{align*}
+and consider its span $\mathrm{Span}\,R$.  
+<!--
+First, as an example, note that
+\begin{align*}
+\displaystyle \mathbf{x}=(2)\begin{bmatrix}-7\\
+5\\
+1\end{bmatrix}+(4)\begin{bmatrix}-6\\
+5\\
+0\end{bmatrix}+(-3)\begin{bmatrix}-12\\
+7\\
+4\end{bmatrix}=\begin{bmatrix}-2\\
+9\\
+-10\end{bmatrix}
+\end{align*}
+is in $\mathrm{Span}\,R$, since it is a linear combination of $\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}$. In other words, $\mathbf{x}\in\mathrm{Span}\,R$. Try some different values of $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ yourself, and see what vectors you can create as elements of $\mathrm{Span}\,R$.
+Now ask if a given vector is an element of $\mathrm{Span}\,R$. For example, is -->
+
+
+
+@newcol
+  Does the vector $\mathbf{z}=\begin{bmatrix}-33\\
+24\\
+5\end{bmatrix}$ lie in $\mathrm{Span}\,R$?
+
+@col
+  To answer this question, we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ so that
+\begin{align*}
+\displaystyle\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\mathbf{v}_{3}&\displaystyle=\mathbf{z}.
+\end{align*}
+This is equivalent to finding solutions to the following system of linear equations:
+\begin{align*}
+\displaystyle-7\alpha_{1}-6\alpha_{2}-12\alpha_{3}&\displaystyle=-33 \\
+\displaystyle 5\alpha_{1}+5\alpha_{2}+7\alpha_{3}&\displaystyle=24 \\
+\displaystyle\alpha_{1}+4\alpha_{3}&\displaystyle=5.
+\end{align*}
+Building the augmented matrix for this linear system and row-reducing gives
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&0&0&-3\\
+0&\boxed{1}&0&5\\
+0&0&\boxed{1}&2\end{array}\right].
+\end{align*}
+This system has a unique solution,
+\begin{align*}
+\displaystyle\alpha_{1}=-3\quad\displaystyle\alpha_{2}=5\quad\displaystyle\alpha_{3}=2
+\end{align*}
+telling us that
+\begin{align*}
+\displaystyle (-3)\mathbf{v}_{1}+(5)\mathbf{v}_{2}+(2)\mathbf{v}_{3}=\mathbf{z}.
+\end{align*}
+So we are convinced that $\mathbf{z}$ really is in $\mathrm{Span}\,R$. Notice that in this case we have only one way to answer the question affirmatively, since the solution is unique.
+
+@col
+  Let us ask about another vector.
+Let $\mathbf{x}=\begin{bmatrix}-7\\
+8\\
+-3\end{bmatrix}$.
+Is $\mathbf{x}$ a vector in $\mathrm{Span}\,R$?
+
+@col
+  In other words, are there scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ so that:
+\begin{align*}
+\displaystyle\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\mathbf{v}_{3}&\displaystyle=\mathbf{x}
+\end{align*}
+This is equivalent to finding the solutions to the system of equations
+
+\begin{align*}
+\displaystyle-7\alpha_{1}-6\alpha_{2}-12\alpha_{3}&\displaystyle=-7 \\
+\displaystyle 5\alpha_{1}+5\alpha_{2}+7\alpha_{3}&\displaystyle=8 \\
+\displaystyle\alpha_{1}+4\alpha_{3}&\displaystyle=-3.
+\end{align*}
+Building the augmented matrix for this linear system and row-reducing gives
+\begin{align*}
+\displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&0&0&1\\
+0&\boxed{1}&0&2\\
+0&0&\boxed{1}&-1\end{array}\right].
+\end{align*}
+This system has a unique solution,
+\begin{align*}
+\displaystyle\alpha_{1}=1\quad\displaystyle\alpha_{2}=2\quad\displaystyle\alpha_{3}=-1
+\end{align*}
+telling us that
+\begin{align*}
+\displaystyle (1)\mathbf{v}_{1}+(2)\mathbf{v}_{2}+(-1)\mathbf{v}_{3}=\mathbf{x}.
+\end{align*}
+So we are convinced that $\mathbf{x}$ really is in $\mathrm{Span}\,R$. Notice that in this case we again have only one way to answer the question affirmatively since the solution is again unique.
+
+We could continue to test other vectors for membership in $\mathrm{Span}\,R$, but there is no point. A question about membership in $\mathrm{Span}\,R$ inevitably leads to a system of three equations in the three variables $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ with a coefficient matrix whose columns are the vectors $\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}$. This particular coefficient matrix is nonsingular, so by @ref{NME1} the system is guaranteed to have a solution. (This solution is unique, but that is not critical here.) So no matter which vector we might have chosen for $\mathbf{z}$, we are certain to discover that it was an element of $\mathrm{Span}\,R$.
+
+<strong>Conclusion</strong>: Every vector of size 3 is in $\mathrm{Span}\,R$, or $\mathrm{Span}\,R={\mathbb{R}}^{3}$.  
+@endcol
+@end
+@slide
+  The previous example above inspires the following result:  
+@thm
+@label{thm:ANSRM}
+@newcol
+  Given $m$ vectors $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{m}\}$ in ${\mathbb{R}}^{m}$, let $A$ be the $m\times m$ square matrix whose $i$-th column is $\mathbf{u}_{i}$. Then $A$ is non-singular if and only if $\mathrm{Span}\,S={\mathbb{R}}^{m}$.  
+@endcol
+@end
+@proof
+@newcol
+  ($\Rightarrow$)  
+@newcol
+  If $A$ is non-singular, then for every $\mathbf{b}\in{\mathbb{R}}^{m}$ the equation $\mathcal{LS}({A},{\mathbf{b}})$ is consistent
+by @ref{b25e99edb5cb21a0655d0d961da21e47}. Hence $\mathbf{b}\in\mathrm{Span}\,S$. So ${\mathbb{R}}^{m}=\mathrm{Span}\,S$.  
+@endcol
+
+($\Leftarrow$)  
+@newcol
+  This part is difficult; we will only sketch the idea.
+Let the RREF of $A$ be $B$. Suppose that $A$ is singular. Then $B\neq I_{m}$ and the last row of $B$ is a zero row. So there exists $\mathbf{b}\in{\mathbb{R}}^{m}$ such that $\mathcal{LS}({B},{\mathbf{b}})$ is inconsistent.
+(e.g. $\mathbf{b}=\begin{bmatrix}0\\\vdots\\0\\1\end{bmatrix}$).
+Hence there exists $\mathbf{c}\in{\mathbb{R}}^{m}$ such that $\mathcal{LS}({A},{\mathbf{c}})$ is inconsistent (why?).
+Thus $\mathbf{c}\notin\mathrm{Span}\,S$. So $\mathrm{Span}\,S\neq{\mathbb{R}}^{m}$. This completes the proof.  
+<hr/> Alternatively:   
+@newcol
+  Suppose $A$ is singular. We claim that the span of $S$ is not equal to $\mathbb{R}^m$:
+
+@col
+  If $A$ is singular, then there exists a sequence of elementary matrices $J_i$ such that:
+$J_lJ_{l - 1}\cdots J_2J_1 A$ is an RREF matrix $B$ whose last row is a zero row.
+
+@col
+  Let $J = J_lJ_{l - 1}\cdots J_2J_1$, which is invertible.
+We claim that the vector:
+\[
+\vec{v} = J^{-1}\vec{e}_m = J^{-1}\begin{bmatrix}0\\0\\\vdots\\0\\1\end{bmatrix}
+\]
+(which incidentally is the last column of the matrix $J^{-1}$)
+does not lie in $\mathrm{Span}\,S$.
+
+@col
+  Suppose $\vec{v} \in \mathrm{Span}\,S$, then exists a vector $\vec{x} \in \mathbb{R}^m$ such that:
+\[
+A\vec{x} = \vec{v} = J^{-1}\vec{e}_m
+\]  
+@col
+  Multiplying both sides with $J$ from the left, we have:
+\[
+JA\vec{x} = \vec{e}_m.
+\]
+But $JA = B$, whose last row is the zero row, which implies that the last component of the vector $JA\vec{x}$
+is equal to zero, contradicting the fact that the last component of $\vec{e}_m$ is equal to $1$.
+
+@col
+  It follows that if $A$ is singular, then $\mathrm{Span}\,S \neq \mathbb{R}^m$.  
+@endcol
+@qed
+@endcol
+@endcol
+@end
+@section{Obtain Same Span Using Fewer Vectors}
+@eg
+  Begin with the following set of four vectors of size $3$:
+\begin{align*}
+\displaystyle T
+=\left\{\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3},\,\mathbf{w}_{4}\right\}
+=\left\{\begin{bmatrix}2\\
+-3\\
+1\end{bmatrix},\,\begin{bmatrix}1\\
+4\\
+1\end{bmatrix},\,\begin{bmatrix}7\\
+-5\\
+4\end{bmatrix},\,\begin{bmatrix}-7\\
+-6\\
+-5\end{bmatrix}
+\right\}.
+\end{align*}  
+@newcol
+  Let:
+\begin{align*}
+\displaystyle D=\begin{bmatrix}2&1&7&-7\\
+-3&4&-5&-6\\
+1&1&4&-5\end{bmatrix}
+\end{align*}
+and consider the infinite set $W=\mathrm{Span}\,T$. Check that the vector
+\begin{align*}
+\displaystyle \mathbf{z}_{2}=\begin{bmatrix}2\\
+3\\
+0\\
+1\end{bmatrix}
+\end{align*}
+is a solution to the homogeneous system $\mathcal{LS}({D},{\mathbf{0}})$
+
+@col
+  We can write the linear combination,
+\begin{align*}
+\displaystyle 2\mathbf{w}_{1}+3\mathbf{w}_{2}+0\mathbf{w}_{3}+1\mathbf{w}_{4}=\mathbf{0}
+\end{align*}
+which we can solve for $\mathbf{w}_{4}$ as
+\begin{align*}
+\displaystyle \mathbf{w}_{4}=(-2)\mathbf{w}_{1}+(-3)\mathbf{w}_{2}.
+\end{align*}  
+@col
+  This equation says that whenever we encounter the vector $\mathbf{w}_{4}$, we can replace it with a specific linear combination of the vectors $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$. So using $\mathbf{w}_{4}$ in the set $T$, along with $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$, is excessive. An example of what we mean here can be illustrated by the computation:
+
+@col
+  \begin{align*}
+\displaystyle 5\mathbf{w}_{1}&\displaystyle+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+(-3)\mathbf{w}_{4} \\
+&\displaystyle=5\mathbf{w}_{1}+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+(-3)\left((-2)\mathbf{w}_{1}+(-3)\mathbf{w}_{2}\right) \\
+&\displaystyle=5\mathbf{w}_{1}+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+\left(6\mathbf{w}_{1}+9\mathbf{w}_{2}\right) \\
+&\displaystyle=11\mathbf{w}_{1}+5\mathbf{w}_{2}+6\mathbf{w}_{3}.
+\end{align*}  
+@col
+  So, what began as a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3},\,\mathbf{w}_{4}$ has been reduced to a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3}$.
+
+Hence:  
+@col
+  \begin{align*}
+\displaystyle W=\mathrm{Span}\left\{\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3}\right\},
+\end{align*}
+and the span of our set of vectors, $W$, has not changed, but we have described it by the span of a set of three vectors, rather than four. Furthermore, we can achieve yet another, similar, reduction.
+
+@col
+  Check that the vector
+\begin{align*}
+\displaystyle \mathbf{z}_{1}=\begin{bmatrix}-3\\
+-1\\
+1\\
+0\end{bmatrix}
+\end{align*}
+is a solution to the homogeneous system $\mathcal{LS}({D},{\mathbf{0}})$.
+
+@col
+  We can write the linear combination,
+\begin{align*}
+\displaystyle (-3)\mathbf{w}_{1}+(-1)\mathbf{w}_{2}+1\mathbf{w}_{3}=\mathbf{0}
+\end{align*}
+which we can solve for $\mathbf{w}_{3}$ as
+\begin{align*}
+\displaystyle \mathbf{w}_{3}=3\mathbf{w}_{1}+1\mathbf{w}_{2}.
+\end{align*}  
+@col
+  This equation says that whenever we encounter the vector $\mathbf{w}_{3}$, we can replace it with a specific linear combination of the vectors $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$. So, as before, the vector $\mathbf{w}_{3}$ is not needed in the description of $W$, provided we have $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$ available. In particular, a careful proof would show that
+\begin{align*}
+\displaystyle W=\mathrm{Span}\left\{\mathbf{w}_{1},\,\mathbf{w}_{2}\right\}
+\end{align*}  
+@col
+  So $W$ began life as the span of a set of four vectors. We have now shown (utilizing solutions to a homogeneous system) that $W$ can also be described as the span of a set of just two vectors. Convince yourself that we cannot go any further. In other words, it is not possible to dismiss either $\mathbf{w}_{1}$ or $\mathbf{w}_{2}$ in a similar fashion and winnow the set down to just one vector.
+
+@col
+  What was it about the original set of four vectors that allowed us to declare certain vectors as surplus? And just which vectors were we able to dismiss? And why did we have to stop once we had two vectors remaining? The answers to these questions motivate @keyword{linear independence}, our next section and next definition, and so are worth considering carefully now.  
+@endcol
+@end
+@section{Geometric Interpretation}
+<iframe width="800" height="600" allowfullscreen="" style="border: 1px solid rgb(228, 228, 228); border-radius: 4px; overflow: hidden; background: none;" frameborder="0" data-src="https://www.geogebra.org/3d/tnnuszqm?embed" rendered="0" id="iFrameResizer5" scrolling="no" src="https://www.geogebra.org/3d/tnnuszqm?embed"/>
+@section{Spanning Sets of Null Spaces}
+  Recall @ref{thm:nullspacesubspace}
+<!-- The following theorem describe how to express a null space as $\mathrm{Span}\,S$. -->
+
+
+
+@thm
+@label{SSNS}
+@newcol
+  Spanning
+Sets for Null Spaces
+Suppose that $A$ is an $m\times n$ matrix and $B$ is a row-equivalent matrix in reduced row-echelon form. Suppose that $B$ has $r$ pivot columns, with indices given by $D=\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\}$, while the $n-r$ non-pivot columns have indices $F=\{f_{1},\,f_{2},\,f_{3},\,\ldots,\,f_{n-r}\}$. Construct the $n-r$ vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$ of size $n$,
+\begin{align*}
+\displaystyle \left[\mathbf{z}_{j}\right]_{i}=\begin{cases}1&\text{if $i\in F$, $i=f_{j}$}\\
+0&\text{if $i\in F$, $i\neq f_{j}$}\\
+-\left[B\right]_{k,f_{j}}&\text{if $i\in D$, $i=d_{k}$}\end{cases}
+\end{align*}
+Then the null space of $A$ is given by
+\begin{align*}
+\displaystyle {\mathcal{N}}\!\left(A\right)=\mathrm{Span}\left\{\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3},\,\ldots,\,\mathbf{z}_{n-r}\right\}
+\end{align*}  
+@endcol
+@end
+@proof
+@newcol
+  The can be seen by moving the free variables to another side. For details. See Beezer p88. Don’t memorize this theorem. Instead, study the examples below.  
+@qed
+@endcol
+@end
+@slide
+@eg
+@keyword{Spanning set of a null space}
+
+Find a set of vectors, $S$, so that the null space of the matrix
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&3&3&-1&-5\\
+2&5&7&1&1\\
+1&1&5&1&5\\
+-1&-4&-2&0&4\end{bmatrix}
+\end{align*}
+is the span of $S$, that is, $\mathrm{Span}\,S={\mathcal{N}}\!\left(A\right)$.  
+<hr/>
+@newcol
+  The null space of $A$ is the set of all solutions to the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$.
+Begin by row-reducing $A$. The result is
+\begin{align*}
+\displaystyle \begin{bmatrix}\boxed{1}&0&6&0&4\\
+0&\boxed{1}&-1&0&-2\\
+0&0&0&\boxed{1}&3\\
 0&0&0&0&0\end{bmatrix}.
 \end{align*}
-Now we need only compute that
-$r=4<5=n$
-to recognize, via Theorem @ref{LIVRN}, that $S$ is a linearly dependent set. Boom! 
-@qed
-@endcol
-@end
-@slide
-@eg
-@keyword{Large linearly dependent set in ${\mathbb{R}}^{4}$}
-
-@newcol
- Consider the set of $n=9$ vectors from ${\mathbb{R}}^{4}$,
+We have $D=\{1,\,2,\,4\}$ and $F=\{3,\,5\}$. Hence $x_{3}$ and $x_{5}$ are free variables and we can interpret each nonzero row as an expression for the dependent variables $x_{1}$, $x_{2}$, $x_{4}$ (respectively) in the free variables $x_{3}$ and $x_{5}$. With this we can write the vector form of a solution vector as
 \begin{align*}
-\displaystyle R=\left\{\begin{bmatrix}-1\\
-3\\
+\displaystyle \begin{bmatrix}x_{1}\\
+x_{2}\\
+x_{3}\\
+x_{4}\\
+x_{5}\end{bmatrix}=\begin{bmatrix}-6x_{3}-4x_{5}\\
+x_{3}+2x_{5}\\
+x_{3}\\
+-3x_{5}\\
+x_{5}\end{bmatrix}=x_{3}\begin{bmatrix}-6\\
 1\\
-2\end{bmatrix},\,\begin{bmatrix}7\\
 1\\
--3\\
-6\end{bmatrix},\,\begin{bmatrix}1\\
+0\\
+0\end{bmatrix}+x_{5}\begin{bmatrix}-4\\
 2\\
--1\\
--2\end{bmatrix},\,\begin{bmatrix}0\\
-4\\
-2\\
-9\end{bmatrix},\,\begin{bmatrix}5\\
--2\\
-4\\
-3\end{bmatrix},\,\begin{bmatrix}2\\
-1\\
--6\\
-4\end{bmatrix},\,\begin{bmatrix}3\\
 0\\
 -3\\
-1\end{bmatrix},\,\begin{bmatrix}1\\
-1\\
-5\\
-3\end{bmatrix},\,\begin{bmatrix}-6\\
--1\\
-1\\
-1\end{bmatrix}\right\}.
-\end{align*} 
-@col
- To employ Theorem @ref{LIVHS}, we form a $4\times 9$ matrix $C$ whose columns are the vectors in $R$:
-\begin{align*}
-\displaystyle C=\begin{bmatrix}-1&7&1&0&5&2&3&1&-6\\
-3&1&2&4&-2&1&0&1&-1\\
-1&-3&-1&2&4&-6&-3&5&1\\
-2&6&-2&9&3&4&1&3&1\end{bmatrix}.
-\end{align*} 
-@col
- To determine if the homogeneous system $\mathcal{LS}({C},{\mathbf{0}})$ has a unique solution or not, we would normally row-reduce this matrix. But in this particular example, we can do better:
-
-@col
- Since the system is homogeneous with $n=9$ variables in $m=4$ equations,
-and $n > m$, there are infinitely many solutions. Since there is not a unique solution, Theorem @ref{LIVHS} says the set $R$ is linearly dependent. 
-@endcol
-@end
-@slide
- The following theorem generalizes the previous example. 
-@thm
-@title{More Vectors than Size implies Linear Dependence}
-@label{MVSLD}
- Suppose that $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\}\subseteq{\mathbb{R}}^{m}$ and $n>m$. Then $S$ is a linearly dependent set. 
-@end
-@proof
-@newcol
- Form the $m\times n$ matrix $A$ whose columns are $\mathbf{u}_{i}$, $1\leq i\leq n$. Consider the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$. By @ref{HMVEI} this system has infinitely many solutions. Since the system does not have a unique solution, Theorem @ref{LIVHS} says the columns of $A$ form a linearly dependent set, as desired. 
-@qed
-@endcol
-@end
-@section{Linear Independence and Nonsingular Matrices}
-@label{LINM}
- We will now specialize to sets of $n$ vectors in ${\mathbb{R}}^{n}$. 
-@eg
-@keyword{Linearly dependent columns} Do the columns of the matrix
-\begin{align*}
-\displaystyle \begin{bmatrix}1&-1&2\\
-2&1&1\\
-1&1&0\end{bmatrix}
+1\end{bmatrix}.
 \end{align*}
-form a linearly independent or dependent set? 
-@end
-@sol
-@newcol
- We can show that $A$ is singular.
-According to the definition of nonsingular matrices, the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$ has infinitely many solutions. So, by Theorem @ref{LIVHS}, the columns of $A$ form a linearly dependent set. 
-@qed
+Then, in the notation of the above theorem, we have
+\begin{align*}
+\displaystyle\mathbf{z}_{1}&\displaystyle=\begin{bmatrix}-6\\
+1\\
+1\\
+0\\
+0\end{bmatrix}&\displaystyle\mathbf{z}_{2}&\displaystyle=\begin{bmatrix}-4\\
+2\\
+0\\
+-3\\
+1\end{bmatrix}
+\end{align*}
+and
+\begin{align*}
+\displaystyle {\mathcal{N}}\!\left(A\right)
+=\mathrm{Span}\,\left\{ \mathbf{z}_{1},\,\mathbf{z}_{2}
+ \right\}
+=\mathrm{Span}
+\left
+\{\begin{bmatrix}-6\\
+1\\
+1\\
+0\\
+0\end{bmatrix},\,\begin{bmatrix}-4\\
+2\\
+0\\
+-3\\
+1\end{bmatrix}
+\right\}.
+\end{align*}  
 @endcol
 @end
 @eg
-@keyword{Linearly independent columns}
-
 @newcol
- Do the columns of this matrix
+  Consider the matrix:
 \begin{align*}
-\displaystyle B=\begin{bmatrix}-7&-6&-12\\
-5&5&7\\
-1&0&4\end{bmatrix}
+\displaystyle A=\begin{bmatrix}2&1&5&1&5&1\\
+1&1&3&1&6&-1\\
+-1&1&-1&0&4&-3\\
+-3&2&-4&-4&-7&0\\
+3&-1&5&2&2&3\end{bmatrix}.
 \end{align*}
-form a linearly independent or dependent set? 
-@endcol
-@end
-@sol
-@newcol
- We can show that $B$ is nonsingular. According to the definition of nonsingular matrices, the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$ has a unique solution. So, by Theorem @ref{LIVHS}, the columns of $B$ form a linearly independent set. 
-@qed
-@endcol
-@end
-@slide
- That the previous two examples have opposite properties for the columns of their coefficient matrices is no accident. Here is the theorem, and then we will update our equivalences for nonsingular matrices. 
-@thm
-@title{Nonsingular Matrices have Linearly Independent Columns}
-@label{NMLIC}
- Suppose that $A$ is a <em style="">square</em> matrix. Then $A$ is nonsingular if and only if the columns of $A$ form a linearly independent set. 
-@end
-@proof
-@newcol
- This is a proof where we can chain together equivalences, rather than proving the two halves separately.
+Row-reducing $A$ gives the matrix
 \begin{align*}
-A \text{ nonsingular} &\displaystyle\iff\text{$\mathcal{LS}({A},{\mathbf{0}})$ has a unique solution} \\
-&\displaystyle\iff A\vec{x} = \vec{0} \text{ has a unique solution }     \vec{x}\\
-&\displaystyle\iff\text{columns of $A$ are linearly independent}
-\end{align*} 
-@qed
-@endcol
-@end
-@slide
- Here is the update to @ref{NME1}
-@thm
-@title{Nonsingular Matrix Equivalences, Round 2}
-@label{NME2}
- Suppose that $A$ is a square matrix. The following are equivalent. <ol class="ltx_enumerate">
-<li class="ltx_item">
-@newcol
- $A$ is nonsingular. 
-@endcol</li>
-<li class="ltx_item">
-@newcol
- $A$ row-reduces to the identity matrix. 
-@endcol</li>
-<li class="ltx_item">
-@newcol
- The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$. 
-@endcol</li>
-<li class="ltx_item">
-@newcol
- The linear system $\mathcal{LS}({A},{\mathbf{b}})$ has a unique solution for every possible choice of $\mathbf{b}$. 
-@endcol</li>
-<li class="ltx_item">
-@newcol
- The columns of $A$ form a linearly independent set. 
-@endcol</li></ol>
-@end
-@proof
-@newcol
- This follows directly from @ref{NMLIC} and @ref{NME2}. 
-@qed
-@endcol
-@end
-@section{Uniqueness of RREF}
-@slide
-@skip
-<strong>Math Major only. You can skip this section. Similar concept appears in the classworks. </strong>
-@eg
-@keyword{Entries of RREF $B$ gives relationship of columns of $A$}
-
-@newcol
- Let
-\begin{align*}
-\displaystyle A=\begin{bmatrix}1&2&1&8&1&17\\
-1&2&2&13&3&37\\
-1&2&0&3&-2&-10\\
-\end{bmatrix}.
-\end{align*} 
-@col
- Then $A$ can be row reduced to
-
-\begin{align*}
-\displaystyle B=\begin{bmatrix}1&2&0&3&0&4\\
-0&0&1&5&0&6\\
-0&0&0&0&1&7\end{bmatrix}.
+\displaystyle B=\begin{bmatrix}\boxed{1}&0&2&0&-1&2\\
+0&\boxed{1}&1&0&3&-1\\
+0&0&0&\boxed{1}&4&-2\\
+0&0&0&0&0&0\\
+0&0&0&0&0&0\end{bmatrix}.
 \end{align*}
-Let $\mathbf{A}_{i}$ (resp. $\mathbf{B}_{i}$) be the $i$-th column of $A$ (resp. $B$) for $i=1,\ldots,6$.
-By the equivalence of system of linear equation $\mathcal{LS}({A},{\mathbf{0}})$ and $\mathcal{LS}({B},{\mathbf{0}})$, we have
-\begin{align}
-\displaystyle x_{1}\mathbf{A}_{1}+x_{2}\mathbf{A}_{2}+\cdots+x_{6}\mathbf{A}_{6}=\mathbf{0}&
-\end{align}
-if and only if
-\begin{align}
-\label{eq:B}
-\displaystyle x_{1}\mathbf{B}_{1}+x_{2}\mathbf{B}_{2}+\cdots+x_{6}\mathbf{B}_{6}=\mathbf{0}.&
-\end{align} 
-@col
-<strong>Step 1</strong>
-@newcol
- First of all, if $(x_{1},x_{2},x_{3},x_{4},x_{5},x_{6})=(x_{1},0,0,0,0,0)$ is a solution of $\eqref{eq:B}$, then
+First, the non-pivot columns have indices $F=\{3,\,5,\,6\}$, so we will construct the $n-r=6-3=3$ vectors with a pattern of zeros and ones dictated by the indices in $F$. This is the realization of the first two lines of the three-case definition of the vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$.
 \begin{align*}
-\displaystyle x_{1}\mathbf{B}_{1}=\mathbf{0}.
-\end{align*} 
-@col
- So $x_{1}$ is zero. This is equivalent to
-\begin{align*}
-\displaystyle x_{1}\mathbf{A}_{1}=\mathbf{0}.
-\end{align*}
-It has only the trivial solution, i.e. $\left\{\mathbf{A}_{1}\right\}$ is linearly independent. Hence $d_{1}=1$ is a pivot column. 
-@endcol
-
-<strong>Step 2</strong>
-@newcol
- Let’s move to $x_{2}$. Suppose that
-$(x_{1},x_{2},x_{3},x_{4},x_{5},x_{6})=(x_{1},x_{2},0,0,0,0)$.
-
-@col
- Then
-\begin{align*}
-\displaystyle x_{1}\mathbf{B}_{1}+x_{2}\mathbf{B}_{1}=\mathbf{0}
-\end{align*}
-has nontrivial solution. Say $(x_{1},x_{2})=(-2,1)$.
-
-@col
- These can also be seen as
-\begin{align*}
-\displaystyle -2\mathbf{A}_{1}+\mathbf{A}_{2}=\mathbf{0}
-\end{align*}
-or equivalently
-\begin{align*}
-\displaystyle \mathbf{A}_{2}=2\mathbf{A}_{1}.
-\end{align*} 
-@endcol
-
-<strong>Step 3</strong>
-@newcol
- Consider $x_{3}$. Let $(x_{1},x_{2},x_{3},x_{4},x_{5},x_{6})=(x_{1},0,x_{3},0,0,0)$. Then
-\begin{align*}
-\displaystyle x_{1}\mathbf{B}_{1}+x_{3}\mathbf{B}_{3}=\mathbf{0}
-\end{align*}
-has only trivial solution. Equivalently $\left\{\mathbf{A}_{1},\mathbf{A}_{3}\right\}$ is linearly independent.Column $3$ of $B$ is a pivot column. 
-@endcol
-
-<strong>Step 4</strong>
-@newcol
- Consder
-\begin{align*}
-\displaystyle \mathbf{B}_{4}=3\mathbf{B}_{1}+5\mathbf{B}_{3},
-\end{align*}
-or equivalently
-\begin{align*}
-\displaystyle \mathbf{A}_{4}=3\mathbf{A}_{1}+5\mathbf{A}_{3}.
-\end{align*} 
-@col
- The relation of columns of $A$ gives the entries of the column 4 of $B$. 
-@endcol
-
-<strong>Step 5</strong>
-@newcol
- $\mathbf{B}_{5}$ is not in span of $\mathbf{B}_{1}$ and $\mathbf{B}_{3}$. Equivalently $\mathbf{A}_{5}$ is not in span of $\mathbf{A}_{1}$ and $\mathbf{A}_{3}$. Column $5$ of $B$ is a pivot column. 
-@endcol
-
-<strong>Step 6</strong>
-@newcol
- Consider
-\begin{align*}
-\displaystyle \mathbf{B}_{6}=4\mathbf{B}_{1}+6\mathbf{B}_{3}+7\mathbf{B}_{5}.
-\end{align*}
-Equivalently
-\begin{align*}
-\displaystyle \mathbf{A}_{6}=4\mathbf{A}_{1}+6\mathbf{A}_{3}+7\mathbf{A}_{5}.
-\end{align*} 
-@col
- The relation of columns of $A$ gives the entries of the column 6 of $B$. 
-@endcol
-@endcol
-@end
-
-@eg
-@keyword{Relationship of columns of $A$ determine entries of $B$}
-
-@newcol
- Row reduce
-\begin{align*}
-\displaystyle A=\begin{bmatrix}1&1&3&1&0&0&4\\
-2&1&5&1&1&2&7\\
-1&-1&1&2&1&-3&10\\
-1&3&5&1&-1&1&1\\
-\end{bmatrix}
-\end{align*}
-to a RREF $B$ by the above technique. Let $\mathbf{A}_{i}$ (resp. $\mathbf{B}_{i}$) be the $i$-th column of $A$ (resp. $B$) for $i=1,\ldots,7$.
-
-@col
-<strong>Step 1</strong>
-@newcol
- $\mathbf{A}_{1}$ is nonzero column. So the index $d_{1}=1$ corresponds to a pivot column. We have
-\begin{align*}
-\displaystyle \mathbf{B}_{1}=\begin{bmatrix}1\\
-0\\
-0\\
-0\end{bmatrix}.
-\end{align*} 
-@endcol
-
-<strong>Step 2</strong>
-@newcol
- $\mathbf{A}_{2}$ is not in $\left< \left\{\mathbf{A}_{d_{1}}\right\}\right>$. So the index $d_{2}=2$ corresponds to a pivot column. We have
-\begin{align*}
-\displaystyle \mathbf{B}_{2}=\begin{bmatrix}0\\
+\displaystyle\mathbf{z}_{1}&\displaystyle=\begin{bmatrix}\\
+\\
 1\\
+\\
 0\\
-0\end{bmatrix}.
-\end{align*} 
-@endcol
-
-<strong>Step 3</strong>
-@newcol
- Consider
-\begin{align*}
-\displaystyle \mathbf{A}_{3}=2\mathbf{A}_{d_{1}}+\mathbf{A}_{d_{2}}.
-\end{align*} 
-@col
- So we have
-\begin{align*}
-\displaystyle \mathbf{B}_{3}=2\mathbf{B}_{d_{1}}+\mathbf{B}_{d_{2}}=\begin{bmatrix}2\\
+0\end{bmatrix}&\displaystyle\mathbf{z}_{2}&\displaystyle=\begin{bmatrix}\\
+\\
+0\\
+\\
 1\\
+0\end{bmatrix}&\displaystyle\mathbf{z}_{3}&\displaystyle=\begin{bmatrix}\\
+\\
 0\\
-0\end{bmatrix}.
-\end{align*} 
-@endcol
-
-<strong>Step 4</strong>
-@newcol
- $\mathbf{A}_{4}$ is not in $\left< \left\{\mathbf{A}_{d_{1}},\mathbf{A}_{d_{2}}\right\}\right>$.
-
-@col
- So the index $d_{3}=4$ corresponds to a pivot column. We have
-\begin{align*}
-\displaystyle \mathbf{B}_{4}=\begin{bmatrix}0\\
-0\\
-1\\
-0\end{bmatrix}.
-\end{align*} 
-@endcol
-
-<strong>Step 5</strong>
-@newcol
- $\mathbf{A}_{5}$ is not in $\left< \left\{\mathbf{A}_{d_{1}},\mathbf{A}_{d_{3}},\mathbf{A}_{d_{3}}\right\}\right>$.
-
-@col
- So the index $d_{4}=5$ corresponds to a pivot column. We have
-\begin{align*}
-\displaystyle \mathbf{B}_{5}=\begin{bmatrix}0\\
-0\\
+\\
 0\\
 1\end{bmatrix}.
-\end{align*} 
-@endcol
-
-<strong>Step 6</strong>
-@newcol
- Consider
+\end{align*}
+Each of these vectors arises due to the presence of a non-pivot column. The remaining entries of each vector are the entries of the non-pivot column, negated, and distributed into the empty slots in order (these slots have indices in the set $D$, so also refer to pivot columns). This is the realization of the third line of the three-case definition of the vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$.
 \begin{align*}
-\displaystyle \mathbf{A}_{6}=\mathbf{A}_{d_{1}}+\mathbf{A}_{d_{2}}-2\mathbf{A}_{d_{3}}+\mathbf{A}_{d_{4}}.
-\end{align*} 
-@col
- So, we have
-\begin{align*}
-\displaystyle \mathbf{B}_{6}=\mathbf{B}_{d_{1}}+\mathbf{B}_{d_{2}}-2\mathbf{B}_{d_{3}}+\mathbf{B}_{d_{4}}=\begin{bmatrix}1\\
-1\\
--2\\
-1\end{bmatrix}
-\end{align*} 
-@endcol
-
-<strong>Step 7</strong>
-@newcol
- Consider
-\begin{align*}
-\displaystyle \mathbf{A}_{7}=2\mathbf{A}_{d_{1}}-\mathbf{A}_{d_{2}}+3\mathbf{A}_{d_{3}}+\mathbf{A}_{d_{4}}.
-\end{align*} 
-@col
- So, we have
-\begin{align*}
-\displaystyle \mathbf{B}_{7}=\mathbf{B}_{d_{1}}+\mathbf{B}_{d_{2}}-2\mathbf{B}_{d_{3}}+\mathbf{B}_{d_{4}}=\begin{bmatrix}2\\
+\displaystyle\mathbf{z}_{1}&\displaystyle=\begin{bmatrix}-2\\
 -1\\
-3\\
-1\end{bmatrix}
-\end{align*} 
-@col
- Hence the RREF of $A$ is
+1\\
+0\\
+0\\
+0\end{bmatrix}&\displaystyle\mathbf{z}_{2}&\displaystyle=\begin{bmatrix}1\\
+-3\\
+0\\
+-4\\
+1\\
+0\end{bmatrix}&\displaystyle\mathbf{z}_{3}&\displaystyle=\begin{bmatrix}-2\\
+1\\
+0\\
+2\\
+0\\
+1\end{bmatrix}.
+\end{align*}
+So we have
 \begin{align*}
-\displaystyle \begin{bmatrix}1&0&2&0&0&1&2\\
-0&1&1&0&0&1&-1\\
-0&0&0&1&0&-2&3\\
-0&0&0&0&1&1&1\\
-\end{bmatrix}.
-\end{align*} 
+\displaystyle {\mathcal{N}}\!\left(A\right)=\mathrm{Span}\,\left\{ \mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3}
+ \right\}
+=
+\mathrm{Span}\,\left\{ \begin{bmatrix}-2\\
+-1\\
+1\\
+0\\
+0\\
+0\end{bmatrix},\,\begin{bmatrix}1\\
+-3\\
+0\\
+-4\\
+1\\
+0\end{bmatrix},\,\begin{bmatrix}-2\\
+1\\
+0\\
+2\\
+0\\
+1\end{bmatrix}
+ \right\}.
+\end{align*}  
 @endcol
+@end
+@section{Column Spaces and Systems of Equations}
+@defn
+@title{Column Space of a Matrix}
+@label{CSM}
+  Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$. Then the @keyword{column space} of $A$, written $\mathcal{C}\left(A\right)$, is the subset of ${\mathbb{R}}^{m}$ containing all linear combinations of the columns of $A$,
+\begin{align*}
+\displaystyle \mathcal{C}\left(A\right)=\mathrm{Span}\{\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}\}\end{align*}  
+@end
+@slide
+@thm
+@title{Column Spaces and Consistent Systems}
+@label{CSCS}
+  Suppose $A$ is an $m\times n$ matrix and $\mathbf{b}$ is a vector of size $m$.
+Then $\mathbf{b}\in\mathcal{C}\left(A\right)$ if and only if $A\mathbf{x} = \mathbf{b}$ is consistent.  
+@end
+@proof
+@newcol
+  ($\Rightarrow$) Suppose $\mathbf{b}\in\mathcal{C}\left(A\right)$. Then we can write $\mathbf{b}$ as some linear combination of the columns of $A$. Then by @ref{RCLS} we can use the scalars from this linear combination to form a solution to $A\mathbf{x} = \mathbf{b}$, so this system is consistent.
+
+($\Leftarrow$) If $A\mathbf{x} = \mathbf{b}$ is consistent, there is a solution that may be used with @ref{RCLS} to write $\mathbf{b}$ as a linear combination of the columns of $A$. This qualifies $\mathbf{b}$ for membership in $\mathcal{C}\left(A\right)$.  
+@qed
+@endcol
+@end
+  This theorem tells us that asking if the vector equation $A\mathbf{x} = \mathbf{b}$ has a solution is exactly the same question as asking if $\mathbf{b}$ is in the column space of $A$.
+
+@newcol
+ Thus, an alternative (and popular) definition of the column space of an $m\times n$ matrix $A$ is
+\begin{align*}
+\displaystyle\mathcal{C}\left(A\right)&\displaystyle=\left\{\left.\mathbf{y}\in{\mathbb{R}}^{m}\,\right|\,\mathbf{y}=A\mathbf{x}\text{ for some }\mathbf{x}\in{\mathbb{R}}^{n}\right\}=\left\{\left.A\mathbf{x}\,\right|\,\mathbf{x}\in{\mathbb{R}}^{n}\right\}\subseteq{\mathbb{R}}^{m}
+\end{align*}  
+@endcol
+@slide
+@eg
+  Consider the column space of the $3\times 4$ matrix $A$,
+\begin{align*}
+\displaystyle A=\begin{bmatrix}3&2&1&-4\\
+-1&1&-2&3\\
+2&-4&6&-8\end{bmatrix}
+\end{align*}  
+@newcol
+  Show that $\mathbf{v}=\begin{bmatrix}18\\
+-6\\
+12\end{bmatrix}$ is in the column space of $A$, $\mathbf{v}\in\mathcal{C}\left(A\right)$.
+The above theorem says that we need to check the consistency of $\mathcal{LS}({A},{v})$.
+From the augmented matrix and row-reduce,
+\begin{align*}
+\displaystyle \begin{bmatrix}3&2&1&-4&18\\
+-1&1&-2&3&-6\\
+2&-4&6&-8&12\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&1&-2&6\\
+0&\boxed{1}&-1&1&0\\
+0&0&0&0&0\end{bmatrix}
+\end{align*}  
+@col
+  Since the last column is not a pivot column, so the system is consistent and hence $v\in\mathcal{C}\left(A\right)$.
+In fact, we have
+\begin{align*}
+\displaystyle \mathbf{v}=6\mathbf{A}_{1}.
+\end{align*}  
+@col
+  Next we show that $\mathbf{w}=\begin{bmatrix}2\\
+1\\
+-3\end{bmatrix}$ is not in the column space of $A$, $\mathbf{w}\not\in\mathcal{C}\left(A\right)$.
+The above theorem says that we need to check the consistency of $\mathcal{LS}({A},{v})$.
+From the augmented matrix and row-reduce,
+\begin{align*}
+\displaystyle \begin{bmatrix}3&2&1&-4&2\\
+-1&1&-2&3&1\\
+2&-4&6&-8&-3\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&1&-2&0\\
+0&\boxed{1}&-1&1&0\\
+0&0&0&0&\boxed{1}\end{bmatrix}
+\end{align*}  
+@col
+  Since the final column is a pivot column, the system is inconsistent and therefore $\mathbf{w}\not\in\mathcal{C}\left(A\right)$.  
+@endcol
+@end
+  The next two examples illustrate the main idea of describing $\mathcal{C}\left(A\right)$.  
+@slide
+@eg
+@keyword{Describe $\mathcal{C}\left(A\right)$ as a null space}
+
+Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&2&7&1&-1\\
+1&1&3&1&0\\
+3&2&5&-1&9\\
+1&-1&-5&2&0\end{bmatrix}.
+\end{align*}  
+@newcol
+  Find $\mathcal{C}\left(A\right)$. Let’s determine if $\mathbf{v}=\begin{bmatrix}v_{1}\\
+\vdots\\
+v_{4}\end{bmatrix}\in\mathrm{Span}\,S$.
 
 @col
-<strong>Important remark</strong>: from the above computation, the entries of $B$ are uniquely determined by $A$.
-
+  Applying Gauss-Jordan elimination to the augmented matrix
+\begin{align*}
+\displaystyle \begin{bmatrix}1&2&7&1&-1&v_{1}\\
+1&1&3&1&0&v_{2}\\
+3&2&5&-1&9&v_{3}\\
+1&-1&-5&2&0&v_{4}\end{bmatrix},
+\end{align*}  
 @col
- So the RREF $B$ is unique.
+  we obtain
+\begin{align*}
+\displaystyle \begin{bmatrix}1&0&-1&0&3&-3v_{1}+5v_{2}-v_{4}\\
+0&1&4&0&-1&v_{1}-v_{2}\\
+0&0&0&1&-2&2v_{1}-3v_{2}+v_{4}\\
+0&0&0&0&0&9v_{1}-16v_{2}+v_{3}+4v_{4}\\
+\end{bmatrix}
+\end{align*}  
+@col
+  If $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$, the above is a RREF. The last column is not a pivot columns. So $\mathbf{v}\in\mathrm{Span}\,S$. If $9v_{1}-16v_{2}+v_{3}+4v_{4}\neq 0$, the equation corresponding to the last row is
+\begin{align*}
+\displaystyle 9v_{1}-16v_{2}+v_{3}+4v_{4}=0.
+\end{align*}  
+@col
+  So the corresponding system of linear equations is inconsistent. So $\mathbf{v}\in\mathrm{Span}\,S$. Hence $\mathbf{v}\in\mathrm{Span}\,S$ if and only if $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$. Therefore
+\begin{align*}
+\displaystyle \mathcal{C}\left(A\right)={\mathcal{N}}\!\left([9\,\,-16\,\,1\,\,4]\right).
+\end{align*}  
+@endcol
+@end
+@slide
+@eg
+@keyword{Describe $\mathcal{C}\left(A\right)$ by basis}
 
+Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&4&0&-1&0&7&-9\\
+2&8&-1&3&9&-13&7\\
+0&0&2&-3&-4&12&-8\\
+-1&-4&2&4&8&-31&37\end{bmatrix},
+\end{align*}  
+@newcol
+  find $\mathcal{C}\left(A\right)$.
+\begin{align*}
+\displaystyle A\xrightarrow{\text{RREF}}B=\begin{bmatrix}\boxed{1}&4&0&0&2&1&-3\\
+0&0&\boxed{1}&0&1&-3&5\\
+0&0&0&\boxed{1}&2&-6&6\\
+0&0&0&0&0&0&0\end{bmatrix}.
+\end{align*}  
+@col
+  The indexes of the pivot columns are $D=\left\{1,3,4\right\}$.
+Hence $\mathcal{C}\left(A\right)=\mathrm{Span}\,A=\mathrm{Span}\,\left\{ \mathbf{A}_{1},\mathbf{A}_{3},\mathbf{A}_{4} \right\}$.  
+@endcol
+@end
+@section{
+
+Column Space Spanned by Original Columns}
+@label{CSSOC}
+  So we have a foolproof, automated procedure for determining membership in $\mathcal{C}\left(A\right)$. While this works just fine a vector at a time, we would like to have a more useful description of the set $\mathcal{C}\left(A\right)$ as a whole. The next example will preview the first of two fundamental results about the column space of a matrix.  
+@slide
+@eg
+  Consider the $5\times 7$ matrix $A$,
+\begin{align*}
+\displaystyle \begin{bmatrix}2&4&1&-1&1&4&4\\
+1&2&1&0&2&4&7\\
+0&0&1&4&1&8&7\\
+1&2&-1&2&1&9&6\\
+-2&-4&1&3&-1&-2&-2\end{bmatrix}
+\end{align*}  
+@newcol
+  The column space of $A$ is
+\begin{align*}
+\displaystyle \mathcal{C}\left(A\right)=\mathrm{Span}\,\left\{ \begin{bmatrix}2\\
+1\\
+0\\
+1\\
+-2\end{bmatrix},\,\begin{bmatrix}4\\
+2\\
+0\\
+2\\
+-4\end{bmatrix},\,\begin{bmatrix}1\\
+1\\
+1\\
+-1\\
+1\end{bmatrix},\,\begin{bmatrix}-1\\
+0\\
+4\\
+2\\
+3\end{bmatrix},\,\begin{bmatrix}1\\
+2\\
+1\\
+1\\
+-1\end{bmatrix},\,\begin{bmatrix}4\\
+4\\
+8\\
+9\\
+-2\end{bmatrix},\,\begin{bmatrix}4\\
+7\\
+7\\
+6\\
+-2\end{bmatrix} \right\}\end{align*}  
+@col
+  While this is a concise description of an infinite set, we might be able to describe the span with fewer than seven vectors. Now we row-reduce,
+\begin{align*}
+\displaystyle \begin{bmatrix}2&4&1&-1&1&4&4\\
+1&2&1&0&2&4&7\\
+0&0&1&4&1&8&7\\
+1&2&-1&2&1&9&6\\
+-2&-4&1&3&-1&-2&-2\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&2&0&0&0&3&1\\
+0&0&\boxed{1}&0&0&-1&0\\
+0&0&0&\boxed{1}&0&2&1\\
+0&0&0&0&\boxed{1}&1&3\\
+0&0&0&0&0&0&0\end{bmatrix}
+\end{align*}  
+@col
+  The pivot columns are $D=\left\{1,\,3,\,4,\,5\right\}$, so we can create the set
+\begin{align*}
+\displaystyle T=\left\{\begin{bmatrix}2\\
+1\\
+0\\
+1\\
+-2\end{bmatrix},\,\begin{bmatrix}1\\
+1\\
+1\\
+-1\\
+1\end{bmatrix},\,\begin{bmatrix}-1\\
+0\\
+4\\
+2\\
+3\end{bmatrix},\,\begin{bmatrix}1\\
+2\\
+1\\
+1\\
+-1\end{bmatrix}\right\}
+\end{align*}  
+@col
+ and know that $\mathcal{C}\left(A\right)=\mathrm{Span}\,T$ and $T$ is a linearly independent set of columns from the set of columns of $A$.  
+@endcol
+@end
+@slide
+@thm
+@title{Basis of the Column Space}
+@label{BCS}
+@newcol
+  Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$, and $B$ is a row-equivalent matrix in reduced row-echelon form with $r$ pivot columns. Let $D=\left\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\right\}$ be the set of indices for the pivot columns of $B$.
+Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ldots,\,\mathbf{A}_{d_{r}}\right\}$. Then <ol class="ltx_enumerate">
+<li class="ltx_item"> $T$ is a linearly independent set. </li>
+<li class="ltx_item"> $\mathcal{C}\left(A\right)=\mathrm{Span}\,T$. </li></ol>
 @endcol
 @end
 <!--DELIMITER-->
