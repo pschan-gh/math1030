@@ -785,9 +785,11 @@ is consistent because has infinite many solutions: $\{(t,\frac{3-2t}{3})\,|\,t\t
 is inconsistent because it has no solution.  
 @endenumerate
 @endcol
-@end<strong>Notation Recall</strong>:  
-@newcol
-  Let $A$ be a reduced row echelon form.  
+@end
+
+@slide
+<strong>Notation</strong>:
+Let $A$ be a reduced row echelon form.  
 @enumerate
 @item
   The number of non-zero rows is called the @keyword{rank} of $A$ and is denoted by $r$.  
@@ -798,11 +800,10 @@ is inconsistent because it has no solution.
   The set of column indexes that are not pivot columns is denoted by
 \[F=\{(f_{1},f_{2},f_{3},\ldots,f_{n-r})\,|\,f_{1} < f_{2} < f_{3}< \cdots < f_{n-r}.\}\]  
 @endenumerate
-@endcol
-@slide
 @eg
 @label{RREFN}
-  Reduced row-echelon form notation
+@title{Reduced row-echelon form notation}
+@col
 For the $5\times 9$ matrix
 \[\displaystyle B=\begin{bmatrix}\boxed{1}&5&0&0&2&8&0&5&-1\\
 0&0&\boxed{1}&0&4&7&0&2&0\\

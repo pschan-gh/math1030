@@ -36,6 +36,7 @@
       <keyword chapter="" slide="all">Reduced Row-Echelon Form</keyword>
       <keyword chapter="" slide="all">Row-Equivalent Matrix in Echelon Form</keyword>
       <keyword chapter="" slide="all">Reduced Row-Echelon Form is Unique</keyword>
+      <keyword chapter="" slide="all">Reduced row-echelon form notation</keyword>
       <keyword chapter="" slide="all">Independent and Dependent Variables</keyword>
       <keyword chapter="" slide="all">Recognizing Consistency of a Linear System</keyword>
       <keyword chapter="" slide="all">Consistent Systems r and n</keyword>
@@ -87,6 +88,7 @@
         <keyword chapter="5" slide="all">Reduced Row-Echelon Form</keyword>
         <keyword chapter="5" slide="all">Row-Equivalent Matrix in Echelon Form</keyword>
         <keyword chapter="5" slide="all">Reduced Row-Echelon Form is Unique</keyword>
+        <keyword chapter="5" slide="all">Reduced row-echelon form notation</keyword>
         <keyword chapter="5" slide="all">Independent and Dependent Variables</keyword>
         <keyword chapter="5" slide="all">Recognizing Consistency of a Linear System</keyword>
         <keyword chapter="5" slide="all">Consistent Systems r and n</keyword>
@@ -1091,7 +1093,6 @@ In the next lecture we will examine these three scenarios more closely.   </para
             <keywords slide="16" environ="slide" chapter="5" course="MATH 1030">
               <keyword chapter="5" slide="16">consistent</keyword>
               <keyword chapter="5" slide="16">inconsistent</keyword>
-              <keyword chapter="5" slide="16">rank</keyword>
             </keywords>
             <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="5" section="2" subsection="" subsubsection="" serial="" slide="16">
               <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Consistent Systems</paragraphs>
@@ -1131,44 +1132,47 @@ is inconsistent because it has no solution.   </paragraphs>
                 </enumerate>
               </newcol>
             </statement>
-            <strong xmlns="http://www.w3.org/1999/xhtml" environment="">
-              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">Notation Recall</paragraphs>
-            </strong>
-            <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">:   </paragraphs>
-            <newcol course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-              <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   Let $A$ be a reduced row echelon form.   </paragraphs>
-              <enumerate course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="enumerate" wbtag="enumerate">
-                <item course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="enumerate" wbtag="item">
-                  <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs">   The number of non-zero rows is called the </paragraphs>
-                  <inline_keyword course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="enumerate">rank</inline_keyword>
-                  <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs"> of $A$ and is denoted by $r$.   </paragraphs>
-                </item>
-                <item course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="enumerate" wbtag="item">
-                  <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs">   The set of the column indexes for the pivot columns is denoted by
-\[D=\{(d_{1},d_{2},d_{3},\ldots,d_{r})\,|\,d_{1} &lt; d_{2} &lt; d_{3} &lt; \cdots &lt; d_{r}.\}\]   </paragraphs>
-                </item>
-                <item course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="enumerate" wbtag="item">
-                  <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs">   The set of column indexes that are not pivot columns is denoted by
-\[F=\{(f_{1},f_{2},f_{3},\ldots,f_{n-r})\,|\,f_{1} &lt; f_{2} &lt; f_{3}&lt; \cdots &lt; f_{n-r}.\}\]   </paragraphs>
-                </item>
-              </enumerate>
-            </newcol>
+            <newline course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="17" id="s17" slide="17" course="MATH 1030" chapter="5" section="2" subsection="" subsubsection="" chapter_title="Reduced Row Echelon Forms" section_title="Consistent Systems">
-            <keywords slide="17" environ="slide" chapter="5" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="14" md5="3a9bb7f74b047d58d1230b6b956b4c2d" course="MATH 1030" chapter="5" slide="17" item="5.14">
+            <keywords slide="17" environ="slide" chapter="5" course="MATH 1030">
+              <keyword chapter="5" slide="17">rank</keyword>
+              <keyword chapter="5" slide="17">Reduced row-echelon form notation</keyword>
+            </keywords>
+            <strong xmlns="http://www.w3.org/1999/xhtml" environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">Notation</paragraphs>
+            </strong>
+            <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">:
+Let $A$ be a reduced row echelon form.   </paragraphs>
+            <enumerate course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="enumerate" wbtag="enumerate">
+              <item course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="enumerate" wbtag="item">
+                <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs">   The number of non-zero rows is called the </paragraphs>
+                <inline_keyword course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="enumerate">rank</inline_keyword>
+                <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs"> of $A$ and is denoted by $r$.   </paragraphs>
+              </item>
+              <item course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="enumerate" wbtag="item">
+                <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs">   The set of the column indexes for the pivot columns is denoted by
+\[D=\{(d_{1},d_{2},d_{3},\ldots,d_{r})\,|\,d_{1} &lt; d_{2} &lt; d_{3} &lt; \cdots &lt; d_{r}.\}\]   </paragraphs>
+              </item>
+              <item course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="enumerate" wbtag="item">
+                <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs">   The set of column indexes that are not pivot columns is denoted by
+\[F=\{(f_{1},f_{2},f_{3},\ldots,f_{n-r})\,|\,f_{1} &lt; f_{2} &lt; f_{3}&lt; \cdots &lt; f_{n-r}.\}\]   </paragraphs>
+              </item>
+            </enumerate>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="14" title="Reduced row-echelon form notation" md5="3a9bb7f74b047d58d1230b6b956b4c2d" course="MATH 1030" chapter="5" slide="17" item="5.14">
               <label wbtag="label" name="RREFN" type="Example"/>
-              <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">   Reduced row-echelon form notation
-For the $5\times 9$ matrix
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="5" section="2" subsection="" subsubsection="" serial="" slide="17">Reduced row-echelon form notation</title>
+              <newcol course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> For the $5\times 9$ matrix
 \[\displaystyle B=\begin{bmatrix}\boxed{1}&amp;5&amp;0&amp;0&amp;2&amp;8&amp;0&amp;5&amp;-1\\
 0&amp;0&amp;\boxed{1}&amp;0&amp;4&amp;7&amp;0&amp;2&amp;0\\
 0&amp;0&amp;0&amp;\boxed{1}&amp;3&amp;9&amp;0&amp;3&amp;-6\\
 0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;\boxed{1}&amp;4&amp;2\\
 0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}\]
 in reduced row-echelon form we have:</paragraphs>
-              <newline course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
-              <newcol course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   \begin{align*}
+                <newline course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                <newcol course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   \begin{align*}
 r&amp;=4\\
 d_1&amp;=1
 &amp;
@@ -1187,11 +1191,12 @@ f_4&amp;=8
 &amp;
 f_5&amp;=9
 \end{align*}   </paragraphs>
-                <collapse course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   Notice that the sets
+                  <collapse course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   Notice that the sets
 \[\displaystyle D=\{d_{1},\,d_{2},\,d_{3},\,d_{4}\}=\{1,\,3,\,4,\,7\}\]
 have nothing in common and together account for all of the columns of $B$.   </paragraphs>
-                </collapse>
+                  </collapse>
+                </newcol>
               </newcol>
             </statement>
           </slide>
