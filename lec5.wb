@@ -838,7 +838,19 @@ f_5&=9
 have nothing in common and together account for all of the columns of $B$.  
 @endcol
 @end
-@slide
+@section{Free variables}
+@label{FV}
+@keyword*{dependent variable}
+@keyword*{independent variable}
+@keyword*{free variable}
+@defn
+@title{Independent and Dependent Variables}
+@label{IDV}
+  Suppose $A$ is the augmented matrix of a consistent system of linear equations and $B$ is a row-equivalent matrix in reduced row-echelon form.
+Suppose $j$ is the index of a pivot column of $B$. Then the variable $x_{j}$ is <strong>dependent</strong>.
+A variable that is not dependent is called <strong>independent</strong> or <strong>free</strong>.  
+@end
+@keyword*{Free and dependent variables}
 @eg
 @label{ISSI}
   Describe the infinite solution set of the following system of linear equations
@@ -913,21 +925,8 @@ x_2, x_5, x_6, x_7 \in \mathbb{R}
   This systematic approach to solving a system of equations will allow us to create a precise description of the solution set for any consistent system once we have found the reduced row-echelon form of the augmented matrix. It will work just as well when the set of free variables is empty and we get just a single solution.  
 @endcol
 @end
-@slide
-@keyword*{dependent variable}
-@keyword*{independent variable}
-@keyword*{free variable}
-@defn
-@title{Independent and Dependent Variables}
-@label{IDV}
-  Suppose $A$ is the augmented matrix of a consistent system of linear equations and $B$ is a row-equivalent matrix in reduced row-echelon form.
-Suppose $j$ is the index of a pivot column of $B$. Then the variable $x_{j}$ is <strong>dependent</strong>.
-A variable that is not dependent is called <strong>independent</strong> or <strong>free</strong>.  
-@end
-@keyword*{Free and dependent variables}
 @eg
 @label{FDV}
-
 @newcol
   Consider the system of five equations in five variables,
 \begin{align*}
@@ -1093,9 +1092,7 @@ When $r < n$, we have $n-r > 0$ free variables. Choose one free variable and set
 @qed
 @endcol
 @end
-@section{Free variables}
-@label{FV}
-  The next theorem simply states a conclusion from the final paragraph of the previous proof, allowing us to state explicitly the number of free variables for a consistent system.  
+@slide
 @thm
 @title{Free Variables for Consistent Systems}
 @label{FVCS}
