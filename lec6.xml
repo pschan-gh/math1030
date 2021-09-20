@@ -41,13 +41,13 @@
       <keyword chapter="" slide="all">Matrix Multiplication Distributes Across Addition</keyword>
       <keyword chapter="" slide="all">Matrix Multiplication and Scalar Matrix Multiplication</keyword>
       <keyword chapter="" slide="all">Matrix Multiplication is Associative</keyword>
-      <keyword chapter="" slide="all">Matrix Multiplication and Transposes</keyword>
       <keyword chapter="" slide="all">Transpose of a Matrix</keyword>
       <keyword chapter="" slide="all">Symmetric Matrix</keyword>
       <keyword chapter="" slide="all">Symmetric Matrices are Square</keyword>
       <keyword chapter="" slide="all">Transpose and Matrix Addition</keyword>
       <keyword chapter="" slide="all">Transpose and Matrix Scalar Multiplication</keyword>
       <keyword chapter="" slide="all">Transpose of a Transpose</keyword>
+      <keyword chapter="" slide="all">Matrix Multiplication and Transposes</keyword>
     </keywords>
     <title environment="title" chapter_type="" wbtag="course" scope="course" course="MATH 1030" chapter="" section="" subsection="" subsubsection="" serial="" slide="">MATH 1030</title>
     <slides environment="" chapter_type="">
@@ -98,13 +98,13 @@
         <keyword chapter="6" slide="all">Matrix Multiplication Distributes Across Addition</keyword>
         <keyword chapter="6" slide="all">Matrix Multiplication and Scalar Matrix Multiplication</keyword>
         <keyword chapter="6" slide="all">Matrix Multiplication is Associative</keyword>
-        <keyword chapter="6" slide="all">Matrix Multiplication and Transposes</keyword>
         <keyword chapter="6" slide="all">Transpose of a Matrix</keyword>
         <keyword chapter="6" slide="all">Symmetric Matrix</keyword>
         <keyword chapter="6" slide="all">Symmetric Matrices are Square</keyword>
         <keyword chapter="6" slide="all">Transpose and Matrix Addition</keyword>
         <keyword chapter="6" slide="all">Transpose and Matrix Scalar Multiplication</keyword>
         <keyword chapter="6" slide="all">Transpose of a Transpose</keyword>
+        <keyword chapter="6" slide="all">Matrix Multiplication and Transposes</keyword>
       </keywords>
       <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="MATH 1030" chapter="6" section="" subsection="" subsubsection="" serial="" slide="">More about matrices</title>
       <slides environment="" chapter_type="">
@@ -876,10 +876,10 @@ the transpose.   </paragraphs>
                   </enumerate>
                 </newcol>
               </statement>
-              <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="e593a8b2d67095013ccaa3d4ffc8e6b4" course="MATH 1030" chapter="6" slide="17" of="ebe1bfb33379e0233cc074f41bb2c83b" of-src-course="MATH 1030" of-src-chapter="6" of-src-slide="17" of-type="Theorem" of-item="6.20" of-src-filename="lec6.xml" ofmd5="ebe1bfb33379e0233cc074f41bb2c83b" of-serial="">
+              <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="59cd657dad3d21e2c8f78362bf7b7ea7" course="MATH 1030" chapter="6" slide="17" of="ebe1bfb33379e0233cc074f41bb2c83b" of-src-course="MATH 1030" of-src-chapter="6" of-src-slide="17" of-type="Theorem" of-item="6.20" of-src-filename="lec6.xml" ofmd5="ebe1bfb33379e0233cc074f41bb2c83b" of-serial="">
                 <of-title hidden="true">Matrix Multiplication and the Zero Matrix</of-title>
                 <newcol course="MATH 1030" chapter="6" chapter_type="" section="3" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
-                  <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="3" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs">   We will prove (1) and leave (2) to you. Using the entry-by-entry definition of matrix multiplication, for $1\leq i\leq m$, $1\leq j\leq p$, we comoute
+                  <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="3" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs">   We will prove (1) and leave (2) to you. Using the entry-by-entry definition of matrix multiplication, for $1\leq i\leq m$, $1\leq j\leq p$, we compute
 \[\displaystyle\left[A{\cal O}_{n\times p}\right]_{ij}=\sum_{k=1}^{n}\left[A%
 \right]_{ik}\left[{\cal O}_{n\times p}\right]_{kj}\]
 \[\displaystyle=\sum_{k=1}^{n}\left[A\right]_{ik}0\]
@@ -1167,40 +1167,6 @@ This completes the proof.   </paragraphs>
                 </newcol>
               </substatement>
             </slide>
-            <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="21" id="s21" slide="21" course="MATH 1030" chapter="6" section="3" subsection="1" subsubsection="" chapter_title="More about matrices" section_title="Matrix Multiplication">
-              <keywords slide="21" environ="slide" chapter="6" course="MATH 1030">
-                <keyword chapter="6" slide="21">Matrix Multiplication and Transposes</keyword>
-              </keywords>
-              <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="26" title="Matrix Multiplication and Transposes" md5="546f2001ac219c9b23cfae25245a5981" course="MATH 1030" chapter="6" slide="21" item="6.26">
-                <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="6" section="3" subsection="1" subsubsection="" serial="" slide="21">Matrix Multiplication and Transposes</title>
-                <label wbtag="label" name="MMT" type="Theorem"/>
-                <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="3" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs">   Suppose $A$ is an $m\times n$ matrix and $B$ is an $n\times p$ matrix. Then $(AB)^{t}=B^{t}A^{t}$.   </paragraphs>
-              </statement>
-              <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="de912f391ff541136b9ed20939dc4ecd" course="MATH 1030" chapter="6" slide="21" of="546f2001ac219c9b23cfae25245a5981" of-src-course="MATH 1030" of-src-chapter="6" of-src-slide="21" of-type="Theorem" of-item="6.26" of-src-filename="lec6.xml" ofmd5="546f2001ac219c9b23cfae25245a5981" of-serial="">
-                <of-title hidden="true">Matrix Multiplication and Transposes</of-title>
-                <newcol course="MATH 1030" chapter="6" chapter_type="" section="3" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
-                  <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="3" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs">   Here we go again, entry-by-entry. For $1\leq i\leq m$, $1\leq j\leq p$,</paragraphs>
-                  <newline course="MATH 1030" chapter="6" chapter_type="" section="3" subsection="1" subsubsection="" environment="newcol"/>
-                  <collapse course="MATH 1030" chapter="6" chapter_type="" section="3" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="3" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs">   \begin{align*}
-\matrixentry{\transpose{(AB)}}{ji}=&amp;\matrixentry{AB}{ij}
-\\
-&amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}
-\\
-&amp;=\sum_{k=1}^{n}\matrixentry{B}{kj}\matrixentry{A}{ik}
-\\
-&amp;=\sum_{k=1}^{n}\matrixentry{\transpose{B}}{jk}\matrixentry{\transpose{A}}{ki}
-\\
-&amp;=\matrixentry{\transpose{B}\transpose{A}}{ji}
-\end{align*}</paragraphs>
-                    <newline course="MATH 1030" chapter="6" chapter_type="" section="3" subsection="1" subsubsection="" environment="newcol"/>
-                    <collapse course="MATH 1030" chapter="6" chapter_type="" section="3" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
-                      <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="3" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs">   So, $(AB)^{t} = B^{t}A^{t}$.   </paragraphs>
-                    </collapse>
-                  </collapse>
-                </newcol>
-              </substatement>
-            </slide>
           </slides>
         </subsection>
       </section>
@@ -1209,20 +1175,20 @@ This completes the proof.   </paragraphs>
           <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Row Operations and Matrix Multiplication</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="22" scope="section" id="s22" slide="22" course="MATH 1030" chapter="6" section="4" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Row Operations and Matrix Multiplication">
-            <keywords slide="22" environ="slide" chapter="6" course="MATH 1030"/>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="6" section="4" subsection="" subsubsection="" serial="" slide="22">
+          <slide environment="" chapter_type="Chapter" canon_num="21" scope="section" id="s21" slide="21" course="MATH 1030" chapter="6" section="4" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Row Operations and Matrix Multiplication">
+            <keywords slide="21" environ="slide" chapter="6" course="MATH 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="6" section="4" subsection="" subsubsection="" serial="" slide="21">
               <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Row Operations and Matrix Multiplication</paragraphs>
             </title>
             <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="4" subsection="" subsubsection="" environment="" wbtag="paragraphs">   In this section, we will discuss the relation between elementary row operations and matrix multiplication.</paragraphs>
             <newline course="MATH 1030" chapter="6" chapter_type="" section="4" subsection="" subsubsection="" environment=""/>
             <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="4" subsection="" subsubsection="" environment="" wbtag="paragraphs">Recall the definition of </paragraphs>
-            <ref environment="" chapter_type="" label="def:RO" wbtag="ref" course="MATH 1030" chapter="6" slide="22" src-course="MATH 1030" src-chapter="4" src-slide="10" type="Definition" item="4.14" src-filename="lec4.xml" md5="308a8137997242db56a3552704c04c83" class="lcref" serial="">
+            <ref environment="" chapter_type="" label="def:RO" wbtag="ref" course="MATH 1030" chapter="6" slide="21" src-course="MATH 1030" src-chapter="4" src-slide="10" type="Definition" item="4.14" src-filename="lec4.xml" md5="308a8137997242db56a3552704c04c83" class="lcref" serial="">
               <title>Row Operations</title>
             </ref>
             <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="4" subsection="" subsubsection="" environment="" wbtag="paragraphs"> on matrices.</paragraphs>
             <newline course="MATH 1030" chapter="6" chapter_type="" section="4" subsection="" subsubsection="" environment=""/>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="27" md5="5c58e155ca934e2b7386d3148127f30b" course="MATH 1030" chapter="6" slide="22" item="6.27">
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="26" md5="5c58e155ca934e2b7386d3148127f30b" course="MATH 1030" chapter="6" slide="21" item="6.26">
               <label wbtag="label" name="thm:ROEM" type="Theorem"/>
               <newcol course="MATH 1030" chapter="6" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   Let $A\in M_{mn}$. Let $B$ be a matrix obtained by applying one of the above row operations on $A$.
@@ -1230,14 +1196,14 @@ Let $J$ be a matrix obtained by applying the same row operation on $I_{m}$. Then
 \[JA=B.\]   </paragraphs>
               </newcol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="ef8fb97d271d5d2e855498ac9a9b41b7" course="MATH 1030" chapter="6" slide="22" of="5c58e155ca934e2b7386d3148127f30b" of-src-course="MATH 1030" of-src-chapter="6" of-src-slide="22" of-type="Theorem" of-item="6.27" of-src-filename="lec6.xml" ofmd5="5c58e155ca934e2b7386d3148127f30b" of-serial="">
-              <of-title hidden="true">Theorem 6.27</of-title>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="ef8fb97d271d5d2e855498ac9a9b41b7" course="MATH 1030" chapter="6" slide="21" of="5c58e155ca934e2b7386d3148127f30b" of-src-course="MATH 1030" of-src-chapter="6" of-src-slide="21" of-type="Theorem" of-item="6.26" of-src-filename="lec6.xml" ofmd5="5c58e155ca934e2b7386d3148127f30b" of-serial="">
+              <of-title hidden="true">Theorem 6.26</of-title>
               <newcol course="MATH 1030" chapter="6" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   Exercise.   </paragraphs>
               </newcol>
             </substatement>
             <newline course="MATH 1030" chapter="6" chapter_type="" section="4" subsection="" subsubsection="" environment=""/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="28" md5="fb6a6b3a0dca650c9c263c93d68a1046" course="MATH 1030" chapter="6" slide="22" item="6.28">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="27" md5="fb6a6b3a0dca650c9c263c93d68a1046" course="MATH 1030" chapter="6" slide="21" item="6.27">
               <newcol course="MATH 1030" chapter="6" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   Let:
 \[A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;a_{14}&amp;a_{15}\\
@@ -1263,14 +1229,14 @@ Verify that:
             </statement>
             <newline course="MATH 1030" chapter="6" chapter_type="" section="4" subsection="" subsubsection="" environment=""/>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="23" id="s23" slide="23" course="MATH 1030" chapter="6" section="4" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Row Operations and Matrix Multiplication">
-            <keywords slide="23" environ="slide" chapter="6" course="MATH 1030">
-              <keyword chapter="6" slide="23">elementary matrix</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="22" id="s22" slide="22" course="MATH 1030" chapter="6" section="4" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Row Operations and Matrix Multiplication">
+            <keywords slide="22" environ="slide" chapter="6" course="MATH 1030">
+              <keyword chapter="6" slide="22">elementary matrix</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="29" md5="e230d241c6dd9bffce82a9f2a267e2ed" course="MATH 1030" chapter="6" slide="23" item="6.29">
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="28" md5="e230d241c6dd9bffce82a9f2a267e2ed" course="MATH 1030" chapter="6" slide="22" item="6.28">
               <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">   A matrix $J$ which corresponds to an elementary row operation as in </paragraphs>
-              <ref environment="statement" chapter_type="" label="thm:ROEM" wbtag="ref" course="MATH 1030" chapter="6" slide="23" referrer-type="Definition" referrer-md5="e230d241c6dd9bffce82a9f2a267e2ed" src-course="MATH 1030" src-chapter="6" src-slide="22" type="Theorem" item="6.27" src-filename="lec6.xml" md5="5c58e155ca934e2b7386d3148127f30b" class="lcref" serial="">
-                <title>Theorem 6.27</title>
+              <ref environment="statement" chapter_type="" label="thm:ROEM" wbtag="ref" course="MATH 1030" chapter="6" slide="22" referrer-type="Definition" referrer-md5="e230d241c6dd9bffce82a9f2a267e2ed" src-course="MATH 1030" src-chapter="6" src-slide="21" type="Theorem" item="6.26" src-filename="lec6.xml" md5="5c58e155ca934e2b7386d3148127f30b" class="lcref" serial="">
+                <title>Theorem 6.26</title>
               </ref>
               <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> is called an </paragraphs>
               <inline_keyword course="MATH 1030" chapter="6" chapter_type="" section="4" subsection="" subsubsection="" environment="statement">elementary matrix</inline_keyword>
@@ -1285,16 +1251,16 @@ Verify that:
           <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Invertible Matrices</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="24" scope="section" id="s24" slide="24" course="MATH 1030" chapter="6" section="5" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Invertible Matrices">
-            <keywords slide="24" environ="slide" chapter="6" course="MATH 1030">
-              <keyword chapter="6" slide="24">invertible</keyword>
-              <keyword chapter="6" slide="24">inverse</keyword>
-              <keyword chapter="6" slide="24">nonsingular</keyword>
+          <slide environment="" chapter_type="Chapter" canon_num="23" scope="section" id="s23" slide="23" course="MATH 1030" chapter="6" section="5" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Invertible Matrices">
+            <keywords slide="23" environ="slide" chapter="6" course="MATH 1030">
+              <keyword chapter="6" slide="23">invertible</keyword>
+              <keyword chapter="6" slide="23">inverse</keyword>
+              <keyword chapter="6" slide="23">nonsingular</keyword>
             </keywords>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="6" section="5" subsection="" subsubsection="" serial="" slide="24">
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="6" section="5" subsection="" subsubsection="" serial="" slide="23">
               <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Invertible Matrices</paragraphs>
             </title>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="30" md5="ed3ae18215d80380938986f70dbb2e12" course="MATH 1030" chapter="6" slide="24" item="6.30">
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="29" md5="ed3ae18215d80380938986f70dbb2e12" course="MATH 1030" chapter="6" slide="23" item="6.29">
               <label wbtag="label" name="def:matrixinverse" type="Definition"/>
               <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">   An $n \times n$ square matrix $A$ is said to be </paragraphs>
               <inline_keyword course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment="statement">invertible</inline_keyword>
@@ -1308,7 +1274,7 @@ We call $B$ an </paragraphs>
               <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$.   </paragraphs>
             </statement>
             <newline course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="31" md5="3f1de1d4a9d2e464866075da469a219e" course="MATH 1030" chapter="6" slide="24" item="6.31">
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="30" md5="3f1de1d4a9d2e464866075da469a219e" course="MATH 1030" chapter="6" slide="23" item="6.30">
               <newcol course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   If $A, B, B'$ are $n \times n$ matrices such that:
 \[
@@ -1319,7 +1285,7 @@ Hence, the inverse of an invertible matrix $A$ is unique. We denote it by $A^{-1
               </newcol>
             </statement>
             <newline course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
-            <statement environment="statement" chapter_type="Chapter" type="Fact" wbtag="fact" num="32" md5="ce970673f079e662a0f8445d4ea25f33" course="MATH 1030" chapter="6" slide="24" item="6.32">
+            <statement environment="statement" chapter_type="Chapter" type="Fact" wbtag="fact" num="31" md5="ce970673f079e662a0f8445d4ea25f33" course="MATH 1030" chapter="6" slide="23" item="6.31">
               <label wbtag="label" name="fact:matrixinverse" type="Fact"/>
               <newcol course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   Let $A$ be an $n \times n$ matrix.   </paragraphs>
@@ -1358,19 +1324,19 @@ if and only if $\vec{x} = \vec{0}$.   </paragraphs>
               </newcol>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="25" id="s25" slide="25" course="MATH 1030" chapter="6" section="5" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Invertible Matrices">
-            <keywords slide="25" environ="slide" chapter="6" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="33" md5="8bb6139a5b182de83ba6fb1eef49c793" course="MATH 1030" chapter="6" slide="25" item="6.33">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="24" id="s24" slide="24" course="MATH 1030" chapter="6" section="5" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Invertible Matrices">
+            <keywords slide="24" environ="slide" chapter="6" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="32" md5="8bb6139a5b182de83ba6fb1eef49c793" course="MATH 1030" chapter="6" slide="24" item="6.32">
               <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">   Elementary matrices are invertible.   </paragraphs>
             </statement>
             <newline course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
             <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs">We may now prove Theorem </paragraphs>
-            <ref environment="" chapter_type="" label="REMES" wbtag="ref" course="MATH 1030" chapter="6" slide="25" src-course="MATH 1030" src-chapter="4" src-slide="12" type="Theorem" item="4.17" src-filename="lec4.xml" md5="fba53aad9441e371b163e297725874e0" class="lcref" serial="">
+            <ref environment="" chapter_type="" label="REMES" wbtag="ref" course="MATH 1030" chapter="6" slide="24" src-course="MATH 1030" src-chapter="4" src-slide="12" type="Theorem" item="4.17" src-filename="lec4.xml" md5="fba53aad9441e371b163e297725874e0" class="lcref" serial="">
               <title>Row-Equivalent Matrices represent Equivalent Systems</title>
             </ref>
             <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs">.</paragraphs>
             <newline course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" of="REMES" md5="b0f79dc6e10b303342e604204f1990dc" course="MATH 1030" chapter="6" slide="25" of-src-course="MATH 1030" of-src-chapter="4" of-src-slide="12" of-type="Theorem" of-item="4.17" of-src-filename="lec4.xml" ofmd5="fba53aad9441e371b163e297725874e0" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" of="REMES" md5="b0f79dc6e10b303342e604204f1990dc" course="MATH 1030" chapter="6" slide="24" of-src-course="MATH 1030" of-src-chapter="4" of-src-slide="12" of-type="Theorem" of-item="4.17" of-src-filename="lec4.xml" ofmd5="fba53aad9441e371b163e297725874e0" of-serial="">
               <of-title hidden="false">Row-Equivalent Matrices represent Equivalent Systems</of-title>
               <newcol course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   Suppose $A = [A' | \vec{a}]$ and $B = [B' | \vec{b}]$.
@@ -1402,8 +1368,8 @@ which implies that $\vec{v}$ is also a solution to $\mathcal{LS}(B', \vec{b})$.<
                     <newline course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
                     <collapse course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   Conversely, by </paragraphs>
-                      <ref environment="newcol" chapter_type="" label="fact:matrixinverse" wbtag="ref" course="MATH 1030" chapter="6" slide="25" referrer-type="Proof" referrer-md5="b0f79dc6e10b303342e604204f1990dc" src-course="MATH 1030" src-chapter="6" src-slide="24" type="Fact" item="6.32" src-filename="lec6.xml" md5="ce970673f079e662a0f8445d4ea25f33" class="lcref" serial="">
-                        <title>Fact 6.32</title>
+                      <ref environment="newcol" chapter_type="" label="fact:matrixinverse" wbtag="ref" course="MATH 1030" chapter="6" slide="24" referrer-type="Proof" referrer-md5="b0f79dc6e10b303342e604204f1990dc" src-course="MATH 1030" src-chapter="6" src-slide="23" type="Fact" item="6.31" src-filename="lec6.xml" md5="ce970673f079e662a0f8445d4ea25f33" class="lcref" serial="">
+                        <title>Fact 6.31</title>
                       </ref>
                       <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> the matrix $J$ is invertible, hence,
 \[
@@ -1434,18 +1400,18 @@ hence they are equivalent linear systems.   </paragraphs>
         </title>
         <label wbtag="label" name="TSM" type="Section"/>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="26" scope="section" id="s26" slide="26" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Transposes and Symmetric Matrices">
-            <keywords slide="26" environ="slide" chapter="6" course="MATH 1030">
-              <keyword chapter="6" slide="26">transpose</keyword>
-              <keyword chapter="6" slide="26">Transpose of a Matrix</keyword>
+          <slide environment="" chapter_type="Chapter" canon_num="25" scope="section" id="s25" slide="25" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Transposes and Symmetric Matrices">
+            <keywords slide="25" environ="slide" chapter="6" course="MATH 1030">
+              <keyword chapter="6" slide="25">transpose</keyword>
+              <keyword chapter="6" slide="25">Transpose of a Matrix</keyword>
             </keywords>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" serial="" slide="26">
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" serial="" slide="25">
               <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Transposes and Symmetric Matrices</paragraphs>
             </title>
             <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="" wbtag="paragraphs">   We now describe one more common operation which can be performed on matrices.
 Informally, to transpose a matrix is to build a new matrix by swapping its rows and columns.   </paragraphs>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="34" title="Transpose of a Matrix" md5="4d83afc980577005b1c3019bafcc55f1" course="MATH 1030" chapter="6" slide="26" item="6.34">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" serial="" slide="26">Transpose of a Matrix</title>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="33" title="Transpose of a Matrix" md5="4d83afc980577005b1c3019bafcc55f1" course="MATH 1030" chapter="6" slide="25" item="6.33">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" serial="" slide="25">Transpose of a Matrix</title>
               <label wbtag="label" name="TM" type="Definition"/>
               <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">   Given an $m\times n$ matrix $A$, its </paragraphs>
               <inline_keyword course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="statement">transpose</inline_keyword>
@@ -1472,7 +1438,7 @@ a_{1n}&amp;a_{2n}&amp;a_{3n}&amp;\dots&amp;a_{mn}\\
                 </collapse>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="35" md5="6e33f90749098c46e7c476962a3ceec9" course="MATH 1030" chapter="6" slide="26" item="6.35">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="34" md5="6e33f90749098c46e7c476962a3ceec9" course="MATH 1030" chapter="6" slide="25" item="6.34">
               <newcol course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   Suppose:
 \[
@@ -1490,14 +1456,14 @@ Then,</paragraphs>
               </newcol>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="27" id="s27" slide="27" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Transposes and Symmetric Matrices">
-            <keywords slide="27" environ="slide" chapter="6" course="MATH 1030">
-              <keyword chapter="6" slide="27">symmetric</keyword>
-              <keyword chapter="6" slide="27">Symmetric Matrix</keyword>
-              <keyword chapter="6" slide="27">Symmetric Matrices are Square</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="26" id="s26" slide="26" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Transposes and Symmetric Matrices">
+            <keywords slide="26" environ="slide" chapter="6" course="MATH 1030">
+              <keyword chapter="6" slide="26">symmetric</keyword>
+              <keyword chapter="6" slide="26">Symmetric Matrix</keyword>
+              <keyword chapter="6" slide="26">Symmetric Matrices are Square</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="36" title="Symmetric Matrix" md5="62c064719225dd7efa8cd6683db8678d" course="MATH 1030" chapter="6" slide="27" item="6.36">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" serial="" slide="27">Symmetric Matrix</title>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="35" title="Symmetric Matrix" md5="62c064719225dd7efa8cd6683db8678d" course="MATH 1030" chapter="6" slide="26" item="6.35">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" serial="" slide="26">Symmetric Matrix</title>
               <label wbtag="label" name="SYM" type="Definition"/>
               <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">   A matrix $A$ is said to be </paragraphs>
               <inline_keyword course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="statement">symmetric</inline_keyword>
@@ -1512,7 +1478,7 @@ with
 \[a_{ij}=a_{ji}\text{ for all $i,j$}.\]   </paragraphs>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="37" md5="5a0e84a4e989c29415f8fbbcb6a7f2a7" course="MATH 1030" chapter="6" slide="27" item="6.37">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="36" md5="5a0e84a4e989c29415f8fbbcb6a7f2a7" course="MATH 1030" chapter="6" slide="26" item="6.36">
               <newcol course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   The matrix:
 \[E=\begin{bmatrix}2&amp;3&amp;-9&amp;5&amp;7\\
@@ -1523,12 +1489,12 @@ with
 is symmetric.   </paragraphs>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="38" title="Symmetric Matrices are Square" md5="51cc0400172a9f64975c50901c21930b" course="MATH 1030" chapter="6" slide="27" item="6.38">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" serial="" slide="27">Symmetric Matrices are Square</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="37" title="Symmetric Matrices are Square" md5="51cc0400172a9f64975c50901c21930b" course="MATH 1030" chapter="6" slide="26" item="6.37">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" serial="" slide="26">Symmetric Matrices are Square</title>
               <label wbtag="label" name="SMS" type="Theorem"/>
               <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">   Suppose that $A$ is a symmetric matrix. Then $A$ is square.   </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="2c8cf10feac3b0be65677f804d4983fb" course="MATH 1030" chapter="6" slide="27" of="51cc0400172a9f64975c50901c21930b" of-src-course="MATH 1030" of-src-chapter="6" of-src-slide="27" of-type="Theorem" of-item="6.38" of-src-filename="lec6.xml" ofmd5="51cc0400172a9f64975c50901c21930b" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="2c8cf10feac3b0be65677f804d4983fb" course="MATH 1030" chapter="6" slide="26" of="51cc0400172a9f64975c50901c21930b" of-src-course="MATH 1030" of-src-chapter="6" of-src-slide="26" of-type="Theorem" of-item="6.37" of-src-filename="lec6.xml" ofmd5="51cc0400172a9f64975c50901c21930b" of-serial="">
               <of-title hidden="true">Symmetric Matrices are Square</of-title>
               <newcol course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   Suppose $A$ is a $n\times m$ matrix. Then $A^{t}$ is a $m\times n$ matrix.
@@ -1536,12 +1502,12 @@ In order for $A$ and $A^{t}$ to be equal, they must have the same dimension. Hen
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="28" id="s28" slide="28" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Transposes and Symmetric Matrices">
-            <keywords slide="28" environ="slide" chapter="6" course="MATH 1030">
-              <keyword chapter="6" slide="28">skew-symmetric</keyword>
-              <keyword chapter="6" slide="28">antisymmetric</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="27" id="s27" slide="27" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Transposes and Symmetric Matrices">
+            <keywords slide="27" environ="slide" chapter="6" course="MATH 1030">
+              <keyword chapter="6" slide="27">skew-symmetric</keyword>
+              <keyword chapter="6" slide="27">antisymmetric</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="39" md5="3599f334a281e0dbc373e856dddc0a71" course="MATH 1030" chapter="6" slide="28" item="6.39">
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="38" md5="3599f334a281e0dbc373e856dddc0a71" course="MATH 1030" chapter="6" slide="27" item="6.38">
               <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">   A matrix $A$ is said to be </paragraphs>
               <inline_keyword course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="statement">skew-symmetric</inline_keyword>
               <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> (or </paragraphs>
@@ -1551,7 +1517,7 @@ In order for $A$ and $A^{t}$ to be equal, they must have the same dimension. Hen
 A^t = -A
 \]   </paragraphs>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="40" md5="0c3522f455e6301152dabcad65770863" course="MATH 1030" chapter="6" slide="28" item="6.40">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="39" md5="0c3522f455e6301152dabcad65770863" course="MATH 1030" chapter="6" slide="27" item="6.39">
               <newcol course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   \[
 A = \begin{bmatrix}
@@ -1563,7 +1529,7 @@ A = \begin{bmatrix}
 \]   </paragraphs>
               </newcol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="80e2fb952ef49731342e77ee2fdd2673" course="MATH 1030" chapter="6" slide="28">
+            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="80e2fb952ef49731342e77ee2fdd2673" course="MATH 1030" chapter="6" slide="27">
               <newcol course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   Notice that if $A$ is skew-symmetric, then:   </paragraphs>
                 <itemize course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="itemize" wbtag="itemize">
@@ -1577,17 +1543,17 @@ A = \begin{bmatrix}
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="29" id="s29" slide="29" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Transposes and Symmetric Matrices">
-            <keywords slide="29" environ="slide" chapter="6" course="MATH 1030">
-              <keyword chapter="6" slide="29">Transpose and Matrix Addition</keyword>
-              <keyword chapter="6" slide="29">Transpose and Matrix Scalar Multiplication</keyword>
-              <keyword chapter="6" slide="29">Transpose of a Transpose</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="28" id="s28" slide="28" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Transposes and Symmetric Matrices">
+            <keywords slide="28" environ="slide" chapter="6" course="MATH 1030">
+              <keyword chapter="6" slide="28">Transpose and Matrix Addition</keyword>
+              <keyword chapter="6" slide="28">Transpose and Matrix Scalar Multiplication</keyword>
+              <keyword chapter="6" slide="28">Transpose of a Transpose</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="41" title="Transpose and Matrix Addition" md5="f30866eb6722145583f638f693d7bc27" course="MATH 1030" chapter="6" slide="29" item="6.41">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" serial="" slide="29">Transpose and Matrix Addition</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="40" title="Transpose and Matrix Addition" md5="f30866eb6722145583f638f693d7bc27" course="MATH 1030" chapter="6" slide="28" item="6.40">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" serial="" slide="28">Transpose and Matrix Addition</title>
               <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">   Suppose that $A$ and $B$ are $m\times n$ matrices. Then $(A+B)^{t}=A^{t}+B^{t}$.   </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="6aec779841789f9b12fd6449b0eba3a8" course="MATH 1030" chapter="6" slide="29" of="f30866eb6722145583f638f693d7bc27" of-src-course="MATH 1030" of-src-chapter="6" of-src-slide="29" of-type="Theorem" of-item="6.41" of-src-filename="lec6.xml" ofmd5="f30866eb6722145583f638f693d7bc27" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="6aec779841789f9b12fd6449b0eba3a8" course="MATH 1030" chapter="6" slide="28" of="f30866eb6722145583f638f693d7bc27" of-src-course="MATH 1030" of-src-chapter="6" of-src-slide="28" of-type="Theorem" of-item="6.40" of-src-filename="lec6.xml" ofmd5="f30866eb6722145583f638f693d7bc27" of-serial="">
               <of-title hidden="true">Transpose and Matrix Addition</of-title>
               <newcol course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   For $1\leq i\leq n$, $1\leq j\leq m$,   </paragraphs>
@@ -1609,13 +1575,13 @@ A = \begin{bmatrix}
               </newcol>
             </substatement>
             <newline course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="42" title="Transpose and Matrix Scalar Multiplication" md5="164babfaca248fe7495e6badf24bd030" course="MATH 1030" chapter="6" slide="29" item="6.42">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" serial="" slide="29">Transpose and Matrix Scalar Multiplication</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="41" title="Transpose and Matrix Scalar Multiplication" md5="164babfaca248fe7495e6badf24bd030" course="MATH 1030" chapter="6" slide="28" item="6.41">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" serial="" slide="28">Transpose and Matrix Scalar Multiplication</title>
               <newcol course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   Suppose that $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $A$ is an $m\times n$ matrix. Then $(\alpha A)^{t}=\alpha A^{t}$.   </paragraphs>
               </newcol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="a1b768fcd88b79e43010baeadb32fab4" course="MATH 1030" chapter="6" slide="29" of="164babfaca248fe7495e6badf24bd030" of-src-course="MATH 1030" of-src-chapter="6" of-src-slide="29" of-type="Theorem" of-item="6.42" of-src-filename="lec6.xml" ofmd5="164babfaca248fe7495e6badf24bd030" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="a1b768fcd88b79e43010baeadb32fab4" course="MATH 1030" chapter="6" slide="28" of="164babfaca248fe7495e6badf24bd030" of-src-course="MATH 1030" of-src-chapter="6" of-src-slide="28" of-type="Theorem" of-item="6.41" of-src-filename="lec6.xml" ofmd5="164babfaca248fe7495e6badf24bd030" of-serial="">
               <of-title hidden="true">Transpose and Matrix Scalar Multiplication</of-title>
               <newcol course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   For $1\leq i\leq m$, $1\leq j\leq n$,
@@ -1626,14 +1592,14 @@ A = \begin{bmatrix}
 Since the matrices $(\alpha A)^{t}$ and $\alpha A^{t}$ agree at each entry, they are equal.   </paragraphs>
               </newcol>
             </substatement>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="43" title="Transpose of a Transpose" md5="9a664f8eefa9904e30aeed3ba1557c63" course="MATH 1030" chapter="6" slide="29" item="6.43">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" serial="" slide="29">Transpose of a Transpose</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="42" title="Transpose of a Transpose" md5="9a664f8eefa9904e30aeed3ba1557c63" course="MATH 1030" chapter="6" slide="28" item="6.42">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" serial="" slide="28">Transpose of a Transpose</title>
               <label wbtag="label" name="TT" type="Theorem"/>
               <newcol course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   Suppose that $A$ is an $m\times n$ matrix. Then $\left(A^{t}\right)^{t}=A$.   </paragraphs>
               </newcol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="13ac74ae73fc20f9dbe402c4f6bad8cc" course="MATH 1030" chapter="6" slide="29" of="9a664f8eefa9904e30aeed3ba1557c63" of-src-course="MATH 1030" of-src-chapter="6" of-src-slide="29" of-type="Theorem" of-item="6.43" of-src-filename="lec6.xml" ofmd5="9a664f8eefa9904e30aeed3ba1557c63" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="13ac74ae73fc20f9dbe402c4f6bad8cc" course="MATH 1030" chapter="6" slide="28" of="9a664f8eefa9904e30aeed3ba1557c63" of-src-course="MATH 1030" of-src-chapter="6" of-src-slide="28" of-type="Theorem" of-item="6.42" of-src-filename="lec6.xml" ofmd5="9a664f8eefa9904e30aeed3ba1557c63" of-serial="">
               <of-title hidden="true">Transpose of a Transpose</of-title>
               <newcol course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   For $1\leq i\leq m$, $1\leq j\leq n$,
@@ -1642,8 +1608,40 @@ Since the matrices $(\alpha A)^{t}$ and $\alpha A^{t}$ agree at each entry, they
 Since the matrices $\left(A^{t}\right)^{t}$ and $A$ agree at each entry, they are equal.   </paragraphs>
               </newcol>
             </substatement>
-            <newline course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
-            <comment course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="">DELIMITER</comment>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="29" id="s29" slide="29" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Transposes and Symmetric Matrices">
+            <keywords slide="29" environ="slide" chapter="6" course="MATH 1030">
+              <keyword chapter="6" slide="29">Matrix Multiplication and Transposes</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="43" title="Matrix Multiplication and Transposes" md5="546f2001ac219c9b23cfae25245a5981" course="MATH 1030" chapter="6" slide="29" item="6.43">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="6" section="6" subsection="" subsubsection="" serial="" slide="29">Matrix Multiplication and Transposes</title>
+              <label wbtag="label" name="MMT" type="Theorem"/>
+              <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">   Suppose $A$ is an $m\times n$ matrix and $B$ is an $n\times p$ matrix. Then $(AB)^{t}=B^{t}A^{t}$.   </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="de912f391ff541136b9ed20939dc4ecd" course="MATH 1030" chapter="6" slide="29" of="546f2001ac219c9b23cfae25245a5981" of-src-course="MATH 1030" of-src-chapter="6" of-src-slide="29" of-type="Theorem" of-item="6.43" of-src-filename="lec6.xml" ofmd5="546f2001ac219c9b23cfae25245a5981" of-serial="">
+              <of-title hidden="true">Matrix Multiplication and Transposes</of-title>
+              <newcol course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   Here we go again, entry-by-entry. For $1\leq i\leq m$, $1\leq j\leq p$,</paragraphs>
+                <newline course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   \begin{align*}
+\matrixentry{\transpose{(AB)}}{ji}=&amp;\matrixentry{AB}{ij}
+\\
+&amp;=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}
+\\
+&amp;=\sum_{k=1}^{n}\matrixentry{B}{kj}\matrixentry{A}{ik}
+\\
+&amp;=\sum_{k=1}^{n}\matrixentry{\transpose{B}}{jk}\matrixentry{\transpose{A}}{ki}
+\\
+&amp;=\matrixentry{\transpose{B}\transpose{A}}{ji}
+\end{align*}</paragraphs>
+                  <newline course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   So, $(AB)^{t} = B^{t}A^{t}$.   </paragraphs>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </substatement>
           </slide>
         </slides>
       </section>

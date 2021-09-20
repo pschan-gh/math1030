@@ -538,7 +538,7 @@ the transpose.
 @end
 @proof
 @newcol
-  We will prove (1) and leave (2) to you. Using the entry-by-entry definition of matrix multiplication, for $1\leq i\leq m$, $1\leq j\leq p$, we comoute
+  We will prove (1) and leave (2) to you. Using the entry-by-entry definition of matrix multiplication, for $1\leq i\leq m$, $1\leq j\leq p$, we compute
 \[\displaystyle\left[A{\cal O}_{n\times p}\right]_{ij}=\sum_{k=1}^{n}\left[A%
 \right]_{ik}\left[{\cal O}_{n\times p}\right]_{kj}\]
 \[\displaystyle=\sum_{k=1}^{n}\left[A\right]_{ik}0\]
@@ -788,33 +788,6 @@ This completes the proof.
 @remark
 @newcol
   The above result says matrix multiplication is associative; it means we do not have to be careful about how we parenthesize an expression with just several matrices multiplied together. So this is where we draw the line on explaining every last detail in a proof. We will frequently add, remove, or rearrange parentheses with no comment.  
-@endcol
-@end
-@slide
-@thm
-@title{Matrix Multiplication and Transposes}
-@label{MMT}
-  Suppose $A$ is an $m\times n$ matrix and $B$ is an $n\times p$ matrix. Then $(AB)^{t}=B^{t}A^{t}$.  
-@end
-@proof
-@newcol
-  Here we go again, entry-by-entry. For $1\leq i\leq m$, $1\leq j\leq p$,
-
-@col
-  \begin{align*}
-\matrixentry{\transpose{(AB)}}{ji}=&\matrixentry{AB}{ij}
-\\
-&=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}
-\\
-&=\sum_{k=1}^{n}\matrixentry{B}{kj}\matrixentry{A}{ik}
-\\
-&=\sum_{k=1}^{n}\matrixentry{\transpose{B}}{jk}\matrixentry{\transpose{A}}{ki}
-\\
-&=\matrixentry{\transpose{B}\transpose{A}}{ji}
-\end{align*}
-
-@col
-  So, $(AB)^{t} = B^{t}A^{t}$.  
 @endcol
 @end
 @section{Row Operations and Matrix Multiplication}
@@ -1141,6 +1114,30 @@ Since the matrices $(\alpha A)^{t}$ and $\alpha A^{t}$ agree at each entry, they
 Since the matrices $\left(A^{t}\right)^{t}$ and $A$ agree at each entry, they are equal.  
 @endcol
 @end
+@slide
+@thm
+@title{Matrix Multiplication and Transposes}
+@label{MMT}
+  Suppose $A$ is an $m\times n$ matrix and $B$ is an $n\times p$ matrix. Then $(AB)^{t}=B^{t}A^{t}$.  
+@end
+@proof
+@newcol
+  Here we go again, entry-by-entry. For $1\leq i\leq m$, $1\leq j\leq p$,
 
+@col
+  \begin{align*}
+\matrixentry{\transpose{(AB)}}{ji}=&\matrixentry{AB}{ij}
+\\
+&=\sum_{k=1}^{n}\matrixentry{A}{ik}\matrixentry{B}{kj}
+\\
+&=\sum_{k=1}^{n}\matrixentry{B}{kj}\matrixentry{A}{ik}
+\\
+&=\sum_{k=1}^{n}\matrixentry{\transpose{B}}{jk}\matrixentry{\transpose{A}}{ki}
+\\
+&=\matrixentry{\transpose{B}\transpose{A}}{ji}
+\end{align*}
 
-<!--DELIMITER-->
+@col
+  So, $(AB)^{t} = B^{t}A^{t}$.  
+@endcol
+@end
