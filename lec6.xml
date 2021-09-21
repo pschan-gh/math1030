@@ -25,6 +25,7 @@
       <keyword chapter="" slide="all">symmetric</keyword>
       <keyword chapter="" slide="all">skew-symmetric</keyword>
       <keyword chapter="" slide="all">antisymmetric</keyword>
+      <keyword chapter="" slide="all">block matrices</keyword>
       <keyword chapter="" slide="all">Matrix Equality</keyword>
       <keyword chapter="" slide="all">Matrix Addition</keyword>
       <keyword chapter="" slide="all">Matrix Scalar Multiplication</keyword>
@@ -82,6 +83,7 @@
         <keyword chapter="6" slide="all">symmetric</keyword>
         <keyword chapter="6" slide="all">skew-symmetric</keyword>
         <keyword chapter="6" slide="all">antisymmetric</keyword>
+        <keyword chapter="6" slide="all">block matrices</keyword>
         <keyword chapter="6" slide="all">Matrix Equality</keyword>
         <keyword chapter="6" slide="all">Matrix Addition</keyword>
         <keyword chapter="6" slide="all">Matrix Scalar Multiplication</keyword>
@@ -1642,6 +1644,172 @@ Since the matrices $\left(A^{t}\right)^{t}$ and $A$ agree at each entry, they ar
                 </collapse>
               </newcol>
             </substatement>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Block Matrix Multiplication" course="MATH 1030" chapter="6" num="7" serial="6.7">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="6" section="7" subsection="" subsubsection="" serial="" slide="">
+          <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Block Matrix Multiplication</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="30" scope="section" id="s30" slide="30" course="MATH 1030" chapter="6" section="7" subsection="" subsubsection="" chapter_title="More about matrices" section_title="Block Matrix Multiplication">
+            <keywords slide="30" environ="slide" chapter="6" course="MATH 1030">
+              <keyword chapter="6" slide="30">block matrices</keyword>
+            </keywords>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="6" section="7" subsection="" subsubsection="" serial="" slide="30">
+              <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Block Matrix Multiplication</paragraphs>
+            </title>
+            <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Recall from </paragraphs>
+            <ref environment="" chapter_type="" label="eg:partitionmatrices" wbtag="ref" course="MATH 1030" chapter="6" slide="30" src-course="MATH 1030" src-chapter="4" src-slide="7" type="Example" item="4.5" src-filename="lec4.xml" md5="ded1445df203f6b377e5346838674850" class="lcref" serial="">
+              <title>Example 4.5</title>
+            </ref>
+            <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs"> that a matrix can be formed from other smaller matrices:
+\[
+A = \left[\begin{array}[]{c|c|c|c}
+A_{12}&amp; A_{13} &amp; \cdots &amp; A_{1t}\\
+\hline
+A_{21}&amp; A_{22} &amp; \cdots &amp; A_{2t}\\
+\hline
+\vdots &amp; \vdots &amp; \cdots &amp; \vdots\\
+\hline
+A_{s1}&amp; A_{t2} &amp; \cdots &amp; A_{st}\\
+\end{array}\right],
+\]
+where instead of being scalars each $A_{ij}$ is itself a matrix.</paragraphs>
+            <newline course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment=""/>
+            <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs">In certain situations, there is a convenient formula facilitating the multiplication of such "</paragraphs>
+            <inline_keyword course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="">block matrices</inline_keyword>
+            <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="" wbtag="paragraphs">". </paragraphs>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="44" md5="493638981a37fe6a54a9ef2ad17fe2fa" course="MATH 1030" chapter="6" slide="30" item="6.44">
+              <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let:
+\[
+A = \left[\begin{array}[]{c|c|c|c}
+A_{11}&amp; A_{12} &amp; \cdots &amp; A_{1t}\\
+\hline
+A_{21}&amp; A_{22} &amp; \cdots &amp; A_{2t}\\
+\hline
+\vdots &amp; \vdots &amp; \cdots &amp; \vdots\\
+\hline
+A_{s1}&amp; A_{t2} &amp; \cdots &amp; A_{st}\\
+\end{array}\right],
+\quad
+B = \left[\begin{array}[]{c|c|c|c}
+B_{11}&amp; B_{12} &amp; \cdots &amp; B_{1v}\\
+\hline
+B_{21}&amp; B_{22} &amp; \cdots &amp; B_{2v}\\
+\hline
+\vdots &amp; \vdots &amp; \cdots &amp; \vdots\\
+\hline
+B_{u1}&amp; B_{u2} &amp; \cdots &amp; B_{uv}\\
+\end{array}\right],
+\]
+such that $u = t$, and, for $1 \leq i \leq s, 1 \leq j \leq v, 1 \leq k \leq t$,
+the matrix product:
+\[
+A_{ik}B_{kj}
+\]
+is well-defined, i.e. the number of columns of $A_{ik}$ is equal to the number of
+rows of $B_{jk}$, then:
+\[
+AB =
+\left[\begin{array}[]{c|c|c|c}
+C_{11}&amp; C_{12} &amp; \cdots &amp; C_{1v}\\
+\hline
+C_{21}&amp; C_{22} &amp; \cdots &amp; C_{2t}\\
+\hline
+\vdots &amp; \vdots &amp; \cdots &amp; \vdots\\
+\hline
+C_{s1}&amp; C_{t2} &amp; \cdots &amp; C_{sv}\\
+\end{array}\right],
+\]
+where, for $1 \leq i \leq s$, $1 \leq j \leq v$,
+\[
+C_{ij} = \sum_{k = 1}^{t} A_{ik}B_{kj}
+\] </paragraphs>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="45" md5="ccc8406cb886c193bb3dbf57c3e3ccde" course="MATH 1030" chapter="6" slide="30" item="6.45">
+              <newcol course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let:
+\[
+A = \left[\begin{array}[]{cccc}
+-4 &amp; 5 &amp; 0 &amp; 0\\
+1 &amp;  2 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1\\
+\end{array}\right],
+\quad
+B = \left[\begin{array}[]{cccc}
+0 &amp; 0 &amp; 3 &amp; 1\\
+0 &amp; 0 &amp; 2 &amp; -1\\
+5 &amp; 0 &amp; 0 &amp; 0\\
+-7 &amp; 14 &amp; 0 &amp; 0\\
+\end{array}\right],
+\] </paragraphs>
+                <collapse course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Viewing $A$ and $B$ as block matrices:
+\[
+A = \left[\begin{array}[]{cc|cc}
+-4 &amp; 5 &amp; 0 &amp; 0\\
+1 &amp;  2 &amp; 0 &amp; 0\\
+\hline
+0 &amp; 0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1\\
+\end{array}\right],
+\quad
+B = \left[\begin{array}[]{cc|cc}
+0 &amp; 0 &amp; 3 &amp; 1\\
+0 &amp; 0 &amp; 2 &amp; -1\\
+\hline
+5 &amp; 0 &amp; 0 &amp; 0\\
+-7 &amp; 14 &amp; 0 &amp; 0\\
+\end{array}\right],
+\] </paragraphs>
+                  <collapse course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> we can very quickly compute: </paragraphs>
+                    <steps course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="steps" stepsid="steps3">
+\begin{align*}
+AB &amp;= 
+\class{steps}{\cssId{step0}{\left[\begin{array}[]{c|c}
+\begin{bmatrix}-4 &amp; 5\\1 &amp;2\end{bmatrix} \mathcal{O}_{2\times 2} 
++ \mathcal{O}_{2\times 2} \begin{bmatrix} 5 &amp; 0\\-7 &amp; 14\end{bmatrix}
+&amp;
+\begin{bmatrix}-4 &amp; 5\\1 &amp;2\end{bmatrix} \begin{bmatrix} 3 &amp; 1\\2 &amp; -1\end{bmatrix} 
++ \mathcal{O}_{2\times 2} \mathcal{O}_{2\times 2}
+\\
+\hline
+\mathcal{O}_{2\times 2} \mathcal{O}_{2\times 2} + I_2 \begin{bmatrix} 5 &amp; 0\\-7 &amp; 14\end{bmatrix}
+&amp;
+\mathcal{O}_{2\times 2}\begin{bmatrix} 3 &amp; 1\\2 &amp; -1\end{bmatrix} + I_2\mathcal{O}_{2\times 2}
+\end{array}\right]}}
+\\
+&amp;
+\class{steps}{\cssId{step1}{=
+\left[\begin{array}[]{c|c}
+\mathcal{O}_{2\times 2}
+&amp;
+\begin{matrix} -5 &amp; -9 \\ 7 &amp; -1\end{matrix} 
+\\
+\hline
+\begin{matrix} 5 &amp; 0\\-7 &amp; 14\end{matrix}
+&amp;
+\mathcal{O}_{2\times 2}
+\end{array}\right]}}
+\\
+&amp;
+\class{steps}{\cssId{step2}{=
+\begin{bmatrix}
+0 &amp; 0 &amp; -5 &amp; -9\\
+0 &amp; 0 &amp; 7 &amp; -1\\
+5 &amp; 0 &amp; 0 &amp; 0\\
+-7 &amp; 14 &amp; 0 &amp; 0
+\end{bmatrix}}}
+\end{align*}
+</steps>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </statement>
+            <newline course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment=""/>
           </slide>
         </slides>
       </section>

@@ -1141,3 +1141,161 @@ Since the matrices $\left(A^{t}\right)^{t}$ and $A$ agree at each entry, they ar
   So, $(AB)^{t} = B^{t}A^{t}$.  
 @endcol
 @end
+@section{Block Matrix Multiplication}
+Recall from @ref{eg:partitionmatrices} that a matrix can be formed from other smaller matrices:
+\[
+A = \left[\begin{array}[]{c|c|c|c}
+A_{12}& A_{13} & \cdots & A_{1t}\\
+\hline
+A_{21}& A_{22} & \cdots & A_{2t}\\
+\hline
+\vdots & \vdots & \cdots & \vdots\\
+\hline
+A_{s1}& A_{t2} & \cdots & A_{st}\\
+\end{array}\right],
+\]
+where instead of being scalars each $A_{ij}$ is itself a matrix.
+
+In certain situations, there is a convenient formula facilitating the multiplication of such "@keyword{block matrices}".
+@thm
+Let:
+\[
+A = \left[\begin{array}[]{c|c|c|c}
+A_{11}& A_{12} & \cdots & A_{1t}\\
+\hline
+A_{21}& A_{22} & \cdots & A_{2t}\\
+\hline
+\vdots & \vdots & \cdots & \vdots\\
+\hline
+A_{s1}& A_{t2} & \cdots & A_{st}\\
+\end{array}\right],
+\quad
+B = \left[\begin{array}[]{c|c|c|c}
+B_{11}& B_{12} & \cdots & B_{1v}\\
+\hline
+B_{21}& B_{22} & \cdots & B_{2v}\\
+\hline
+\vdots & \vdots & \cdots & \vdots\\
+\hline
+B_{u1}& B_{u2} & \cdots & B_{uv}\\
+\end{array}\right],
+\]
+such that $u = t$, and, for $1 \leq i \leq s, 1 \leq j \leq v, 1 \leq k \leq t$,
+the matrix product:
+\[
+A_{ik}B_{kj}
+\]
+is well-defined, i.e. the number of columns of $A_{ik}$ is equal to the number of
+rows of $B_{jk}$, then:
+\[
+AB =
+\left[\begin{array}[]{c|c|c|c}
+C_{11}& C_{12} & \cdots & C_{1v}\\
+\hline
+C_{21}& C_{22} & \cdots & C_{2t}\\
+\hline
+\vdots & \vdots & \cdots & \vdots\\
+\hline
+C_{s1}& C_{t2} & \cdots & C_{sv}\\
+\end{array}\right],
+\]
+where, for $1 \leq i \leq s$, $1 \leq j \leq v$,
+\[
+C_{ij} = \sum_{k = 1}^{t} A_{ik}B_{kj}
+\]
+@end
+@eg
+@col
+Let:
+\[
+A = \left[\begin{array}[]{cccc}
+-4 & 5 & 0 & 0\\
+1 &  2 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1\\
+\end{array}\right],
+\quad
+B = \left[\begin{array}[]{cccc}
+0 & 0 & 3 & 1\\
+0 & 0 & 2 & -1\\
+5 & 0 & 0 & 0\\
+-7 & 14 & 0 & 0\\
+\end{array}\right],
+\]
+@col
+Viewing $A$ and $B$ as block matrices:
+\[
+A = \left[\begin{array}[]{cc|cc}
+-4 & 5 & 0 & 0\\
+1 &  2 & 0 & 0\\
+\hline
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1\\
+\end{array}\right],
+\quad
+B = \left[\begin{array}[]{cc|cc}
+0 & 0 & 3 & 1\\
+0 & 0 & 2 & -1\\
+\hline
+5 & 0 & 0 & 0\\
+-7 & 14 & 0 & 0\\
+\end{array}\right],
+\]
+@col
+we can very quickly compute:
+@steps
+\begin{align*}
+AB &= 
+@nstep{
+\left[\begin{array}[]{c|c}
+\begin{bmatrix}-4 & 5\\1 &2\end{bmatrix} \mathcal{O}_{2\times 2} 
++ \mathcal{O}_{2\times 2} \begin{bmatrix} 5 & 0\\-7 & 14\end{bmatrix}
+&
+\begin{bmatrix}-4 & 5\\1 &2\end{bmatrix} \begin{bmatrix} 3 & 1\\2 & -1\end{bmatrix} 
++ \mathcal{O}_{2\times 2} \mathcal{O}_{2\times 2}
+\\
+\hline
+\mathcal{O}_{2\times 2} \mathcal{O}_{2\times 2} + I_2 \begin{bmatrix} 5 & 0\\-7 & 14\end{bmatrix}
+&
+\mathcal{O}_{2\times 2}\begin{bmatrix} 3 & 1\\2 & -1\end{bmatrix} + I_2\mathcal{O}_{2\times 2}
+\end{array}\right]
+}
+\\
+&
+@nstep{=
+\left[\begin{array}[]{c|c}
+\mathcal{O}_{2\times 2}
+&
+\begin{matrix} -5 & -9 \\ 7 & -1\end{matrix} 
+\\
+\hline
+\begin{matrix} 5 & 0\\-7 & 14\end{matrix}
+&
+\mathcal{O}_{2\times 2}
+\end{array}\right]
+}
+\\
+&
+@nstep{=
+\begin{bmatrix}
+0 & 0 & -5 & -9\\
+0 & 0 & 7 & -1\\
+5 & 0 & 0 & 0\\
+-7 & 14 & 0 & 0
+\end{bmatrix}
+}
+\end{align*}
+@endsteps
+@end
+
+
+
+
+
+
+
+
+
+
+
+
