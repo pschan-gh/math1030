@@ -486,14 +486,15 @@ $(\alpha+\beta)\mathbf{u}=\alpha\mathbf{u}+\beta\mathbf{u}$. </li>
 If $\mathbf{u}\in{\mathbb{R}}^{m}$, then $1\mathbf{u}=\mathbf{u}$. </li></ol>
 @end
 @proof
+@col
   While some of these properties seem very obvious, they all require proof. However, the proofs are not very interesting, and border on tedious.
-We will prove one version of distributivity very carefully, and you can test your proof-building skills on some of the others. We need to establish an equality, so we will do so by beginning with one side of the equality, apply various definitions and theorems (listed to the right of each step) to massage the expression from the left into the expression on the right. Here we go with a proof of Property DSAC in @ref{VSPCV}.
+We will prove one version of distributivity very carefully, and you can test your proof-building skills on some of the others. We need to establish an equality, so we will do so by beginning with one side of the equality, apply various definitions and theorems (listed to the right of each step) to massage the expression from the left into the expression on the right. Here we go with a proof of @ref{VS}{Property DSAC} in @ref{VSPCV}.
 For $1\leq i\leq m$,
 \begin{align*}
-\displaystyle\left[(\alpha+\beta)\mathbf{u}\right]_{i}&\displaystyle=(\alpha+\beta)\left[\mathbf{u}\right]_{i}&\text{definition} \\
+\displaystyle\left[(\alpha+\beta)\mathbf{u}\right]_{i}&\displaystyle=(\alpha+\beta)\left[\mathbf{u}\right]_{i}&\href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec6.xml&query=(//lv:*[./lv:label/@name='def:matrixscalarmult'])[1]}{\mathrm{Matrix\;Scalar\;Multiplication}}\\
 &\displaystyle=\alpha\left[\mathbf{u}\right]_{i}+\beta\left[\mathbf{u}\right]_{i} \\
-&\displaystyle=\left[\alpha\mathbf{u}\right]_{i}+\left[\beta\mathbf{u}\right]_{i}&\text{definition} \\
-&\displaystyle=\left[\alpha\mathbf{u}+\beta\mathbf{u}\right]_{i}&\text{definition}
+&\displaystyle=\left[\alpha\mathbf{u}\right]_{i}+\left[\beta\mathbf{u}\right]_{i}&\href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec6.xml&query=(//lv:*[./lv:label/@name='def:matrixscalarmult'])[1]}{\mathrm{Matrix\;Scalar\;Multiplication}} \\
+&\displaystyle=\left[\alpha\mathbf{u}+\beta\mathbf{u}\right]_{i}&\href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec6.xml&query=(//lv:*[./lv:label/@name='MA'])[1]}{\mathrm{Matrix\;Addition}}
 \end{align*}
 Since the individual components of the vectors $(\alpha+\beta)\mathbf{u}$ and $\alpha\mathbf{u}+\beta\mathbf{u}$ are equal for all $i$, $1\leq i\leq m$, @ref{CVE} tells us the vectors are equal.  
 @qed
@@ -520,56 +521,50 @@ we therefore don’t need to reproof and restate the results.
 
 @defn
 @label{VS}
-  Suppose that $V$ is a set upon which we have defined two operations: (1) @keyword{vector addition}, which combines two elements of $V$ and is denoted by $+$, and (2) @keyword{scalar multiplication}, which combines a real number with an element of $V$ and is denoted by juxtaposition. Then $V$, along with the two operations, is a @keyword{vector space} over ${\mathbb{R}}^{\hbox{}}$ if the following ten properties hold. <ol class="ltx_enumerate">
+Suppose that $V$ is a set upon which we have defined two operations: 
+(1) @keyword{vector addition}, which combines two elements of $V$ and is denoted by $+$,
+and (2) @keyword{scalar multiplication}, which combines a real number with an element of $V$ and is denoted by juxtaposition.
+Then $V$, along with the two operations, is a @keyword{vector space} over ${\mathbb{R}}^{\hbox{}}$ if the following ten properties hold.
+<ol class="ltx_enumerate">
 <li class="ltx_item">
-@keyword{AC}
-<em>Additive Closure</em>
+@keyword{AC} <em>Additive Closure</em>
 
 If $\mathbf{u},\,\mathbf{v}\in V$, then $\mathbf{u}+\mathbf{v}\in V$. </li>
 <li class="ltx_item">
-@keyword{SC}
-<em>Scalar Closure</em>
+@keyword{SC} <em>Scalar Closure</em>
 
 If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in V$, then $\alpha\mathbf{u}\in V$. </li>
 <li class="ltx_item">
-@keyword{C}
-<em>Commutativity</em>
+@keyword{C} <em>Commutativity</em>
 
 If $\mathbf{u},\,\mathbf{v}\in V$, then $\mathbf{u}+\mathbf{v}=\mathbf{v}+\mathbf{u}$. </li>
 <li class="ltx_item">
-@keyword{AA}
-<em>Additive Associativity</em>
+@keyword{AA} <em>Additive Associativity</em>
 
 If $\mathbf{u},\,\mathbf{v},\,\mathbf{w}\in V$, then $\mathbf{u}+\left(\mathbf{v}+\mathbf{w}\right)=\left(\mathbf{u}+\mathbf{v}\right)+\mathbf{w}$. </li>
 <li class="ltx_item">
-@keyword{Z}
-<em>Zero Vector</em>
+@keyword{Z} <em>Zero Vector</em>
 
 There is a vector, $\mathbf{0}$, called the @keyword{zero vector}, such that $\mathbf{u}+\mathbf{0}=\mathbf{u}$ for all $\mathbf{u}\in V$. </li>
 <li class="ltx_item">
-@keyword{AI}
-<em>Additive Inverses</em>
+@keyword{AI} <em>Additive Inverses</em>
 
 If $\mathbf{u}\in V$, then there exists a vector $\mathbf{-u}\in V$ so that $\mathbf{u}+(\mathbf{-u})=\mathbf{0}$. </li>
 <li class="ltx_item">
-@keyword{SMA}
-<em>Scalar Multiplication Associativity</em>
+@keyword{SMA} <em>Scalar Multiplication Associativity</em>
 
 If $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in V$, then $\alpha(\beta\mathbf{u})=(\alpha\beta)\mathbf{u}$. </li>
 <li class="ltx_item">
-@keyword{DVA}
-<em>Distributivity across Vector Addition</em>
+@keyword{DVA} <em>Distributivity across Vector Addition</em>
 
 If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u},\,\mathbf{v}\in V$, then $\alpha(\mathbf{u}+\mathbf{v})=\alpha\mathbf{u}+\alpha\mathbf{v}$. </li>
 <li class="ltx_item">
-@keyword{DSA}
-<em>Distributivity across Scalar Addition</em>
+@keyword{DSA} <em>Distributivity across Scalar Addition</em>
 
 If $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in V$, then
 $(\alpha+\beta)\mathbf{u}=\alpha\mathbf{u}+\beta\mathbf{u}$. </li>
 <li class="ltx_item">
-@keyword{O}
-<em>One</em>
+@keyword{O} <em>One</em>
 
 If $\mathbf{u}\in V$, then $1\mathbf{u}=\mathbf{u}$. </li></ol> The objects in $V$ are called @keyword{vectors}, no matter what else they might really be, simply by virtue of being elements of a vector space.  
 @end
@@ -795,9 +790,9 @@ then $\mathbf{v}=\mathbf{u}$
 Thus,
 \begin{align*}
 \displaystyle (\mathbf{v}+\mathbf{w})+(-\mathbf{w})&=(\mathbf{u}+\mathbf{w})+(-\mathbf{w})\\
-\displaystyle \mathbf{v}+(\mathbf{w}+(-\mathbf{w}))&=\mathbf{u}+(\mathbf{w}+(-\mathbf{w}))&\text{Property AA}\\
-\displaystyle \mathbf{v}+\mathbf{0}&=\mathbf{u}+\mathbf{0}&\text{Property AI}\\
-\displaystyle \mathbf{v}&=\mathbf{u}&\text{Property Z}.
+\displaystyle \mathbf{v}+(\mathbf{w}+(-\mathbf{w}))&=\mathbf{u}+(\mathbf{w}+(-\mathbf{w}))&\href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec9.xml&query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;AA}}\\
+\displaystyle \mathbf{v}+\mathbf{0}&=\mathbf{u}+\mathbf{0}&\href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec9.xml&query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;AI}}\\
+\displaystyle \mathbf{v}&=\mathbf{u}&\href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec9.xml&query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;Z}}
 \end{align*}
 
 @qed
@@ -811,10 +806,10 @@ The vector $\mathbf{0}$ described in Property Z is unique.
   Suppose both $\mathbf{0}_{1}$ and $\mathbf{0}_{2}$ satisfy the property described in Property Z.
 Let $\mathbf{w}$ be an element in $V$.
 \begin{align*}
-\displaystyle \mathbf{0}_{1}+\mathbf{w}=\mathbf{w}=\mathbf{0}_{2}+\mathbf{w}\hskip 28.452756pt\text{Property Z}
+\displaystyle \mathbf{0}_{1}+\mathbf{w}=\mathbf{w}=\mathbf{0}_{2}+\mathbf{w}\hskip 28.452756pt\href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec9.xml&query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;Z}}
 \end{align*}
 \begin{align*}
-\displaystyle \mathbf{0}_{1}=\mathbf{0}_{2}\hskip 28.452756pt\text{by the previous theorem}
+\displaystyle \mathbf{0}_{1}=\mathbf{0}_{2}\hskip 28.452756pt\href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec9.xml&query=(//lv:*[./lv:label/@name='cancell'])[1]}{\mathrm{by\;the\;previous\;theorem}}
 \end{align*}
 
 @qed
@@ -856,8 +851,8 @@ By @ref{cancell},
 @proof
 <ol class="ltx_enumerate">
 <li class="ltx_item"> \begin{align*}
-\displaystyle 0\mathbf{v}+0\mathbf{v}&=(0+0)\mathbf{v} & \text{Property DSA}\\
-\displaystyle 0\mathbf{v}+0\mathbf{v}=0\mathbf{v}&=\mathbf{0}+0\mathbf{v} & \text{Property Z}
+\displaystyle 0\mathbf{v}+0\mathbf{v}&=(0+0)\mathbf{v} & \href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec9.xml&query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;DSA}}\\
+\displaystyle 0\mathbf{v}+0\mathbf{v}=0\mathbf{v}&=\mathbf{0}+0\mathbf{v} & \href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec9.xml&query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;Z}}
 \end{align*}
 Hence,
 \[
@@ -866,27 +861,27 @@ Hence,
 by @ref{cancell}. </li>
 <li class="ltx_item">
 <br/> \begin{align*}
-\displaystyle\alpha\mathbf{0}+a\mathbf{0}&\displaystyle=\alpha(\mathbf{0}+\mathbf{0}) & \text{Property DVA} \\
-&\displaystyle=\alpha\mathbf{0} & \text{Property Z} \\
-&\displaystyle=\mathbf{0}+\alpha\mathbf{0} & \text{Property Z}
+\displaystyle\alpha\mathbf{0}+a\mathbf{0}&\displaystyle=\alpha(\mathbf{0}+\mathbf{0}) & \href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec9.xml&query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;DVA}}\\
+&\displaystyle=\alpha\mathbf{0} & \href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec9.xml&query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;Z}} \\
+&\displaystyle=\mathbf{0}+\alpha\mathbf{0} & \href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec9.xml&query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;Z}}
 \end{align*}
 By @ref{cancell},
 \begin{align*}
 \displaystyle \alpha\mathbf{0}=\mathbf{0}
 \end{align*} </li>
 <li class="ltx_item"> \begin{align*}
-\displaystyle\alpha\mathbf{v}+(-\alpha)\mathbf{v}&\displaystyle=(\alpha+(-\alpha))\mathbf{v}&\text{Property DSA}. \\
+\displaystyle\alpha\mathbf{v}+(-\alpha)\mathbf{v}&\displaystyle=(\alpha+(-\alpha))\mathbf{v}&\href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec9.xml&query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;DSA}} \\
 &\displaystyle=0\mathbf{v}& \\
 &\displaystyle=\mathbf{0}&\text{item 1}
 \end{align*}
-By Property AI and the uniqueness of the additive inverse (@ref{invunique}),
+By @ref{VS}[Property AI] and the uniqueness of the additive inverse (@ref{invunique}),
 \begin{align*}
 \displaystyle (-\alpha)\mathbf{v}=-\alpha\mathbf{v}.
 \end{align*}
 Next
 \begin{align*}
-\displaystyle\alpha\mathbf{v}+\alpha(-\mathbf{v})&\displaystyle=\alpha(\mathbf{v}+(-\mathbf{v})) & \text{Property DVA}. \\
-&\displaystyle=\alpha\mathbf{0} & \text{Property AI} \\
+\displaystyle\alpha\mathbf{v}+\alpha(-\mathbf{v})&\displaystyle=\alpha(\mathbf{v}+(-\mathbf{v})) & \href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec9.xml&query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;DVA}}. \\
+&\displaystyle=\alpha\mathbf{0} & \href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec9.xml&query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;AI}} \\
 &\displaystyle=\mathbf{0} & \text{item 2}
 \end{align*}
 By Property AI and the uniqueness of the additive inverse (@ref{invunique}),
