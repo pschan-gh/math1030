@@ -436,22 +436,6 @@ Find $B^{-1}$.
 @end
 @slide
 @thm
-@title{Nonsingular Matrix Equivalences, Round 3}
-@label{NME3}
-  Suppose that $A$ is a square matrix of size $n$. The following are equivalent.
-
-<ol class="ltx_enumerate">
-<li class="ltx_item"> $A$ is nonsingular. </li>
-<li class="ltx_item"> $A$ row-reduces to the identity matrix. </li>
-<li class="ltx_item"> The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$. </li>
-<li class="ltx_item"> The linear system $A\mathbf{x}=\mathbf{b}$ has a unique solution for every possible choice of $\mathbf{b}$. </li>
-<li class="ltx_item"> The columns of $A$ are a linearly independent set. </li>
-<li class="ltx_item"> $A$ is invertible. </li>
-
-</ol>
-@end
-@slide
-@thm
 @title{Solution with Nonsingular Coefficient Matrix}
   Suppose that $A$ is nonsingular. Then the unique solution to $A\mathbf{x}=\mathbf{b}$ is $A^{-1}\mathbf{b}$.  
 @end
