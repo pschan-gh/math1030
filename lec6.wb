@@ -896,6 +896,7 @@ If $A$, $B$ are invertible $n \times n$ matrices, then $AB$ is also invertible, 
 @end
 @slide
 @thm
+@label{thm:elemmatrixinvertiable}
 Elementary matrices are invertible.
 @end
 
@@ -932,7 +933,7 @@ B'\vec{v} = JA'\vec{v} = J\vec{a} = \vec{b},
 which implies that $\vec{v}$ is also a solution to $\mathcal{LS}(B', \vec{b})$.
 
 @col
-Conversely, by @ref{fact:matrixinverse} the matrix $J$ is invertible, hence,
+Conversely, by @ref{thm:elemmatrixinvertiable} the matrix $J$ is invertible, hence,
 \[
 A' = J^{-1} B'
 \quad
