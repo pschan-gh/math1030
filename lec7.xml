@@ -281,14 +281,14 @@ Then the hypothesis that $n&gt;m$, together with </paragraphs>
             <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="7" section="2" subsection="" subsubsection="" serial="" slide="9">
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Null Space of a Matrix</paragraphs>
             </title>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="7" md5="ea6f05f2cdde2bdfd006c674f13eff45" course="MATH 1030" chapter="7" slide="9" item="7.7">
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="7" md5="7a526a01b3173a0da9b6f4d0539bf360" course="MATH 1030" chapter="7" slide="9" item="7.7">
               <label wbtag="label" name="NSM" type="Definition"/>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">   The </paragraphs>
               <inline_keyword course="MATH 1030" chapter="7" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">null space</inline_keyword>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of a an $m \times n$ matrix $A$, denoted by ${\mathcal{N}}\!\left(A\right)$,
-is the set of vectors $\vec{x} \in \mathbb{R}^n$ such that:
+is the set of vectors $\mathbf{x} \in \mathbb{R}^n$ such that:
 \[
-A\vec{x} = \vec{0}.
+A\mathbf{x} = \mathbf{0}.
 \]  
 Equivalently,
 it is the set of all the vectors which are solutions to the homogeneous system $\linearsystem{A}{\mathbf{0}}$.
@@ -400,7 +400,7 @@ is not in ${\mathcal{N}}\!\left(A\right)$ as
 1&amp;0&amp;2&amp;4&amp;9\\
 2&amp;2&amp;-2&amp;-1&amp;8\end{bmatrix}\]
 which we write as ${\mathcal{N}}\!\left(A\right)$. Translating </paragraphs>
-              <ref environment="statement" chapter_type="" label="NSM" wbtag="ref" course="MATH 1030" chapter="7" slide="12" referrer-type="Example" referrer-md5="0f5ef93f865397e1c9f82c01f86199c8" src-course="MATH 1030" src-chapter="7" src-slide="9" type="Definition" item="7.7" src-filename="lec7.xml" md5="ea6f05f2cdde2bdfd006c674f13eff45" class="lcref" serial="">
+              <ref environment="statement" chapter_type="" label="NSM" wbtag="ref" course="MATH 1030" chapter="7" slide="12" referrer-type="Example" referrer-md5="0f5ef93f865397e1c9f82c01f86199c8" src-course="MATH 1030" src-chapter="7" src-slide="9" type="Definition" item="7.7" src-filename="lec7.xml" md5="7a526a01b3173a0da9b6f4d0539bf360" class="lcref" serial="">
                 <title>Definition 7.7</title>
               </ref>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">,
@@ -441,7 +441,7 @@ x_{5}\end{bmatrix}\,\right|\,x_{3},\,x_{5}\text{ real numbers}\right\}.\]   </pa
 5&amp;6&amp;7\\
 4&amp;7&amp;1\end{bmatrix}\]
 which we write as ${\mathcal{N}}\!\left(C\right)$. Translating definition   </paragraphs>
-              <ref environment="statement" chapter_type="" label="NSM" wbtag="ref" course="MATH 1030" chapter="7" slide="13" referrer-type="Example" referrer-md5="4cb86c438fab042314891b3b9a1f605f" src-course="MATH 1030" src-chapter="7" src-slide="9" type="Definition" item="7.7" src-filename="lec7.xml" md5="ea6f05f2cdde2bdfd006c674f13eff45" class="lcref" serial="">
+              <ref environment="statement" chapter_type="" label="NSM" wbtag="ref" course="MATH 1030" chapter="7" slide="13" referrer-type="Example" referrer-md5="4cb86c438fab042314891b3b9a1f605f" src-course="MATH 1030" src-chapter="7" src-slide="9" type="Definition" item="7.7" src-filename="lec7.xml" md5="7a526a01b3173a0da9b6f4d0539bf360" class="lcref" serial="">
                 <title>Definition 7.7</title>
               </ref>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">, we simply desire to solve the homogeneous system
@@ -846,13 +846,12 @@ We have a similar result for nonsingular matrix</paragraphs>
                 <blockquote xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
                   <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $AB$ is nonsingular implies $A$ and $B$ are both nonsingular. </paragraphs>
                 </blockquote>
-                <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> becomes</paragraphs>
+                <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> becomes:</paragraphs>
                 <newline course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
                 <collapse course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <blockquote xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
                     <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $A$ or $B$ is singular implies $AB$ is singular. </paragraphs>
                   </blockquote>
-                  <newline course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
                   <collapse course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                     <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   Case 1. Suppose $B$ is singular. Then there is a nonzero vector $\mathbf{z}$ that is a solution to $B\mathbf{x}=\mathbf{0}$. So
 \begin{align*}

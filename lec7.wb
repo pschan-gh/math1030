@@ -151,9 +151,9 @@ If $n=m$, then we can have a unique solution or infinitely many solutions (see t
 @defn
 @label{NSM}
   The @keyword{null space} of a an $m \times n$ matrix $A$, denoted by ${\mathcal{N}}\!\left(A\right)$,
-is the set of vectors $\vec{x} \in \mathbb{R}^n$ such that:
+is the set of vectors $\mathbf{x} \in \mathbb{R}^n$ such that:
 \[
-A\vec{x} = \vec{0}.
+A\mathbf{x} = \mathbf{0}.
 \]  
 Equivalently,
 it is the set of all the vectors which are solutions to the homogeneous system $\linearsystem{A}{\mathbf{0}}$.
@@ -584,11 +584,11 @@ We have a similar result for nonsingular matrix
 @newcol
   ($\Rightarrow$) For this portion of the proof we will form the logically-equivalent contrapositive and prove that statement using two cases.
 
-<blockquote> $AB$ is nonsingular implies $A$ and $B$ are both nonsingular. </blockquote> becomes
+<blockquote> $AB$ is nonsingular implies $A$ and $B$ are both nonsingular. </blockquote> becomes:
 
 @col
-<blockquote> $A$ or $B$ is singular implies $AB$ is singular. </blockquote>
-
+<blockquote> $A$ or $B$ is singular implies $AB$ is singular.
+</blockquote>
 @col
   Case 1. Suppose $B$ is singular. Then there is a nonzero vector $\mathbf{z}$ that is a solution to $B\mathbf{x}=\mathbf{0}$. So
 \begin{align*}
