@@ -2,7 +2,7 @@
 @setchapter{10}
 @chapter{Linear Combinations}
 <h5 class="notkw">Reference.</h5>
-  Beezer, Ver 3.5 Section LC (print version p65 - p81)Strang: Section 2.3
+Beezer, Ver 3.5 Section LC (print version p65 - p81)Strang: Section 2.3
 
 <h5 class="notkw">Exercise.</h5> Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf
 
@@ -12,7 +12,7 @@ Section LC (p.32-33) C40, C41, M10, M11
 @defn
 @title{Linear Combination of Column Vectors}
 @label{LCCV}
-  Given $n$ vectors $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}$ in ${\mathbb{R}}^{m}$
+Given $n$ vectors $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}$ in ${\mathbb{R}}^{m}$
 and $n$ scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\ldots,\,\alpha_{n}$,
 their @keyword{linear combination} is the vector:
 \begin{align*}
@@ -25,7 +25,7 @@ in $\mathbb{R}^{m}$.
 <strong>Two linear combinations in ${\mathbb{R}}^{6}$</strong>
 
 @newcol
-  Suppose that:
+Suppose that:
 \[
 \alpha_{1}=1 \quad \alpha_{2}=-4 \quad \alpha_{3}=2 \quad \alpha_{4}=-1
 \]
@@ -116,7 +116,7 @@ The resulting linear combination is:
 @endsteps
 
 @col
-  A different linear combination, but with the same set of vectors, can be formed with different scalars. Taking
+A different linear combination, but with the same set of vectors, can be formed with different scalars. Taking
 \[
 \displaystyle\beta_{1}=3 \quad \beta_{2}=0 \quad \beta_{3}=5 \quad \beta_{4}=-1
 \]
@@ -177,7 +177,7 @@ we can form the linear combination:
 
 @endsteps
 @col
-  Notice how we could keep our set of vectors fixed but use a different set of scalars to construct different vectors.
+Notice how we could keep our set of vectors fixed but use a different set of scalars to construct different vectors.
 Can you create the following vector $\mathbf{w}$ with a suitable choice of four scalars?
 \begin{align*}
 \displaystyle \mathbf{w}=\begin{bmatrix}13\\
@@ -188,12 +188,12 @@ Can you create the following vector $\mathbf{w}$ with a suitable choice of four 
 25\end{bmatrix}
 \end{align*}  
 @col
-  Going further, can you create any possible vector from ${\mathbb{R}}^{6}$ by choosing the proper scalars?  
+Going further, can you create any possible vector from ${\mathbb{R}}^{6}$ by choosing the proper scalars?  
 @endcol
 @end
 @slide
 @eg
-  The system of linear equation:
+The system of linear equation:
 \begin{align*}
 \displaystyle-7x_{1}-6x_{2}-12x_{3}&\displaystyle=-33 \\
 \displaystyle 5x_{1}+5x_{2}+7x_{3}&\displaystyle=24 \\
@@ -212,7 +212,7 @@ x_{1}+4x_{3}\end{bmatrix}=\begin{bmatrix}-33\\
 can be rewritten as:
 
 @newcol
-  \begin{align*}
+\begin{align*}
 \displaystyle \begin{bmatrix}-7x_{1}\\
 5x_{1}\\
 x_{1}\end{bmatrix}+\begin{bmatrix}-6x_{2}\\
@@ -226,7 +226,7 @@ x_{1}\end{bmatrix}+\begin{bmatrix}-6x_{2}\\
 or:
 
 @col
-  \begin{align*}
+\begin{align*}
 \displaystyle x_{1}\begin{bmatrix}-7\\
 5\\
 1\end{bmatrix}+x_{2}\begin{bmatrix}-6\\
@@ -241,11 +241,11 @@ or:
 The solution is:
 
 @col
-  \[
+\[
 x_{1}=-3 \quad x_{2}=5 \quad x_{3}=2.
 \]  
 @col
-  So, in the context of this example, we can express the fact that these values of the variables are a solution by writing a linear combination:
+So, in the context of this example, we can express the fact that these values of the variables are a solution by writing a linear combination:
 \begin{align*}
 \displaystyle (-3)\begin{bmatrix}-7\\
 5\\
@@ -258,16 +258,16 @@ x_{1}=-3 \quad x_{2}=5 \quad x_{3}=2.
 5\end{bmatrix}
 \end{align*}  
 @col
-  Furthermore, these are the only three scalars that will accomplish this equality, since they come from a unique solution.
+Furthermore, these are the only three scalars that will accomplish this equality, since they come from a unique solution.
 
 @col
-  Notice how the three vectors in this example are the columns of the coefficient matrix of the system of equations. This is our first hint of the important interplay between the vectors that form the columns of a matrix, and the matrix itself.  
+Notice how the three vectors in this example are the columns of the coefficient matrix of the system of equations. This is our first hint of the important interplay between the vectors that form the columns of a matrix, and the matrix itself.  
 @endcol
 @end
 @slide
 @eg
 @skip
-  The system of linear equations
+The system of linear equations
 \begin{align*}
 \displaystyle x_{1}-x_{2}+2x_{3}&\displaystyle=1 \\
 \displaystyle 2x_{1}+x_{2}+x_{3}&\displaystyle=8 \\
@@ -276,7 +276,7 @@ x_{1}=-3 \quad x_{2}=5 \quad x_{3}=2.
 can be written as:
 
 @newcol
-  \begin{align*}
+\begin{align*}
 \displaystyle \begin{bmatrix}x_{1}-x_{2}+2x_{3}\\
 2x_{1}+x_{2}+x_{3}\\
 x_{1}+x_{2}\end{bmatrix}=\begin{bmatrix}1\\
@@ -286,7 +286,7 @@ x_{1}+x_{2}\end{bmatrix}=\begin{bmatrix}1\\
 This vector equation is equivalent to:
 
 @col
-  \begin{align*}
+\begin{align*}
 \displaystyle x_{1}\begin{bmatrix}1\\
 2\\
 1\end{bmatrix}+x_{2}\begin{bmatrix}-1\\
@@ -299,7 +299,7 @@ This vector equation is equivalent to:
 \end{align*}
 
 @col
-  Row-reducing the augmented matrix for the system leads to the conclusion that the system is consistent and has free variables, hence infinitely many solutions. So for example, the two solutions:
+Row-reducing the augmented matrix for the system leads to the conclusion that the system is consistent and has free variables, hence infinitely many solutions. So for example, the two solutions:
 \begin{eqnarray*}
 x_{1}&=2 &\quad& x_{2}=3 &\quad& x_{3}&=1 \\
 x_{1}&=3 &\quad& x_{2}=2 &\quad& x_{3}&=0
@@ -307,7 +307,7 @@ x_{1}&=3 &\quad& x_{2}=2 &\quad& x_{3}&=0
 can be used together to say that:
 
 @col
-  \begin{align*}
+\begin{align*}
 \displaystyle (2)\begin{bmatrix}1\\
 2\\
 1\end{bmatrix}+(3)\begin{bmatrix}-1\\
@@ -326,7 +326,7 @@ can be used together to say that:
 \end{align*}
 
 @col
-  Ignore the middle of this equation, and move all the terms to the left-hand side:
+Ignore the middle of this equation, and move all the terms to the left-hand side:
 \begin{align*}
 \displaystyle (2)\begin{bmatrix}1\\
 2\\
@@ -346,7 +346,7 @@ can be used together to say that:
 \end{align*}
 
 @col
-  Regrouping gives:
+Regrouping gives:
 \begin{align*}
 \displaystyle (-1)\begin{bmatrix}1\\
 2\\
@@ -360,7 +360,7 @@ can be used together to say that:
 \end{align*}
 
 @col
-  Notice that the three vectors on the left hand side are the columns of the coefficient matrix for the system of equations. This equality says that there is a linear combination of those columns that equals the vector of all zeros. Give it some thought, but this says that:
+Notice that the three vectors on the left hand side are the columns of the coefficient matrix for the system of equations. This equality says that there is a linear combination of those columns that equals the vector of all zeros. Give it some thought, but this says that:
 \begin{eqnarray*}
 \displaystyle x_{1}=-1&\quad&\displaystyle x_{2}=1&\quad&\displaystyle x_{3}=1
 \end{eqnarray*}
@@ -371,32 +371,32 @@ is a nontrivial solution to the homogeneous system of equations with the coeffic
 @thm
 @title{Solutions to Linear Systems are Linear Combinations}
 @label{SLSLC}
-  Denote the columns of the $m\times n$ matrix $A$ as vectors $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$. Then $\mathbf{x}\in{\mathbb{R}}^{n}$ is a solution to the linear system of equations $\mathcal{LS}({A},{\mathbf{b}})$ if and only if $\mathbf{b}$ is equal to the linear combination of the columns of $A$ formed with the entries of $\mathbf{x}$,
+Denote the columns of the $m\times n$ matrix $A$ as vectors $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$. Then $\mathbf{x}\in{\mathbb{R}}^{n}$ is a solution to the linear system of equations $\mathcal{LS}({A},{\mathbf{b}})$ if and only if $\mathbf{b}$ is equal to the linear combination of the columns of $A$ formed with the entries of $\mathbf{x}$,
 \begin{align*}
 \displaystyle \left[\mathbf{x}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{x}\right]_{2}\mathbf{A}_{2}+\left[\mathbf{x}\right]_{3}\mathbf{A}_{3}+\cdots+\left[\mathbf{x}\right]_{n}\mathbf{A}_{n}=\mathbf{b}
 \end{align*}  
 @end
 @proof
 @newcol
-  If $\mathbf{x}\in{\mathbb{R}}^{n}$ is a solution of $\mathcal{LS}({A},{\mathbf{b}})$, then
+If $\mathbf{x}\in{\mathbb{R}}^{n}$ is a solution of $\mathcal{LS}({A},{\mathbf{b}})$, then
 \begin{align*}
 \displaystyle \mathbf{b}=A\mathbf{x}=\left[\mathbf{x}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{x}\right]_{2}\mathbf{A}_{2}+\left[\mathbf{x}\right]_{3}\mathbf{A}_{3}+\cdots+\left[\mathbf{x}\right]_{n}\mathbf{A}_{n}.
 \end{align*}  
 @col
-  Hence $\mathbf{b}$ is a linear combination of the columns of $A$.
+Hence $\mathbf{b}$ is a linear combination of the columns of $A$.
 
 @col
-  Conversely, if $\mathbf{b}$ is a linear combinations of the columns of $A$, say:
+Conversely, if $\mathbf{b}$ is a linear combinations of the columns of $A$, say:
 \begin{align*}
 \displaystyle \mathbf{b}=\left[\mathbf{x}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{x}\right]_{2}\mathbf{A}_{2}+\left[\mathbf{x}\right]_{3}\mathbf{A}_{3}+\cdots+\left[\mathbf{x}\right]_{n}\mathbf{A}_{n},
 \end{align*}  
 @col
-  then
+then
 \begin{align*}
 \displaystyle \mathbf{b}=A\mathbf{x}.
 \end{align*}  
 @col
-  So $\mathbf{x}$ is a solution of $\mathcal{LS}({A},{\mathbf{b}})$.  
+So $\mathbf{x}$ is a solution of $\mathcal{LS}({A},{\mathbf{b}})$.  
 @qed
 @endcol
 @end
@@ -412,7 +412,7 @@ has a solution. The augmented matrix is:
 Then we can solve the system of linear questions by the technique you learned.  
 @eg
 @newcol
-  Let
+Let
 \begin{align*}
 \displaystyle \mathbf{u} =
 \begin{bmatrix}1\\
@@ -446,20 +446,20 @@ If yes, find the linear combination. </li></ol>
 <ol class="ltx_enumerate">
 <li class="ltx_item">
 @col
-  To determine if $\mathbf{u}$ is a linear combination of $\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\}$,
+To determine if $\mathbf{u}$ is a linear combination of $\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\}$,
 we need to solve
 \begin{align*}
 \displaystyle x_{1}\mathbf{v}_{1}+x_{2}\mathbf{v}_{2}+x_{3}\mathbf{v}_{3}=\mathbf{u},
 \end{align*}  
 @col
-  i.e.
+i.e.
 \begin{align*}
 \displaystyle x_{1}-x_{2}+2x_{3}&\displaystyle=1 \\
 \displaystyle 2x_{1}+x+2+x_{3}&\displaystyle=1 \\
 \displaystyle 3x_{1}+3x_{3}&\displaystyle=3.
 \end{align*}  
 @col
-  The augmented matrix is
+The augmented matrix is
 \begin{align*}
 \displaystyle \left[\begin{array}[]{ccc|c}1&-1&2&1\\
 2&1&1&1\\
@@ -469,17 +469,17 @@ we need to solve
 \end{array}\right].
 \end{align*}  
 @col
-  Because the last column of the RREF is a pivot column, the system of linear equations is not solvable.
+Because the last column of the RREF is a pivot column, the system of linear equations is not solvable.
 Hence $\mathbf{u}$ is not a linear combination of $\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\}$. </li>
 <li class="ltx_item">
 @col
-  To determine if $\mathbf{u}$ is a linear combination of $\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3},\mathbf{v}_{4}\}$,
+To determine if $\mathbf{u}$ is a linear combination of $\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3},\mathbf{v}_{4}\}$,
 we need to solve
 \begin{align*}
 \displaystyle x_{1}\mathbf{v}_{1}+x_{2}\mathbf{v}_{2}+x_{3}\mathbf{v}_{3}+x_{4}\mathbf{v}_{4}=\mathbf{u}.
 \end{align*}  
 @col
-  The augmented matrix is:
+The augmented matrix is:
 \begin{align*}
 \displaystyle [\mathbf{v}_{1}|\mathbf{v}_{2}|\mathbf{v}_{3}|\mathbf{v}_{4}|\mathbf{u}]=\left[\begin{array}[]{cccc|c}1&-1&2&-1&1\\
 2&1&1&0&1\\
@@ -487,7 +487,7 @@ we need to solve
 \end{array}\right].
 \end{align*}  
 @col
-  Using the standard method, we find one solution (there are infinitely many):
+Using the standard method, we find one solution (there are infinitely many):
 \begin{align*}
 \displaystyle x_{1}=\frac{5}{6}
 &\quad&
@@ -498,7 +498,7 @@ x_{3}=0
 x_{4}=\frac{1}{2}
 \end{align*}  
 @col
-  i.e.
+i.e.
 \begin{align*}
 \displaystyle \mathbf{u}=\frac{5}{6}\mathbf{v}_{1}-\frac{2}{3}\mathbf{v}_{2}+\frac{1}{2}\mathbf{v}_{4}.
 \end{align*} </li></ol>
@@ -507,21 +507,21 @@ x_{4}=\frac{1}{2}
 @section{Vector Form of Solution Sets}
 @label{VFSS}
 @eg
-  Consider the linear system
+Consider the linear system
 \begin{align*}
 \displaystyle 2x_{1}+x_{2}+7x_{3}-7x_{4}&\displaystyle=8 \\
 \displaystyle-3x_{1}+4x_{2}-5x_{3}-6x_{4}&\displaystyle=-12 \\
 \displaystyle x_{1}+x_{2}+4x_{3}-5x_{4}&\displaystyle=4.
 \end{align*}  
 @newcol
-  Row-reducing the augmented matrix yields
+Row-reducing the augmented matrix yields
 \begin{align*}
 \displaystyle \begin{bmatrix}\boxed{1}&0&3&-2&4\\
 0&\boxed{1}&1&-3&0\\
 0&0&0&0&0\end{bmatrix}
 \end{align*}  
 @col
-  from which we see that there are $r=2$ pivot columns. Also, $D=\{1,\,2\}$, so that the dependent variables are $x_{1}$ and $x_{2}$, and $F=\{3,\,4,\,5\}$, so that the free variables are $x_{3}$ and $x_{4}$. We will express a generic solution for the system by two slightly different methods, though both arrive at the same conclusion.
+from which we see that there are $r=2$ pivot columns. Also, $D=\{1,\,2\}$, so that the dependent variables are $x_{1}$ and $x_{2}$, and $F=\{3,\,4,\,5\}$, so that the free variables are $x_{3}$ and $x_{4}$. We will express a generic solution for the system by two slightly different methods, though both arrive at the same conclusion.
 
 Rearranging each equation represented in the row-reduced form of the augmented matrix by solving for the dependent variable in each row yields the vector equality,
 \begin{align*}
@@ -639,7 +639,7 @@ While this form is useful for quickly creating solutions, it is even better beca
 @eg
 @skip
 @newcol
-  Consider a linear system of $m=5$ equations in $n=7$ variables, having the augmented matrix
+Consider a linear system of $m=5$ equations in $n=7$ variables, having the augmented matrix
 \begin{align*}
 \displaystyle A=\begin{bmatrix}2&1&-1&-2&2&1&5&21\\
 1&1&-3&1&1&1&2&-5\\
@@ -1099,7 +1099,7 @@ Suppose you were told that the vector $\mathbf{w}$ below was a solution to this 
 @thm
 @title{Vector Form of Solutions to Linear Systems}
 @label{VFSLS}
-  Suppose that $\left[A|\mathbf{b}\right]$ is the augmented matrix for a consistent linear system $\mathcal{LS}({A},{\mathbf{b}})$ of $m$ equations in $n$ variables.
+Suppose that $\left[A|\mathbf{b}\right]$ is the augmented matrix for a consistent linear system $\mathcal{LS}({A},{\mathbf{b}})$ of $m$ equations in $n$ variables.
 Let $B$ be a row-equivalent $m\times(n+1)$ matrix in reduced row-echelon form. Suppose that $B$ has $r$ pivot columns, with indices $D=\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\}$, while the $n-r$ non-pivot columns have indices in $F=\{f_{1},\,f_{2},\,f_{3},\,\ldots,\,f_{n-r},\,n+1\}$. Define vectors $\mathbf{c}$, $\mathbf{u}_{j}$, $1\leq j\leq n-r$ of size $n$ by
 \begin{align*}
 \displaystyle\left[\mathbf{c}\right]_{i}&\displaystyle=\begin{cases}0&\text{if $i\in F$}\\
@@ -1117,7 +1117,7 @@ Then the set of solutions to the system of equations $\mathcal{LS}({A},{\mathbf{
 @proof
 <strong>You can skip this proof for now, as long as you understand the examples</strong>
 @newcol
-  First, the equation $\mathcal{LS}({A},{\mathbf{b}})$ is equivalent to the linear system of equations that has the matrix $B$ as its augmented matrix.
+First, the equation $\mathcal{LS}({A},{\mathbf{b}})$ is equivalent to the linear system of equations that has the matrix $B$ as its augmented matrix.
 So we need only show that $S$ is the solution set for the system with $B$ as its augmented matrix. The conclusion of this theorem is that the solution set is equal to the set $S$.
 
 We begin by showing that every element of $S$ is indeed a solution to the system. Let $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\ldots,\,\alpha_{n-r}$ be one choice of the scalars used to describe elements of $S$. So an arbitrary element of $S$, which we will consider as a proposed solution, is

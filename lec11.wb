@@ -10,19 +10,17 @@
 <li> Exercises with solutions can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf} Section SS (p.34-40) C40-45, C50, C60, M10, M11, M12. (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$ in the following questions) T10, T20, T21, T22. </li>
 <li> Strang, Sect 2.3. </li></ul>
 @slide
-  In this section we will provide an extremely compact way to describe an infinite set of vectors, making use of linear combinations. This will give us a convenient way to describe the solution set of a linear system, the null space of a matrix, and many other sets of vectors.  
+In this section we will provide an extremely compact way to describe an infinite set of vectors, making use of linear combinations. This will give us a convenient way to describe the solution set of a linear system, the null space of a matrix, and many other sets of vectors.  
 @section{Span of a Set of Vectors}
 @label{SSV}
 <!--
 We saw that the solution set of a homogeneous system can be described as all possible linear combinations of two particular sets of vectors. This is a useful way to construct or describe infinite sets of vectors, so we encapsulate the idea in a definition.
 -->
 
-
-
 @defn
 @title{Span of a Set of Column Vectors}
 @label{SSCV}
-  Given a set of vectors
+Given a set of vectors
 \begin{align*}
 \displaystyle S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\},
 \end{align*}
@@ -36,12 +34,12 @@ Symbolically,
 @end
 @slide
 @thm
-  Let $S=\{\mathbf{u}_{1},\ldots,\mathbf{u}_{k}\}\subseteq V={\mathbb{R}}^{m}$.
+Let $S=\{\mathbf{u}_{1},\ldots,\mathbf{u}_{k}\}\subseteq V={\mathbb{R}}^{m}$.
 Then $\mathrm{Span}\,S$ is a subspace of $V$.  
 @end
 @proof
 @newcol
-  Obviously $\mathrm{Span}\,S$ is nonempty. Let $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{w}\in W=\mathrm{Span}\,S$.
+Obviously $\mathrm{Span}\,S$ is nonempty. Let $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{w}\in W=\mathrm{Span}\,S$.
 Then there exists $\alpha_{1},\ldots,\alpha_{k},\beta_{1},\ldots,\beta_{k}$ such that
 \begin{align*}
 \displaystyle \mathbf{v}=\alpha_{1}\mathbf{u}_{1}+\cdots+\alpha_{k}\mathbf{u}_{k},
@@ -68,7 +66,7 @@ Thus by @ref{b97161010780aa4b703cb89b1294f822}, $W$ is a subspace.
 @slide
 @eg
 @label{ABS}
-  Consider the following set of 5 vectors, $S$, from ${\mathbb{R}}^{4}$:
+Consider the following set of 5 vectors, $S$, from ${\mathbb{R}}^{4}$:
 \begin{align*}
 \displaystyle S=\left\{\begin{bmatrix}1\\
 1\\
@@ -88,7 +86,7 @@ Thus by @ref{b97161010780aa4b703cb89b1294f822}, $W$ is a subspace.
 0\end{bmatrix}\right\}.
 \end{align*}  
 @newcol
-  Consider the infinite set of vectors $\mathrm{Span}\,S$ formed by all linear combinations of the elements of $S$. Here are four vectors which we definitely know are elements of $\mathrm{Span}\,S$:
+Consider the infinite set of vectors $\mathrm{Span}\,S$ formed by all linear combinations of the elements of $S$. Here are four vectors which we definitely know are elements of $\mathrm{Span}\,S$:
 \begin{align*}
 \displaystyle \mathbf{w}=(2)\begin{bmatrix}1\\
 1\\
@@ -182,7 +180,7 @@ First, is $\mathbf{u}=\begin{bmatrix}-15\\
 5\end{bmatrix}$ an element of $\mathrm{Span}\,S$?
 
 @col
-  In other words, are there scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$ such that:
+In other words, are there scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$ such that:
 \begin{align*}
 \displaystyle \alpha_{1}\begin{bmatrix}1\\
 1\\
@@ -205,7 +203,7 @@ First, is $\mathbf{u}=\begin{bmatrix}-15\\
 5\end{bmatrix}?
 \end{align*}  
 @col
-  Searching for such scalars is equivalent to finding a solution to the linear system of equations with augmented matrix:
+Searching for such scalars is equivalent to finding a solution to the linear system of equations with augmented matrix:
 \begin{align*}
 \displaystyle \left[\begin{array}[]{ccccc|c}1&2&7&1&-1&-15\\
 1&1&3&1&0&-6\\
@@ -213,7 +211,7 @@ First, is $\mathbf{u}=\begin{bmatrix}-15\\
 1&-1&-5&2&0&5\end{array}\right].
 \end{align*}  
 @col
-  This matrix row-reduces to
+This matrix row-reduces to
 \begin{align*}
 \displaystyle \left[\begin{array}[]{ccccc|c}\boxed{1}&0&-1&0&3&10\\
 0&\boxed{1}&4&0&-1&-9\\
@@ -221,12 +219,12 @@ First, is $\mathbf{u}=\begin{bmatrix}-15\\
 0&0&0&0&0&0\end{array}\right].
 \end{align*}  
 @col
-  At this point, we see that the system is consistent, so we know there is a solution for the five scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$. This is enough evidence for us to say that $\mathbf{u}\in\mathrm{Span}\,S$.
+At this point, we see that the system is consistent, so we know there is a solution for the five scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$. This is enough evidence for us to say that $\mathbf{u}\in\mathrm{Span}\,S$.
 
 Moreover, we can compute an actual solution, for example:
 
 @col
-  \begin{align*}
+\begin{align*}
 \displaystyle\alpha_{1}&\displaystyle=2&\displaystyle\alpha_{2}&\displaystyle=1&\displaystyle\alpha_{3}&\displaystyle=-2&\displaystyle\alpha_{4}&\displaystyle=-3&\displaystyle\alpha_{5}&\displaystyle=2.
 \end{align*}
 This particular solution allows us to write
@@ -254,13 +252,13 @@ This particular solution allows us to write
 making it even more obvious that $\mathbf{u}\in\mathrm{Span}\,S$.
 
 @col
-  We now determine if $\mathbf{v}=\begin{bmatrix}3\\
+We now determine if $\mathbf{v}=\begin{bmatrix}3\\
 1\\
 2\\
 -1\end{bmatrix}$ an element of $\mathrm{Span}\,S$.
 
 @col
-  We want to know if there are scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$ such that:
+We want to know if there are scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$ such that:
 \begin{align*}
 \displaystyle \alpha_{1}\begin{bmatrix}1\\
 1\\
@@ -283,7 +281,7 @@ making it even more obvious that $\mathbf{u}\in\mathrm{Span}\,S$.
 -1\end{bmatrix}
 \end{align*}  
 @col
-  Again, this is equivalent to finding a solution to the linear system of equations with augmented matrix:
+Again, this is equivalent to finding a solution to the linear system of equations with augmented matrix:
 \begin{align*}
 \displaystyle \left[\begin{array}[]{ccccc|c}1&2&7&1&-1&3\\
 1&1&3&1&0&1\\
@@ -298,13 +296,13 @@ This matrix row-reduces to
 0&0&0&0&0&\boxed{1}\end{array}\right].
 \end{align*}  
 @col
-  At this point, we see that the system is inconsistent, so we know there is no solution for the five scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$. This is enough evidence for us to say that $\mathbf{v}\not\in\mathrm{Span}\,S$. End of story.  
+At this point, we see that the system is inconsistent, so we know there is no solution for the five scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4},\,\alpha_{5}$. This is enough evidence for us to say that $\mathbf{v}\not\in\mathrm{Span}\,S$. End of story.  
 @endcol
 @end
 @slide
-  From the previous example, we have the following theorem:  
+From the previous example, we have the following theorem:  
 @thm
-  Suppose that $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}$ are in $\mathbf{R}^{m}$.
+Suppose that $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}$ are in $\mathbf{R}^{m}$.
 Let $A$ be the $m\times n$ matrix whose $i$-th column is $\mathbf{u}_{i}$.
 Then $\mathbf{v}\in\mathrm{Span}\,S$ is and only if $\mathcal{LS}({A},{\mathbf{v}})$ is consistent.  
 @end
@@ -323,27 +321,27 @@ v_{m}\end{bmatrix}\in\mathrm{Span}\,S.
 @enumerate
 @item
 @newcol
-  To determine if $\mathbf{v}\in\mathrm{Span}\,S$, we need to find $\alpha_{1},\ldots,\alpha_{n}$ such that
+To determine if $\mathbf{v}\in\mathrm{Span}\,S$, we need to find $\alpha_{1},\ldots,\alpha_{n}$ such that
 \begin{align*}
 \displaystyle \alpha_{1}\mathbf{u}_{1}+\cdots+\alpha_{n}\mathbf{u}_{n}=\mathbf{v}.
 \end{align*}  
 @endcol
 @item
 @newcol
-  This is equivalent to solving the system of linear equations $\mathcal{LS}({A},{\mathbf{v}})$,
+This is equivalent to solving the system of linear equations $\mathcal{LS}({A},{\mathbf{v}})$,
 where $A$ is the $m\times n$ matrix whose $i$-th column is $\mathbf{u}_{i}$.  
 @endcol
 @item
 @newcol
-  Row-reduce the augmented matrix $[A|\mathbf{v}]$ to an RREF $B$.  
+Row-reduce the augmented matrix $[A|\mathbf{v}]$ to an RREF $B$.  
 @enumerate
 @item
 @newcol
-  If the last column of $B$ is a pivot column, then the system is inconsistent and $\mathbf{v}\notin\mathrm{Span}\,S$.  
+If the last column of $B$ is a pivot column, then the system is inconsistent and $\mathbf{v}\notin\mathrm{Span}\,S$.  
 @endcol
 @item
 @newcol
-  If the last column of $B$ is not a pivot column, then the system is consistent and $\mathbf{v}\in\mathrm{Span}\,S$.  
+If the last column of $B$ is not a pivot column, then the system is consistent and $\mathbf{v}\in\mathrm{Span}\,S$.  
 @endcol
 @endenumerate
 @endcol
@@ -351,14 +349,14 @@ where $A$ is the $m\times n$ matrix whose $i$-th column is $\mathbf{u}_{i}$.
 @end
 @slide
 @eg
-  Following the previous example, determine if:
+Following the previous example, determine if:
 \[
 \mathbf{v}=\begin{bmatrix}v_{1}\\
 \vdots\\
 v_{4}\end{bmatrix}\in\mathrm{Span}\,S.
 \]  
 @newcol
-  Applying Gauss-Jordan elimination to the augmented matrix
+Applying Gauss-Jordan elimination to the augmented matrix
 \begin{align*}
 \displaystyle \left[\begin{array}[]{ccccc|c}1&2&7&1&-1&v_{1}\\
 1&1&3&1&0&v_{2}\\
@@ -368,7 +366,7 @@ v_{4}\end{bmatrix}\in\mathrm{Span}\,S.
 we obtain
 
 @col
-  \begin{align*}
+\begin{align*}
 \displaystyle \left[\begin{array}[]{ccccc|c}1&0&-1&0&3&-3v_{1}+5v_{2}-v_{4}\\
 0&1&4&0&-1&v_{1}-v_{2}\\
 0&0&0&1&-2&2v_{1}-3v_{2}+v_{4}\\
@@ -376,14 +374,14 @@ we obtain
 \end{array}\right].
 \end{align*}  
 @col
-  If $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$, then the last column is not a pivot column and the above is an RREF. In this case, $\mathbf{v}\in\mathrm{Span}\,S$.
+If $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$, then the last column is not a pivot column and the above is an RREF. In this case, $\mathbf{v}\in\mathrm{Span}\,S$.
 
 @col
-  If instead $9v_{1}-16v_{2}+v_{3}+4v_{4}\neq 0$, then the above matrix is not an RREF. Hence, the corresponding system of linear equations is inconsistent
+If instead $9v_{1}-16v_{2}+v_{3}+4v_{4}\neq 0$, then the above matrix is not an RREF. Hence, the corresponding system of linear equations is inconsistent
 and thus $\mathbf{v}\not\in\mathrm{Span}\,S$.
 
 @col
-  We therefore conclude that $\mathbf{v}\in\mathrm{Span}\,S$ if and only if:
+We therefore conclude that $\mathbf{v}\in\mathrm{Span}\,S$ if and only if:
 \[
 9v_{1}-16v_{2}+v_{3}+4v_{4}=0.
 \]  
@@ -392,7 +390,7 @@ and thus $\mathbf{v}\not\in\mathrm{Span}\,S$.
 @slide
 @eg
 @label{SCAA}
-  Consider:
+Consider:
 \begin{align*}
 \displaystyle S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}\}=\left\{\begin{bmatrix}1\\
 2\\
@@ -426,7 +424,7 @@ Does $\mathbf{w}=\begin{bmatrix}1\\
 5\end{bmatrix}$ lie in $\mathrm{Span}\,S$?
 
 @newcol
-  To answer this question, we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ such that
+To answer this question, we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ such that
 \begin{align*}
 \displaystyle\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}&\displaystyle=\mathbf{w}.
 \end{align*}
@@ -439,7 +437,7 @@ This is equivalent to solving the system of linear equations
 Building the augmented matrix for this linear system, and row-reducing, gives:
 
 @col
-  \begin{align*}
+\begin{align*}
 \displaystyle \left[\begin{array}[]{ccc|c}\boxed{1}&0&1&3\\
 0&\boxed{1}&-1&2\\
 0&0&0&0\end{array}\right].
@@ -451,14 +449,14 @@ This system has infinitely many solutions (there is a free variable in $x_{3}$),
 tells us that:
 
 @col
-  \begin{align*}
+\begin{align*}
 \displaystyle (2)\mathbf{u}_{1}+(3)\mathbf{u}_{2}+(1)\mathbf{u}_{3}=\mathbf{w}.
 \end{align*}  
 @col
-  So we are convinced that $\mathbf{w}$ really is in $\mathrm{Span}\,S$.
+So we are convinced that $\mathbf{w}$ really is in $\mathrm{Span}\,S$.
 
 @col
-  Notice that there is an infinite number of ways to answer this question affirmatively. We could choose a different solution, this time choosing the free variable to be zero,
+Notice that there is an infinite number of ways to answer this question affirmatively. We could choose a different solution, this time choosing the free variable to be zero,
 \begin{align*}
 \displaystyle\alpha_{1}&\displaystyle=3&\displaystyle\alpha_{2}&\displaystyle=2&\displaystyle\alpha_{3}&\displaystyle=0,
 \end{align*}
@@ -469,14 +467,14 @@ showing that
 Verifying the arithmetic in this second solution will make it obvious that $\mathbf{w}$ is in this span. And of course, we now realize that there are an <em>infinite</em> number of ways to realize $\mathbf{w}$ as element of $\mathrm{Span}\,S$.
 
 @col
-  Let us ask the same type of question again, but this time with: $\mathbf{y}=\begin{bmatrix}2\\
+Let us ask the same type of question again, but this time with: $\mathbf{y}=\begin{bmatrix}2\\
 4\\
 3\end{bmatrix}$.
 
 Is $\mathbf{y}\in\mathrm{Span}\,S$?
 
 @col
-  So we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ such that
+So we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ such that
 \begin{align*}
 \displaystyle\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}&\displaystyle=\mathbf{y}.
 \end{align*}
@@ -503,7 +501,7 @@ There are three things to observe in this example. <ol class="ltx_enumerate">
 @end
 @slide
 @eg
-  Let
+Let
 \begin{align*}
 \displaystyle R=\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}\}=\left\{\begin{bmatrix}-7\\
 5\\
@@ -533,12 +531,12 @@ Now ask if a given vector is an element of $\mathrm{Span}\,R$. For example, is -
 
 
 @newcol
-  Does the vector $\mathbf{z}=\begin{bmatrix}-33\\
+Does the vector $\mathbf{z}=\begin{bmatrix}-33\\
 24\\
 5\end{bmatrix}$ lie in $\mathrm{Span}\,R$?
 
 @col
-  To answer this question, we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ so that
+To answer this question, we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ so that
 \begin{align*}
 \displaystyle\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\mathbf{v}_{3}&\displaystyle=\mathbf{z}.
 \end{align*}
@@ -565,14 +563,14 @@ telling us that
 So we are convinced that $\mathbf{z}$ really is in $\mathrm{Span}\,R$. Notice that in this case we have only one way to answer the question affirmatively, since the solution is unique.
 
 @col
-  Let us ask about another vector.
+Let us ask about another vector.
 Let $\mathbf{x}=\begin{bmatrix}-7\\
 8\\
 -3\end{bmatrix}$.
 Is $\mathbf{x}$ a vector in $\mathrm{Span}\,R$?
 
 @col
-  In other words, are there scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ so that:
+In other words, are there scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ so that:
 \begin{align*}
 \displaystyle\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\alpha_{3}\mathbf{v}_{3}&\displaystyle=\mathbf{x}
 \end{align*}
@@ -605,38 +603,38 @@ We could continue to test other vectors for membership in $\mathrm{Span}\,R$, bu
 @endcol
 @end
 @slide
-  The previous example above inspires the following result:  
+The previous example above inspires the following result:  
 @thm
 @label{thm:ANSRM}
 @newcol
-  Given $m$ vectors $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{m}\}$ in ${\mathbb{R}}^{m}$, let $A$ be the $m\times m$ square matrix whose $i$-th column is $\mathbf{u}_{i}$. Then $A$ is non-singular if and only if $\mathrm{Span}\,S={\mathbb{R}}^{m}$.  
+Given $m$ vectors $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{m}\}$ in ${\mathbb{R}}^{m}$, let $A$ be the $m\times m$ square matrix whose $i$-th column is $\mathbf{u}_{i}$. Then $A$ is non-singular if and only if $\mathrm{Span}\,S={\mathbb{R}}^{m}$.  
 @endcol
 @end
 @proof
 @newcol
-  ($\Rightarrow$)  
+($\Rightarrow$)  
 @newcol
-  If $A$ is non-singular, then for every $\mathbf{b}\in{\mathbb{R}}^{m}$ the equation $\mathcal{LS}({A},{\mathbf{b}})$ is consistent
+If $A$ is non-singular, then for every $\mathbf{b}\in{\mathbb{R}}^{m}$ the equation $\mathcal{LS}({A},{\mathbf{b}})$ is consistent
 by @ref{b25e99edb5cb21a0655d0d961da21e47}. Hence $\mathbf{b}\in\mathrm{Span}\,S$. So ${\mathbb{R}}^{m}=\mathrm{Span}\,S$.  
 @endcol
 
 ($\Leftarrow$)  
 @newcol
-  This part is difficult; we will only sketch the idea.
+This part is difficult; we will only sketch the idea.
 Let the RREF of $A$ be $B$. Suppose that $A$ is singular. Then $B\neq I_{m}$ and the last row of $B$ is a zero row. So there exists $\mathbf{b}\in{\mathbb{R}}^{m}$ such that $\mathcal{LS}({B},{\mathbf{b}})$ is inconsistent.
 (e.g. $\mathbf{b}=\begin{bmatrix}0\\\vdots\\0\\1\end{bmatrix}$).
 Hence there exists $\mathbf{c}\in{\mathbb{R}}^{m}$ such that $\mathcal{LS}({A},{\mathbf{c}})$ is inconsistent (why?).
 Thus $\mathbf{c}\notin\mathrm{Span}\,S$. So $\mathrm{Span}\,S\neq{\mathbb{R}}^{m}$. This completes the proof.  
 <hr/> Alternatively:   
 @newcol
-  Suppose $A$ is singular. We claim that the span of $S$ is not equal to $\mathbb{R}^m$:
+Suppose $A$ is singular. We claim that the span of $S$ is not equal to $\mathbb{R}^m$:
 
 @col
-  If $A$ is singular, then there exists a sequence of elementary matrices $J_i$ such that:
+If $A$ is singular, then there exists a sequence of elementary matrices $J_i$ such that:
 $J_lJ_{l - 1}\cdots J_2J_1 A$ is an RREF matrix $B$ whose last row is a zero row.
 
 @col
-  Let $J = J_lJ_{l - 1}\cdots J_2J_1$, which is invertible.
+Let $J = J_lJ_{l - 1}\cdots J_2J_1$, which is invertible.
 We claim that the vector:
 \[
 \vec{v} = J^{-1}\vec{e}_m = J^{-1}\begin{bmatrix}0\\0\\\vdots\\0\\1\end{bmatrix}
@@ -645,12 +643,12 @@ We claim that the vector:
 does not lie in $\mathrm{Span}\,S$.
 
 @col
-  Suppose $\vec{v} \in \mathrm{Span}\,S$, then exists a vector $\vec{x} \in \mathbb{R}^m$ such that:
+Suppose $\vec{v} \in \mathrm{Span}\,S$, then exists a vector $\vec{x} \in \mathbb{R}^m$ such that:
 \[
 A\vec{x} = \vec{v} = J^{-1}\vec{e}_m
 \]  
 @col
-  Multiplying both sides with $J$ from the left, we have:
+Multiplying both sides with $J$ from the left, we have:
 \[
 JA\vec{x} = \vec{e}_m.
 \]
@@ -658,7 +656,7 @@ But $JA = B$, whose last row is the zero row, which implies that the last compon
 is equal to zero, contradicting the fact that the last component of $\vec{e}_m$ is equal to $1$.
 
 @col
-  It follows that if $A$ is singular, then $\mathrm{Span}\,S \neq \mathbb{R}^m$.  
+It follows that if $A$ is singular, then $\mathrm{Span}\,S \neq \mathbb{R}^m$.  
 @endcol
 @qed
 @endcol
@@ -666,7 +664,7 @@ is equal to zero, contradicting the fact that the last component of $\vec{e}_m$ 
 @end
 @section{Obtain Same Span Using Fewer Vectors}
 @eg
-  Begin with the following set of four vectors of size $3$:
+Begin with the following set of four vectors of size $3$:
 \begin{align*}
 \displaystyle T
 =\left\{\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3},\,\mathbf{w}_{4}\right\}
@@ -682,7 +680,7 @@ is equal to zero, contradicting the fact that the last component of $\vec{e}_m$ 
 \right\}.
 \end{align*}  
 @newcol
-  Let:
+Let:
 \begin{align*}
 \displaystyle D=\begin{bmatrix}2&1&7&-7\\
 -3&4&-5&-6\\
@@ -698,7 +696,7 @@ and consider the infinite set $W=\mathrm{Span}\,T$. Check that the vector
 is a solution to the homogeneous system $\mathcal{LS}({D},{\mathbf{0}})$
 
 @col
-  We can write the linear combination,
+We can write the linear combination,
 \begin{align*}
 \displaystyle 2\mathbf{w}_{1}+3\mathbf{w}_{2}+0\mathbf{w}_{3}+1\mathbf{w}_{4}=\mathbf{0}
 \end{align*}
@@ -707,27 +705,27 @@ which we can solve for $\mathbf{w}_{4}$ as
 \displaystyle \mathbf{w}_{4}=(-2)\mathbf{w}_{1}+(-3)\mathbf{w}_{2}.
 \end{align*}  
 @col
-  This equation says that whenever we encounter the vector $\mathbf{w}_{4}$, we can replace it with a specific linear combination of the vectors $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$. So using $\mathbf{w}_{4}$ in the set $T$, along with $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$, is excessive. An example of what we mean here can be illustrated by the computation:
+This equation says that whenever we encounter the vector $\mathbf{w}_{4}$, we can replace it with a specific linear combination of the vectors $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$. So using $\mathbf{w}_{4}$ in the set $T$, along with $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$, is excessive. An example of what we mean here can be illustrated by the computation:
 
 @col
-  \begin{align*}
+\begin{align*}
 \displaystyle 5\mathbf{w}_{1}&\displaystyle+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+(-3)\mathbf{w}_{4} \\
 &\displaystyle=5\mathbf{w}_{1}+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+(-3)\left((-2)\mathbf{w}_{1}+(-3)\mathbf{w}_{2}\right) \\
 &\displaystyle=5\mathbf{w}_{1}+(-4)\mathbf{w}_{2}+6\mathbf{w}_{3}+\left(6\mathbf{w}_{1}+9\mathbf{w}_{2}\right) \\
 &\displaystyle=11\mathbf{w}_{1}+5\mathbf{w}_{2}+6\mathbf{w}_{3}.
 \end{align*}  
 @col
-  So, what began as a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3},\,\mathbf{w}_{4}$ has been reduced to a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3}$.
+So, what began as a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3},\,\mathbf{w}_{4}$ has been reduced to a linear combination of the vectors $\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3}$.
 
 Hence:  
 @col
-  \begin{align*}
+\begin{align*}
 \displaystyle W=\mathrm{Span}\left\{\mathbf{w}_{1},\,\mathbf{w}_{2},\,\mathbf{w}_{3}\right\},
 \end{align*}
 and the span of our set of vectors, $W$, has not changed, but we have described it by the span of a set of three vectors, rather than four. Furthermore, we can achieve yet another, similar, reduction.
 
 @col
-  Check that the vector
+Check that the vector
 \begin{align*}
 \displaystyle \mathbf{z}_{1}=\begin{bmatrix}-3\\
 -1\\
@@ -737,7 +735,7 @@ and the span of our set of vectors, $W$, has not changed, but we have described 
 is a solution to the homogeneous system $\mathcal{LS}({D},{\mathbf{0}})$.
 
 @col
-  We can write the linear combination,
+We can write the linear combination,
 \begin{align*}
 \displaystyle (-3)\mathbf{w}_{1}+(-1)\mathbf{w}_{2}+1\mathbf{w}_{3}=\mathbf{0}
 \end{align*}
@@ -746,21 +744,21 @@ which we can solve for $\mathbf{w}_{3}$ as
 \displaystyle \mathbf{w}_{3}=3\mathbf{w}_{1}+1\mathbf{w}_{2}.
 \end{align*}  
 @col
-  This equation says that whenever we encounter the vector $\mathbf{w}_{3}$, we can replace it with a specific linear combination of the vectors $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$. So, as before, the vector $\mathbf{w}_{3}$ is not needed in the description of $W$, provided we have $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$ available. In particular, a careful proof would show that
+This equation says that whenever we encounter the vector $\mathbf{w}_{3}$, we can replace it with a specific linear combination of the vectors $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$. So, as before, the vector $\mathbf{w}_{3}$ is not needed in the description of $W$, provided we have $\mathbf{w}_{1}$ and $\mathbf{w}_{2}$ available. In particular, a careful proof would show that
 \begin{align*}
 \displaystyle W=\mathrm{Span}\left\{\mathbf{w}_{1},\,\mathbf{w}_{2}\right\}
 \end{align*}  
 @col
-  So $W$ began life as the span of a set of four vectors. We have now shown (utilizing solutions to a homogeneous system) that $W$ can also be described as the span of a set of just two vectors. Convince yourself that we cannot go any further. In other words, it is not possible to dismiss either $\mathbf{w}_{1}$ or $\mathbf{w}_{2}$ in a similar fashion and winnow the set down to just one vector.
+So $W$ began life as the span of a set of four vectors. We have now shown (utilizing solutions to a homogeneous system) that $W$ can also be described as the span of a set of just two vectors. Convince yourself that we cannot go any further. In other words, it is not possible to dismiss either $\mathbf{w}_{1}$ or $\mathbf{w}_{2}$ in a similar fashion and winnow the set down to just one vector.
 
 @col
-  What was it about the original set of four vectors that allowed us to declare certain vectors as surplus? And just which vectors were we able to dismiss? And why did we have to stop once we had two vectors remaining? The answers to these questions motivate @keyword{linear independence}, our next section and next definition, and so are worth considering carefully now.  
+What was it about the original set of four vectors that allowed us to declare certain vectors as surplus? And just which vectors were we able to dismiss? And why did we have to stop once we had two vectors remaining? The answers to these questions motivate @keyword{linear independence}, our next section and next definition, and so are worth considering carefully now.  
 @endcol
 @end
 @section{Geometric Interpretation}
 <iframe width="800" height="600" allowfullscreen="" style="border: 1px solid rgb(228, 228, 228); border-radius: 4px; overflow: hidden; background: none;" frameborder="0" data-src="https://www.geogebra.org/3d/tnnuszqm?embed" rendered="0" id="iFrameResizer5" scrolling="no" src="https://www.geogebra.org/3d/tnnuszqm?embed"/>
 @section{Spanning Sets of Null Spaces}
-  Recall @ref{thm:nullspacesubspace}
+Recall @ref{thm:nullspacesubspace}
 <!-- The following theorem describe how to express a null space as $\mathrm{Span}\,S$. -->
 
 
@@ -768,7 +766,7 @@ which we can solve for $\mathbf{w}_{3}$ as
 @thm
 @label{SSNS}
 @newcol
-  Spanning
+Spanning
 Sets for Null Spaces
 Suppose that $A$ is an $m\times n$ matrix and $B$ is a row-equivalent matrix in reduced row-echelon form. Suppose that $B$ has $r$ pivot columns, with indices given by $D=\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\}$, while the $n-r$ non-pivot columns have indices $F=\{f_{1},\,f_{2},\,f_{3},\,\ldots,\,f_{n-r}\}$. Construct the $n-r$ vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$ of size $n$,
 \begin{align*}
@@ -784,7 +782,7 @@ Then the null space of $A$ is given by
 @end
 @proof
 @newcol
-  The can be seen by moving the free variables to another side. For details. See Beezer p88. Don’t memorize this theorem. Instead, study the examples below.  
+The can be seen by moving the free variables to another side. For details. See Beezer p88. Don’t memorize this theorem. Instead, study the examples below.  
 @qed
 @endcol
 @end
@@ -802,7 +800,7 @@ Find a set of vectors, $S$, so that the null space of the matrix
 is the span of $S$, that is, $\mathrm{Span}\,S={\mathcal{N}}\!\left(A\right)$.  
 <hr/>
 @newcol
-  The null space of $A$ is the set of all solutions to the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$.
+The null space of $A$ is the set of all solutions to the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$.
 Begin by row-reducing $A$. The result is
 \begin{align*}
 \displaystyle \begin{bmatrix}\boxed{1}&0&6&0&4\\
@@ -846,7 +844,7 @@ and
 \begin{align*}
 \displaystyle {\mathcal{N}}\!\left(A\right)
 =\mathrm{Span}\,\left\{ \mathbf{z}_{1},\,\mathbf{z}_{2}
- \right\}
+\right\}
 =\mathrm{Span}
 \left
 \{\begin{bmatrix}-6\\
@@ -864,7 +862,7 @@ and
 @end
 @eg
 @newcol
-  Consider the matrix:
+Consider the matrix:
 \begin{align*}
 \displaystyle A=\begin{bmatrix}2&1&5&1&5&1\\
 1&1&3&1&6&-1\\
@@ -921,7 +919,7 @@ Each of these vectors arises due to the presence of a non-pivot column. The rema
 So we have
 \begin{align*}
 \displaystyle {\mathcal{N}}\!\left(A\right)=\mathrm{Span}\,\left\{ \mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3}
- \right\}
+\right\}
 =
 \mathrm{Span}\,\left\{ \begin{bmatrix}-2\\
 -1\\
@@ -939,7 +937,7 @@ So we have
 2\\
 0\\
 1\end{bmatrix}
- \right\}.
+\right\}.
 \end{align*}  
 @endcol
 @end
@@ -947,7 +945,7 @@ So we have
 @defn
 @title{Column Space of a Matrix}
 @label{CSM}
-  Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$. Then the @keyword{column space} of $A$, written $\mathcal{C}\left(A\right)$, is the subset of ${\mathbb{R}}^{m}$ containing all linear combinations of the columns of $A$,
+Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$. Then the @keyword{column space} of $A$, written $\mathcal{C}\left(A\right)$, is the subset of ${\mathbb{R}}^{m}$ containing all linear combinations of the columns of $A$,
 \begin{align*}
 \displaystyle \mathcal{C}\left(A\right)=\mathrm{Span}\{\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}\}\end{align*}  
 @end
@@ -955,35 +953,35 @@ So we have
 @thm
 @title{Column Spaces and Consistent Systems}
 @label{CSCS}
-  Suppose $A$ is an $m\times n$ matrix and $\mathbf{b}$ is a vector of size $m$.
+Suppose $A$ is an $m\times n$ matrix and $\mathbf{b}$ is a vector of size $m$.
 Then $\mathbf{b}\in\mathcal{C}\left(A\right)$ if and only if $A\mathbf{x} = \mathbf{b}$ is consistent.  
 @end
 @proof
 @newcol
-  ($\Rightarrow$) Suppose $\mathbf{b}\in\mathcal{C}\left(A\right)$. Then we can write $\mathbf{b}$ as some linear combination of the columns of $A$. Then by @ref{RCLS} we can use the scalars from this linear combination to form a solution to $A\mathbf{x} = \mathbf{b}$, so this system is consistent.
+($\Rightarrow$) Suppose $\mathbf{b}\in\mathcal{C}\left(A\right)$. Then we can write $\mathbf{b}$ as some linear combination of the columns of $A$. Then by @ref{RCLS} we can use the scalars from this linear combination to form a solution to $A\mathbf{x} = \mathbf{b}$, so this system is consistent.
 
 ($\Leftarrow$) If $A\mathbf{x} = \mathbf{b}$ is consistent, there is a solution that may be used with @ref{RCLS} to write $\mathbf{b}$ as a linear combination of the columns of $A$. This qualifies $\mathbf{b}$ for membership in $\mathcal{C}\left(A\right)$.  
 @qed
 @endcol
 @end
-  This theorem tells us that asking if the vector equation $A\mathbf{x} = \mathbf{b}$ has a solution is exactly the same question as asking if $\mathbf{b}$ is in the column space of $A$.
+This theorem tells us that asking if the vector equation $A\mathbf{x} = \mathbf{b}$ has a solution is exactly the same question as asking if $\mathbf{b}$ is in the column space of $A$.
 
 @newcol
- Thus, an alternative (and popular) definition of the column space of an $m\times n$ matrix $A$ is
+Thus, an alternative (and popular) definition of the column space of an $m\times n$ matrix $A$ is
 \begin{align*}
 \displaystyle\mathcal{C}\left(A\right)&\displaystyle=\left\{\left.\mathbf{y}\in{\mathbb{R}}^{m}\,\right|\,\mathbf{y}=A\mathbf{x}\text{ for some }\mathbf{x}\in{\mathbb{R}}^{n}\right\}=\left\{\left.A\mathbf{x}\,\right|\,\mathbf{x}\in{\mathbb{R}}^{n}\right\}\subseteq{\mathbb{R}}^{m}
 \end{align*}  
 @endcol
 @slide
 @eg
-  Consider the column space of the $3\times 4$ matrix $A$,
+Consider the column space of the $3\times 4$ matrix $A$,
 \begin{align*}
 \displaystyle A=\begin{bmatrix}3&2&1&-4\\
 -1&1&-2&3\\
 2&-4&6&-8\end{bmatrix}
 \end{align*}  
 @newcol
-  Show that $\mathbf{v}=\begin{bmatrix}18\\
+Show that $\mathbf{v}=\begin{bmatrix}18\\
 -6\\
 12\end{bmatrix}$ is in the column space of $A$, $\mathbf{v}\in\mathcal{C}\left(A\right)$.
 The above theorem says that we need to check the consistency of $\mathcal{LS}({A},{v})$.
@@ -996,13 +994,13 @@ From the augmented matrix and row-reduce,
 0&0&0&0&0\end{bmatrix}
 \end{align*}  
 @col
-  Since the last column is not a pivot column, so the system is consistent and hence $v\in\mathcal{C}\left(A\right)$.
+Since the last column is not a pivot column, so the system is consistent and hence $v\in\mathcal{C}\left(A\right)$.
 In fact, we have
 \begin{align*}
 \displaystyle \mathbf{v}=6\mathbf{A}_{1}.
 \end{align*}  
 @col
-  Next we show that $\mathbf{w}=\begin{bmatrix}2\\
+Next we show that $\mathbf{w}=\begin{bmatrix}2\\
 1\\
 -3\end{bmatrix}$ is not in the column space of $A$, $\mathbf{w}\not\in\mathcal{C}\left(A\right)$.
 The above theorem says that we need to check the consistency of $\mathcal{LS}({A},{v})$.
@@ -1015,10 +1013,10 @@ From the augmented matrix and row-reduce,
 0&0&0&0&\boxed{1}\end{bmatrix}
 \end{align*}  
 @col
-  Since the final column is a pivot column, the system is inconsistent and therefore $\mathbf{w}\not\in\mathcal{C}\left(A\right)$.  
+Since the final column is a pivot column, the system is inconsistent and therefore $\mathbf{w}\not\in\mathcal{C}\left(A\right)$.  
 @endcol
 @end
-  The next two examples illustrate the main idea of describing $\mathcal{C}\left(A\right)$.  
+The next two examples illustrate the main idea of describing $\mathcal{C}\left(A\right)$.  
 @slide
 @eg
 @keyword{Describe $\mathcal{C}\left(A\right)$ as a null space}
@@ -1031,12 +1029,12 @@ Let
 1&-1&-5&2&0\end{bmatrix}.
 \end{align*}  
 @newcol
-  Find $\mathcal{C}\left(A\right)$. Let’s determine if $\mathbf{v}=\begin{bmatrix}v_{1}\\
+Find $\mathcal{C}\left(A\right)$. Let’s determine if $\mathbf{v}=\begin{bmatrix}v_{1}\\
 \vdots\\
 v_{4}\end{bmatrix}\in\mathrm{Span}\,S$.
 
 @col
-  Applying Gauss-Jordan elimination to the augmented matrix
+Applying Gauss-Jordan elimination to the augmented matrix
 \begin{align*}
 \displaystyle \begin{bmatrix}1&2&7&1&-1&v_{1}\\
 1&1&3&1&0&v_{2}\\
@@ -1044,7 +1042,7 @@ v_{4}\end{bmatrix}\in\mathrm{Span}\,S$.
 1&-1&-5&2&0&v_{4}\end{bmatrix},
 \end{align*}  
 @col
-  we obtain
+we obtain
 \begin{align*}
 \displaystyle \begin{bmatrix}1&0&-1&0&3&-3v_{1}+5v_{2}-v_{4}\\
 0&1&4&0&-1&v_{1}-v_{2}\\
@@ -1053,135 +1051,14 @@ v_{4}\end{bmatrix}\in\mathrm{Span}\,S$.
 \end{bmatrix}
 \end{align*}  
 @col
-  If $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$, the above is a RREF. The last column is not a pivot columns. So $\mathbf{v}\in\mathrm{Span}\,S$. If $9v_{1}-16v_{2}+v_{3}+4v_{4}\neq 0$, the equation corresponding to the last row is
+If $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$, the above is a RREF. The last column is not a pivot columns. So $\mathbf{v}\in\mathrm{Span}\,S$. If $9v_{1}-16v_{2}+v_{3}+4v_{4}\neq 0$, the equation corresponding to the last row is
 \begin{align*}
 \displaystyle 9v_{1}-16v_{2}+v_{3}+4v_{4}=0.
 \end{align*}  
 @col
-  So the corresponding system of linear equations is inconsistent. So $\mathbf{v}\in\mathrm{Span}\,S$. Hence $\mathbf{v}\in\mathrm{Span}\,S$ if and only if $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$. Therefore
+So the corresponding system of linear equations is inconsistent. So $\mathbf{v}\in\mathrm{Span}\,S$. Hence $\mathbf{v}\in\mathrm{Span}\,S$ if and only if $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$. Therefore
 \begin{align*}
 \displaystyle \mathcal{C}\left(A\right)={\mathcal{N}}\!\left([9\,\,-16\,\,1\,\,4]\right).
 \end{align*}  
 @endcol
 @end
-@slide
-@eg
-@keyword{Describe $\mathcal{C}\left(A\right)$ by basis}
-
-Let
-\begin{align*}
-\displaystyle A=\begin{bmatrix}1&4&0&-1&0&7&-9\\
-2&8&-1&3&9&-13&7\\
-0&0&2&-3&-4&12&-8\\
--1&-4&2&4&8&-31&37\end{bmatrix},
-\end{align*}  
-@newcol
-  find $\mathcal{C}\left(A\right)$.
-\begin{align*}
-\displaystyle A\xrightarrow{\text{RREF}}B=\begin{bmatrix}\boxed{1}&4&0&0&2&1&-3\\
-0&0&\boxed{1}&0&1&-3&5\\
-0&0&0&\boxed{1}&2&-6&6\\
-0&0&0&0&0&0&0\end{bmatrix}.
-\end{align*}  
-@col
-  The indexes of the pivot columns are $D=\left\{1,3,4\right\}$.
-Hence $\mathcal{C}\left(A\right)=\mathrm{Span}\,A=\mathrm{Span}\,\left\{ \mathbf{A}_{1},\mathbf{A}_{3},\mathbf{A}_{4} \right\}$.  
-@endcol
-@end
-@section{
-
-Column Space Spanned by Original Columns}
-@label{CSSOC}
-  So we have a foolproof, automated procedure for determining membership in $\mathcal{C}\left(A\right)$. While this works just fine a vector at a time, we would like to have a more useful description of the set $\mathcal{C}\left(A\right)$ as a whole. The next example will preview the first of two fundamental results about the column space of a matrix.  
-@slide
-@eg
-  Consider the $5\times 7$ matrix $A$,
-\begin{align*}
-\displaystyle \begin{bmatrix}2&4&1&-1&1&4&4\\
-1&2&1&0&2&4&7\\
-0&0&1&4&1&8&7\\
-1&2&-1&2&1&9&6\\
--2&-4&1&3&-1&-2&-2\end{bmatrix}
-\end{align*}  
-@newcol
-  The column space of $A$ is
-\begin{align*}
-\displaystyle \mathcal{C}\left(A\right)=\mathrm{Span}\,\left\{ \begin{bmatrix}2\\
-1\\
-0\\
-1\\
--2\end{bmatrix},\,\begin{bmatrix}4\\
-2\\
-0\\
-2\\
--4\end{bmatrix},\,\begin{bmatrix}1\\
-1\\
-1\\
--1\\
-1\end{bmatrix},\,\begin{bmatrix}-1\\
-0\\
-4\\
-2\\
-3\end{bmatrix},\,\begin{bmatrix}1\\
-2\\
-1\\
-1\\
--1\end{bmatrix},\,\begin{bmatrix}4\\
-4\\
-8\\
-9\\
--2\end{bmatrix},\,\begin{bmatrix}4\\
-7\\
-7\\
-6\\
--2\end{bmatrix} \right\}\end{align*}  
-@col
-  While this is a concise description of an infinite set, we might be able to describe the span with fewer than seven vectors. Now we row-reduce,
-\begin{align*}
-\displaystyle \begin{bmatrix}2&4&1&-1&1&4&4\\
-1&2&1&0&2&4&7\\
-0&0&1&4&1&8&7\\
-1&2&-1&2&1&9&6\\
--2&-4&1&3&-1&-2&-2\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&2&0&0&0&3&1\\
-0&0&\boxed{1}&0&0&-1&0\\
-0&0&0&\boxed{1}&0&2&1\\
-0&0&0&0&\boxed{1}&1&3\\
-0&0&0&0&0&0&0\end{bmatrix}
-\end{align*}  
-@col
-  The pivot columns are $D=\left\{1,\,3,\,4,\,5\right\}$, so we can create the set
-\begin{align*}
-\displaystyle T=\left\{\begin{bmatrix}2\\
-1\\
-0\\
-1\\
--2\end{bmatrix},\,\begin{bmatrix}1\\
-1\\
-1\\
--1\\
-1\end{bmatrix},\,\begin{bmatrix}-1\\
-0\\
-4\\
-2\\
-3\end{bmatrix},\,\begin{bmatrix}1\\
-2\\
-1\\
-1\\
--1\end{bmatrix}\right\}
-\end{align*}  
-@col
- and know that $\mathcal{C}\left(A\right)=\mathrm{Span}\,T$ and $T$ is a linearly independent set of columns from the set of columns of $A$.  
-@endcol
-@end
-@slide
-@thm
-@title{Basis of the Column Space}
-@label{BCS}
-@newcol
-  Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$, and $B$ is a row-equivalent matrix in reduced row-echelon form with $r$ pivot columns. Let $D=\left\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\right\}$ be the set of indices for the pivot columns of $B$.
-Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ldots,\,\mathbf{A}_{d_{r}}\right\}$. Then <ol class="ltx_enumerate">
-<li class="ltx_item"> $T$ is a linearly independent set. </li>
-<li class="ltx_item"> $\mathcal{C}\left(A\right)=\mathrm{Span}\,T$. </li></ol>
-@endcol
-@end
-<!--DELIMITER-->
