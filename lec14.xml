@@ -2,13 +2,19 @@
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="MATH 1030">
     <keywords slide="all" environ="course" chapter="" course="MATH 1030">
-      <keyword chapter="" slide="all">Skip this lecture</keyword>
-      <keyword chapter="" slide="all">Warning</keyword>
-      <keyword chapter="" slide="all">Rotation</keyword>
-      <keyword chapter="" slide="all">Reflection</keyword>
-      <keyword chapter="" slide="all">Stretching</keyword>
-      <keyword chapter="" slide="all">change-of-basis matrix from $S$ to $S^{\prime}$</keyword>
-      <keyword chapter="" slide="all">similar matrices</keyword>
+      <keyword chapter="" slide="all">finite dimensional vector space</keyword>
+      <keyword chapter="" slide="all">dimension</keyword>
+      <keyword chapter="" slide="all">nullity</keyword>
+      <keyword chapter="" slide="all">rank</keyword>
+      <keyword chapter="" slide="all">Rank and nullity of a matrix</keyword>
+      <keyword chapter="" slide="all">Dimension</keyword>
+      <keyword chapter="" slide="all">Nullity of a matrix</keyword>
+      <keyword chapter="" slide="all">Rank of a matrix</keyword>
+      <keyword chapter="" slide="all">Computing rank and nullity</keyword>
+      <keyword chapter="" slide="all">Dimension Formula</keyword>
+      <keyword chapter="" slide="all">Rank and Nullity of a Nonsingular Matrix</keyword>
+      <keyword chapter="" slide="all">Nonsingular Matrix Equivalences</keyword>
+      <keyword chapter="" slide="all">Column Space of a Nonsingular Matrix</keyword>
     </keywords>
     <title environment="title" chapter_type="" wbtag="course" scope="course" course="MATH 1030" chapter="" section="" subsection="" subsubsection="" serial="" slide="">MATH 1030</title>
     <slides environment="" chapter_type="">
@@ -18,629 +24,929 @@
         <setchapter course="MATH 1030" chapter="" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="setchapter" argument="14"/>
       </slide>
     </slides>
-    <chapter environment="" chapter_type="Chapter" type="Chapter" wbtag="chapter" num="14" title="Linear transformations and change of basis" course="MATH 1030" serial="14">
+    <chapter environment="" chapter_type="Chapter" type="Chapter" wbtag="chapter" num="14" title="Dimension Rank Nullity" course="MATH 1030" serial="14">
       <keywords slide="all" environ="chapter" chapter="14" course="MATH 1030">
-        <keyword chapter="14" slide="all">Skip this lecture</keyword>
-        <keyword chapter="14" slide="all">Warning</keyword>
-        <keyword chapter="14" slide="all">Rotation</keyword>
-        <keyword chapter="14" slide="all">Reflection</keyword>
-        <keyword chapter="14" slide="all">Stretching</keyword>
-        <keyword chapter="14" slide="all">change-of-basis matrix from $S$ to $S^{\prime}$</keyword>
-        <keyword chapter="14" slide="all">similar matrices</keyword>
+        <keyword chapter="14" slide="all">finite dimensional vector space</keyword>
+        <keyword chapter="14" slide="all">dimension</keyword>
+        <keyword chapter="14" slide="all">nullity</keyword>
+        <keyword chapter="14" slide="all">rank</keyword>
+        <keyword chapter="14" slide="all">Rank and nullity of a matrix</keyword>
+        <keyword chapter="14" slide="all">Dimension</keyword>
+        <keyword chapter="14" slide="all">Nullity of a matrix</keyword>
+        <keyword chapter="14" slide="all">Rank of a matrix</keyword>
+        <keyword chapter="14" slide="all">Computing rank and nullity</keyword>
+        <keyword chapter="14" slide="all">Dimension Formula</keyword>
+        <keyword chapter="14" slide="all">Rank and Nullity of a Nonsingular Matrix</keyword>
+        <keyword chapter="14" slide="all">Nonsingular Matrix Equivalences</keyword>
+        <keyword chapter="14" slide="all">Column Space of a Nonsingular Matrix</keyword>
       </keywords>
-      <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="MATH 1030" chapter="14" section="" subsection="" subsubsection="" serial="" slide="">Linear transformations and change of basis</title>
+      <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="MATH 1030" chapter="14" section="" subsection="" subsubsection="" serial="" slide="">Dimension, Rank, Nullity</title>
       <slides environment="" chapter_type="">
-        <slide environment="" chapter_type="Chapter" canon_num="2" scope="chapter" id="s2" slide="2" course="MATH 1030" chapter="14" section="" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="">
-          <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="2">Linear transformations and change of basis</title>
-          <keywords slide="2" environ="slide" chapter="14" course="MATH 1030">
-            <keyword chapter="14" slide="2">Skip this lecture</keyword>
-            <keyword chapter="14" slide="2">Warning</keyword>
-          </keywords>
-          <newline course="MATH 1030" chapter="14" chapter_type="" section="" subsection="" subsubsection="" environment=""/>
-          <inline_keyword course="MATH 1030" chapter="14" chapter_type="" section="" subsection="" subsubsection="" environment="">Skip this lecture</inline_keyword>
-          <newline course="MATH 1030" chapter="14" chapter_type="" section="" subsection="" subsubsection="" environment=""/>
-          <inline_keyword course="MATH 1030" chapter="14" chapter_type="" section="" subsection="" subsubsection="" environment="">Warning</inline_keyword>
-          <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">: the note is for reference only. It may contain typos. Read at your own risk. The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at http://linear.ups.edu/download.html.The print version can be downloaded at http://linear.ups.edu/download/fcla-3.50-print.pdf.</paragraphs>
-          <newline course="MATH 1030" chapter="14" chapter_type="" section="" subsection="" subsubsection="" environment=""/>
-          <h5 xmlns="http://www.w3.org/1999/xhtml" class="notkw" environment="">
-            <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">Reference.</paragraphs>
-          </h5>
-          <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Beezer, Ver 3.5 Section VR.</paragraphs>
-          <newline course="MATH 1030" chapter="14" chapter_type="" section="" subsection="" subsubsection="" environment=""/>
+        <slide environment="" chapter_type="Chapter" canon_num="2" scope="chapter" id="s2" slide="2" course="MATH 1030" chapter="14" section="" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="">
+          <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="2">Dimension, Rank, Nullity</title>
+          <keywords slide="2" environ="slide" chapter="14" course="MATH 1030"/>
         </slide>
       </slides>
-      <section environment="" chapter_type="" type="Section" wbtag="section" title="Matrices as linear transformation" course="MATH 1030" chapter="14" num="1" serial="14.1">
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Dimension" course="MATH 1030" chapter="14" num="1" serial="14.1">
         <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="14" section="1" subsection="" subsubsection="" serial="" slide="">
-          <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Matrices as linear transformation</paragraphs>
+          <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Dimension</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="3" scope="section" id="s3" slide="3" course="MATH 1030" chapter="14" section="1" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Matrices as linear transformation">
-            <keywords slide="3" environ="slide" chapter="14" course="MATH 1030"/>
+          <slide environment="" chapter_type="Chapter" canon_num="3" scope="section" id="s3" slide="3" course="MATH 1030" chapter="14" section="1" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Dimension">
+            <keywords slide="3" environ="slide" chapter="14" course="MATH 1030">
+              <keyword chapter="14" slide="3">finite dimensional vector space</keyword>
+              <keyword chapter="14" slide="3">dimension</keyword>
+              <keyword chapter="14" slide="3">Dimension</keyword>
+            </keywords>
             <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="14" section="1" subsection="" subsubsection="" serial="" slide="3">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Matrices as linear transformation</paragraphs>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Dimension</paragraphs>
             </title>
-            <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment=""/>
-            <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs">Let $A\in M_{mn}$, $\mathbf{v}\in{\mathbb{R}}^{n}$. Then $A\mathbf{v}\in{\mathbb{R}}^{m}$. We can define define a map, denoted by $L_{A}$ (stand for left multiplying), defined as
-\begin{align*}
-\displaystyle L_{A}:{\mathbb{R}}^{n}\rightarrow{\mathbb{R}}^{m}.
-\end{align*}
-\begin{align*}
-\displaystyle L_{A}(\mathbf{v})=A\mathbf{v}.
-\end{align*}   </paragraphs>
-          </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="4" id="s4" slide="4" course="MATH 1030" chapter="14" section="1" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Matrices as linear transformation">
-            <keywords slide="4" environ="slide" chapter="14" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="1" md5="f51809486d400eb3be081d8662729f49" course="MATH 1030" chapter="14" slide="4" item="14.1">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let
-\begin{align*}
-\displaystyle A=\begin{bmatrix}1&amp;2&amp;3\\
-4&amp;5&amp;6\end{bmatrix}.
-\end{align*}   </paragraphs>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="1" title="Dimension" md5="fa337417cb1401c3201c9c8d62051331" course="MATH 1030" chapter="14" slide="3" item="14.1">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="14" section="1" subsection="" subsubsection="" serial="" slide="3">Dimension</title>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V$ be a vector space.</paragraphs>
+              <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Suppose a finite set of vectors $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{t}\right\}$ is a basis for $V$.</paragraphs>
+              <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Then, we say that $V$ is a </paragraphs>
+              <inline_keyword course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">finite dimensional vector space</inline_keyword>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">.</paragraphs>
+              <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">The number $t$ (namely the number of vectors in the basis)
+is called the </paragraphs>
+              <inline_keyword course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">dimension</inline_keyword>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $V$.</paragraphs>
+              <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">The dimension of the zero vector space $\{\vect{0}\}$ is defined to be $0$.   </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="5489965a692df025331a1a4aeb86b56b" course="MATH 1030" chapter="14" slide="3">
               <newcol course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then $L_{A}$ is a map from ${\mathbb{R}}^{3}\rightarrow{\mathbb{R}}^{2}$. Define by
-\begin{align*}
-\displaystyle L_{A}(\begin{bmatrix}x\\
-y\\
-z\end{bmatrix})=\begin{bmatrix}x+2y+3z\\
-4x+5y+6z\end{bmatrix}.
-\end{align*}   </paragraphs>
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> It is a non-trivial fact that the dimension is well-defined, i.e.,
+If both $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{t}\right\}$
+and $\left\{\mathbf{u}_{1},\ldots,\mathbf{u}_{s}\right\}$
+are bases for $V$,
+then $s=t$.   </paragraphs>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="4" id="s4" slide="4" course="MATH 1030" chapter="14" section="1" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Dimension">
+            <keywords slide="4" environ="slide" chapter="14" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="2" md5="e523c6d32b8413b4971cdd12f2cece9e" course="MATH 1030" chapter="14" slide="4" item="14.2">
+              <label wbtag="label" name="SSLD" type="Theorem"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $S=\left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\ldots,\,\mathbf{v}_{t}\right\}$ is a finite set of vectors which spans the vector space $V$. Then any set of $t+1$ or more vectors from $V$ is linearly dependent.   </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="fc7ec1177f22eb2c44fad3131139c0f7" course="MATH 1030" chapter="14" slide="4" of="e523c6d32b8413b4971cdd12f2cece9e">
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_m$ be $m$ vectors in $V$,
+where $m \geq t + 1$.
+Let $A = [\vect{v}_1 | \vect{v}_2 | \cdots | \vect{v}_t ]$.
+Since $S$ spans $V$, for every $\vect{u}_i$ ($1\leq i \leq m$)
+there exists
+$\vect{w}_i \in \mathbb{R}^t$ such that:
+\[
+A\vect{w}_i = \vect{u}_i.
+\]</paragraphs>
+                <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Now, consider the matrix:
+\[
+B = [\vect{w}_1 | \vect{w}_2 | \cdots | \vect{w}_m].
+\]
+This is a $t \times m$ matrix.
+In particular, it has more columns than rows,
+due to the assumption that $m &gt; t$.</paragraphs>
+                  <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence, the homogeneous linear system $\mathcal{LS}(B, \vect{0})$
+has a non-trivial solution $\vect{x} \in \mathbb{R}^m$.  That is:
+\[
+B\vect{x} = \vect{0}.
+\]</paragraphs>
+                    <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The above equation implies that:
+\[
+A\left(B\vect{x}\right) = A\vect{0} = \vect{0}.
+\]   </paragraphs>
+                      <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By the associativity of matrix multiplication, we have:
+\[
+A\left(B\vect{x}\right) = \left(AB\right)\vect{x}.
+\]   </paragraphs>
+                        <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> On the other hand:   </paragraphs>
+                          <steps course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="steps" stepsid="steps1">
+\[
+\begin{split}
+AB &amp;= A[\vect{w}_1 | \vect{w}_2 | \cdots | \vect{w}_m]
+\\&amp;
+\class{steps}{\cssId{step0}{=[A\vect{w}_1 | A\vect{w}_2 | \cdots | A\vect{w}_m]}}
+\\&amp;
+\class{steps}{\cssId{step1}{= [\vect{u}_1 | \vect{u}_2 | \cdots | \vect{u}_m]}}
+\end{split}
+\]
+
+</steps>
+                          <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                            <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence,
+\[
+\left(AB\right)\vect{x} = \vect{0}
+\]
+is equivalent to:
+\[
+[\vect{u}_1 | \vect{u}_2 | \cdots | \vect{u}_m]\vect{x} = \vect{0}
+\]   </paragraphs>
+                            <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> which is in turn equivalent to:
+\[
+x_1 \vect{u}_1 + x_2 \vect{u}_2 + \cdots x_m \vect{u}_m = \vect{0}.
+\]
+Since, $\vect{x}$ is not the zero vector,
+not all the $x_i$'s are equal to zero.
+We conclude that the vectors
+$\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_m$ are linearly dependent.   </paragraphs>
+                              <qed course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                            </collapse>
+                          </collapse>
+                        </collapse>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </substatement>
+            <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment=""/>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="5" id="s5" slide="5" course="MATH 1030" chapter="14" section="1" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Dimension">
+            <keywords slide="5" environ="slide" chapter="14" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="3" md5="e2b9b3e81ae14d77f75c65e73257d93a" course="MATH 1030" chapter="14" slide="5" item="14.3">
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $V$ is a vector space with a finite basis $B$ and a second basis $C$.</paragraphs>
+              <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then $B$ and $C$ have the same size.   </paragraphs>
               </newcol>
             </statement>
-            <newcol course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The map $L_{A}$ has the following properties:</paragraphs>
-              <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
-            </newcol>
-          </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="5" id="s5" slide="5" course="MATH 1030" chapter="14" section="1" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Matrices as linear transformation">
-            <keywords slide="5" environ="slide" chapter="14" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Proposition" wbtag="prop" num="2" md5="97ededd2c16402291f0570f570677a3e" course="MATH 1030" chapter="14" slide="5" item="14.2">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> For $\mathbf{v},\mathbf{u}\in{\mathbb{R}}^{n}$, $\alpha\in{\mathbb{R}}^{\hbox{}}$</paragraphs>
-              <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
-              <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
-                <li class="ltx_item" environment="statement">
-                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $L_{A}(\mathbf{v}+\mathbf{u})=L_{A}(\mathbf{v})+L_{A}(\mathbf{u})$ </paragraphs>
-                </li>
-                <li class="ltx_item" environment="statement">
-                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $L_{A}(\alpha\mathbf{v})=\alpha L_{A}(\mathbf{v})$. </paragraphs>
-                </li>
-                <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
-              </ol>
-            </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="97df82664b671feda7e0c4b502a7d732" course="MATH 1030" chapter="14" slide="5" of="97ededd2c16402291f0570f570677a3e">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="e1525809aed0d7d917e125cd0cdad56b" course="MATH 1030" chapter="14" slide="5" of="e2b9b3e81ae14d77f75c65e73257d93a">
               <newcol course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="newcol">
-                  <li class="ltx_item" environment="newcol">
-                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $L_{A}(\mathbf{v}+\mathbf{u})=A(\mathbf{v}+\mathbf{u})=A\mathbf{v}+A\mathbf{u}=L_{A}(\mathbf{v})+L_{A}(\mathbf{u})$ </paragraphs>
-                  </li>
-                  <li class="ltx_item" environment="newcol">
-                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $L_{A}(\alpha\mathbf{v})=A(\alpha\mathbf{v})=\alpha A(\mathbf{v})=\alpha L_{A}(\mathbf{v})$. </paragraphs>
-                  </li>
-                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
-                </ol>
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Denote the size of $B$ by $t$. If $C$ has $\geq t+1$ vectors,
+then by the previous theorem, $C$ is linearly dependent,
+in contradiction to the condition that $C$ is a basis.</paragraphs>
                 <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By the same reasoning, the linearly independent set $B$ must also not
+have more vectors than $C$.</paragraphs>
+                  <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So, $B$ and $C$ have the same number of vectors.   </paragraphs>
+                    <qed course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </substatement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="a83344a4aeb990edf3ee96e82a4048f4" course="MATH 1030" chapter="14" slide="5">
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The above theorem shows that the dimension is well-defined. No matter which basis we choose, the size is always the same.   </paragraphs>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="6" id="s6" slide="6" course="MATH 1030" chapter="14" section="1" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Dimension">
+            <keywords slide="6" environ="slide" chapter="14" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="4" md5="514c1c9964bbe64e0fdf6bf2e8fd577e" course="MATH 1030" chapter="14" slide="6" item="14.4">
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> It follows from </paragraphs>
+              <ref environment="statement" chapter_type="" label="d848ac74d9e041feff51c974a9969985" wbtag="ref" course="MATH 1030" chapter="14" slide="6" referrer-type="Example" referrer-md5="514c1c9964bbe64e0fdf6bf2e8fd577e" src-course="MATH 1030" src-chapter="13" src-slide="4" type="Example" item="13.2" src-filename="lec13.xml" md5="d848ac74d9e041feff51c974a9969985" class="lcref" serial="">
+                <title>Example 13.2</title>
+              </ref>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> that:
+\[
+\dim{\mathbb{R}}^{m}=m.
+\]   </paragraphs>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="7" data-lecture-skip="true" id="s7" slide="7" course="MATH 1030" chapter="14" section="1" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Dimension">
+            <keywords slide="7" environ="slide" chapter="14" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="5" md5="5d252c4652c5d53eb3a664c5813b62ed" course="MATH 1030" chapter="14" slide="7" item="14.5">
+              <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Math major only</paragraphs>
+              </strong>
+              <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">$\dim M_{mn}=mn$. See example 3.   </paragraphs>
+            </statement>
+            <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment=""/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="6" md5="cb3423743ab6bb98f03ffea2c5389862" course="MATH 1030" chapter="14" slide="7" item="14.6">
+              <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Math major only</paragraphs>
+              </strong>
+              <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">$\dim P_{n}=n+1$. See example 4.   </paragraphs>
+            </statement>
+            <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment=""/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="7" md5="b3635839879973addaaf2977cab108b8" course="MATH 1030" chapter="14" slide="7" item="14.7">
+              <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Math major only</paragraphs>
+              </strong>
+              <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Let $S_{2}$ be the set of $2\times 2$ symmetric matrices. For $A\in S_{2}$,
+\begin{align*}
+\displaystyle A=\begin{bmatrix}a&amp;b\\
+b&amp;c\end{bmatrix}=a\begin{bmatrix}1&amp;0\\
+0&amp;0\end{bmatrix}+b\begin{bmatrix}0&amp;1\\
+1&amp;0\end{bmatrix}+c\begin{bmatrix}0&amp;0\\
+0&amp;1\end{bmatrix}
+\end{align*}   </paragraphs>
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We can show that:
+\begin{align*}
+\displaystyle T=\left\{\begin{bmatrix}1&amp;0\\
+0&amp;0\end{bmatrix},\begin{bmatrix}0&amp;1\\
+1&amp;0\end{bmatrix},\begin{bmatrix}0&amp;0\\
+0&amp;1\end{bmatrix}\right\}
+\end{align*}   </paragraphs>
+                <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> is a basis for $S_{2}$. Hence $\dim S_{2}=3$.   </paragraphs>
+                </collapse>
+              </newcol>
+            </statement>
+            <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment=""/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="8" md5="e28b5127a6b2f8fc41436d3ff2c13bc7" course="MATH 1030" chapter="14" slide="7" item="14.8">
+              <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Math major only</paragraphs>
+              </strong>
+              <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Let $P$ be the set of all real polynomials. As $\left\{1,x,x^{2},x^{3},\ldots\right\}$ is linearly independent,
+so $\dim P$ does not exists (or we can write $\dim P=\infty$).   </paragraphs>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="8" id="s8" slide="8" course="MATH 1030" chapter="14" section="1" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Dimension">
+            <keywords slide="8" environ="slide" chapter="14" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Lemma" wbtag="lemma" num="9" md5="5766e41c2a2cc30e8ed685065424d8c8" course="MATH 1030" chapter="14" slide="8" item="14.9">
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V$ be a vector space and $\mathbf{v}_{1},\ldots,\mathbf{v}_{k},\mathbf{u}\in V$.</paragraphs>
+              <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose
+$S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is linearly independent and $\mathbf{u}\notin\left&lt; S\right&gt;$. Then
+$S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k},\mathbf{u}\right\}$ is linearly independent.   </paragraphs>
+              </newcol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="351cc1a49e1f4bf03091b6f1d48d1392" course="MATH 1030" chapter="14" slide="8" of="5766e41c2a2cc30e8ed685065424d8c8">
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let the relation of linear dependence of $S^{\prime}$ be
+\begin{align*}
+\displaystyle \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k}+\alpha\mathbf{u}=\mathbf{0}.
+\end{align*}   </paragraphs>
+                <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose $\alpha\neq 0$, then
+\begin{align*}
+\displaystyle \mathbf{u}=-\frac{\alpha_{1}}{\alpha}\mathbf{v}_{1}-\cdots-\frac{\alpha_{k}}{\alpha}\mathbf{v}_{k}\in\left&lt; S\right&gt;.
+\end{align*}   </paragraphs>
+                  <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Contradiction.</paragraphs>
+                    <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So $\alpha=0$, then
+\begin{align*}
+\displaystyle \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k}=\mathbf{0}.
+\end{align*}   </paragraphs>
+                      <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By the linear independence of $S$, $\alpha_{i}=0$ for all $i$. Hence the above relation of dependence of $S^{\prime}$ is trivial.   </paragraphs>
+                        <qed course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="9" id="s9" slide="9" course="MATH 1030" chapter="14" section="1" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Dimension">
+            <keywords slide="9" environ="slide" chapter="14" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="10" md5="bf526b216e0b6d32b3039d6c01b1e1b9" course="MATH 1030" chapter="14" slide="9" item="14.10">
+              <label wbtag="label" name="basisexists2" type="Theorem"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V$ be a nonzero subspace of ${\mathbb{R}}^{m}$. (That is, $V \neq \{\vect{0}\}$.)</paragraphs>
+              <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Then, there exists a basis for $V$.   </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="29f60523e415a9dfa16a4ceb97ca41af" course="MATH 1030" chapter="14" slide="9" of="bf526b216e0b6d32b3039d6c01b1e1b9">
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $V$ be a nonzero vector space.
+Let $\mathbf{v}_{1}$ be a nonzero vector in $V$. If $V=\left&lt; \left\{\mathbf{v}_{1}\right\}\right&gt;$, we can take $S=\left\{\mathbf{v}_{1}\right\}$. Then obviously $\left\{\mathbf{v}_{1}\right\}$ is linearly independent and hence $S$ is a basis for $V$.</paragraphs>
+                <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Otherwise, let $\mathbf{v}_{2}\in V$ but not in $\left&lt; \left\{\mathbf{v}_{1}\right\}\right&gt;$.</paragraphs>
+                  <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$ is linearly independent. If $V=\left&lt; \left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}\right&gt;$, we can take $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$.</paragraphs>
+                    <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So $S$ is a basis for $V$.</paragraphs>
+                      <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                      <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Otherwise, let $\mathbf{v}_{3}\in V$ but not in $\left&lt; \left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}\right&gt;$.</paragraphs>
+                        <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                        <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\right\}$ is linearly independent. Repeat the above process, inductive we can define $\mathbf{v}_{k+1}$ as following: If $V=\left&lt; \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}\right&gt;$,
+we can take $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$.</paragraphs>
+                          <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                          <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                            <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Because $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$ is linearly independent, $S$ is a basis for $V$.</paragraphs>
+                            <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                            <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Otherwise defined $\mathbf{v}_{k+1}\not\in\left&lt; \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}\right&gt;$.</paragraphs>
+                              <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                              <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k+1}\right\}$ is linearly independent.</paragraphs>
+                                <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                                <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If the process stops, say at step $k$, i.e., $V=\left&lt; \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}\right&gt;$.</paragraphs>
+                                  <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                                  <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                    <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then we can take $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$.</paragraphs>
+                                    <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                                    <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                      <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Because $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$ is linearly independent, it is a basis for $V$.</paragraphs>
+                                      <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                                      <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                        <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This completes the proof.</paragraphs>
+                                        <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                                        <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                          <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Otherwise, the process continues infinitely, in particular, we can take $k=m+1$ and
+$V\neq\left&lt; \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{m+1}\right\}\right&gt;$ and
+$\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{m+1}\right\}$ is linearly independent.</paragraphs>
+                                          <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                                          <collapse course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                            <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Since $\left\langle\left\{\mathbf{e}_{1},\ldots,\mathbf{e}_{m}\right\}\right\rangle = \mathbb{R}^m$,
+by </paragraphs>
+                                            <ref environment="newcol" chapter_type="" label="SSLD" wbtag="ref" course="MATH 1030" chapter="14" slide="9" referrer-type="Proof" referrer-md5="29f60523e415a9dfa16a4ceb97ca41af">
+                                              <title>UNDEFINED</title>
+                                            </ref>
+                                            <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> the vectors $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{m+1}\right\}$ are linearly dependent. Contradiction.   </paragraphs>
+                                            <qed course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
+                                          </collapse>
+                                        </collapse>
+                                      </collapse>
+                                    </collapse>
+                                  </collapse>
+                                </collapse>
+                              </collapse>
+                            </collapse>
+                          </collapse>
+                        </collapse>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="MATH 1030" chapter="14" section="1" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Dimension">
+            <keywords slide="10" environ="slide" chapter="14" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Proposition" wbtag="prop" num="11" md5="350ff6774217e7ec426491652fc45c86" course="MATH 1030" chapter="14" slide="10" item="14.11">
+              <label wbtag="label" name="basisexistsprop" type="Proposition"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\right\}\subseteq{\mathbb{R}}^{m}$. Then
+\begin{align*}
+\displaystyle \dim\left&lt; S\right&gt;\leq n.
+\end{align*}   </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="667a77a740dc6cd6c1936e7bb566ea36" course="MATH 1030" chapter="14" slide="10" of="350ff6774217e7ec426491652fc45c86">
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By Theorem    </paragraphs>
+                <ref environment="newcol" chapter_type="" label="basisexists" wbtag="ref" course="MATH 1030" chapter="14" slide="10" referrer-type="Proof" referrer-md5="667a77a740dc6cd6c1936e7bb566ea36" src-course="MATH 1030" src-chapter="13" src-slide="15" type="Theorem" item="13.14" src-filename="lec13.xml" md5="cd7cd500a1d2a34e884122007339d8cb" class="lcref" serial="">
+                  <title>Theorem 13.14</title>
+                </ref>
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, there exists a subset $T$ of $S$ such that $T$ is a basis for $\left&lt; S\right&gt;$.
+\begin{align*}
+\displaystyle \dim\left&lt; S\right&gt;
+=
+\text{number of vectors in $T$}
+\leq
+\text{number of vectors in $S$}=n.
+\end{align*}   </paragraphs>
                 <qed course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
               </newcol>
             </substatement>
-          </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="6" id="s6" slide="6" course="MATH 1030" chapter="14" section="1" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Matrices as linear transformation">
-            <keywords slide="6" environ="slide" chapter="14" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="3" md5="3a7a61770541d71ffc2c61ac1f96fcf2" course="MATH 1030" chapter="14" slide="6" item="14.3">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V,W$ be vector spaces (you can think of $V$ as subspace of ${\mathbb{R}}^{a}$ and $W$ as subspace of ${\mathbb{R}}^{b}$),
-$T:V\rightarrow W$.
-Then $T$ is said to be a linear transformation if for $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{u}\in W$.</paragraphs>
-              <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
-              <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
-                <li class="ltx_item" environment="statement">
-                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $T(\mathbf{v}+\mathbf{u})=T(\mathbf{v})+T(\mathbf{u})$ </paragraphs>
-                </li>
-                <li class="ltx_item" environment="statement">
-                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $T(\alpha\mathbf{v})=\alpha T(\mathbf{v})$. </paragraphs>
-                </li>
-                <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
-              </ol>
-            </statement>
-          </slide>
-        </slides>
-      </section>
-      <section environment="" chapter_type="" type="Section" wbtag="section" title="Geometric interpretation of some linear transformations" course="MATH 1030" chapter="14" num="2" serial="14.2">
-        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" serial="" slide="">
-          <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Geometric interpretation of some linear transformations</paragraphs>
-        </title>
-        <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="7" scope="section" id="s7" slide="7" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Geometric interpretation of some linear transformations">
-            <keywords slide="7" environ="slide" chapter="14" course="MATH 1030"/>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" serial="" slide="7">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Geometric interpretation of some linear transformations</paragraphs>
-            </title>
-            <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
-            <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">In below we regard $\begin{bmatrix}x\\
-y\end{bmatrix}$ as the point $(x,y)$ in the $xy$-plane.   </paragraphs>
-          </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="8" id="s8" slide="8" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Geometric interpretation of some linear transformations">
-            <keywords slide="8" environ="slide" chapter="14" course="MATH 1030">
-              <keyword chapter="14" slide="8">Rotation</keyword>
-              <keyword chapter="14" slide="8">Reflection</keyword>
-              <keyword chapter="14" slide="8">Stretching</keyword>
-            </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="4" md5="05ce73a9771eefa40552541124701e72" course="MATH 1030" chapter="14" slide="8" item="14.4">
-              <inline_keyword course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">Rotation</inline_keyword>
-              <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
-              <newcol course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let
-\begin{align*}
-\displaystyle A=\begin{bmatrix}\cos\theta&amp;-\sin\theta\\
-\sin\theta&amp;\cos\theta\end{bmatrix}.
-\end{align*}   </paragraphs>
-                <collapse course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then $L_{A}$ is $\theta$ degree anticlockwise rotation.   </paragraphs>
-                </collapse>
-              </newcol>
-            </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="5" md5="7c53a4e3bd3e4d97ffc9b2faee41ceff" course="MATH 1030" chapter="14" slide="8" item="14.5">
-              <inline_keyword course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">Reflection</inline_keyword>
-              <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
-              <newcol course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $c$ be a real number,
-\begin{align*}
-\displaystyle A=\begin{bmatrix}1&amp;0\\
-0&amp;-1\end{bmatrix}\,\,\,(\text{resp.}A=\begin{bmatrix}-1&amp;0\\
-0&amp;1\end{bmatrix})
-\end{align*}   </paragraphs>
-                <collapse course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then $L_{A}$ is a reflection through the $x$-axis (resp. $y$-axis).   </paragraphs>
-                </collapse>
-              </newcol>
-            </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="6" md5="da34235efdaf7abd97715177029c4d48" course="MATH 1030" chapter="14" slide="8" item="14.6">
-              <inline_keyword course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">Stretching</inline_keyword>
-              <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
-              <newcol course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $c$ be real number, then
-\begin{align*}
-\displaystyle A=\begin{bmatrix}k&amp;0\\
-0&amp;1\end{bmatrix}\,\,\,(\text{resp.}A=\begin{bmatrix}1&amp;0\\
-0&amp;k\end{bmatrix})
-\end{align*}   </paragraphs>
-                <collapse course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then $L_{A}$ is a stretching of $x$-axis (resp. $y$-axis) by a factor of $k$.   </paragraphs>
-                </collapse>
-              </newcol>
-            </statement>
-          </slide>
-        </slides>
-      </section>
-      <section environment="" chapter_type="" type="Section" wbtag="section" title="Coordinate vector and change of basis" course="MATH 1030" chapter="14" num="3" serial="14.3">
-        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="14" section="3" subsection="" subsubsection="" serial="" slide="">
-          <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Coordinate vector and change of basis</paragraphs>
-        </title>
-        <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="9" scope="section" id="s9" slide="9" course="MATH 1030" chapter="14" section="3" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Coordinate vector and change of basis">
-            <keywords slide="9" environ="slide" chapter="14" course="MATH 1030"/>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="14" section="3" subsection="" subsubsection="" serial="" slide="9">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Coordinate vector and change of basis</paragraphs>
-            </title>
-            <newline course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment=""/>
-            <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="" wbtag="paragraphs">Let $V$ be a vector space(you can think of it as a subspace of ${\mathbb{R}}^{n}$). Let $B=\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\}$ be a basis for $V$. Recall the following theorem</paragraphs>
-            <newline course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment=""/>
-          </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="MATH 1030" chapter="14" section="3" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Coordinate vector and change of basis">
-            <keywords slide="10" environ="slide" chapter="14" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="7" md5="9cfabfff8a295f5cea21e7a7b44c7caa" course="MATH 1030" chapter="14" slide="10" item="14.7">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $\mathbf{v}\in V$ and if
-\begin{align*}
-\displaystyle \mathbf{v}=\alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k},\,\,\alpha_{i}\in{\mathbb{R}}^{\hbox{}}&amp;
-\end{align*}
-then $\alpha_{1},\cdots,\alpha_{k}$ are unique, i.e.
-\begin{align*}
-\displaystyle \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k}=\beta_{1}\mathbf{v}_{1}+\cdots+\beta_{k}\mathbf{v}_{k},&amp;
-\end{align*}
-then
-\begin{align*}
-\displaystyle \alpha_{i}=\beta_{i},\,\,\,i=1,\ldots,k.
-\end{align*}   </paragraphs>
-            </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="6e09031ad3062839fdb7102e76c0c33c" course="MATH 1030" chapter="14" slide="10" of="9cfabfff8a295f5cea21e7a7b44c7caa">
-              <newcol course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If (  </paragraphs>
-                <ref environment="newcol" chapter_type="" label="vlin2" wbtag="ref" course="MATH 1030" chapter="14" slide="10" referrer-type="Proof" referrer-md5="6e09031ad3062839fdb7102e76c0c33c">
+            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="651f5406988a58cb3ccffb183f0f7d00" course="MATH 1030" chapter="14" slide="10">
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Both </paragraphs>
+                <ref environment="newcol" chapter_type="" label="basisexists" wbtag="ref" course="MATH 1030" chapter="14" slide="10" referrer-type="Remark" referrer-md5="651f5406988a58cb3ccffb183f0f7d00" src-course="MATH 1030" src-chapter="13" src-slide="15" type="Theorem" item="13.14" src-filename="lec13.xml" md5="cd7cd500a1d2a34e884122007339d8cb" class="lcref" serial="">
+                  <title>Theorem 13.14</title>
+                </ref>
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and </paragraphs>
+                <ref environment="newcol" chapter_type="" label="basisexistsprop" wbtag="ref" course="MATH 1030" chapter="14" slide="10" referrer-type="Remark" referrer-md5="651f5406988a58cb3ccffb183f0f7d00">
                   <title>UNDEFINED</title>
                 </ref>
-                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">) is true, then
-\begin{align*}
-\displaystyle (\alpha_{1}-\beta_{1})\mathbf{v}_{1}+\cdots+(\alpha_{k}-\beta_{k})\mathbf{v}_{k}=\mathbf{0}.
-\end{align*}   </paragraphs>
-                <collapse course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Because $S$ is a basis, it is linearly independent. Therefore
-\begin{align*}
-\displaystyle \alpha_{i}-\beta_{i}=0.
-\end{align*}   </paragraphs>
-                  <collapse course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence
-\begin{align*}
-\displaystyle \alpha_{i}=\beta_{i}.
-\end{align*}   </paragraphs>
-                    <qed course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
-                  </collapse>
-                </collapse>
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> is valid
+if we replace ${\mathbb{R}}^{m}$ by $P_{n}$, $M_{mn}$
+or any finite dimensional vector space.   </paragraphs>
               </newcol>
             </substatement>
-            <newcol course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By the theorem, using notation in (  </paragraphs>
-              <ref environment="newcol" chapter_type="" label="vlin" wbtag="ref" course="MATH 1030" chapter="14" slide="10">
-                <title>UNDEFINED</title>
-              </ref>
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">), we can define
-\begin{align*}
-\displaystyle \rho_{B}(\mathbf{v})=\begin{bmatrix}\alpha_{1}\\
-\alpha_{2}\\
-\vdots\\
-\alpha_{k}\end{bmatrix}.
-\end{align*}   </paragraphs>
-            </newcol>
+            <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment=""/>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="11" id="s11" slide="11" course="MATH 1030" chapter="14" section="3" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Coordinate vector and change of basis">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="11" id="s11" slide="11" course="MATH 1030" chapter="14" section="1" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Dimension">
             <keywords slide="11" environ="slide" chapter="14" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="8" md5="36940979666479e210bd0bb401a30e43" course="MATH 1030" chapter="14" slide="11" item="14.8">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V={\mathbb{R}}^{3}$, $B=\{\mathbf{e}_{1},\mathbf{e}_{2},\mathbf{e}_{3}\}$.
-Then
-\begin{align*}
-\displaystyle \mathbf{v}=\begin{bmatrix}x\\
-y\\
-z\end{bmatrix}=x\mathbf{e}_{1}+y\mathbf{e}_{2}+z\mathbf{e}_{3}.
-\end{align*}   </paragraphs>
-              <newcol course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence
-\begin{align*}
-\displaystyle \rho_{B}(\mathbf{v})=\begin{bmatrix}x\\
-y\\
-z\end{bmatrix}.
-\end{align*}   </paragraphs>
-              </newcol>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="12" md5="54057506bcff865896d440e54b892872" course="MATH 1030" chapter="14" slide="11" item="14.12">
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose a vector space $V$ has dimension $n$.
+Then, any linearly independent set with $n$ vectors in $V$
+is a basis for $V$.   </paragraphs>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="9" md5="33a2b12b5b35c6e38c6441ccc615f21e" course="MATH 1030" chapter="14" slide="11" item="14.9">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Generally if $V={\mathbb{R}}^{n}$, $B=\{\mathbf{e}_{1},\ldots,\mathbf{e}_{n}\}$, then
-\begin{align*}
-\displaystyle \rho_{B}(\mathbf{v})=\mathbf{v}.
-\end{align*}   </paragraphs>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="13" md5="79d7c0e4160fd9ed7571d2245a03d6a9" course="MATH 1030" chapter="14" slide="11" item="14.13">
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose a vector space $V$ has dimension $n$.
+Suppose $S$ is a set of $n$ vectors in $V$ which spans $V$
+(That is, $\left\langle S \right\rangle = V$).</paragraphs>
+              <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Then, $S$ is a basis for $V$.   </paragraphs>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="10" md5="37e1d13f92ab3b2b1fe6bc10b28f426f" course="MATH 1030" chapter="14" slide="11" item="14.10">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V={\mathbb{R}}^{3}$,
-\begin{align*}
-\displaystyle B=\{\mathbf{v}_{1}=\begin{bmatrix}1\\
-1\\
-0\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}1\\
-1\\
-1\end{bmatrix},\mathbf{v}_{3}=\begin{bmatrix}1\\
-2\\
-3\end{bmatrix}\}.
-\end{align*}   </paragraphs>
-              <newcol course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We can show that $B$ is linearly independent (exercise). Hence $B$ is a basis for $V$.
-Let
-\begin{align*}
-\displaystyle \mathbf{u}=\begin{bmatrix}3\\
-4\\
-3\end{bmatrix}.
-\end{align*}   </paragraphs>
-                <collapse course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Find $\rho_{B}(\mathbf{u})$. To find $\rho_{B}(\mathbf{u})$, we compute the coefficient
-\begin{align*}
-\displaystyle \mathbf{u}=x_{1}\mathbf{v}_{1}+x_{2}\mathbf{v}_{2}+x_{3}\mathbf{v}_{3},
-\end{align*}
-i.e.
-\begin{align*}
-\displaystyle x_{1}+x_{2}+x_{3}&amp;\displaystyle=3 \\
-\displaystyle x_{1}+x+2+2x_{3}&amp;\displaystyle=4 \\
-\displaystyle x+2+3x_{3}&amp;\displaystyle=3
-\end{align*}   </paragraphs>
-                  <collapse course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Solve the system of linear equations, we have $x_{1}=2$, $x_{2}=0$, $x_{3}=1$. Hence
-\begin{align*}
-\displaystyle \rho_{B}(\mathbf{u})=\begin{bmatrix}x_{1}\\
-x_{2}\\
-x_{3}\end{bmatrix}=\begin{bmatrix}2\\
-0\\
-1\end{bmatrix}.
-\end{align*}   </paragraphs>
-                  </collapse>
-                </collapse>
-              </newcol>
-            </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="11" md5="abdd341a4e5b9918ca4453e79075312e" course="MATH 1030" chapter="14" slide="11" item="14.11">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let
-\begin{align*}
-\displaystyle B=\{\mathbf{v}_{1}=\begin{bmatrix}1\\
-2\\
-3\\
-4\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}1\\
--1\\
-1\\
--1\end{bmatrix},\mathbf{v}_{3}=\begin{bmatrix}-1\\
-1\\
-2\\
-2\end{bmatrix}.\}.
-\end{align*}   </paragraphs>
-              <newcol course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let
-\begin{align*}
-\displaystyle \mathbf{u}=\begin{bmatrix}0\\
-3\\
-11\\
-8\end{bmatrix}.
-\end{align*} </paragraphs>
-                <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="newcol">
-                  <li class="ltx_item" environment="newcol">
-                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Show that $\mathbf{u}\in\left&lt; B\right&gt;$. </paragraphs>
-                  </li>
-                  <li class="ltx_item" environment="newcol">
-                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence find $\rho_{B}(\mathbf{u})$. </paragraphs>
-                  </li>
-                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
-                </ol>
-                <newline course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
-                <collapse course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Find the solution of $\mathbf{u}=x_{1}\mathbf{v}_{1}+x_{2}\mathbf{v}_{2}+x_{3}\mathbf{v}_{3}$:
-\begin{align*}
-\displaystyle x_{1}+x_{2}-x_{3}&amp;\displaystyle=0 \\
-\displaystyle 2x_{1}-x_{2}+x_{3}&amp;\displaystyle=3 \\
-\displaystyle 3x_{1}+x_{2}+2x_{3}&amp;\displaystyle=11 \\
-\displaystyle 4x_{1}-x_{2}+2x_{3}&amp;\displaystyle=8
-\end{align*}   </paragraphs>
-                  <collapse course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We find solution $x_{1}=1,x_{2}=2,x_{3}=3$. Hence
-\begin{align*}
-\displaystyle \rho_{B}(\mathbf{u})=\begin{bmatrix}1\\
-2\\
-3\end{bmatrix}.
-\end{align*}   </paragraphs>
-                  </collapse>
-                </collapse>
-              </newcol>
-            </statement>
+            <newline course="MATH 1030" chapter="14" chapter_type="" section="1" subsection="" subsubsection="" environment=""/>
           </slide>
         </slides>
       </section>
-      <section environment="" chapter_type="" type="Section" wbtag="section" title="Change of basis" course="MATH 1030" chapter="14" num="4" serial="14.4">
-        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="14" section="4" subsection="" subsubsection="" serial="" slide="">
-          <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Change of basis</paragraphs>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Rank and nullity of a matrix" course="MATH 1030" chapter="14" num="2" serial="14.2">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" serial="" slide="">
+          <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Rank and nullity of a matrix</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="12" scope="section" id="s12" slide="12" course="MATH 1030" chapter="14" section="4" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Change of basis">
+          <slide environment="" chapter_type="Chapter" canon_num="12" scope="section" id="s12" slide="12" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Rank and nullity of a matrix">
             <keywords slide="12" environ="slide" chapter="14" course="MATH 1030">
-              <keyword chapter="14" slide="12">change-of-basis matrix from $S$ to $S^{\prime}$</keyword>
+              <keyword chapter="14" slide="12">nullity</keyword>
+              <keyword chapter="14" slide="12">rank</keyword>
+              <keyword chapter="14" slide="12">Nullity of a matrix</keyword>
+              <keyword chapter="14" slide="12">Rank of a matrix</keyword>
             </keywords>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="14" section="4" subsection="" subsubsection="" serial="" slide="12">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Change of basis</paragraphs>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" serial="" slide="12">
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Rank and nullity of a matrix</paragraphs>
             </title>
-            <newline course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment=""/>
-            <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="" wbtag="paragraphs">Let $V$ be a vector space(you can think of it as a subspace of ${\mathbb{R}}^{n}$). Let $B=\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\}$ be a basis for $V$
-and $B^{\prime}=\{\mathbf{v}^{\prime}_{1},\ldots,\mathbf{v}^{\prime}_{k}\}$ be another basis for $V$. For $\mathbf{v}\in V$. We want to find the relation between $\rho_{B}(\mathbf{v})$ and $\rho_{B^{\prime}}(\mathbf{v})$.</paragraphs>
-            <newline course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment=""/>
-            <newcol course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let
-\begin{align*}
-\displaystyle \mathbf{v}_{i}=a_{1i}\mathbf{v}^{\prime}_{1}+a_{2i}\mathbf{v}^{\prime}_{2}+\cdots+a_{ki}\mathbf{v}^{\prime}_{k},&amp;
-\end{align*}
-i.e.
-\begin{align*}
-\displaystyle \rho_{B^{\prime}}(\mathbf{v}_{i})=\begin{bmatrix}a_{1i}\\
-a_{2i}\\
-\vdots\\
-a_{ki}\end{bmatrix}.
-\end{align*}   </paragraphs>
-              <collapse course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Define the </paragraphs>
-                <inline_keyword course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol">change-of-basis matrix from $S$ to $S^{\prime}$</inline_keyword>
-                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> as
-\begin{align*}
-\displaystyle C_{{B},{B^{\prime}}}=[\rho_{B^{\prime}}(\mathbf{v}_{1})|\rho_{B^{\prime}}(\mathbf{v}_{2})|\cdots|\rho_{B^{\prime}}(\mathbf{v}_{k})]=\begin{bmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1k}\\
-a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2k}\\
-\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
-a_{k1}&amp;a_{k2}&amp;\cdots&amp;a_{kk}\end{bmatrix}.
-\end{align*}   </paragraphs>
-              </collapse>
-            </newcol>
-          </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="13" id="s13" slide="13" course="MATH 1030" chapter="14" section="4" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Change of basis">
-            <keywords slide="13" environ="slide" chapter="14" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="12" md5="91f342c0abcf6f5b43e4de63b98d574f" course="MATH 1030" chapter="14" slide="13" item="14.12">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> For $\mathbf{v}\in V$,
-\begin{align*}
-\displaystyle \rho_{B^{\prime}}(\mathbf{v})=C_{{B},{B^{\prime}}}\rho_{B}(\mathbf{v}).
-\end{align*}   </paragraphs>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="14" title="Nullity of a matrix" md5="c1d62ac388c69abb2313594e9f9c9cf1" course="MATH 1030" chapter="14" slide="12" item="14.14">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" serial="" slide="12">Nullity of a matrix</title>
+              <label wbtag="label" name="NOM" type="Definition"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A \in M_{mn}$. Then the </paragraphs>
+              <inline_keyword course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">nullity</inline_keyword>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$ is the dimension of the null space of $A$,
+$\nullity{A}=\dim(\nsp{A})$.   </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="cbdf166aaf87732a6b0b5df789ed4964" course="MATH 1030" chapter="14" slide="13" of="91f342c0abcf6f5b43e4de63b98d574f">
-              <newcol course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let
-\begin{align*}
-\displaystyle \rho_{B}(\mathbf{v})=\begin{bmatrix}\alpha_{1}\\
-\alpha_{2}\\
-\vdots\\
-\alpha_{k}\end{bmatrix},\,\rho_{B^{\prime}}(\mathbf{v})=\begin{bmatrix}\alpha^{\prime}_{1}\\
-\alpha^{\prime}_{2}\\
-\vdots\\
-\alpha^{\prime}_{k}\end{bmatrix},
-\end{align*}
-i.e.
-\begin{align*}
-\displaystyle\mathbf{v}&amp;\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\cdots+\alpha_{k}\mathbf{v}_{k} \\
-&amp;\displaystyle=\alpha^{\prime}_{1}\mathbf{v}^{\prime}_{1}+\alpha^{\prime}_{2}\mathbf{v}^{\prime}_{2}+\cdots+\alpha^{\prime}_{k}\mathbf{v}^{\prime}_{k}.
-\end{align*}   </paragraphs>
-                <collapse course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By   </paragraphs>
-                  <ref environment="newcol" chapter_type="" label="vv'" wbtag="ref" course="MATH 1030" chapter="14" slide="13" referrer-type="Proof" referrer-md5="cbdf166aaf87732a6b0b5df789ed4964">
-                    <title>UNDEFINED</title>
-                  </ref>
-                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">,
-\begin{align*}
-\displaystyle\mathbf{v}&amp;\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\cdots+\alpha_{k}\mathbf{v}_{k} \\
-&amp;\displaystyle=\alpha_{1}(a_{11}\mathbf{v}^{\prime}_{1}+a_{21}\mathbf{v}^{\prime}_{2}+\cdots+a_{k1}\mathbf{v}^{\prime}_{k}) \\
-&amp;\displaystyle+\alpha_{2}(a_{12}\mathbf{v}^{\prime}_{1}+a_{22}\mathbf{v}^{\prime}_{2}+\cdots+a_{k2}\mathbf{v}^{\prime}_{k}) \\
-&amp;\displaystyle+\cdots \\
-&amp;\displaystyle+\alpha_{2}(a_{1k}\mathbf{v}^{\prime}_{1}+a_{2k}\mathbf{v}^{\prime}_{2}+\cdots+a_{kk}\mathbf{v}^{\prime}_{k}) \\
-&amp;\displaystyle=(a_{11}\alpha_{1}+a_{12}\alpha_{2}+\cdots+a_{1k}\alpha_{k})\mathbf{v}^{\prime}_{1} \\
-&amp;\displaystyle+(a_{21}\alpha_{1}+a_{22}\alpha_{2}+\cdots+a_{2k}\alpha_{k})\mathbf{v}^{\prime}_{2} \\
-&amp;\displaystyle+\cdots \\
-&amp;\displaystyle+(a_{k1}\alpha_{1}+a_{k2}\alpha_{2}+\cdots+a_{kk}\alpha_{k})\mathbf{v}^{\prime}_{2}
-\end{align*}   </paragraphs>
-                  <collapse course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Thus
-\begin{align*}
-\displaystyle \rho_{B^{\prime}}(\mathbf{v})=\begin{bmatrix}\alpha^{\prime}_{1}\\
-\alpha^{\prime}_{2}\\
-\vdots\\
-\alpha^{\prime}_{k}\end{bmatrix}=\begin{bmatrix}a_{11}\alpha_{1}+a_{12}\alpha_{2}+\cdots+a_{1k}\alpha_{k}\\
-a_{21}\alpha_{1}+a_{22}\alpha_{2}+\cdots+a_{2k}\alpha_{k}\\
-\vdots\\
-a_{k1}\alpha_{1}+a_{k2}\alpha_{2}+\cdots+a_{kk}\alpha_{k}\end{bmatrix}
-\end{align*}
-\begin{align*}
-\displaystyle =\begin{bmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1k}\\
-a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2k}\\
-\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
-a_{k1}&amp;a_{k2}&amp;\cdots&amp;a_{kk}\end{bmatrix}\begin{bmatrix}\alpha_{1}\\
-\alpha_{2}\\
-\vdots\\
-\alpha_{k}\end{bmatrix}=C_{{B},{B^{\prime}}}\rho_{B}(\mathbf{v})
-\end{align*}   </paragraphs>
-                    <qed course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
-                  </collapse>
-                </collapse>
-              </newcol>
-            </substatement>
+            <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="15" title="Rank of a matrix" md5="c447c943bc95305c8f002feeffd4fde6" course="MATH 1030" chapter="14" slide="12" item="14.15">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" serial="" slide="12">Rank of a matrix</title>
+              <label wbtag="label" name="ROM" type="Definition"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A \in M_{mn}$. Then the </paragraphs>
+              <inline_keyword course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">rank</inline_keyword>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$ is the dimension of the column space of $A$,
+$\rank{A}=\dim(\csp{A})$.   </paragraphs>
+            </statement>
+            <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="14" id="s14" slide="14" course="MATH 1030" chapter="14" section="4" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Change of basis">
-            <keywords slide="14" environ="slide" chapter="14" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="13" md5="642ffb307fc38c1366c64eb97d948c01" course="MATH 1030" chapter="14" slide="14" item="14.13">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> In example 7,
-let $V={\mathbb{R}}^{3}$,
-\begin{align*}
-\displaystyle B=\{\mathbf{v}_{1}=\begin{bmatrix}1\\
-1\\
-0\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}1\\
-1\\
-1\end{bmatrix},\mathbf{v}_{3}=\begin{bmatrix}1\\
-2\\
-3\end{bmatrix}\},
-\end{align*}
-\begin{align*}
-\displaystyle \mathbf{u}=\begin{bmatrix}3\\
-4\\
-3\end{bmatrix}.
-\end{align*}   </paragraphs>
-              <newcol course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then
-\begin{align*}
-\displaystyle \rho_{B}(\mathbf{u})=\begin{bmatrix}2\\
-0\\
-1\end{bmatrix}.
-\end{align*}
-\begin{align*}
-\displaystyle B^{\prime}=\{\mathbf{v}^{\prime}_{1}=\begin{bmatrix}0\\
-0\\
-1\end{bmatrix},\mathbf{v}^{\prime}_{2}=\begin{bmatrix}1\\
-0\\
-1\end{bmatrix},\mathbf{v}^{\prime}_{3}=\begin{bmatrix}1\\
-1\\
--1\end{bmatrix}\}.
-\end{align*}   </paragraphs>
-                <collapse course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then
-\begin{align*}
-\displaystyle\mathbf{v}_{1}&amp;\displaystyle=\mathbf{v}^{\prime}_{1}+\mathbf{v}^{\prime}_{3} \\
-\displaystyle\mathbf{v}_{2}&amp;\displaystyle=2\mathbf{v}^{\prime}_{1}+\mathbf{v}^{\prime}_{3} \\
-\displaystyle\mathbf{v}_{3}&amp;\displaystyle=6\mathbf{v}^{\prime}_{1}-\mathbf{v}^{\prime}_{2}+2\mathbf{v}^{\prime}_{3}.
-\end{align*}   </paragraphs>
-                  <collapse course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then
-\begin{align*}
-\displaystyle C_{{B},{B^{\prime}}}=\begin{bmatrix}1&amp;2&amp;6\\
-0&amp;0&amp;-1\\
-1&amp;1&amp;2\end{bmatrix}
-\end{align*}   </paragraphs>
-                    <collapse course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                      <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So
-\begin{align*}
-\displaystyle \rho_{B^{\prime}}(\mathbf{u})=C_{{B},{B^{\prime}}}\rho_{B}(\mathbf{u})=\begin{bmatrix}1&amp;2&amp;6\\
-0&amp;0&amp;-1\\
-1&amp;1&amp;2\end{bmatrix}\begin{bmatrix}2\\
-0\\
-1\end{bmatrix}=\begin{bmatrix}8\\
--1\\
-4\end{bmatrix}.
-\end{align*}   </paragraphs>
-                      <collapse course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                        <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Verification:
-\begin{align*}
-\displaystyle \mathbf{u}=8\mathbf{v}^{\prime}_{1}-\mathbf{v}^{\prime}_{2}+4\mathbf{v}^{\prime}_{3},
-\end{align*}
-i.e.
-\begin{align*}
-\displaystyle \begin{bmatrix}3\\
-4\\
-3\end{bmatrix}=8\begin{bmatrix}0\\
-0\\
-1\end{bmatrix}-\begin{bmatrix}1\\
-0\\
-1\end{bmatrix}+4\begin{bmatrix}1\\
-1\\
--1\end{bmatrix}.
-\end{align*}   </paragraphs>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="13" id="s13" slide="13" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Rank and nullity of a matrix">
+            <keywords slide="13" environ="slide" chapter="14" course="MATH 1030">
+              <keyword chapter="14" slide="13">Rank and nullity of a matrix</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="16" md5="6ad6ee4515f51f22c5f1fa3d6201cca4" course="MATH 1030" chapter="14" slide="13" item="14.16">
+              <inline_keyword course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">Rank and nullity of a matrix</inline_keyword>
+              <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Let us compute the rank and nullity of
+\[
+A=\begin{bmatrix}
+2 &amp; -4 &amp; -1 &amp; 3 &amp; 2 &amp; 1 &amp; -4\\
+1 &amp; -2 &amp; 0 &amp; 0 &amp; 4 &amp; 0 &amp; 1\\
+-2 &amp; 4 &amp; 1 &amp; 0 &amp; -5 &amp; -4 &amp; -8\\
+1 &amp; -2 &amp; 1 &amp; 1 &amp; 6 &amp; 1 &amp; -3\\
+2 &amp; -4 &amp; -1 &amp; 1 &amp; 4 &amp; -2 &amp; -1\\
+-1 &amp; 2 &amp; 3 &amp; -1 &amp; 6 &amp; 3 &amp; -1
+\end{bmatrix}
+\]   </paragraphs>
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> To do this, we will first row-reduce the matrix since that will help us determine bases for the null space and column space.
+\[
+\begin{bmatrix}
+\leading{1} &amp; -2 &amp; 0 &amp; 0 &amp; 4 &amp; 0 &amp; 1\\
+0 &amp; 0 &amp; \leading{1} &amp; 0 &amp; 3 &amp; 0 &amp; -2\\
+0 &amp; 0 &amp; 0 &amp; \leading{1} &amp; -1 &amp; 0 &amp; -3\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \leading{1} &amp; 1\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0
+\end{bmatrix}
+\]   </paragraphs>
+                <collapse course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> From this row-equivalent matrix in reduced row-echelon form we record $D=\set{1,\,3,\,4,\,6}$ and $F=\set{2,\,5,\,7}$.</paragraphs>
+                  <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By </paragraphs>
+                    <ref environment="newcol" chapter_type="" label="BCS" wbtag="ref" course="MATH 1030" chapter="14" slide="13" referrer-type="Example" referrer-md5="6ad6ee4515f51f22c5f1fa3d6201cca4" src-course="MATH 1030" src-chapter="13" src-slide="12" type="Theorem" item="13.11" src-filename="lec13.xml" md5="5637a43b21d978d00e6ea9de4a200b78" class="lcref" serial="">
+                      <title>Basis of the Column Space</title>
+                    </ref>
+                    <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, for each index in $D$, we can create a single basis vector.
+In fact $T=\{\vect{A}_1, \vect{A}_3, \vect{A}_4, \vect{A}_6\}$ is a basis for $\csp{A}$.
+In total the basis will have $4$ vectors, so the column space of $A$ will have dimension $4$ and we write $\rank{A}=4$.</paragraphs>
+                    <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By </paragraphs>
+                      <ref environment="newcol" chapter_type="" label="SSNS" wbtag="ref" course="MATH 1030" chapter="14" slide="13" referrer-type="Example" referrer-md5="6ad6ee4515f51f22c5f1fa3d6201cca4" src-course="MATH 1030" src-chapter="11" src-slide="15" type="Theorem" item="11.11" src-filename="lec11.xml" md5="b97fc03ed661ec578230fa1f3a73cd2e" class="lcref" serial="">
+                        <title>Theorem 11.11</title>
+                      </ref>
+                      <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, for each index in $F$, we can create a single basis vector.  In total the basis will have $3$ vectors, so the null space of $A$ will have dimension $3$ and we write $\nullity{A}=3$. In fact:</paragraphs>
+                      <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                      <collapse course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \[
+R = \left\{\colvector{ 2 \\ 1 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0},
+\colvector{ -4 \\ 0 \\ -3 \\ 1 \\ 1 \\ 0 \\ 0},
+\colvector{-1 \\ 0 \\ 2 \\ 3 \\ 0 \\ -1 \\ 1}
+\right\}
+\]
+is a basis for $\nsp{A}$.   </paragraphs>
                       </collapse>
                     </collapse>
                   </collapse>
                 </collapse>
               </newcol>
             </statement>
+            <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="14" id="s14" slide="14" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Rank and nullity of a matrix">
+            <keywords slide="14" environ="slide" chapter="14" course="MATH 1030">
+              <keyword chapter="14" slide="14">Computing rank and nullity</keyword>
+              <keyword chapter="14" slide="14">Dimension Formula</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="17" title="Computing rank and nullity" md5="8fbdeb2eddfd9635e063c46005b5b958" course="MATH 1030" chapter="14" slide="14" item="14.17">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" serial="" slide="14">Computing rank and nullity</title>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A \in M_{mn}$ and $A \rref B$.
+Let $r$ denote the number of pivot columns ($=$ number of nonzero rows).
+Then $\rank{A}=r$ and $\nullity{A}=n-r$.   </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="66f143de8aad86386ff3572d49cf647f" course="MATH 1030" chapter="14" slide="14" of="8fbdeb2eddfd9635e063c46005b5b958">
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $D=\{d_1, \ldots, d_r\}$ be the indexes of the pivot columns of $B$.
+By </paragraphs>
+                <ref environment="newcol" chapter_type="" label="BCS" wbtag="ref" course="MATH 1030" chapter="14" slide="14" referrer-type="Proof" referrer-md5="66f143de8aad86386ff3572d49cf647f" src-course="MATH 1030" src-chapter="13" src-slide="12" type="Theorem" item="13.11" src-filename="lec13.xml" md5="5637a43b21d978d00e6ea9de4a200b78" class="lcref" serial="">
+                  <title>Basis of the Column Space</title>
+                </ref>
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $\{\vect{A}_{d_1}, \ldots, \vect{A}_{d_r}\}$ is a basis for $\csp{A}$.
+So $\rank{A}=r$.</paragraphs>
+                <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">By </paragraphs>
+                <ref environment="newcol" chapter_type="" label="SSNS" wbtag="ref" course="MATH 1030" chapter="14" slide="14" referrer-type="Proof" referrer-md5="66f143de8aad86386ff3572d49cf647f" src-course="MATH 1030" src-chapter="11" src-slide="15" type="Theorem" item="11.11" src-filename="lec11.xml" md5="b97fc03ed661ec578230fa1f3a73cd2e" class="lcref" serial="">
+                  <title>Theorem 11.11</title>
+                </ref>
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, each free variable corresponding to a single basis vector for the null space.
+So $\nullity{A}$ is the number of free variables $=n-r$.   </paragraphs>
+              </newcol>
+            </substatement>
+            <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
+            <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="18" title="Dimension Formula" md5="001f3522fc240347256c4cb7c8ae7acc" course="MATH 1030" chapter="14" slide="14" item="14.18">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" serial="" slide="14">Rank-Nullity Theorem</title>
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" serial="" slide="14">Dimension Formula</title>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A\in M_{mn}$, then
+\begin{align*}
+\displaystyle r\left(A\right)+n\left(A\right)=n.
+\end{align*}   </paragraphs>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="15" id="s15" slide="15" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Rank and nullity of a matrix">
+            <keywords slide="15" environ="slide" chapter="14" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="19" md5="91c1f6b79f4b46fcceae31327e3b06d9" course="MATH 1030" chapter="14" slide="15" item="14.19">
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $A$ be a $m\times n$ matrix. Then
+\begin{align*}
+\displaystyle r\left(A\right)=r\left(A^{t}\right).
+\end{align*}   </paragraphs>
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Equivalently
+\begin{align*}
+\displaystyle \dim\mathcal{C}\left(A\right)=\dim\mathcal{R}\!\left(A\right).
+\end{align*}   </paragraphs>
+              </newcol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="493def46eaf49f9eaa8ea28ea20f15a2" course="MATH 1030" chapter="14" slide="15" of="91c1f6b79f4b46fcceae31327e3b06d9">
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $A\xrightarrow{\text{RREF}}B$.</paragraphs>
+                <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $r$ denote the number of pivot columns ($=$ number of nonzero rows).</paragraphs>
+                  <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then by the above discussion $r=r\left(A\right)$. By </paragraphs>
+                    <ref environment="newcol" chapter_type="" label="BRS" wbtag="ref" course="MATH 1030" chapter="14" slide="15" referrer-type="Proof" referrer-md5="493def46eaf49f9eaa8ea28ea20f15a2" src-course="MATH 1030" src-chapter="13" src-slide="20" type="Theorem" item="13.19" src-filename="lec13.xml" md5="d8c0f0f15c1441f7313541b5893b6454" class="lcref" serial="">
+                      <title>Basis for the Row Space</title>
+                    </ref>
+                    <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, the first $r$ columns of $B^{t}$ form a basis for $\mathcal{R}\!\left(A\right) = \mathcal{C}(A^t)$.
+Hence $r=r\left(A^{t}\right)$. This completes the proof.   </paragraphs>
+                    <qed course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </substatement>
+            <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Let us take a look at the rank and nullity of a square matrix.   </paragraphs>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="16" id="s16" slide="16" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Rank and nullity of a matrix">
+            <keywords slide="16" environ="slide" chapter="14" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="20" md5="85392f16786ff4c91d59d168520f8b3c" course="MATH 1030" chapter="14" slide="16" item="14.20">
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The matrix
+\begin{align*}
+\displaystyle E=\begin{bmatrix}0&amp;4&amp;-1&amp;2&amp;2&amp;3&amp;1\\
+2&amp;-2&amp;1&amp;-1&amp;0&amp;-4&amp;-3\\
+-2&amp;-3&amp;9&amp;-3&amp;9&amp;-1&amp;9\\
+-3&amp;-4&amp;9&amp;4&amp;-1&amp;6&amp;-2\\
+-3&amp;-4&amp;6&amp;-2&amp;5&amp;9&amp;-4\\
+9&amp;-3&amp;8&amp;-2&amp;-4&amp;2&amp;4\\
+8&amp;2&amp;2&amp;9&amp;3&amp;0&amp;9\end{bmatrix}
+\end{align*}   </paragraphs>
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> is row-equivalent to the matrix in reduced row-echelon form,
+\begin{align*}
+\displaystyle \begin{bmatrix}\boxed{1}&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\\
+0&amp;\boxed{1}&amp;0&amp;0&amp;0&amp;0&amp;0\\
+0&amp;0&amp;\boxed{1}&amp;0&amp;0&amp;0&amp;0\\
+0&amp;0&amp;0&amp;\boxed{1}&amp;0&amp;0&amp;0\\
+0&amp;0&amp;0&amp;0&amp;\boxed{1}&amp;0&amp;0\\
+0&amp;0&amp;0&amp;0&amp;0&amp;\boxed{1}&amp;0\\
+0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;\boxed{1}\end{bmatrix}
+\end{align*}   </paragraphs>
+                <collapse course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> With $n=7$ columns and $r=7$ nonzero rows tells us the rank is $r\left(E\right)=7$ and the nullity is $n\left(E\right)=7-7=0$.   </paragraphs>
+                </collapse>
+              </newcol>
+            </statement>
+            <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> The value of either the nullity or the rank are enough to characterize a nonsingular matrix.</paragraphs>
+            <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="17" id="s17" slide="17" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Rank and nullity of a matrix">
+            <keywords slide="17" environ="slide" chapter="14" course="MATH 1030">
+              <keyword chapter="14" slide="17">Rank and Nullity of a Nonsingular Matrix</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="21" title="Rank and Nullity of a Nonsingular Matrix" md5="5b5cb465f71cc24c06acacbc9ca0c165" course="MATH 1030" chapter="14" slide="17" item="14.21">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" serial="" slide="17">Rank and Nullity of a Nonsingular Matrix</title>
+              <label wbtag="label" name="RNNM" type="Theorem"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$. The following are equivalent. </paragraphs>
+              <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> A is nonsingular. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The rank of $A$ is $n$, $r\left(A\right)=n$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The nullity of $A$ is zero, $n\left(A\right)=0$. </paragraphs>
+                </li>
+              </ol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" data-lecture-skip="true" md5="a2cbab1cd41c873712cdae7b3a5d0e09" course="MATH 1030" chapter="14" slide="17" of="5b5cb465f71cc24c06acacbc9ca0c165">
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> (1 $\Rightarrow$ 2)   </paragraphs>
+                <newcol course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If $A$ is nonsingular then $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$.</paragraphs>
+                  <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$, then the column space has dimension $n$, so the rank of $A$ is $n$.   </paragraphs>
+                  </collapse>
+                </newcol>
+                <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">(2 $\Rightarrow$ 3)   </paragraphs>
+                <newcol course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose $r\left(A\right)=n$. Then the dimension formula gives
+\begin{align*}
+\displaystyle n\left(A\right)&amp;\displaystyle=n-r\left(A\right) \\
+&amp;\displaystyle=n-n \\
+&amp;\displaystyle=0
+\end{align*}   </paragraphs>
+                </newcol>
+                <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">(3 $\Rightarrow$ 1)   </paragraphs>
+                <newcol course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose $n\left(A\right)=0$, so a basis for the null space of $A$ is the empty set. This implies that ${\mathcal{N}}\!\left(A\right)=\left\{\mathbf{0}\right\}$ and hence $A$ is nonsingular.   </paragraphs>
+                </newcol>
+                <qed course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+            <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> With a new equivalence for a nonsingular matrix, we can update our list of equivalences which now becomes a list requiring double digits to number.   </paragraphs>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="18" id="s18" slide="18" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Rank and nullity of a matrix">
+            <keywords slide="18" environ="slide" chapter="14" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="22" md5="3c71a3421f3330a07ad9a54adecd0e2e" course="MATH 1030" chapter="14" slide="18" item="14.22">
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$. The following are equivalent. </paragraphs>
+              <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $A$ is nonsingular. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $A$ row-reduces to the identity matrix. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\left\{\mathbf{0}\right\}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The linear system $\mathcal{LS}({A},{\mathbf{b}})$ has a unique solution for every possible choice of $\mathbf{b}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The columns of $A$ are a linearly independent set. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $A$ is invertible. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The column space of $A$ is ${\mathbb{R}}^{n}$, $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The columns of $A$ are a basis for ${\mathbb{R}}^{n}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The rank of $A$ is $n$, $r\left(A\right)=n$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The nullity of $A$ is zero, $n\left(A\right)=0$. </paragraphs>
+                </li>
+              </ol>
+            </statement>
+            <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
           </slide>
         </slides>
       </section>
-      <section environment="" chapter_type="" type="Section" wbtag="section" title="Similar matrices" course="MATH 1030" chapter="14" num="5" serial="14.5">
-        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="14" section="5" subsection="" subsubsection="" serial="" slide="">
-          <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Similar matrices</paragraphs>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Bases and nonsingular matrices" course="MATH 1030" chapter="14" num="3" serial="14.3">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="14" section="3" subsection="" subsubsection="" serial="" slide="">
+          <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Bases and nonsingular matrices</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="15" scope="section" id="s15" slide="15" course="MATH 1030" chapter="14" section="5" subsection="" subsubsection="" chapter_title="Linear transformations and change of basis" section_title="Similar matrices">
-            <keywords slide="15" environ="slide" chapter="14" course="MATH 1030">
-              <keyword chapter="14" slide="15">similar matrices</keyword>
-            </keywords>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="14" section="5" subsection="" subsubsection="" serial="" slide="15">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Similar matrices</paragraphs>
+          <slide environment="" chapter_type="Chapter" canon_num="19" scope="section" id="s19" slide="19" course="MATH 1030" chapter="14" section="3" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Bases and nonsingular matrices">
+            <keywords slide="19" environ="slide" chapter="14" course="MATH 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="14" section="3" subsection="" subsubsection="" serial="" slide="19">
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Bases and nonsingular matrices</paragraphs>
             </title>
-            <newline course="MATH 1030" chapter="14" chapter_type="" section="5" subsection="" subsubsection="" environment=""/>
-            <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs">In this section, we will give the motivation of </paragraphs>
-            <inline_keyword course="MATH 1030" chapter="14" chapter_type="" section="5" subsection="" subsubsection="" environment="">similar matrices</inline_keyword>
-            <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs">.
-Let $V={\mathbb{R}}^{n}$, $B=\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\}$ be a basis for $V$.
-Let $B^{\prime}=\{\mathbf{e}_{1},\ldots,\mathbf{e}_{n}\}$. Let $Q=C_{{B},{B^{\prime}}}$.
-Then for any $\mathbf{v}\in V$,
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="20" id="s20" slide="20" course="MATH 1030" chapter="14" section="3" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Bases and nonsingular matrices">
+            <keywords slide="20" environ="slide" chapter="14" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="23" md5="288871d0859d6e31b25fbbeab12f2a99" course="MATH 1030" chapter="14" slide="20" item="14.23">
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $m$.</paragraphs>
+              <newline course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Then, the columns of $A$ is a basis for ${\mathbb{R}}^{m}$ if and only if $A$ is nonsingular.   </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="28f7b8561279a22b0e810609da2e2389" course="MATH 1030" chapter="14" slide="20" of="288871d0859d6e31b25fbbeab12f2a99">
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This is a direct consequence of the theorem  </paragraphs>
+                <ref environment="newcol" chapter_type="" label="NME2" wbtag="ref" course="MATH 1030" chapter="14" slide="20" referrer-type="Proof" referrer-md5="28f7b8561279a22b0e810609da2e2389" src-course="MATH 1030" src-chapter="12" src-slide="21" type="Theorem" item="12.17" src-filename="lec12.xml" md5="ea0a4e97a6298114280788267ab8dc7f" class="lcref" serial="">
+                  <title>Nonsingular Matrix Equivalences, Round 2</title>
+                </ref>
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">:</paragraphs>
+                <newline course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If columns of $A$ form a basis,
+then in particular they are linearly independent.
+So, item 5 of the theorem holds.</paragraphs>
+                  <newline course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">It now follows from the theorem that item 1,
+namely that $A$ is nonsingular, also holds.</paragraphs>
+                  <newline course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Conversely, suppose $A$ is nonsingular.</paragraphs>
+                    <newline course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then, by Item 5 of </paragraphs>
+                      <ref environment="newcol" chapter_type="" label="NME2" wbtag="ref" course="MATH 1030" chapter="14" slide="20" referrer-type="Proof" referrer-md5="28f7b8561279a22b0e810609da2e2389" src-course="MATH 1030" src-chapter="12" src-slide="21" type="Theorem" item="12.17" src-filename="lec12.xml" md5="ea0a4e97a6298114280788267ab8dc7f" class="lcref" serial="">
+                        <title>Nonsingular Matrix Equivalences, Round 2</title>
+                      </ref>
+                      <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> the columns of $A$ are linearly independent,
+and by Item 4 they span $\mathbb{R}^m$.
+Hence, the columns of $A$ is a basis for $\mathbb{R}^m$.   </paragraphs>
+                      <qed course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="21" id="s21" slide="21" course="MATH 1030" chapter="14" section="3" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Bases and nonsingular matrices">
+            <keywords slide="21" environ="slide" chapter="14" course="MATH 1030">
+              <keyword chapter="14" slide="21">Nonsingular Matrix Equivalences</keyword>
+            </keywords>
+            <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="" wbtag="paragraphs"> In fact, we may further extend </paragraphs>
+            <ref environment="" chapter_type="" label="NME2" wbtag="ref" course="MATH 1030" chapter="14" slide="21" src-course="MATH 1030" src-chapter="12" src-slide="21" type="Theorem" item="12.17" src-filename="lec12.xml" md5="ea0a4e97a6298114280788267ab8dc7f" class="lcref" serial="">
+              <title>Nonsingular Matrix Equivalences, Round 2</title>
+            </ref>
+            <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="" wbtag="paragraphs"> as follows:   </paragraphs>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="24" title="Nonsingular Matrix Equivalences" md5="69f01bd979af012e7b7ec8716e77a339" course="MATH 1030" chapter="14" slide="21" item="14.24">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="14" section="3" subsection="" subsubsection="" serial="" slide="21">Nonsingular Matrix Equivalences</title>
+              <label wbtag="label" name="NME25" type="Theorem"/>
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose that $A$ is an $m\times m$ square matrix.
+The following are equivalent: </paragraphs>
+                <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="newcol">
+                  <li class="ltx_item" environment="newcol">
+                    <collapse xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $A$ is nonsingular. </paragraphs>
+                    </collapse>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <collapse xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $A$ row-reduces to the identity matrix. </paragraphs>
+                    </collapse>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <collapse xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$. </paragraphs>
+                    </collapse>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <collapse xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The linear system $\mathcal{LS}({A},{\mathbf{b}})$ has a unique solution for every possible choice of $\mathbf{b}$. </paragraphs>
+                    </collapse>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <collapse xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The columns of $A$ form a linearly independent set. </paragraphs>
+                    </collapse>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <collapse xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The columns of $A$ form a basis for $\mathbb{R}^m$. </paragraphs>
+                    </collapse>
+                  </li>
+                </ol>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="22" data-lecture-skip="true" id="s22" slide="22" course="MATH 1030" chapter="14" section="3" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Bases and nonsingular matrices">
+            <keywords slide="22" environ="slide" chapter="14" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="25" md5="e792855dc062396fab49da4283e86e82" course="MATH 1030" chapter="14" slide="22" item="14.25">
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Consider $S^{\prime}=\left\{\mathbf{v}_{1}=\begin{bmatrix}1\\
+0\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}1\\
+1\end{bmatrix}\right\}$.</paragraphs>
+              <newline course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Let
 \begin{align*}
-\displaystyle \rho_{B^{\prime}}(\mathbf{v})=C_{{B},{B^{\prime}}}\rho_{B}(\mathbf{v})
-\end{align*}
-\begin{align*}
-\displaystyle \mathbf{v}=Q\rho_{B}(\mathbf{v}).
+\displaystyle A=[\mathbf{v}_{1}|\mathbf{v}_{2}]=\begin{bmatrix}1&amp;1\\
+0&amp;1\end{bmatrix}
 \end{align*}   </paragraphs>
-            <newcol course="MATH 1030" chapter="14" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $\mathbf{w}=L_{A}(\mathbf{v})=A\mathbf{v}$. Then
-\begin{align*}
-\displaystyle \rho_{B^{\prime}}(\mathbf{w})=\rho_{B^{\prime}}(A\mathbf{v})
-\end{align*}
-\begin{align*}
-\displaystyle \rho_{B^{\prime}}(\mathbf{w})=A\mathbf{v}=A\rho_{B^{\prime}}(\mathbf{v})
-\end{align*}
-\begin{align*}
-\displaystyle Q\rho_{B}(\mathbf{w})=AQ\rho_{B}(\mathbf{v}).
-\end{align*}
-\begin{align*}
-\displaystyle \rho_{B}(\mathbf{w})=Q^{-1}AQ\rho_{B}(\mathbf{v}).
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Exercise.</paragraphs>
+                </strong>
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The matrix $A$ is nonsingular.</paragraphs>
+                <newline course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence, $S^{\prime}$ is a basis for ${\mathbb{R}}^{2}$.   </paragraphs>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="23" id="s23" slide="23" course="MATH 1030" chapter="14" section="3" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Bases and nonsingular matrices">
+            <keywords slide="23" environ="slide" chapter="14" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="26" md5="8af5eedb4d0ab7c9e4b8bb12049aa0ad" course="MATH 1030" chapter="14" slide="23" item="14.26">
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> \begin{align*}
+\displaystyle A=\begin{bmatrix}-7&amp;-6&amp;-12\\
+5&amp;5&amp;7\\
+1&amp;0&amp;4\end{bmatrix}.
 \end{align*}   </paragraphs>
-              <collapse course="MATH 1030" chapter="14" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So we say that two matrices $A_{1},A_{2}$ are similar if there exists an invertible matrix $Q$ such that $Q^{-1}A_{1}Q=A_{2}$.
-More details will be given in lecture 19.</paragraphs>
-                <newline course="MATH 1030" chapter="14" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
-              </collapse>
-            </newcol>
-            <comment course="MATH 1030" chapter="14" chapter_type="" section="5" subsection="" subsubsection="" environment="">DELIMITER</comment>
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> It may be shown that $A$ is row equivalent to the $3\times 3$
+identity matrix.</paragraphs>
+                <newline course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence $A$ is nonsingular,
+so the columns of $A$ form a basis for ${\mathbb{R}}^{3}$.   </paragraphs>
+                </collapse>
+              </newcol>
+            </statement>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Column Space of a Nonsingular Matrix" course="MATH 1030" chapter="14" num="4" serial="14.4">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="14" section="4" subsection="" subsubsection="" serial="" slide="">
+          <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Column Space of a Nonsingular Matrix</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="24" scope="section" id="s24" slide="24" course="MATH 1030" chapter="14" section="4" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Column Space of a Nonsingular Matrix">
+            <keywords slide="24" environ="slide" chapter="14" course="MATH 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="14" section="4" subsection="" subsubsection="" serial="" slide="24">
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Column Space of a Nonsingular Matrix</paragraphs>
+            </title>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="25" id="s25" slide="25" course="MATH 1030" chapter="14" section="4" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Column Space of a Nonsingular Matrix">
+            <keywords slide="25" environ="slide" chapter="14" course="MATH 1030">
+              <keyword chapter="14" slide="25">Column Space of a Nonsingular Matrix</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="27" title="Column Space of a Nonsingular Matrix" md5="8b140b74500bacd1dc31d5badad91456" course="MATH 1030" chapter="14" slide="25" item="14.27">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="14" section="4" subsection="" subsubsection="" serial="" slide="25">Column Space of a Nonsingular Matrix</title>
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is a square matrix of size $n$. Then $A$ is nonsingular if and only if $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$.   </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="4ff2e716a7d06ce5274b4090b39abad3" course="MATH 1030" chapter="14" slide="25" of="8b140b74500bacd1dc31d5badad91456">
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> See </paragraphs>
+                <ref environment="newcol" chapter_type="" label="thm:ANSRM" wbtag="ref" course="MATH 1030" chapter="14" slide="25" referrer-type="Proof" referrer-md5="4ff2e716a7d06ce5274b4090b39abad3" src-course="MATH 1030" src-chapter="11" src-slide="12" type="Theorem" item="11.9" src-filename="lec11.xml" md5="abc525077f7808b90a287e394f59ac82" class="lcref" serial="">
+                  <title>Theorem 11.9</title>
+                </ref>
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">.   </paragraphs>
+                <qed course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="26" id="s26" slide="26" course="MATH 1030" chapter="14" section="4" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Column Space of a Nonsingular Matrix">
+            <keywords slide="26" environ="slide" chapter="14" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="28" md5="b01b2f13a8fd2e905f6408481bd0d9fe" course="MATH 1030" chapter="14" slide="26" item="14.28">
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}0&amp;1&amp;2&amp;3\\
+-1&amp;1&amp;2&amp;1\\
+0&amp;1&amp;0&amp;2\\
+1&amp;1&amp;1&amp;4\\
+\end{bmatrix}.
+\end{align*}   </paragraphs>
+              <newcol course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We can show that $A$ is nonsingular as $A\xrightarrow{\text{RREF}}I_{4}$.
+So $\mathcal{C}\left(A\right)={\mathbb{R}}^{4}$.   </paragraphs>
+              </newcol>
+            </statement>
+            <newline course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment=""/>
+            <comment course="MATH 1030" chapter="14" chapter_type="" section="4" subsection="" subsubsection="" environment="">DELIMITER</comment>
           </slide>
         </slides>
       </section>

@@ -113,11 +113,133 @@ S^{\prime}=\left\{\begin{bmatrix}1\\
 is also a basis.  
 @endcol
 @end
-@section{Bases for spans of column vectors}
+@section{Bases for Spans of Column vectors}
+@subsection{Column Spaces and Systems of Equations}
+@defn
+@title{Column Space of a Matrix}
+@label{CSM}
+Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$. Then the @keyword{column space} of $A$, written $\mathcal{C}\left(A\right)$, is the subset of ${\mathbb{R}}^{m}$ containing all linear combinations of the columns of $A$,
+\begin{align*}
+\displaystyle \mathcal{C}\left(A\right)=\mathrm{Span}\{\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}\}\end{align*}  
+@end
+@slide
+@thm
+@title{Column Spaces and Consistent Systems}
+@label{CSCS}
+Suppose $A$ is an $m\times n$ matrix and $\mathbf{b}$ is a vector of size $m$.
+Then $\mathbf{b}\in\mathcal{C}\left(A\right)$ if and only if $A\mathbf{x} = \mathbf{b}$ is consistent.  
+@end
+@proof
+@newcol
+($\Rightarrow$) Suppose $\mathbf{b}\in\mathcal{C}\left(A\right)$. Then we can write $\mathbf{b}$ as some linear combination of the columns of $A$. Then by @ref{RCLS} we can use the scalars from this linear combination to form a solution to $A\mathbf{x} = \mathbf{b}$, so this system is consistent.
+
+($\Leftarrow$) If $A\mathbf{x} = \mathbf{b}$ is consistent, there is a solution that may be used with @ref{RCLS} to write $\mathbf{b}$ as a linear combination of the columns of $A$. This qualifies $\mathbf{b}$ for membership in $\mathcal{C}\left(A\right)$.  
+@qed
+@endcol
+@end
+This theorem tells us that asking if the vector equation $A\mathbf{x} = \mathbf{b}$ has a solution is exactly the same question as asking if $\mathbf{b}$ is in the column space of $A$.
+
+@newcol
+Thus, an alternative (and popular) definition of the column space of an $m\times n$ matrix $A$ is
+\begin{align*}
+\displaystyle\mathcal{C}\left(A\right)&\displaystyle=\left\{\left.\mathbf{y}\in{\mathbb{R}}^{m}\,\right|\,\mathbf{y}=A\mathbf{x}\text{ for some }\mathbf{x}\in{\mathbb{R}}^{n}\right\}=\left\{\left.A\mathbf{x}\,\right|\,\mathbf{x}\in{\mathbb{R}}^{n}\right\}\subseteq{\mathbb{R}}^{m}
+\end{align*}  
+@endcol
 @slide
 @eg
-@keyword{Describe $\mathcal{C}\left(A\right)$ by basis}
+Consider the column space of the $3\times 4$ matrix $A$,
+\begin{align*}
+\displaystyle A=\begin{bmatrix}3&2&1&-4\\
+-1&1&-2&3\\
+2&-4&6&-8\end{bmatrix}
+\end{align*}  
+@newcol
+Show that $\mathbf{v}=\begin{bmatrix}18\\
+-6\\
+12\end{bmatrix}$ is in the column space of $A$, $\mathbf{v}\in\mathcal{C}\left(A\right)$.
+The above theorem says that we need to check the consistency of $\mathcal{LS}({A},{v})$.
+From the augmented matrix and row-reduce,
+\begin{align*}
+\displaystyle \begin{bmatrix}3&2&1&-4&18\\
+-1&1&-2&3&-6\\
+2&-4&6&-8&12\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&1&-2&6\\
+0&\boxed{1}&-1&1&0\\
+0&0&0&0&0\end{bmatrix}
+\end{align*}  
+@col
+Since the last column is not a pivot column, so the system is consistent and hence $v\in\mathcal{C}\left(A\right)$.
+In fact, we have
+\begin{align*}
+\displaystyle \mathbf{v}=6\mathbf{A}_{1}.
+\end{align*}  
+@col
+Next we show that $\mathbf{w}=\begin{bmatrix}2\\
+1\\
+-3\end{bmatrix}$ is not in the column space of $A$, $\mathbf{w}\not\in\mathcal{C}\left(A\right)$.
+The above theorem says that we need to check the consistency of $\mathcal{LS}({A},{v})$.
+From the augmented matrix and row-reduce,
+\begin{align*}
+\displaystyle \begin{bmatrix}3&2&1&-4&2\\
+-1&1&-2&3&1\\
+2&-4&6&-8&-3\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&0&1&-2&0\\
+0&\boxed{1}&-1&1&0\\
+0&0&0&0&\boxed{1}\end{bmatrix}
+\end{align*}  
+@col
+Since the final column is a pivot column, the system is inconsistent and therefore $\mathbf{w}\not\in\mathcal{C}\left(A\right)$.  
+@endcol
+@end
+<!--
+The next two examples illustrate the main idea of describing $\mathcal{C}\left(A\right)$. 
+--> 
+<!-- 
+@eg
+@title{Describe $\mathcal{C}\left(A\right)$ as a null space}
+Let
+\begin{align*}
+\displaystyle A=\begin{bmatrix}1&2&7&1&-1\\
+1&1&3&1&0\\
+3&2&5&-1&9\\
+1&-1&-5&2&0\end{bmatrix}.
+\end{align*}  
+@newcol
+Find $\mathcal{C}\left(A\right)$. Let’s determine if $\mathbf{v}=\begin{bmatrix}v_{1}\\
+\vdots\\
+v_{4}\end{bmatrix}\in\mathrm{Span}\,S$.
 
+@col
+Applying Gauss-Jordan elimination to the augmented matrix
+\begin{align*}
+\displaystyle \begin{bmatrix}1&2&7&1&-1&v_{1}\\
+1&1&3&1&0&v_{2}\\
+3&2&5&-1&9&v_{3}\\
+1&-1&-5&2&0&v_{4}\end{bmatrix},
+\end{align*}  
+@col
+we obtain
+\begin{align*}
+\displaystyle \begin{bmatrix}1&0&-1&0&3&-3v_{1}+5v_{2}-v_{4}\\
+0&1&4&0&-1&v_{1}-v_{2}\\
+0&0&0&1&-2&2v_{1}-3v_{2}+v_{4}\\
+0&0&0&0&0&9v_{1}-16v_{2}+v_{3}+4v_{4}\\
+\end{bmatrix}
+\end{align*}  
+@col
+If $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$, the above is a RREF. The last column is not a pivot columns. So $\mathbf{v}\in\mathrm{Span}\,S$. If $9v_{1}-16v_{2}+v_{3}+4v_{4}\neq 0$, the equation corresponding to the last row is
+\begin{align*}
+\displaystyle 9v_{1}-16v_{2}+v_{3}+4v_{4}=0.
+\end{align*}  
+@col
+So the corresponding system of linear equations is inconsistent. So $\mathbf{v}\in\mathrm{Span}\,S$. Hence $\mathbf{v}\in\mathrm{Span}\,S$ if and only if $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$. Therefore
+\begin{align*}
+\displaystyle \mathcal{C}\left(A\right)={\mathcal{N}}\!\left([9\,\,-16\,\,1\,\,4]\right).
+\end{align*}  
+@endcol
+@end
+-->
+@subsection{Column Space Spanned by Original Columns}
+@label{CSSOC}
+@eg
 Let
 \begin{align*}
 \displaystyle A=\begin{bmatrix}1&4&0&-1&0&7&-9\\
@@ -138,11 +260,17 @@ The indexes of the pivot columns are $D=\left\{1,3,4\right\}$.
 Hence $\mathcal{C}\left(A\right)=\mathrm{Span}\,A=\mathrm{Span}\,\left\{ \mathbf{A}_{1},\mathbf{A}_{3},\mathbf{A}_{4} \right\}$.  
 @endcol
 @end
-@section{
-
-Column Space Spanned by Original Columns}
-@label{CSSOC}
-So we have a foolproof, automated procedure for determining membership in $\mathcal{C}\left(A\right)$. While this works just fine a vector at a time, we would like to have a more useful description of the set $\mathcal{C}\left(A\right)$ as a whole. The next example will preview the first of two fundamental results about the column space of a matrix.  
+@slide
+@thm
+@title{Basis of the Column Space}
+@label{BCS}
+@newcol
+Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$, and $B$ is a row-equivalent matrix in reduced row-echelon form with $r$ pivot columns. Let $D=\left\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\right\}$ be the set of indices for the pivot columns of $B$.
+Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ldots,\,\mathbf{A}_{d_{r}}\right\}$. Then <ol class="ltx_enumerate">
+<li class="ltx_item"> $T$ is a linearly independent set. </li>
+<li class="ltx_item"> $\mathcal{C}\left(A\right)=\mathrm{Span}\,T$. </li></ol>
+@endcol
+@end
 @slide
 @eg
 Consider the $5\times 7$ matrix $A$,
@@ -221,17 +349,6 @@ The pivot columns are $D=\left\{1,\,3,\,4,\,5\right\}$, so we can create the set
 \end{align*}  
 @col
 and know that $\mathcal{C}\left(A\right)=\mathrm{Span}\,T$ and $T$ is a linearly independent set of columns from the set of columns of $A$.  
-@endcol
-@end
-@slide
-@thm
-@title{Basis of the Column Space}
-@label{BCS}
-@newcol
-Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$, and $B$ is a row-equivalent matrix in reduced row-echelon form with $r$ pivot columns. Let $D=\left\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\right\}$ be the set of indices for the pivot columns of $B$.
-Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ldots,\,\mathbf{A}_{d_{r}}\right\}$. Then <ol class="ltx_enumerate">
-<li class="ltx_item"> $T$ is a linearly independent set. </li>
-<li class="ltx_item"> $\mathcal{C}\left(A\right)=\mathrm{Span}\,T$. </li></ol>
 @endcol
 @end
 @slide
@@ -350,9 +467,7 @@ Then, a basis for $\left< S\right>$ exists.
 In fact, there exists a subset $T$ of $S$ such that $T$ is a basis for $\left< S\right>$ (see @ref{BCS}).  
 @endcol
 @end
-@section{
-
-Row Space of a Matrix}
+@section{Row Space of a Matrix}
 <!--@slide@defn
 Let $n$ be a positive integer.
 A @keyword{row vector} or size $n$ is an array of real numbers of the form:
@@ -675,11 +790,9 @@ So we conclude that $\alpha_{i}=0$ for all $1\leq i\leq r$, establishing the lin
 @end
 @slide
 @eg
-@keyword{Improving a span}
-
-Suppose in the course of analyzing a matrix (its column space, its null space, its ...) we encounter the following set of vectors, described by a span
+Suppose in the course of analyzing a matrix (its column space, its null space, its ...) we encounter the following set of vectors, described by a span:
 \begin{align*}
-\displaystyle X=\left< \left\{\begin{bmatrix}1\\
+\displaystyle X=\mathrm{Span} \left\{\begin{bmatrix}1\\
 2\\
 1\\
 6\\
@@ -695,7 +808,7 @@ Suppose in the course of analyzing a matrix (its column space, its null space, i
 2\\
 -3\\
 6\\
--10\end{bmatrix}\right\}\right>
+-10\end{bmatrix}\right\}
 \end{align*}  
 @newcol
 Let $A$ be the matrix whose rows are the vectors in $X$, so by design $X=\mathcal{R}\!\left(A\right)$,
@@ -1122,7 +1235,7 @@ Setting instead $x_{4}=0$ and $x_{5}=1$ gives
 \end{align*}
 Hence
 \begin{align*}
-\displaystyle {\mathcal{N}}\!\left(A\right)=\left< \begin{bmatrix}-1\\
+\displaystyle {\mathcal{N}}\!\left(A\right)=\mathrm{Span}\left\{\begin{bmatrix}-1\\
 2\\
 -2\\
 1\\
@@ -1130,649 +1243,8 @@ Hence
 -2\\
 1\\
 0\\
-1\end{bmatrix}\right>.
+1\end{bmatrix}\right\}.
 \end{align*}  
 @qed
 @endcol
 @end
-@section{Dimension}
-
-@defn
-@title{Dimension}
-Let $V$ be a vector space.
-
-Suppose a finite set of vectors $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{t}\right\}$ is a basis for $V$.
-
-Then, we say that $V$ is a @keyword{finite dimensional vector space}.
-
-The number $t$ (namely the number of vectors in the basis)
-is called the @keyword{dimension} of $V$.
-
-The dimension of the zero vector space $\{\vect{0}\}$ is defined to be $0$.  
-@end
-@remark
-@newcol
-It is a non-trivial fact that the dimension is well-defined, i.e.,
-If both $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{t}\right\}$
-and $\left\{\mathbf{u}_{1},\ldots,\mathbf{u}_{s}\right\}$
-are bases for $V$,
-then $s=t$.  
-@endcol
-@end
-@slide
-@thm
-@label{SSLD}
-Suppose that $S=\left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\ldots,\,\mathbf{v}_{t}\right\}$ is a finite set of vectors which spans the vector space $V$. Then any set of $t+1$ or more vectors from $V$ is linearly dependent.  
-@end
-@proof
-@newcol
-Let $\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_m$ be $m$ vectors in $V$,
-where $m \geq t + 1$.
-Let $A = [\vect{v}_1 | \vect{v}_2 | \cdots | \vect{v}_t ]$.
-Since $S$ spans $V$, for every $\vect{u}_i$ ($1\leq i \leq m$)
-there exists
-$\vect{w}_i \in \mathbb{R}^t$ such that:
-\[
-A\vect{w}_i = \vect{u}_i.
-\]
-
-@col
-Now, consider the matrix:
-\[
-B = [\vect{w}_1 | \vect{w}_2 | \cdots | \vect{w}_m].
-\]
-This is a $t \times m$ matrix.
-In particular, it has more columns than rows,
-due to the assumption that $m > t$.
-
-@col
-Hence, the homogeneous linear system $\mathcal{LS}(B, \vect{0})$
-has a non-trivial solution $\vect{x} \in \mathbb{R}^m$.  That is:
-\[
-B\vect{x} = \vect{0}.
-\]
-
-@col
-The above equation implies that:
-\[
-A\left(B\vect{x}\right) = A\vect{0} = \vect{0}.
-\]  
-@col
-By the associativity of matrix multiplication, we have:
-\[
-A\left(B\vect{x}\right) = \left(AB\right)\vect{x}.
-\]  
-@col
-On the other hand:  
-@steps
-\[
-\begin{split}
-AB &= A[\vect{w}_1 | \vect{w}_2 | \cdots | \vect{w}_m]
-\\&
-\class{steps}{\cssId{step0}{=[A\vect{w}_1 | A\vect{w}_2 | \cdots | A\vect{w}_m]}}
-\\&
-\class{steps}{\cssId{step1}{= [\vect{u}_1 | \vect{u}_2 | \cdots | \vect{u}_m]}}
-\end{split}
-\]
-
-@endsteps
-@col
-Hence,
-\[
-\left(AB\right)\vect{x} = \vect{0}
-\]
-is equivalent to:
-\[
-[\vect{u}_1 | \vect{u}_2 | \cdots | \vect{u}_m]\vect{x} = \vect{0}
-\]  
-@col
-which is in turn equivalent to:
-\[
-x_1 \vect{u}_1 + x_2 \vect{u}_2 + \cdots x_m \vect{u}_m = \vect{0}.
-\]
-Since, $\vect{x}$ is not the zero vector,
-not all the $x_i$'s are equal to zero.
-We conclude that the vectors
-$\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_m$ are linearly dependent.  
-@qed
-@endcol
-@end
-
-@slide
-@thm
-Suppose that $V$ is a vector space with a finite basis $B$ and a second basis $C$.
-
-@newcol
-Then $B$ and $C$ have the same size.  
-@endcol
-@end
-@proof
-@newcol
-Denote the size of $B$ by $t$. If $C$ has $\geq t+1$ vectors,
-then by the previous theorem, $C$ is linearly dependent,
-in contradiction to the condition that $C$ is a basis.
-
-@col
-By the same reasoning, the linearly independent set $B$ must also not
-have more vectors than $C$.
-
-@col
-So, $B$ and $C$ have the same number of vectors.  
-@qed
-@endcol
-@end
-@remark
-@newcol
-The above theorem shows that the dimension is well-defined. No matter which basis we choose, the size is always the same.  
-@endcol
-@end
-@slide
-@eg
-It follows from @ref{d848ac74d9e041feff51c974a9969985} that:
-\[
-\dim{\mathbb{R}}^{m}=m.
-\]  
-@end
-@slide
-@skip
-@eg
-<strong>Math major only</strong>
-
-$\dim M_{mn}=mn$. See example 3.  
-@end
-
-@eg
-<strong>Math major only</strong>
-
-$\dim P_{n}=n+1$. See example 4.  
-@end
-
-@eg
-<strong>Math major only</strong>
-
-Let $S_{2}$ be the set of $2\times 2$ symmetric matrices. For $A\in S_{2}$,
-\begin{align*}
-\displaystyle A=\begin{bmatrix}a&b\\
-b&c\end{bmatrix}=a\begin{bmatrix}1&0\\
-0&0\end{bmatrix}+b\begin{bmatrix}0&1\\
-1&0\end{bmatrix}+c\begin{bmatrix}0&0\\
-0&1\end{bmatrix}
-\end{align*}  
-@newcol
-We can show that:
-\begin{align*}
-\displaystyle T=\left\{\begin{bmatrix}1&0\\
-0&0\end{bmatrix},\begin{bmatrix}0&1\\
-1&0\end{bmatrix},\begin{bmatrix}0&0\\
-0&1\end{bmatrix}\right\}
-\end{align*}  
-@col
-is a basis for $S_{2}$. Hence $\dim S_{2}=3$.  
-@endcol
-@end
-
-@eg
-<strong>Math major only</strong>
-
-Let $P$ be the set of all real polynomials. As $\left\{1,x,x^{2},x^{3},\ldots\right\}$ is linearly independent,
-so $\dim P$ does not exists (or we can write $\dim P=\infty$).  
-@end
-@slide
-@lemma
-Let $V$ be a vector space and $\mathbf{v}_{1},\ldots,\mathbf{v}_{k},\mathbf{u}\in V$.
-
-@newcol
-Suppose
-$S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is linearly independent and $\mathbf{u}\notin\left< S\right>$. Then
-$S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k},\mathbf{u}\right\}$ is linearly independent.  
-@endcol
-@end
-@proof
-@newcol
-Let the relation of linear dependence of $S^{\prime}$ be
-\begin{align*}
-\displaystyle \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k}+\alpha\mathbf{u}=\mathbf{0}.
-\end{align*}  
-@col
-Suppose $\alpha\neq 0$, then
-\begin{align*}
-\displaystyle \mathbf{u}=-\frac{\alpha_{1}}{\alpha}\mathbf{v}_{1}-\cdots-\frac{\alpha_{k}}{\alpha}\mathbf{v}_{k}\in\left< S\right>.
-\end{align*}  
-@col
-Contradiction.
-
-@col
-So $\alpha=0$, then
-\begin{align*}
-\displaystyle \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k}=\mathbf{0}.
-\end{align*}  
-@col
-By the linear independence of $S$, $\alpha_{i}=0$ for all $i$. Hence the above relation of dependence of $S^{\prime}$ is trivial.  
-@qed
-@endcol
-@end
-@slide
-@thm
-@label{basisexists2}
-Let $V$ be a nonzero subspace of ${\mathbb{R}}^{m}$. (That is, $V \neq \{\vect{0}\}$.)
-
-Then, there exists a basis for $V$.  
-@end
-@proof
-@newcol
-Let $V$ be a nonzero vector space.
-Let $\mathbf{v}_{1}$ be a nonzero vector in $V$. If $V=\left< \left\{\mathbf{v}_{1}\right\}\right>$, we can take $S=\left\{\mathbf{v}_{1}\right\}$. Then obviously $\left\{\mathbf{v}_{1}\right\}$ is linearly independent and hence $S$ is a basis for $V$.
-
-@col
-Otherwise, let $\mathbf{v}_{2}\in V$ but not in $\left< \left\{\mathbf{v}_{1}\right\}\right>$.
-
-@col
-By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$ is linearly independent. If $V=\left< \left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}\right>$, we can take $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$.
-
-@col
-So $S$ is a basis for $V$.
-
-@col
-Otherwise, let $\mathbf{v}_{3}\in V$ but not in $\left< \left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}\right>$.
-
-@col
-By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\right\}$ is linearly independent. Repeat the above process, inductive we can define $\mathbf{v}_{k+1}$ as following: If $V=\left< \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}\right>$,
-we can take $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$.
-
-@col
-Because $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$ is linearly independent, $S$ is a basis for $V$.
-
-@col
-Otherwise defined $\mathbf{v}_{k+1}\not\in\left< \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}\right>$.
-
-@col
-By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k+1}\right\}$ is linearly independent.
-
-@col
-If the process stops, say at step $k$, i.e., $V=\left< \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}\right>$.
-
-@col
-Then we can take $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$.
-
-@col
-Because $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$ is linearly independent, it is a basis for $V$.
-
-@col
-This completes the proof.
-
-@col
-Otherwise, the process continues infinitely, in particular, we can take $k=m+1$ and
-$V\neq\left< \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{m+1}\right\}\right>$ and
-$\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{m+1}\right\}$ is linearly independent.
-
-@col
-Since $\left\langle\left\{\mathbf{e}_{1},\ldots,\mathbf{e}_{m}\right\}\right\rangle = \mathbb{R}^m$,
-by @ref{SSLD} the vectors $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{m+1}\right\}$ are linearly dependent. Contradiction.  
-@qed
-@endcol
-@end
-@slide
-@prop
-@label{basisexistsprop}
-Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\right\}\subseteq{\mathbb{R}}^{m}$. Then
-\begin{align*}
-\displaystyle \dim\left< S\right>\leq n.
-\end{align*}  
-@end
-@proof
-@newcol
-By Theorem    @ref{basisexists}, there exists a subset $T$ of $S$ such that $T$ is a basis for $\left< S\right>$.
-\begin{align*}
-\displaystyle \dim\left< S\right>
-=
-\text{number of vectors in $T$}
-\leq
-\text{number of vectors in $S$}=n.
-\end{align*}  
-@qed
-@endcol
-@end
-@remark
-@newcol
-Both @ref{basisexists} and @ref{basisexistsprop} is valid
-if we replace ${\mathbb{R}}^{m}$ by $P_{n}$, $M_{mn}$
-or any finite dimensional vector space.  
-@endcol
-@end
-
-@slide
-@thm
-Suppose a vector space $V$ has dimension $n$.
-Then, any linearly independent set with $n$ vectors in $V$
-is a basis for $V$.  
-@end
-@thm
-Suppose a vector space $V$ has dimension $n$.
-Suppose $S$ is a set of $n$ vectors in $V$ which spans $V$
-(That is, $\left\langle S \right\rangle = V$).
-
-Then, $S$ is a basis for $V$.  
-@end
-
-@section{Rank and nullity of a matrix}
-@defn
-@title{Nullity of a matrix}
-@label{NOM}
-Suppose that $A \in M_{mn}$. Then the @keyword{nullity} of $A$ is the dimension of the null space of $A$,
-$\nullity{A}=\dim(\nsp{A})$.  
-@end
-
-@defn
-@title{Rank of a matrix}
-@label{ROM}
-Suppose that $A \in M_{mn}$. Then the @keyword{rank} of $A$ is the dimension of the column space of $A$,
-$\rank{A}=\dim(\csp{A})$.  
-@end
-
-@slide
-@eg
-@keyword{Rank and nullity of a matrix}
-
-Let us compute the rank and nullity of
-\[
-A=\begin{bmatrix}
-2 & -4 & -1 & 3 & 2 & 1 & -4\\
-1 & -2 & 0 & 0 & 4 & 0 & 1\\
--2 & 4 & 1 & 0 & -5 & -4 & -8\\
-1 & -2 & 1 & 1 & 6 & 1 & -3\\
-2 & -4 & -1 & 1 & 4 & -2 & -1\\
--1 & 2 & 3 & -1 & 6 & 3 & -1
-\end{bmatrix}
-\]  
-@newcol
-To do this, we will first row-reduce the matrix since that will help us determine bases for the null space and column space.
-\[
-\begin{bmatrix}
-\leading{1} & -2 & 0 & 0 & 4 & 0 & 1\\
-0 & 0 & \leading{1} & 0 & 3 & 0 & -2\\
-0 & 0 & 0 & \leading{1} & -1 & 0 & -3\\
-0 & 0 & 0 & 0 & 0 & \leading{1} & 1\\
-0 & 0 & 0 & 0 & 0 & 0 & 0\\
-0 & 0 & 0 & 0 & 0 & 0 & 0
-\end{bmatrix}
-\]  
-@col
-From this row-equivalent matrix in reduced row-echelon form we record $D=\set{1,\,3,\,4,\,6}$ and $F=\set{2,\,5,\,7}$.
-
-@col
-By @ref{BCS}, for each index in $D$, we can create a single basis vector.
-In fact $T=\{\vect{A}_1, \vect{A}_3, \vect{A}_4, \vect{A}_6\}$ is a basis for $\csp{A}$.
-In total the basis will have $4$ vectors, so the column space of $A$ will have dimension $4$ and we write $\rank{A}=4$.
-
-@col
-By @ref{SSNS}, for each index in $F$, we can create a single basis vector.  In total the basis will have $3$ vectors, so the null space of $A$ will have dimension $3$ and we write $\nullity{A}=3$. In fact:
-
-@col
-\[
-R = \left\{\colvector{ 2 \\ 1 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0},
-\colvector{ -4 \\ 0 \\ -3 \\ 1 \\ 1 \\ 0 \\ 0},
-\colvector{-1 \\ 0 \\ 2 \\ 3 \\ 0 \\ -1 \\ 1}
-\right\}
-\]
-is a basis for $\nsp{A}$.  
-@endcol
-@end
-
-@slide
-@thm
-@title{Computing rank and nullity}
-Suppose $A \in M_{mn}$ and $A \rref B$.
-Let $r$ denote the number of pivot columns ($=$ number of nonzero rows).
-Then $\rank{A}=r$ and $\nullity{A}=n-r$.  
-@end
-@proof
-@newcol
-Let $D=\{d_1, \ldots, d_r\}$ be the indexes of the pivot columns of $B$.
-By @ref{BCS}, $\{\vect{A}_{d_1}, \ldots, \vect{A}_{d_r}\}$ is a basis for $\csp{A}$.
-So $\rank{A}=r$.
-
-By @ref{SSNS}, each free variable corresponding to a single basis vector for the null space.
-So $\nullity{A}$ is the number of free variables $=n-r$.  
-@endcol
-@end
-
-@cor
-@title{Dimension formulaRank-Nullity Theorem}
-Suppose $A\in M_{mn}$, then
-\begin{align*}
-\displaystyle r\left(A\right)+n\left(A\right)=n.
-\end{align*}  
-@end
-@slide
-@thm
-Let $A$ be a $m\times n$ matrix. Then
-\begin{align*}
-\displaystyle r\left(A\right)=r\left(A^{t}\right).
-\end{align*}  
-@newcol
-Equivalently
-\begin{align*}
-\displaystyle \dim\mathcal{C}\left(A\right)=\dim\mathcal{R}\!\left(A\right).
-\end{align*}  
-@endcol
-@end
-@proof
-@newcol
-Let $A\xrightarrow{\text{RREF}}B$.
-
-@col
-Let $r$ denote the number of pivot columns ($=$ number of nonzero rows).
-
-@col
-Then by the above discussion $r=r\left(A\right)$. By @ref{BRS}, the first $r$ columns of $B^{t}$ form a basis for $\mathcal{R}\!\left(A\right) = \mathcal{C}(A^t)$.
-Hence $r=r\left(A^{t}\right)$. This completes the proof.  
-@qed
-@endcol
-@end
-Let us take a look at the rank and nullity of a square matrix.  
-@slide
-@eg
-The matrix
-\begin{align*}
-\displaystyle E=\begin{bmatrix}0&4&-1&2&2&3&1\\
-2&-2&1&-1&0&-4&-3\\
--2&-3&9&-3&9&-1&9\\
--3&-4&9&4&-1&6&-2\\
--3&-4&6&-2&5&9&-4\\
-9&-3&8&-2&-4&2&4\\
-8&2&2&9&3&0&9\end{bmatrix}
-\end{align*}  
-@newcol
-is row-equivalent to the matrix in reduced row-echelon form,
-\begin{align*}
-\displaystyle \begin{bmatrix}\boxed{1}&0&0&0&0&0&0\\
-0&\boxed{1}&0&0&0&0&0\\
-0&0&\boxed{1}&0&0&0&0\\
-0&0&0&\boxed{1}&0&0&0\\
-0&0&0&0&\boxed{1}&0&0\\
-0&0&0&0&0&\boxed{1}&0\\
-0&0&0&0&0&0&\boxed{1}\end{bmatrix}
-\end{align*}  
-@col
-With $n=7$ columns and $r=7$ nonzero rows tells us the rank is $r\left(E\right)=7$ and the nullity is $n\left(E\right)=7-7=0$.  
-@endcol
-@end
-The value of either the nullity or the rank are enough to characterize a nonsingular matrix.
-
-@slide
-@thm
-@title{Rank and Nullity of a Nonsingular Matrix}
-@label{RNNM}
-Suppose that $A$ is a square matrix of size $n$. The following are equivalent. <ol class="ltx_enumerate">
-<li class="ltx_item"> A is nonsingular. </li>
-<li class="ltx_item"> The rank of $A$ is $n$, $r\left(A\right)=n$. </li>
-<li class="ltx_item"> The nullity of $A$ is zero, $n\left(A\right)=0$. </li></ol>
-@end
-@proof
-@skip
-@newcol
-(1 $\Rightarrow$ 2)  
-@newcol
-If $A$ is nonsingular then $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$.
-
-@col
-If $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$, then the column space has dimension $n$, so the rank of $A$ is $n$.  
-@endcol
-
-(2 $\Rightarrow$ 3)  
-@newcol
-Suppose $r\left(A\right)=n$. Then the dimension formula gives
-\begin{align*}
-\displaystyle n\left(A\right)&\displaystyle=n-r\left(A\right) \\
-&\displaystyle=n-n \\
-&\displaystyle=0
-\end{align*}  
-@endcol
-
-(3 $\Rightarrow$ 1)  
-@newcol
-Suppose $n\left(A\right)=0$, so a basis for the null space of $A$ is the empty set. This implies that ${\mathcal{N}}\!\left(A\right)=\left\{\mathbf{0}\right\}$ and hence $A$ is nonsingular.  
-@endcol
-@qed
-@endcol
-@end
-With a new equivalence for a nonsingular matrix, we can update our list of equivalences which now becomes a list requiring double digits to number.  
-@slide
-@thm
-Suppose that $A$ is a square matrix of size $n$. The following are equivalent. <ol class="ltx_enumerate">
-<li class="ltx_item"> $A$ is nonsingular. </li>
-<li class="ltx_item"> $A$ row-reduces to the identity matrix. </li>
-<li class="ltx_item"> The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\left\{\mathbf{0}\right\}$. </li>
-<li class="ltx_item"> The linear system $\mathcal{LS}({A},{\mathbf{b}})$ has a unique solution for every possible choice of $\mathbf{b}$. </li>
-<li class="ltx_item"> The columns of $A$ are a linearly independent set. </li>
-<li class="ltx_item"> $A$ is invertible. </li>
-<li class="ltx_item"> The column space of $A$ is ${\mathbb{R}}^{n}$, $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$. </li>
-<li class="ltx_item"> The columns of $A$ are a basis for ${\mathbb{R}}^{n}$. </li>
-<li class="ltx_item"> The rank of $A$ is $n$, $r\left(A\right)=n$. </li>
-<li class="ltx_item"> The nullity of $A$ is zero, $n\left(A\right)=0$. </li></ol>
-@end
-
-@section{Bases and nonsingular matrices}
-@slide
-@thm
-Suppose that $A$ is a square matrix of size $m$.
-
-Then, the columns of $A$ is a basis for ${\mathbb{R}}^{m}$ if and only if $A$ is nonsingular.  
-@end
-@proof
-@newcol
-This is a direct consequence of the theorem  @ref{NME2}:
-
-@col
-If columns of $A$ form a basis,
-then in particular they are linearly independent.
-So, item 5 of the theorem holds.
-
-It now follows from the theorem that item 1,
-namely that $A$ is nonsingular, also holds.
-
-@col
-Conversely, suppose $A$ is nonsingular.
-
-@col
-Then, by Item 5 of @ref{NME2} the columns of $A$ are linearly independent,
-and by Item 4 they span $\mathbb{R}^m$.
-Hence, the columns of $A$ is a basis for $\mathbb{R}^m$.  
-@qed
-@endcol
-@end
-@slide
-In fact, we may further extend @ref{NME2} as follows:  
-@thm
-@title{Nonsingular Matrix Equivalences}
-@label{NME25}
-@newcol
-Suppose that $A$ is an $m\times m$ square matrix.
-The following are equivalent: <ol class="ltx_enumerate">
-<li class="ltx_item">
-@col
-$A$ is nonsingular. </li>
-<li class="ltx_item">
-@col
-$A$ row-reduces to the identity matrix. </li>
-<li class="ltx_item">
-@col
-The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$. </li>
-<li class="ltx_item">
-@col
-The linear system $\mathcal{LS}({A},{\mathbf{b}})$ has a unique solution for every possible choice of $\mathbf{b}$. </li>
-<li class="ltx_item">
-@col
-The columns of $A$ form a linearly independent set. </li>
-<li class="ltx_item">
-@col
-The columns of $A$ form a basis for $\mathbb{R}^m$. </li></ol>
-@endcol
-@end
-@slide
-@skip
-@eg
-Consider $S^{\prime}=\left\{\mathbf{v}_{1}=\begin{bmatrix}1\\
-0\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}1\\
-1\end{bmatrix}\right\}$.
-
-Let
-\begin{align*}
-\displaystyle A=[\mathbf{v}_{1}|\mathbf{v}_{2}]=\begin{bmatrix}1&1\\
-0&1\end{bmatrix}
-\end{align*}  
-@newcol
-<strong>Exercise.</strong> The matrix $A$ is nonsingular.
-
-@col
-Hence, $S^{\prime}$ is a basis for ${\mathbb{R}}^{2}$.  
-@endcol
-@end
-@slide
-@eg
-\begin{align*}
-\displaystyle A=\begin{bmatrix}-7&-6&-12\\
-5&5&7\\
-1&0&4\end{bmatrix}.
-\end{align*}  
-@newcol
-It may be shown that $A$ is row equivalent to the $3\times 3$
-identity matrix.
-
-@col
-Hence $A$ is nonsingular,
-so the columns of $A$ form a basis for ${\mathbb{R}}^{3}$.  
-@endcol
-@end
-@section{
-
-Column Space of a Nonsingular Matrix}
-@slide
-@thm
-@title{Column Space of a Nonsingular Matrix}
-Suppose $A$ is a square matrix of size $n$. Then $A$ is nonsingular if and only if $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$.  
-@end
-@proof
-@newcol
-See @ref{thm:ANSRM}.  
-@qed
-@endcol
-@end
-@slide
-@eg
-Let
-\begin{align*}
-\displaystyle A=\begin{bmatrix}0&1&2&3\\
--1&1&2&1\\
-0&1&0&2\\
-1&1&1&4\\
-\end{bmatrix}.
-\end{align*}  
-@newcol
-We can show that $A$ is nonsingular as $A\xrightarrow{\text{RREF}}I_{4}$.
-So $\mathcal{C}\left(A\right)={\mathbb{R}}^{4}$.  
-@endcol
-@end
-
-
-<!--DELIMITER-->
