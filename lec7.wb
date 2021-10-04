@@ -601,16 +601,20 @@ Then $\mathbf{z}$ is a nonzero solution to $AB\mathbf{x}=\mathbf{0}$. Thus $AB$ 
 
 @col
 Case 2. Suppose $A$ is singular, and $B$ is not singular.
-Because $A$ is singular, there is a nonzero vector $\mathbf{y}$ that is a solution to $A\mathbf{x}=\mathbf{0}$. Now consider the linear system $B\mathbf{x}=\mathbf{y}$. Since $B$ is nonsingular, the system has a unique solution, which we will denote as $\mathbf{w}$. We first claim $\mathbf{w}$ is not the zero vector either. Assuming the opposite, suppose that $\mathbf{w}=\mathbf{0}$. Then
+Because $A$ is singular, there is a nonzero vector $\mathbf{y}$ that is a solution to $A\mathbf{x}=\mathbf{0}$. Now consider the linear system $B\mathbf{x}=\mathbf{y}$. Since $B$ is nonsingular, the system has a unique solution, which we will denote as $\mathbf{w}$. We first claim $\mathbf{w}$ is not the zero vector either. Assuming the opposite, suppose that $\mathbf{w}=\mathbf{0}$. Then:
 \begin{align*}
 \displaystyle\mathbf{y}&\displaystyle=B\mathbf{w} \\
 &\displaystyle=B\mathbf{0} \\
 &\displaystyle=\mathbf{0} \\
-\\
+\end{align*}
+This contradicts $\mathbf{y} \neq \mathbf{0}$. Hence, $\mathbf{w} \neq \mathbf{0}$.
+
+Moreover:
+\begin{align*}
 \displaystyle(AB)\mathbf{w}&\displaystyle=A(B\mathbf{w}) \\
 &\displaystyle=A\mathbf{y} \\
 &\displaystyle=\mathbf{0}
-\end{align*}  
+\end{align*}
 @col
 So $\mathbf{w}$ is a nonzero solution to $AB\mathbf{x}=\mathbf{0}$. Thus $AB$ is singular as desired. And this conclusion holds for both cases.
 
@@ -694,31 +698,6 @@ A^{-1} =  J_k\cdots J_2 J_1.
 @remark
 @newcol
 So for a square matrix, the properties of having an inverse and of having a trivial null space are one and the same. Cannot have one without the other.  
-@endcol
-@end
-@slide
-@remark
-It is now easy to see that any nonsingular matrix $A$ is invertible:
-
-@newcol
-If an $n\times n$ matrix $A$ is nonsingular, then it is row-equivalent to $I_n$,
-which means there exists a sequence of elementary matrices $J_1, J_2, \ldots, J_l$
-(each corresponding to a row operation), such that:
-\[
-J_l \cdots J_2 J_1 A = I.
-\]
-Let $J = J_l \cdots J_2 J_1$. Since each elementary matrix is invertible,
-and the product of invertible matrices is also invertible, the matrix $J$ is invertible.
-
-@col
-Hence,
-\[
-A = J^{-1}JA = J^{-1} I = J^{-1}
-\]
-The matrix $J^{-1}$, being the inverse of an invertiable matrix, is invertible.
-We conclude that $A = J^{-1}$ is invertible.
-
-(Observe that every nonsingular matrix is in particular a product of elementary matrices.)  
 @endcol
 @end
 @slide
