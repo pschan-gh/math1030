@@ -330,6 +330,7 @@ $(\alpha+\beta)\mathbf{u}=\alpha\mathbf{u}+\beta\mathbf{u}$. </li>
 If $\mathbf{u}\in V$, then $1\mathbf{u}=\mathbf{u}$. </li></ol> The objects in $V$ are called @keyword{vectors}, no matter what else they might really be, simply by virtue of being elements of a vector space.  
 @end
 @slide
+@skip
 @eg
 @keyword{column vector space} The set of column vectors ${\mathbb{R}}^{n}$ is a vector space.  
 @end
@@ -642,7 +643,7 @@ By @ref{VS}[Property AI] and the uniqueness of the additive inverse (@ref{invuni
 \end{align*}
 Next
 \begin{align*}
-\displaystyle\alpha\mathbf{v}+\alpha(-\mathbf{v})&\displaystyle=\alpha(\mathbf{v}+(-\mathbf{v})) & \href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec9.xml&query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;DVA}}. \\
+\displaystyle\alpha\mathbf{v}+\alpha(-\mathbf{v})&\displaystyle=\alpha(\mathbf{v}+(-\mathbf{v})) & \href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec9.xml&query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;DVA}} \\
 &\displaystyle=\alpha\mathbf{0} & \href{http://localhost/~pschan-math/cranach-dev/?xml=content/math1030/lec9.xml&query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;AI}} \\
 &\displaystyle=\mathbf{0} & \text{item 2}
 \end{align*}
@@ -657,10 +658,11 @@ By Property AI and the uniqueness of the additive inverse (@ref{invunique}),
 @defn
 @label{subdef}
 Let $V$ be vector space.
-A subset $W$ of $V$ is said to be a @keyword{subspace} of $V$ if <ol class="ltx_enumerate">
-<li class="ltx_item"> $W$ is nonempty. </li>
-<li class="ltx_item"> For $\mathbf{v},\mathbf{w}\in W$, then $\mathbf{v}+\mathbf{w}\in W$. </li>
-<li class="ltx_item"> For $\alpha\in\mathbf{R}$, $\mathbf{v}\in W$, then $\alpha\mathbf{v}\in W$. </li></ol>
+A subset $W$ of $V$ is said to be a @keyword{subspace} of $V$ if:
+<ol class="ltx_enumerate">
+<li class="ltx_item">$W$ is nonempty.</li>
+<li class="ltx_item">For $\mathbf{v},\mathbf{w}\in W$, then $\mathbf{v}+\mathbf{w}\in W$.</li>
+<li class="ltx_item">For $\alpha\in\mathbf{R}$, $\mathbf{v}\in W$, then $\alpha\mathbf{v}\in W$.</li></ol>
 @end
 @slide
 We will prove several theorem first before we give examples.  
