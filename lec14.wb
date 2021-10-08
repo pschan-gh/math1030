@@ -13,7 +13,7 @@ Then, we say that $V$ is a @keyword{finite dimensional vector space}.
 The number $t$ (namely the number of vectors in the basis)
 is called the @keyword{dimension} of $V$.
 
-The dimension of the zero vector space $\{\vect{0}\}$ is defined to be $0$.  
+The dimension of the zero vector space $\{\vect{0}\}$ is defined to be $0$.
 @end
 @remark
 @newcol
@@ -21,13 +21,13 @@ It is a non-trivial fact that the dimension is well-defined, i.e.,
 If both $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{t}\right\}$
 and $\left\{\mathbf{u}_{1},\ldots,\mathbf{u}_{s}\right\}$
 are bases for $V$,
-then $s=t$.  
+then $s=t$.
 @endcol
 @end
 @slide
 @thm
 @label{SSLD}
-Suppose that $S=\left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\ldots,\,\mathbf{v}_{t}\right\}$ is a finite set of vectors which spans the vector space $V$. Then any set of $t+1$ or more vectors from $V$ is linearly dependent.  
+Suppose that $S=\left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\ldots,\,\mathbf{v}_{t}\right\}$ is a finite set of vectors which spans the vector space $V$. Then any set of $t+1$ or more vectors from $V$ is linearly dependent.
 @end
 @proof
 @newcol
@@ -61,14 +61,14 @@ B\vect{x} = \vect{0}.
 The above equation implies that:
 \[
 A\left(B\vect{x}\right) = A\vect{0} = \vect{0}.
-\]  
+\]
 @col
 By the associativity of matrix multiplication, we have:
 \[
 A\left(B\vect{x}\right) = \left(AB\right)\vect{x}.
-\]  
+\]
 @col
-On the other hand:  
+On the other hand:
 @steps
 \[
 \begin{split}
@@ -89,7 +89,7 @@ Hence,
 is equivalent to:
 \[
 [\vect{u}_1 | \vect{u}_2 | \cdots | \vect{u}_m]\vect{x} = \vect{0}
-\]  
+\]
 @col
 which is in turn equivalent to:
 \[
@@ -98,7 +98,7 @@ x_1 \vect{u}_1 + x_2 \vect{u}_2 + \cdots x_m \vect{u}_m = \vect{0}.
 Since, $\vect{x}$ is not the zero vector,
 not all the $x_i$'s are equal to zero.
 We conclude that the vectors
-$\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_m$ are linearly dependent.  
+$\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_m$ are linearly dependent.
 @qed
 @endcol
 @end
@@ -108,7 +108,7 @@ $\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_m$ are linearly dependent.
 Suppose that $V$ is a vector space with a finite basis $B$ and a second basis $C$.
 
 @newcol
-Then $B$ and $C$ have the same size.  
+Then $B$ and $C$ have the same size.
 @endcol
 @end
 @proof
@@ -122,13 +122,13 @@ By the same reasoning, the linearly independent set $B$ must also not
 have more vectors than $C$.
 
 @col
-So, $B$ and $C$ have the same number of vectors.  
+So, $B$ and $C$ have the same number of vectors.
 @qed
 @endcol
 @end
 @remark
 @newcol
-The above theorem shows that the dimension is well-defined. No matter which basis we choose, the size is always the same.  
+The above theorem shows that the dimension is well-defined. No matter which basis we choose, the size is always the same.
 @endcol
 @end
 @slide
@@ -136,20 +136,20 @@ The above theorem shows that the dimension is well-defined. No matter which basi
 It follows from @ref{d848ac74d9e041feff51c974a9969985} that:
 \[
 \dim{\mathbb{R}}^{m}=m.
-\]  
+\]
 @end
 @slide
 @skip
 @eg
 <strong>Math major only</strong>
 
-$\dim M_{mn}=mn$. See example 3.  
+$\dim M_{mn}=mn$. See example 3.
 @end
 
 @eg
 <strong>Math major only</strong>
 
-$\dim P_{n}=n+1$. See example 4.  
+$\dim P_{n}=n+1$. See example 4.
 @end
 
 @eg
@@ -162,7 +162,7 @@ b&c\end{bmatrix}=a\begin{bmatrix}1&0\\
 0&0\end{bmatrix}+b\begin{bmatrix}0&1\\
 1&0\end{bmatrix}+c\begin{bmatrix}0&0\\
 0&1\end{bmatrix}
-\end{align*}  
+\end{align*}
 @newcol
 We can show that:
 \begin{align*}
@@ -170,9 +170,9 @@ We can show that:
 0&0\end{bmatrix},\begin{bmatrix}0&1\\
 1&0\end{bmatrix},\begin{bmatrix}0&0\\
 0&1\end{bmatrix}\right\}
-\end{align*}  
+\end{align*}
 @col
-is a basis for $S_{2}$. Hence $\dim S_{2}=3$.  
+is a basis for $S_{2}$. Hence $\dim S_{2}=3$.
 @endcol
 @end
 
@@ -180,7 +180,7 @@ is a basis for $S_{2}$. Hence $\dim S_{2}=3$.
 <strong>Math major only</strong>
 
 Let $P$ be the set of all real polynomials. As $\left\{1,x,x^{2},x^{3},\ldots\right\}$ is linearly independent,
-so $\dim P$ does not exists (or we can write $\dim P=\infty$).  
+so $\dim P$ does not exists (or we can write $\dim P=\infty$).
 @end
 @slide
 @lemma
@@ -188,8 +188,8 @@ Let $V$ be a vector space and $\mathbf{v}_{1},\ldots,\mathbf{v}_{k},\mathbf{u}\i
 
 @newcol
 Suppose
-$S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is linearly independent and $\mathbf{u}\notin\left< S\right>$. Then
-$S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k},\mathbf{u}\right\}$ is linearly independent.  
+$S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is linearly independent and $\mathbf{u}\notin\mathrm{Span} S$. Then
+$S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k},\mathbf{u}\right\}$ is linearly independent.
 @endcol
 @end
 @proof
@@ -197,12 +197,12 @@ $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k},\mathbf{u}\right\}$ is l
 Let the relation of linear dependence of $S^{\prime}$ be
 \begin{align*}
 \displaystyle \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k}+\alpha\mathbf{u}=\mathbf{0}.
-\end{align*}  
+\end{align*}
 @col
 Suppose $\alpha\neq 0$, then
 \begin{align*}
-\displaystyle \mathbf{u}=-\frac{\alpha_{1}}{\alpha}\mathbf{v}_{1}-\cdots-\frac{\alpha_{k}}{\alpha}\mathbf{v}_{k}\in\left< S\right>.
-\end{align*}  
+\displaystyle \mathbf{u}=-\frac{\alpha_{1}}{\alpha}\mathbf{v}_{1}-\cdots-\frac{\alpha_{k}}{\alpha}\mathbf{v}_{k}\in\mathrm{Span} S.
+\end{align*}
 @col
 Contradiction.
 
@@ -210,9 +210,9 @@ Contradiction.
 So $\alpha=0$, then
 \begin{align*}
 \displaystyle \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k}=\mathbf{0}.
-\end{align*}  
+\end{align*}
 @col
-By the linear independence of $S$, $\alpha_{i}=0$ for all $i$. Hence the above relation of dependence of $S^{\prime}$ is trivial.  
+By the linear independence of $S$, $\alpha_{i}=0$ for all $i$. Hence the above relation of dependence of $S^{\prime}$ is trivial.
 @qed
 @endcol
 @end
@@ -221,40 +221,40 @@ By the linear independence of $S$, $\alpha_{i}=0$ for all $i$. Hence the above r
 @label{basisexists2}
 Let $V$ be a nonzero subspace of ${\mathbb{R}}^{m}$. (That is, $V \neq \{\vect{0}\}$.)
 
-Then, there exists a basis for $V$.  
+Then, there exists a basis for $V$.
 @end
 @proof
 @newcol
 Let $V$ be a nonzero vector space.
-Let $\mathbf{v}_{1}$ be a nonzero vector in $V$. If $V=\left< \left\{\mathbf{v}_{1}\right\}\right>$, we can take $S=\left\{\mathbf{v}_{1}\right\}$. Then obviously $\left\{\mathbf{v}_{1}\right\}$ is linearly independent and hence $S$ is a basis for $V$.
+Let $\mathbf{v}_{1}$ be a nonzero vector in $V$. If $V=\mathrm{Span} \left\{\mathbf{v}_{1}\right\}$, we can take $S=\left\{\mathbf{v}_{1}\right\}$. Then obviously $\left\{\mathbf{v}_{1}\right\}$ is linearly independent and hence $S$ is a basis for $V$.
 
 @col
-Otherwise, let $\mathbf{v}_{2}\in V$ but not in $\left< \left\{\mathbf{v}_{1}\right\}\right>$.
+Otherwise, let $\mathbf{v}_{2}\in V$ but not in $\mathrm{Span} \left\{\mathbf{v}_{1}\right\}$.
 
 @col
-By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$ is linearly independent. If $V=\left< \left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}\right>$, we can take $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$.
+By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$ is linearly independent. If $V=\mathrm{Span} \left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$, we can take $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$.
 
 @col
 So $S$ is a basis for $V$.
 
 @col
-Otherwise, let $\mathbf{v}_{3}\in V$ but not in $\left< \left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}\right>$.
+Otherwise, let $\mathbf{v}_{3}\in V$ but not in $\mathrm{Span} \left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$.
 
 @col
-By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\right\}$ is linearly independent. Repeat the above process, inductive we can define $\mathbf{v}_{k+1}$ as following: If $V=\left< \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}\right>$,
+By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\right\}$ is linearly independent. Repeat the above process, inductive we can define $\mathbf{v}_{k+1}$ as following: If $V=\mathrm{Span} \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$,
 we can take $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$.
 
 @col
 Because $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$ is linearly independent, $S$ is a basis for $V$.
 
 @col
-Otherwise defined $\mathbf{v}_{k+1}\not\in\left< \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}\right>$.
+Otherwise defined $\mathbf{v}_{k+1}\not\in\mathrm{Span} \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$.
 
 @col
 By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k+1}\right\}$ is linearly independent.
 
 @col
-If the process stops, say at step $k$, i.e., $V=\left< \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}\right>$.
+If the process stops, say at step $k$, i.e., $V=\mathrm{Span} \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$.
 
 @col
 Then we can take $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$.
@@ -267,12 +267,12 @@ This completes the proof.
 
 @col
 Otherwise, the process continues infinitely, in particular, we can take $k=m+1$ and
-$V\neq\left< \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{m+1}\right\}\right>$ and
+$V\neq\mathrm{Span} \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{m+1}\right\}$ and
 $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{m+1}\right\}$ is linearly independent.
 
 @col
 Since $\left\langle\left\{\mathbf{e}_{1},\ldots,\mathbf{e}_{m}\right\}\right\rangle = \mathbb{R}^m$,
-by @ref{SSLD} the vectors $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{m+1}\right\}$ are linearly dependent. Contradiction.  
+by @ref{SSLD} the vectors $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{m+1}\right\}$ are linearly dependent. Contradiction.
 @qed
 @endcol
 @end
@@ -281,19 +281,19 @@ by @ref{SSLD} the vectors $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v
 @label{basisexistsprop}
 Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\right\}\subseteq{\mathbb{R}}^{m}$. Then
 \begin{align*}
-\displaystyle \dim\left< S\right>\leq n.
-\end{align*}  
+\displaystyle \dim\mathrm{Span} S\leq n.
+\end{align*}
 @end
 @proof
 @newcol
-By Theorem    @ref{basisexists}, there exists a subset $T$ of $S$ such that $T$ is a basis for $\left< S\right>$.
+By Theorem    @ref{basisexists}, there exists a subset $T$ of $S$ such that $T$ is a basis for $\mathrm{Span} S$.
 \begin{align*}
-\displaystyle \dim\left< S\right>
+\displaystyle \dim\mathrm{Span} S
 =
 \text{number of vectors in $T$}
 \leq
 \text{number of vectors in $S$}=n.
-\end{align*}  
+\end{align*}
 @qed
 @endcol
 @end
@@ -301,7 +301,7 @@ By Theorem    @ref{basisexists}, there exists a subset $T$ of $S$ such that $T$ 
 @newcol
 Both @ref{basisexists} and @ref{basisexistsprop} is valid
 if we replace ${\mathbb{R}}^{m}$ by $P_{n}$, $M_{mn}$
-or any finite dimensional vector space.  
+or any finite dimensional vector space.
 @endcol
 @end
 
@@ -309,14 +309,14 @@ or any finite dimensional vector space.
 @thm
 Suppose a vector space $V$ has dimension $n$.
 Then, any linearly independent set with $n$ vectors in $V$
-is a basis for $V$.  
+is a basis for $V$.
 @end
 @thm
 Suppose a vector space $V$ has dimension $n$.
 Suppose $S$ is a set of $n$ vectors in $V$ which spans $V$
 (That is, $\left\langle S \right\rangle = V$).
 
-Then, $S$ is a basis for $V$.  
+Then, $S$ is a basis for $V$.
 @end
 
 @section{Rank and nullity of a matrix}
@@ -324,14 +324,14 @@ Then, $S$ is a basis for $V$.
 @title{Nullity of a matrix}
 @label{NOM}
 Suppose that $A \in M_{mn}$. Then the @keyword{nullity} of $A$ is the dimension of the null space of $A$,
-$\nullity{A}=\dim(\nsp{A})$.  
+$\nullity{A}=\dim(\nsp{A})$.
 @end
 
 @defn
 @title{Rank of a matrix}
 @label{ROM}
 Suppose that $A \in M_{mn}$. Then the @keyword{rank} of $A$ is the dimension of the column space of $A$,
-$\rank{A}=\dim(\csp{A})$.  
+$\rank{A}=\dim(\csp{A})$.
 @end
 
 @slide
@@ -348,7 +348,7 @@ A=\begin{bmatrix}
 2 & -4 & -1 & 1 & 4 & -2 & -1\\
 -1 & 2 & 3 & -1 & 6 & 3 & -1
 \end{bmatrix}
-\]  
+\]
 @newcol
 To do this, we will first row-reduce the matrix since that will help us determine bases for the null space and column space.
 \[
@@ -360,7 +360,7 @@ To do this, we will first row-reduce the matrix since that will help us determin
 0 & 0 & 0 & 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0 & 0 & 0 & 0
 \end{bmatrix}
-\]  
+\]
 @col
 From this row-equivalent matrix in reduced row-echelon form we record $D=\set{1,\,3,\,4,\,6}$ and $F=\set{2,\,5,\,7}$.
 
@@ -379,7 +379,7 @@ R = \left\{\colvector{ 2 \\ 1 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0},
 \colvector{-1 \\ 0 \\ 2 \\ 3 \\ 0 \\ -1 \\ 1}
 \right\}
 \]
-is a basis for $\nsp{A}$.  
+is a basis for $\nsp{A}$.
 @endcol
 @end
 
@@ -388,7 +388,7 @@ is a basis for $\nsp{A}$.
 @title{Computing rank and nullity}
 Suppose $A \in M_{mn}$ and $A \rref B$.
 Let $r$ denote the number of pivot columns ($=$ number of nonzero rows).
-Then $\rank{A}=r$ and $\nullity{A}=n-r$.  
+Then $\rank{A}=r$ and $\nullity{A}=n-r$.
 @end
 @proof
 @newcol
@@ -397,7 +397,7 @@ By @ref{BCS}, $\{\vect{A}_{d_1}, \ldots, \vect{A}_{d_r}\}$ is a basis for $\csp{
 So $\rank{A}=r$.
 
 By @ref{SSNS}, each free variable corresponding to a single basis vector for the null space.
-So $\nullity{A}$ is the number of free variables $=n-r$.  
+So $\nullity{A}$ is the number of free variables $=n-r$.
 @endcol
 @end
 
@@ -407,19 +407,19 @@ So $\nullity{A}$ is the number of free variables $=n-r$.
 Suppose $A\in M_{mn}$, then
 \begin{align*}
 \displaystyle r\left(A\right)+n\left(A\right)=n.
-\end{align*}  
+\end{align*}
 @end
 @slide
 @thm
 Let $A$ be a $m\times n$ matrix. Then
 \begin{align*}
 \displaystyle r\left(A\right)=r\left(A^{t}\right).
-\end{align*}  
+\end{align*}
 @newcol
 Equivalently
 \begin{align*}
 \displaystyle \dim\mathcal{C}\left(A\right)=\dim\mathcal{R}\!\left(A\right).
-\end{align*}  
+\end{align*}
 @endcol
 @end
 @proof
@@ -431,11 +431,11 @@ Let $r$ denote the number of pivot columns ($=$ number of nonzero rows).
 
 @col
 Then by the above discussion $r=r\left(A\right)$. By @ref{BRS}, the first $r$ columns of $B^{t}$ form a basis for $\mathcal{R}\!\left(A\right) = \mathcal{C}(A^t)$.
-Hence $r=r\left(A^{t}\right)$. This completes the proof.  
+Hence $r=r\left(A^{t}\right)$. This completes the proof.
 @qed
 @endcol
 @end
-Let us take a look at the rank and nullity of a square matrix.  
+Let us take a look at the rank and nullity of a square matrix.
 @slide
 @eg
 The matrix
@@ -447,7 +447,7 @@ The matrix
 -3&-4&6&-2&5&9&-4\\
 9&-3&8&-2&-4&2&4\\
 8&2&2&9&3&0&9\end{bmatrix}
-\end{align*}  
+\end{align*}
 @newcol
 is row-equivalent to the matrix in reduced row-echelon form,
 \begin{align*}
@@ -458,9 +458,9 @@ is row-equivalent to the matrix in reduced row-echelon form,
 0&0&0&0&\boxed{1}&0&0\\
 0&0&0&0&0&\boxed{1}&0\\
 0&0&0&0&0&0&\boxed{1}\end{bmatrix}
-\end{align*}  
+\end{align*}
 @col
-With $n=7$ columns and $r=7$ nonzero rows tells us the rank is $r\left(E\right)=7$ and the nullity is $n\left(E\right)=7-7=0$.  
+With $n=7$ columns and $r=7$ nonzero rows tells us the rank is $r\left(E\right)=7$ and the nullity is $n\left(E\right)=7-7=0$.
 @endcol
 @end
 The value of either the nullity or the rank are enough to characterize a nonsingular matrix.
@@ -477,32 +477,32 @@ Suppose that $A$ is a square matrix of size $n$. The following are equivalent. <
 @proof
 @skip
 @newcol
-(1 $\Rightarrow$ 2)  
+(1 $\Rightarrow$ 2)
 @newcol
 If $A$ is nonsingular then $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$.
 
 @col
-If $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$, then the column space has dimension $n$, so the rank of $A$ is $n$.  
+If $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$, then the column space has dimension $n$, so the rank of $A$ is $n$.
 @endcol
 
-(2 $\Rightarrow$ 3)  
+(2 $\Rightarrow$ 3)
 @newcol
 Suppose $r\left(A\right)=n$. Then the dimension formula gives
 \begin{align*}
 \displaystyle n\left(A\right)&\displaystyle=n-r\left(A\right) \\
 &\displaystyle=n-n \\
 &\displaystyle=0
-\end{align*}  
+\end{align*}
 @endcol
 
-(3 $\Rightarrow$ 1)  
+(3 $\Rightarrow$ 1)
 @newcol
-Suppose $n\left(A\right)=0$, so a basis for the null space of $A$ is the empty set. This implies that ${\mathcal{N}}\!\left(A\right)=\left\{\mathbf{0}\right\}$ and hence $A$ is nonsingular.  
+Suppose $n\left(A\right)=0$, so a basis for the null space of $A$ is the empty set. This implies that ${\mathcal{N}}\!\left(A\right)=\left\{\mathbf{0}\right\}$ and hence $A$ is nonsingular.
 @endcol
 @qed
 @endcol
 @end
-With a new equivalence for a nonsingular matrix, we can update our list of equivalences which now becomes a list requiring double digits to number.  
+With a new equivalence for a nonsingular matrix, we can update our list of equivalences which now becomes a list requiring double digits to number.
 @slide
 @thm
 Suppose that $A$ is a square matrix of size $n$. The following are equivalent. <ol class="ltx_enumerate">
@@ -523,7 +523,7 @@ Suppose that $A$ is a square matrix of size $n$. The following are equivalent. <
 @thm
 Suppose that $A$ is a square matrix of size $m$.
 
-Then, the columns of $A$ is a basis for ${\mathbb{R}}^{m}$ if and only if $A$ is nonsingular.  
+Then, the columns of $A$ is a basis for ${\mathbb{R}}^{m}$ if and only if $A$ is nonsingular.
 @end
 @proof
 @newcol
@@ -543,12 +543,12 @@ Conversely, suppose $A$ is nonsingular.
 @col
 Then, by Item 5 of @ref{NME2} the columns of $A$ are linearly independent,
 and by Item 4 they span $\mathbb{R}^m$.
-Hence, the columns of $A$ is a basis for $\mathbb{R}^m$.  
+Hence, the columns of $A$ is a basis for $\mathbb{R}^m$.
 @qed
 @endcol
 @end
 @slide
-In fact, we may further extend @ref{NME2} as follows:  
+In fact, we may further extend @ref{NME2} as follows:
 @thm
 @title{Nonsingular Matrix Equivalences}
 @label{NME25}
@@ -586,12 +586,12 @@ Let
 \begin{align*}
 \displaystyle A=[\mathbf{v}_{1}|\mathbf{v}_{2}]=\begin{bmatrix}1&1\\
 0&1\end{bmatrix}
-\end{align*}  
+\end{align*}
 @newcol
 <strong>Exercise.</strong> The matrix $A$ is nonsingular.
 
 @col
-Hence, $S^{\prime}$ is a basis for ${\mathbb{R}}^{2}$.  
+Hence, $S^{\prime}$ is a basis for ${\mathbb{R}}^{2}$.
 @endcol
 @end
 @slide
@@ -600,25 +600,25 @@ Hence, $S^{\prime}$ is a basis for ${\mathbb{R}}^{2}$.
 \displaystyle A=\begin{bmatrix}-7&-6&-12\\
 5&5&7\\
 1&0&4\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @newcol
 It may be shown that $A$ is row equivalent to the $3\times 3$
 identity matrix.
 
 @col
 Hence $A$ is nonsingular,
-so the columns of $A$ form a basis for ${\mathbb{R}}^{3}$.  
+so the columns of $A$ form a basis for ${\mathbb{R}}^{3}$.
 @endcol
 @end
 @section{Column Space of a Nonsingular Matrix}
 @slide
 @thm
 @title{Column Space of a Nonsingular Matrix}
-Suppose $A$ is a square matrix of size $n$. Then $A$ is nonsingular if and only if $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$.  
+Suppose $A$ is a square matrix of size $n$. Then $A$ is nonsingular if and only if $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$.
 @end
 @proof
 @newcol
-See @ref{thm:ANSRM}.  
+See @ref{thm:ANSRM}.
 @qed
 @endcol
 @end
@@ -631,10 +631,10 @@ Let
 0&1&0&2\\
 1&1&1&4\\
 \end{bmatrix}.
-\end{align*}  
+\end{align*}
 @newcol
 We can show that $A$ is nonsingular as $A\xrightarrow{\text{RREF}}I_{4}$.
-So $\mathcal{C}\left(A\right)={\mathbb{R}}^{4}$.  
+So $\mathcal{C}\left(A\right)={\mathbb{R}}^{4}$.
 @endcol
 @end
 

@@ -86,7 +86,7 @@ p.92-96 C21, C23, C30, C31, C35, C36, C37, M20, M21. </paragraphs>
             <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="13" section="1" subsection="" subsubsection="" serial="" slide="3">
               <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Basis</paragraphs>
             </title>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="1" md5="8b9e567bb86c8c49c8b09d7db31716fa" course="MATH 1030" chapter="13" slide="3" item="13.1">
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="1" md5="ad9dfb8bb2ee9a7e92a9d24d80e5b99f" course="MATH 1030" chapter="13" slide="3" item="13.1">
               <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V$ be a vector space. Then a subset $S$ of $V$ is said to be a </paragraphs>
               <inline_keyword course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">basis</inline_keyword>
               <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> for $V$ if </paragraphs>
@@ -95,13 +95,13 @@ p.92-96 C21, C23, C30, C31, C35, C36, C37, M20, M21. </paragraphs>
                   <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $S$ is linearly independent. </paragraphs>
                 </li>
                 <li class="ltx_item" environment="statement">
-                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $\left&lt; S\right&gt;=V$, i.e. $S$ spans $V$. </paragraphs>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $\mathrm{Span} S=V$, i.e. $S$ spans $V$. </paragraphs>
                 </li>
               </ol>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="fe59c7068b36715f35dd82e1ee55da09" course="MATH 1030" chapter="13" slide="3">
               <newcol course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Most of the time $V$ is a subspace of ${\mathbb{R}}^{m}$. Occasionally $V$ is assumed to be a subspace of $M_{mn}$ or $P_{n}$. It does not hurt to assume $V$ is a subspace of ${\mathbb{R}}^{m}$.   </paragraphs>
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Most of the time $V$ is a subspace of ${\mathbb{R}}^{m}$. Occasionally $V$ is assumed to be a subspace of $M_{mn}$ or $P_{n}$. It does not hurt to assume $V$ is a subspace of ${\mathbb{R}}^{m}$. </paragraphs>
               </newcol>
             </substatement>
           </slide>
@@ -109,20 +109,20 @@ p.92-96 C21, C23, C30, C31, C35, C36, C37, M20, M21. </paragraphs>
             <keywords slide="4" environ="slide" chapter="13" course="MATH 1030">
               <keyword chapter="13" slide="4">standard basis</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="2" md5="d848ac74d9e041feff51c974a9969985" course="MATH 1030" chapter="13" slide="4" item="13.2">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="2" md5="6567d43f2513a7875fc4e3686e66b627" course="MATH 1030" chapter="13" slide="4" item="13.2">
               <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V={\mathbb{R}}^{m}$, then $B=\left\{\mathbf{e}_{1},\ldots,\mathbf{e}_{m}\right\}$ is a basis for $V$.
 (recall all the entries of $\mathbf{e}_{i}$ is zero, except the $i$-th entry being $1$).</paragraphs>
               <newline course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
               <newcol course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> It is called the </paragraphs>
                 <inline_keyword course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol">standard basis</inline_keyword>
-                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: Obviously $B$ is linearly independent. Also, for any $\mathbf{v}\in V$, $\mathbf{v}=[\mathbf{v}]_{1}\mathbf{e}_{1}+\cdots+[\mathbf{v}]_{m}\mathbf{e}_{m}\in\left&lt; B\right&gt;$. So $\left&lt; B\right&gt;=V$.   </paragraphs>
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: Obviously $B$ is linearly independent. Also, for any $\mathbf{v}\in V$, $\mathbf{v}=[\mathbf{v}]_{1}\mathbf{e}_{1}+\cdots+[\mathbf{v}]_{m}\mathbf{e}_{m}\in\mathrm{Span} B$. So $\mathrm{Span} B=V$. </paragraphs>
               </newcol>
             </statement>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="5" data-lecture-skip="true" id="s5" slide="5" course="MATH 1030" chapter="13" section="1" subsection="" subsubsection="" chapter_title="Basis" section_title="Basis">
             <keywords slide="5" environ="slide" chapter="13" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="3" md5="3abdbc32c1d36745aad4f8c3500aedf9" course="MATH 1030" chapter="13" slide="5" item="13.3">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="3" md5="22bd82280c904eeee180d7f40556f26a" course="MATH 1030" chapter="13" slide="5" item="13.3">
               <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
                 <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Math major only</paragraphs>
               </strong>
@@ -143,7 +143,7 @@ B_{12}&amp;=\begin{bmatrix}0&amp;1\\
 &amp;
 B_{22}&amp;=\begin{bmatrix}0&amp;0\\
 0&amp;1\end{bmatrix},
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                 <collapse course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then $B=\left\{B_{11},B_{12},B_{21},B_{22}\right\}$ is a basis for $V$.</paragraphs>
                   <newline course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
@@ -152,9 +152,9 @@ B_{22}&amp;=\begin{bmatrix}0&amp;0\\
 \begin{align*}
 \displaystyle A=\begin{bmatrix}a&amp;b\\
 c&amp;d\end{bmatrix}=aB_{11}+bB_{12}+cB_{21}+dB_{22}.
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                     <collapse course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                      <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So $\left&lt; B\right&gt;=M_{22}$.   </paragraphs>
+                      <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So $\mathrm{Span} B=M_{22}$. </paragraphs>
                     </collapse>
                   </collapse>
                 </collapse>
@@ -172,7 +172,7 @@ c&amp;d\end{bmatrix}=aB_{11}+bB_{12}+cB_{21}+dB_{22}.
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">For $1\leq i\leq m$, $1\leq j\leq n$,
 let $B_{ij}$ be the $m\times n$ matrix with $(i,j)$-th entry equal to $1$ and all other entries equal to $0$.</paragraphs>
                 <newline course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
-                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Then $\left\{ B_{ij} | 1\leq i \leq m, 1\leq j\leq n\right\}$ is a basis for $V$.   </paragraphs>
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Then $\left\{ B_{ij} | 1\leq i \leq m, 1\leq j\leq n\right\}$ is a basis for $V$. </paragraphs>
               </newcol>
             </statement>
             <newline course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment=""/>
@@ -185,7 +185,7 @@ let $B_{ij}$ be the $m\times n$ matrix with $(i,j)$-th entry equal to $1$ and al
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $V=P_{n}$. Then $1,x,x^{2},\ldots,x^{n}$ is a basis. It is easy to show that $S=\left\{1,x,x^{2},\ldots,x^{n}\right\}$ is linearly independent. Also any polynomial
 \begin{align*}
 \displaystyle f(x)=a_{0}+a_{1}x+a_{2}x^{2}+\cdots+a_{n}x^{n}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                 <collapse course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> is a linear combinations of $S$.</paragraphs>
                   <newline course="MATH 1030" chapter="13" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
@@ -212,7 +212,7 @@ S^{\prime}=\left\{\begin{bmatrix}1\\
 0\end{bmatrix},\begin{bmatrix}1\\
 1\end{bmatrix}\right\}
 \]
-is also a basis.   </paragraphs>
+is also a basis. </paragraphs>
               </newcol>
             </statement>
           </slide>
@@ -250,7 +250,7 @@ is also a basis.   </paragraphs>
                 <inline_keyword course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="statement">column space</inline_keyword>
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$, written $\mathcal{C}\left(A\right)$, is the subset of ${\mathbb{R}}^{m}$ containing all linear combinations of the columns of $A$,
 \begin{align*}
-\displaystyle \mathcal{C}\left(A\right)=\mathrm{Span}\{\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}\}\end{align*}   </paragraphs>
+\displaystyle \mathcal{C}\left(A\right)=\mathrm{Span}\{\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}\}\end{align*} </paragraphs>
               </statement>
             </slide>
             <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="9" id="s9" slide="9" course="MATH 1030" chapter="13" section="2" subsection="1" subsubsection="" chapter_title="Basis" section_title="Bases for Spans of Column vectors">
@@ -261,7 +261,7 @@ is also a basis.   </paragraphs>
                 <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="13" section="2" subsection="1" subsubsection="" serial="" slide="9">Column Spaces and Consistent Systems</title>
                 <label wbtag="label" name="CSCS" type="Theorem"/>
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is an $m\times n$ matrix and $\mathbf{b}$ is a vector of size $m$.
-Then $\mathbf{b}\in\mathcal{C}\left(A\right)$ if and only if $A\mathbf{x} = \mathbf{b}$ is consistent.   </paragraphs>
+Then $\mathbf{b}\in\mathcal{C}\left(A\right)$ if and only if $A\mathbf{x} = \mathbf{b}$ is consistent. </paragraphs>
               </statement>
               <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="d13518897e049252c975219c94da4bb4" course="MATH 1030" chapter="13" slide="9" of="2eadfde38109e356aa3c95e7eb3a2f86" of-src-course="MATH 1030" of-src-chapter="13" of-src-slide="9" of-type="Theorem" of-item="13.8" of-src-filename="lec13.xml" ofmd5="2eadfde38109e356aa3c95e7eb3a2f86" of-serial="">
                 <of-title hidden="true">Column Spaces and Consistent Systems</of-title>
@@ -276,7 +276,7 @@ Then $\mathbf{b}\in\mathcal{C}\left(A\right)$ if and only if $A\mathbf{x} = \mat
                   <ref environment="newcol" chapter_type="" label="RCLS" wbtag="ref" course="MATH 1030" chapter="13" slide="9" referrer-type="Proof" referrer-md5="d13518897e049252c975219c94da4bb4" src-course="MATH 1030" src-chapter="5" src-slide="19" type="Theorem" item="5.18" src-filename="lec5.xml" md5="f3386ff26bec659ea2917f653af3eb7e" class="lcref" serial="">
                     <title>Recognizing Consistency of a Linear System</title>
                   </ref>
-                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> to write $\mathbf{b}$ as a linear combination of the columns of $A$. This qualifies $\mathbf{b}$ for membership in $\mathcal{C}\left(A\right)$.   </paragraphs>
+                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> to write $\mathbf{b}$ as a linear combination of the columns of $A$. This qualifies $\mathbf{b}$ for membership in $\mathcal{C}\left(A\right)$. </paragraphs>
                   <qed course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol"/>
                 </newcol>
               </substatement>
@@ -286,7 +286,7 @@ Then $\mathbf{b}\in\mathcal{C}\left(A\right)$ if and only if $A\mathbf{x} = \mat
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Thus, an alternative (and popular) definition of the column space of an $m\times n$ matrix $A$ is
 \begin{align*}
 \displaystyle\mathcal{C}\left(A\right)&amp;\displaystyle=\left\{\left.\mathbf{y}\in{\mathbb{R}}^{m}\,\right|\,\mathbf{y}=A\mathbf{x}\text{ for some }\mathbf{x}\in{\mathbb{R}}^{n}\right\}=\left\{\left.A\mathbf{x}\,\right|\,\mathbf{x}\in{\mathbb{R}}^{n}\right\}\subseteq{\mathbb{R}}^{m}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
               </newcol>
             </slide>
             <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="MATH 1030" chapter="13" section="2" subsection="1" subsubsection="" chapter_title="Basis" section_title="Bases for Spans of Column vectors">
@@ -297,7 +297,7 @@ Then $\mathbf{b}\in\mathcal{C}\left(A\right)$ if and only if $A\mathbf{x} = \mat
 \displaystyle A=\begin{bmatrix}3&amp;2&amp;1&amp;-4\\
 -1&amp;1&amp;-2&amp;3\\
 2&amp;-4&amp;6&amp;-8\end{bmatrix}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                 <newcol course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Show that $\mathbf{v}=\begin{bmatrix}18\\
 -6\\
@@ -310,13 +310,13 @@ From the augmented matrix and row-reduce,
 2&amp;-4&amp;6&amp;-8&amp;12\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;0&amp;1&amp;-2&amp;6\\
 0&amp;\boxed{1}&amp;-1&amp;1&amp;0\\
 0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                   <collapse course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
                     <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Since the last column is not a pivot column, so the system is consistent and hence $v\in\mathcal{C}\left(A\right)$.
 In fact, we have
 \begin{align*}
 \displaystyle \mathbf{v}=6\mathbf{A}_{1}.
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                     <collapse course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Next we show that $\mathbf{w}=\begin{bmatrix}2\\
 1\\
@@ -329,27 +329,25 @@ From the augmented matrix and row-reduce,
 2&amp;-4&amp;6&amp;-8&amp;-3\end{bmatrix}\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&amp;0&amp;1&amp;-2&amp;0\\
 0&amp;\boxed{1}&amp;-1&amp;1&amp;0\\
 0&amp;0&amp;0&amp;0&amp;\boxed{1}\end{bmatrix}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                       <collapse course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
-                        <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Since the final column is a pivot column, the system is inconsistent and therefore $\mathbf{w}\not\in\mathcal{C}\left(A\right)$.   </paragraphs>
+                        <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Since the final column is a pivot column, the system is inconsistent and therefore $\mathbf{w}\not\in\mathcal{C}\left(A\right)$. </paragraphs>
                       </collapse>
                     </collapse>
                   </collapse>
                 </newcol>
               </statement>
               <comment course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="">
-The next two examples illustrate the main idea of describing $\mathcal{C}\left(A\right)$. 
+The next two examples illustrate the main idea of describing $\mathcal{C}\left(A\right)$.
 </comment>
-              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="" wbtag="paragraphs">  </paragraphs>
-              <comment course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment=""> 
-@eg@title{Describe $\mathcal{C}\left(A\right)$ as a null space}
+              <comment course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="">@eg@title{Describe $\mathcal{C}\left(A\right)$ as a null space}
 Let
 \begin{align*}
 \displaystyle A=\begin{bmatrix}1&amp;2&amp;7&amp;1&amp;-1\\
 1&amp;1&amp;3&amp;1&amp;0\\
 3&amp;2&amp;5&amp;-1&amp;9\\
 1&amp;-1&amp;-5&amp;2&amp;0\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @newcol
 Find $\mathcal{C}\left(A\right)$. Let’s determine if $\mathbf{v}=\begin{bmatrix}v_{1}\\
 \vdots\\
@@ -362,7 +360,7 @@ Applying Gauss-Jordan elimination to the augmented matrix
 1&amp;1&amp;3&amp;1&amp;0&amp;v_{2}\\
 3&amp;2&amp;5&amp;-1&amp;9&amp;v_{3}\\
 1&amp;-1&amp;-5&amp;2&amp;0&amp;v_{4}\end{bmatrix},
-\end{align*}  
+\end{align*}
 @col
 we obtain
 \begin{align*}
@@ -371,17 +369,17 @@ we obtain
 0&amp;0&amp;0&amp;1&amp;-2&amp;2v_{1}-3v_{2}+v_{4}\\
 0&amp;0&amp;0&amp;0&amp;0&amp;9v_{1}-16v_{2}+v_{3}+4v_{4}\\
 \end{bmatrix}
-\end{align*}  
+\end{align*}
 @col
 If $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$, the above is a RREF. The last column is not a pivot columns. So $\mathbf{v}\in\mathrm{Span}\,S$. If $9v_{1}-16v_{2}+v_{3}+4v_{4}\neq 0$, the equation corresponding to the last row is
 \begin{align*}
 \displaystyle 9v_{1}-16v_{2}+v_{3}+4v_{4}=0.
-\end{align*}  
+\end{align*}
 @col
 So the corresponding system of linear equations is inconsistent. So $\mathbf{v}\in\mathrm{Span}\,S$. Hence $\mathbf{v}\in\mathrm{Span}\,S$ if and only if $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$. Therefore
 \begin{align*}
 \displaystyle \mathcal{C}\left(A\right)={\mathcal{N}}\!\left([9\,\,-16\,\,1\,\,4]\right).
-\end{align*}  
+\end{align*}
 @endcol@end</comment>
             </slide>
           </slides>
@@ -404,7 +402,7 @@ So the corresponding system of linear equations is inconsistent. So $\mathbf{v}\
 2&amp;8&amp;-1&amp;3&amp;9&amp;-13&amp;7\\
 0&amp;0&amp;2&amp;-3&amp;-4&amp;12&amp;-8\\
 -1&amp;-4&amp;2&amp;4&amp;8&amp;-31&amp;37\end{bmatrix},
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                 <newcol course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> find $\mathcal{C}\left(A\right)$.
 \begin{align*}
@@ -412,10 +410,10 @@ So the corresponding system of linear equations is inconsistent. So $\mathbf{v}\
 0&amp;0&amp;\boxed{1}&amp;0&amp;1&amp;-3&amp;5\\
 0&amp;0&amp;0&amp;\boxed{1}&amp;2&amp;-6&amp;6\\
 0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}.
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                   <collapse course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="collapse">
                     <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> The indexes of the pivot columns are $D=\left\{1,3,4\right\}$.
-Hence $\mathcal{C}\left(A\right)=\mathrm{Span}\,A=\mathrm{Span}\,\left\{ \mathbf{A}_{1},\mathbf{A}_{3},\mathbf{A}_{4} \right\}$.   </paragraphs>
+Hence $\mathcal{C}\left(A\right)=\mathrm{Span} A=\mathrm{Span} \left\{ \mathbf{A}_{1},\mathbf{A}_{3},\mathbf{A}_{4} \right\}$. </paragraphs>
                   </collapse>
                 </newcol>
               </statement>
@@ -435,7 +433,7 @@ Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ld
                       <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> $T$ is a linearly independent set. </paragraphs>
                     </li>
                     <li class="ltx_item" environment="newcol">
-                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> $\mathcal{C}\left(A\right)=\mathrm{Span}\,T$. </paragraphs>
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> $\mathcal{C}\left(A\right)=\mathrm{Span} T$. </paragraphs>
                     </li>
                   </ol>
                 </newcol>
@@ -451,11 +449,11 @@ Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ld
 0&amp;0&amp;1&amp;4&amp;1&amp;8&amp;7\\
 1&amp;2&amp;-1&amp;2&amp;1&amp;9&amp;6\\
 -2&amp;-4&amp;1&amp;3&amp;-1&amp;-2&amp;-2\end{bmatrix}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                 <newcol course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="newcol">
                   <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> The column space of $A$ is
 \begin{align*}
-\displaystyle \mathcal{C}\left(A\right)=\mathrm{Span}\,\left\{ \begin{bmatrix}2\\
+\displaystyle \mathcal{C}\left(A\right)=\mathrm{Span} \left\{ \begin{bmatrix}2\\
 1\\
 0\\
 1\\
@@ -483,7 +481,7 @@ Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ld
 7\\
 7\\
 6\\
--2\end{bmatrix} \right\}\end{align*}   </paragraphs>
+-2\end{bmatrix} \right\}\end{align*} </paragraphs>
                   <collapse course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="collapse">
                     <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> While this is a concise description of an infinite set, we might be able to describe the span with fewer than seven vectors. Now we row-reduce,
 \begin{align*}
@@ -496,7 +494,7 @@ Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ld
 0&amp;0&amp;0&amp;\boxed{1}&amp;0&amp;2&amp;1\\
 0&amp;0&amp;0&amp;0&amp;\boxed{1}&amp;1&amp;3\\
 0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                     <collapse course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> The pivot columns are $D=\left\{1,\,3,\,4,\,5\right\}$, so we can create the set
 \begin{align*}
@@ -517,9 +515,9 @@ Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ld
 1\\
 1\\
 -1\end{bmatrix}\right\}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                       <collapse course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="collapse">
-                        <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> and know that $\mathcal{C}\left(A\right)=\mathrm{Span}\,T$ and $T$ is a linearly independent set of columns from the set of columns of $A$.   </paragraphs>
+                        <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> and know that $\mathcal{C}\left(A\right)=\mathrm{Span} T$ and $T$ is a linearly independent set of columns from the set of columns of $A$. </paragraphs>
                       </collapse>
                     </collapse>
                   </collapse>
@@ -530,7 +528,7 @@ Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ld
               <keywords slide="14" environ="slide" chapter="13" course="MATH 1030">
                 <keyword chapter="13" slide="14">Column space from row operations</keyword>
               </keywords>
-              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="13" md5="6b564439a8c7ceaa3a8d6a6c7e37d032" course="MATH 1030" chapter="13" slide="14" item="13.13">
+              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="13" md5="1a327ffae39f804c4eb0f4e280d03d7f" course="MATH 1030" chapter="13" slide="14" item="13.13">
                 <inline_keyword course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="statement">Column space from row operations</inline_keyword>
                 <newline course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="statement"/>
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="statement" wbtag="paragraphs">Let
@@ -557,9 +555,9 @@ Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ld
 7\\
 -8\\
 37\end{bmatrix}\right\}.
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                 <newcol course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="newcol">
-                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> Find a basis for $\left&lt; S\right&gt;$.
+                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> Find a basis for $\mathrm{Span} S$.
 \begin{align*}
 \displaystyle A=[\mathbf{v}_{1}|\cdots|\mathbf{v}_{7}]=\begin{bmatrix}1&amp;4&amp;0&amp;-1&amp;0&amp;7&amp;-9\\
 2&amp;8&amp;-1&amp;3&amp;9&amp;-13&amp;7\\
@@ -576,7 +574,7 @@ Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ld
 0&amp;0&amp;\boxed{1}&amp;0&amp;1&amp;-3&amp;5\\
 0&amp;0&amp;0&amp;\boxed{1}&amp;2&amp;-6&amp;6\\
 0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                     <collapse course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> Let
 \begin{align*}
@@ -590,9 +588,9 @@ Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ld
 3\\
 -3\\
 4\end{bmatrix}\right\}.
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                       <collapse course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="collapse">
-                        <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> Then $T$ is a basis for $\left&lt; S\right&gt;=\mathcal{C}\left(A\right)$.   </paragraphs>
+                        <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> Then $T$ is a basis for $\mathrm{Span} S=\mathcal{C}\left(A\right)$. </paragraphs>
                       </collapse>
                     </collapse>
                   </newcol>
@@ -610,7 +608,7 @@ Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ld
 0&amp;9&amp;-4&amp;8\\
 7&amp;-13&amp;12&amp;-31\\
 -9&amp;7&amp;-8&amp;37\end{bmatrix}.
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                     <collapse course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> Row-reduced this becomes,
 \begin{align*}
@@ -621,7 +619,7 @@ Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ld
 0&amp;0&amp;0&amp;0\\
 0&amp;0&amp;0&amp;0\\
 0&amp;0&amp;0&amp;0\end{bmatrix}.
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                       <collapse course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="collapse">
                         <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> Then we can take
 \begin{align*}
@@ -637,7 +635,7 @@ Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ld
 \frac{13}{7}\end{bmatrix}\right\}.
 \end{align*}</paragraphs>
                         <newline course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol"/>
-                        <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs">$T$ is a basis for $\mathcal{C}\left(A\right)=\left&lt; S\right&gt;$.   </paragraphs>
+                        <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs">$T$ is a basis for $\mathcal{C}\left(A\right)=\mathrm{Span} S$. </paragraphs>
                       </collapse>
                     </collapse>
                   </newcol>
@@ -646,17 +644,17 @@ Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ld
             </slide>
             <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="15" id="s15" slide="15" course="MATH 1030" chapter="13" section="2" subsection="2" subsubsection="" chapter_title="Basis" section_title="Bases for Spans of Column vectors">
               <keywords slide="15" environ="slide" chapter="13" course="MATH 1030"/>
-              <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="14" md5="cd7cd500a1d2a34e884122007339d8cb" course="MATH 1030" chapter="13" slide="15" item="13.14">
+              <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="14" md5="23f98d595bc68ad0d10d4a993c1b722c" course="MATH 1030" chapter="13" slide="15" item="13.14">
                 <label wbtag="label" name="basisexists" type="Theorem"/>
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="statement" wbtag="paragraphs"> Let $S$ be a finite subset of ${\mathbb{R}}^{m}$.
-Then, a basis for $\left&lt; S\right&gt;$ exists.</paragraphs>
+Then, a basis for $\mathrm{Span} S$ exists.</paragraphs>
                 <newline course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="statement"/>
                 <newcol course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="newcol">
-                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> In fact, there exists a subset $T$ of $S$ such that $T$ is a basis for $\left&lt; S\right&gt;$ (see </paragraphs>
-                  <ref environment="newcol" chapter_type="" label="BCS" wbtag="ref" course="MATH 1030" chapter="13" slide="15" referrer-type="Theorem" referrer-md5="cd7cd500a1d2a34e884122007339d8cb" src-course="MATH 1030" src-chapter="13" src-slide="12" type="Theorem" item="13.11" src-filename="lec13.xml" md5="5637a43b21d978d00e6ea9de4a200b78" class="lcref" serial="">
+                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> In fact, there exists a subset $T$ of $S$ such that $T$ is a basis for $\mathrm{Span} S$ (see </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="BCS" wbtag="ref" course="MATH 1030" chapter="13" slide="15" referrer-type="Theorem" referrer-md5="23f98d595bc68ad0d10d4a993c1b722c" src-course="MATH 1030" src-chapter="13" src-slide="12" type="Theorem" item="13.11" src-filename="lec13.xml" md5="5637a43b21d978d00e6ea9de4a200b78" class="lcref" serial="">
                     <title>Basis of the Column Space</title>
                   </ref>
-                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs">).   </paragraphs>
+                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs">). </paragraphs>
                 </newcol>
               </statement>
             </slide>
@@ -712,25 +710,25 @@ is a vector space under the laws of addition and scalar multiplication defined a
 The </paragraphs>
               <inline_keyword course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">row space</inline_keyword>
               <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$,
-$\mathcal{R}\!\left(A\right)$ is column space $\mathcal{C}\left(A^t\right)$ of $A^t$.   </paragraphs>
+$\mathcal{R}\!\left(A\right)$ is column space $\mathcal{C}\left(A^t\right)$ of $A^t$. </paragraphs>
             </statement>
             <newline course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment=""/>
             <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="" wbtag="paragraphs">Informally, the row space is the set of all linear combinations of the rows of $A$. However, we write the rows as column vectors, thus the necessity of using the transpose to make the rows into columns. Additionally, with the row space defined in terms of the column space, all of the previous results of this section can be applied to row spaces.</paragraphs>
             <newline course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment=""/>
             <newcol course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Notice that if $A$ is a rectangular $m\times n$ matrix, then $\mathcal{C}\left(A\right)\subseteq{\mathbb{R}}^{m}$, while $\mathcal{R}\!\left(A\right)\subseteq{\mathbb{R}}^{n}$ and the two sets are not comparable since they do not even hold objects of the same type. However, when $A$ is square of size $n$, both $\mathcal{C}\left(A\right)$ and $\mathcal{R}\!\left(A\right)$ are subsets of ${\mathbb{R}}^{n}$, though usually the sets will not be equal.   </paragraphs>
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Notice that if $A$ is a rectangular $m\times n$ matrix, then $\mathcal{C}\left(A\right)\subseteq{\mathbb{R}}^{m}$, while $\mathcal{R}\!\left(A\right)\subseteq{\mathbb{R}}^{n}$ and the two sets are not comparable since they do not even hold objects of the same type. However, when $A$ is square of size $n$, both $\mathcal{C}\left(A\right)$ and $\mathcal{R}\!\left(A\right)$ are subsets of ${\mathbb{R}}^{n}$, though usually the sets will not be equal. </paragraphs>
             </newcol>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="17" id="s17" slide="17" course="MATH 1030" chapter="13" section="3" subsection="" subsubsection="" chapter_title="Basis" section_title="Row Space of a Matrix">
             <keywords slide="17" environ="slide" chapter="13" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="16" md5="cb807061818215f8c700c6df6edc1229" course="MATH 1030" chapter="13" slide="17" item="13.16">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="16" md5="a8a7627f91308175b79c7fe51218fc69" course="MATH 1030" chapter="13" slide="17" item="13.16">
               <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Find $\mathcal{R}\!\left(A\right)$ for
 \begin{align*}
 \displaystyle A=\begin{bmatrix}1&amp;4&amp;0&amp;-1&amp;0&amp;7&amp;-9\\
 2&amp;8&amp;-1&amp;3&amp;9&amp;-13&amp;7\\
 0&amp;0&amp;2&amp;-3&amp;-4&amp;12&amp;-8\\
 -1&amp;-4&amp;2&amp;4&amp;8&amp;-31&amp;37\end{bmatrix}.
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
               <newcol course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> To build the row space, we transpose the matrix,
 \begin{align*}
@@ -741,11 +739,11 @@ $\mathcal{R}\!\left(A\right)$ is column space $\mathcal{C}\left(A^t\right)$ of $
 0&amp;9&amp;-4&amp;8\\
 7&amp;-13&amp;12&amp;-31\\
 -9&amp;7&amp;-8&amp;37\end{bmatrix}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                 <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then the columns of this matrix are used in a span to build the row space,
 \begin{align*}
-\displaystyle \mathcal{R}\!\left(A\right)=\mathcal{C}\left(A^{t}\right)=\left&lt; \left\{\begin{bmatrix}1\\
+\displaystyle \mathcal{R}\!\left(A\right)=\mathcal{C}\left(A^{t}\right)=\mathrm{Span} \left\{\begin{bmatrix}1\\
 4\\
 0\\
 -1\\
@@ -769,8 +767,8 @@ $\mathcal{R}\!\left(A\right)$ is column space $\mathcal{C}\left(A^t\right)$ of $
 4\\
 8\\
 -31\\
-37\end{bmatrix}\right\}\right&gt;.
-\end{align*}   </paragraphs>
+37\end{bmatrix}\right\}.
+\end{align*} </paragraphs>
                   <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                     <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> First, row-reduce $A^{t}$,
 \begin{align*}
@@ -781,11 +779,11 @@ $\mathcal{R}\!\left(A\right)$ is column space $\mathcal{C}\left(A^t\right)$ of $
 0&amp;0&amp;0&amp;0\\
 0&amp;0&amp;0&amp;0\\
 0&amp;0&amp;0&amp;0\end{bmatrix}.
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                     <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Since the pivot columns have indices $D=\left\{1,\,2,\,3\right\}$, the column space of $A^{t}$ can be spanned by just the first three columns of $A^{t}$,
 \begin{align*}
-\displaystyle \mathcal{R}\!\left(A\right)=\mathcal{C}\left(A^{t}\right)=\left&lt; \left\{\begin{bmatrix}1\\
+\displaystyle \mathcal{R}\!\left(A\right)=\mathcal{C}\left(A^{t}\right)=\mathrm{Span} \left\{\begin{bmatrix}1\\
 4\\
 0\\
 -1\\
@@ -803,8 +801,8 @@ $\mathcal{R}\!\left(A\right)$ is column space $\mathcal{C}\left(A^t\right)$ of $
 -3\\
 -4\\
 12\\
--8\end{bmatrix}\right\}\right&gt;.
-\end{align*}   </paragraphs>
+-8\end{bmatrix}\right\}.
+\end{align*} </paragraphs>
                     </collapse>
                   </collapse>
                 </collapse>
@@ -818,7 +816,7 @@ $\mathcal{R}\!\left(A\right)$ is column space $\mathcal{C}\left(A^t\right)$ of $
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="17" title="Row-Equivalent Matrices have Equal Row Spaces" md5="24bdd87be8932b1d94e873bafb302f30" course="MATH 1030" chapter="13" slide="18" item="13.17">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="13" section="3" subsection="" subsubsection="" serial="" slide="18">Row-Equivalent Matrices have Equal Row Spaces</title>
               <label wbtag="label" name="REMRS" type="Theorem"/>
-              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ and $B$ are row-equivalent matrices. Then $\mathcal{R}\!\left(A\right)=\mathcal{R}\!\left(B\right)$.   </paragraphs>
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ and $B$ are row-equivalent matrices. Then $\mathcal{R}\!\left(A\right)=\mathcal{R}\!\left(B\right)$. </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="6b6bf8fa1bb4657f8febbd7044891e89" course="MATH 1030" chapter="13" slide="18" of="24bdd87be8932b1d94e873bafb302f30" of-src-course="MATH 1030" of-src-chapter="13" of-src-slide="18" of-type="Theorem" of-item="13.17" of-src-filename="lec13.xml" ofmd5="24bdd87be8932b1d94e873bafb302f30" of-serial="">
               <of-title hidden="true">Row-Equivalent Matrices have Equal Row Spaces</of-title>
@@ -843,7 +841,7 @@ and the other columns remain the same as those of $A^t$ with the corresponding i
                     <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence, the columns of $B^t$ all lie in $\mathcal{C}(A^t)$, which in turn implies that:
 \[
 \mathcal{R}(B) = \mathcal{C}\left(B^t\right) \subseteq \mathcal{C}\left(A^t\right) = \mathcal{R}(A).
-\]   </paragraphs>
+\] </paragraphs>
                     <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> On the other hand, if $B$ is obtained from $A$ via $\alpha R_i$, then $A$ is obtained
 from $B$ via $\left(\frac{1}{\alpha}\right) R_i$.  So, by the same argument as before we have:
@@ -867,7 +865,7 @@ with the corresponding indices.</paragraphs>
                           <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence, the columns of $B^t$ all lie in $\mathcal{C}(A^t)$, which in turn implies that:
 \[
 \mathcal{R}(B) = \mathcal{C}\left(B^t\right) \subseteq \mathcal{C}\left(A^t\right) = \mathcal{R}(A).
-\]   </paragraphs>
+\] </paragraphs>
                           <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                             <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> On the other hand, if $B$ is obtained from $A$ via $\alpha R_i + R_j$, then $A$ is obtained
 from $B$ via $(-\alpha) R_i + R_j$.  So, by the same argument as before we have:
@@ -886,7 +884,7 @@ since by the definition of row-equivalence (</paragraphs>
                                 <title>Row-Equivalent Matrices</title>
                               </ref>
                               <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">) $B$ is obtained by $A$ via a series
-of row operations.   </paragraphs>
+of row operations. </paragraphs>
                             </collapse>
                           </collapse>
                         </collapse>
@@ -949,7 +947,7 @@ So the row space of a matrix is preserved by each row operation, and hence row s
             <keywords slide="19" environ="slide" chapter="13" course="MATH 1030">
               <keyword chapter="13" slide="19">Row spaces of two row-equivalent matrices</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="18" md5="e5cc49c48373245f536f3cca325c1252" course="MATH 1030" chapter="13" slide="19" item="13.18">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="18" md5="e17529bf73fb98adc780637e459644dc" course="MATH 1030" chapter="13" slide="19" item="13.18">
               <inline_keyword course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">Row spaces of two row-equivalent matrices</inline_keyword>
               <newline course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
               <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">The matrices
@@ -959,13 +957,13 @@ So the row space of a matrix is preserved by each row operation, and hence row s
 1&amp;1&amp;0&amp;6\end{bmatrix}&amp;\displaystyle B&amp;\displaystyle=\begin{bmatrix}1&amp;1&amp;0&amp;6\\
 3&amp;0&amp;-2&amp;-9\\
 2&amp;-1&amp;3&amp;4\end{bmatrix}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
               <newcol course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> are row-equivalent via a sequence of two row operations.</paragraphs>
                 <newline course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Hence by the above theorem
 \begin{align*}
-\displaystyle \mathcal{R}\!\left(A\right)=\left&lt; \left\{\begin{bmatrix}2\\
+\displaystyle \mathcal{R}\!\left(A\right)=\mathrm{Span} \left\{\begin{bmatrix}2\\
 -1\\
 3\\
 4\end{bmatrix},\,\begin{bmatrix}5\\
@@ -974,7 +972,7 @@ So the row space of a matrix is preserved by each row operation, and hence row s
 3\end{bmatrix},\,\begin{bmatrix}1\\
 1\\
 0\\
-6\end{bmatrix}\right\}\right&gt;=\left&lt; \left\{\begin{bmatrix}1\\
+6\end{bmatrix}\right\}=\mathrm{Span} \left\{\begin{bmatrix}1\\
 1\\
 0\\
 6\end{bmatrix},\,\begin{bmatrix}3\\
@@ -983,8 +981,8 @@ So the row space of a matrix is preserved by each row operation, and hence row s
 -9\end{bmatrix},\,\begin{bmatrix}2\\
 -1\\
 3\\
-4\end{bmatrix}\right\}\right&gt;=\mathcal{R}\!\left(B\right)
-\end{align*}   </paragraphs>
+4\end{bmatrix}\right\}=\mathcal{R}\!\left(B\right)
+\end{align*} </paragraphs>
               </newcol>
             </statement>
           </slide>
@@ -992,33 +990,33 @@ So the row space of a matrix is preserved by each row operation, and hence row s
             <keywords slide="20" environ="slide" chapter="13" course="MATH 1030">
               <keyword chapter="13" slide="20">Basis for the Row Space</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="19" title="Basis for the Row Space" md5="d8c0f0f15c1441f7313541b5893b6454" course="MATH 1030" chapter="13" slide="20" item="13.19">
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="19" title="Basis for the Row Space" md5="b5d6e57c2226ff1ff9de00bfc4ed3f9e" course="MATH 1030" chapter="13" slide="20" item="13.19">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="13" section="3" subsection="" subsubsection="" serial="" slide="20">Basis for the Row Space</title>
               <label wbtag="label" name="BRS" type="Theorem"/>
               <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a matrix and $B$ is a row-equivalent matrix in reduced row-echelon form. Let $S$ be the set of nonzero columns of $B^{t}$. Then </paragraphs>
               <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
                 <li class="ltx_item" environment="statement">
-                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $\mathcal{R}\!\left(A\right)=\left&lt; S\right&gt;$. </paragraphs>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $\mathcal{R}\!\left(A\right)=\mathrm{Span} S$. </paragraphs>
                 </li>
                 <li class="ltx_item" environment="statement">
                   <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $S$ is a linearly independent set. </paragraphs>
                 </li>
               </ol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="49166956895008485dc4c1f1e99b6bdd" course="MATH 1030" chapter="13" slide="20" of="d8c0f0f15c1441f7313541b5893b6454" of-src-course="MATH 1030" of-src-chapter="13" of-src-slide="20" of-type="Theorem" of-item="13.19" of-src-filename="lec13.xml" ofmd5="d8c0f0f15c1441f7313541b5893b6454" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="2269bbeca321bc38c43098d21ff8cc66" course="MATH 1030" chapter="13" slide="20" of="b5d6e57c2226ff1ff9de00bfc4ed3f9e" of-src-course="MATH 1030" of-src-chapter="13" of-src-slide="20" of-type="Theorem" of-item="13.19" of-src-filename="lec13.xml" ofmd5="b5d6e57c2226ff1ff9de00bfc4ed3f9e" of-serial="">
               <of-title hidden="true">Basis for the Row Space</of-title>
               <newcol course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> From Theorem    </paragraphs>
-                <ref environment="newcol" chapter_type="" label="REMRS" wbtag="ref" course="MATH 1030" chapter="13" slide="20" referrer-type="Proof" referrer-md5="49166956895008485dc4c1f1e99b6bdd" src-course="MATH 1030" src-chapter="13" src-slide="18" type="Theorem" item="13.17" src-filename="lec13.xml" md5="24bdd87be8932b1d94e873bafb302f30" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="REMRS" wbtag="ref" course="MATH 1030" chapter="13" slide="20" referrer-type="Proof" referrer-md5="2269bbeca321bc38c43098d21ff8cc66" src-course="MATH 1030" src-chapter="13" src-slide="18" type="Theorem" item="13.17" src-filename="lec13.xml" md5="24bdd87be8932b1d94e873bafb302f30" class="lcref" serial="">
                   <title>Row-Equivalent Matrices have Equal Row Spaces</title>
                 </ref>
-                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. we know that $\mathcal{R}\!\left(A\right)=\mathcal{R}\!\left(B\right)$. If $B$ has any zero rows, these are columns of $B^{t}$ that are the zero vector. We can safely toss out the zero vector in the span construction, since it can be recreated from the nonzero vectors by a linear combination where all the scalars are zero. So $\mathcal{R}\!\left(A\right)=\left&lt; S\right&gt;$.</paragraphs>
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. we know that $\mathcal{R}\!\left(A\right)=\mathcal{R}\!\left(B\right)$. If $B$ has any zero rows, these are columns of $B^{t}$ that are the zero vector. We can safely toss out the zero vector in the span construction, since it can be recreated from the nonzero vectors by a linear combination where all the scalars are zero. So $\mathcal{R}\!\left(A\right)=\mathrm{Span} S$.</paragraphs>
                 <newline course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
                 <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose $B$ has $r$ nonzero rows and let $D=\left\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\right\}$ denote the indices of the pivot columns of $B$. Denote the $r$ column vectors of $B^{t}$, the vectors in $S$, as $\mathbf{B}_{1},\,\mathbf{B}_{2},\,\mathbf{B}_{3},\,\ldots,\,\mathbf{B}_{r}$. To show that $S$ is linearly independent, start with a relation of linear dependence
 \begin{align*}
 \displaystyle \alpha_{1}\mathbf{B}_{1}+\alpha_{2}\mathbf{B}_{2}+\alpha_{3}\mathbf{B}_{3}+\cdots+\alpha_{r}\mathbf{B}_{r}=\mathbf{0}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                   <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                     <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Now consider this vector equality in location $d_{i}$. Since $B$ is in reduced row-echelon form, the entries of column $d_{i}$ of $B$ are all zero, except for a leading 1 in row $i$. Thus, in $B^{t}$, row $d_{i}$ is all zeros, excepting a 1 in column $i$. So, for $1\leq i\leq r$,
 \begin{align*}
@@ -1028,9 +1026,9 @@ So the row space of a matrix is preserved by each row operation, and hence row s
 &amp;\displaystyle=\alpha_{1}\left[\mathbf{B}_{1}\right]_{d_{i}}+\alpha_{2}\left[\mathbf{B}_{2}\right]_{d_{i}}+\alpha_{3}\left[\mathbf{B}_{3}\right]_{d_{i}}+\cdots+\alpha_{r}\left[\mathbf{B}_{r}\right]_{d_{i}} \\
 &amp;\displaystyle=\alpha_{1}(0)+\alpha_{2}(0)+\alpha_{3}(0)+\cdots+\alpha_{i}(1)+\cdots+\alpha_{r}(0) \\
 &amp;\displaystyle=\alpha_{i}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                     <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                      <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So we conclude that $\alpha_{i}=0$ for all $1\leq i\leq r$, establishing the linear independence of $S$.   </paragraphs>
+                      <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So we conclude that $\alpha_{i}=0$ for all $1\leq i\leq r$, establishing the linear independence of $S$. </paragraphs>
                       <qed course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
                     </collapse>
                   </collapse>
@@ -1040,7 +1038,7 @@ So the row space of a matrix is preserved by each row operation, and hence row s
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="21" id="s21" slide="21" course="MATH 1030" chapter="13" section="3" subsection="" subsubsection="" chapter_title="Basis" section_title="Row Space of a Matrix">
             <keywords slide="21" environ="slide" chapter="13" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="20" md5="088922df5b5e3b4d068243c01196ddff" course="MATH 1030" chapter="13" slide="21" item="13.20">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="20" md5="8b590b83e6865ad12931381df8cd48e7" course="MATH 1030" chapter="13" slide="21" item="13.20">
               <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose in the course of analyzing a matrix (its column space, its null space, its ...) we encounter the following set of vectors, described by a span:
 \begin{align*}
 \displaystyle X=\mathrm{Span} \left\{\begin{bmatrix}1\\
@@ -1060,7 +1058,7 @@ So the row space of a matrix is preserved by each row operation, and hence row s
 -3\\
 6\\
 -10\end{bmatrix}\right\}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
               <newcol course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $A$ be the matrix whose rows are the vectors in $X$, so by design $X=\mathcal{R}\!\left(A\right)$,
 \begin{align*}
@@ -1068,7 +1066,7 @@ So the row space of a matrix is preserved by each row operation, and hence row s
 3&amp;-1&amp;2&amp;-1&amp;6\\
 1&amp;-1&amp;0&amp;-1&amp;-2\\
 -3&amp;2&amp;-3&amp;6&amp;-10\end{bmatrix}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                 <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Row-reduce $A$ to form a row-equivalent matrix in reduced row-echelon form,
 \begin{align*}
@@ -1076,11 +1074,11 @@ So the row space of a matrix is preserved by each row operation, and hence row s
 0&amp;\boxed{1}&amp;0&amp;3&amp;1\\
 0&amp;0&amp;\boxed{1}&amp;-2&amp;5\\
 0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                   <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                     <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then the above theorem says we can grab the nonzero columns of $B^{t}$ and write
 \begin{align*}
-\displaystyle X=\mathcal{R}\!\left(A\right)=\mathcal{R}\!\left(B\right)=\left&lt; \left\{\begin{bmatrix}1\\
+\displaystyle X=\mathcal{R}\!\left(A\right)=\mathcal{R}\!\left(B\right)=\mathrm{Span} \left\{\begin{bmatrix}1\\
 0\\
 0\\
 2\\
@@ -1092,10 +1090,10 @@ So the row space of a matrix is preserved by each row operation, and hence row s
 0\\
 1\\
 -2\\
-5\end{bmatrix}\right\}\right&gt;
-\end{align*}   </paragraphs>
+5\end{bmatrix}\right\}
+\end{align*} </paragraphs>
                     <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                      <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> These three vectors provide a much-improved description of $X$. There are fewer vectors, and the pattern of zeros and ones in the first three entries makes it easier to determine membership in $X$.   </paragraphs>
+                      <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> These three vectors provide a much-improved description of $X$. There are fewer vectors, and the pattern of zeros and ones in the first three entries makes it easier to determine membership in $X$. </paragraphs>
                     </collapse>
                   </collapse>
                 </collapse>
@@ -1109,14 +1107,14 @@ So the row space of a matrix is preserved by each row operation, and hence row s
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="21" title="Column Space Row Space Transpose" md5="c48680e01c63782c5262d70033bcdaf9" course="MATH 1030" chapter="13" slide="22" item="13.21">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="13" section="3" subsection="" subsubsection="" serial="" slide="22">Column Space, Row Space, Transpose</title>
               <label wbtag="label" name="CSRST" type="Theorem"/>
-              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is a matrix. Then $\mathcal{C}\left(A\right)=\mathcal{R}\!\left(A^{t}\right)$.   </paragraphs>
+              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is a matrix. Then $\mathcal{C}\left(A\right)=\mathcal{R}\!\left(A^{t}\right)$. </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="190469bbc8bb5ed39da602b762ddff07" course="MATH 1030" chapter="13" slide="22" of="c48680e01c63782c5262d70033bcdaf9" of-src-course="MATH 1030" of-src-chapter="13" of-src-slide="22" of-type="Theorem" of-item="13.21" of-src-filename="lec13.xml" ofmd5="c48680e01c63782c5262d70033bcdaf9" of-serial="">
               <of-title hidden="true">Column Space, Row Space, Transpose</of-title>
               <newcol course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
 \displaystyle \mathcal{C}\left(A\right)=\mathcal{C}\left(\left(A^{t}\right)^{t}\right)=\mathcal{R}\!\left(A^{t}\right)
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                 <qed course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
               </newcol>
             </substatement>
@@ -1125,11 +1123,11 @@ So the row space of a matrix is preserved by each row operation, and hence row s
             <keywords slide="23" environ="slide" chapter="13" course="MATH 1030">
               <keyword chapter="13" slide="23">Column space from row operations</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="22" md5="8603621a47329436a634e805f1a86794" course="MATH 1030" chapter="13" slide="23" item="13.22">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="22" md5="25f7903d05d0c3829bb5e460750c25eb" course="MATH 1030" chapter="13" slide="23" item="13.22">
               <inline_keyword course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">Column space from row operations</inline_keyword>
               <newline course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
               <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Find the column space of $A$ in </paragraphs>
-              <ref environment="statement" chapter_type="" label="cb807061818215f8c700c6df6edc1229" wbtag="ref" course="MATH 1030" chapter="13" slide="23" referrer-type="Example" referrer-md5="8603621a47329436a634e805f1a86794" src-course="MATH 1030" src-chapter="13" src-slide="17" type="Example" item="13.16" src-filename="lec13.xml" md5="cb807061818215f8c700c6df6edc1229" class="lcref" serial="">
+              <ref environment="statement" chapter_type="" label="cb807061818215f8c700c6df6edc1229" wbtag="ref" course="MATH 1030" chapter="13" slide="23" referrer-type="Example" referrer-md5="25f7903d05d0c3829bb5e460750c25eb" src-course="MATH 1030" src-chapter="13" src-slide="17" type="Example" item="13.16" src-filename="lec13.xml" md5="cb807061818215f8c700c6df6edc1229" class="lcref" serial="">
                 <title>Example 13.16</title>
               </ref>
               <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">.</paragraphs>
@@ -1143,7 +1141,7 @@ So the row space of a matrix is preserved by each row operation, and hence row s
 0&amp;0&amp;\boxed{1}&amp;0&amp;1&amp;-3&amp;5\\
 0&amp;0&amp;0&amp;\boxed{1}&amp;2&amp;-6&amp;6\\
 0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                 <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let
 \begin{align*}
@@ -1157,9 +1155,9 @@ So the row space of a matrix is preserved by each row operation, and hence row s
 3\\
 -3\\
 4\end{bmatrix}\right\}.
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                   <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then $T$ is linear independent and $\mathcal{C}\left(A\right)=\left&lt; T\right&gt;$.   </paragraphs>
+                    <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then $T$ is linear independent and $\mathcal{C}\left(A\right)=\mathrm{Span} T$. </paragraphs>
                   </collapse>
                 </collapse>
               </newcol>
@@ -1177,7 +1175,7 @@ So the row space of a matrix is preserved by each row operation, and hence row s
 0&amp;9&amp;-4&amp;8\\
 7&amp;-13&amp;12&amp;-31\\
 -9&amp;7&amp;-8&amp;37\end{bmatrix}.
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                 <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Row-reduced this becomes,
 \begin{align*}
@@ -1188,19 +1186,19 @@ So the row space of a matrix is preserved by each row operation, and hence row s
 0&amp;0&amp;0&amp;0\\
 0&amp;0&amp;0&amp;0\\
 0&amp;0&amp;0&amp;0\end{bmatrix}.
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                   <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                     <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Now, using Theorem    </paragraphs>
-                    <ref environment="newcol" chapter_type="" label="CSRST" wbtag="ref" course="MATH 1030" chapter="13" slide="23" referrer-type="Example" referrer-md5="8603621a47329436a634e805f1a86794" src-course="MATH 1030" src-chapter="13" src-slide="22" type="Theorem" item="13.21" src-filename="lec13.xml" md5="c48680e01c63782c5262d70033bcdaf9" class="lcref" serial="">
+                    <ref environment="newcol" chapter_type="" label="CSRST" wbtag="ref" course="MATH 1030" chapter="13" slide="23" referrer-type="Example" referrer-md5="25f7903d05d0c3829bb5e460750c25eb" src-course="MATH 1030" src-chapter="13" src-slide="22" type="Theorem" item="13.21" src-filename="lec13.xml" md5="c48680e01c63782c5262d70033bcdaf9" class="lcref" serial="">
                       <title>Column Space, Row Space, Transpose</title>
                     </ref>
                     <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and Theorem    </paragraphs>
-                    <ref environment="newcol" chapter_type="" label="BRS" wbtag="ref" course="MATH 1030" chapter="13" slide="23" referrer-type="Example" referrer-md5="8603621a47329436a634e805f1a86794" src-course="MATH 1030" src-chapter="13" src-slide="20" type="Theorem" item="13.19" src-filename="lec13.xml" md5="d8c0f0f15c1441f7313541b5893b6454" class="lcref" serial="">
+                    <ref environment="newcol" chapter_type="" label="BRS" wbtag="ref" course="MATH 1030" chapter="13" slide="23" referrer-type="Example" referrer-md5="25f7903d05d0c3829bb5e460750c25eb" src-course="MATH 1030" src-chapter="13" src-slide="20" type="Theorem" item="13.19" src-filename="lec13.xml" md5="b5d6e57c2226ff1ff9de00bfc4ed3f9e" class="lcref" serial="">
                       <title>Basis for the Row Space</title>
                     </ref>
                     <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">,
 \begin{align*}
-\displaystyle \mathcal{C}\left(A\right)=\mathcal{R}\!\left(A^{t}\right)=\left&lt; \left\{\begin{bmatrix}1\\
+\displaystyle \mathcal{C}\left(A\right)=\mathcal{R}\!\left(A^{t}\right)=\mathrm{Span} \left\{\begin{bmatrix}1\\
 0\\
 0\\
 -\frac{31}{7}\end{bmatrix},\,\begin{bmatrix}0\\
@@ -1209,8 +1207,8 @@ So the row space of a matrix is preserved by each row operation, and hence row s
 \frac{12}{7}\end{bmatrix},\,\begin{bmatrix}0\\
 0\\
 1\\
-\frac{13}{7}\end{bmatrix}\right\}\right&gt;.
-\end{align*}   </paragraphs>
+\frac{13}{7}\end{bmatrix}\right\}.
+\end{align*} </paragraphs>
                     <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This is a very nice description of the column space. Fewer vectors than the 7 involved in the definition, and the pattern of the zeros and ones in the first 3 slots can be used to advantage. For example,
 let’s check if
@@ -1241,12 +1239,12 @@ is in $\mathcal{C}\left(A\right)$ or not.</paragraphs>
 y\\
 z\\
 -\frac{31}{7}x+\frac{12}{7}y+\frac{13}{7}z\end{bmatrix}.
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                         <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                           <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> From the first three coordinate $x=3,y=9,z=1$. Let’s check the last coordinate:
 \begin{align*}
 \displaystyle -\frac{31}{7}\times 3+\frac{12}{7}\times 9+\frac{13}{7}\times 1=4.
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                           <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                             <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So
 \begin{align*}
@@ -1263,9 +1261,9 @@ z\\
 0\\
 1\\
 \frac{13}{7}\end{bmatrix}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                             <collapse course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and hence $\mathbf{b}\in\mathcal{C}\left(A\right)$.   </paragraphs>
+                              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and hence $\mathbf{b}\in\mathcal{C}\left(A\right)$. </paragraphs>
                             </collapse>
                           </collapse>
                         </collapse>
@@ -1299,9 +1297,9 @@ There are at least two methods to find a subset
 $T\subseteq \{ S \}$ such that:
 
 (i)
-$T$ is linearly independent 
+$T$ is linearly independent
 
-(ii) $\left&lt; T\right&gt;=\left&lt; S\right&gt;$. (In other words $T$ is a basis for $\left&lt; S\right&gt;$.)
+(ii) $\mathrm{Span} T=\mathrm{Span} S$. (In other words $T$ is a basis for $\mathrm{Span} S$.)
 
 &lt;strong style=""&gt;Method 1&lt;/strong&gt;@newcol
 Let $A=[\mathbf{v}_{1}|\cdots|\mathbf{v}_{n}]\xrightarrow{\text{RREF}}B$.
@@ -1310,16 +1308,16 @@ Let $A=[\mathbf{v}_{1}|\cdots|\mathbf{v}_{n}]\xrightarrow{\text{RREF}}B$.
 Suppose $D=\left\{d_{1},\ldots,d_{r}\right\}$ be the indexes of the pivot columns of $B$.
 
 @col
-Let $T=\left\{\mathbf{v}_{d_{1}},\ldots,\mathbf{v}_{d_{r}}\right\}$. Then $T$ is a basis for $\left&lt; S\right&gt;=\mathcal{C}\left(A\right)$  
+Let $T=\left\{\mathbf{v}_{d_{1}},\ldots,\mathbf{v}_{d_{r}}\right\}$. Then $T$ is a basis for $\mathrm{Span} S=\mathcal{C}\left(A\right)$
 @endcol
 
 &lt;strong style=""&gt;Method 2&lt;/strong&gt;@newcol
 Let $A=[\mathbf{v}_{1}|\cdots|\mathbf{v}_{n}]$. Suppose $A^{t}\xrightarrow{\text{RREF}}B$.
 
 @col
-Let $T$ be the nonzero columns of $B^{t}$. Then $T$ is a basis for $\left&lt; S\right&gt;=\mathcal{C}\left(A\right)$
+Let $T$ be the nonzero columns of $B^{t}$. Then $T$ is a basis for $\mathrm{Span} S=\mathcal{C}\left(A\right)$
 
-This is an example from Lecture 14.  
+This is an example from Lecture 14.
 @endcol@endcol</comment>
           </slide>
         </slides>
@@ -1347,7 +1345,7 @@ Recall that, by </paragraphs>
 there exists a particular set of $n-r$
 vectors that could be used to span the null space of a matrix.</paragraphs>
             <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment=""/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="23" md5="f90acd7f0d06ec12dd5c28baf549d37f" course="MATH 1030" chapter="13" slide="24" item="13.23">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="23" md5="f91286ac1be7d51b6dadfac1bc640268" course="MATH 1030" chapter="13" slide="24" item="13.23">
               <label wbtag="label" name="LINSB" type="Example"/>
               <inline_keyword course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="statement">Linear independence of null space basis</inline_keyword>
               <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that we are interested in the null space of a $3\times 7$ matrix $A$ which row-reduces to
@@ -1355,18 +1353,18 @@ vectors that could be used to span the null space of a matrix.</paragraphs>
 \displaystyle B=\begin{bmatrix}\boxed{1}&amp;0&amp;-2&amp;4&amp;0&amp;3&amp;9\\
 0&amp;\boxed{1}&amp;5&amp;6&amp;0&amp;7&amp;1\\
 0&amp;0&amp;0&amp;0&amp;\boxed{1}&amp;8&amp;-5\end{bmatrix}.
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
               <newcol course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then $F=\{3,\,4,\,6,\,7\}$ is the set of indices for our four free variables that would be used in a description of the solution set for the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$. Applying </paragraphs>
-                <ref environment="newcol" chapter_type="" label="HMVEI" wbtag="ref" course="MATH 1030" chapter="13" slide="24" referrer-type="Example" referrer-md5="f90acd7f0d06ec12dd5c28baf549d37f" src-course="MATH 1030" src-chapter="7" src-slide="8" type="Theorem" item="7.6" src-filename="lec7.xml" md5="c7e99d0cb0ff625c6297535c4796ab83" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="HMVEI" wbtag="ref" course="MATH 1030" chapter="13" slide="24" referrer-type="Example" referrer-md5="f91286ac1be7d51b6dadfac1bc640268" src-course="MATH 1030" src-chapter="7" src-slide="8" type="Theorem" item="7.6" src-filename="lec7.xml" md5="c7e99d0cb0ff625c6297535c4796ab83" class="lcref" serial="">
                   <title>Theorem 7.6</title>
                 </ref>
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, we can begin to construct a set of four vectors whose span is the null space of $A$, a set of vectors we will refer to as $T$.
 \begin{align*}
 \displaystyle {\mathcal{N}}\!\left(A\right)
-=\left&lt; T\right&gt;
-&amp;=\left&lt; \{\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3},\,\mathbf{z}_{4}\}\right&gt;\\
-&amp;=\left&lt; \left\{\begin{bmatrix}\\
+=\mathrm{Span} T
+&amp;=\mathrm{Span} \{\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3},\,\mathbf{z}_{4}\}\\
+&amp;=\mathrm{Span} \left\{\begin{bmatrix}\\
 \\
 1\\
 0\\
@@ -1390,8 +1388,8 @@ vectors that could be used to span the null space of a matrix.</paragraphs>
 0\\
 \\
 0\\
-1\end{bmatrix}\right\}\right&gt;
-\end{align*}   </paragraphs>
+1\end{bmatrix}\right\}
+\end{align*} </paragraphs>
                 <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So far, we have constructed as much of these individual vectors as we can, based just on the knowledge of the contents of the set $F$. This has allowed us to determine the entries in slots 3, 4, 6 and 7, while we have left slots 1, 2 and 5 blank. Without doing any more, let us ask if $T$ is linearly independent? Begin with a relation of linear dependence on $T$, and see what we can learn about the scalars.</paragraphs>
                   <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
@@ -1460,11 +1458,11 @@ vectors that could be used to span the null space of a matrix.</paragraphs>
 \\
 \alpha_{3}\\
 \alpha_{4}\end{bmatrix}
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                     <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Applying the equalities of vectors, we see that $\alpha_{1}=\alpha_{2}=\alpha_{3}=\alpha_{4}=0$. So the only relation of linear dependence on the set $T$ is the trivial one. By the definition of linear independence, the set $T$ is linearly independent. The important feature of this example is how the </paragraphs>
                       <inline_keyword course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol">pattern of zeros and ones</inline_keyword>
-                      <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> in the four vectors led to the conclusion of linear independence.   </paragraphs>
+                      <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> in the four vectors led to the conclusion of linear independence. </paragraphs>
                     </collapse>
                   </collapse>
                 </collapse>
@@ -1475,7 +1473,7 @@ vectors that could be used to span the null space of a matrix.</paragraphs>
             <keywords slide="25" environ="slide" chapter="13" course="MATH 1030">
               <keyword chapter="13" slide="25">Basis for Null Spaces</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="24" title="Basis for Null Spaces" md5="0775759c7b87c87365d198698c5b88e6" course="MATH 1030" chapter="13" slide="25" item="13.24">
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="24" title="Basis for Null Spaces" md5="6dfd3e7f6f30112c829c04eecbe56d1b" course="MATH 1030" chapter="13" slide="25" item="13.24">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="13" section="4" subsection="" subsubsection="" serial="" slide="25">Basis for Null Spaces</title>
               <label wbtag="label" name="BNS" type="Theorem"/>
               <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is an $m\times n$ matrix, and $B$ is a row-equivalent matrix in reduced row-echelon form with $r$ pivot columns. Let $D=\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\}$ and $F=\{f_{1},\,f_{2},\,f_{3},\,\ldots,\,f_{n-r}\}$ be the sets of column indices of $B$ which are and are not, respectively, pivot columns. Construct the $n-r$ vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$ of size $n$ as
@@ -1487,29 +1485,29 @@ vectors that could be used to span the null space of a matrix.</paragraphs>
 (In fact $\mathbf{z}_{j}$ corresponding to the solution $x_{f_{j}}=1$ and $x_{f_{k}}=0$ for $k\neq j$.) Define the set $S=\{\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3},\,\ldots,\,\mathbf{z}_{n-r}\}$. Then </paragraphs>
               <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
                 <li class="ltx_item" environment="statement">
-                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> ${\mathcal{N}}\!\left(A\right)=\left&lt; S\right&gt;$. </paragraphs>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> ${\mathcal{N}}\!\left(A\right)=\mathrm{Span} S$. </paragraphs>
                 </li>
                 <li class="ltx_item" environment="statement">
                   <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $S$ is a linearly independent set. </paragraphs>
                 </li>
               </ol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="ba32b4ad266bf691b2bc245a571a7cbf" course="MATH 1030" chapter="13" slide="25" of="0775759c7b87c87365d198698c5b88e6" of-src-course="MATH 1030" of-src-chapter="13" of-src-slide="25" of-type="Theorem" of-item="13.24" of-src-filename="lec13.xml" ofmd5="0775759c7b87c87365d198698c5b88e6" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="d45fec0a826138358b164c700422f07e" course="MATH 1030" chapter="13" slide="25" of="6dfd3e7f6f30112c829c04eecbe56d1b" of-src-course="MATH 1030" of-src-chapter="13" of-src-slide="25" of-type="Theorem" of-item="13.24" of-src-filename="lec13.xml" ofmd5="6dfd3e7f6f30112c829c04eecbe56d1b" of-serial="">
               <of-title hidden="true">Basis for Null Spaces</of-title>
               <newcol course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Study the above example. You can skip the proof for now. Notice first that the vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$, are the same as the $n-r$ vectors defined in </paragraphs>
-                <ref environment="newcol" chapter_type="" label="SSNS" wbtag="ref" course="MATH 1030" chapter="13" slide="25" referrer-type="Proof" referrer-md5="ba32b4ad266bf691b2bc245a571a7cbf" src-course="MATH 1030" src-chapter="11" src-slide="15" type="Theorem" item="11.11" src-filename="lec11.xml" md5="b97fc03ed661ec578230fa1f3a73cd2e" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="SSNS" wbtag="ref" course="MATH 1030" chapter="13" slide="25" referrer-type="Proof" referrer-md5="d45fec0a826138358b164c700422f07e" src-course="MATH 1030" src-chapter="11" src-slide="15" type="Theorem" item="11.11" src-filename="lec11.xml" md5="b97fc03ed661ec578230fa1f3a73cd2e" class="lcref" serial="">
                   <title>Theorem 11.11</title>
                 </ref>
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. Also, the hypotheses of </paragraphs>
-                <ref environment="newcol" chapter_type="" label="SSNS" wbtag="ref" course="MATH 1030" chapter="13" slide="25" referrer-type="Proof" referrer-md5="ba32b4ad266bf691b2bc245a571a7cbf" src-course="MATH 1030" src-chapter="11" src-slide="15" type="Theorem" item="11.11" src-filename="lec11.xml" md5="b97fc03ed661ec578230fa1f3a73cd2e" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="SSNS" wbtag="ref" course="MATH 1030" chapter="13" slide="25" referrer-type="Proof" referrer-md5="d45fec0a826138358b164c700422f07e" src-course="MATH 1030" src-chapter="11" src-slide="15" type="Theorem" item="11.11" src-filename="lec11.xml" md5="b97fc03ed661ec578230fa1f3a73cd2e" class="lcref" serial="">
                   <title>Theorem 11.11</title>
                 </ref>
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> are the same as the hypotheses of the theorem we are currently proving. So </paragraphs>
-                <ref environment="newcol" chapter_type="" label="SSNS" wbtag="ref" course="MATH 1030" chapter="13" slide="25" referrer-type="Proof" referrer-md5="ba32b4ad266bf691b2bc245a571a7cbf" src-course="MATH 1030" src-chapter="11" src-slide="15" type="Theorem" item="11.11" src-filename="lec11.xml" md5="b97fc03ed661ec578230fa1f3a73cd2e" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="SSNS" wbtag="ref" course="MATH 1030" chapter="13" slide="25" referrer-type="Proof" referrer-md5="d45fec0a826138358b164c700422f07e" src-course="MATH 1030" src-chapter="11" src-slide="15" type="Theorem" item="11.11" src-filename="lec11.xml" md5="b97fc03ed661ec578230fa1f3a73cd2e" class="lcref" serial="">
                   <title>Theorem 11.11</title>
                 </ref>
-                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> tells us that ${\mathcal{N}}\!\left(A\right)=\left&lt; S\right&gt;$. That was the easy half, but the second part is not much harder. What is new here is the claim that $S$ is a linearly independent set.</paragraphs>
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> tells us that ${\mathcal{N}}\!\left(A\right)=\mathrm{Span} S$. That was the easy half, but the second part is not much harder. What is new here is the claim that $S$ is a linearly independent set.</paragraphs>
                 <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">To prove the linear independence of a set, we need to start with a relation of linear dependence and somehow conclude that the scalars involved must all be zero, i.e., that the relation of linear dependence is trivial. So, we start with and equation of the form
 \begin{align*}
@@ -1527,7 +1525,7 @@ For each $j$, $1\leq j\leq n-r$, consider the equality of the individual entries
 &amp;\displaystyle\quad\quad\alpha_{j-1}(0)+\alpha_{j}(1)+\alpha_{j+1}(0)+\cdots+\alpha_{n-r}(0)&amp; \text{ definition of } \mathbf{z}_{j} \\
 &amp;\displaystyle=\alpha_{j}
 \end{align*}
-So for all $j$, $1\leq j\leq n-r$, we have $\alpha_{j}=0$. Hence, the only relation of linear dependence on $S=\{\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3},\,\ldots,\,\mathbf{z}_{n-r}\}$ is the trivial one. By the definition of linear independence, the set is linearly independent, as desired.   </paragraphs>
+So for all $j$, $1\leq j\leq n-r$, we have $\alpha_{j}=0$. Hence, the only relation of linear dependence on $S=\{\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3},\,\ldots,\,\mathbf{z}_{n-r}\}$ is the trivial one. By the definition of linear independence, the set is linearly independent, as desired. </paragraphs>
                 <qed course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
               </newcol>
             </substatement>
@@ -1543,7 +1541,7 @@ So for all $j$, $1\leq j\leq n-r$, we have $\alpha_{j}=0$. Hence, the only relat
 -7&amp;-5&amp;-6&amp;-9&amp;10\\
 -4&amp;-3&amp;-4&amp;-6&amp;6\\
 \end{bmatrix}.
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
             </statement>
             <substatement environment="substatement" chapter_type="Chapter" type="Solution" wbtag="sol" md5="589dc47b5d9aa7d288cb90d99f60eb5d" course="MATH 1030" chapter="13" slide="26">
               <newcol course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
@@ -1566,7 +1564,7 @@ The free variables are $x_{4}$ and $x_{5}$.</paragraphs>
 -2\\
 1\\
 0\end{bmatrix}.
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                   <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                     <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Setting instead $x_{4}=0$ and $x_{5}=1$ gives
 \begin{align*}
@@ -1587,7 +1585,7 @@ Hence
 1\\
 0\\
 1\end{bmatrix}\right\}.
-\end{align*}   </paragraphs>
+\end{align*} </paragraphs>
                     <qed course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
                   </collapse>
                 </collapse>

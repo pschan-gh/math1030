@@ -16,14 +16,14 @@ Let $A\in M_{mn}$, $\mathbf{v}\in{\mathbb{R}}^{n}$. Then $A\mathbf{v}\in{\mathbb
 \end{align*}
 \begin{align*}
 \displaystyle L_{A}(\mathbf{v})=A\mathbf{v}.
-\end{align*}  
+\end{align*}
 @slide
 @eg
 Let
 \begin{align*}
 \displaystyle A=\begin{bmatrix}1&2&3\\
 4&5&6\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @newcol
 Then $L_{A}$ is a map from ${\mathbb{R}}^{3}\rightarrow{\mathbb{R}}^{2}$. Define by
 \begin{align*}
@@ -31,7 +31,7 @@ Then $L_{A}$ is a map from ${\mathbb{R}}^{3}\rightarrow{\mathbb{R}}^{2}$. Define
 y\\
 z\end{bmatrix})=\begin{bmatrix}x+2y+3z\\
 4x+5y+6z\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @endcol
 @end
 @newcol
@@ -74,7 +74,7 @@ Then $T$ is said to be a linear transformation if for $\alpha\in{\mathbb{R}}^{\h
 @section{Geometric interpretation of some linear transformations}
 
 In below we regard $\begin{bmatrix}x\\
-y\end{bmatrix}$ as the point $(x,y)$ in the $xy$-plane.  
+y\end{bmatrix}$ as the point $(x,y)$ in the $xy$-plane.
 @slide
 @eg
 @keyword{Rotation}
@@ -84,9 +84,9 @@ Let
 \begin{align*}
 \displaystyle A=\begin{bmatrix}\cos\theta&-\sin\theta\\
 \sin\theta&\cos\theta\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @col
-Then $L_{A}$ is $\theta$ degree anticlockwise rotation.  
+Then $L_{A}$ is $\theta$ degree anticlockwise rotation.
 @endcol
 @end
 @eg
@@ -98,9 +98,9 @@ Let $c$ be a real number,
 \displaystyle A=\begin{bmatrix}1&0\\
 0&-1\end{bmatrix}\,\,\,(\text{resp.}A=\begin{bmatrix}-1&0\\
 0&1\end{bmatrix})
-\end{align*}  
+\end{align*}
 @col
-Then $L_{A}$ is a reflection through the $x$-axis (resp. $y$-axis).  
+Then $L_{A}$ is a reflection through the $x$-axis (resp. $y$-axis).
 @endcol
 @end
 @eg
@@ -112,9 +112,9 @@ Let $c$ be real number, then
 \displaystyle A=\begin{bmatrix}k&0\\
 0&1\end{bmatrix}\,\,\,(\text{resp.}A=\begin{bmatrix}1&0\\
 0&k\end{bmatrix})
-\end{align*}  
+\end{align*}
 @col
-Then $L_{A}$ is a stretching of $x$-axis (resp. $y$-axis) by a factor of $k$.  
+Then $L_{A}$ is a stretching of $x$-axis (resp. $y$-axis) by a factor of $k$.
 @endcol
 @end
 @section{Coordinate vector and change of basis}
@@ -134,24 +134,24 @@ then $\alpha_{1},\cdots,\alpha_{k}$ are unique, i.e.
 then
 \begin{align*}
 \displaystyle \alpha_{i}=\beta_{i},\,\,\,i=1,\ldots,k.
-\end{align*}  
+\end{align*}
 @end
 @proof
 @newcol
 If (  @ref{vlin2}) is true, then
 \begin{align*}
 \displaystyle (\alpha_{1}-\beta_{1})\mathbf{v}_{1}+\cdots+(\alpha_{k}-\beta_{k})\mathbf{v}_{k}=\mathbf{0}.
-\end{align*}  
+\end{align*}
 @col
 Because $S$ is a basis, it is linearly independent. Therefore
 \begin{align*}
 \displaystyle \alpha_{i}-\beta_{i}=0.
-\end{align*}  
+\end{align*}
 @col
 Hence
 \begin{align*}
 \displaystyle \alpha_{i}=\beta_{i}.
-\end{align*}  
+\end{align*}
 @qed
 @endcol
 @end
@@ -162,7 +162,7 @@ By the theorem, using notation in (  @ref{vlin}), we can define
 \alpha_{2}\\
 \vdots\\
 \alpha_{k}\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @endcol
 @slide
 @eg
@@ -172,21 +172,21 @@ Then
 \displaystyle \mathbf{v}=\begin{bmatrix}x\\
 y\\
 z\end{bmatrix}=x\mathbf{e}_{1}+y\mathbf{e}_{2}+z\mathbf{e}_{3}.
-\end{align*}  
+\end{align*}
 @newcol
 Hence
 \begin{align*}
 \displaystyle \rho_{B}(\mathbf{v})=\begin{bmatrix}x\\
 y\\
 z\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @endcol
 @end
 @eg
 Generally if $V={\mathbb{R}}^{n}$, $B=\{\mathbf{e}_{1},\ldots,\mathbf{e}_{n}\}$, then
 \begin{align*}
 \displaystyle \rho_{B}(\mathbf{v})=\mathbf{v}.
-\end{align*}  
+\end{align*}
 @end
 @eg
 Let $V={\mathbb{R}}^{3}$,
@@ -198,7 +198,7 @@ Let $V={\mathbb{R}}^{3}$,
 1\end{bmatrix},\mathbf{v}_{3}=\begin{bmatrix}1\\
 2\\
 3\end{bmatrix}\}.
-\end{align*}  
+\end{align*}
 @newcol
 We can show that $B$ is linearly independent (exercise). Hence $B$ is a basis for $V$.
 Let
@@ -206,7 +206,7 @@ Let
 \displaystyle \mathbf{u}=\begin{bmatrix}3\\
 4\\
 3\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @col
 Find $\rho_{B}(\mathbf{u})$. To find $\rho_{B}(\mathbf{u})$, we compute the coefficient
 \begin{align*}
@@ -217,7 +217,7 @@ i.e.
 \displaystyle x_{1}+x_{2}+x_{3}&\displaystyle=3 \\
 \displaystyle x_{1}+x+2+2x_{3}&\displaystyle=4 \\
 \displaystyle x+2+3x_{3}&\displaystyle=3
-\end{align*}  
+\end{align*}
 @col
 Solve the system of linear equations, we have $x_{1}=2$, $x_{2}=0$, $x_{3}=1$. Hence
 \begin{align*}
@@ -226,7 +226,7 @@ x_{2}\\
 x_{3}\end{bmatrix}=\begin{bmatrix}2\\
 0\\
 1\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @endcol
 @end
 @eg
@@ -242,7 +242,7 @@ Let
 1\\
 2\\
 2\end{bmatrix}.\}.
-\end{align*}  
+\end{align*}
 @newcol
 Let
 \begin{align*}
@@ -251,7 +251,7 @@ Let
 11\\
 8\end{bmatrix}.
 \end{align*} <ol class="ltx_enumerate">
-<li class="ltx_item"> Show that $\mathbf{u}\in\left< B\right>$. </li>
+<li class="ltx_item"> Show that $\mathbf{u}\in\mathrm{Span} B$. </li>
 <li class="ltx_item"> Hence find $\rho_{B}(\mathbf{u})$. </li>
 
 </ol>
@@ -263,14 +263,14 @@ Find the solution of $\mathbf{u}=x_{1}\mathbf{v}_{1}+x_{2}\mathbf{v}_{2}+x_{3}\m
 \displaystyle 2x_{1}-x_{2}+x_{3}&\displaystyle=3 \\
 \displaystyle 3x_{1}+x_{2}+2x_{3}&\displaystyle=11 \\
 \displaystyle 4x_{1}-x_{2}+2x_{3}&\displaystyle=8
-\end{align*}  
+\end{align*}
 @col
 We find solution $x_{1}=1,x_{2}=2,x_{3}=3$. Hence
 \begin{align*}
 \displaystyle \rho_{B}(\mathbf{u})=\begin{bmatrix}1\\
 2\\
 3\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @endcol
 @end
 @section{Change of basis}
@@ -289,7 +289,7 @@ i.e.
 a_{2i}\\
 \vdots\\
 a_{ki}\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @col
 Define the @keyword{change-of-basis matrix from $S$ to $S^{\prime}$} as
 \begin{align*}
@@ -297,14 +297,14 @@ Define the @keyword{change-of-basis matrix from $S$ to $S^{\prime}$} as
 a_{21}&a_{22}&\cdots&a_{2k}\\
 \vdots&\vdots&\vdots&\vdots\\
 a_{k1}&a_{k2}&\cdots&a_{kk}\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @endcol
 @slide
 @thm
 For $\mathbf{v}\in V$,
 \begin{align*}
 \displaystyle \rho_{B^{\prime}}(\mathbf{v})=C_{{B},{B^{\prime}}}\rho_{B}(\mathbf{v}).
-\end{align*}  
+\end{align*}
 @end
 @proof
 @newcol
@@ -322,7 +322,7 @@ i.e.
 \begin{align*}
 \displaystyle\mathbf{v}&\displaystyle=\alpha_{1}\mathbf{v}_{1}+\alpha_{2}\mathbf{v}_{2}+\cdots+\alpha_{k}\mathbf{v}_{k} \\
 &\displaystyle=\alpha^{\prime}_{1}\mathbf{v}^{\prime}_{1}+\alpha^{\prime}_{2}\mathbf{v}^{\prime}_{2}+\cdots+\alpha^{\prime}_{k}\mathbf{v}^{\prime}_{k}.
-\end{align*}  
+\end{align*}
 @col
 By   @ref{vv'},
 \begin{align*}
@@ -335,7 +335,7 @@ By   @ref{vv'},
 &\displaystyle+(a_{21}\alpha_{1}+a_{22}\alpha_{2}+\cdots+a_{2k}\alpha_{k})\mathbf{v}^{\prime}_{2} \\
 &\displaystyle+\cdots \\
 &\displaystyle+(a_{k1}\alpha_{1}+a_{k2}\alpha_{2}+\cdots+a_{kk}\alpha_{k})\mathbf{v}^{\prime}_{2}
-\end{align*}  
+\end{align*}
 @col
 Thus
 \begin{align*}
@@ -355,7 +355,7 @@ a_{k1}&a_{k2}&\cdots&a_{kk}\end{bmatrix}\begin{bmatrix}\alpha_{1}\\
 \alpha_{2}\\
 \vdots\\
 \alpha_{k}\end{bmatrix}=C_{{B},{B^{\prime}}}\rho_{B}(\mathbf{v})
-\end{align*}  
+\end{align*}
 @qed
 @endcol
 @end
@@ -376,7 +376,7 @@ let $V={\mathbb{R}}^{3}$,
 \displaystyle \mathbf{u}=\begin{bmatrix}3\\
 4\\
 3\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @newcol
 Then
 \begin{align*}
@@ -392,21 +392,21 @@ Then
 1\end{bmatrix},\mathbf{v}^{\prime}_{3}=\begin{bmatrix}1\\
 1\\
 -1\end{bmatrix}\}.
-\end{align*}  
+\end{align*}
 @col
 Then
 \begin{align*}
 \displaystyle\mathbf{v}_{1}&\displaystyle=\mathbf{v}^{\prime}_{1}+\mathbf{v}^{\prime}_{3} \\
 \displaystyle\mathbf{v}_{2}&\displaystyle=2\mathbf{v}^{\prime}_{1}+\mathbf{v}^{\prime}_{3} \\
 \displaystyle\mathbf{v}_{3}&\displaystyle=6\mathbf{v}^{\prime}_{1}-\mathbf{v}^{\prime}_{2}+2\mathbf{v}^{\prime}_{3}.
-\end{align*}  
+\end{align*}
 @col
 Then
 \begin{align*}
 \displaystyle C_{{B},{B^{\prime}}}=\begin{bmatrix}1&2&6\\
 0&0&-1\\
 1&1&2\end{bmatrix}
-\end{align*}  
+\end{align*}
 @col
 So
 \begin{align*}
@@ -417,7 +417,7 @@ So
 1\end{bmatrix}=\begin{bmatrix}8\\
 -1\\
 4\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @col
 Verification:
 \begin{align*}
@@ -434,7 +434,7 @@ i.e.
 1\end{bmatrix}+4\begin{bmatrix}1\\
 1\\
 -1\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @endcol
 @end
 @section{Similar matrices}
@@ -448,7 +448,7 @@ Then for any $\mathbf{v}\in V$,
 \end{align*}
 \begin{align*}
 \displaystyle \mathbf{v}=Q\rho_{B}(\mathbf{v}).
-\end{align*}  
+\end{align*}
 @newcol
 Let $\mathbf{w}=L_{A}(\mathbf{v})=A\mathbf{v}$. Then
 \begin{align*}
@@ -462,7 +462,7 @@ Let $\mathbf{w}=L_{A}(\mathbf{v})=A\mathbf{v}$. Then
 \end{align*}
 \begin{align*}
 \displaystyle \rho_{B}(\mathbf{w})=Q^{-1}AQ\rho_{B}(\mathbf{v}).
-\end{align*}  
+\end{align*}
 @col
 So we say that two matrices $A_{1},A_{2}$ are similar if there exists an invertible matrix $Q$ such that $Q^{-1}A_{1}Q=A_{2}$.
 More details will be given in lecture 19.
