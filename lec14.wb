@@ -188,7 +188,7 @@ Let $V$ be a vector space and $\mathbf{v}_{1},\ldots,\mathbf{v}_{k},\mathbf{u}\i
 
 @newcol
 Suppose
-$S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is linearly independent and $\mathbf{u}\notin\mathrm{Span} S$. Then
+$S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is linearly independent and $\mathbf{u}\notin\mathrm{Span}\,S$. Then
 $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k},\mathbf{u}\right\}$ is linearly independent.
 @endcol
 @end
@@ -201,7 +201,7 @@ Let the relation of linear dependence of $S^{\prime}$ be
 @col
 Suppose $\alpha\neq 0$, then
 \begin{align*}
-\displaystyle \mathbf{u}=-\frac{\alpha_{1}}{\alpha}\mathbf{v}_{1}-\cdots-\frac{\alpha_{k}}{\alpha}\mathbf{v}_{k}\in\mathrm{Span} S.
+\displaystyle \mathbf{u}=-\frac{\alpha_{1}}{\alpha}\mathbf{v}_{1}-\cdots-\frac{\alpha_{k}}{\alpha}\mathbf{v}_{k}\in\mathrm{Span}\,S.
 \end{align*}
 @col
 Contradiction.
@@ -226,35 +226,35 @@ Then, there exists a basis for $V$.
 @proof
 @newcol
 Let $V$ be a nonzero vector space.
-Let $\mathbf{v}_{1}$ be a nonzero vector in $V$. If $V=\mathrm{Span} \left\{\mathbf{v}_{1}\right\}$, we can take $S=\left\{\mathbf{v}_{1}\right\}$. Then obviously $\left\{\mathbf{v}_{1}\right\}$ is linearly independent and hence $S$ is a basis for $V$.
+Let $\mathbf{v}_{1}$ be a nonzero vector in $V$. If $V=\mathrm{Span}\,\left\{\mathbf{v}_{1}\right\}$, we can take $S=\left\{\mathbf{v}_{1}\right\}$. Then obviously $\left\{\mathbf{v}_{1}\right\}$ is linearly independent and hence $S$ is a basis for $V$.
 
 @col
-Otherwise, let $\mathbf{v}_{2}\in V$ but not in $\mathrm{Span} \left\{\mathbf{v}_{1}\right\}$.
+Otherwise, let $\mathbf{v}_{2}\in V$ but not in $\mathrm{Span}\,\left\{\mathbf{v}_{1}\right\}$.
 
 @col
-By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$ is linearly independent. If $V=\mathrm{Span} \left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$, we can take $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$.
+By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$ is linearly independent. If $V=\mathrm{Span}\,\left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$, we can take $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$.
 
 @col
 So $S$ is a basis for $V$.
 
 @col
-Otherwise, let $\mathbf{v}_{3}\in V$ but not in $\mathrm{Span} \left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$.
+Otherwise, let $\mathbf{v}_{3}\in V$ but not in $\mathrm{Span}\,\left\{\mathbf{v}_{1},\mathbf{v}_{2}\right\}$.
 
 @col
-By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\right\}$ is linearly independent. Repeat the above process, inductive we can define $\mathbf{v}_{k+1}$ as following: If $V=\mathrm{Span} \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$,
+By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\right\}$ is linearly independent. Repeat the above process, inductive we can define $\mathbf{v}_{k+1}$ as following: If $V=\mathrm{Span}\,\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$,
 we can take $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$.
 
 @col
 Because $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$ is linearly independent, $S$ is a basis for $V$.
 
 @col
-Otherwise defined $\mathbf{v}_{k+1}\not\in\mathrm{Span} \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$.
+Otherwise defined $\mathbf{v}_{k+1}\not\in\mathrm{Span}\,\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$.
 
 @col
 By the previous lemma, $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k+1}\right\}$ is linearly independent.
 
 @col
-If the process stops, say at step $k$, i.e., $V=\mathrm{Span} \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$.
+If the process stops, say at step $k$, i.e., $V=\mathrm{Span}\,\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$.
 
 @col
 Then we can take $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\right\}$.
@@ -267,7 +267,7 @@ This completes the proof.
 
 @col
 Otherwise, the process continues infinitely, in particular, we can take $k=m+1$ and
-$V\neq\mathrm{Span} \left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{m+1}\right\}$ and
+$V\neq\mathrm{Span}\,\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{m+1}\right\}$ and
 $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{m+1}\right\}$ is linearly independent.
 
 @col
@@ -281,14 +281,14 @@ by @ref{SSLD} the vectors $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v
 @label{basisexistsprop}
 Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\right\}\subseteq{\mathbb{R}}^{m}$. Then
 \begin{align*}
-\displaystyle \dim\mathrm{Span} S\leq n.
+\displaystyle \dim\mathrm{Span}\,S\leq n.
 \end{align*}
 @end
 @proof
 @newcol
-By Theorem    @ref{basisexists}, there exists a subset $T$ of $S$ such that $T$ is a basis for $\mathrm{Span} S$.
+By Theorem    @ref{basisexists}, there exists a subset $T$ of $S$ such that $T$ is a basis for $\mathrm{Span}\,S$.
 \begin{align*}
-\displaystyle \dim\mathrm{Span} S
+\displaystyle \dim\mathrm{Span}\,S
 =
 \text{number of vectors in $T$}
 \leq
