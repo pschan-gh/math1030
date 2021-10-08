@@ -374,7 +374,9 @@ is a nontrivial solution to the homogeneous system of equations with the coeffic
 Denote the columns of the $m\times n$ matrix $A$ as vectors $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$. Then $\mathbf{x}\in{\mathbb{R}}^{n}$ is a solution to the linear system of equations $\mathcal{LS}({A},{\mathbf{b}})$ if and only if $\mathbf{b}$ is equal to the linear combination of the columns of $A$ formed with the entries of $\mathbf{x}$,
 \begin{align*}
 \displaystyle \left[\mathbf{x}\right]_{1}\mathbf{A}_{1}+\left[\mathbf{x}\right]_{2}\mathbf{A}_{2}+\left[\mathbf{x}\right]_{3}\mathbf{A}_{3}+\cdots+\left[\mathbf{x}\right]_{n}\mathbf{A}_{n}=\mathbf{b}
-\end{align*}  
+\end{align*} 
+
+Equivalently, $\mathbf{x} \in \mathbb{R}^n$ satisfies $A\mathbf{x} = \mathbf{b}$ if and onlt if $\mathbf{x}$ is a linear combination of $\mathbf{A}_1, \mathbf{A}_2, \ldots, \mathbf{A}_n$.
 @end
 @proof
 @newcol
@@ -409,7 +411,7 @@ has a solution. The augmented matrix is:
 \begin{align*}
 \displaystyle [\mathbf{v}_{1}|\cdots|\mathbf{v}_{n}|\mathbf{u}].
 \end{align*}
-Then we can solve the system of linear questions by the technique you learned.  
+We can now solve the corresponding system of linear questions using row operations.  
 @eg
 @newcol
 Let
