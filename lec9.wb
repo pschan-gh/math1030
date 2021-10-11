@@ -251,10 +251,10 @@ While some of these properties seem very obvious, they all require proof. Howeve
 We will prove one version of distributivity very carefully, and you can test your proof-building skills on some of the others. We need to establish an equality, so we will do so by beginning with one side of the equality, apply various definitions and theorems (listed to the right of each step) to massage the expression from the left into the expression on the right. Here we go with a proof of @ref{VS}{Property DSAC} in @ref{VSPCV}.
 For $1\leq i\leq m$,
 \begin{align*}
-\displaystyle\left[(\alpha+\beta)\mathbf{u}\right]_{i}&\displaystyle=(\alpha+\beta)\left[\mathbf{u}\right]_{i}&{\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=content/math1030/lec6.xml&query=(//lv:*[./lv:label/@name='def:matrixscalarmult'])[1]}{\mathrm{Matrix\;Scalar\;Multiplication}}}\\
+\displaystyle\left[(\alpha+\beta)\mathbf{u}\right]_{i}&\displaystyle=(\alpha+\beta)\left[\mathbf{u}\right]_{i}&{\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=https://raw.githubusercontent.com/pschan-gh/math1030/devel/lec9.xml&query=(//lv:*[./lv:label/@name="CVSM"])[1]}{\mathrm{Column\;Vector\;Scalar\;Multiplication}}}\\
 &\displaystyle=\alpha\left[\mathbf{u}\right]_{i}+\beta\left[\mathbf{u}\right]_{i} \\
-&\displaystyle=\left[\alpha\mathbf{u}\right]_{i}+\left[\beta\mathbf{u}\right]_{i}&{\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=content/math1030/lec6.xml&query=(//lv:*[./lv:label/@name='def:matrixscalarmult'])[1]}{\mathrm{Matrix\;Scalar\;Multiplication}}} \\
-&\displaystyle=\left[\alpha\mathbf{u}+\beta\mathbf{u}\right]_{i}&{\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=content/math1030/lec6.xml&query=(//lv:*[./lv:label/@name='MA'])[1]}{\mathrm{Matrix\;Addition}}}
+&\displaystyle=\left[\alpha\mathbf{u}\right]_{i}+\left[\beta\mathbf{u}\right]_{i}&{\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=https://raw.githubusercontent.com/pschan-gh/math1030/devel/lec9.xml&query=(//lv:*[./lv:label/@name="CVSM"])[1]}{\mathrm{Column\;Vector\;Scalar\;Multiplication}}} \\
+&\displaystyle=\left[\alpha\mathbf{u}+\beta\mathbf{u}\right]_{i}&{\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=https://raw.githubusercontent.com/pschan-gh/math1030/devel/lec9.xml&query=(//lv:*[./lv:label/@name="CVA"])[1]}{\mathrm{Column\;Vector\;Addition}}}
 \end{align*}
 Since the individual components of the vectors $(\alpha+\beta)\mathbf{u}$ and $\alpha\mathbf{u}+\beta\mathbf{u}$ are equal for all $i$, $1\leq i\leq m$, @ref{CVE} tells us the vectors are equal.  
 @qed
@@ -605,13 +605,16 @@ By @ref{cancell},
 
 @qed
 @end
+@slide
 @thm
 Let $V$ be a vector space, $\alpha$ a real number, $\mathbf{v}$ a vector in $V$. We have the following statement. <ol class="ltx_enumerate">
 <li class="ltx_item"> $0\mathbf{v}=\mathbf{0}$ . </li>
 <li class="ltx_item"> $a\mathbf{0}=\mathbf{0}$. </li>
 <li class="ltx_item"> $(-\alpha)\mathbf{v}=-(\alpha\mathbf{v})=\alpha(-\mathbf{v})$. </li></ol>
 @end
-@proof
+@proof <strong>For math major only</strong>
+@skip
+@col
 <ol class="ltx_enumerate">
 <li class="ltx_item"> \begin{align*}
 \displaystyle 0\mathbf{v}+0\mathbf{v}&=(0+0)\mathbf{v} & {\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=content/math1030/lec9.xml&query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;DSA}}}\\
@@ -696,28 +699,39 @@ then $W$ is a subspace if and only if <ol class="ltx_enumerate">
 
 ($\Rightarrow$)  
 @newcol
-By @ref{subdef}, Condition 1, $W$ is nonempty. Next, for $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{w}\in W$.
+Suppose $W$ is a subspace.
+
+By @ref{subdef}, Condition 1, $W$ is nonempty. 
+
+Next, for $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{w}\in W$.
 By @ref{subdef}, Condition 3, $\alpha\mathbf{v}\in W$.
 By @ref{subdef}, Condition 2, $\alpha\mathbf{v}+\mathbf{w}\in W$.  
 @endcol
 
 ($\Leftarrow$)  
 @newcol
-By Condition 1, @ref{subdef}, Condition 1 is true.
-Because $W$ is nonempty, let $\mathbf{x}\in W$. Let $\mathbf{v}=\mathbf{w}=\mathbf{x}$ and $\alpha=-1$.
-Then by condition 2, $(-1)\mathbf{w}+\mathbf{w}=\mathbf{0}\in W.$
+Suppose $W$ satisfies Conditions 1 and 2 of the theorem.
+
+By Condition 1 of the theorem, @ref{subdef} Condition 1 is true.
 
 @col
-Now we want to check @ref{subdef} Condition 2, suppose $\mathbf{v},\mathbf{w}\in W$.
-In condition 2, let $\alpha=1$, then $\mathbf{v}+\mathbf{w}=\alpha\mathbf{v}+\mathbf{w}\in W$.
+Now we want to check @ref{subdef} Condition 2.
+
+Suppose $\mathbf{v},\mathbf{w}\in W$.
+In Condition 2 of the theorem, let $\alpha=1$, then $\mathbf{v}+\mathbf{w}=\alpha\mathbf{v}+\mathbf{w}\in W$.
 
 @col
-Next we want to check @ref{subdef} Condition 3, suppose $\mathbf{v}\in W$, $\alpha\in{\mathbb{R}}^{\hbox{}}$.
-Let $\mathbf{w}=\mathbf{0}$, then $\alpha\mathbf{v}=\alpha\mathbf{v}+\mathbf{w}\in W$.  
+Next we want to check @ref{subdef} Condition 3.
+
+First, since $W$ is nonempty, there exists some element $\mathbf{x}\in W$. Let $\mathbf{v}=\mathbf{w}=\mathbf{x}$ and $\alpha=-1$ in Condition 2 of the theorem. Then, $\mathbf{0} = (-1)\mathbf{w}+\mathbf{w} \in W.$
+
+Now, for any $\mathbf{v}\in W$, $\alpha\in{\mathbb{R}}^{\hbox{}}$,
+let $\mathbf{w}=\mathbf{0} \in W$. 
+Then, $\alpha\mathbf{v}=\alpha\mathbf{v}+\mathbf{w}\in W$, by Condition 2 of the theorem.
 @qed
 @endcol
 @end
-@section{Examples}
+@subsection{Examples}
 @eg
 Let $V = \mathbb{R}^3$.  Let:
 \[
@@ -853,7 +867,7 @@ Let $h=\alpha f+g$. Then
 So $h\in E$. Hence $E$ is a subspace.  
 @endcol
 @end
-@section{Non-Examples}
+@subsection{Non-Examples}
 To show that $W$ is <strong>not</strong> a subspace of $V$, it suffices to show that it violates @ref{subdef} condition 1 or condition 2.
 This can be done by finding counter examples to either condition. Usually before checking those conditions, we quickly check if $\mathbf{0}_{V}\in W$
 (see @ref{0}).  
@@ -870,7 +884,7 @@ So $\mathbf{v}+\mathbf{w}\not\in W$. So $W$ violates @ref{subdef} condition 1 an
 @end
 @eg
 @newcol
-$V={\mathbb{R}}^{m}$, $W=\{\mathbf{v}\in V\,|\,\sum_{i=1}^{n}[\mathbf{v}]_{i}=1\}$.
+$V={\mathbb{R}}^{m}$, $W=\{\mathbf{v}\in V\,|\,\sum_{i=1}^{m}[\mathbf{v}]_{i}=1\}$.
 
 <strong>Method 1</strong> (the easiest method) Obviously $\mathbf{0}$ is not in $W$. So by @ref{0}, $W$ is not a subspace.
 
