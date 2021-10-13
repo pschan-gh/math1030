@@ -696,12 +696,17 @@ The linear system $\mathcal{LS}({A},{\mathbf{b}})$ has a unique solution for eve
 @endcol</li>
 <li class="ltx_item">
 @newcol
+$A$ is invertible.
+@endcol</li>
+<li class="ltx_item">
+@newcol
 The columns of $A$ form a linearly independent set.
-@endcol</li></ol>
+@endcol</li>
+</ol>
 @end
 @proof
 @newcol
-This follows directly from @ref{NMLIC} and @ref{NME2}.
+This follows directly from @ref{NMLIC} and @ref{NME1}.
 @qed
 @endcol
 @end
