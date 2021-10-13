@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="MATH 1030">
     <keywords slide="all" environ="course" chapter="" course="MATH 1030">
@@ -538,12 +537,16 @@ Theorem </paragraphs>
               <label wbtag="label" name="DLDS" type="Theorem"/>
               <paragraphs course="MATH 1030" chapter="12" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $S=\left\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\right\}$ is a set of vectors. Then $S$ is a linearly dependent set if and only if there is an index $t$, $1\leq t\leq n$, such that $\mathbf{u_{t}}$ is a linear combination of the vectors $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{t-1},\,\mathbf{u}_{t+1},\,\ldots,\,\mathbf{u}_{n}$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="999db374c40fec16a02d86a9c0c242dc" course="MATH 1030" chapter="12" slide="13" of="4a14cadf10ec606cc88093a90eb44a75" of-src-course="MATH 1030" of-src-chapter="12" of-src-slide="13" of-type="Theorem" of-item="12.8" of-src-filename="lec12.xml" ofmd5="4a14cadf10ec606cc88093a90eb44a75" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="5630b12d081cec590c765e655564bc71" course="MATH 1030" chapter="12" slide="13" of="4a14cadf10ec606cc88093a90eb44a75" of-src-course="MATH 1030" of-src-chapter="12" of-src-slide="13" of-type="Theorem" of-item="12.8" of-src-filename="lec12.xml" ofmd5="4a14cadf10ec606cc88093a90eb44a75" of-serial="">
               <of-title hidden="true">Dependency in Linearly Dependent Sets</of-title>
               <newline course="MATH 1030" chapter="12" chapter_type="" section="2" subsection="" subsubsection="" environment="substatement"/>
               <paragraphs course="MATH 1030" chapter="12" chapter_type="" section="2" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">($\Rightarrow$) </paragraphs>
               <newcol course="MATH 1030" chapter="12" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="12" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose that $S$ is linearly dependent. Then there exists a nontrivial relation of linear dependence (Lecture 12 Definition 1). That is, there are scalars, $\alpha_{i}$, $1\leq i\leq n$, not all of which are zero, such that
+                <paragraphs course="MATH 1030" chapter="12" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose that $S$ is linearly dependent. Then there exists a nontrivial relation of linear dependence (</paragraphs>
+                <ref environment="newcol" chapter_type="" label="RLDCV" wbtag="ref" course="MATH 1030" chapter="12" slide="13" referrer-type="Proof" referrer-md5="5630b12d081cec590c765e655564bc71" src-course="MATH 1030" src-chapter="12" src-slide="3" type="Definition" item="12.1" src-filename="lec12.xml" md5="507dcbe87e2b09816a586b9a8a52f250" class="lcref" serial="">
+                  <title>Relation of Linear Dependence</title>
+                </ref>
+                <paragraphs course="MATH 1030" chapter="12" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">). That is, there are scalars, $\alpha_{i}$, $1\leq i\leq n$, not all of which are zero, such that
 \begin{align*}
 \displaystyle \alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}+\cdots+\alpha_{n}\mathbf{u}_{n}=\mathbf{0}.
 \end{align*}
@@ -613,7 +616,7 @@ In the next example we will examine some of the subtleties. </paragraphs>
 1\\
 6\end{bmatrix}\right\}.\\
 \end{align*}
-Define $V=\mathrm{Span} R$.</paragraphs>
+Define $V=\mathrm{Span}\, R$.</paragraphs>
               <newline course="MATH 1030" chapter="12" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
               <newcol course="MATH 1030" chapter="12" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="12" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We form a $5\times 4$ matrix, $D$, and row-reduce it to understand the solutions to the homogeneous system $\mathcal{LS}({D},{\mathbf{0}})$:
@@ -651,9 +654,9 @@ Define $V=\mathrm{Span} R$.</paragraphs>
                       <collapse course="MATH 1030" chapter="12" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                         <paragraphs course="MATH 1030" chapter="12" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We claim that this particular equation will allow us to write
 \begin{align*}
-\displaystyle V=\mathrm{Span}  R=\mathrm{Span} \left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\mathbf{v}_{4}\right\}=\mathrm{Span}  \left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{4}\right\},
+\displaystyle V=\mathrm{Span}\, R=\mathrm{Span} \left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3},\,\mathbf{v}_{4}\right\}=\mathrm{Span} \left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{4}\right\},
 \end{align*}
-in essence declaring $\mathbf{v}_{3}$ as surplus for the task of building $V$ as a span of $R$. This claim is an equality of two sets. Let $R^{\prime}=\left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{4}\right\}$ and $V^{\prime}=\mathrm{Span} R^{\prime}$. We want to show that $V=V^{\prime}$.</paragraphs>
+in essence declaring $\mathbf{v}_{3}$ as surplus for the task of building $V$ as a span of $R$. This claim is an equality of two sets. Let $R^{\prime}=\left\{\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{4}\right\}$ and $V^{\prime}=\mathrm{Span}\, R^{\prime}$. We want to show that $V=V^{\prime}$.</paragraphs>
                         <newline course="MATH 1030" chapter="12" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
                         <paragraphs course="MATH 1030" chapter="12" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">First show that $V^{\prime}\subseteq V$. Since every vector of $R^{\prime}$ is in $R$, any vector we can construct in $V^{\prime}$ as a linear combination of vectors from $R^{\prime}$ can also be constructed as a vector in $V$ by the same linear combination of the same vectors in $R$. That was easy, now turn it around.</paragraphs>
                         <newline course="MATH 1030" chapter="12" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
@@ -966,7 +969,7 @@ form a linearly independent or dependent set? </paragraphs>
                 <paragraphs course="MATH 1030" chapter="12" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This is a proof where we can chain together equivalences, rather than proving the two halves separately.
 \begin{align*}
 A \text{ nonsingular} &amp;\displaystyle\iff\text{$\mathcal{LS}({A},{\mathbf{0}})$ has a unique solution} \\
-&amp;\displaystyle\iff A\vec{x} = \vec{0} \text{ has a unique solution }     \vec{x}\\
+&amp;\displaystyle\iff A\vec{x} = \vec{0} \text{ has a unique solution }   \vec{x}\\
 &amp;\displaystyle\iff\text{columns of $A$ are linearly independent}
 \end{align*} </paragraphs>
                 <qed course="MATH 1030" chapter="12" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>

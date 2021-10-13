@@ -606,9 +606,7 @@ We could continue to test other vectors for membership in $\mathrm{Span}\,R$, bu
 The previous example above inspires the following result:  
 @thm
 @label{thm:ANSRM}
-@newcol
 Given $m$ vectors $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{m}\}$ in ${\mathbb{R}}^{m}$, let $A$ be the $m\times m$ square matrix whose $i$-th column is $\mathbf{u}_{i}$. Then $A$ is non-singular if and only if $\mathrm{Span}\,S={\mathbb{R}}^{m}$.  
-@endcol
 @end
 @proof
 @newcol
@@ -754,6 +752,19 @@ So $W$ began life as the span of a set of four vectors. We have now shown (utili
 @col
 What was it about the original set of four vectors that allowed us to declare certain vectors as surplus? And just which vectors were we able to dismiss? And why did we have to stop once we had two vectors remaining? The answers to these questions motivate @keyword{linear independence}, our next section and next definition, and so are worth considering carefully now.  
 @endcol
+@end
+@slide
+In general:
+@thm
+@label{thm:spanredundancy}
+Let $\{\vect{v}_1, \vect{v}_2, \ldots, \vect{v}_n\}$ be a set of vectors.
+
+If $\vect{w}$ lies in $\mathrm{Span}\,\{\vect{v}_1, \vect{v}_2, \ldots, \vect{v}_n\}$, then:
+\[
+\mathrm{Span}\{\vect{v}_1, \vect{v}_2, \ldots, \vect{v}_n,\vect{w}\}
+=
+\mathrm{Span}\,\{\vect{v}_1, \vect{v}_2, \ldots, \vect{v}_n\}
+\]
 @end
 @section{Geometric Interpretation}
 <iframe width="800" height="600" allowfullscreen="" style="border: 1px solid rgb(228, 228, 228); border-radius: 4px; overflow: hidden; background: none;" frameborder="0" data-src="https://www.geogebra.org/3d/tnnuszqm?embed" rendered="0" id="iFrameResizer5" scrolling="no" src="https://www.geogebra.org/3d/tnnuszqm?embed"/>

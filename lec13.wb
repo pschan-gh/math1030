@@ -264,12 +264,95 @@ Hence $\mathcal{C}\left(A\right)=\mathrm{Span}\,A=\mathrm{Span}\,\left\{ \mathbf
 @thm
 @title{Basis of the Column Space}
 @label{BCS}
-@newcol
 Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$, and $B$ is a row-equivalent matrix in reduced row-echelon form with $r$ pivot columns. Let $D=\left\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\right\}$ be the set of indices for the pivot columns of $B$.
-Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ldots,\,\mathbf{A}_{d_{r}}\right\}$. Then <ol class="ltx_enumerate">
+Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ldots,\,\mathbf{A}_{d_{r}}\right\}$. Then:
+<ol class="ltx_enumerate">
 <li class="ltx_item"> $T$ is a linearly independent set. </li>
 <li class="ltx_item"> $\mathcal{C}\left(A\right)=\mathrm{Span}\,T$. </li></ol>
-@endcol
+@end
+@lemma
+@col
+If a matrix $A$ is row-equivalent to $B$,
+then any matrix formed with a subset of columns of $A$
+is row-equivalent to the matrix formed with the corresponding subset of columns
+(i.e. with the same indices and conforming to the same order) of $B$.
+@end
+@proof
+@col
+<strong>Exercise</strong>.
+@end
+@proof
+@of{BCS}
+@col
+Let:
+\[
+A' = [\mathbf{A}_{d_1} | \mathbf{A}_{d_2} | \cdots | \mathbf{A}_{d_r}],
+\]
+\[
+B' = [\mathbf{B}_{d_1} | \mathbf{B}_{d_2} | \cdots | \mathbf{B}_{d_r}].
+\]
+Then, $A'$ and $B'$ are row-equivalent by the previous lemma.
+
+@enumerate
+@item
+@col
+Since $d_1, d_2, \cdots d_r$ are the indices of the pivot columns of $B$, which is in RREF, we have:
+\[
+B' = \begin{bmatrix}
+I_r\\
+\hline
+\mathcal{O}_{(m - r)\times r}
+\end{bmatrix}.
+\]
+(If $r = m$, then $B' = I_r$.)
+
+@col
+Hence, $B'\vect{x} = \vect{0}$ if and only if $\vect{x} = \vect{0}$.
+
+@col
+Since $A'$ is row-equivalent to $B'$,
+we have $A'\vect{x} = \vect{0}$ if and only if $\vect{x} = \vect{0}$,
+which implies that the columns of $A'$, 
+i.e. the elements of $T$, are linearly independent.
+@item
+@col
+Given any integer $1 \leq j \leq n$ which does not lie in $D$ 
+(i.e. the index of a non-pivot column of $B$), consider the linear system
+$\mathcal{LS}(A', \vect{A}_j)$ (or equivalently $A'\vect{x} = \vect{A}_j$).
+
+By the previous lemma,
+the corresponding the augmented matrix $\left[A' | \vect{A}_j\right]$
+is row-equivalent to $\left[B' | \vect{B}_j\right]$,
+which has the form:
+
+@col
+\[
+\left[
+\begin{array}{c|c}
+I_r & \begin{matrix}\ast\\\ast\\\vdots\\\ast\end{matrix}\\
+\hline
+\mathcal{O}_{(m - r) \times r} & \begin{matrix}0 \\ 0 \\ \vdots \\ 0\end{matrix}
+\end{array}
+\right].
+\]
+Hence, the linear system $\mathcal{LS}(A', \vect{A}_j)$ is consistent 
+(in fact, with one unique solution), 
+which implies that $\vect{A}_j$ lies in the span of
+$\{\vect{A}_{d_1}, \vect{A}_{d_2}, \ldots, \vect{A}_{d_r}\}$.
+
+@col
+This holds for all $j \notin D$.
+Hence, by @ref{thm:spanredundancy}, we have:
+\[
+\mathcal{C}(A) 
+=
+\mathrm{Span}\{\vect{A}_1, \vect{A}_2,\ldots, \vect{A}_n\}
+=
+\mathrm{Span}\{\vect{A}_{d_1}, \vect{A}_{d_2},\ldots, \vect{A}_{d_r}\}
+=
+\mathrm{Span}\,T.
+\]
+@endenumerate
 @end
 @slide
 @eg
