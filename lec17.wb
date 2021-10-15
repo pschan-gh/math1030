@@ -7,14 +7,14 @@ Given two vectors $\mathbf{v}$ and $\mathbf{w}$ in ${\mathbb{R}}^{m}$, we define
 \begin{align}
 \label{ipdefe1}
 \displaystyle \left< \mathbf{v},\mathbf{w}\right>=\sum_{i=1}^{m}[\mathbf{v}]_{i}[\mathbf{w}]_{i}=[\mathbf{v}]_{1}[\mathbf{w}]_{1}+\cdots+[\mathbf{v}]_{m}[\mathbf{w}]_{m}.&
-\end{align}  
+\end{align}
 @newcol
 It is called the @keyword{inner product} of ${\mathbb{R}}^{m}$. The vector space ${\mathbb{R}}^{m}$ together with the operation $\langle-,-\rangle$ is called an inner product space.
 If we regard $\mathbf{v}$ and $\mathbf{w}$ as $m\times 1$ matrices, then we can write:
 \begin{align}
 \label{ipdefe2}
 \displaystyle \left< \mathbf{v},\mathbf{w}\right>=\mathbf{v}^{t}\mathbf{w}.&
-\end{align}  
+\end{align}
 @endcol
 @end
 @slide
@@ -25,7 +25,7 @@ We have:
 2\end{bmatrix},\begin{bmatrix}3\\
 4\end{bmatrix}\right>=1\times 3+2\times 4=11
 \end{align*}
-and:  
+and:
 @newcol
 \begin{align*}
 \displaystyle \left< \begin{bmatrix}1\\
@@ -33,7 +33,7 @@ and:
 3\end{bmatrix},\begin{bmatrix}4\\
 5\\
 6\end{bmatrix}\right>=1\times 4+2\times 5+3\times 6=32.
-\end{align*}  
+\end{align*}
 @endcol
 @end
 @slide
@@ -59,7 +59,7 @@ For any $\mathbf{v},\mathbf{w},\mathbf{u}\in{\mathbb{R}}^{m}$ and $\alpha\in{\ma
 &\displaystyle=[\mathbf{v}]_{1}[\mathbf{u}]_{1}+[\mathbf{w}]_{1}[\mathbf{u}]_{1}+[\mathbf{v}]_{2}[\mathbf{u}]_{2}+[\mathbf{w}]_{2}[\mathbf{u}]_{2}+\cdots+[\mathbf{v}]_{m}[\mathbf{u}]_{m}+[\mathbf{w}]_{m}[\mathbf{u}]_{m} \\
 &\displaystyle=[\mathbf{v}]_{1}[\mathbf{u}]_{1}+\cdots+[\mathbf{v}]_{m}[\mathbf{u}]_{m}+[\mathbf{w}]_{1}[\mathbf{u}]_{1}+\cdots+[\mathbf{w}]_{m}[\mathbf{u}]_{m} \\
 &\displaystyle=\left< \mathbf{v},\mathbf{u}\right>+\left< \mathbf{w},\mathbf{u}\right>.
-\end{align*}  
+\end{align*}
 @col
 Or we can use $\eqref{ipdefe2}$:
 \begin{align*}
@@ -74,7 +74,7 @@ Or we can use $\eqref{ipdefe2}$:
 &\displaystyle=\alpha[\mathbf{v}]_{1}[\mathbf{w}]_{1}+\alpha[\mathbf{v}]_{2}[\mathbf{w}]_{2}+\cdots+\alpha[\mathbf{v}]_{m}[\mathbf{w}]_{m} \\
 &\displaystyle=\alpha([\mathbf{v}]_{1}[\mathbf{w}]_{1}+[\mathbf{v}]_{2}[\mathbf{w}]_{2}+\cdots+[\mathbf{v}]_{m}[\mathbf{w}]_{m}) \\
 &\displaystyle=\alpha\left< \mathbf{v},\mathbf{w}\right>.
-\end{align*}  
+\end{align*}
 @col
 Or we can use $\eqref{ipdefe2}$:
 \begin{align*}
@@ -89,7 +89,7 @@ Or we can use $\eqref{ipdefe2}$:
 <li class="ltx_item"> We compute
 \begin{align*}
 \displaystyle \left< \mathbf{v},\mathbf{v}\right>=[\mathbf{v}]_{1}^{2}+[\mathbf{v}]_{2}^{2}+\cdots+[\mathbf{v}]_{m}^{2}\geq 0.
-\end{align*}  
+\end{align*}
 @col
 Noting that $\left< \mathbf{v},\mathbf{v}\right>=0$ if and only if $[\mathbf{v}]_{i}=0$ for all $1\leq i\leq n$, we see that $\mathbf{v}=\mathbf{0}$ </li>
 
@@ -124,7 +124,7 @@ By @ref{ipdef} item 2,
 \left< \alpha\mathbf{v},\mathbf{u}\right>+\left< \beta\mathbf{w},\mathbf{u}\right>
 =
 \alpha\left< \mathbf{v},\mathbf{u}\right>+\beta\left< \mathbf{w},\mathbf{u}\right>.
-\end{align*}  
+\end{align*}
 @col
 Or we can also use $\eqref{ipdefe2}$:
 \begin{align*}
@@ -139,7 +139,7 @@ Or we can also use $\eqref{ipdefe2}$:
 \end{align*}
 \begin{align*}
 \displaystyle =\alpha\left< \mathbf{v},\mathbf{u}\right>+\beta\left< \mathbf{w},\mathbf{u}\right>=\alpha\left< \mathbf{u},\mathbf{v}\right>+\beta\left< \mathbf{u},\mathbf{w}\right>.
-\end{align*}  
+\end{align*}
 @col
 Or we can also use $\eqref{ipdefe2}$ (fill the detail). </li>
 <li class="ltx_item"> We compute
@@ -163,7 +163,7 @@ for all $\mathbf{x}\in V$. By the previous part $\mathbf{v}-\mathbf{w}=\mathbf{0
 @slide
 @defn
 @title{Norm}
-The @keyword{norm} (or @keyword{length}) of $\mathbf{v}\in{\mathbb{R}}^{n}$ is defined to be $\|\mathbf{v}\|=\sqrt{\left< \mathbf{v},\mathbf{v}\right>}$. Note that $\left< \mathbf{v},\mathbf{v}\right>\geq 0$. So the symbol $\sqrt{\left< \mathbf{v},\mathbf{v}\right>}$ is meaningful.  
+The @keyword{norm} (or @keyword{length}) of $\mathbf{v}\in{\mathbb{R}}^{n}$ is defined to be $\|\mathbf{v}\|=\sqrt{\left< \mathbf{v},\mathbf{v}\right>}$. Note that $\left< \mathbf{v},\mathbf{v}\right>\geq 0$. So the symbol $\sqrt{\left< \mathbf{v},\mathbf{v}\right>}$ is meaningful.
 @end
 @slide
 @eg
@@ -175,7 +175,7 @@ Let $V={\mathbb{R}}^{3}$ with the standard inner product. Let
 3\end{bmatrix},\mathbf{w}=\begin{bmatrix}1\\
 0\\
 1\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @newcol
 Then
 \begin{align*}
@@ -184,7 +184,7 @@ Then
 and
 \begin{align*}
 \displaystyle \|\mathbf{w}\|=\sqrt{\left< \mathbf{w},\mathbf{w}\right>}=\sqrt{1^{2}+0^{2}+1^{2}}=\sqrt{2}.
-\end{align*}  
+\end{align*}
 @endcol
 @end
 @slide
@@ -203,16 +203,16 @@ Let $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{v}\in{\mathbb{R}}^{m}$.
 @ol
 @li
 $\|\mathbf{v}\|=0\iff 0=\|\mathbf{v}\|^{2}=\left< \mathbf{v},\mathbf{v}\right>$.
-By Proposition (  @ref{ipdef}), item 4, the above is true if and only if $\mathbf{v}=\mathbf{0}$.  
+By Proposition (  @ref{ipdef}), item 4, the above is true if and only if $\mathbf{v}=\mathbf{0}$.
 @li
 $\|\alpha\mathbf{v}\|=\sqrt{\left< \alpha\mathbf{v},\alpha\mathbf{v}\right>}$
 $=\sqrt{\alpha\left< \mathbf{v},\alpha\mathbf{v}\right>}=\sqrt{\alpha^{2}\left< \mathbf{v},\mathbf{v}\right>}$
-$=|\alpha|\sqrt{\left< \mathbf{v},\mathbf{v}\right>}=|\alpha|\|\mathbf{v}\|$.  
+$=|\alpha|\sqrt{\left< \mathbf{v},\mathbf{v}\right>}=|\alpha|\|\mathbf{v}\|$.
 @li
 By the previous part
 \begin{align*}
 \displaystyle \|\alpha\mathbf{v}\|=|\alpha|\|\mathbf{v}\|=\frac{1}{\|\mathbf{v}\|}\|\mathbf{v}\|=1.
-\end{align*}  
+\end{align*}
 @endol
 @endcol
 @end
@@ -220,7 +220,7 @@ By the previous part
 @defn
 @title{unit vector}
 A vector $\mathbf{v}\in{\mathbb{R}}^{m}$ is said to be a @keyword{unit vector} if $\|\mathbf{v}\|=1$.
-A non-zero vector $\mathbf{v}$ can be @keyword{normalized} to a unit vector $\frac{\mathbf{v}}{\|\mathbf{v}\|}$ (see the previous proposition item 3).  
+A non-zero vector $\mathbf{v}$ can be @keyword{normalized} to a unit vector $\frac{\mathbf{v}}{\|\mathbf{v}\|}$ (see the previous proposition item 3).
 @end
 @slide
 @eg
@@ -236,11 +236,11 @@ and
 0\\
 \frac{1}{\sqrt{2}}\end{bmatrix}
 \end{align*}
-respectively.  
+respectively.
 @end
 @section{Orthogonal sets}
 @defn
-Two vectors $\mathbf{v}$ and $\mathbf{w}$ in $\mathbb{R}^{n}$ are said @keyword{orthogonal} or @keyword{perpendicular} if $\left< \mathbf{v},\mathbf{w}\right>=0$. In this case we write $\mathbf{v}\perp\mathbf{w}$.  
+Two vectors $\mathbf{v}$ and $\mathbf{w}$ in $\mathbb{R}^{n}$ are said @keyword{orthogonal} or @keyword{perpendicular} if $\left< \mathbf{v},\mathbf{w}\right>=0$. In this case we write $\mathbf{v}\perp\mathbf{w}$.
 @end
 @slide
 @eg
@@ -263,7 +263,7 @@ as
 \end{align*} </li>
 <li class="ltx_item">
 @newcol
-Let $V={\mathbb{R}}^{m}$. Then $\mathbf{e}_{i}\perp\mathbf{e}_{j}$ if $i\neq j$.  
+Let $V={\mathbb{R}}^{m}$. Then $\mathbf{e}_{i}\perp\mathbf{e}_{j}$ if $i\neq j$.
 @endcol</li></ol>
 @end
 @slide
@@ -291,11 +291,11 @@ $S=\left\{\begin{bmatrix}1\\
 -1\\
 0\end{bmatrix},\begin{bmatrix}1\\
 1\\
--2\end{bmatrix}\right\}$ is orthogonal.  
+-2\end{bmatrix}\right\}$ is orthogonal.
 @endcol</li>
 <li class="ltx_item">
 @newcol
-For any $k\leq m$, the set $S=\left\{\mathbf{e}_{1},\mathbf{e}_{2},\ldots,\mathbf{e}_{k}\right\}\subset\mathbb{R}^{m}$ is orthogonal.  
+For any $k\leq m$, the set $S=\left\{\mathbf{e}_{1},\mathbf{e}_{2},\ldots,\mathbf{e}_{k}\right\}\subset\mathbb{R}^{m}$ is orthogonal.
 @endcol</li></ol>
 @end
 @slide
@@ -307,12 +307,12 @@ Let
 \end{align*}
 \begin{align*}
 \displaystyle \mathbf{w}=\beta_{1}\mathbf{v}_{1}+\cdots+\beta_{k}\mathbf{v}_{k}.
-\end{align*}  
+\end{align*}
 @newcol
 Then, for $\alpha_{i},\beta_{i}\in{\mathbb{R}}^{\hbox{}}$, $i=1,\ldots k$, we have
 \begin{align*}
 \displaystyle \left< \mathbf{v},\mathbf{w}\right>=\alpha_{1}\beta_{1}\|\mathbf{v}_{1}\|^{2}+\cdots+\alpha_{k}\beta_{k}\|\mathbf{v}_{k}\|^{2}.
-\end{align*}  
+\end{align*}
 @endcol
 @end
 @proof
@@ -322,28 +322,28 @@ First for $1\leq i\leq k$, we compute
 \displaystyle\left< \mathbf{v},\mathbf{v}_{i}\right>&\displaystyle=\left< \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k},\mathbf{v}_{i}\right> \\
 &\displaystyle=\alpha_{1}\left< \mathbf{v}_{1},\mathbf{v}_{i}\right>+\cdots+\alpha_{k}\left< \mathbf{v}_{k},\mathbf{v}_{i}\right> \\
 &\displaystyle=\alpha_{i}\left< \mathbf{v}_{i},\mathbf{v}_{i}\right>=\alpha_{i}\|\mathbf{v}_{i}\|^{2}.
-\end{align*}  
+\end{align*}
 @col
 The last step follows from the fact that $\left< \mathbf{v}_{j},\mathbf{v}_{i}\right>=0$ for $j\neq i$. But then
 \begin{align*}
 \displaystyle\left< \mathbf{v},\mathbf{w}\right>&\displaystyle=\left< \mathbf{v},\beta_{1}\mathbf{v}_{1}+\cdots+\beta_{k}\mathbf{v}_{k}\right> \\
 &\displaystyle=\beta_{1}\left< \mathbf{v},\mathbf{v}_{1}\right>+\cdots+\beta_{k}\left< \mathbf{v},\mathbf{v}_{k}\right> \\
 &\displaystyle=\alpha_{1}\beta_{1}\|\mathbf{v}_{1}\|^{2}+\cdots+\alpha_{k}\beta_{k}\|\mathbf{v}_{k}\|^{2}.
-\end{align*}  
+\end{align*}
 @qed
 @endcol
 @end
 @slide
 @thm
 @label{orthind}
-Let $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2},\cdots,\mathbf{v}_{k}\right\}$ be an orthogonal subset of ${\mathbb{R}}^{m}$. Then $S$ is linearly independent.  
+Let $S=\left\{\mathbf{v}_{1},\mathbf{v}_{2},\cdots,\mathbf{v}_{k}\right\}$ be an orthogonal subset of ${\mathbb{R}}^{m}$. Then $S$ is linearly independent.
 @end
 @proof
 @newcol
 Suppose that we have a relation of linear dependence:
 \begin{align*}
 \displaystyle \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k}=\mathbf{0}.
-\end{align*}  
+\end{align*}
 @col
 For $1\leq i\leq k$ we have
 \begin{align*}
@@ -354,14 +354,14 @@ i.e. for $1\leq i\leq k$,
 \displaystyle\left< \mathbf{v},\mathbf{v}_{i}\right>&\displaystyle=\left< \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k},\mathbf{v}_{i}\right> \\
 &\displaystyle=\alpha_{1}\left< \mathbf{v}_{1},\mathbf{v}_{i}\right>+\cdots+\alpha_{k}\left< \mathbf{v}_{k},\mathbf{v}_{i}\right> \\
 &\displaystyle=\alpha_{i}\|\mathbf{v}_{i}\|^{2}=0.
-\end{align*}  
+\end{align*}
 @col
 So for $1\leq i\leq k$ we have
 \begin{align*}
 \displaystyle \alpha_{i}=0.
-\end{align*}  
+\end{align*}
 @col
-Therefore the relation of linear dependence is trivial. Hence $S$ is linearly independent.  
+Therefore the relation of linear dependence is trivial. Hence $S$ is linearly independent.
 @qed
 @endcol
 @end
@@ -381,7 +381,7 @@ Then
 i.e.
 \begin{align*}
 \displaystyle \mathbf{v}=\frac{\left< \mathbf{v},\mathbf{v}_{1}\right>}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}+\cdots+\frac{\left< \mathbf{v},\mathbf{v}_{k}\right>}{\|\mathbf{v}_{k}\|^{2}}\mathbf{v}_{k}.
-\end{align*}  
+\end{align*}
 @end
 @proof
 @newcol
@@ -390,23 +390,23 @@ Suppose that $\mathbf{v}=\alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k
 \displaystyle\left< \mathbf{v},\mathbf{v}_{i}\right>&\displaystyle=\left< \alpha_{1}\mathbf{v}_{1}+\cdots+\alpha_{k}\mathbf{v}_{k},\mathbf{v}_{i}\right> \\
 &\displaystyle=\alpha_{1}\left< \mathbf{v}_{1},\mathbf{v}_{i}\right>+\cdots+\alpha_{k}\left< \mathbf{v}_{k},\mathbf{v}_{i}\right> \\
 &\displaystyle=\alpha_{i}\left< \mathbf{v}_{i},\mathbf{v}_{i}\right>=\alpha_{i}\|\mathbf{v}_{i}\|^{2}.
-\end{align*}  
+\end{align*}
 @col
 Hence
 \begin{align*}
 \displaystyle \alpha_{i}=\frac{\left< \mathbf{v},\mathbf{v}_{i}\right>}{\|\mathbf{v}_{i}\|^{2}}.
-\end{align*}  
+\end{align*}
 @qed
 @endcol
 @end
 @remark
 
 @newcol
-The advantage of using the above method is that we don’t have to solve linear equations to find the linear combination.  
+The advantage of using the above method is that we don’t have to solve linear equations to find the linear combination.
 @endcol
 
 @newcol
-In order to use the theorem, we need to ensure that $\mathbf{v}\in\left< S\right>$.  
+In order to use the theorem, we need to ensure that $\mathbf{v}\in\left< S\right>$.
 @endcol
 @end
 @slide
@@ -434,18 +434,18 @@ is in $\left< S\right>$, we find the following linear combinations:
 \end{align*}
 \begin{align*}
 \displaystyle \alpha_{3}=\frac{\left< \mathbf{v},\mathbf{v}_{3}\right>}{\|\mathbf{v}_{3}\|^{2}}=\frac{-3}{6}=-\frac{1}{2}.
-\end{align*}  
+\end{align*}
 @newcol
 Hence
 \begin{align*}
 \displaystyle \mathbf{v}=2\mathbf{v}_{1}-\frac{1}{2}\mathbf{v}_{2}-\frac{1}{2}\mathbf{v}_{3}.
-\end{align*}  
+\end{align*}
 @endcol
 @end
 @slide
 @defn
 Let $V$ be a subspace of ${\mathbb{R}}^{m}$.
-A subset $S$ of $V$ is said to be an @keyword{orthogonal basis} for $V$ if $S$ is a basis of $V$ and $S$ is orthogonal.  
+A subset $S$ of $V$ is said to be an @keyword{orthogonal basis} for $V$ if $S$ is a basis of $V$ and $S$ is orthogonal.
 @end
 @newcol
 If $S$ is an orthogonal subset of $V$, then by Theorem   @ref{orthind}, it is automatically linearly independent.
@@ -456,13 +456,13 @@ So in order to check if $S$ is an orthogonal basis, we need only check that $\le
 @label{checkob}
 @newcol
 Let $V$ be a subspace of ${\mathbb{R}}^{m}$.
-Suppose that $S$ is an orthogonal subset of $V$. Then $S$ is an orthogonal basis if and only if $\left< S\right>=V$.  
+Suppose that $S$ is an orthogonal subset of $V$. Then $S$ is an orthogonal basis if and only if $\left< S\right>=V$.
 @endcol
 @end
 @newcol
 @cor
 @newcol
-Suppose that $S$ is an orthogonal subset of ${\mathbb{R}}^{m}$. Then $S$ is a basis of $\left< S\right>$.  
+Suppose that $S$ is an orthogonal subset of ${\mathbb{R}}^{m}$. Then $S$ is a basis of $\left< S\right>$.
 @endcol
 @end
 @cor
@@ -471,12 +471,12 @@ Let $V$ be a subspace of ${\mathbb{R}}^{m}$.
 Suppose that $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\right\}$ is an orthogonal basis of $V$. Then for any $\mathbf{v}\in V$, we have
 \begin{align*}
 \displaystyle \mathbf{v}=\frac{\left< \mathbf{v},\mathbf{v}_{1}\right>}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}+\cdots+\frac{\left< \mathbf{v},\mathbf{v}_{n}\right>}{\|\mathbf{v}_{n}\|^{2}}\mathbf{v}_{n}
-\end{align*}  
+\end{align*}
 @endcol
 @end
 @proof
 @newcol
-This follows from @ref{o}.  
+This follows from @ref{o}.
 @qed
 @endcol
 @end
@@ -507,10 +507,10 @@ A subset $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ of ${\mathbb{R}
 \begin{align*}
 \displaystyle \left< \mathbf{v}_{i},\mathbf{v}_{j}\right>=\begin{cases}1&\text{if $i=j$},\\
 0&\text{if $i\neq j$}.\end{cases}
-\end{align*}  
+\end{align*}
 @newcol
 Let $V$ be a subspace of ${\mathbb{R}}^{m}$.
-The subset $S$ is said to be an @keyword{orthonormal basis} for $V$ if it is orthonormal and is a basis of $V$.  
+The subset $S$ is said to be an @keyword{orthonormal basis} for $V$ if it is orthonormal and is a basis of $V$.
 @endcol
 @end
 @newcol
@@ -523,18 +523,18 @@ In particular we have the following result.
 Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ be an orthonormal subset of ${\mathbb{R}}^{m}$ and let $\mathbf{v}\in\left< S\right>$. Then
 \begin{align*}
 \displaystyle \mathbf{v}=\left< \mathbf{v},\mathbf{v}_{1}\right>\mathbf{v}_{1}+\cdots+\left< \mathbf{v},\mathbf{v}_{k}\right>\mathbf{v}_{k}.
-\end{align*}  
+\end{align*}
 @end
 @proof
 @newcol
-By Theorem   @ref{o} and $\|\mathbf{v}_{i}\|=1$ for $i=1,\ldots,k$.  
+By Theorem   @ref{o} and $\|\mathbf{v}_{i}\|=1$ for $i=1,\ldots,k$.
 @qed
 @endcol
 @end
 @newcol
 If $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is an orthogonal subset of ${\mathbb{R}}^{m}$, then
 $\left\{\frac{\mathbf{v}_{1}}{\|\mathbf{v}_{1}\|},\ldots,\frac{\mathbf{v}_{k}}{\|\mathbf{v}_{k}\|}\right\}$
-is an orthonormal subset. The process is called @keyword{normalization}.  
+is an orthonormal subset. The process is called @keyword{normalization}.
 @endcol
 @slide
 @eg
@@ -573,7 +573,7 @@ Normalizing it, we obtain an orthonormal basis
 Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ be an orthogonal subset of ${\mathbb{R}}^{m}$. If $\mathbf{w}\in\left< S\right>$, then
 \begin{align*}
 \displaystyle \mathbf{w}=\frac{\left< \mathbf{w},\mathbf{v}_{1}\right>}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}+\cdots+\frac{\left< \mathbf{w},\mathbf{v}_{k}\right>}{\|\mathbf{v}_{k}\|^{2}}\mathbf{v}_{k}.
-\end{align*}  
+\end{align*}
 @newcol
 But what if $\mathbf{w}$ is not in $\left< S\right>$? Let’s compare the difference. We have the following theorem.
 
@@ -585,21 +585,21 @@ Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ be an orthogonal sub
 \begin{align*}
 \displaystyle \mathbf{v}=\mathbf{w}-\frac{\left< \mathbf{w},\mathbf{v}_{1}\right>}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left< \mathbf{w},\mathbf{v}_{k}\right>}{\|\mathbf{v}_{k}\|^{2}}\mathbf{v}_{k}
 \end{align*}
-is perpendicular to $\mathbf{v}_{i}$.  
+is perpendicular to $\mathbf{v}_{i}$.
 @end
 @proof
 @newcol
 For $1\leq i\leq k$, we compute
 \begin{align*}
 \displaystyle \left< \mathbf{v},\mathbf{v}_{i}\right>=\left< \mathbf{w},\mathbf{v}_{i}\right>-\frac{\left< \mathbf{w},\mathbf{v}_{1}\right>}{\|\mathbf{v}_{1}\|^{2}}\left< \mathbf{v}_{1},\mathbf{v}_{i}\right>-\cdots-\frac{\left< \mathbf{w},\mathbf{v}_{k}\right>}{\|\mathbf{v}_{k}\|^{2}}\left< \mathbf{v}_{k},\mathbf{v}_{i}\right>.
-\end{align*}  
+\end{align*}
 @col
 Because $\left< \mathbf{v}_{j},\mathbf{v}_{i}\right>$ is $0$ unless $j=i$, the above becomes
 \begin{align*}
 \displaystyle \left< \mathbf{w},\mathbf{v}_{i}\right>-\frac{\left< \mathbf{w},\mathbf{v}_{i}\right>}{\|\mathbf{v}_{i}\|^{2}}\left< \mathbf{v}_{i},\mathbf{v}_{i}\right>=\left< \mathbf{w},\mathbf{v}_{i}\right>-\left< \mathbf{v},\mathbf{v}_{i}\right>=0.
-\end{align*}  
+\end{align*}
 @col
-Hence $\mathbf{v}\perp\mathbf{v}_{i}$ for $i=1,\ldots,k$.  
+Hence $\mathbf{v}\perp\mathbf{v}_{i}$ for $i=1,\ldots,k$.
 @qed
 @endcol
 @end
@@ -611,10 +611,10 @@ Let $S=\left\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{k}\right\}$ be a 
 Let $\mathbf{v}_{1}=\mathbf{w}_{1}$ and set
 \begin{align*}
 \displaystyle \mathbf{v}_{\ell}=\mathbf{w}_{\ell}-\frac{\left< \mathbf{w}_{\ell},\mathbf{v}_{1}\right>}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left< \mathbf{w}_{\ell},\mathbf{v}_{\ell-1}\right>}{\|\mathbf{v}_{\ell-1}\|^{2}}\mathbf{v}_{\ell-1}\,\,\text{ for $2\leq\ell\leq k$}.
-\end{align*}  
+\end{align*}
 @newcol
 Then $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is an orthogonal set.Moreover, $\left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}\right>=\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right>$ for $\ell=1,\ldots,k$.
-In particular $\left< S\right>=\left< S^{\prime}\right>$. The process of obtaining $S^{\prime}$ by the above procedure is called the @keyword{Gram-Schmidt Orthogonalization Process}.  
+In particular $\left< S\right>=\left< S^{\prime}\right>$. The process of obtaining $S^{\prime}$ by the above procedure is called the @keyword{Gram-Schmidt Orthogonalization Process}.
 @endcol
 @end
 @proof
@@ -649,25 +649,25 @@ It now follows that:
 \]
 
 By Theorem   @ref{perp}, $\mathbf{v}_{\ell}\perp\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}$. Thus $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}$ is orthogonal.
-Repeating the process for the incrementing $\ell$ reaches $\ell=k$, we complete the proof.  
+Repeating the process for the incrementing $\ell$ reaches $\ell=k$, we complete the proof.
 @qed
 @endcol
 @end
 @slide
 @cor
-Suppose that $V$ is a subspace of ${\mathbb{R}}^{m}$. Then there exists an orthogonal (orthonormal basis) of $V$.  
+Suppose that $V$ is a subspace of ${\mathbb{R}}^{m}$. Then there exists an orthogonal (orthonormal basis) of $V$.
 @end
 @proof
 @newcol
 By Lecture 18 Theorem 8, there exists a basis $S=\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{k}\right\}$ for $V$.
 Applying Gram-Schmidt orthogonalization process to $S$, we obtain an orthogonal set $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$.
 
-By Theorem   @ref{GSO}, $\left< S^{\prime}\right>=\left< S\right>=V$. By Theorem   @ref{checkob}, $S^{\prime}$ is an orthogonal basis. Normalizing $S^{\prime}$, we can also obtain an orthonormal basis.  
+By Theorem   @ref{GSO}, $\left< S^{\prime}\right>=\left< S\right>=V$. By Theorem   @ref{checkob}, $S^{\prime}$ is an orthogonal basis. Normalizing $S^{\prime}$, we can also obtain an orthonormal basis.
 @qed
 @endcol
 @end
 @newcol
-The above proof actually describes a method to find orthogonal (orthonormal) basis of $V$.  
+The above proof actually describes a method to find orthogonal (orthonormal) basis of $V$.
 @endcol
 @slide
 @eg
@@ -683,7 +683,7 @@ Let $V={\mathbb{R}}^{4}$ with the standard inner product. Let
 1\\
 2\\
 1\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @newcol
 Then $\left\{\mathbf{w}_{1},\mathbf{w}_{2},\mathbf{w}_{3}\right\}$ is linearly independent.
 We can apply Gram-Schmidt orthogonalization process to this set of vectors. Take $\mathbf{v}_{1}=\mathbf{w}_{1}=\begin{bmatrix}1\\
@@ -701,7 +701,7 @@ We can apply Gram-Schmidt orthogonalization process to this set of vectors. Take
 1\\
 0\\
 1\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @col
 Also
 \begin{align*}
@@ -718,7 +718,7 @@ Also
 0\\
 1\\
 0\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @col
 The set $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\right\}$ is an orthogonal basis of $\left< \left\{\mathbf{w}_{1},\mathbf{w}_{2},\mathbf{w}_{3}\right\}\right>$.
 To obtain an orthonormal basis of $\left< \left\{\mathbf{w}_{1},\mathbf{w}_{2},\mathbf{w}_{3}\right\}\right>$, we can normalized the vectors
@@ -733,7 +733,7 @@ To obtain an orthonormal basis of $\left< \left\{\mathbf{w}_{1},\mathbf{w}_{2},\
 0\\
 1\\
 0\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @endcol
 @end
 @eg
@@ -784,7 +784,7 @@ is a basis of $V$. We apply Gram-Schmidt orthogonalization process to the set $S
 -1/3\\
 -1/3\\
 1\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @newcol
 So
 \begin{align*}
@@ -811,7 +811,7 @@ is an orthogonal basis of $V$. Normalizing it, we can obtain an orthonormal basi
 -1\\
 -1\\
 3\end{bmatrix}\right\}.
-\end{align*}  
+\end{align*}
 @col
 The above process will be easier if we start with another basis:
 \begin{align*}
@@ -825,7 +825,7 @@ The above process will be easier if we start with another basis:
 1\\
 -1\\
 0\end{bmatrix}\right\}
-\end{align*}  
+\end{align*}
 @col
 Now the first two vectors are perpendicular. Apply Gram-Schmidt orthogonalization process to it:
 \begin{align*}
@@ -845,7 +845,7 @@ Now the first two vectors are perpendicular. Apply Gram-Schmidt orthogonalizatio
 1/2\\
 -1/2\\
 -1/2\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @col
 So
 \begin{align*}
@@ -872,7 +872,7 @@ is an orthogonal basis of $V$. Normalizing it, we obtain an orthonormal basis
 1/2\\
 -1/2\\
 -1/2\end{bmatrix}\right\}.
-\end{align*}  
+\end{align*}
 @endcol
 @endcol
 @end
@@ -884,7 +884,7 @@ is an orthogonal basis of $V$. Normalizing it, we obtain an orthonormal basis
 For $\mathbf{v},\mathbf{w}\in{\mathbb{R}}^{m}$,
 \begin{align*}
 \displaystyle |\left< \mathbf{v},\mathbf{w}\right>|\leq\|\mathbf{v}\|\|\mathbf{w}\|.
-\end{align*}  
+\end{align*}
 @end
 @proof
 @newcol
@@ -894,7 +894,7 @@ The statement is trivial if $\mathbf{w}=\mathbf{0}$. Suppose $\mathbf{w}\neq\mat
 \end{align*}
 \begin{align*}
 \displaystyle =\left< \mathbf{v},\mathbf{v}\right>-t\left< \mathbf{v},\mathbf{w}\right>-t\left< \mathbf{w},\mathbf{v}\right>+t^{2}\left< \mathbf{w},\mathbf{w}\right>=\left< \mathbf{v},\mathbf{v}\right>-2t\left< \mathbf{v},\mathbf{w}\right>+t^{2}\left< \mathbf{w},\mathbf{w}\right>
-\end{align*}  
+\end{align*}
 @col
 Substituting
 \begin{align*}
@@ -903,12 +903,12 @@ Substituting
 into the above, we obtain
 \begin{align*}
 \displaystyle 0\leq\left< \mathbf{v},\mathbf{v}\right>-\frac{|\left< \mathbf{v},\mathbf{w}\right>|^{2}}{\left< \mathbf{w},\mathbf{w}\right>}=\|\mathbf{v}\|^{2}-\frac{|\left< \mathbf{v},\mathbf{w}\right>|^{2}}{\|\mathbf{w}\|^{2}}.
-\end{align*}  
+\end{align*}
 @col
 Hence
 \begin{align*}
 \displaystyle |\left< \mathbf{v},\mathbf{w}\right>|\leq\sqrt{\|\mathbf{v}\|^{2}\|\mathbf{w}\|^{2}}=\|\mathbf{v}\|\|\mathbf{w}\|.
-\end{align*}  
+\end{align*}
 @qed
 @endcol
 @end
@@ -916,13 +916,13 @@ Hence
 
 @newcol
 The $t$ above is obtained by minimizing the quadratic equation
-$\left< \mathbf{v},\mathbf{v}\right>-2t\left< \mathbf{v},\mathbf{w}\right>+t^{2}\left< \mathbf{w},\mathbf{w}\right>$.  
+$\left< \mathbf{v},\mathbf{v}\right>-2t\left< \mathbf{v},\mathbf{w}\right>+t^{2}\left< \mathbf{w},\mathbf{w}\right>$.
 @endcol
 
 @newcol
 Following the proof, the equality occurs if (i) $\mathbf{v}=\mathbf{0}$ or (ii) $\mathbf{w}=\mathbf{0}$
 or (iii) $\mathbf{v}-t\mathbf{w}=0$ $\Leftrightarrow$ $\mathbf{v}$ and $\mathbf{w}$ are parallel,
-i.e., $\mathbf{v}=\alpha\mathbf{w}$ for some scalar $\alpha\in{\mathbb{R}}^{\hbox{}}$.  
+i.e., $\mathbf{v}=\alpha\mathbf{w}$ for some scalar $\alpha\in{\mathbb{R}}^{\hbox{}}$.
 @endcol
 @end
 @slide
@@ -931,13 +931,13 @@ i.e., $\mathbf{v}=\alpha\mathbf{w}$ for some scalar $\alpha\in{\mathbb{R}}^{\hbo
 For any $\vect{v}, \vect{w} \in \mathbb{R}^n$, we have:
 \begin{align*}
 \displaystyle \|\mathbf{v}+\mathbf{w}\|\leq\|\mathbf{v}\|+\|\mathbf{w}\|.
-\end{align*}  
+\end{align*}
 @end
 @proof
 @newcol
 \begin{align*}
 \displaystyle \|\mathbf{v}+\mathbf{w}\|^{2}=\left< \mathbf{v},\mathbf{v}\right>+\left< \mathbf{v},\mathbf{w}\right>+\left< \mathbf{w},\mathbf{v}\right>+\left< \mathbf{w},\mathbf{w}\right>=\|\mathbf{v}\|^{2}+2\left< \mathbf{v},\mathbf{w}\right>+\|\mathbf{w}\|^{2}.
-\end{align*}  
+\end{align*}
 @col
 By the Cauchy-Schwarz inequality
 \begin{align*}
@@ -946,9 +946,9 @@ By the Cauchy-Schwarz inequality
 thus
 \begin{align*}
 \displaystyle \|\mathbf{v}+\mathbf{w}\|^{2}\leq\|\mathbf{v}\|^{2}+2\|\mathbf{v}\|\|\mathbf{w}\|+\|\mathbf{w}\|^{2}=(\|\mathbf{v}\|+\|\mathbf{w}\|)^{2}.
-\end{align*}  
+\end{align*}
 @col
-The result follows by taking square roots on both sides.  
+The result follows by taking square roots on both sides.
 @qed
 @endcol
 @end
@@ -961,16 +961,16 @@ Let $\mathbf{v},\mathbf{w}\in{\mathbb{R}}^{m}$ with the standard inner product. 
 v_{m}\end{bmatrix}\qquad\mathbf{w}=\begin{bmatrix}w_{1}\\
 \vdots\\
 w_{m}\end{bmatrix}
-\end{align*}  
+\end{align*}
 @newcol
 Cauchy-Schwarz inequality:
 \begin{align*}
 \displaystyle |v_{1}w_{1}+\cdots+v_{m}w_{m}|\leq\sqrt{v_{1}^{2}+\cdots+v_{m}^{2}}\sqrt{w_{1}^{2}+\cdots+w_{m}^{2}}.
-\end{align*}  
+\end{align*}
 @col
 Triangle inequality:
 \begin{align*}
 \displaystyle \sqrt{(v_{1}+w_{1})^{2}+\cdots+(v_{m}+w_{m})^{2}}\leq\sqrt{v_{1}^{2}+\cdots+v_{m}^{2}}+\sqrt{w_{1}^{2}+\cdots+w_{m}^{2}}.
-\end{align*}  
+\end{align*}
 @endcol
 @end
