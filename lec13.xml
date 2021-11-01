@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="MATH 1030">
     <keywords slide="all" environ="course" chapter="" course="MATH 1030">
@@ -239,12 +238,12 @@ is also a basis. </paragraphs>
               <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="MATH 1030" chapter="13" section="2" subsection="1" subsubsection="" serial="" slide="8">
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="title" wbtag="paragraphs">Column Spaces and Systems of Equations</paragraphs>
               </title>
-              <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="7" title="Column Space of a Matrix" md5="34554fc78385357d535d3edd5e7b89eb" course="MATH 1030" chapter="13" slide="8" item="13.7">
+              <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="7" title="Column Space of a Matrix" md5="7c8841d0732033187e502968562d9ed9" course="MATH 1030" chapter="13" slide="8" item="13.7">
                 <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="13" section="2" subsection="1" subsubsection="" serial="" slide="8">Column Space of a Matrix</title>
                 <label wbtag="label" name="CSM" type="Definition"/>
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$. Then the </paragraphs>
                 <inline_keyword course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="statement">column space</inline_keyword>
-                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$, written $\mathcal{C}\left(A\right)$, is the subset of ${\mathbb{R}}^{m}$ containing all linear combinations of the columns of $A$,
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs"> of $A$, written $\mathcal{C}\left(A\right)$, is the subset of ${\mathbb{R}}^{m}$ consisting of all linear combinations of the columns of $A$,
 \begin{align*}
 \displaystyle \mathcal{C}\left(A\right)=\mathrm{Span}\,\{\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}\}\end{align*} </paragraphs>
               </statement>
@@ -287,7 +286,7 @@ Then $\mathbf{b}\in\mathcal{C}\left(A\right)$ if and only if $A\mathbf{x} = \mat
             </slide>
             <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" id="s10" slide="10" course="MATH 1030" chapter="13" section="2" subsection="1" subsubsection="" chapter_title="Basis" section_title="Bases for Spans of Column vectors">
               <keywords slide="10" environ="slide" chapter="13" course="MATH 1030"/>
-              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="9" md5="73dbbe381b0b36885ff68c02b95fa263" course="MATH 1030" chapter="13" slide="10" item="13.9">
+              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="9" md5="67a14bd09a3c5b0ebb6456623e9d998d" course="MATH 1030" chapter="13" slide="10" item="13.9">
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs"> Consider the column space of the $3\times 4$ matrix $A$,
 \begin{align*}
 \displaystyle A=\begin{bmatrix}3&amp;2&amp;1&amp;-4\\
@@ -317,7 +316,7 @@ In fact, we have
                       <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Next we show that $\mathbf{w}=\begin{bmatrix}2\\
 1\\
 -3\end{bmatrix}$ is not in the column space of $A$, $\mathbf{w}\not\in\mathcal{C}\left(A\right)$.
-The above theorem says that we need to check the consistency of $\mathcal{LS}({A},{v})$.
+The above theorem says that we need to check the consistency of $\mathcal{LS}({A},{w})$.
 From the augmented matrix and row-reduce,
 \begin{align*}
 \displaystyle \begin{bmatrix}3&amp;2&amp;1&amp;-4&amp;2\\
@@ -336,8 +335,7 @@ From the augmented matrix and row-reduce,
               <comment course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="">
 The next two examples illustrate the main idea of describing $\mathcal{C}\left(A\right)$.
 </comment>
-              <comment course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="">@eg&lt;strong&gt;Describe $\mathcal{C}\left(A\right)$ as a null space&lt;/strong&gt;
-
+              <comment course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="1" subsubsection="" environment="">@eg&lt;strong style=""&gt;Describe $\mathcal{C}\left(A\right)$ as a null space&lt;/strong&gt;
 Let
 \begin{align*}
 \displaystyle A=\begin{bmatrix}1&amp;2&amp;7&amp;1&amp;-1\\
@@ -349,7 +347,6 @@ Let
 Find $\mathcal{C}\left(A\right)$. Let’s determine if $\mathbf{v}=\begin{bmatrix}v_{1}\\
 \vdots\\
 v_{4}\end{bmatrix}\in\mathrm{Span}\,S$.
-
 @col
 Applying Gauss-Jordan elimination to the augmented matrix
 \begin{align*}
@@ -392,7 +389,7 @@ So the corresponding system of linear equations is inconsistent. So $\mathbf{v}\
               <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="MATH 1030" chapter="13" section="2" subsection="2" subsubsection="" serial="" slide="11">
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="title" wbtag="paragraphs">Column Space Spanned by Original Columns</paragraphs>
               </title>
-              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="10" md5="1a7395ebb32404b884a8bf4d18a6b8e3" course="MATH 1030" chapter="13" slide="11" item="13.10">
+              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="10" md5="27736682461f4de2a6f7ac90f90b430f" course="MATH 1030" chapter="13" slide="11" item="13.10">
                 <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="statement" wbtag="paragraphs"> Let
 \begin{align*}
 \displaystyle A=\begin{bmatrix}1&amp;4&amp;0&amp;-1&amp;0&amp;7&amp;-9\\
@@ -409,7 +406,7 @@ So the corresponding system of linear equations is inconsistent. So $\mathbf{v}\
 0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}.
 \end{align*} </paragraphs>
                   <collapse course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> The indexes of the pivot columns are $D=\left\{1,3,4\right\}$.
+                    <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> The indices of the pivot columns are $D=\left\{1,3,4\right\}$.
 Hence $\mathcal{C}\left(A\right)=\mathrm{Span}\,A=\mathrm{Span}\,\left\{ \mathbf{A}_{1},\mathbf{A}_{3},\mathbf{A}_{4} \right\}$. </paragraphs>
                   </collapse>
                 </newcol>
@@ -481,7 +478,7 @@ I_r\\
                           <collapse course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="collapse">
                             <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> Since $A'$ is row-equivalent to $B'$,
 we have $A'\vect{x} = \vect{0}$ if and only if $\vect{x} = \vect{0}$,
-which implies that the columns of $A'$, 
+which implies that the columns of $A'$,
 i.e. the elements of $T$, are linearly independent. </paragraphs>
                           </collapse>
                         </collapse>
@@ -489,7 +486,7 @@ i.e. the elements of $T$, are linearly independent. </paragraphs>
                     </item>
                     <item course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="enumerate" wbtag="item">
                       <newcol course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="newcol">
-                        <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> Given any integer $1 \leq j \leq n$ which does not lie in $D$ 
+                        <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> Given any integer $1 \leq j \leq n$ which does not lie in $D$
 (i.e. the index of a non-pivot column of $B$), consider the linear system
 $\mathcal{LS}(A', \vect{A}_j)$ (or equivalently $A'\vect{x} = \vect{A}_j$).</paragraphs>
                         <newline course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol"/>
@@ -508,8 +505,8 @@ I_r &amp; \begin{matrix}\ast\\\ast\\\vdots\\\ast\end{matrix}\\
 \end{array}
 \right].
 \]
-Hence, the linear system $\mathcal{LS}(A', \vect{A}_j)$ is consistent 
-(in fact, with one unique solution), 
+Hence, the linear system $\mathcal{LS}(A', \vect{A}_j)$ is consistent
+(in fact, with one unique solution),
 which implies that $\vect{A}_j$ lies in the span of
 $\{\vect{A}_{d_1}, \vect{A}_{d_2}, \ldots, \vect{A}_{d_r}\}$.</paragraphs>
                           <newline course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol"/>
@@ -521,7 +518,7 @@ Hence, by </paragraphs>
                             </ref>
                             <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="2" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs">, we have:
 \[
-\mathcal{C}(A) 
+\mathcal{C}(A)
 =
 \mathrm{Span}\{\vect{A}_1, \vect{A}_2,\ldots, \vect{A}_n\}
 =
@@ -818,7 +815,6 @@ A @keyword{row vector} or size $n$ is an array of real numbers of the form:
 \]
 In the context of this course, it is perfectly reasonable to view a row vector
 as simply a $1 \times n$ matrix.
-
 @col
 In fact,
 the standard laws of addition and scalar multiplication on row vectors
@@ -1033,10 +1029,8 @@ of row operations. </paragraphs>
             </substatement>
             <comment course="MATH 1030" chapter="13" chapter_type="" section="3" subsection="" subsubsection="" environment="">@proof@col
 Two matrices are row-equivalent if one can be obtained from another by a sequence of (possibly many) row operations. We will prove the theorem for two matrices that differ by a single row operation, and then this result can be applied repeatedly to get the full statement of the theorem. The row spaces of $A$ and $B$ are spans of the columns of their transposes. For each row operation we perform on a matrix, we can define an analogous operation on the columns. Perhaps we should call these @keyword{column operations}. Instead, we will still call them row operations, but we will apply them to the columns of the transposes.
-
 @col
 Refer to the columns of $A^{t}$ and $B^{t}$ as $\mathbf{A}_{i}$ and $\mathbf{B}_{i}$, $1\leq i\leq m$. The row operation that switches rows will just switch columns of the transposed matrices. This will have no effect on the possible linear combinations formed by the columns.
-
 @col
 Suppose that $B^{t}$ is formed from $A^{t}$ by multiplying column $\mathbf{A}_{t}$ by $\alpha\neq 0$. In other words, $\mathbf{B}_{t}=\alpha\mathbf{A}_{t}$, and $\mathbf{B}_{i}=\mathbf{A}_{i}$ for all $i\neq t$. We need to establish that two sets are equal, $\mathcal{C}\left(A^{t}\right)=\mathcal{C}\left(B^{t}\right)$. We will take a generic element of one and show that it is contained in the other.
 \begin{align*}
@@ -1054,7 +1048,6 @@ says that $\mathcal{C}\left(B^{t}\right)\subseteq\mathcal{C}\left(A^{t}\right)$.
 \end{align*}
 @col
 says that $\mathcal{C}\left(A^{t}\right)\subseteq\mathcal{C}\left(B^{t}\right)$. So $\mathcal{R}\!\left(A\right)=\mathcal{C}\left(A^{t}\right)=\mathcal{C}\left(B^{t}\right)=\mathcal{R}\!\left(B\right)$ when a single row operation of the second type is performed.
-
 @col
 Suppose now that $B^{t}$ is formed from $A^{t}$ by replacing $\mathbf{A}_{t}$ with $\alpha\mathbf{A}_{s}+\mathbf{A}_{t}$ for some $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $s\neq t$. In other words, $\mathbf{B}_{t}=\alpha\mathbf{A}_{s}+\mathbf{A}_{t}$, and $\mathbf{B}_{i}=\mathbf{A}_{i}$ for $i\neq t$.
 \begin{align*}
@@ -1074,7 +1067,6 @@ says that $\mathcal{C}\left(B^{t}\right)\subseteq\mathcal{C}\left(A^{t}\right)$.
 \end{align*}
 @col
 says that $\mathcal{C}\left(A^{t}\right)\subseteq\mathcal{C}\left(B^{t}\right)$. So $\mathcal{R}\!\left(A\right)=\mathcal{C}\left(A^{t}\right)=\mathcal{C}\left(B^{t}\right)=\mathcal{R}\!\left(B\right)$ when a single row operation of the third type is performed.
-
 @col
 So the row space of a matrix is preserved by each row operation, and hence row spaces of row-equivalent matrices are equal sets.
 @qed@end</comment>
@@ -1432,28 +1424,19 @@ However in method 2, the basis is not a subset of columns. </paragraphs>
 Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\right\}$ be a subset of ${\mathbb{R}}^{m}$
 There are at least two methods to find a subset
 $T\subseteq \{ S \}$ such that:
-
 (i)
 $T$ is linearly independent
-
 (ii) $\mathrm{Span}\,T=\mathrm{Span}\,S$. (In other words $T$ is a basis for $\mathrm{Span}\,S$.)
-
 &lt;strong style=""&gt;Method 1&lt;/strong&gt;@newcol
 Let $A=[\mathbf{v}_{1}|\cdots|\mathbf{v}_{n}]\xrightarrow{\text{RREF}}B$.
-
 @col
 Suppose $D=\left\{d_{1},\ldots,d_{r}\right\}$ be the indexes of the pivot columns of $B$.
-
 @col
 Let $T=\left\{\mathbf{v}_{d_{1}},\ldots,\mathbf{v}_{d_{r}}\right\}$. Then $T$ is a basis for $\mathrm{Span}\,S=\mathcal{C}\left(A\right)$
-@endcol
-
-&lt;strong style=""&gt;Method 2&lt;/strong&gt;@newcol
+@endcol&lt;strong style=""&gt;Method 2&lt;/strong&gt;@newcol
 Let $A=[\mathbf{v}_{1}|\cdots|\mathbf{v}_{n}]$. Suppose $A^{t}\xrightarrow{\text{RREF}}B$.
-
 @col
 Let $T$ be the nonzero columns of $B^{t}$. Then $T$ is a basis for $\mathrm{Span}\,S=\mathcal{C}\left(A\right)$
-
 This is an example from Lecture 14.
 @endcol@endcol</comment>
           </slide>

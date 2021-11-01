@@ -118,7 +118,7 @@ is also a basis.
 @defn
 @title{Column Space of a Matrix}
 @label{CSM}
-Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$. Then the @keyword{column space} of $A$, written $\mathcal{C}\left(A\right)$, is the subset of ${\mathbb{R}}^{m}$ containing all linear combinations of the columns of $A$,
+Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$. Then the @keyword{column space} of $A$, written $\mathcal{C}\left(A\right)$, is the subset of ${\mathbb{R}}^{m}$ consisting of all linear combinations of the columns of $A$,
 \begin{align*}
 \displaystyle \mathcal{C}\left(A\right)=\mathrm{Span}\,\{\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}\}\end{align*}
 @end
@@ -176,7 +176,7 @@ In fact, we have
 Next we show that $\mathbf{w}=\begin{bmatrix}2\\
 1\\
 -3\end{bmatrix}$ is not in the column space of $A$, $\mathbf{w}\not\in\mathcal{C}\left(A\right)$.
-The above theorem says that we need to check the consistency of $\mathcal{LS}({A},{v})$.
+The above theorem says that we need to check the consistency of $\mathcal{LS}({A},{w})$.
 From the augmented matrix and row-reduce,
 \begin{align*}
 \displaystyle \begin{bmatrix}3&2&1&-4&2\\
@@ -192,10 +192,8 @@ Since the final column is a pivot column, the system is inconsistent and therefo
 <!--
 The next two examples illustrate the main idea of describing $\mathcal{C}\left(A\right)$.
 -->
-<!--
-@eg
-<strong>Describe $\mathcal{C}\left(A\right)$ as a null space</strong>
-
+<!--@eg
+<strong style="">Describe $\mathcal{C}\left(A\right)$ as a null space</strong>
 Let
 \begin{align*}
 \displaystyle A=\begin{bmatrix}1&2&7&1&-1\\
@@ -207,7 +205,6 @@ Let
 Find $\mathcal{C}\left(A\right)$. Let’s determine if $\mathbf{v}=\begin{bmatrix}v_{1}\\
 \vdots\\
 v_{4}\end{bmatrix}\in\mathrm{Span}\,S$.
-
 @col
 Applying Gauss-Jordan elimination to the augmented matrix
 \begin{align*}
@@ -235,9 +232,7 @@ So the corresponding system of linear equations is inconsistent. So $\mathbf{v}\
 \begin{align*}
 \displaystyle \mathcal{C}\left(A\right)={\mathcal{N}}\!\left([9\,\,-16\,\,1\,\,4]\right).
 \end{align*}
-@endcol
-@end
--->
+@endcol@end-->
 @subsection{Column Space Spanned by Original Columns}
 @label{CSSOC}
 @eg
@@ -257,7 +252,7 @@ find $\mathcal{C}\left(A\right)$.
 0&0&0&0&0&0&0\end{bmatrix}.
 \end{align*}
 @col
-The indexes of the pivot columns are $D=\left\{1,3,4\right\}$.
+The indices of the pivot columns are $D=\left\{1,3,4\right\}$.
 Hence $\mathcal{C}\left(A\right)=\mathrm{Span}\,A=\mathrm{Span}\,\left\{ \mathbf{A}_{1},\mathbf{A}_{3},\mathbf{A}_{4} \right\}$.
 @endcol
 @end
@@ -266,25 +261,26 @@ Hence $\mathcal{C}\left(A\right)=\mathrm{Span}\,A=\mathrm{Span}\,\left\{ \mathbf
 @title{Basis of the Column Space}
 @label{BCS}
 Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf{A}_{2},\,\mathbf{A}_{3},\,\ldots,\,\mathbf{A}_{n}$, and $B$ is a row-equivalent matrix in reduced row-echelon form with $r$ pivot columns. Let $D=\left\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\right\}$ be the set of indices for the pivot columns of $B$.
-Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ldots,\,\mathbf{A}_{d_{r}}\right\}$. Then:
-<ol class="ltx_enumerate">
+Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ldots,\,\mathbf{A}_{d_{r}}\right\}$. Then: <ol class="ltx_enumerate">
 <li class="ltx_item"> $T$ is a linearly independent set. </li>
 <li class="ltx_item"> $\mathcal{C}\left(A\right)=\mathrm{Span}\,T$. </li></ol>
 @end
 @lemma
-@col
+@newcol
 If a matrix $A$ is row-equivalent to $B$,
 then any matrix formed with a subset of columns of $A$
 is row-equivalent to the matrix formed with the corresponding subset of columns
 (i.e. with the same indices and conforming to the same order) of $B$.
+@endcol
 @end
 @proof
-@col
+@newcol
 <strong>Exercise</strong>.
+@endcol
 @end
 @proof
 @of{BCS}
-@col
+@newcol
 Let:
 \[
 A' = [\mathbf{A}_{d_1} | \mathbf{A}_{d_2} | \cdots | \mathbf{A}_{d_r}],
@@ -296,7 +292,7 @@ Then, $A'$ and $B'$ are row-equivalent by the previous lemma.
 
 @enumerate
 @item
-@col
+@newcol
 Since $d_1, d_2, \cdots d_r$ are the indices of the pivot columns of $B$, which is in RREF, we have:
 \[
 B' = \begin{bmatrix}
@@ -313,11 +309,12 @@ Hence, $B'\vect{x} = \vect{0}$ if and only if $\vect{x} = \vect{0}$.
 @col
 Since $A'$ is row-equivalent to $B'$,
 we have $A'\vect{x} = \vect{0}$ if and only if $\vect{x} = \vect{0}$,
-which implies that the columns of $A'$, 
+which implies that the columns of $A'$,
 i.e. the elements of $T$, are linearly independent.
+@endcol
 @item
-@col
-Given any integer $1 \leq j \leq n$ which does not lie in $D$ 
+@newcol
+Given any integer $1 \leq j \leq n$ which does not lie in $D$
 (i.e. the index of a non-pivot column of $B$), consider the linear system
 $\mathcal{LS}(A', \vect{A}_j)$ (or equivalently $A'\vect{x} = \vect{A}_j$).
 
@@ -336,8 +333,8 @@ I_r & \begin{matrix}\ast\\\ast\\\vdots\\\ast\end{matrix}\\
 \end{array}
 \right].
 \]
-Hence, the linear system $\mathcal{LS}(A', \vect{A}_j)$ is consistent 
-(in fact, with one unique solution), 
+Hence, the linear system $\mathcal{LS}(A', \vect{A}_j)$ is consistent
+(in fact, with one unique solution),
 which implies that $\vect{A}_j$ lies in the span of
 $\{\vect{A}_{d_1}, \vect{A}_{d_2}, \ldots, \vect{A}_{d_r}\}$.
 
@@ -345,7 +342,7 @@ $\{\vect{A}_{d_1}, \vect{A}_{d_2}, \ldots, \vect{A}_{d_r}\}$.
 This holds for all $j \notin D$.
 Hence, by @ref{thm:spanredundancy}, we have:
 \[
-\mathcal{C}(A) 
+\mathcal{C}(A)
 =
 \mathrm{Span}\{\vect{A}_1, \vect{A}_2,\ldots, \vect{A}_n\}
 =
@@ -353,7 +350,9 @@ Hence, by @ref{thm:spanredundancy}, we have:
 =
 \mathrm{Span}\,T.
 \]
+@endcol
 @endenumerate
+@endcol
 @end
 @slide
 @eg
@@ -587,7 +586,6 @@ A @keyword{row vector} or size $n$ is an array of real numbers of the form:
 \]
 In the context of this course, it is perfectly reasonable to view a row vector
 as simply a $1 \times n$ matrix.
-
 @col
 In fact,
 the standard laws of addition and scalar multiplication on row vectors
@@ -608,8 +606,6 @@ For any fixed positive integer $n$,
 by @ref{fb1ac45c60c8c59135e7173658dededc} the set of all row vectors of size $n$
 is a vector space under the laws of addition and scalar multiplication defined above.
 @end@slide-->
-
-
 
 @defn
 @title{Row Space of a Matrix}
@@ -781,10 +777,8 @@ of row operations.
 @end
 <!--@proof@col
 Two matrices are row-equivalent if one can be obtained from another by a sequence of (possibly many) row operations. We will prove the theorem for two matrices that differ by a single row operation, and then this result can be applied repeatedly to get the full statement of the theorem. The row spaces of $A$ and $B$ are spans of the columns of their transposes. For each row operation we perform on a matrix, we can define an analogous operation on the columns. Perhaps we should call these @keyword{column operations}. Instead, we will still call them row operations, but we will apply them to the columns of the transposes.
-
 @col
 Refer to the columns of $A^{t}$ and $B^{t}$ as $\mathbf{A}_{i}$ and $\mathbf{B}_{i}$, $1\leq i\leq m$. The row operation that switches rows will just switch columns of the transposed matrices. This will have no effect on the possible linear combinations formed by the columns.
-
 @col
 Suppose that $B^{t}$ is formed from $A^{t}$ by multiplying column $\mathbf{A}_{t}$ by $\alpha\neq 0$. In other words, $\mathbf{B}_{t}=\alpha\mathbf{A}_{t}$, and $\mathbf{B}_{i}=\mathbf{A}_{i}$ for all $i\neq t$. We need to establish that two sets are equal, $\mathcal{C}\left(A^{t}\right)=\mathcal{C}\left(B^{t}\right)$. We will take a generic element of one and show that it is contained in the other.
 \begin{align*}
@@ -802,7 +796,6 @@ says that $\mathcal{C}\left(B^{t}\right)\subseteq\mathcal{C}\left(A^{t}\right)$.
 \end{align*}
 @col
 says that $\mathcal{C}\left(A^{t}\right)\subseteq\mathcal{C}\left(B^{t}\right)$. So $\mathcal{R}\!\left(A\right)=\mathcal{C}\left(A^{t}\right)=\mathcal{C}\left(B^{t}\right)=\mathcal{R}\!\left(B\right)$ when a single row operation of the second type is performed.
-
 @col
 Suppose now that $B^{t}$ is formed from $A^{t}$ by replacing $\mathbf{A}_{t}$ with $\alpha\mathbf{A}_{s}+\mathbf{A}_{t}$ for some $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $s\neq t$. In other words, $\mathbf{B}_{t}=\alpha\mathbf{A}_{s}+\mathbf{A}_{t}$, and $\mathbf{B}_{i}=\mathbf{A}_{i}$ for $i\neq t$.
 \begin{align*}
@@ -822,12 +815,9 @@ says that $\mathcal{C}\left(B^{t}\right)\subseteq\mathcal{C}\left(A^{t}\right)$.
 \end{align*}
 @col
 says that $\mathcal{C}\left(A^{t}\right)\subseteq\mathcal{C}\left(B^{t}\right)$. So $\mathcal{R}\!\left(A\right)=\mathcal{C}\left(A^{t}\right)=\mathcal{C}\left(B^{t}\right)=\mathcal{R}\!\left(B\right)$ when a single row operation of the third type is performed.
-
 @col
 So the row space of a matrix is preserved by each row operation, and hence row spaces of row-equivalent matrices are equal sets.
 @qed@end-->
-
-
 
 @slide
 @eg
@@ -1111,39 +1101,25 @@ However in method 2, the basis is not a subset of columns. </li>
 <li class="ltx_item"> Given a vector $\mathbf{b}\in\mathcal{C}\left(A\right)$, it is easier to express it as a linear combination of the basis given by method 2. </li></ol>
 @endcol
 @end
-<!--
-@slide
+<!--@slide
 Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\right\}$ be a subset of ${\mathbb{R}}^{m}$
 There are at least two methods to find a subset
 $T\subseteq \{ S \}$ such that:
-
 (i)
 $T$ is linearly independent
-
 (ii) $\mathrm{Span}\,T=\mathrm{Span}\,S$. (In other words $T$ is a basis for $\mathrm{Span}\,S$.)
-
-<strong style="">Method 1</strong>
-@newcol
+<strong style="">Method 1</strong>@newcol
 Let $A=[\mathbf{v}_{1}|\cdots|\mathbf{v}_{n}]\xrightarrow{\text{RREF}}B$.
-
 @col
 Suppose $D=\left\{d_{1},\ldots,d_{r}\right\}$ be the indexes of the pivot columns of $B$.
-
 @col
 Let $T=\left\{\mathbf{v}_{d_{1}},\ldots,\mathbf{v}_{d_{r}}\right\}$. Then $T$ is a basis for $\mathrm{Span}\,S=\mathcal{C}\left(A\right)$
-@endcol
-
-<strong style="">Method 2</strong>
-@newcol
+@endcol<strong style="">Method 2</strong>@newcol
 Let $A=[\mathbf{v}_{1}|\cdots|\mathbf{v}_{n}]$. Suppose $A^{t}\xrightarrow{\text{RREF}}B$.
-
 @col
 Let $T$ be the nonzero columns of $B^{t}$. Then $T$ is a basis for $\mathrm{Span}\,S=\mathcal{C}\left(A\right)$
-
 This is an example from Lecture 14.
-@endcol
-@endcol
--->
+@endcol@endcol-->
 @section{Bases and Nonsingular Matrices}
 @slide
 @thm
