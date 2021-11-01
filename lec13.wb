@@ -235,28 +235,6 @@ So the corresponding system of linear equations is inconsistent. So $\mathbf{v}\
 @endcol@end-->
 @subsection{Column Space Spanned by Original Columns}
 @label{CSSOC}
-@eg
-Let
-\begin{align*}
-\displaystyle A=\begin{bmatrix}1&4&0&-1&0&7&-9\\
-2&8&-1&3&9&-13&7\\
-0&0&2&-3&-4&12&-8\\
--1&-4&2&4&8&-31&37\end{bmatrix},
-\end{align*}
-@newcol
-find $\mathcal{C}\left(A\right)$.
-\begin{align*}
-\displaystyle A\xrightarrow{\text{RREF}}B=\begin{bmatrix}\boxed{1}&4&0&0&2&1&-3\\
-0&0&\boxed{1}&0&1&-3&5\\
-0&0&0&\boxed{1}&2&-6&6\\
-0&0&0&0&0&0&0\end{bmatrix}.
-\end{align*}
-@col
-The indices of the pivot columns are $D=\left\{1,3,4\right\}$.
-Hence $\mathcal{C}\left(A\right)=\mathrm{Span}\,A=\mathrm{Span}\,\left\{ \mathbf{A}_{1},\mathbf{A}_{3},\mathbf{A}_{4} \right\}$.
-@endcol
-@end
-@slide
 @thm
 @title{Basis of the Column Space}
 @label{BCS}
@@ -264,6 +242,7 @@ Suppose that $A$ is an $m\times n$ matrix with columns $\mathbf{A}_{1},\,\mathbf
 Let $T=\left\{\mathbf{A}_{d_{1}},\,\mathbf{A}_{d_{2}},\,\mathbf{A}_{d_{3}},\,\ldots,\,\mathbf{A}_{d_{r}}\right\}$. Then: <ol class="ltx_enumerate">
 <li class="ltx_item"> $T$ is a linearly independent set. </li>
 <li class="ltx_item"> $\mathcal{C}\left(A\right)=\mathrm{Span}\,T$. </li></ol>
+Hence, $T$ is a basis of $\mathcal{C}(A)$.
 @end
 @lemma
 @newcol
@@ -432,133 +411,31 @@ The pivot columns are $D=\left\{1,\,3,\,4,\,5\right\}$, so we can create the set
 \end{align*}
 @col
 and know that $\mathcal{C}\left(A\right)=\mathrm{Span}\,T$ and $T$ is a linearly independent set of columns from the set of columns of $A$.
+
+Hence, $T$ is a basis of $\mathcal{C}(A)$.
 @endcol
 @end
 @slide
 @eg
-<strong>Column space from row operations</strong>
-
 Let
 \begin{align*}
-\displaystyle S=\left\{\mathbf{v}_{1}=\begin{bmatrix}1\\
-2\\
-0\\
--1\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}4\\
-8\\
-0\\
--4\end{bmatrix},\mathbf{v}_{3}=\begin{bmatrix}0\\
--1\\
-2\\
-2\end{bmatrix},\mathbf{v}_{4}=\begin{bmatrix}-1\\
-3\\
--3\\
-4\end{bmatrix},\mathbf{v}_{5}=\begin{bmatrix}0\\
-9\\
--4\\
-8\end{bmatrix},\mathbf{v}_{6}=\begin{bmatrix}7\\
--13\\
-12\\
--31\end{bmatrix},\mathbf{v}_{7}=\begin{bmatrix}-9\\
-7\\
--8\\
-37\end{bmatrix}\right\}.
-\end{align*}
-@newcol
-Find a basis for $\mathrm{Span}\,S$.
-\begin{align*}
-\displaystyle A=[\mathbf{v}_{1}|\cdots|\mathbf{v}_{7}]=\begin{bmatrix}1&4&0&-1&0&7&-9\\
+\displaystyle A=\begin{bmatrix}1&4&0&-1&0&7&-9\\
 2&8&-1&3&9&-13&7\\
 0&0&2&-3&-4&12&-8\\
--1&-4&2&4&8&-31&37\end{bmatrix}.
+-1&-4&2&4&8&-31&37\end{bmatrix},
 \end{align*}
-
-<strong>Method 1</strong>
 @newcol
+find $\mathcal{C}\left(A\right)$.
 \begin{align*}
-\displaystyle A\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&4&0&0&2&1&-3\\
+\displaystyle A\xrightarrow{\text{RREF}}B=\begin{bmatrix}\boxed{1}&4&0&0&2&1&-3\\
 0&0&\boxed{1}&0&1&-3&5\\
 0&0&0&\boxed{1}&2&-6&6\\
-0&0&0&0&0&0&0\end{bmatrix}
+0&0&0&0&0&0&0\end{bmatrix}.
 \end{align*}
 @col
-Let
-\begin{align*}
-\displaystyle T=\left\{\mathbf{v}_{1},\mathbf{v}_{3},\mathbf{v}_{4}\right\}=\left\{\begin{bmatrix}1\\
-2\\
-0\\
--1\end{bmatrix},\begin{bmatrix}0\\
--1\\
-2\\
-2\end{bmatrix},\begin{bmatrix}-1\\
-3\\
--3\\
-4\end{bmatrix}\right\}.
-\end{align*}
-@col
-Then $T$ is a basis for $\mathrm{Span}\,S=\mathcal{C}\left(A\right)$.
-@endcol
-
-<strong>Method 2</strong>
-@newcol
-The transpose of $A$ is
-\begin{align*}
-\displaystyle \begin{bmatrix}1&2&0&-1\\
-4&8&0&-4\\
-0&-1&2&2\\
--1&3&-3&4\\
-0&9&-4&8\\
-7&-13&12&-31\\
--9&7&-8&37\end{bmatrix}.
-\end{align*}
-@col
-Row-reduced this becomes,
-\begin{align*}
-\displaystyle D=\begin{bmatrix}\boxed{1}&0&0&-\frac{31}{7}\\
-0&\boxed{1}&0&\frac{12}{7}\\
-0&0&\boxed{1}&\frac{13}{7}\\
-0&0&0&0\\
-0&0&0&0\\
-0&0&0&0\\
-0&0&0&0\end{bmatrix}.
-\end{align*}
-@col
-Then we can take
-\begin{align*}
-\displaystyle T=\left\{\begin{bmatrix}1\\
-0\\
-0\\
--\frac{31}{7}\end{bmatrix},\,\begin{bmatrix}0\\
-1\\
-0\\
-\frac{12}{7}\end{bmatrix},\,\begin{bmatrix}0\\
-0\\
-1\\
-\frac{13}{7}\end{bmatrix}\right\}.
-\end{align*}
-
-$T$ is a basis for $\mathcal{C}\left(A\right)=\mathrm{Span}\,S$.
-@endcol
-@endcol
-@end
-@slide
-@thm
-@label{basisexists}
-Let $S$ be a finite subset of ${\mathbb{R}}^{m}$.
-Then, a basis for $\mathrm{Span}\,S$ exists.
-
-@newcol
-In fact, there exists a subset $T$ of $S$ such that $T$ is a basis for $\mathrm{Span}\,S$ (see @ref{BCS}).
-@endcol
-@end
-@slide
-@thm
-@title{Column Space of a Nonsingular Matrix}
-Suppose $A$ is a square matrix of size $n$. Then $A$ is nonsingular if and only if $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$.
-@end
-@proof
-@newcol
-See @ref{thm:ANSRM}.
-@qed
+The indices of the pivot columns are $D=\left\{1,3,4\right\}$.
+Hence $\left\{ \mathbf{A}_{1},\mathbf{A}_{3},\mathbf{A}_{4} \right\}$ is a basis of
+$\mathcal{C}(A)$.
 @endcol
 @end
 @slide
@@ -890,6 +767,7 @@ So we conclude that $\alpha_{i}=0$ for all $1\leq i\leq r$, establishing the lin
 @qed
 @endcol
 @end
+<!--
 @slide
 @eg
 Suppose in the course of analyzing a matrix (its column space, its null space, its ...) we encounter the following set of vectors, described by a span:
@@ -949,6 +827,7 @@ Then the above theorem says we can grab the nonzero columns of $B^{t}$ and write
 These three vectors provide a much-improved description of $X$. There are fewer vectors, and the pattern of zeros and ones in the first three entries makes it easier to determine membership in $X$.
 @endcol
 @end
+-->
 @slide
 @thm
 @title{Column Space, Row Space, Transpose}
@@ -963,6 +842,7 @@ Suppose $A$ is a matrix. Then $\mathcal{C}\left(A\right)=\mathcal{R}\!\left(A^{t
 @qed
 @endcol
 @end
+<!--
 @slide
 @eg
 <strong>Column space from row operations</strong>
@@ -1089,7 +969,112 @@ So
 and hence $\mathbf{b}\in\mathcal{C}\left(A\right)$.
 @endcol
 @end
+-->
+@slide
+@eg
+<strong>Column space from row operations</strong>
 
+Let
+\begin{align*}
+\displaystyle S=\left\{\mathbf{v}_{1}=\begin{bmatrix}1\\
+2\\
+0\\
+-1\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}4\\
+8\\
+0\\
+-4\end{bmatrix},\mathbf{v}_{3}=\begin{bmatrix}0\\
+-1\\
+2\\
+2\end{bmatrix},\mathbf{v}_{4}=\begin{bmatrix}-1\\
+3\\
+-3\\
+4\end{bmatrix},\mathbf{v}_{5}=\begin{bmatrix}0\\
+9\\
+-4\\
+8\end{bmatrix},\mathbf{v}_{6}=\begin{bmatrix}7\\
+-13\\
+12\\
+-31\end{bmatrix},\mathbf{v}_{7}=\begin{bmatrix}-9\\
+7\\
+-8\\
+37\end{bmatrix}\right\}.
+\end{align*}
+@newcol
+Find a basis for $\mathrm{Span}\,S$.
+\begin{align*}
+\displaystyle A=[\mathbf{v}_{1}|\cdots|\mathbf{v}_{7}]=\begin{bmatrix}1&4&0&-1&0&7&-9\\
+2&8&-1&3&9&-13&7\\
+0&0&2&-3&-4&12&-8\\
+-1&-4&2&4&8&-31&37\end{bmatrix}.
+\end{align*}
+
+<strong>Method 1</strong>
+@newcol
+\begin{align*}
+\displaystyle A\xrightarrow{\text{RREF}}\begin{bmatrix}\boxed{1}&4&0&0&2&1&-3\\
+0&0&\boxed{1}&0&1&-3&5\\
+0&0&0&\boxed{1}&2&-6&6\\
+0&0&0&0&0&0&0\end{bmatrix}
+\end{align*}
+@col
+Let
+\begin{align*}
+\displaystyle T=\left\{\mathbf{v}_{1},\mathbf{v}_{3},\mathbf{v}_{4}\right\}=\left\{\begin{bmatrix}1\\
+2\\
+0\\
+-1\end{bmatrix},\begin{bmatrix}0\\
+-1\\
+2\\
+2\end{bmatrix},\begin{bmatrix}-1\\
+3\\
+-3\\
+4\end{bmatrix}\right\}.
+\end{align*}
+@col
+Then $T$ is a basis for $\mathrm{Span}\,S=\mathcal{C}\left(A\right)$.
+@endcol
+
+<strong>Method 2</strong>
+@newcol
+The transpose of $A$ is
+\begin{align*}
+\displaystyle \begin{bmatrix}1&2&0&-1\\
+4&8&0&-4\\
+0&-1&2&2\\
+-1&3&-3&4\\
+0&9&-4&8\\
+7&-13&12&-31\\
+-9&7&-8&37\end{bmatrix}.
+\end{align*}
+@col
+Row-reduced this becomes,
+\begin{align*}
+\displaystyle D=\begin{bmatrix}\boxed{1}&0&0&-\frac{31}{7}\\
+0&\boxed{1}&0&\frac{12}{7}\\
+0&0&\boxed{1}&\frac{13}{7}\\
+0&0&0&0\\
+0&0&0&0\\
+0&0&0&0\\
+0&0&0&0\end{bmatrix}.
+\end{align*}
+@col
+Then we can take
+\begin{align*}
+\displaystyle T=\left\{\begin{bmatrix}1\\
+0\\
+0\\
+-\frac{31}{7}\end{bmatrix},\,\begin{bmatrix}0\\
+1\\
+0\\
+\frac{12}{7}\end{bmatrix},\,\begin{bmatrix}0\\
+0\\
+1\\
+\frac{13}{7}\end{bmatrix}\right\}.
+\end{align*}
+
+$T$ is a basis for $\mathcal{C}\left(A\right)=\mathrm{Span}\,S$.
+@endcol
+@end
 @remark
 @newcol
 Both methods describe algorithms to find bases
@@ -1120,7 +1105,28 @@ Let $A=[\mathbf{v}_{1}|\cdots|\mathbf{v}_{n}]$. Suppose $A^{t}\xrightarrow{\text
 Let $T$ be the nonzero columns of $B^{t}$. Then $T$ is a basis for $\mathrm{Span}\,S=\mathcal{C}\left(A\right)$
 This is an example from Lecture 14.
 @endcol@endcol-->
+@slide
+@thm
+@label{basisexists}
+Let $S$ be a finite subset of ${\mathbb{R}}^{m}$.
+Then, a basis for $\mathrm{Span}\,S$ exists.
+
+@newcol
+In fact, there exists a subset $T$ of $S$ such that $T$ is a basis for $\mathrm{Span}\,S$ (see @ref{BCS}).
+@endcol
+@end
 @section{Bases and Nonsingular Matrices}
+@thm
+@title{Column Space of a Nonsingular Matrix}
+Suppose $A$ is a square matrix of size $n$. Then $A$ is nonsingular if and only if $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$.
+@end
+@proof
+@newcol
+See @ref{thm:ANSRM}.
+@qed
+@endcol
+@end
+<!--
 @slide
 @thm
 Suppose that $A$ is a square matrix of size $m$.
@@ -1143,14 +1149,15 @@ namely that $A$ is nonsingular, also holds.
 Conversely, suppose $A$ is nonsingular.
 
 @col
-Then, by Item 5 of @ref{NME2} the columns of $A$ are linearly independent,
+Then, by Item 6 of @ref{NME2} the columns of $A$ are linearly independent,
 and by Item 4 they span $\mathbb{R}^m$.
 Hence, the columns of $A$ is a basis for $\mathbb{R}^m$.
 @qed
 @endcol
 @end
+-->
 @slide
-In fact, we may further extend @ref{NME2} as follows:
+Hence, we may rephrase @ref{NME2} as follows:
 @thm
 @title{Nonsingular Matrix Equivalences}
 @label{NME25}
@@ -1427,6 +1434,8 @@ Hence
 0\\
 1\end{bmatrix}\right\}.
 \end{align*}
+Note that the spanning set on the right is linearly independent.
+So, it forms a basis for $\mathcal{N}(A)$.
 @qed
 @endcol
 @end
