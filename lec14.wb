@@ -102,7 +102,6 @@ $\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_m$ are linearly dependent.
 @qed
 @endcol
 @end
-
 @slide
 @thm
 Suppose that $V$ is a vector space with a finite basis $B$ and a second basis $C$.
@@ -132,10 +131,47 @@ The above theorem shows that the dimension is well-defined. No matter which basi
 @endcol
 @end
 @slide
+@prop
+@label{basisexistsprop}
+Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\right\}\subseteq{\mathbb{R}}^{m}$. Then
+\begin{align*}
+\displaystyle \dim\mathrm{Span}\,S\leq n.
+\end{align*}
+@end
+@proof
+@newcol
+By @ref{basisexists}, there exists a subset $T$ of $S$ such that $T$ is a basis for $\mathrm{Span}\,S$.
+\begin{align*}
+\displaystyle \dim\mathrm{Span}\,S
+=
+\text{number of vectors in $T$}
+\leq
+\text{number of vectors in $S$}=n.
+\end{align*}
+@qed
+@endcol
+@end
+@remark
+@newcol
+@ref{basisexists} is valid
+if we replace ${\mathbb{R}}^{m}$ by $P_{n}$, $M_{mn}$
+or any finite dimensional vector space.
+@endcol
+@end
+@slide
 @eg
 \[
 \dim{\mathbb{R}}^{m}=m.
 \]
+@end
+@corollary
+@label{cor:nvecsrmlindep}
+@col
+Any set of $n$ vectors in $\mathbb{R}^m$ are linearly dependent if $n > m$.
+@end
+@proof
+@col
+This follows from @ref{SSLD} and the fact that $\mathbb{R}^m$ is spanned by $m$ vectors.
 @end
 @slide
 @skip
@@ -182,14 +218,15 @@ Let $P$ be the set of all real polynomials. As $\left\{1,x,x^{2},x^{3},\ldots\ri
 so $\dim P$ does not exists (or we can write $\dim P=\infty$).
 @end
 @slide
+We have seen that every column space of a matrix has a basis. Does every subspace of $\mathbb{R}^m$ have a basis?
+@slide
 @lemma
+@label{lemma:outsidespanlinindep}
 Let $V$ be a vector space and $\mathbf{v}_{1},\ldots,\mathbf{v}_{k},\mathbf{u}\in V$.
 
-@newcol
 Suppose
 $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is linearly independent and $\mathbf{u}\notin\mathrm{Span}\,S$. Then
 $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k},\mathbf{u}\right\}$ is linearly independent.
-@endcol
 @end
 @proof
 @newcol
@@ -218,11 +255,40 @@ By the linear independence of $S$, $\alpha_{i}=0$ for all $i$. Hence the above r
 @slide
 @thm
 @label{basisexists2}
-Let $V$ be a nonzero subspace of ${\mathbb{R}}^{m}$. (That is, $V \neq \{\vect{0}\}$.)
+Let $V$ be a nonzero (i.e. contains nonzero vectors) subspace of ${\mathbb{R}}^{m}$. (That is, $V \neq \{\vect{0}\}$.)
 
 Then, there exists a basis for $V$.
 @end
 @proof
+Consider all nonempty linearly independent subsets $S$ of vectors in $V$.
+By @ref{cor:nvecsrmlindep}, the size of any such $S$ is an integer between $1$ and $m$.
+
+@col
+Let $n$ be the largest possible size of such sets, and let:
+\[
+B = \{\vect{v}_1, \vect{v}_2,\ldots, \vect{v}_n\}
+\]  
+be a nonempty linearly independent set of $V$ with size $n$.
+We claim that $\mathrm{Span}\,B = V$:
+
+@col
+If not, then there exists $\vect{u} \in V$ which does not belong to $\mathrm{Span}\,B$,
+and by @ref{lemma:outsidespanlinindep} the set:
+\[
+B \cup \vect{u} = \{\vect{v}_1, \vect{v}_2,\ldots, \vect{v}_n, \vect{u}\}
+\]
+is an linearly indepedent set of size $n + 1$, which contradicts the assumpion that
+$n$ is the maximum size of linearly independent subsets in $V$.
+
+@col
+Hence, the linearly independent set $B$ spans $V$, 
+and it follows that $B$ is a basis of $V$.
+@qed
+@end
+<hr/>
+Alternatively,
+@proof
+@of{basisexists2}
 @newcol
 Let $V$ be a nonzero vector space.
 Let $\mathbf{v}_{1}$ be a nonzero vector in $V$. If $V=\mathrm{Span}\,\left\{\mathbf{v}_{1}\right\}$, we can take $S=\left\{\mathbf{v}_{1}\right\}$. Then obviously $\left\{\mathbf{v}_{1}\right\}$ is linearly independent and hence $S$ is a basis for $V$.
@@ -276,35 +342,6 @@ by @ref{SSLD} the vectors $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v
 @endcol
 @end
 @slide
-@prop
-@label{basisexistsprop}
-Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{n}\right\}\subseteq{\mathbb{R}}^{m}$. Then
-\begin{align*}
-\displaystyle \dim\mathrm{Span}\,S\leq n.
-\end{align*}
-@end
-@proof
-@newcol
-By Theorem    @ref{basisexists}, there exists a subset $T$ of $S$ such that $T$ is a basis for $\mathrm{Span}\,S$.
-\begin{align*}
-\displaystyle \dim\mathrm{Span}\,S
-=
-\text{number of vectors in $T$}
-\leq
-\text{number of vectors in $S$}=n.
-\end{align*}
-@qed
-@endcol
-@end
-@remark
-@newcol
-Both @ref{basisexists} and @ref{basisexistsprop} is valid
-if we replace ${\mathbb{R}}^{m}$ by $P_{n}$, $M_{mn}$
-or any finite dimensional vector space.
-@endcol
-@end
-
-@slide
 @thm
 Suppose a vector space $V$ has dimension $n$.
 Then, any linearly independent set with $n$ vectors in $V$
@@ -317,7 +354,6 @@ Suppose $S$ is a set of $n$ vectors in $V$ which spans $V$
 
 Then, $S$ is a basis for $V$.
 @end
-
 @section{Rank and nullity of a matrix}
 @defn
 @title{Nullity of a matrix}
