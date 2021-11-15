@@ -116,7 +116,7 @@ matrix obtained from $A$ by removing row $i$ and column $j$. </paragraphs>
 \end{align*} </paragraphs>
               </newcol>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="2" md5="37365dbce65fb36af200a79c331cf1a2" course="MATH 1030" chapter="15" slide="4" item="15.2">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="2" md5="cf9e17fbbb0190919b3ca5f5f6919e33" course="MATH 1030" chapter="15" slide="4" item="15.2">
               <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> \begin{align*}
 \displaystyle A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;a_{14}\\
 a_{21}&amp;a_{22}&amp;a_{23}&amp;a_{24}\\
@@ -128,7 +128,7 @@ a_{41}&amp;a_{42}&amp;a_{43}&amp;a_{44}\end{bmatrix}.
 \begin{align*}
 \displaystyle A(3|2)=\begin{bmatrix}a_{11}&amp;a_{13}&amp;a_{14}\\
 a_{21}&amp;a_{23}&amp;a_{24}\\
-a_{41}&amp;a_{42}&amp;a_{44}\end{bmatrix}\qquad A(4|1)=\begin{bmatrix}a_{12}&amp;a_{13}&amp;a_{14}\\
+a_{41}&amp;a_{43}&amp;a_{44}\end{bmatrix}\qquad A(4|1)=\begin{bmatrix}a_{12}&amp;a_{13}&amp;a_{14}\\
 a_{22}&amp;a_{23}&amp;a_{24}\\
 a_{32}&amp;a_{33}&amp;a_{34}\end{bmatrix}
 \end{align*} </paragraphs>
@@ -255,7 +255,6 @@ c&amp;d\end{vmatrix}=a\det([d])-b\det([c])=ad-bc
 &amp;
 \class{steps}{\cssId{step4}{\displaystyle=-27}}
 \end{align*}
-
 </steps>
               </newcol>
             </statement>
@@ -565,16 +564,16 @@ We will compute the determinant of this $5\times 5$ matrix by consistently expan
               <label wbtag="label" name="DRCM" type="Theorem"/>
               <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix. Let $B$ be the square matrix obtained from $A$ by multiplying a single row (say, row $i$) by the scalar $\alpha$, or by multiplying a single column by the scalar $\alpha$. Then $\det\left(B\right)=\alpha\det\left(A\right)$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="1319dad74378631971a303f24202113c" course="MATH 1030" chapter="15" slide="16" of="ba892fef33ad42ea1deba4029d6f2530" of-src-course="MATH 1030" of-src-chapter="15" of-src-slide="16" of-type="Theorem" of-item="15.14" of-src-filename="lec15.xml" ofmd5="ba892fef33ad42ea1deba4029d6f2530" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="0bff82fadd814bbf5c2c3f7159d128c4" course="MATH 1030" chapter="15" slide="16" of="ba892fef33ad42ea1deba4029d6f2530" of-src-course="MATH 1030" of-src-chapter="15" of-src-slide="16" of-type="Theorem" of-item="15.14" of-src-filename="lec15.xml" ofmd5="ba892fef33ad42ea1deba4029d6f2530" of-serial="">
               <of-title hidden="true">Determinant for Row or Column Multiples</of-title>
               <newcol course="MATH 1030" chapter="15" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Expand along row $i$, then
 \begin{align*}
 \displaystyle \det\left(B\right) &amp;=
-\sum_{k = 1}^n (-1)^{i+1}[B]_{ik}\det\left(B(i|k)\right)\\
+\sum_{k = 1}^n (-1)^{i+k}[B]_{ik}\det\left(B(i|k)\right)\\
 %% (-1)^{i+1}[B]_{i1}\det\left(B(i|1)\right)+(-1)^{i+1}[B]_{i2}\det\left(B(i|2)\right)+\cdots+(-1)^{i+n}[B]_{in}\det\left(B(i|n)\right)
-&amp;= \sum_{k = 1}^n (-1)^{i+1} \alpha [A]_{ik}\det\left(B(i|k)\right)\\
-&amp;= \alpha \sum_{k = 1}^n (-1)^{i+1} [A]_{ik}\det\left(B(i|k)\right)\\
+&amp;= \sum_{k = 1}^n (-1)^{i+k} \alpha [A]_{ik}\det\left(B(i|k)\right)\\
+&amp;= \alpha \sum_{k = 1}^n (-1)^{i+k} [A]_{ik}\det\left(B(i|k)\right)\\
 &amp;= \alpha \det(A).
 \end{align*} </paragraphs>
                 <comment course="MATH 1030" chapter="15" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol">
@@ -1994,7 +1993,7 @@ we conclude that the determinant is equal to:
                         <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
                           <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Explanation</paragraphs>
                         </strong>
-                        <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: the formula is true for $k=1$, then it is true for $k+1=2$, so true for $k+1=3$, etc. Hence true for all integers.   </paragraphs>
+                        <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: the formula is true for $k=1$, then it is true for $k+1=2$, so true for $k+1=3$, etc. Hence true for all integers. </paragraphs>
                       </newcol>
                     </collapse>
                   </li>
