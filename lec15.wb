@@ -4,7 +4,8 @@
 <h5 class="notkw">Reference.</h5>
 Beezer, Ver 3.5 Chapter D (print version p261-282)
 
-<h5 class="notkw">Exercise.</h5> Exercises with solutions can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf} (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$)Section DM p.98 - 101 all, Section PDM p.101-102 M30, T10, T15, T20
+<h5 class="notkw">Exercise.</h5> Exercises with solutions can be downloaded at
+@href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf} (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$)Section DM p.98 - 101 all, Section PDM p.101-102 M30, T10, T15, T20
 
 @section{Definition of the determinant}
 
@@ -44,7 +45,7 @@ Then
 \begin{align*}
 \displaystyle A(3|2)=\begin{bmatrix}a_{11}&a_{13}&a_{14}\\
 a_{21}&a_{23}&a_{24}\\
-a_{41}&a_{42}&a_{44}\end{bmatrix}\qquad A(4|1)=\begin{bmatrix}a_{12}&a_{13}&a_{14}\\
+a_{41}&a_{43}&a_{44}\end{bmatrix}\qquad A(4|1)=\begin{bmatrix}a_{12}&a_{13}&a_{14}\\
 a_{22}&a_{23}&a_{24}\\
 a_{32}&a_{33}&a_{34}\end{bmatrix}
 \end{align*}
@@ -132,29 +133,28 @@ Then
 \\
 \\
 &
-\class{steps}{\cssId{step0}{\displaystyle=3\begin{vmatrix}1&6\\
+@nstep{\displaystyle=3\begin{vmatrix}1&6\\
 -1&2\end{vmatrix}-2\begin{vmatrix}4&6\\
 -3&2\end{vmatrix}+(-1)\begin{vmatrix}4&1\\
--3&-1\end{vmatrix}}}
+-3&-1\end{vmatrix}}
 \\
 \\
 &
-\class{steps}{\cssId{step1}{\displaystyle=3\left(1\begin{vmatrix}2\\
-\end{vmatrix}-6\begin{vmatrix}-1\end{vmatrix}\right)-2\left(4\begin{vmatrix}2\end{vmatrix}-6\begin{vmatrix}-3\end{vmatrix}\right)-\left(4\begin{vmatrix}-1\end{vmatrix}-1\begin{vmatrix}-3\end{vmatrix}\right)}}
+@nstep{\displaystyle=3\left(1\begin{vmatrix}2\\
+\end{vmatrix}-6\begin{vmatrix}-1\end{vmatrix}\right)-2\left(4\begin{vmatrix}2\end{vmatrix}-6\begin{vmatrix}-3\end{vmatrix}\right)-\left(4\begin{vmatrix}-1\end{vmatrix}-1\begin{vmatrix}-3\end{vmatrix}\right)}
 \\
 \\
 &
-\class{steps}{\cssId{step2}{\displaystyle=3\left(1(2)-6(-1)\right)-2\left(4(2)-6(-3)\right)-\left(4(-1)-1(-3)\right)}}
+@nstep{\displaystyle=3\left(1(2)-6(-1)\right)-2\left(4(2)-6(-3)\right)-\left(4(-1)-1(-3)\right)}
 \\
 \\
 &
-\class{steps}{\cssId{step3}{\displaystyle=24-52+1}}
+@nstep{\displaystyle=24-52+1}
 \\
 \\
 &
-\class{steps}{\cssId{step4}{\displaystyle=-27}}
+@nstep{\displaystyle=-27}
 \end{align*}
-
 @endsteps
 @endcol
 @end
@@ -387,8 +387,6 @@ We will compute the determinant of this $5\times 5$ matrix by consistently expan
 \end{align*}
 @endcol-->
 
-
-
 @slide
 @skip
 When you consult other texts in your study of determinants, you may run into the terms @keyword{minor} and @keyword{cofactor}, especially in a discussion centered on expansion about rows and columns. We have chosen not to make these definitions formally since we have been able to get along without them. However, informally, a @keyword{minor} is a determinant of a submatrix, specifically $\det\left(A\left(i|j\right)\right)$ and is usually referenced as the minor of $\left[A\right]_{ij}$. A @keyword{cofactor} is a signed minor, specifically the cofactor of $\left[A\right]_{ij}$ is $(-1)^{i+j}\det\left(A\left(i|j\right)\right)$.
@@ -404,10 +402,10 @@ Suppose that $A$ is a square matrix. Let $B$ be the square matrix obtained from 
 Expand along row $i$, then
 \begin{align*}
 \displaystyle \det\left(B\right) &=
-\sum_{k = 1}^n (-1)^{i+1}[B]_{ik}\det\left(B(i|k)\right)\\
+\sum_{k = 1}^n (-1)^{i+k}[B]_{ik}\det\left(B(i|k)\right)\\
 %% (-1)^{i+1}[B]_{i1}\det\left(B(i|1)\right)+(-1)^{i+1}[B]_{i2}\det\left(B(i|2)\right)+\cdots+(-1)^{i+n}[B]_{in}\det\left(B(i|n)\right)
-&= \sum_{k = 1}^n (-1)^{i+1} \alpha [A]_{ik}\det\left(B(i|k)\right)\\
-&= \alpha \sum_{k = 1}^n (-1)^{i+1} [A]_{ik}\det\left(B(i|k)\right)\\
+&= \sum_{k = 1}^n (-1)^{i+k} \alpha [A]_{ik}\det\left(B(i|k)\right)\\
+&= \alpha \sum_{k = 1}^n (-1)^{i+k} [A]_{ik}\det\left(B(i|k)\right)\\
 &= \alpha \det(A).
 \end{align*}
 <!--
@@ -415,8 +413,6 @@ Expand along row $i$, then
 \displaystyle =\alpha((-1)^{i+1}[A]_{i1}\det\left(A(i|1)\right)+(-1)^{i+1}[A]_{i2}\det\left(A(i|2)\right)+\cdots+(-1)^{i+n}[A]_{in}\det\left(A(i|n)\right))=\det\left(A\right).
 \end{align*}
 -->
-
-
 
 @qed
 @endcol
@@ -493,8 +489,6 @@ The proof for the case of a zero column is entirely similar, or could be derived
 $\det\left(A\right)=\det\left(A^{t}\right)$.
 @qed@endcol@end-->
 
-
-
 @slide
 @thm
 @title{Determinant for Row or Column Swap}
@@ -555,8 +549,6 @@ It follows that $\det(A) = 0$.
 <!--@newcol
 Skip the proof. If you are interested, see Beezer p.274.
 -->
-
-
 
 @qed
 @endcol
@@ -750,8 +742,6 @@ a_{n1}&a_{n2}&\cdots&a_{nn}\\
 \end{align*}
 -->
 
-
-
 @newcol
 Similarly, for column vectors $\vect{A}_i$, $\vect{B}, \vect{C}$ in $\mathbb{R}^n$,
 we have:
@@ -779,8 +769,6 @@ a_{21}&\cdots&a_{2,i-1}&c_{2}&a_{2,i+1}&\cdots&a_{2n}\\
 a_{n1}&\cdots&a_{n,i-1}&c_{n}&a_{n,i+1}&\cdots&a_{nn}\end{vmatrix}
 \end{align*}
 -->
-
-
 
 @endcol
 @end
@@ -1633,7 +1621,7 @@ The formula is true for $n=k+1$.
 @newcol
 By mathematical induction, the formula is valid for all positive integer.
 
-<strong>Explanation</strong>: the formula is true for $k=1$, then it is true for $k+1=2$, so true for $k+1=3$, etc. Hence true for all integers.  
+<strong>Explanation</strong>: the formula is true for $k=1$, then it is true for $k+1=2$, so true for $k+1=3$, etc. Hence true for all integers.
 @endcol</li></ol>
 @qed
 @endcol
