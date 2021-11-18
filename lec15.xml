@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="MATH 1030">
     <keywords slide="all" environ="course" chapter="" course="MATH 1030">
@@ -1604,17 +1605,16 @@ is a solution of $A\mathbf{x}=\mathbf{b}$, then
 \end{align*}
 where $k=1,\ldots,n$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="8ad1ed3bcba4e77246aec24d47af62ef" course="MATH 1030" chapter="15" slide="33" of="9f4800985f4113f92c0c94a4317d08c1" of-src-course="MATH 1030" of-src-chapter="15" of-src-slide="33" of-type="Theorem" of-item="15.38" of-src-filename="lec15.xml" ofmd5="9f4800985f4113f92c0c94a4317d08c1" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="7f03b07b1a6b5c4206ca5958b358d787" course="MATH 1030" chapter="15" slide="33" of="9f4800985f4113f92c0c94a4317d08c1" of-src-course="MATH 1030" of-src-chapter="15" of-src-slide="33" of-type="Theorem" of-item="15.38" of-src-filename="lec15.xml" ofmd5="9f4800985f4113f92c0c94a4317d08c1" of-serial="">
               <of-title hidden="true">Cramer’s rule</of-title>
               <newcol course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Because $A$ is invertible, $A\mathbf{x}=\mathbf{b}$ has a unique solution $\vect{x}$. Let $X_{k}$ be matrix obtained from the identity matrix $I_{n}$ by replacing column $k$ with $\mathbf{x}$.
-Then
+Then, since
 \begin{align*}
-\displaystyle A\mathbf{e}_{i}=\mathbf{A}_{i}\text{ if $i\neq k$}\qquad A\mathbf{x}=\mathbf{b}\text{ if $i=k$.}
+\displaystyle A\mathbf{e}_{i}=\mathbf{A}_{i}\qquad\text{ and }\qquad A\mathbf{x}=\mathbf{b},
 \end{align*} </paragraphs>
                 <collapse course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence
-\begin{align*}
+                  <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
 \displaystyle AX_{k}=M_{k}.
 \end{align*} </paragraphs>
                   <collapse course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
