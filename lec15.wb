@@ -1291,11 +1291,13 @@ where $k=1,\ldots,n$.
 @proof
 @newcol
 Because $A$ is invertible, $A\mathbf{x}=\mathbf{b}$ has a unique solution $\vect{x}$. Let $X_{k}$ be matrix obtained from the identity matrix $I_{n}$ by replacing column $k$ with $\mathbf{x}$.
-Then, since
+
+Since:
 \begin{align*}
 \displaystyle A\mathbf{e}_{i}=\mathbf{A}_{i}\qquad\text{ and }\qquad A\mathbf{x}=\mathbf{b},
 \end{align*}
 @col
+we have:
 \begin{align*}
 \displaystyle AX_{k}=M_{k}.
 \end{align*}
