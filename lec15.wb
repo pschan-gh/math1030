@@ -532,8 +532,8 @@ Find $\det\left(A\right)$.
 @end
 @slide
 @cor
-@title{Determinant with Equal Rows or Columns}
 @label{DERC}
+@title{Determinant with Equal Rows or Columns}
 @newcol
 Suppose that $A$ is a square matrix with two equal rows, or two equal columns. Then $\det\left(A\right)=0$.
 @endcol
@@ -664,6 +664,7 @@ The above is
 @end
 @slide
 @thm
+@label{thm:detsumrowcol}
 Let $\vect{A}_i$, $\vect{B}, \vect{C}$ be row vectors with $n$ components.
 Then:
 \[
@@ -1272,6 +1273,7 @@ and @ref{thm:DETMULT}.
 @slide
 @skip
 @thm
+@label{thm:cramersrule}
 @title{Cramer’s rule}
 Let $A$ be a invertible square matrix of size $n$. Let $\mathbf{b}\in{\mathbb{R}}^{n}$.
 Let $M_{k}$ be the square matrix by replacing the $k$-th column of $A$ by $\mathbf{b}$.
@@ -1318,6 +1320,71 @@ Therefore
 \end{align*}
 @qed
 @endcol
+@end
+Alternatively,
+@proof
+@of{thm:cramersrule}
+@col
+A vector $\vect{x} = \colvec{x_1\\x_2\\\vdots\\x_n}$ is a solution to 
+$A\vect{x} = \vect{b}$ if and only if:
+\[
+x_1 \vect{A}_1 + x_2 \vect{A}_2 + \cdots + x_n \vect{A}_n = \vec{b}.
+\]
+@col
+Let $k$ be any integer such that $1 \leq k \leq n$.
+Let $M_k$ be the matrix obtained from $A$ by replacing the column $\vect{A}_k$ with
+$\vect{b}$.
+@col
+Then:
+\[
+\begin{array}{ccc}
+\det M_k
+= [ \vect{A}_1 |  \vect{A}_2 | \cdots |&
+\underbrace{x_1 \vect{A}_1 + x_2 \vect{A}_2 + \cdots + x_n \vect{A}_n}_{} 
+&| \cdots |\vect{A}_n ], \\
+& k\text{-th column} &
+\end{array}
+\]
+which by @ref{thm:detsumrowcol} is equal to:
+\[
+\begin{array}{ccc}
+\displaystyle \sum_{i = 1}^n x_i \det 
+[ \vect{A}_1 |  \vect{A}_2 | \cdots | &
+\underbrace{\vect{A}_i}_{} 
+& | \cdots |\vect{A}_n ].\\
+& k\text{-th column} &
+\end{array}
+\]
+For each $i \neq k$, observe that the matrix:
+\[
+\begin{array}{ccc}
+[ \vect{A}_1 |  \vect{A}_2 | \cdots | &
+\underbrace{\vect{A}_i}_{} 
+& | \cdots |\vect{A}_n ]\\
+& k\text{-th column} &
+\end{array}
+\]
+has two columns which are equal to $A_i$, hence its determinant is equal to $0$, 
+by @ref{DERC}.
+
+@col
+It follows that:
+\[
+\begin{array}{ccc}
+\displaystyle 
+\det M_k = 
+x_k \det 
+[ \vect{A}_1 |  \vect{A}_2 | \cdots | &
+\underbrace{\vect{A}_k}_{}
+& | \cdots |\vect{A}_n ] = x_k \det A.\\
+& k\text{-th column} &
+\end{array}
+\]
+@col
+Hence,
+\[
+x_k = \frac{\det M_k}{\det A}.
+\]
 @end
 @slide
 @skip

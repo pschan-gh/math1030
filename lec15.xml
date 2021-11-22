@@ -717,8 +717,8 @@ Find $\det\left(A\right)$.</paragraphs>
               <keyword chapter="15" slide="19">Determinant with Equal Rows or Columns</keyword>
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="20" title="Determinant with Equal Rows or Columns" md5="e9c3499040bae858187a4f8e7e11417b" course="MATH 1030" chapter="15" slide="19" item="15.20">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="15" section="3" subsection="" subsubsection="" serial="" slide="19">Determinant with Equal Rows or Columns</title>
               <label wbtag="label" name="DERC" type="Corollary"/>
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="15" section="3" subsection="" subsubsection="" serial="" slide="19">Determinant with Equal Rows or Columns</title>
               <newcol course="MATH 1030" chapter="15" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose that $A$ is a square matrix with two equal rows, or two equal columns. Then $\det\left(A\right)=0$. </paragraphs>
               </newcol>
@@ -870,6 +870,7 @@ Skip the proof. If you are interested, see Beezer p.274.
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="22" id="s22" slide="22" course="MATH 1030" chapter="15" section="3" subsection="" subsubsection="" chapter_title="Determinant" section_title="Properties of Determinants of Matrices">
             <keywords slide="22" environ="slide" chapter="15" course="MATH 1030"/>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="24" md5="a26f7379be5300fe3593c23291072482" course="MATH 1030" chapter="15" slide="22" item="15.24">
+              <label wbtag="label" name="thm:detsumrowcol" type="Theorem"/>
               <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $\vect{A}_i$, $\vect{B}, \vect{C}$ be row vectors with $n$ components.
 Then:
 \[
@@ -1589,6 +1590,7 @@ and </paragraphs>
               <keyword chapter="15" slide="33">Cramers rule</keyword>
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="38" title="Cramers rule" md5="9f4800985f4113f92c0c94a4317d08c1" course="MATH 1030" chapter="15" slide="33" item="15.38">
+              <label wbtag="label" name="thm:cramersrule" type="Theorem"/>
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="15" section="5" subsection="" subsubsection="" serial="" slide="33">Cramer’s rule</title>
               <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $A$ be a invertible square matrix of size $n$. Let $\mathbf{b}\in{\mathbb{R}}^{n}$.
 Let $M_{k}$ be the square matrix by replacing the $k$-th column of $A$ by $\mathbf{b}$.
@@ -1635,6 +1637,83 @@ where $k=1,\ldots,n$. </paragraphs>
 \displaystyle x_{k}=\frac{\det\left(M_{k}\right)}{\det\left(A\right)}.
 \end{align*} </paragraphs>
                         <qed course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </substatement>
+            <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Alternatively, </paragraphs>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" of="thm:cramersrule" md5="0c5b71919217275c677ec65800c54328" course="MATH 1030" chapter="15" slide="33">
+              <newcol course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> A vector $\vect{x} = \colvec{x_1\\x_2\\\vdots\\x_n}$ is a solution to 
+$A\vect{x} = \vect{b}$ if and only if:
+\[
+x_1 \vect{A}_1 + x_2 \vect{A}_2 + \cdots + x_n \vect{A}_n = \vec{b}.
+\] </paragraphs>
+                <collapse course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $k$ be any integer such that $1 \leq k \leq n$.
+Let $M_k$ be the matrix obtained from $A$ by replacing the column $\vect{A}_k$ with
+$\vect{b}$. </paragraphs>
+                  <collapse course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then:
+\[
+\begin{array}{ccc}
+\det M_k
+= [ \vect{A}_1 |  \vect{A}_2 | \cdots |&amp;
+\underbrace{x_1 \vect{A}_1 + x_2 \vect{A}_2 + \cdots + x_n \vect{A}_n}_{} 
+&amp;| \cdots |\vect{A}_n ], \\
+&amp; k\text{-th column} &amp;
+\end{array}
+\]
+which by </paragraphs>
+                    <ref environment="newcol" chapter_type="" label="thm:detsumrowcol" wbtag="ref" course="MATH 1030" chapter="15" slide="33" referrer-type="Proof" referrer-md5="0c5b71919217275c677ec65800c54328">
+                      <title>UNDEFINED</title>
+                    </ref>
+                    <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> is equal to:
+\[
+\begin{array}{ccc}
+\displaystyle \sum_{i = 1}^n x_i \det 
+[ \vect{A}_1 |  \vect{A}_2 | \cdots | &amp;
+\underbrace{\vect{A}_i}_{} 
+&amp; | \cdots |\vect{A}_n ].\\
+&amp; k\text{-th column} &amp;
+\end{array}
+\]
+For each $i \neq k$, observe that the matrix:
+\[
+\begin{array}{ccc}
+[ \vect{A}_1 |  \vect{A}_2 | \cdots | &amp;
+\underbrace{\vect{A}_i}_{} 
+&amp; | \cdots |\vect{A}_n ]\\
+&amp; k\text{-th column} &amp;
+\end{array}
+\]
+has two columns which are equal to $A_i$, hence its determinant is equal to $0$, 
+by </paragraphs>
+                    <ref environment="newcol" chapter_type="" label="DERC" wbtag="ref" course="MATH 1030" chapter="15" slide="33" referrer-type="Proof" referrer-md5="0c5b71919217275c677ec65800c54328" src-course="MATH 1030" src-chapter="15" src-slide="19" type="Corollary" item="15.20" src-filename="lec15.xml" md5="e9c3499040bae858187a4f8e7e11417b" class="lcref" serial="">
+                      <title>Determinant with Equal Rows or Columns</title>
+                    </ref>
+                    <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">.</paragraphs>
+                    <newline course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                    <collapse course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> It follows that:
+\[
+\begin{array}{ccc}
+\displaystyle 
+\det M_k = 
+x_k \det 
+[ \vect{A}_1 |  \vect{A}_2 | \cdots | &amp;
+\underbrace{\vect{A}_k}_{}
+&amp; | \cdots |\vect{A}_n ] = x_k \det A.\\
+&amp; k\text{-th column} &amp;
+\end{array}
+\] </paragraphs>
+                      <collapse course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence,
+\[
+x_k = \frac{\det M_k}{\det A}.
+\] </paragraphs>
                       </collapse>
                     </collapse>
                   </collapse>
