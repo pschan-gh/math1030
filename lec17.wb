@@ -596,7 +596,7 @@ For $1\leq i\leq k$, we compute
 @col
 Because $\left< \mathbf{v}_{j},\mathbf{v}_{i}\right>$ is $0$ unless $j=i$, the above becomes
 \begin{align*}
-\displaystyle \left< \mathbf{w},\mathbf{v}_{i}\right>-\frac{\left< \mathbf{w},\mathbf{v}_{i}\right>}{\|\mathbf{v}_{i}\|^{2}}\left< \mathbf{v}_{i},\mathbf{v}_{i}\right>=\left< \mathbf{w},\mathbf{v}_{i}\right>-\left< \mathbf{v},\mathbf{v}_{i}\right>=0.
+\displaystyle \left< \mathbf{w},\mathbf{v}_{i}\right>-\frac{\left< \mathbf{w},\mathbf{v}_{i}\right>}{\|\mathbf{v}_{i}\|^{2}}\left< \mathbf{v}_{i},\mathbf{v}_{i}\right>=\left< \mathbf{w},\mathbf{v}_{i}\right>-\left< \mathbf{w},\mathbf{v}_{i}\right>=0.
 \end{align*}
 @col
 Hence $\mathbf{v}\perp\mathbf{v}_{i}$ for $i=1,\ldots,k$.
@@ -608,8 +608,7 @@ Hence $\mathbf{v}\perp\mathbf{v}_{i}$ for $i=1,\ldots,k$.
 @title{Gram-Schmidt Orthogonalization Process}
 @label{GSO}
 Let $S=\left\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{k}\right\}$ be a linearly independent subset of $V$.
-Let $\mathbf{v}_{1}=\mathbf{w}_{1}$ and set
-\begin{align*}
+Let $\mathbf{v}_{1}=\mathbf{w}_{1}$ and set, recursively,\begin{align*}
 \displaystyle \mathbf{v}_{\ell}=\mathbf{w}_{\ell}-\frac{\left< \mathbf{w}_{\ell},\mathbf{v}_{1}\right>}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left< \mathbf{w}_{\ell},\mathbf{v}_{\ell-1}\right>}{\|\mathbf{v}_{\ell-1}\|^{2}}\mathbf{v}_{\ell-1}\,\,\text{ for $2\leq\ell\leq k$}.
 \end{align*}
 @newcol

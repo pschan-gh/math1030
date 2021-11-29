@@ -895,7 +895,7 @@ Normalizing it, we obtain an orthonormal basis
 \end{align*}
 is perpendicular to $\mathbf{v}_{i}$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="16b13427921bf158766ac0ea187467a4" course="MATH 1030" chapter="17" slide="26" of="d4dcb9b1cdec9c946c5696df8ca4bb44" of-src-course="MATH 1030" of-src-chapter="17" of-src-slide="26" of-type="Theorem" of-item="17.26" of-src-filename="lec17.xml" ofmd5="d4dcb9b1cdec9c946c5696df8ca4bb44" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="634a783ccbe613e84b2c561d03c7067e" course="MATH 1030" chapter="17" slide="26" of="d4dcb9b1cdec9c946c5696df8ca4bb44" of-src-course="MATH 1030" of-src-chapter="17" of-src-slide="26" of-type="Theorem" of-item="17.26" of-src-filename="lec17.xml" ofmd5="d4dcb9b1cdec9c946c5696df8ca4bb44" of-serial="">
               <of-title hidden="true">Theorem 17.26</of-title>
               <newcol course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> For $1\leq i\leq k$, we compute
@@ -905,7 +905,7 @@ is perpendicular to $\mathbf{v}_{i}$. </paragraphs>
                 <collapse course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Because $\left&lt; \mathbf{v}_{j},\mathbf{v}_{i}\right&gt;$ is $0$ unless $j=i$, the above becomes
 \begin{align*}
-\displaystyle \left&lt; \mathbf{w},\mathbf{v}_{i}\right&gt;-\frac{\left&lt; \mathbf{w},\mathbf{v}_{i}\right&gt;}{\|\mathbf{v}_{i}\|^{2}}\left&lt; \mathbf{v}_{i},\mathbf{v}_{i}\right&gt;=\left&lt; \mathbf{w},\mathbf{v}_{i}\right&gt;-\left&lt; \mathbf{v},\mathbf{v}_{i}\right&gt;=0.
+\displaystyle \left&lt; \mathbf{w},\mathbf{v}_{i}\right&gt;-\frac{\left&lt; \mathbf{w},\mathbf{v}_{i}\right&gt;}{\|\mathbf{v}_{i}\|^{2}}\left&lt; \mathbf{v}_{i},\mathbf{v}_{i}\right&gt;=\left&lt; \mathbf{w},\mathbf{v}_{i}\right&gt;-\left&lt; \mathbf{w},\mathbf{v}_{i}\right&gt;=0.
 \end{align*} </paragraphs>
                   <collapse course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                     <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence $\mathbf{v}\perp\mathbf{v}_{i}$ for $i=1,\ldots,k$. </paragraphs>
@@ -920,12 +920,11 @@ is perpendicular to $\mathbf{v}_{i}$. </paragraphs>
               <keyword chapter="17" slide="27">Gram-Schmidt Orthogonalization Process</keyword>
               <keyword chapter="17" slide="27">Gram-Schmidt Orthogonalization Process</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="27" title="Gram-Schmidt Orthogonalization Process" md5="5e92cc28c0997f024eb4381292f86114" course="MATH 1030" chapter="17" slide="27" item="17.27">
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="27" title="Gram-Schmidt Orthogonalization Process" md5="2c2061892bcc2a0037956602ccc03b72" course="MATH 1030" chapter="17" slide="27" item="17.27">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="17" section="3" subsection="" subsubsection="" serial="" slide="27">Gram-Schmidt Orthogonalization Process</title>
               <label wbtag="label" name="GSO" type="Theorem"/>
               <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $S=\left\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{k}\right\}$ be a linearly independent subset of $V$.
-Let $\mathbf{v}_{1}=\mathbf{w}_{1}$ and set
-\begin{align*}
+Let $\mathbf{v}_{1}=\mathbf{w}_{1}$ and set, recursively,\begin{align*}
 \displaystyle \mathbf{v}_{\ell}=\mathbf{w}_{\ell}-\frac{\left&lt; \mathbf{w}_{\ell},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left&lt; \mathbf{w}_{\ell},\mathbf{v}_{\ell-1}\right&gt;}{\|\mathbf{v}_{\ell-1}\|^{2}}\mathbf{v}_{\ell-1}\,\,\text{ for $2\leq\ell\leq k$}.
 \end{align*} </paragraphs>
               <newcol course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
@@ -935,7 +934,7 @@ In particular $\left&lt; S\right&gt;=\left&lt; S^{\prime}\right&gt;$. The proces
                 <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. </paragraphs>
               </newcol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="8e3815bff26f9baefe822ca38db2860a" course="MATH 1030" chapter="17" slide="27" of="5e92cc28c0997f024eb4381292f86114" of-src-course="MATH 1030" of-src-chapter="17" of-src-slide="27" of-type="Theorem" of-item="17.27" of-src-filename="lec17.xml" ofmd5="5e92cc28c0997f024eb4381292f86114" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="8e3815bff26f9baefe822ca38db2860a" course="MATH 1030" chapter="17" slide="27" of="2c2061892bcc2a0037956602ccc03b72" of-src-course="MATH 1030" of-src-chapter="17" of-src-slide="27" of-type="Theorem" of-item="17.27" of-src-filename="lec17.xml" ofmd5="2c2061892bcc2a0037956602ccc03b72" of-serial="">
               <of-title hidden="true">Gram-Schmidt Orthogonalization Process</of-title>
               <newcol course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We have $\left&lt; \left\{\mathbf{w}_{1}\right\}\right&gt;=\left&lt; \left\{\mathbf{v}_{1}\right\}\right&gt;$.
@@ -989,7 +988,7 @@ Repeating the process for the incrementing $\ell$ reaches $\ell=k$, we complete 
 Applying Gram-Schmidt orthogonalization process to $S$, we obtain an orthogonal set $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$.</paragraphs>
                 <newline course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
                 <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">By Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="GSO" wbtag="ref" course="MATH 1030" chapter="17" slide="28" referrer-type="Proof" referrer-md5="b8c0e8e875c2c5a91b7a7d225f071318" src-course="MATH 1030" src-chapter="17" src-slide="27" type="Theorem" item="17.27" src-filename="lec17.xml" md5="5e92cc28c0997f024eb4381292f86114" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="GSO" wbtag="ref" course="MATH 1030" chapter="17" slide="28" referrer-type="Proof" referrer-md5="b8c0e8e875c2c5a91b7a7d225f071318" src-course="MATH 1030" src-chapter="17" src-slide="27" type="Theorem" item="17.27" src-filename="lec17.xml" md5="2c2061892bcc2a0037956602ccc03b72" class="lcref" serial="">
                   <title>Gram-Schmidt Orthogonalization Process</title>
                 </ref>
                 <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $\left&lt; S^{\prime}\right&gt;=\left&lt; S\right&gt;=V$. By Theorem   </paragraphs>
