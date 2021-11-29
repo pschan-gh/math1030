@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="MATH 1030">
     <keywords slide="all" environ="course" chapter="" course="MATH 1030">
@@ -921,7 +920,7 @@ is perpendicular to $\mathbf{v}_{i}$. </paragraphs>
               <keyword chapter="17" slide="27">Gram-Schmidt Orthogonalization Process</keyword>
               <keyword chapter="17" slide="27">Gram-Schmidt Orthogonalization Process</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="27" title="Gram-Schmidt Orthogonalization Process" md5="2c2061892bcc2a0037956602ccc03b72" course="MATH 1030" chapter="17" slide="27" item="17.27">
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="27" title="Gram-Schmidt Orthogonalization Process" md5="f86d9e31bf35f890bdd612d52b101dc7" course="MATH 1030" chapter="17" slide="27" item="17.27">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="17" section="3" subsection="" subsubsection="" serial="" slide="27">Gram-Schmidt Orthogonalization Process</title>
               <label wbtag="label" name="GSO" type="Theorem"/>
               <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $S=\left\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{k}\right\}$ be a linearly independent subset of $V$.
@@ -929,13 +928,17 @@ Let $\mathbf{v}_{1}=\mathbf{w}_{1}$ and set, recursively,\begin{align*}
 \displaystyle \mathbf{v}_{\ell}=\mathbf{w}_{\ell}-\frac{\left&lt; \mathbf{w}_{\ell},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left&lt; \mathbf{w}_{\ell},\mathbf{v}_{\ell-1}\right&gt;}{\|\mathbf{v}_{\ell-1}\|^{2}}\mathbf{v}_{\ell-1}\,\,\text{ for $2\leq\ell\leq k$}.
 \end{align*} </paragraphs>
               <newcol course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is an orthogonal set.Moreover, $\left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}\right&gt;=\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right&gt;$ for $\ell=1,\ldots,k$.
-In particular $\left&lt; S\right&gt;=\left&lt; S^{\prime}\right&gt;$. The process of obtaining $S^{\prime}$ by the above procedure is called the </paragraphs>
+                <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Then $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is an orthogonal set.</paragraphs>
+                <newline course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Moreover, $\left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}\right&gt;=\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right&gt;$ for $\ell=1,\ldots,k$.
+In particular $\mathrm{Span}\, S = \mathrm{Span}\, S^{\prime}$.</paragraphs>
+                <newline course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">The process of obtaining $S^{\prime}$ by the above procedure is called the </paragraphs>
                 <inline_keyword course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol">Gram-Schmidt Orthogonalization Process</inline_keyword>
                 <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. </paragraphs>
               </newcol>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="8e3815bff26f9baefe822ca38db2860a" course="MATH 1030" chapter="17" slide="27" of="2c2061892bcc2a0037956602ccc03b72" of-src-course="MATH 1030" of-src-chapter="17" of-src-slide="27" of-type="Theorem" of-item="17.27" of-src-filename="lec17.xml" ofmd5="2c2061892bcc2a0037956602ccc03b72" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="8e3815bff26f9baefe822ca38db2860a" course="MATH 1030" chapter="17" slide="27" of="f86d9e31bf35f890bdd612d52b101dc7" of-src-course="MATH 1030" of-src-chapter="17" of-src-slide="27" of-type="Theorem" of-item="17.27" of-src-filename="lec17.xml" ofmd5="f86d9e31bf35f890bdd612d52b101dc7" of-serial="">
               <of-title hidden="true">Gram-Schmidt Orthogonalization Process</of-title>
               <newcol course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We have $\left&lt; \left\{\mathbf{w}_{1}\right\}\right&gt;=\left&lt; \left\{\mathbf{v}_{1}\right\}\right&gt;$.
@@ -979,17 +982,19 @@ Repeating the process for the incrementing $\ell$ reaches $\ell=k$, we complete 
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="28" id="s28" slide="28" course="MATH 1030" chapter="17" section="3" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Gram-Schmidt Orthogonalization process">
             <keywords slide="28" environ="slide" chapter="17" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="28" md5="f9e9a11445cc2fb0946f9b585971f479" course="MATH 1030" chapter="17" slide="28" item="17.28">
-              <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $V$ is a subspace of ${\mathbb{R}}^{m}$. Then there exists an orthogonal (orthonormal basis) of $V$. </paragraphs>
+            <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="28" md5="2b31a547e38411537c5e1f80e5aeb83f" course="MATH 1030" chapter="17" slide="28" item="17.28">
+              <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $V$ is a subspace of ${\mathbb{R}}^{m}$. Then there exists an orthogonal basis of $V$.</paragraphs>
+              <newline course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+              <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Moreover, the orthogonal basis can be further normalized to be an orthonormal basis. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="b8c0e8e875c2c5a91b7a7d225f071318" course="MATH 1030" chapter="17" slide="28" of="f9e9a11445cc2fb0946f9b585971f479" of-src-course="MATH 1030" of-src-chapter="17" of-src-slide="28" of-type="Corollary" of-item="17.28" of-src-filename="lec17.xml" ofmd5="f9e9a11445cc2fb0946f9b585971f479" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="b8c0e8e875c2c5a91b7a7d225f071318" course="MATH 1030" chapter="17" slide="28" of="2b31a547e38411537c5e1f80e5aeb83f" of-src-course="MATH 1030" of-src-chapter="17" of-src-slide="28" of-type="Corollary" of-item="17.28" of-src-filename="lec17.xml" ofmd5="2b31a547e38411537c5e1f80e5aeb83f" of-serial="">
               <of-title hidden="true">Corollary 17.28</of-title>
               <newcol course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By Lecture 18 Theorem 8, there exists a basis $S=\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{k}\right\}$ for $V$.
 Applying Gram-Schmidt orthogonalization process to $S$, we obtain an orthogonal set $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$.</paragraphs>
                 <newline course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
                 <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">By Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="GSO" wbtag="ref" course="MATH 1030" chapter="17" slide="28" referrer-type="Proof" referrer-md5="b8c0e8e875c2c5a91b7a7d225f071318" src-course="MATH 1030" src-chapter="17" src-slide="27" type="Theorem" item="17.27" src-filename="lec17.xml" md5="2c2061892bcc2a0037956602ccc03b72" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="GSO" wbtag="ref" course="MATH 1030" chapter="17" slide="28" referrer-type="Proof" referrer-md5="b8c0e8e875c2c5a91b7a7d225f071318" src-course="MATH 1030" src-chapter="17" src-slide="27" type="Theorem" item="17.27" src-filename="lec17.xml" md5="f86d9e31bf35f890bdd612d52b101dc7" class="lcref" serial="">
                   <title>Gram-Schmidt Orthogonalization Process</title>
                 </ref>
                 <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $\left&lt; S^{\prime}\right&gt;=\left&lt; S\right&gt;=V$. By Theorem   </paragraphs>

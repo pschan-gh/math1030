@@ -612,8 +612,12 @@ Let $\mathbf{v}_{1}=\mathbf{w}_{1}$ and set, recursively,\begin{align*}
 \displaystyle \mathbf{v}_{\ell}=\mathbf{w}_{\ell}-\frac{\left< \mathbf{w}_{\ell},\mathbf{v}_{1}\right>}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left< \mathbf{w}_{\ell},\mathbf{v}_{\ell-1}\right>}{\|\mathbf{v}_{\ell-1}\|^{2}}\mathbf{v}_{\ell-1}\,\,\text{ for $2\leq\ell\leq k$}.
 \end{align*}
 @newcol
-Then $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is an orthogonal set.Moreover, $\left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}\right>=\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right>$ for $\ell=1,\ldots,k$.
-In particular $\left< S\right>=\left< S^{\prime}\right>$. The process of obtaining $S^{\prime}$ by the above procedure is called the @keyword{Gram-Schmidt Orthogonalization Process}.
+Then $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is an orthogonal set.
+
+Moreover, $\left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}\right>=\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right>$ for $\ell=1,\ldots,k$.
+In particular $\mathrm{Span}\, S = \mathrm{Span}\, S^{\prime}$.
+
+The process of obtaining $S^{\prime}$ by the above procedure is called the @keyword{Gram-Schmidt Orthogonalization Process}.
 @endcol
 @end
 @proof
@@ -654,7 +658,9 @@ Repeating the process for the incrementing $\ell$ reaches $\ell=k$, we complete 
 @end
 @slide
 @cor
-Suppose that $V$ is a subspace of ${\mathbb{R}}^{m}$. Then there exists an orthogonal (orthonormal basis) of $V$.
+Suppose that $V$ is a subspace of ${\mathbb{R}}^{m}$. Then there exists an orthogonal basis of $V$.
+
+Moreover, the orthogonal basis can be further normalized to be an orthonormal basis.
 @end
 @proof
 @newcol
