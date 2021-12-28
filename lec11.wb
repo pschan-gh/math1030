@@ -2,27 +2,14 @@
 @setchapter{11}
 @chapter{Spanning Sets}
 
+<h5 class="notkw">Reference.</h5><ul>
+<li> Beezer, Ver 3.5 Section SS (print version p83 - p94) </li>
+<li> Strang, Sect 2.3 </li></ul>
 
-<h5 class="notkw">Reference.</h5>
-<ul>
-<li>
-Beezer, Ver 3.5 Section SS (print version p83 - p94)
-</li>
-<li>
-Strang, Sect 2.3
-</li>
-</ul>
-
-<h5 class="notkw">Exercise.</h5>
-<ul>
-<li>
-Exercises with solutions can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf}
-Section SS (p.34-40) C40-45, C50, C60, M10, M11, M12. (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$ in the following questions) T10, T20, T21, T22.
-</li>
-<li>
-Strang, Sect 2.3.
-</li>
-</ul>
+<h5 class="notkw">Exercise.</h5><ul>
+<li> Exercises with solutions can be downloaded at @href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf}
+Section SS (p.34-40) C40-45, C50, C60, M10, M11, M12. (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$ in the following questions) T10, T20, T21, T22. </li>
+<li> Strang, Sect 2.3. </li></ul>
 @slide
 In this section we will provide an extremely compact way to describe an infinite set of vectors, making use of linear combinations. This will give us a convenient way to describe the solution set of a linear system, the null space of a matrix, and many other sets of vectors.
 @section{Span of a Set of Vectors}
@@ -37,7 +24,7 @@ Given a set of vectors
 \begin{align*}
 \displaystyle S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}\},
 \end{align*}
-their <b>span</b>, $\left< S \right>$, is the set of all linear combinations of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}$.
+their @keyword{span}, $\left< S \right>$, is the set of all linear combinations of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{n}$.
 Symbolically,
 \begin{align*}
 \displaystyle
@@ -70,18 +57,12 @@ Thus by @ref{b97161010780aa4b703cb89b1294f822}, $W$ is a subspace.
 @endcol
 @end
 <strong>Main Questions.</strong>
-@col
+@newcol
 <ol class="ltx_enumerate">
-<li class="ltx_item">
-Determine if a vector $\mathbf{v}$ is an element of $\left< S \right>$.
-</li>
-<li class="ltx_item">
-Describe the set $\left< S \right>$.
-</li>
-<li class="ltx_item">
-Is $\left< S \right>$ equal to ${\mathbb{R}}^{m}$?
-</li>
-</ol>
+<li class="ltx_item"> Determine if a vector $\mathbf{v}$ is an element of $\left< S \right>$. </li>
+<li class="ltx_item"> Describe the set $\left< S \right>$. </li>
+<li class="ltx_item"> Is $\left< S \right>$ equal to ${\mathbb{R}}^{m}$? </li></ol>
+@endcol
 @slide
 @eg
 @label{ABS}
@@ -193,7 +174,6 @@ Consider the infinite set of vectors $\left< S \right>$ formed by all linear com
 @col
 <strong>Fundamental question:</strong> Determine if a given vector is an element of the set or not. Let us learn more about $\left< S \right>$ by investigating which vectors are elements of the set, and which are not.
 
-
 First, is $\mathbf{u}=\begin{bmatrix}-15\\
 -6\\
 19\\
@@ -220,7 +200,7 @@ In other words, are there scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha
 0\end{bmatrix}=\mathbf{u}=\begin{bmatrix}-15\\
 -6\\
 19\\
-5\end{bmatrix}.
+5\end{bmatrix}?
 \end{align*}
 @col
 Searching for such scalars is equivalent to finding a solution to the linear system of equations with augmented matrix:
@@ -340,26 +320,31 @@ v_{m}\end{bmatrix}\in\left< S \right>.
 @sol
 @enumerate
 @item
-@col
+@newcol
 To determine if $\mathbf{v}\in\left< S \right>$, we need to find $\alpha_{1},\ldots,\alpha_{n}$ such that
 \begin{align*}
 \displaystyle \alpha_{1}\mathbf{u}_{1}+\cdots+\alpha_{n}\mathbf{u}_{n}=\mathbf{v}.
 \end{align*}
+@endcol
 @item
-@col
+@newcol
 This is equivalent to solving the system of linear equations $\mathcal{LS}({A},{\mathbf{v}})$,
 where $A$ is the $m\times n$ matrix whose $i$-th column is $\mathbf{u}_{i}$.
+@endcol
 @item
-@col
+@newcol
 Row-reduce the augmented matrix $[A|\mathbf{v}]$ to an RREF $B$.
 @enumerate
 @item
-@col
+@newcol
 If the last column of $B$ is a pivot column, then the system is inconsistent and $\mathbf{v}\notin\left< S \right>$.
+@endcol
 @item
-@col
+@newcol
 If the last column of $B$ is not a pivot column, then the system is consistent and $\mathbf{v}\in\left< S \right>$.
+@endcol
 @endenumerate
+@endcol
 @endenumerate
 @end
 @slide
@@ -370,7 +355,7 @@ Following the previous example, determine if:
 \vdots\\
 v_{4}\end{bmatrix}\in\left< S \right>.
 \]
-@col
+@newcol
 Applying Gauss-Jordan elimination to the augmented matrix
 \begin{align*}
 \displaystyle \left[\begin{array}[]{ccccc|c}1&2&7&1&-1&v_{1}\\
@@ -400,6 +385,7 @@ We therefore conclude that $\mathbf{v}\in\left< S \right>$ if and only if:
 \[
 9v_{1}-16v_{2}+v_{3}+4v_{4}=0.
 \]
+@endcol
 @end
 @slide
 @eg
@@ -416,7 +402,6 @@ Consider:
 \end{align*}
 and consider the infinite set $\left< S \right>$.
 
-
 <!-- First, as an example, note that
 \begin{align*}
 \displaystyle \mathbf{v}=(5)\begin{bmatrix}1\\
@@ -430,15 +415,13 @@ and consider the infinite set $\left< S \right>$.
 2\end{bmatrix}
 \end{align*}
 is in $\left< S \right>$, since it is a linear combination of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}$. There is nothing magical about the scalars $\alpha_{1}=5,\,\alpha_{2}=-3,\,\alpha_{3}=7$; they can be chosen arbitrarily. So repeat this part of the example yourself, using different values of $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$. What happens if you choose all three scalars to be zero?
-
-
 So we know how to quickly construct sample elements of the set $\left< S \right>$. A slightly different question arises when you are handed a vector of the correct size and asked if it is an element of $\left< S \right>$. For example, is -->
 
 Does $\mathbf{w}=\begin{bmatrix}1\\
 8\\
 5\end{bmatrix}$ lie in $\left< S \right>$?
 
-@col
+@newcol
 To answer this question, we will look for scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ such that
 \begin{align*}
 \displaystyle\alpha_{1}\mathbf{u}_{1}+\alpha_{2}\mathbf{u}_{2}+\alpha_{3}\mathbf{u}_{3}&\displaystyle=\mathbf{w}.
@@ -508,19 +491,11 @@ Building the augmented matrix for this linear system and row-reducing gives
 This system is inconsistent because the last column is a pivot column.
 So there are no scalars $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ that will create a linear combination of $\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3}$ that equals $\mathbf{y}$. More precisely, $\mathbf{y}\not\in\left< S \right>$.
 
-
-There are three things to observe in this example.
-<ol class="ltx_enumerate">
-<li class="ltx_item">
-It is easy to construct vectors in $\left< S \right>$.
-</li>
-<li class="ltx_item">
-It is possible that some vectors are in $\left< S \right>$ (such as $\mathbf{w}$), while others are not (such as $\mathbf{y}$).
-</li>
-<li class="ltx_item">
-Deciding if a given vector is in $\left< S \right>$ leads to a linear system of equations and asking if the system is consistent.
-</li>
-</ol>
+There are three things to observe in this example. <ol class="ltx_enumerate">
+<li class="ltx_item"> It is easy to construct vectors in $\left< S \right>$. </li>
+<li class="ltx_item"> It is possible that some vectors are in $\left< S \right>$ (such as $\mathbf{w}$), while others are not (such as $\mathbf{y}$). </li>
+<li class="ltx_item"> Deciding if a given vector is in $\left< S \right>$ leads to a linear system of equations and asking if the system is consistent. </li></ol>
+@endcol
 @end
 @slide
 @eg
@@ -549,12 +524,10 @@ First, as an example, note that
 -10\end{bmatrix}
 \end{align*}
 is in $\left< R \right>$, since it is a linear combination of $\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}$. In other words, $\mathbf{x}\in\left< R \right>$. Try some different values of $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ yourself, and see what vectors you can create as elements of $\left< R \right>$.
-
-
 Now ask if a given vector is an element of $\left< R \right>$. For example, is -->
 
-@col
-Does the vector$\mathbf{z}=\begin{bmatrix}-33\\
+@newcol
+Does the vector $\mathbf{z}=\begin{bmatrix}-33\\
 24\\
 5\end{bmatrix}$ lie in $\left< R \right>$?
 
@@ -620,16 +593,18 @@ telling us that
 \end{align*}
 So we are convinced that $\mathbf{x}$ really is in $\left< R \right>$. Notice that in this case we again have only one way to answer the question affirmatively since the solution is again unique.
 
-
 We could continue to test other vectors for membership in $\left< R \right>$, but there is no point. A question about membership in $\left< R \right>$ inevitably leads to a system of three equations in the three variables $\alpha_{1},\,\alpha_{2},\,\alpha_{3}$ with a coefficient matrix whose columns are the vectors $\mathbf{v}_{1},\,\mathbf{v}_{2},\,\mathbf{v}_{3}$. This particular coefficient matrix is nonsingular, so by @ref{NME1} the system is guaranteed to have a solution. (This solution is unique, but that is not critical here.) So no matter which vector we might have chosen for $\mathbf{z}$, we are certain to discover that it was an element of $\left< R \right>$.
 
 <strong>Conclusion</strong>: Every vector of size 3 is in $\left< R \right>$, or $\left< R \right>={\mathbb{R}}^{3}$.
+@endcol
 @end
-The example above inspires the following result:
+@slide
+The previous example above inspires the following result:
 @thm
 @label{thm:ANSRM}
-@col
+@newcol
 Given $m$ vectors $S=\{\mathbf{u}_{1},\,\mathbf{u}_{2},\,\mathbf{u}_{3},\,\ldots,\,\mathbf{u}_{m}\}$ in ${\mathbb{R}}^{m}$, let $A$ be the $m\times m$ square matrix whose $i$-th column is $\mathbf{u}_{i}$. Then $A$ is non-singular if and only if $\left< S \right>={\mathbb{R}}^{m}$.
+@endcol
 @end
 @proof
 @newcol
@@ -643,24 +618,55 @@ by @ref{b25e99edb5cb21a0655d0d961da21e47}. Hence $\mathbf{b}\in\left< S \right>$
 @newcol
 This part is difficult; we will only sketch the idea.
 Let the RREF of $A$ be $B$. Suppose that $A$ is singular. Then $B\neq I_{m}$ and the last row of $B$ is a zero row. So there exists $\mathbf{b}\in{\mathbb{R}}^{m}$ such that $\mathcal{LS}({B},{\mathbf{b}})$ is inconsistent.
-(e.g. $\mathbf{b}=\begin{bmatrix}0\\
-\vdots\\
-0\\
-1\end{bmatrix}$).
+(e.g. $\mathbf{b}=\begin{bmatrix}0\\\vdots\\0\\1\end{bmatrix}$).
 Hence there exists $\mathbf{c}\in{\mathbb{R}}^{m}$ such that $\mathcal{LS}({A},{\mathbf{c}})$ is inconsistent (why?).
 Thus $\mathbf{c}\notin\left< S \right>$. So $\left< S \right>\neq{\mathbb{R}}^{m}$. This completes the proof.
+<hr/>
+Alternatively: 
+@newcol
+Suppose $A$ is singular. We claim that the span of $S$ is not equal to $\mathbb{R}^m$:
+
+@col
+If $A$ is singular, then there exists a sequence of elementary matrices $J_i$ such that:
+$J_lJ_{l - 1}\cdots J_2J_1 A$ is an RREF matrix $B$ whose last row is a zero row.
+
+@col
+Let $J = J_lJ_{l - 1}\cdots J_2J_1$, which is invertible.
+We claim that the vector:
+\[
+\vec{v} = J^{-1}\vec{e}_m = J^{-1}\begin{bmatrix}0\\0\\\vdots\\0\\1\end{bmatrix}
+\]
+(which incidentally is the last column of the matrix $J^{-1}$)
+does not lie in $\langle S \rangle$.
+
+@col
+Suppose $\vec{v} \in \langle S \rangle$, then exists a vector $\vec{x} \in \mathbb{R}^m$ such that:
+\[
+A\vec{x} = \vec{v} = J^{-1}\vec{e}_m
+\]
+@col
+Multiplying both sides with $J$ from the left, we have:
+\[
+JA\vec{x} = \vec{e}_m.
+\]
+But $JA = B$, whose last row is the zero row, which implies that the last component of the vector $JA\vec{x}$
+is equal to zero, contradicting the fact that the last component of $\vec{e}_m$ is equal to $1$.
+
+@col
+It follows that if $A$ is singular, then $\langle S \rangle \neq \mathbb{R}^m$.
 @endcol
 @qed
 @endcol
+@endcol
 @end
-@section{
-Spanning Sets of Null Spaces
-}
-
-The following theorem describe how to express a null space as $\left< S \right>$.
+@section{Spanning Sets of Null Spaces}
+Recall @ref{thm:nullspacesubspace}
+<!-- The following theorem describe how to express a null space as $\left< S \right>$. -->
 @thm
-@title{Spanning Sets for Null Spaces}
 @label{SSNS}
+@newcol
+Spanning
+Sets for Null Spaces
 Suppose that $A$ is an $m\times n$ matrix and $B$ is a row-equivalent matrix in reduced row-echelon form. Suppose that $B$ has $r$ pivot columns, with indices given by $D=\{d_{1},\,d_{2},\,d_{3},\,\ldots,\,d_{r}\}$, while the $n-r$ non-pivot columns have indices $F=\{f_{1},\,f_{2},\,f_{3},\,\ldots,\,f_{n-r}\}$. Construct the $n-r$ vectors $\mathbf{z}_{j}$, $1\leq j\leq n-r$ of size $n$,
 \begin{align*}
 \displaystyle \left[\mathbf{z}_{j}\right]_{i}=\begin{cases}1&\text{if $i\in F$, $i=f_{j}$}\\
@@ -671,6 +677,7 @@ Then the null space of $A$ is given by
 \begin{align*}
 \displaystyle {\mathcal{N}}\!\left(A\right)=\left<\left\{\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3},\,\ldots,\,\mathbf{z}_{n-r}\right\}\right>
 \end{align*}
+@endcol
 @end
 @proof
 @newcol
@@ -680,7 +687,7 @@ The can be seen by moving the free variables to another side. For details. See B
 @end
 @slide
 @eg
-<b>Spanning set of a null space</b>
+@keyword{Spanning set of a null space}
 
 Find a set of vectors, $S$, so that the null space of the matrix
 \begin{align*}
@@ -691,7 +698,7 @@ Find a set of vectors, $S$, so that the null space of the matrix
 \end{align*}
 is the span of $S$, that is, $\left< S \right>={\mathcal{N}}\!\left(A\right)$.
 <hr/>
-@col
+@newcol
 The null space of $A$ is the set of all solutions to the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$.
 Begin by row-reducing $A$. The result is
 \begin{align*}
@@ -736,14 +743,12 @@ and
 \begin{align*}
 \displaystyle {\mathcal{N}}\!\left(A\right)
 =\left<
-\left\{
-\mathbf{z}_{1},\,\mathbf{z}_{2}
+\left\{\mathbf{z}_{1},\,\mathbf{z}_{2}
 \right\}
 \right>
 =\left<
 \left
-\{
-\begin{bmatrix}-6\\
+\{\begin{bmatrix}-6\\
 1\\
 1\\
 0\\
@@ -755,9 +760,10 @@ and
 \right\}
 \right>.
 \end{align*}
+@endcol
 @end
 @eg
-@col
+@newcol
 Consider the matrix:
 \begin{align*}
 \displaystyle A=\begin{bmatrix}2&1&5&1&5&1\\
@@ -815,8 +821,7 @@ Each of these vectors arises due to the presence of a non-pivot column. The rema
 So we have
 \begin{align*}
 \displaystyle {\mathcal{N}}\!\left(A\right)=\left<
-\left\{
-\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3}
+\left\{\mathbf{z}_{1},\,\mathbf{z}_{2},\,\mathbf{z}_{3}
 \right\}
 \right>
 =
@@ -840,6 +845,7 @@ So we have
 \right\}
 \right\rangle.
 \end{align*}
+@endcol
 @end
 @section{Obtain Same Span Using Fewer Vectors}
 @eg
@@ -858,7 +864,7 @@ Begin with the following set of four vectors of size $3$:
 -5\end{bmatrix}
 \right\}.
 \end{align*}
-@col
+@newcol
 Let:
 \begin{align*}
 \displaystyle D=\begin{bmatrix}2&1&7&-7\\
@@ -931,5 +937,8 @@ This equation says that whenever we encounter the vector $\mathbf{w}_{3}$, we ca
 So $W$ began life as the span of a set of four vectors. We have now shown (utilizing solutions to a homogeneous system) that $W$ can also be described as the span of a set of just two vectors. Convince yourself that we cannot go any further. In other words, it is not possible to dismiss either $\mathbf{w}_{1}$ or $\mathbf{w}_{2}$ in a similar fashion and winnow the set down to just one vector.
 
 @col
-What was it about the original set of four vectors that allowed us to declare certain vectors as surplus? And just which vectors were we able to dismiss? And why did we have to stop once we had two vectors remaining? The answers to these questions motivate <b>linear independence</b>, our next section and next definition, and so are worth considering carefully now.
+What was it about the original set of four vectors that allowed us to declare certain vectors as surplus? And just which vectors were we able to dismiss? And why did we have to stop once we had two vectors remaining? The answers to these questions motivate @keyword{linear independence}, our next section and next definition, and so are worth considering carefully now.
+@endcol
 @end
+@section{Geometric Interpretation}
+<iframe width="800" height="600" allowfullscreen="" style="border: 1px solid rgb(228, 228, 228); border-radius: 4px; overflow: hidden; background: none;" frameborder="0" data-src="https://www.geogebra.org/3d/tnnuszqm?embed" rendered="0" id="iFrameResizer5" scrolling="no" src="https://www.geogebra.org/3d/tnnuszqm?embed"/>
