@@ -74,12 +74,11 @@ On the other hand:
 \begin{split}
 AB &= A[\vect{w}_1 | \vect{w}_2 | \cdots | \vect{w}_m]
 \\&
-\class{steps}{\cssId{step0}{=[A\vect{w}_1 | A\vect{w}_2 | \cdots | A\vect{w}_m]}}
+@nstep{=[A\vect{w}_1 | A\vect{w}_2 | \cdots | A\vect{w}_m]}
 \\&
-\class{steps}{\cssId{step1}{= [\vect{u}_1 | \vect{u}_2 | \cdots | \vect{u}_m]}}
+@nstep{= [\vect{u}_1 | \vect{u}_2 | \cdots | \vect{u}_m]}
 \end{split}
 \]
-
 @endsteps
 @col
 Hence,
@@ -152,8 +151,7 @@ By @ref{basisexists}, there exists a subset $T$ of $S$ such that $T$ is a basis 
 @endcol
 @end
 @remark
-@newcol
-@ref{basisexists} is valid
+@newcol@ref{basisexists} is valid
 if we replace ${\mathbb{R}}^{m}$ by $P_{n}$, $M_{mn}$
 or any finite dimensional vector space.
 @endcol
@@ -164,14 +162,16 @@ or any finite dimensional vector space.
 \dim{\mathbb{R}}^{m}=m.
 \]
 @end
-@corollary
+@cor
 @label{cor:nvecsrmlindep}
-@col
+@newcol
 Any set of $n$ vectors in $\mathbb{R}^m$ are linearly dependent if $n > m$.
+@endcol
 @end
 @proof
-@col
+@newcol
 This follows from @ref{SSLD} and the fact that $\mathbb{R}^m$ is spanned by $m$ vectors.
+@endcol
 @end
 @slide
 @skip
@@ -263,11 +263,11 @@ Then, there exists a basis for $V$.
 Consider all nonempty linearly independent subsets $S$ of vectors in $V$.
 By @ref{cor:nvecsrmlindep}, the size of any such $S$ is an integer between $1$ and $m$.
 
-@col
+@newcol
 Let $n$ be the largest possible size of such sets, and let:
 \[
 B = \{\vect{v}_1, \vect{v}_2,\ldots, \vect{v}_n\}
-\]  
+\]
 be a nonempty linearly independent set of $V$ with size $n$.
 We claim that $\mathrm{Span}\,B = V$:
 
@@ -281,9 +281,10 @@ is an linearly indepedent set of size $n + 1$, which contradicts the assumpion t
 $n$ is the maximum size of linearly independent subsets in $V$.
 
 @col
-Hence, the linearly independent set $B$ spans $V$, 
+Hence, the linearly independent set $B$ spans $V$,
 and it follows that $B$ is a basis of $V$.
 @qed
+@endcol
 @end
 <hr/>
 Alternatively,
