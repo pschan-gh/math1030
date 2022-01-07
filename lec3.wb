@@ -1,9 +1,13 @@
 @course{MATH 1030}
 @setchapter{3}
 @chapter{System of linear equations}
-  The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at http://linear.ups.edu/download.html Print version can be downloaded at http://linear.ups.edu/download/fcla-3.50-print.pdf
+The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at
+@href{http://linear.ups.edu/download.html} .
 
-<h5 class="notkw">Reference.</h5> Beezer, Ver 3.5 Sect SSLE (print version p7 - p14)  
+The print version can be downloaded at
+@href{http://linear.ups.edu/download/fcla-3.50-print.pdf} .
+
+<h5 class="notkw">Reference.</h5> Beezer, Ver 3.5 Sect SSLE (print version p7 - p14)
 @section{Introduction}
 @defn
 @title{(System of Linear Equations).}
@@ -15,11 +19,11 @@ a_{31}x_1+a_{32}x_2+a_{33}x_3+\dots+a_{3n}x_n&=b_3\\
 &\vdots\\
 a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\dots+a_{mn}x_n&=b_m
 \end{align*}
-where $a_{ij}$, $b_{i}$ and $x_{j}$, $1\leq i\leq m$, $1\leq j\leq n$, are real numbers.  
+where $a_{ij}$, $b_{i}$ and $x_{j}$, $1\leq i\leq m$, $1\leq j\leq n$, are real numbers.
 @end
 @defn
   $(s_{1},s_{2},\ldots,s_{n})$ is a @keyword{solution} of a system of linear equations in $n$ variables if every equation in the system is valid for $x_1 = s_1, x_2 = s_2, \ldots, x_n = s_n$.
-The @keyword{solution set} of a linear system of equations is the set consisting of all solutions to the system, and nothing more.  
+The @keyword{solution set} of a linear system of equations is the set consisting of all solutions to the system, and nothing more.
 @end
 @slide
 @eg
@@ -49,13 +53,13 @@ The solution set may be descrbied as follows:
 @col
   \[
 \{(-1-2a+3b,\,4+a-2b,\,a,\,b)\,|\,a,b \in \mathbb{R}\}.
-\]  
+\]
 @endcol
 @end
 @section{Possibilities for Solution Sets}
 @defn
 @label{def:CS}
-  A system of linear equations is @keyword{consistent} if it has at least one solution. Otherwise, the system is called @keyword{inconsistent}.  
+  A system of linear equations is @keyword{consistent} if it has at least one solution. Otherwise, the system is called @keyword{inconsistent}.
 @end
 @eg
 @newcol
@@ -68,7 +72,7 @@ x_1-x_2&=4
 \end{align*}
 The solution set is $(x_{1},x_{2})=(3,-1)$.
 
-Since the solution set is nonempty, the system is <strong>consistent</strong>.  
+Since the solution set is nonempty, the system is <strong>consistent</strong>.
 @item
 @newcol
   The following system of linear equations has @keyword{infinite many solutions}.
@@ -78,7 +82,7 @@ Since the solution set is nonempty, the system is <strong>consistent</strong>.
 \end{align*}
 The solution set is $\{(x_{1},x_{2})=(t,\frac{3-2t}{3})\}$, where $t$ is any real number.
 
-Since the solution set is nonempty, the system is <strong>consistent</strong>.  
+Since the solution set is nonempty, the system is <strong>consistent</strong>.
 @endcol
 @item
 @newcol
@@ -89,7 +93,7 @@ Since the solution set is nonempty, the system is <strong>consistent</strong>.
 \end{align*}
 The solution set is empty.
 
-So, the system is <strong>inconsistent</strong>.  
+So, the system is <strong>inconsistent</strong>.
 @endcol
 @endenumerate
 @endcol
@@ -98,32 +102,32 @@ So, the system is <strong>inconsistent</strong>.
 @thm
 @newcol
   A system of linear equations can have (1) a unique solution or (2) infinitely many solutions
-or (3) no solutions.  
+or (3) no solutions.
 @endcol
 @end
 @remark
 @newcol
-  For example it is impossible for a system of     linear equation to have exactly $2$ solutions.  
+  For example it is impossible for a system of     linear equation to have exactly $2$ solutions.
 @endcol
 @end
 
 @section{Equivalent Systems and Equation Operations}
 @defn
 @title{Equivalent Systems}
-  Two systems of linear equations are @keyword{equivalent} if their solution sets are equal.  
+  Two systems of linear equations are @keyword{equivalent} if their solution sets are equal.
 @end
 @defn
 @title{Equation Operations}
 @label{EO}
 @newcol
-  Given a system of linear equations, the following three operations will transform the system into a different one, and each operation is known as an @keyword{equation operation}:  
+  Given a system of linear equations, the following three operations will transform the system into a different one, and each operation is known as an @keyword{equation operation}:
 @ol
 @li
-  Swap the locations of two equations in the list of equations.  
+  Swap the locations of two equations in the list of equations.
 @li
-  Multiply each term of an equation by a nonzero number.  
+  Multiply each term of an equation by a nonzero number.
 @li
-  Multiply each term of one equation by some number, and add these terms to a second equation, on both sides of the equality.  
+  Multiply each term of one equation by some number, and add these terms to a second equation, on both sides of the equality.
 @endol
 @endcol
 @end
@@ -135,20 +139,20 @@ or (3) no solutions.
 x_{1}-x_{2}=4\end{cases}\]
 and
 \[\begin{cases}5x_{2}=-5\\
-x_{1}-x_{2}=4\end{cases}\]  
+x_{1}-x_{2}=4\end{cases}\]
 @col
-  In fact, the second system of linear equations is obtained by applying operation 3 on equation 1 (namley, replace equation 1 with [equation 1] - 2 $\times$ [equation 2]).  
+  In fact, the second system of linear equations is obtained by applying operation 3 on equation 1 (namley, replace equation 1 with [equation 1] - 2 $\times$ [equation 2]).
 @endcol
 @end
 @slide
 @thm
 @title{Equation Operations Preserve Solution Sets}
 @label{EOPSS}
-  If we apply one of the three equation operations of Definition          @ref{EO} to a system of linear equations, then the original system and the transformed system are equivalent.  
+  If we apply one of the three equation operations of Definition          @ref{EO} to a system of linear equations, then the original system and the transformed system are equivalent.
 @end
 @proof
 @newcol
-  This will be clear after we have established Theorem @ref{REMES} in a later chapter.  
+  This will be clear after we have established Theorem @ref{REMES} in a later chapter.
 @endcol
 @end
 

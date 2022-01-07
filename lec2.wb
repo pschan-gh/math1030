@@ -9,7 +9,12 @@
 \newcommand{\vvec}[2]{\begin{bmatrix}{#1} \\ {#2} \end{bmatrix}}
 \newcommand{\hvec}[2]{\begin{bmatrix}{#1} & {#2} \end{bmatrix}}
 \newcommand{\e}{\varepsilon}
-$  
+$
+The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at
+@href{http://linear.ups.edu/download.html} .
+
+The print version can be downloaded at
+@href{http://linear.ups.edu/download/fcla-3.50-print.pdf} .
 @section{Intersections between Lines and Planes}
 @subsection{Two Dimensions}
 @eg
@@ -17,7 +22,7 @@ $
   Solve the equations:
 \[\begin{cases}
 2x-3y=-5,\\ x+y=5.
-\end{cases}\]  
+\end{cases}\]
 @newcol
   There are two variables and we can draw these equations in a (2-dimensional) plane.
 Each (linear) equation represented by a straight line.
@@ -34,12 +39,12 @@ between the two straight lines.
   The following system of equations has no solution.
 \[\begin{cases}
 2x-3y=-5,\\ 2x-3y=0.
-\end{cases}\]  
+\end{cases}\]
 @newcol
 <iframe width="500px" height="500px" style="background: none; overflow: hidden;" frameborder="0" data-src="https://www.desmos.com/calculator/fuhvpsxixz?embed" rendered="0" id="iFrameResizer11" scrolling="no" src="https://www.desmos.com/calculator/fuhvpsxixz?embed"/>
   Parallel lines
 This is because the corresponding lines are parallel to each other
-and there is no intersections.  
+and there is no intersections.
 @endcol
 @end
 
@@ -56,7 +61,7 @@ For any real number $t$,
 (x,y)=(t,\frac{2t+5}{3})
 \]
 is a solution.
-The two lines coincide and their intersection is just the whole line.  
+The two lines coincide and their intersection is just the whole line.
 @endcol
 @end
 
@@ -67,7 +72,7 @@ The two lines coincide and their intersection is just the whole line.
   Solve the equations:
 \[\begin{cases}
 2x+3y+3z=3,\\ 2x-y+0z=0.
-\end{cases}\]  
+\end{cases}\]
 @newcol
 @figure
 @caption{Intersection of planes}
@@ -84,7 +89,7 @@ in the figure above.
 where the points on it can be expressed as
 \[
 \left\{\left(\frac{3-3t}{8},\frac{3-3t}{4},t\right)\mid t\in\mathbb{R}\right\}.
-\]  
+\]
 @endcol
 @end
 
@@ -93,7 +98,7 @@ where the points on it can be expressed as
   The following system of equations has no solutions, since the corresponding planes are parallel.
 \[\begin{cases}
 2x-y+0z=2,\\ 2x-y+0z=0.
-\end{cases}\]  
+\end{cases}\]
 @newcol
 @figure
 @caption{Parallel Planes}
@@ -108,7 +113,7 @@ where the points on it can be expressed as
 that corresponds to three distinct planes.
 If they do not share a unique intersection,
 then either they share no intersections or their intersection is a line.
-More precisely, there are five cases:  
+More precisely, there are five cases:
 @ol
 @li
   All three planes are parallel to each other.
@@ -155,7 +160,7 @@ $(n-1)$-dimensional plane in $n$ dimensions, The second plane intersects it (we 
 a smaller set of dimension $n-2$. Assuming all goes well, every new plane (every new
 equation) reduces the dimension by one. At the end, when all $n$ planes are accounted
 for, the intersection has dimension zero. It is a point, it lies on all the planes, and its
-coordinates satisfy all $n$ equations. It is the solution!  
+coordinates satisfy all $n$ equations. It is the solution!
 @endcol
 @end
 

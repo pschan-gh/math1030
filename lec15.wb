@@ -1,6 +1,12 @@
 @course{MATH 1030}
 @setchapter{15}
 @chapter{Determinant}
+The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at
+@href{http://linear.ups.edu/download.html} .
+
+The print version can be downloaded at
+@href{http://linear.ups.edu/download/fcla-3.50-print.pdf} .
+
 <h5 class="notkw">Reference.</h5>
 Beezer, Ver 3.5 Chapter D (print version p261-282)
 
@@ -1325,7 +1331,7 @@ Alternatively,
 @proof
 @of{thm:cramersrule}
 @col
-A vector $\vect{x} = \colvec{x_1\\x_2\\\vdots\\x_n}$ is a solution to 
+A vector $\vect{x} = \colvec{x_1\\x_2\\\vdots\\x_n}$ is a solution to
 $A\vect{x} = \vect{b}$ if and only if:
 \[
 x_1 \vect{A}_1 + x_2 \vect{A}_2 + \cdots + x_n \vect{A}_n = \vec{b}.
@@ -1340,7 +1346,7 @@ Then:
 \begin{array}{ccc}
 \det M_k
 = [ \vect{A}_1 |  \vect{A}_2 | \cdots |&
-\underbrace{x_1 \vect{A}_1 + x_2 \vect{A}_2 + \cdots + x_n \vect{A}_n}_{} 
+\underbrace{x_1 \vect{A}_1 + x_2 \vect{A}_2 + \cdots + x_n \vect{A}_n}_{}
 &| \cdots |\vect{A}_n ], \\
 & k\text{-th column} &
 \end{array}
@@ -1348,9 +1354,9 @@ Then:
 which by @ref{thm:detsumrowcol} is equal to:
 \[
 \begin{array}{ccc}
-\displaystyle \sum_{i = 1}^n x_i \det 
+\displaystyle \sum_{i = 1}^n x_i \det
 [ \vect{A}_1 |  \vect{A}_2 | \cdots | &
-\underbrace{\vect{A}_i}_{} 
+\underbrace{\vect{A}_i}_{}
 & | \cdots |\vect{A}_n ].\\
 & k\text{-th column} &
 \end{array}
@@ -1359,21 +1365,21 @@ For each $i \neq k$, observe that the matrix:
 \[
 \begin{array}{ccc}
 [ \vect{A}_1 |  \vect{A}_2 | \cdots | &
-\underbrace{\vect{A}_i}_{} 
+\underbrace{\vect{A}_i}_{}
 & | \cdots |\vect{A}_n ]\\
 & k\text{-th column} &
 \end{array}
 \]
-has two columns which are equal to $A_i$, hence its determinant is equal to $0$, 
+has two columns which are equal to $A_i$, hence its determinant is equal to $0$,
 by @ref{DERC}.
 
 @col
 It follows that:
 \[
 \begin{array}{ccc}
-\displaystyle 
-\det M_k = 
-x_k \det 
+\displaystyle
+\det M_k =
+x_k \det
 [ \vect{A}_1 |  \vect{A}_2 | \cdots | &
 \underbrace{\vect{A}_k}_{}
 & | \cdots |\vect{A}_n ] = x_k \det A.\\

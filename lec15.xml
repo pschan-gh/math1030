@@ -59,6 +59,14 @@
         <slide environment="" chapter_type="Chapter" canon_num="2" scope="chapter" id="s2" slide="2" course="MATH 1030" chapter="15" section="" subsection="" subsubsection="" chapter_title="Determinant" section_title="">
           <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="2">Determinant</title>
           <keywords slide="2" environ="slide" chapter="15" course="MATH 1030"/>
+          <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at </paragraphs>
+          <href course="MATH 1030" chapter="15" chapter_type="" section="" subsection="" subsubsection="" environment="" src="http://linear.ups.edu/download.html" name="http://linear.ups.edu/download.html" wbtag="href" argument="http://linear.ups.edu/download.html"/>
+          <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> .</paragraphs>
+          <newline course="MATH 1030" chapter="15" chapter_type="" section="" subsection="" subsubsection="" environment=""/>
+          <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">The print version can be downloaded at </paragraphs>
+          <href course="MATH 1030" chapter="15" chapter_type="" section="" subsection="" subsubsection="" environment="" src="http://linear.ups.edu/download/fcla-3.50-print.pdf" name="http://linear.ups.edu/download/fcla-3.50-print.pdf" wbtag="href" argument="http://linear.ups.edu/download/fcla-3.50-print.pdf"/>
+          <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> .</paragraphs>
+          <newline course="MATH 1030" chapter="15" chapter_type="" section="" subsection="" subsubsection="" environment=""/>
           <h5 xmlns="http://www.w3.org/1999/xhtml" class="notkw" environment="">
             <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="15" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">Reference.</paragraphs>
           </h5>
@@ -1647,7 +1655,7 @@ where $k=1,\ldots,n$. </paragraphs>
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" of="thm:cramersrule" md5="0c5b71919217275c677ec65800c54328" course="MATH 1030" chapter="15" slide="33" of-src-course="MATH 1030" of-src-chapter="15" of-src-slide="33" of-type="Theorem" of-item="15.38" of-src-filename="lec15.xml" ofmd5="9f4800985f4113f92c0c94a4317d08c1" of-serial="">
               <of-title hidden="false">Cramer’s rule</of-title>
               <newcol course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> A vector $\vect{x} = \colvec{x_1\\x_2\\\vdots\\x_n}$ is a solution to 
+                <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> A vector $\vect{x} = \colvec{x_1\\x_2\\\vdots\\x_n}$ is a solution to
 $A\vect{x} = \vect{b}$ if and only if:
 \[
 x_1 \vect{A}_1 + x_2 \vect{A}_2 + \cdots + x_n \vect{A}_n = \vec{b}.
@@ -1662,7 +1670,7 @@ $\vect{b}$. </paragraphs>
 \begin{array}{ccc}
 \det M_k
 = [ \vect{A}_1 |  \vect{A}_2 | \cdots |&amp;
-\underbrace{x_1 \vect{A}_1 + x_2 \vect{A}_2 + \cdots + x_n \vect{A}_n}_{} 
+\underbrace{x_1 \vect{A}_1 + x_2 \vect{A}_2 + \cdots + x_n \vect{A}_n}_{}
 &amp;| \cdots |\vect{A}_n ], \\
 &amp; k\text{-th column} &amp;
 \end{array}
@@ -1674,9 +1682,9 @@ which by </paragraphs>
                     <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> is equal to:
 \[
 \begin{array}{ccc}
-\displaystyle \sum_{i = 1}^n x_i \det 
+\displaystyle \sum_{i = 1}^n x_i \det
 [ \vect{A}_1 |  \vect{A}_2 | \cdots | &amp;
-\underbrace{\vect{A}_i}_{} 
+\underbrace{\vect{A}_i}_{}
 &amp; | \cdots |\vect{A}_n ].\\
 &amp; k\text{-th column} &amp;
 \end{array}
@@ -1685,12 +1693,12 @@ For each $i \neq k$, observe that the matrix:
 \[
 \begin{array}{ccc}
 [ \vect{A}_1 |  \vect{A}_2 | \cdots | &amp;
-\underbrace{\vect{A}_i}_{} 
+\underbrace{\vect{A}_i}_{}
 &amp; | \cdots |\vect{A}_n ]\\
 &amp; k\text{-th column} &amp;
 \end{array}
 \]
-has two columns which are equal to $A_i$, hence its determinant is equal to $0$, 
+has two columns which are equal to $A_i$, hence its determinant is equal to $0$,
 by </paragraphs>
                     <ref environment="newcol" chapter_type="" label="DERC" wbtag="ref" course="MATH 1030" chapter="15" slide="33" referrer-type="Proof" referrer-md5="0c5b71919217275c677ec65800c54328" src-course="MATH 1030" src-chapter="15" src-slide="19" type="Corollary" item="15.20" src-filename="lec15.xml" md5="e9c3499040bae858187a4f8e7e11417b" class="lcref" serial="">
                       <title custom="true">Determinant with Equal Rows or Columns</title>
@@ -1701,9 +1709,9 @@ by </paragraphs>
                       <paragraphs course="MATH 1030" chapter="15" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> It follows that:
 \[
 \begin{array}{ccc}
-\displaystyle 
-\det M_k = 
-x_k \det 
+\displaystyle
+\det M_k =
+x_k \det
 [ \vect{A}_1 |  \vect{A}_2 | \cdots | &amp;
 \underbrace{\vect{A}_k}_{}
 &amp; | \cdots |\vect{A}_n ] = x_k \det A.\\

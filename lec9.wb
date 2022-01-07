@@ -1,16 +1,22 @@
 @course{MATH 1030}
 @setchapter{9}
 @chapter{Vector space and subspace}
+The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at
+@href{http://linear.ups.edu/download.html} .
+
+The print version can be downloaded at
+@href{http://linear.ups.edu/download/fcla-3.50-print.pdf} .
+
 <h5 class="notkw">Reference.</h5>
 Beezer, Ver 3.5 Section VO (print version p57 - p63)Subsection VS, EVS (print version p197-203)
 Strang, Section 2.1 <p/><h5 class="notkw">Exercise.</h5> Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdfSection VO (p.28-31) All questions.C10-C15, T05-T07, T13, T17, T18, T30-T32 Section VS (p.75-77) Replace $\mathbb{C}$ (the set of complex numbers) by $\mathbb{R}$ (the set of real numbers) M11, M12, M13, M14, M15, M20.
 @section{Vectors}
 <strong>Notation</strong>: ${\mathbb{R}}^{\hbox{}}$ is the set of real numbers.
-If $X$ is a set, $x\in X$ means $x$ is an element of the set $X$.  
+If $X$ is a set, $x\in X$ means $x$ is an element of the set $X$.
 @defn
 @title{Vector Space of Column Vectors}
 @label{VSCV}
-The vector space ${\mathbb{R}}^{m}$ is the set of all column vectors of size $m$ with entries from the set of real numbers, ${\mathbb{R}}^{\hbox{}}$. ${\mathbb{R}}^{m}$ is also called the @keyword{Euclidean $m$-space}.  
+The vector space ${\mathbb{R}}^{m}$ is the set of all column vectors of size $m$ with entries from the set of real numbers, ${\mathbb{R}}^{\hbox{}}$. ${\mathbb{R}}^{m}$ is also called the @keyword{Euclidean $m$-space}.
 @end
 
 @defn
@@ -34,7 +40,7 @@ v_{m}\end{bmatrix}
 if
 \begin{align*}
 \displaystyle u_{i}&\displaystyle=v_{i}&\displaystyle 1\leq i\leq m.
-\end{align*}  
+\end{align*}
 @endcol
 @end
 @slide
@@ -54,7 +60,7 @@ can be rewritten as:
 x_{1}+4x_{3}\end{bmatrix}=\begin{bmatrix}-33\\
 24\\
 5\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @endcol
 @end
 @slide
@@ -77,7 +83,7 @@ v_{m}\end{bmatrix}=\begin{bmatrix}u_{1}+v_{1}\\
 u_{2}+v_{2}\\
 \vdots\\
 u_{m}+v_{m}\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @end
 @eg
 <strong>Addition of two vectors in ${\mathbb{R}}^{4}$</strong>
@@ -110,7 +116,7 @@ then
 2\\
 6\\
 -5\end{bmatrix}
-\end{align*}  
+\end{align*}
 @endcol
 @end
 @slide
@@ -130,7 +136,7 @@ u_{m}\end{bmatrix}=\begin{bmatrix}\alpha u_{1}\\
 \alpha u_{2}\\
 \vdots\\
 \alpha u_{m}\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @end
 @eg
 @newcol
@@ -157,7 +163,7 @@ and $\alpha=6$, then
 -12\\
 24\\
 -6\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @endcol
 @end
 @slide
@@ -181,13 +187,13 @@ can be written as:
 4\end{bmatrix}=\begin{bmatrix}-33\\
 24\\
 5\end{bmatrix}.
-\end{align*}  
+\end{align*}
 @endcol
 @end
 @section{Vector Space Properties}
 @label{VSP}
 <strong>Warning</strong>: Read the statements of Theorem @ref{VSPCV} and skip the rest of this section <strong>unless you are/going to be</strong> a math major. The material skipped will not appear in the tests and the final exam.
-With definitions of vector addition and scalar multiplication we can state, and prove, several properties of each operation, and some properties that involve their interplay. We now collect ten of them here for later reference.  
+With definitions of vector addition and scalar multiplication we can state, and prove, several properties of each operation, and some properties that involve their interplay. We now collect ten of them here for later reference.
 @thm
 @title{Vector Space Properties of Column Vectors}
 @label{VSPCV}
@@ -256,7 +262,7 @@ For $1\leq i\leq m$,
 &\displaystyle=\left[\alpha\mathbf{u}\right]_{i}+\left[\beta\mathbf{u}\right]_{i}&{\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=https://raw.githubusercontent.com/pschan-gh/math1030/devel/lec9.xml&query=(//lv:*[./lv:label/@name="CVSM"])[1]}{\mathrm{Column\;Vector\;Scalar\;Multiplication}}} \\
 &\displaystyle=\left[\alpha\mathbf{u}+\beta\mathbf{u}\right]_{i}&{\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=https://raw.githubusercontent.com/pschan-gh/math1030/devel/lec9.xml&query=(//lv:*[./lv:label/@name="CVA"])[1]}{\mathrm{Column\;Vector\;Addition}}}
 \end{align*}
-Since the individual components of the vectors $(\alpha+\beta)\mathbf{u}$ and $\alpha\mathbf{u}+\beta\mathbf{u}$ are equal for all $i$, $1\leq i\leq m$, @ref{CVE} tells us the vectors are equal.  
+Since the individual components of the vectors $(\alpha+\beta)\mathbf{u}$ and $\alpha\mathbf{u}+\beta\mathbf{u}$ are equal for all $i$, $1\leq i\leq m$, @ref{CVE} tells us the vectors are equal.
 @qed
 @end Many of the conclusions of our theorems can be characterized as @keyword{identities}, especially when we are establishing basic properties of operations such as those in this section. Most of the properties listed in Theorem @ref{VSPCV} are examples. So some advice about the style we use for proving identities is appropriate right now.
 Be careful with the notion of the vector $\mathbf{-u}$. This is a vector that we add to $\mathbf{u}$ so that the result is the particular vector $\mathbf{0}$. This is basically a property of vector addition. It happens that we can compute $\mathbf{-u}$ using the other operation, scalar multiplication. We can prove this directly by writing that
@@ -268,7 +274,7 @@ Similarly, we will often write something you would immediately recognize as @key
 A final note. @ref{VSPCV} Property @keyword{AAC} implies that we do not have to be careful about how we <em>parenthesize</em> the addition of vectors. In other words, there is nothing to be gained by writing
 $\left(\mathbf{u}+\mathbf{v}\right)+\left(\mathbf{w}+\left(\mathbf{x}+\mathbf{y}\right)\right)$
 rather than
-$\mathbf{u}+\mathbf{v}+\mathbf{w}+\mathbf{x}+\mathbf{y}$, since we get the same result no matter which order we choose to perform the four additions. So we will not be careful about using parentheses this way.  
+$\mathbf{u}+\mathbf{v}+\mathbf{w}+\mathbf{x}+\mathbf{y}$, since we get the same result no matter which order we choose to perform the four additions. So we will not be careful about using parentheses this way.
 @section{Vector Space}
 @skip
 <strong>For math major only. Non-math major can skip the rest of this section. The material will not appear in the midterms or final</strong> In this section we will give an abstract definition of vector space.
@@ -282,7 +288,7 @@ we therefore don’t need to reproof and restate the results.
 
 @defn
 @label{VS}
-Suppose that $V$ is a set upon which we have defined two operations: 
+Suppose that $V$ is a set upon which we have defined two operations:
 (1) @keyword{vector addition}, which combines two elements of $V$ and is denoted by $+$,
 and (2) @keyword{scalar multiplication}, which combines a real number with an element of $V$ and is denoted by juxtaposition.
 Then $V$, along with the two operations, is a @keyword{vector space} over ${\mathbb{R}}^{\hbox{}}$ if the following ten properties hold.
@@ -327,12 +333,12 @@ $(\alpha+\beta)\mathbf{u}=\alpha\mathbf{u}+\beta\mathbf{u}$. </li>
 <li class="ltx_item">
 @keyword{O} <em>One</em>
 
-If $\mathbf{u}\in V$, then $1\mathbf{u}=\mathbf{u}$. </li></ol> The objects in $V$ are called @keyword{vectors}, no matter what else they might really be, simply by virtue of being elements of a vector space.  
+If $\mathbf{u}\in V$, then $1\mathbf{u}=\mathbf{u}$. </li></ol> The objects in $V$ are called @keyword{vectors}, no matter what else they might really be, simply by virtue of being elements of a vector space.
 @end
 @slide
 @skip
 @eg
-@keyword{column vector space} The set of column vectors ${\mathbb{R}}^{n}$ is a vector space.  
+@keyword{column vector space} The set of column vectors ${\mathbb{R}}^{n}$ is a vector space.
 @end
 @eg
 @keyword{Row vector space}
@@ -391,7 +397,7 @@ is
 \vdots&\vdots&\vdots&\vdots\\
 -a_{m1}&-a_{m2}&\cdots&-a_{mn}\end{bmatrix}
 \end{align*}
-You can try proving all other properties.  
+You can try proving all other properties.
 @endcol
 @end
 @eg
@@ -430,7 +436,7 @@ Now let us prove the associativity of vector addition (Property AA). This is a b
 &\displaystyle=\left((a_{0}+a_{1}x+\cdots+a_{n}x^{n})+(b_{0}+b_{1}x+\cdots+b_{n}x^{n})\right)+(c_{0}+c_{1}x+\cdots+c_{n}x^{n}) \\
 &\displaystyle=(\mathbf{u}+\mathbf{v})+\mathbf{w}
 \end{align*}
-You might try proving all the other properties.  
+You might try proving all the other properties.
 @endcol
 @end
 @eg
@@ -441,7 +447,7 @@ Let $F$ be the set of functions for ${\mathbb{R}}^{\hbox{}}$ to ${\mathbb{R}}^{\
 Equality: $f=g$ if and only if $f(x)=g(x)$ for all $x\in{\mathbb{R}}^{\hbox{}}$. <ul class="ltx_itemize">
 <li class="ltx_item"> Vector Addition: $f+g$ is the function with outputs defined by $(f+g)(x)=f(x)+g(x)$. </li>
 <li class="ltx_item"> Scalar Multiplication: $\alpha f$ is the function with outputs defined by $(\alpha f)(x)=\alpha f(x)$. </li></ul> The zero vector is a function $z$ whose definition is $z(x)=0$ for every input $x\in{\mathbb{R}}^{\hbox{}}$.
-Try proving all the other properties.  
+Try proving all the other properties.
 @endcol
 @end
 @eg
@@ -533,7 +539,7 @@ After all that, this one is easy, but no less pleasing.
 \begin{align*}
 \displaystyle 1\mathbf{u}=1(x_{1},\,x_{2})=(x_{1}+1-1,\,x_{2}+1-1)=(x_{1},\,x_{2})=\mathbf{u}
 \end{align*} </li></ul> That is it, $C$ is a vector space, as crazy as that may seem.
-Notice that in the case of the zero vector and additive inverses, we only had to propose possibilities and then verify that they were the correct choices. You might try to discover how you would arrive at these choices, though you should understand why the process of discovering them is not a necessary component of the proof itself.  
+Notice that in the case of the zero vector and additive inverses, we only had to propose possibilities and then verify that they were the correct choices. You might try to discover how you would arrive at these choices, though you should understand why the process of discovering them is not a necessary component of the proof itself.
 @endcol
 @end
 @section{Basic Properties of Vector Spaces}
@@ -546,7 +552,7 @@ if $\mathbf{v}$, $\mathbf{u}$ and $\mathbf{w}$ are vectors in a vector space $V$
 \begin{align*}
 \displaystyle \mathbf{v}+\mathbf{w}=\mathbf{u}+\mathbf{w},
 \end{align*}
-then $\mathbf{v}=\mathbf{u}$  
+then $\mathbf{v}=\mathbf{u}$
 @end
 @proof
 By Property AI, there exists a vector $-\mathbf{w}$ such that $\mathbf{w}+(-\mathbf{w})=\mathbf{0}$.
@@ -563,7 +569,7 @@ Thus,
 @thm
 @title{Uniqueness of the zero vector}
 Let $V$ be a vector space.
-The vector $\mathbf{0}$ described in Property Z is unique.  
+The vector $\mathbf{0}$ described in Property Z is unique.
 @end
 @proof
 Suppose both $\mathbf{0}_{1}$ and $\mathbf{0}_{2}$ satisfy the property described in Property Z.
@@ -592,7 +598,7 @@ i.e., both $\mathbf{u}$ and $\mathbf{v}$ are additive inverse of $\mathbf{w}$ in
 \begin{align*}
 \displaystyle \mathbf{v}=\mathbf{u}.
 \end{align*}
-This shows that the additive inverse is unique.  
+This shows that the additive inverse is unique.
 @end
 @proof
 \begin{align*}
@@ -668,12 +674,12 @@ A subset $W$ of $V$ is said to be a @keyword{subspace} of $V$ if:
 <li class="ltx_item">For $\alpha\in\mathbf{R}$, $\mathbf{v}\in W$, then $\alpha\mathbf{v}\in W$.</li></ol>
 @end
 @slide
-We will prove several theorem first before we give examples.  
+We will prove several theorem first before we give examples.
 @prop
 @label{0}
 Let $V$ be a vector space and $W$ a subspace of $V$.
 Then $\mathbf{0}$
-is in $W$.  
+is in $W$.
 @end
 @proof
 @newcol
@@ -681,7 +687,7 @@ By @ref{subdef}, Condition 1, $W$ is nonempty. Let $\mathbf{w}\in W$.
 By @ref{subdef}, Condition 3, with $\alpha=0$,
 $0\mathbf{w}\in W$.
 On the other hand, by @ref{1d82a47b16369aec09ebc36c7afbd598}, $0\mathbf{w} = \mathbf{0}$.
-Hence, the zero vector $\mathbf{0}$ lies in $W$.  
+Hence, the zero vector $\mathbf{0}$ lies in $W$.
 @qed
 @endcol
 @end
@@ -697,18 +703,18 @@ then $W$ is a subspace if and only if <ol class="ltx_enumerate">
 @end
 @proof
 
-($\Rightarrow$)  
+($\Rightarrow$)
 @newcol
 Suppose $W$ is a subspace.
 
-By @ref{subdef}, Condition 1, $W$ is nonempty. 
+By @ref{subdef}, Condition 1, $W$ is nonempty.
 
 Next, for $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{w}\in W$.
 By @ref{subdef}, Condition 3, $\alpha\mathbf{v}\in W$.
-By @ref{subdef}, Condition 2, $\alpha\mathbf{v}+\mathbf{w}\in W$.  
+By @ref{subdef}, Condition 2, $\alpha\mathbf{v}+\mathbf{w}\in W$.
 @endcol
 
-($\Leftarrow$)  
+($\Leftarrow$)
 @newcol
 Suppose $W$ satisfies Conditions 1 and 2 of the theorem.
 
@@ -726,7 +732,7 @@ Next we want to check @ref{subdef} Condition 3.
 First, since $W$ is nonempty, there exists some element $\mathbf{x}\in W$. Let $\mathbf{v}=\mathbf{w}=\mathbf{x}$ and $\alpha=-1$ in Condition 2 of the theorem. Then, $\mathbf{0} = (-1)\mathbf{w}+\mathbf{w} \in W.$
 
 Now, for any $\mathbf{v}\in W$, $\alpha\in{\mathbb{R}}^{\hbox{}}$,
-let $\mathbf{w}=\mathbf{0} \in W$. 
+let $\mathbf{w}=\mathbf{0} \in W$.
 Then, $\alpha\mathbf{v}=\alpha\mathbf{v}+\mathbf{w}\in W$, by Condition 2 of the theorem.
 @qed
 @endcol
@@ -742,7 +748,7 @@ We now show that $W$ is a subspace of $V$:
 @newcol
 @ol
 @li
-Clearly, $\colvector{0\\0\\0}$ lies in $W$, hence $W$ is nonempty.  
+Clearly, $\colvector{0\\0\\0}$ lies in $W$, hence $W$ is nonempty.
 @li
 Given any $\vec{v}$ and $\vec{w}$ in $W$, by definition of $W$ we have:
 \[
@@ -753,7 +759,7 @@ Hence,
 \[
 \vec{v} + \vec{w} = \colvector{v_1 + w_1\\0 + 0\\v_3 + w_3}
 = \colvector{v_1 + w_1\\0\\v_3 + w_3} \in W.
-\]  
+\]
 @li
 Given any $\alpha \in \mathbb{R}$ and $\vec{w}$ in $W$, by definition of $W$ we have:
 \[
@@ -763,7 +769,7 @@ Hence,
 \[
 \alpha\vec{w} = \colvector{\alpha w_1\\\alpha \cdot 0\\\alpha w_3}
 = \colvector{\alpha w_1\\0\\\alpha w_3} \in W.
-\]  
+\]
 @endol
 @endcol
 @end
@@ -772,13 +778,13 @@ $V = \mathbb{R}^3$.
 \[
 W = \left\{\left.\colvector{x\\y\\z} \in \mathbb{R}^3 \,\right|\, x + 2y + 3z = 0
 \right\}
-\]  
+\]
 @end
 
 @slide
 @thm
 @label{thm:nullspacesubspace}
-Let $A\in M_{mn}$, then $W=\nsp{A}$ is a subspace of $\mathbb{R}^n$.  
+Let $A\in M_{mn}$, then $W=\nsp{A}$ is a subspace of $\mathbb{R}^n$.
 @end
 
 @proof
@@ -788,14 +794,14 @@ Because $\vect 0 \in \nsp{A}$, so $W$ is nonempty.
 @col
 For $\alpha \in \mathbb{R}$, $\vect v, \vect w \in W$.
 Then
-\[ A \vect v = \vect 0, \qquad A \vect w = \vect 0. \]  
+\[ A \vect v = \vect 0, \qquad A \vect w = \vect 0. \]
 @col
 Then
-\[ A(\alpha \vect v + \vect w) = \alpha A \vect v + A \vect w = \alpha \vect 0 + \vect 0 = \vect 0. \]  
+\[ A(\alpha \vect v + \vect w) = \alpha A \vect v + A \vect w = \alpha \vect 0 + \vect 0 = \vect 0. \]
 @col
 So
 \[ \alpha \vect v + \vect w \in \nsp{A}. \]
-Thus by @ref{subdef2}, $W=\nsp{A}$ is a subspace.  
+Thus by @ref{subdef2}, $W=\nsp{A}$ is a subspace.
 @qed
 @endcol
 @end
@@ -805,7 +811,7 @@ Thus by @ref{subdef2}, $W=\nsp{A}$ is a subspace.
 @eg
 <strong>Skip for now, until you learn the definition of column space.</strong>
 @newcol
-Let $A\in M_{mn}$, then $\mathcal{C}\!\left(A\right)$ is a subspace of ${\mathbb{R}}^{m}$.  
+Let $A\in M_{mn}$, then $\mathcal{C}\!\left(A\right)$ is a subspace of ${\mathbb{R}}^{m}$.
 @endcol
 @end
 @proof
@@ -819,7 +825,7 @@ Then there exist $\mathbf{x},\mathbf{y}$ such that $A\mathbf{x}=\mathbf{v}$, $A\
 \begin{align*}
 \displaystyle \alpha\mathbf{v}+\mathbf{w}=\alpha A\mathbf{x}+A\mathbf{y}=A(\alpha\mathbf{x}+\mathbf{y})\in\mathcal{C}\!\left(A\right).
 \end{align*}
-Thus by @ref{subdef2}, $W$ is a subspace.  
+Thus by @ref{subdef2}, $W$ is a subspace.
 @qed
 @endcol
 @end
@@ -832,7 +838,7 @@ Then $S_{n}$ is a subspace of $M_{nn}$. Check that $W=S_{n}$ is a subspace: Beca
 \begin{align*}
 \displaystyle (\alpha A+B)^{t}=\alpha A^{t}+B^{t}=\alpha A+B.
 \end{align*}
-Thus $\alpha A+B\in S_{n}$. Hence $S_{n}$ is a subspace by @ref{subdef2}.  
+Thus $\alpha A+B\in S_{n}$. Hence $S_{n}$ is a subspace by @ref{subdef2}.
 @endcol
 @end
 @eg
@@ -848,7 +854,7 @@ Let $h=\alpha f+g$. Then
 \begin{align*}
 \displaystyle h(1)=\alpha f(1)+g(1)=\alpha 0+0=0.
 \end{align*}
-So $h\in F$. Hence $F$ is a subspace by @ref{subdef2}.  
+So $h\in F$. Hence $F$ is a subspace by @ref{subdef2}.
 @endcol
 @end
 @eg
@@ -864,13 +870,13 @@ Let $h=\alpha f+g$. Then
 \begin{align*}
 \displaystyle h(-x)=\alpha f(-x)+g(-x)=\alpha f(x)+g(x)=h(x).
 \end{align*}
-So $h\in E$. Hence $E$ is a subspace.  
+So $h\in E$. Hence $E$ is a subspace.
 @endcol
 @end
 @subsection{Non-Examples}
 To show that $W$ is <strong>not</strong> a subspace of $V$, it suffices to show that it violates @ref{subdef} condition 1 or condition 2.
 This can be done by finding counter examples to either condition. Usually before checking those conditions, we quickly check if $\mathbf{0}_{V}\in W$
-(see @ref{0}).  
+(see @ref{0}).
 @eg
 @newcol
 $V={\mathbb{R}}^{m}$, $W=\{\mathbf{v}\in V\,|\,[\mathbf{v}]_{1}=1\}$.
@@ -879,7 +885,7 @@ $V={\mathbb{R}}^{m}$, $W=\{\mathbf{v}\in V\,|\,[\mathbf{v}]_{1}=1\}$.
 
 <strong>Method 2</strong> For Suppose $\mathbf{v},\mathbf{w}\in W$.
 Then $[\mathbf{v}+\mathbf{w}]_{1}=[\mathbf{v}]_{1}+[\mathbf{w}]_{1}=2$.
-So $\mathbf{v}+\mathbf{w}\not\in W$. So $W$ violates @ref{subdef} condition 1 and hence not a subspace.  
+So $\mathbf{v}+\mathbf{w}\not\in W$. So $W$ violates @ref{subdef} condition 1 and hence not a subspace.
 @endcol
 @end
 @eg
@@ -903,7 +909,7 @@ Then both $\mathbf{v}$ and $\mathbf{w}$ are in $W$.
 0\end{bmatrix}.
 \end{align*}
 Obvious $\mathbf{v}+\mathbf{w}\notin W$.
-Therefore $W$ violates @ref{subdef} condition 1 and hence not a subspace.  
+Therefore $W$ violates @ref{subdef} condition 1 and hence not a subspace.
 @endcol
 @end
 @eg
@@ -915,7 +921,7 @@ $V=\mathbf{R}^{n}$, $W=\{\mathbf{v}\in V\,|\,[\mathbf{v}]_{1}\geq 0\}$. Let $\al
 \end{align*}
 Then $[\alpha\mathbf{v}]_{1}=\alpha[\mathbf{v}]_{1}=\alpha=-1<0$.
 So $\alpha\mathbf{v}\notin W$.
-Thus $W$ violates @ref{subdef} condition 3 and hence not a subspace.  
+Thus $W$ violates @ref{subdef} condition 3 and hence not a subspace.
 @endcol
 @end
 @eg
@@ -928,7 +934,7 @@ v_{2}\end{bmatrix}\in V\,|\,v_{1}v_{2}\geq 0\}$. Let $\mathbf{v}=\begin{bmatrix}
 $\mathbf{v}+\mathbf{w}=\begin{bmatrix}1\\
 -1\end{bmatrix}$. Because
 $1\times(-1)=-1 < 0$. So $\mathbf{v}+\mathbf{w}\notin W$.
-Thus $W$ violates @ref{subdef} condition 2 and hence not a subspace. In fact, we can show that $W$ satisfies @ref{subdef} condition 3 but fails condition 2.  
+Thus $W$ violates @ref{subdef} condition 2 and hence not a subspace. In fact, we can show that $W$ satisfies @ref{subdef} condition 3 but fails condition 2.
 @endcol
 @end
 @eg
@@ -941,6 +947,6 @@ But
 \begin{align*}
 \displaystyle f(x)+g(x)=1
 \end{align*}
-is a polynomial with degree $0$. So $f+g$ is not in $G$. Thus $W$ violates @ref{subdef} condition 2 and hence not a subspace.  
+is a polynomial with degree $0$. So $f+g$ is not in $G$. Thus $W$ violates @ref{subdef} condition 2 and hence not a subspace.
 @endcol
 @end
