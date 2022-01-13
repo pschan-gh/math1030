@@ -48,7 +48,7 @@ a_{21}&=1 & a_{22}&=1 & a_{23}&=1 & a_{24}&=-1 & b_{2}&=3\\
 a_{31}&=3 & a_{32}&=1 & a_{33}&=5 & a_{34}&=-7 & b_{3}&=1
 \end{align*}One solution is given by $x_{1}=-2$, $x_{2}=4$, $x_{3}=2$, $x_{4}=1$. In fact, from the previous lecture this system of equations has infinitely many solutions.
 
-The solution set may be descrbied as follows:
+The solution set may be described as follows:
 
 @col
   \[
@@ -132,6 +132,17 @@ or (3) no solutions.
 @endcol
 @end
 @slide
+@thm
+@title{Equation Operations Preserve Solution Sets}
+@label{EOPSS}
+  If we apply one of the three equation operations of Definition          @ref{EO} to a system of linear equations, then the original system and the transformed system are equivalent.
+@end
+@proof
+@newcol
+  This will be clear after we have established Theorem @ref{REMES} in a later chapter.
+@endcol
+@end
+@slide
 @eg
 @newcol
   The following two systems equations are equivalent:
@@ -144,17 +155,3 @@ x_{1}-x_{2}=4\end{cases}\]
   In fact, the second system of linear equations is obtained by applying operation 3 on equation 1 (namley, replace equation 1 with [equation 1] - 2 $\times$ [equation 2]).
 @endcol
 @end
-@slide
-@thm
-@title{Equation Operations Preserve Solution Sets}
-@label{EOPSS}
-  If we apply one of the three equation operations of Definition          @ref{EO} to a system of linear equations, then the original system and the transformed system are equivalent.
-@end
-@proof
-@newcol
-  This will be clear after we have established Theorem @ref{REMES} in a later chapter.
-@endcol
-@end
-
-
-<!--DELIMITER-->
