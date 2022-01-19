@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="MATH 1030">
     <keywords slide="all" environ="course" chapter="" course="MATH 1030">
@@ -113,8 +112,8 @@
             <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="5" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">Reference.</paragraphs>
           </h5>
           <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">   Beezer, Ver 3.5 Subsection RREF (print version p21 - p33) You can skip the proof of Thm REMEF on p.22 and Thm RREFU on p.24-27 </paragraphs>
-          <br xmlns="http://www.w3.org/1999/xhtml" environment=""/>
-          <br xmlns="http://www.w3.org/1999/xhtml" environment=""/>
+          <br xmlns="http://www.w3.org/1999/xhtml" environment="" />
+          <br xmlns="http://www.w3.org/1999/xhtml" environment="" />
           <h5 xmlns="http://www.w3.org/1999/xhtml" class="notkw" environment="">
             <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="5" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">Exercise.</paragraphs>
           </h5>
@@ -243,7 +242,7 @@ More precisely: </paragraphs>
                   <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs">   If $i &lt; j$ and both row $i$ and row $j$ are not zero rows,
 then $d_{i} &lt; d_{j}$, i.e.
 $d_{1},d_{2},\ldots$ are in ascending order. </paragraphs>
-                  <br xmlns="http://www.w3.org/1999/xhtml" environment="col_ol"/>
+                  <br xmlns="http://www.w3.org/1999/xhtml" environment="col_ol" />
                   <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="col_ol" wbtag="paragraphs"> In particular,
 all matrix entries below a leftmost nonzero entry must be equal to zero. </paragraphs>
                 </col_li>
@@ -554,7 +553,7 @@ since we now know we have at least one nonzero row.</paragraphs>
                                     <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">,
 with column index $j$ increased to $2$ and $r = 1$.</paragraphs>
                                     <newline course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
-                                    <br xmlns="http://www.w3.org/1999/xhtml" environment="newcol"/>
+                                    <br xmlns="http://www.w3.org/1999/xhtml" environment="newcol" />
                                     <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> In fact, we may as well ignore row 1 and column 1,
 and essentially apply the previous steps to the remaining $3 \times 4$ matrix:</paragraphs>
                                     <newline course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
@@ -594,8 +593,7 @@ Also, now we know there are at least 2 nonzero rows, so $r = 2$. </paragraphs>
 -1R_{2}+R_{3},\\
 -1R_{2}+R_{4}
 \end{split}}
-\begin{bmatrix}1&amp;1&amp;0&amp;2&amp;%
-2\\
+\begin{bmatrix}1&amp;1&amp;0&amp;2&amp;2\\
 0&amp;0&amp;\boxed{1}&amp;1&amp;3\\
 0&amp;0&amp;0&amp;0&amp;1\\
 0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}\] </paragraphs>
@@ -681,8 +679,7 @@ We first consider column 1 (set $j=1$).</paragraphs>
                         <newline course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol"/>
                         <collapse course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                           <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   So we use $R_{1}\leftrightarrow R_{3}$.
-\[\xrightarrow{R_{1}\leftrightarrow R_{3}}\begin{bmatrix}\boxed{1}&amp;2&amp;2&amp;3&amp;8&amp;2&amp;%
-1\\
+\[\xrightarrow{R_{1}\leftrightarrow R_{3}}\begin{bmatrix}\boxed{1}&amp;2&amp;2&amp;3&amp;8&amp;2&amp;1\\
 2&amp;4&amp;1&amp;3&amp;7&amp;3&amp;-1\\
 0&amp;0&amp;2&amp;2&amp;6&amp;2&amp;3\\
 1&amp;2&amp;-1&amp;0&amp;-1&amp;2&amp;-1\\
@@ -743,8 +740,7 @@ We don’t need to so any swapping.
                                             <collapse course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                                               <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   We then use the boxed number to remove the nonzero entries about it and below it.
 \[\xrightarrow{-2R_{2}+R_{1},\;-2R_{2}+R_{3},\;3R_{2}+R_{4}}
-\begin{bmatrix}1&amp;2&amp;0&amp;1&amp;2%
-&amp;\frac{4}{3}&amp;-1\\
+\begin{bmatrix}1&amp;2&amp;0&amp;1&amp;2&amp;\frac{4}{3}&amp;-1\\
 0&amp;0&amp;1&amp;1&amp;3&amp;\frac{1}{3}&amp;1\\
 0&amp;0&amp;0&amp;0&amp;0&amp;\frac{4}{3}&amp;1\\
 0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;1\\
@@ -778,8 +774,7 @@ So, we move to the next column, with index $j=6$.</paragraphs>
 \end{bmatrix}\] </paragraphs>
                                                       <collapse course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                                                         <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   We continue the process without detailed explanations:
-\[\xrightarrow{R_{3}\leftrightarrow R_{4}}\begin{bmatrix}1&amp;2&amp;0&amp;1&amp;2&amp;\frac{4}{3}&amp;-%
-1\\
+\[\xrightarrow{R_{3}\leftrightarrow R_{4}}\begin{bmatrix}1&amp;2&amp;0&amp;1&amp;2&amp;\frac{4}{3}&amp;-1\\
 0&amp;0&amp;1&amp;1&amp;3&amp;\frac{1}{3}&amp;1\\
 0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;1\\
 0&amp;0&amp;0&amp;0&amp;0&amp;\frac{4}{3}&amp;1\\
@@ -880,8 +875,7 @@ x_{1}+4x_{3}&amp;=5
 \end{array}\right]\] </paragraphs>
                 <collapse course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   and work to reduced row-echelon form, first with $j=1$,
-\[\displaystyle\xrightarrow{R_{1}\leftrightarrow R_{3}}\left[\begin{array}[]{ccc%
-|c}1&amp;0&amp;4&amp;5\\
+\[\displaystyle\xrightarrow{R_{1}\leftrightarrow R_{3}}\left[\begin{array}[]{ccc|c}1&amp;0&amp;4&amp;5\\
 5&amp;5&amp;7&amp;24\\
 -7&amp;-6&amp;-12&amp;-33\end{array}\right]\xrightarrow{-5R_{1}+R_{2}}
 \left[
@@ -900,11 +894,9 @@ x_{1}+4x_{3}&amp;=5
 \] </paragraphs>
                     <collapse course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   Now, with $j=2$,
-\[\displaystyle\xrightarrow{\frac{1}{5}R_{2}}\left[\begin{array}[]{ccc|c}%
-\boxed{1}&amp;0&amp;4&amp;5\\
+\[\displaystyle\xrightarrow{\frac{1}{5}R_{2}}\left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;4&amp;5\\
 0&amp;1&amp;\frac{-13}{5}&amp;\frac{-1}{5}\\
-0&amp;-6&amp;16&amp;2\end{array}\right]\xrightarrow{6R_{2}+R_{3}}\left[\begin{array}[]{ccc%
-|c}\boxed{1}&amp;0&amp;4&amp;5\\
+0&amp;-6&amp;16&amp;2\end{array}\right]\xrightarrow{6R_{2}+R_{3}}\left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;4&amp;5\\
 0&amp;\boxed{1}&amp;\frac{-13}{5}&amp;\frac{-1}{5}\\
 0&amp;0&amp;\frac{2}{5}&amp;\frac{4}{5}\end{array}\right]\] </paragraphs>
                       <collapse course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
@@ -969,21 +961,17 @@ x_{1}+x_{2}&amp;=5\\
 1&amp;1&amp;0&amp;5\end{array}\right]\]
 \[\displaystyle\xrightarrow{-2R_{1}+R_{2}}\left[\begin{array}[]{ccc|c}1&amp;-1&amp;2&amp;1\\
 0&amp;3&amp;-3&amp;6\\
-1&amp;1&amp;0&amp;5\end{array}\right]\xrightarrow{-1R_{1}+R_{3}}\left[\begin{array}[]{ccc|%
-c}\boxed{1}&amp;-1&amp;2&amp;1\\
+1&amp;1&amp;0&amp;5\end{array}\right]\xrightarrow{-1R_{1}+R_{3}}\left[\begin{array}[]{ccc|c}\boxed{1}&amp;-1&amp;2&amp;1\\
 0&amp;3&amp;-3&amp;6\\
 0&amp;2&amp;-2&amp;4\end{array}\right]\] </paragraphs>
                 <collapse course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                   <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">   Now, with $j=2$,
-\[\displaystyle\xrightarrow{\frac{1}{3}R_{2}}\left[\begin{array}[]{ccc|c}%
-\boxed{1}&amp;-1&amp;2&amp;1\\
+\[\displaystyle\xrightarrow{\frac{1}{3}R_{2}}\left[\begin{array}[]{ccc|c}\boxed{1}&amp;-1&amp;2&amp;1\\
 0&amp;1&amp;-1&amp;2\\
-0&amp;2&amp;-2&amp;4\end{array}\right]\xrightarrow{1R_{2}+R_{1}}\left[\begin{array}[]{ccc|%
-c}\boxed{1}&amp;0&amp;1&amp;3\\
+0&amp;2&amp;-2&amp;4\end{array}\right]\xrightarrow{1R_{2}+R_{1}}\left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;1&amp;3\\
 0&amp;1&amp;-1&amp;2\\
 0&amp;2&amp;-2&amp;4\end{array}\right]\]
-\[\displaystyle\xrightarrow{-2R_{2}+R_{3}}\left[\begin{array}[]{ccc|c}\boxed{%
-1}&amp;0&amp;1&amp;3\\
+\[\displaystyle\xrightarrow{-2R_{2}+R_{3}}\left[\begin{array}[]{ccc|c}\boxed{1}&amp;0&amp;1&amp;3\\
 0&amp;\boxed{1}&amp;-1&amp;2\\
 0&amp;0&amp;0&amp;0\end{array}\right]\] </paragraphs>
                   <collapse course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
@@ -1060,8 +1048,7 @@ and work to reduced row-echelon form, first with $j=1$,
 0&amp;7&amp;7&amp;-21&amp;9\end{array}\right]\]
 \[\displaystyle\xrightarrow{-1R_{2}+R_{1}}\left[\begin{array}[]{cccc|c}\boxed{1}&amp;0&amp;3&amp;-2&amp;0\\
 0&amp;1&amp;1&amp;-3&amp;2\\
-0&amp;7&amp;7&amp;-21&amp;9\end{array}\right]\xrightarrow{-7R_{2}+R_{3}}\left[\begin{array}[]{%
-cccc|c}\boxed{1}&amp;0&amp;3&amp;-2&amp;0\\
+0&amp;7&amp;7&amp;-21&amp;9\end{array}\right]\xrightarrow{-7R_{2}+R_{3}}\left[\begin{array}[]{cccc|c}\boxed{1}&amp;0&amp;3&amp;-2&amp;0\\
 0&amp;\boxed{1}&amp;1&amp;-3&amp;2\\
 0&amp;0&amp;0&amp;0&amp;-5\end{array}\right]\] </paragraphs>
                   <collapse course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
@@ -1069,8 +1056,7 @@ cccc|c}\boxed{1}&amp;0&amp;3&amp;-2&amp;0\\
 \[\displaystyle\xrightarrow{-\frac{1}{5}R_{3}}\left[\begin{array}[]{cccc|c}
 \boxed{1}&amp;0&amp;3&amp;-2&amp;0\\
 0&amp;\boxed{1}&amp;1&amp;-3&amp;2\\
-0&amp;0&amp;0&amp;0&amp;1\end{array}\right]\xrightarrow{-2R_{3}+R_{2}}\left[\begin{array}[]{%
-cccc|c}\boxed{1}&amp;0&amp;3&amp;-2&amp;0\\
+0&amp;0&amp;0&amp;0&amp;1\end{array}\right]\xrightarrow{-2R_{3}+R_{2}}\left[\begin{array}[]{cccc|c}\boxed{1}&amp;0&amp;3&amp;-2&amp;0\\
 0&amp;\boxed{1}&amp;1&amp;-3&amp;0\\
 0&amp;0&amp;0&amp;0&amp;\boxed{1}\end{array}\right]\] </paragraphs>
                     <collapse course="MATH 1030" chapter="5" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
@@ -1594,7 +1580,7 @@ The last column is not a pivot column. So the system of linear equations is cons
 x_1 &amp;= 3-x_3 \\
 x_2 &amp;= 2+x_3
 \end{align*} </paragraphs>
-                    <hr xmlns="http://www.w3.org/1999/xhtml" environment="newcol"/>
+                    <hr xmlns="http://www.w3.org/1999/xhtml" environment="newcol" />
                   </newcol>
                 </item>
                 <item course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="enumerate" wbtag="item">
@@ -1621,7 +1607,7 @@ x_1 &amp;= -3 \\
 x_2 &amp;= 5 \\
 x_3 &amp;= 2
 \end{align*} </paragraphs>
-                    <hr xmlns="http://www.w3.org/1999/xhtml" environment="newcol"/>
+                    <hr xmlns="http://www.w3.org/1999/xhtml" environment="newcol" />
                   </newcol>
                 </item>
                 <item course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="enumerate" wbtag="item">
@@ -1650,7 +1636,7 @@ The reduced row echelon form of the augmented matrix.
 The last column is not a pivot column. So the system of linear equations is consistent. $r = 2$, there are $2-2=0$ free variables. So the solution is unique. In fact
 \[\displaystyle x_{1}=6\]
 \[\displaystyle x_{2}=-2\] </paragraphs>
-                    <hr xmlns="http://www.w3.org/1999/xhtml" environment="newcol"/>
+                    <hr xmlns="http://www.w3.org/1999/xhtml" environment="newcol" />
                   </newcol>
                 </item>
                 <item course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="enumerate" wbtag="item">
@@ -1671,7 +1657,7 @@ The reduced row echelon form of the augmented matrix.
 0&amp;\boxed{1}&amp;1&amp;-3&amp;0\\
 0&amp;0&amp;0&amp;0&amp;\boxed{1}\end{array}\right]\]
 The last column is a pivot column. Hence the system of linear equations is inconsistent. It has no solution. </paragraphs>
-                    <hr xmlns="http://www.w3.org/1999/xhtml" environment="newcol"/>
+                    <hr xmlns="http://www.w3.org/1999/xhtml" environment="newcol" />
                   </newcol>
                 </item>
               </enumerate>
