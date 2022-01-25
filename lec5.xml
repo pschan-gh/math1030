@@ -1704,8 +1704,22 @@ The last column is a pivot column. Hence the system of linear equations is incon
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="7082059ea8b320564cfdfe549d01df06" course="MATH 1030" chapter="5" slide="24" of="0fa316e7afdda3206208fc1f3f8a217d" of-src-course="MATH 1030" of-src-chapter="5" of-src-slide="24" of-type="Theorem" of-item="5.24" of-src-filename="lec5.xml" ofmd5="0fa316e7afdda3206208fc1f3f8a217d" of-serial="">
               <of-title hidden="true">Possible Solution Sets for Linear Systems</of-title>
               <newcol course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If the system is inconsistent, that it has no solutions.Suppose the system is consistent. If it has $0$ free variable, it has a unique solution.
-If it has $\geq 1$ free variables, it has infinite many solutions. </paragraphs>
+                <itemize course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="itemize" wbtag="itemize">
+                  <item course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="itemize" wbtag="item">
+                    <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="itemize" wbtag="paragraphs"> If the system is inconsistent, that it has no solutions. </paragraphs>
+                  </item>
+                  <item course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="itemize" wbtag="item">
+                    <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="itemize" wbtag="paragraphs"> Suppose the system is consistent.  </paragraphs>
+                    <itemize course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="itemize" wbtag="itemize">
+                      <item course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="itemize" wbtag="item">
+                        <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="itemize" wbtag="paragraphs"> If it has $0$ free variable, it has a unique solution. </paragraphs>
+                      </item>
+                      <item course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="itemize" wbtag="item">
+                        <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="itemize" wbtag="paragraphs"> If it has $\geq 1$ free variables, it has infinite many solutions. </paragraphs>
+                      </item>
+                    </itemize>
+                  </item>
+                </itemize>
                 <qed course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
               </newcol>
             </substatement>
@@ -1748,7 +1762,11 @@ A consistent system with free variables will have an infinite number of solution
               </item>
               <item course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="enumerate" wbtag="item">
                 <newcol course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                  <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Convert the matrix to a row-equivalent matrix in reduced row-echelon form using the procedure given in lecture 3 Theorem 2.
+                  <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Convert the matrix to a row-equivalent matrix in reduced row-echelon form using the **Gaussian Elimination** procedure given in the proof of </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="thm:REMEF" wbtag="ref" course="MATH 1030" chapter="5" slide="25" src-course="MATH 1030" src-chapter="5" src-slide="9" type="Theorem" item="5.6" src-filename="lec5.xml" md5="7330455b9d11f5e9938a0d2f8e6c5ebf" class="lcref" serial="">
+                    <title custom="true">Row-Equivalent Matrix in Echelon Form</title>
+                  </ref>
+                  <paragraphs course="MATH 1030" chapter="5" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">.
 Identify the location of the pivot columns, and the rank $r$. </paragraphs>
                 </newcol>
               </item>

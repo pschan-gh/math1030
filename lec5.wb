@@ -1214,8 +1214,18 @@ A system of linear equations has no solutions, a unique solution or infinitely m
 @end
 @proof
 @newcol
-If the system is inconsistent, that it has no solutions.Suppose the system is consistent. If it has $0$ free variable, it has a unique solution.
+@itemize
+@item
+If the system is inconsistent, that it has no solutions.
+@item
+Suppose the system is consistent. 
+@itemize
+@item
+If it has $0$ free variable, it has a unique solution.
+@item
 If it has $\geq 1$ free variables, it has infinite many solutions.
+@enditemize
+@enditemize
 @qed
 @endcol
 @end
@@ -1245,7 +1255,7 @@ Represent a system of linear equations in $n$ variables by an augmented matrix.
 @endcol
 @item
 @newcol
-Convert the matrix to a row-equivalent matrix in reduced row-echelon form using the procedure given in lecture 3 Theorem 2.
+Convert the matrix to a row-equivalent matrix in reduced row-echelon form using the **Gaussian Elimination** procedure given in the proof of @ref{thm:REMEF}.
 Identify the location of the pivot columns, and the rank $r$.
 @endcol
 @item
