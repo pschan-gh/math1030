@@ -238,6 +238,7 @@ times a vector of size $n$ will create a column vector of size $m$.
 In particular, if $A$ is (non-square) rectangular,
 then the size of the vector changes.
 @eg
+@col
 Consider:
 \[\displaystyle A=\begin{bmatrix}1&4&2&3&4\\
 -3&2&0&1&-2\\
@@ -343,6 +344,7 @@ Suppose $A$ is an $m\times n$ matrix and $\mathbf{B}_{1},\,\mathbf{B}_{2},\,\mat
 B}_{p}\right].\]
 @end
 @eg
+@skip
 @newcol
 Let:
 \[\displaystyle A=\begin{bmatrix}1&2&-1&4&6\\
@@ -385,6 +387,7 @@ AB&=\left[A\begin{bmatrix}1\\
 @endcol
 @end
 @remark
+@skip
 @newcol
 Is this the definition of matrix multiplication you expected? Perhaps our previous operations for matrices caused you to think that we might multiply two matrices of the same size, entry-by-entry? Notice that our current definition uses matrices of different sizes (though the number of columns in the first must equal the number of rows in the second), and the result is of a third size.
 Notice too that in the previous example we cannot even consider the product $BA$, since the sizes of the two matrices in this order are not compatible.
@@ -539,6 +542,7 @@ ${\cal O}_{p\times m}A={\cal O}_{p\times n}$
 @endcol
 @end
 @proof
+@skip
 @newcol
 We will prove (1) and leave (2) to you. Using the entry-by-entry definition of matrix multiplication, for $1\leq i\leq m$, $1\leq j\leq p$, we compute
 \[\displaystyle\left[A{\cal O}_{n\times p}\right]_{ij}=\sum_{k=1}^{n}\left[A%
