@@ -939,17 +939,30 @@ I_5 = \begin{pmatrix}
                   </enumerate>
                 </newcol>
               </statement>
-              <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="51415c74606fd483eac829d58716f3e2" course="MATH 1030" chapter="6" slide="18" of="863efefee777450a6d64ea18fe4a6648" of-src-course="MATH 1030" of-src-chapter="6" of-src-slide="18" of-type="Theorem" of-item="6.22" of-src-filename="lec6.xml" ofmd5="863efefee777450a6d64ea18fe4a6648" of-serial="">
+              <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="ae081eac7c0f7fe2d4f9bffae99571da" course="MATH 1030" chapter="6" slide="18" of="863efefee777450a6d64ea18fe4a6648" of-src-course="MATH 1030" of-src-chapter="6" of-src-slide="18" of-type="Theorem" of-item="6.22" of-src-filename="lec6.xml" ofmd5="863efefee777450a6d64ea18fe4a6648" of-serial="">
                 <of-title hidden="true">Matrix Multiplication and Identity Matrix</of-title>
                 <newcol course="MATH 1030" chapter="6" chapter_type="" section="3" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
-                  <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="3" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Again, we will prove (1) and leave (2) to you. Using the entry-by-entry definition of matrix multiplication, for $1\leq i\leq m$, $1\leq j\leq n$, we compute
-\[\displaystyle\left[AI_{n}\right]_{ij}=\sum_{k=1}^{n}\left[A\right]_{ik}\left[I_{n}\right]_{kj}\]
-\[\displaystyle=\left[A\right]_{ij}\left[I_{n}\right]_{jj}+\sum_{\begin{subarray}{c}k=1\\
-k\neq j\end{subarray}}^{n}\left[A\right]_{ik}\left[I_{n}\right]_{kj}\]
-\[\displaystyle=\left[A\right]_{ij}(1)+\sum_{k=1,k\neq j}^{n}\left[A\right]_{ik}(0)\]
-\[\displaystyle=\left[A\right]_{ij}+\sum_{k=1,k\neq j}^{n}0\]
-\[\displaystyle=\left[A\right]_{ij}.\]
-So the matrices $A$ and $AI_{n}$ are equal entrywise. By the definition of matrix equality, they are equal matrices. </paragraphs>
+                  <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="3" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Again, we will prove (1) and leave (2) to you. Using the entry-by-entry definition of matrix multiplication, for $1\leq i\leq m$, $1\leq j\leq n$, we compute: </paragraphs>
+                  <steps course="MATH 1030" chapter="6" chapter_type="" section="3" subsection="1" subsubsection="" environment="newcol" wbtag="steps" stepsid="steps2">
+\begin{align*}
+\displaystyle\left[AI_{n}\right]_{ij}&amp;=
+\class{steps}{\cssId{step0}{\sum_{k=1}^{n}\left[A\right]_{ik}\left[I_{n}\right]_{kj}}}
+\\&amp;
+\class{steps}{\cssId{step1}{=
+\left[A\right]_{ij}\left[I_{n}\right]_{jj}+\sum_{\begin{subarray}{c}k=1\\
+k\neq j\end{subarray}}^{n}\left[A\right]_{ik}\left[I_{n}\right]_{kj}}}
+\\&amp;
+\class{steps}{\cssId{step2}{=
+\left[A\right]_{ij}(1)+\sum_{k=1,k\neq j}^{n}\left[A\right]_{ik}(0)}}
+\\&amp;
+\class{steps}{\cssId{step3}{=
+\left[A\right]_{ij}+\sum_{k=1,k\neq j}^{n}0}}
+\\&amp;
+\class{steps}{\cssId{step4}{=
+\left[A\right]_{ij}.}}
+\end{align*}
+</steps>
+                  <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="3" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> So the matrices $A$ and $AI_{n}$ are equal entrywise. By the definition of matrix equality, they are equal matrices. </paragraphs>
                 </newcol>
               </substatement>
               <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="10c3572f3dd45e12a4a8c1d2ba0f5160" course="MATH 1030" chapter="6" slide="18">
@@ -1549,7 +1562,7 @@ A = \begin{bmatrix}
               <of-title hidden="true">Transpose and Matrix Addition</of-title>
               <newcol course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> For $1\leq i\leq n$, $1\leq j\leq m$, </paragraphs>
-                <steps course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="steps" stepsid="steps2">
+                <steps course="MATH 1030" chapter="6" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="steps" stepsid="steps3">
 \[
 \begin{split}
 \left[(A+B)^{t}\right]_{ij}&amp;= \class{steps}{\cssId{step0}{\left[A+B\right]_{ji}}}\\
@@ -1755,7 +1768,7 @@ B = \left[\begin{array}[]{cc|cc}
 \] </paragraphs>
                   <collapse course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                     <paragraphs course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> we can very quickly compute: </paragraphs>
-                    <steps course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="steps" stepsid="steps3">
+                    <steps course="MATH 1030" chapter="6" chapter_type="" section="7" subsection="" subsubsection="" environment="newcol" wbtag="steps" stepsid="steps4">
 \begin{align*}
 AB &amp;=
 \class{steps}{\cssId{step0}{\left[\begin{array}[]{c|c}

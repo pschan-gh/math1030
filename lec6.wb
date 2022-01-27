@@ -601,16 +601,32 @@ $I_{m}A=A$
 @end
 @proof
 @newcol
-Again, we will prove (1) and leave (2) to you. Using the entry-by-entry definition of matrix multiplication, for $1\leq i\leq m$, $1\leq j\leq n$, we compute
-\[\displaystyle\left[AI_{n}\right]_{ij}=\sum_{k=1}^{n}\left[A\right]_{ik}\left[I%
-_{n}\right]_{kj}\]
-\[\displaystyle=\left[A\right]_{ij}\left[I_{n}\right]_{jj}+\sum_{%
-\begin{subarray}{c}k=1\\
-k\neq j\end{subarray}}^{n}\left[A\right]_{ik}\left[I_{n}\right]_{kj}\]
-\[\displaystyle=\left[A\right]_{ij}(1)+\sum_{k=1,k\neq j}^{n}\left[A\right]_{ik}%
-(0)\]
-\[\displaystyle=\left[A\right]_{ij}+\sum_{k=1,k\neq j}^{n}0\]
-\[\displaystyle=\left[A\right]_{ij}.\]
+Again, we will prove (1) and leave (2) to you. Using the entry-by-entry definition of matrix multiplication, for $1\leq i\leq m$, $1\leq j\leq n$, we compute:
+@steps
+\begin{align*}
+\displaystyle\left[AI_{n}\right]_{ij}&=
+@nstep{
+\sum_{k=1}^{n}\left[A\right]_{ik}\left[I_{n}\right]_{kj}
+}
+\\&
+@nstep{=
+\left[A\right]_{ij}\left[I_{n}\right]_{jj}+\sum_{\begin{subarray}{c}k=1\\
+k\neq j\end{subarray}}^{n}\left[A\right]_{ik}\left[I_{n}\right]_{kj}
+}
+\\&
+@nstep{=
+\left[A\right]_{ij}(1)+\sum_{k=1,k\neq j}^{n}\left[A\right]_{ik}(0)
+}
+\\&
+@nstep{=
+\left[A\right]_{ij}+\sum_{k=1,k\neq j}^{n}0
+}
+\\&
+@nstep{=
+\left[A\right]_{ij}.
+}
+\end{align*}
+@endsteps
 So the matrices $A$ and $AI_{n}$ are equal entrywise. By the definition of matrix equality, they are equal matrices.
 @endcol
 @end
