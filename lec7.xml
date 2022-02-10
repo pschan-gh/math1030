@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="MATH 1030">
     <keywords slide="all" environ="course" chapter="" course="MATH 1030">
@@ -188,7 +187,7 @@ Then the system is consistent. In fact $\mathbf{0}$ is a solution, i.e $x_{1}=x_
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="5" md5="32b3ecdc95e88540db7a5574b1188401" course="MATH 1030" chapter="7" slide="6" item="7.5">
               <enumerate course="MATH 1030" chapter="7" chapter_type="" section="1" subsection="" subsubsection="" environment="enumerate" wbtag="enumerate">
                 <item course="MATH 1030" chapter="7" chapter_type="" section="1" subsection="" subsubsection="" environment="enumerate" wbtag="item">
-                  <br xmlns="http://www.w3.org/1999/xhtml" environment="enumerate"/>
+                  <br xmlns="http://www.w3.org/1999/xhtml" environment="enumerate" />
                   <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="1" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs"> \begin{align*}
 -7x_1 -6 x_2 - 12x_3 &amp;=0\\
 5x_1  + 5x_2 + 7x_3 &amp;=0\\
@@ -213,8 +212,7 @@ x_1 + x_2 &amp; =0
 The system is consistent. It has $n-r=3-2=1$ free variable. The solution set is
 \[S=\left\{\left.\begin{bmatrix}x_{1}\\
 x_{2}\\
-x_{3}\end{bmatrix}\,\right|\,x_{1}=-x_{3},\,x_{2}=x_{3}\right\}=\left\{\left.%
-\begin{bmatrix}-x_{3}\\
+x_{3}\end{bmatrix}\,\right|\,x_{1}=-x_{3},\,x_{2}=x_{3}\right\}=\left\{\left.\begin{bmatrix}-x_{3}\\
 x_{3}\\
 x_{3}\end{bmatrix}\,\right|\,x_{3}\text{ real number}\right\}\]
 Geometrically, these are points in three dimensions that lie on a line through the origin. </paragraphs>
@@ -359,55 +357,14 @@ is not in ${\mathcal{N}}\!\left(A\right)$ as
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="11" id="s11" slide="11" course="MATH 1030" chapter="7" section="2" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Null Space of a Matrix">
             <keywords slide="11" environ="slide" chapter="7" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="9" md5="07ccccc4411d799888a1376cd7f85091" course="MATH 1030" chapter="7" slide="11" item="7.9">
-              <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose
-\[A=\begin{bmatrix}1&amp;4&amp;0&amp;-1&amp;0&amp;7&amp;-9\\
-2&amp;8&amp;-1&amp;3&amp;9&amp;-13&amp;7\\
-0&amp;0&amp;2&amp;-3&amp;-4&amp;12&amp;-8\\
--1&amp;-4&amp;2&amp;4&amp;8&amp;-31&amp;37\end{bmatrix}\]
-Then
-\[\mathbf{x}=\begin{bmatrix}3\\
-0\\
--5\\
--6\\
-0\\
-0\\
-1\end{bmatrix}\qquad\qquad\mathbf{y}=\begin{bmatrix}-4\\
-1\\
--3\\
--2\\
-1\\
-1\\
-1\end{bmatrix}\]
-are in ${\mathcal{N}}\!\left(A\right)$ as $A\mathbf{x}=\mathbf{0}$, $A\mathbf{y}=\mathbf{0}$.</paragraphs>
-              <newline course="MATH 1030" chapter="7" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
-              <newcol course="MATH 1030" chapter="7" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> However, the vector
-\[\mathbf{z}=\begin{bmatrix}1\\
-0\\
-0\\
-0\\
-0\\
-0\\
-2\end{bmatrix}\]
-is not in ${\mathcal{N}}\!\left(A\right)$ as
-\[A\mathbf{z}=\begin{bmatrix}-17\\
-16\\
--16\\
-73\end{bmatrix}\neq\mathbf{0}.\] </paragraphs>
-              </newcol>
-            </statement>
-          </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="12" id="s12" slide="12" course="MATH 1030" chapter="7" section="2" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Null Space of a Matrix">
-            <keywords slide="12" environ="slide" chapter="7" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="10" md5="0f5ef93f865397e1c9f82c01f86199c8" course="MATH 1030" chapter="7" slide="12" item="7.10">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="9" md5="0f5ef93f865397e1c9f82c01f86199c8" course="MATH 1030" chapter="7" slide="11" item="7.9">
               <label wbtag="label" name="CNS1" type="Example"/>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let us compute the null space of
 \[A=\begin{bmatrix}2&amp;-1&amp;7&amp;-3&amp;-8\\
 1&amp;0&amp;2&amp;4&amp;9\\
 2&amp;2&amp;-2&amp;-1&amp;8\end{bmatrix}\]
 which we write as ${\mathcal{N}}\!\left(A\right)$. Translating </paragraphs>
-              <ref environment="statement" chapter_type="" label="NSM" wbtag="ref" course="MATH 1030" chapter="7" slide="12" referrer-type="Example" referrer-md5="0f5ef93f865397e1c9f82c01f86199c8" src-course="MATH 1030" src-chapter="7" src-slide="9" type="Definition" item="7.7" src-filename="lec7.xml" md5="7a526a01b3173a0da9b6f4d0539bf360" class="lcref" serial="">
+              <ref environment="statement" chapter_type="" label="NSM" wbtag="ref" course="MATH 1030" chapter="7" slide="11" referrer-type="Example" referrer-md5="0f5ef93f865397e1c9f82c01f86199c8" src-course="MATH 1030" src-chapter="7" src-slide="9" type="Definition" item="7.7" src-filename="lec7.xml" md5="7a526a01b3173a0da9b6f4d0539bf360" class="lcref" serial="">
                 <title>Definition 7.7</title>
               </ref>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">,
@@ -438,9 +395,9 @@ x_{5}\end{bmatrix}\,\right|\,x_{3},\,x_{5}\text{ real numbers}\right\}.\] </para
               </newcol>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="13" id="s13" slide="13" course="MATH 1030" chapter="7" section="2" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Null Space of a Matrix">
-            <keywords slide="13" environ="slide" chapter="7" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="11" md5="4cb86c438fab042314891b3b9a1f605f" course="MATH 1030" chapter="7" slide="13" item="7.11">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="12" id="s12" slide="12" course="MATH 1030" chapter="7" section="2" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Null Space of a Matrix">
+            <keywords slide="12" environ="slide" chapter="7" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="10" md5="4cb86c438fab042314891b3b9a1f605f" course="MATH 1030" chapter="7" slide="12" item="7.10">
               <label wbtag="label" name="CNS2" type="Example"/>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let us compute the null space of
 \[C=\begin{bmatrix}-4&amp;6&amp;1\\
@@ -448,7 +405,7 @@ x_{5}\end{bmatrix}\,\right|\,x_{3},\,x_{5}\text{ real numbers}\right\}.\] </para
 5&amp;6&amp;7\\
 4&amp;7&amp;1\end{bmatrix}\]
 which we write as ${\mathcal{N}}\!\left(C\right)$. Translating definition   </paragraphs>
-              <ref environment="statement" chapter_type="" label="NSM" wbtag="ref" course="MATH 1030" chapter="7" slide="13" referrer-type="Example" referrer-md5="4cb86c438fab042314891b3b9a1f605f" src-course="MATH 1030" src-chapter="7" src-slide="9" type="Definition" item="7.7" src-filename="lec7.xml" md5="7a526a01b3173a0da9b6f4d0539bf360" class="lcref" serial="">
+              <ref environment="statement" chapter_type="" label="NSM" wbtag="ref" course="MATH 1030" chapter="7" slide="12" referrer-type="Example" referrer-md5="4cb86c438fab042314891b3b9a1f605f" src-course="MATH 1030" src-chapter="7" src-slide="9" type="Definition" item="7.7" src-filename="lec7.xml" md5="7a526a01b3173a0da9b6f4d0539bf360" class="lcref" serial="">
                 <title>Definition 7.7</title>
               </ref>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">, we simply desire to solve the homogeneous system
@@ -474,16 +431,16 @@ So we row-reduce the augmented matrix to obtain
         </title>
         <label wbtag="label" name="PSHS" type="Section"/>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="14" scope="section" id="s14" slide="14" course="MATH 1030" chapter="7" section="3" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Particular Solutions Homogeneous Solutions">
-            <keywords slide="14" environ="slide" chapter="7" course="MATH 1030">
-              <keyword chapter="7" slide="14">Particular Solution Plus Homogeneous Solutions</keyword>
+          <slide environment="" chapter_type="Chapter" canon_num="13" scope="section" id="s13" slide="13" course="MATH 1030" chapter="7" section="3" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Particular Solutions Homogeneous Solutions">
+            <keywords slide="13" environ="slide" chapter="7" course="MATH 1030">
+              <keyword chapter="7" slide="13">Particular Solution Plus Homogeneous Solutions</keyword>
             </keywords>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="7" section="3" subsection="" subsubsection="" serial="" slide="14">
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="7" section="3" subsection="" subsubsection="" serial="" slide="13">
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Particular Solutions, Homogeneous Solutions</paragraphs>
             </title>
             <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="3" subsection="" subsubsection="" environment="" wbtag="paragraphs"> The next theorem tells us that in order to find all of the solutions to a linear system of equations, it is sufficient to find just one solution, and then find all of the solutions to the corresponding homogeneous system. This explains part of our interest in the null space, the set of all solutions to a homogeneous system. </paragraphs>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="12" title="Particular Solution Plus Homogeneous Solutions" md5="29578e42bfc35d83899457fd5d8d296c" course="MATH 1030" chapter="7" slide="14" item="7.12">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="3" subsection="" subsubsection="" serial="" slide="14">Particular Solution Plus Homogeneous Solutions</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="11" title="Particular Solution Plus Homogeneous Solutions" md5="29578e42bfc35d83899457fd5d8d296c" course="MATH 1030" chapter="7" slide="13" item="7.11">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="3" subsection="" subsubsection="" serial="" slide="13">Particular Solution Plus Homogeneous Solutions</title>
               <label wbtag="label" name="PSPHS" type="Theorem"/>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $\mathbf{w}$ is one solution to the linear system of equations
 $\linearsystem{A}{\mathbf{b}}$. Then $\mathbf{y}$ is a solution to
@@ -502,7 +459,7 @@ through
 \[\mathbf{y}\rightarrow\mathbf{y}-\mathbf{w},\]
 \[\mathbf{w}+\mathbf{z}\leftarrow\mathbf{z}.\] </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="dbd9d962bc850616f09ce6338a21ff31" course="MATH 1030" chapter="7" slide="14" of="29578e42bfc35d83899457fd5d8d296c" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="14" of-type="Theorem" of-item="7.12" of-src-filename="lec7.xml" ofmd5="29578e42bfc35d83899457fd5d8d296c" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="dbd9d962bc850616f09ce6338a21ff31" course="MATH 1030" chapter="7" slide="13" of="29578e42bfc35d83899457fd5d8d296c" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="13" of-type="Theorem" of-item="7.11" of-src-filename="lec7.xml" ofmd5="29578e42bfc35d83899457fd5d8d296c" of-serial="">
               <of-title hidden="true">Particular Solution Plus Homogeneous Solutions</of-title>
               <newcol course="MATH 1030" chapter="7" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Because $\mathbf{w}$ is one solution to the linear system of equations
@@ -526,9 +483,9 @@ Hence $\mathbf{w}+\mathbf{z}$ is a solution of $A\mathbf{x}=\mathbf{b}$. </parag
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="15" id="s15" slide="15" course="MATH 1030" chapter="7" section="3" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Particular Solutions Homogeneous Solutions">
-            <keywords slide="15" environ="slide" chapter="7" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="13" md5="35daf825c8a416c6fffe32cc72af02be" course="MATH 1030" chapter="7" slide="15" item="7.13">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="14" id="s14" slide="14" course="MATH 1030" chapter="7" section="3" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Particular Solutions Homogeneous Solutions">
+            <keywords slide="14" environ="slide" chapter="7" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="12" md5="35daf825c8a416c6fffe32cc72af02be" course="MATH 1030" chapter="7" slide="14" item="7.12">
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> \begin{align*}
 2x_1  + x_2 + 7x_3 - 7x_4 &amp;= 8 \\
 -3x_1 + 4x_2 -5x_3 - 6x_4 &amp;=  -12 \\
@@ -595,9 +552,9 @@ By the theorem, the solution set to the linear system is:</paragraphs>
           <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Augmented matrix vs Coefficient Matrix</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="16" scope="section" id="s16" slide="16" course="MATH 1030" chapter="7" section="4" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Augmented matrix vs Coefficient Matrix">
-            <keywords slide="16" environ="slide" chapter="7" course="MATH 1030"/>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="7" section="4" subsection="" subsubsection="" serial="" slide="16">
+          <slide environment="" chapter_type="Chapter" canon_num="15" scope="section" id="s15" slide="15" course="MATH 1030" chapter="7" section="4" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Augmented matrix vs Coefficient Matrix">
+            <keywords slide="15" environ="slide" chapter="7" course="MATH 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="7" section="4" subsection="" subsubsection="" serial="" slide="15">
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Augmented matrix vs Coefficient Matrix</paragraphs>
             </title>
             <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="4" subsection="" subsubsection="" environment="" wbtag="paragraphs"> The augmented matrix for the homogeneous of system of linear equations
@@ -656,23 +613,23 @@ S&amp;=\setparts{\colvector{x_1\\x_2\\x_3\\x_4}}{x_1=-3x_3+2x_4,\,x_2=-x_3+3x_4}
           <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Nonsingular Matrices</paragraphs>
         </title>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="17" scope="section" id="s17" slide="17" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices">
-            <keywords slide="17" environ="slide" chapter="7" course="MATH 1030">
-              <keyword chapter="7" slide="17">square</keyword>
-              <keyword chapter="7" slide="17">size</keyword>
-              <keyword chapter="7" slide="17">rectangular</keyword>
-              <keyword chapter="7" slide="17">nonsingular</keyword>
-              <keyword chapter="7" slide="17">singular</keyword>
-              <keyword chapter="7" slide="17">Square Matrix</keyword>
-              <keyword chapter="7" slide="17">Nonsingular Matrix</keyword>
+          <slide environment="" chapter_type="Chapter" canon_num="16" scope="section" id="s16" slide="16" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices">
+            <keywords slide="16" environ="slide" chapter="7" course="MATH 1030">
+              <keyword chapter="7" slide="16">square</keyword>
+              <keyword chapter="7" slide="16">size</keyword>
+              <keyword chapter="7" slide="16">rectangular</keyword>
+              <keyword chapter="7" slide="16">nonsingular</keyword>
+              <keyword chapter="7" slide="16">singular</keyword>
+              <keyword chapter="7" slide="16">Square Matrix</keyword>
+              <keyword chapter="7" slide="16">Nonsingular Matrix</keyword>
             </keywords>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" serial="" slide="17">
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" serial="" slide="16">
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Nonsingular Matrices</paragraphs>
             </title>
             <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs"> In this section we specialize further and consider matrices with equal numbers of rows and columns,
 which when considered as coefficient matrices lead to systems with equal numbers of equations and variables. </paragraphs>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="14" title="Square Matrix" md5="77621b9b7f863dca461c3eed009a2d8a" course="MATH 1030" chapter="7" slide="17" item="7.14">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" serial="" slide="17">Square Matrix</title>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="13" title="Square Matrix" md5="77621b9b7f863dca461c3eed009a2d8a" course="MATH 1030" chapter="7" slide="16" item="7.13">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" serial="" slide="16">Square Matrix</title>
               <label wbtag="label" name="SQM" type="Definition"/>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> A matrix with $m$ rows and $n$ columns is </paragraphs>
               <inline_keyword course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="statement">square</inline_keyword>
@@ -684,8 +641,8 @@ To emphasize the situation when a matrix is not square, we will call it </paragr
               <inline_keyword course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="statement">rectangular</inline_keyword>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">. </paragraphs>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="15" title="Nonsingular Matrix" md5="5ce26d1ac670345bcd61500f3e4cc002" course="MATH 1030" chapter="7" slide="17" item="7.15">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" serial="" slide="17">Nonsingular Matrix</title>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="14" title="Nonsingular Matrix" md5="5ce26d1ac670345bcd61500f3e4cc002" course="MATH 1030" chapter="7" slide="16" item="7.14">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" serial="" slide="16">Nonsingular Matrix</title>
               <label wbtag="label" name="NM" type="Definition"/>
               <label wbtag="label" name="NMTNS" type="Definition"/>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ is a square matrix.
@@ -700,9 +657,9 @@ Then we say that $A$ is a </paragraphs>
 $\mathcal{N}(A)$ consists only of the zero vector $\mathbf{0}$. </paragraphs>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="18" id="s18" slide="18" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices">
-            <keywords slide="18" environ="slide" chapter="7" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="16" md5="8bb0798c5e51b5342b76ff53c2efb23b" course="MATH 1030" chapter="7" slide="18" item="7.16">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="17" id="s17" slide="17" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices">
+            <keywords slide="17" environ="slide" chapter="7" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="15" md5="8bb0798c5e51b5342b76ff53c2efb23b" course="MATH 1030" chapter="7" slide="17" item="7.15">
               <enumerate course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="enumerate" wbtag="enumerate">
                 <item course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="enumerate" wbtag="item">
                   <newcol course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
@@ -727,14 +684,14 @@ So it is nonsingular. </paragraphs>
               </enumerate>
             </statement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="19" id="s19" slide="19" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices">
-            <keywords slide="19" environ="slide" chapter="7" course="MATH 1030">
-              <keyword chapter="7" slide="19">identity matrix</keyword>
-              <keyword chapter="7" slide="19">Identity Matrix</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="18" id="s18" slide="18" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices">
+            <keywords slide="18" environ="slide" chapter="7" course="MATH 1030">
+              <keyword chapter="7" slide="18">identity matrix</keyword>
+              <keyword chapter="7" slide="18">Identity Matrix</keyword>
             </keywords>
             <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Recall: </paragraphs>
-            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="17" title="Identity Matrix" md5="453dafbc99c55cb47f34c8fe0eace700" course="MATH 1030" chapter="7" slide="19" item="7.17">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" serial="" slide="19">Identity Matrix</title>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="16" title="Identity Matrix" md5="453dafbc99c55cb47f34c8fe0eace700" course="MATH 1030" chapter="7" slide="18" item="7.16">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" serial="" slide="18">Identity Matrix</title>
               <label wbtag="label" name="IM" type="Definition"/>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The $m\times m$ </paragraphs>
               <inline_keyword course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="statement">identity matrix</inline_keyword>
@@ -748,7 +705,7 @@ i.e.
 \vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
 0&amp;0&amp;0&amp;\cdots&amp;1\end{bmatrix}.\] </paragraphs>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="18" md5="4130ac3debeea008b09b10896df0f61c" course="MATH 1030" chapter="7" slide="19" item="7.18">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="17" md5="4130ac3debeea008b09b10896df0f61c" course="MATH 1030" chapter="7" slide="18" item="7.17">
               <newcol course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The $4\times 4$ identity matrix is:
 \[I_{4}=\begin{bmatrix}1&amp;0&amp;0&amp;0\\
@@ -763,16 +720,16 @@ Also, every column is a pivot column,
 and every possible pivot column appears once. </paragraphs>
             </newcol>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="20" id="s20" slide="20" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices">
-            <keywords slide="20" environ="slide" chapter="7" course="MATH 1030">
-              <keyword chapter="7" slide="20">Nonsingular Matrices Row Reduce to the Identity Matrix</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="19" id="s19" slide="19" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices">
+            <keywords slide="19" environ="slide" chapter="7" course="MATH 1030">
+              <keyword chapter="7" slide="19">Nonsingular Matrices Row Reduce to the Identity Matrix</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="19" title="Nonsingular Matrices Row Reduce to the Identity Matrix" md5="63a0fa79dbb22ae7e60cd449cbea33cd" course="MATH 1030" chapter="7" slide="20" item="7.19">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" serial="" slide="20">Nonsingular Matrices Row Reduce to the Identity Matrix</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="18" title="Nonsingular Matrices Row Reduce to the Identity Matrix" md5="63a0fa79dbb22ae7e60cd449cbea33cd" course="MATH 1030" chapter="7" slide="19" item="7.18">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" serial="" slide="19">Nonsingular Matrices Row Reduce to the Identity Matrix</title>
               <label wbtag="label" name="NMRRI" type="Theorem"/>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix and $B$ is a row-equivalent matrix in reduced row-echelon form. Then $A$ is nonsingular if and only if $B$ is the identity matrix. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="5990c9ba17f44e79ec5dbe4190640225" course="MATH 1030" chapter="7" slide="20" of="63a0fa79dbb22ae7e60cd449cbea33cd" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="20" of-type="Theorem" of-item="7.19" of-src-filename="lec7.xml" ofmd5="63a0fa79dbb22ae7e60cd449cbea33cd" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="5990c9ba17f44e79ec5dbe4190640225" course="MATH 1030" chapter="7" slide="19" of="63a0fa79dbb22ae7e60cd449cbea33cd" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="19" of-type="Theorem" of-item="7.18" of-src-filename="lec7.xml" ofmd5="63a0fa79dbb22ae7e60cd449cbea33cd" of-serial="">
               <of-title hidden="true">Nonsingular Matrices Row Reduce to the Identity Matrix</of-title>
               <newline course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement"/>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">($\Leftarrow$) </paragraphs>
@@ -794,9 +751,9 @@ Thus, $n-r=0$, and so $n=r$. So $B$ has $n$ pivot columns among its total of $n$
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="21" id="s21" slide="21" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices">
-            <keywords slide="21" environ="slide" chapter="7" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="20" md5="a42d16c09b95c6a4cda97d26b52ea743" course="MATH 1030" chapter="7" slide="21" item="7.20">
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="20" id="s20" slide="20" course="MATH 1030" chapter="7" section="5" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices">
+            <keywords slide="20" environ="slide" chapter="7" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="19" md5="a42d16c09b95c6a4cda97d26b52ea743" course="MATH 1030" chapter="7" slide="20" item="7.19">
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> \[A=\begin{bmatrix}1&amp;-1&amp;2\\
 2&amp;1&amp;1\\
 1&amp;1&amp;0\end{bmatrix}\]
@@ -806,7 +763,7 @@ is row equivalent to the reduced row echelon form
 0&amp;0&amp;0\end{bmatrix}.\]
 Since $B$ is not the $3\times 3$ identity matrix, the above theorem tells us that $A$ is a singular matrix. </paragraphs>
             </statement>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="21" md5="bb21a2b459c259f65f1c2b3cae530582" course="MATH 1030" chapter="7" slide="21" item="7.21">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="20" md5="bb21a2b459c259f65f1c2b3cae530582" course="MATH 1030" chapter="7" slide="20" item="7.20">
               <newcol course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \[A=\begin{bmatrix}-7&amp;-6&amp;-12\\
 5&amp;5&amp;7\\
@@ -827,25 +784,25 @@ Since $B$ is the $3\times 3$ identity matrix, $A$ is a nonsingular matrix by the
         </title>
         <label wbtag="label" name="NMI" type="Section"/>
         <slides environment="" chapter_type="">
-          <slide environment="" chapter_type="Chapter" canon_num="22" scope="section" id="s22" slide="22" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices are Invertible">
-            <keywords slide="22" environ="slide" chapter="7" course="MATH 1030"/>
-            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" serial="" slide="22">
+          <slide environment="" chapter_type="Chapter" canon_num="21" scope="section" id="s21" slide="21" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices are Invertible">
+            <keywords slide="21" environ="slide" chapter="7" course="MATH 1030"/>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" serial="" slide="21">
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Nonsingular Matrices are Invertible</paragraphs>
             </title>
             <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="" wbtag="paragraphs"> For $\alpha,\beta\in{\mathbb{R}}^{\hbox{}}$, then $\alpha\beta\neq 0$ if and only if $\alpha\neq 0$ and $\beta\neq 0$.
 We have a similar result for nonsingular matrix</paragraphs>
             <newline course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="23" id="s23" slide="23" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices are Invertible">
-            <keywords slide="23" environ="slide" chapter="7" course="MATH 1030">
-              <keyword chapter="7" slide="23">Nonsingular Product has Nonsingular Terms</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="22" id="s22" slide="22" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices are Invertible">
+            <keywords slide="22" environ="slide" chapter="7" course="MATH 1030">
+              <keyword chapter="7" slide="22">Nonsingular Product has Nonsingular Terms</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="22" title="Nonsingular Product has Nonsingular Terms" md5="4a6fa187252d4410af384bca4874b76e" course="MATH 1030" chapter="7" slide="23" item="7.22">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" serial="" slide="23">Nonsingular Product has Nonsingular Terms</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="21" title="Nonsingular Product has Nonsingular Terms" md5="4a6fa187252d4410af384bca4874b76e" course="MATH 1030" chapter="7" slide="22" item="7.21">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" serial="" slide="22">Nonsingular Product has Nonsingular Terms</title>
               <label wbtag="label" name="NPNT" type="Theorem"/>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ and $B$ are square matrices of size $n$. The product $AB$ is nonsingular if and only if $A$ and $B$ are both nonsingular. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="0859938b87cf6e130aeae5f68b2bba63" course="MATH 1030" chapter="7" slide="23" of="4a6fa187252d4410af384bca4874b76e" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="23" of-type="Theorem" of-item="7.22" of-src-filename="lec7.xml" ofmd5="4a6fa187252d4410af384bca4874b76e" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="0859938b87cf6e130aeae5f68b2bba63" course="MATH 1030" chapter="7" slide="22" of="4a6fa187252d4410af384bca4874b76e" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="22" of-type="Theorem" of-item="7.21" of-src-filename="lec7.xml" ofmd5="4a6fa187252d4410af384bca4874b76e" of-serial="">
               <of-title hidden="true">Nonsingular Product has Nonsingular Terms</of-title>
               <newcol course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> ($\Rightarrow$) For this portion of the proof we will form the logically-equivalent contrapositive and prove that statement using two cases.</paragraphs>
@@ -909,20 +866,20 @@ This contradicts $\mathbf{y} \neq \mathbf{0}$. Hence, $\mathbf{w} \neq \mathbf{0
               <newline course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
             </newcol>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="24" id="s24" slide="24" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices are Invertible">
-            <keywords slide="24" environ="slide" chapter="7" course="MATH 1030">
-              <keyword chapter="7" slide="24">One-Sided Inverse is Sufficient</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="23" id="s23" slide="23" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices are Invertible">
+            <keywords slide="23" environ="slide" chapter="7" course="MATH 1030">
+              <keyword chapter="7" slide="23">One-Sided Inverse is Sufficient</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="23" title="One-Sided Inverse is Sufficient" md5="27368124ff49dae27ca58380923786ba" course="MATH 1030" chapter="7" slide="24" item="7.23">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" serial="" slide="24">One-Sided Inverse is Sufficient</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="22" title="One-Sided Inverse is Sufficient" md5="27368124ff49dae27ca58380923786ba" course="MATH 1030" chapter="7" slide="23" item="7.22">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" serial="" slide="23">One-Sided Inverse is Sufficient</title>
               <label wbtag="label" name="OSIS" type="Theorem"/>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ and $B$ are square matrices of size $n$ such that $AB=I_{n}$. Then $BA=I_{n}$. </paragraphs>
             </statement>
             <newline course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="a039e5a51a86cce3adb718c3da492567" course="MATH 1030" chapter="7" slide="24" of="27368124ff49dae27ca58380923786ba" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="24" of-type="Theorem" of-item="7.23" of-src-filename="lec7.xml" ofmd5="27368124ff49dae27ca58380923786ba" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="a039e5a51a86cce3adb718c3da492567" course="MATH 1030" chapter="7" slide="23" of="27368124ff49dae27ca58380923786ba" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="23" of-type="Theorem" of-item="7.22" of-src-filename="lec7.xml" ofmd5="27368124ff49dae27ca58380923786ba" of-serial="">
               <of-title hidden="true">One-Sided Inverse is Sufficient</of-title>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs"> The matrix $I_{n}$ is nonsingular. So by </paragraphs>
-              <ref environment="substatement" chapter_type="" label="NPNT" wbtag="ref" course="MATH 1030" chapter="7" slide="24" referrer-type="Proof" referrer-md5="a039e5a51a86cce3adb718c3da492567" src-course="MATH 1030" src-chapter="7" src-slide="23" type="Theorem" item="7.22" src-filename="lec7.xml" md5="4a6fa187252d4410af384bca4874b76e" class="lcref" serial="">
+              <ref environment="substatement" chapter_type="" label="NPNT" wbtag="ref" course="MATH 1030" chapter="7" slide="23" referrer-type="Proof" referrer-md5="a039e5a51a86cce3adb718c3da492567" src-course="MATH 1030" src-chapter="7" src-slide="22" type="Theorem" item="7.21" src-filename="lec7.xml" md5="4a6fa187252d4410af384bca4874b76e" class="lcref" serial="">
                 <title custom="true">Nonsingular Product has Nonsingular Terms</title>
               </ref>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs"> $A$ is nonsingular.</paragraphs>
@@ -950,16 +907,16 @@ BA = J_k\cdots J_2 J_1 A = I_n
             </substatement>
             <newline course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="25" id="s25" slide="25" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices are Invertible">
-            <keywords slide="25" environ="slide" chapter="7" course="MATH 1030">
-              <keyword chapter="7" slide="25">Nonsingularity is Invertibility</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="24" id="s24" slide="24" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices are Invertible">
+            <keywords slide="24" environ="slide" chapter="7" course="MATH 1030">
+              <keyword chapter="7" slide="24">Nonsingularity is Invertibility</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="24" title="Nonsingularity is Invertibility" md5="d3dbea32c0efccc59935842aa77652cb" course="MATH 1030" chapter="7" slide="25" item="7.24">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" serial="" slide="25">Nonsingularity is Invertibility</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="23" title="Nonsingularity is Invertibility" md5="d3dbea32c0efccc59935842aa77652cb" course="MATH 1030" chapter="7" slide="24" item="7.23">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" serial="" slide="24">Nonsingularity is Invertibility</title>
               <label wbtag="label" name="NI" type="Theorem"/>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix. Then $A$ is nonsingular if and only if $A$ is invertible. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="f9fc5ff56eb5f407c8a7db507df4a3ba" course="MATH 1030" chapter="7" slide="25" of="d3dbea32c0efccc59935842aa77652cb" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="25" of-type="Theorem" of-item="7.24" of-src-filename="lec7.xml" ofmd5="d3dbea32c0efccc59935842aa77652cb" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="f9fc5ff56eb5f407c8a7db507df4a3ba" course="MATH 1030" chapter="7" slide="24" of="d3dbea32c0efccc59935842aa77652cb" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="24" of-type="Theorem" of-item="7.23" of-src-filename="lec7.xml" ofmd5="d3dbea32c0efccc59935842aa77652cb" of-serial="">
               <of-title hidden="true">Nonsingularity is Invertibility</of-title>
               <newcol course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> ($\Leftarrow$)
@@ -981,7 +938,7 @@ which means there are elementary matrices $J_1, J_2, \ldots, J_k$ such that:
 J_k\cdots J_2 J_1 A = I_n
 \]
 It now follows from </paragraphs>
-                  <ref environment="newcol" chapter_type="" label="OSIS" wbtag="ref" course="MATH 1030" chapter="7" slide="25" referrer-type="Proof" referrer-md5="f9fc5ff56eb5f407c8a7db507df4a3ba" src-course="MATH 1030" src-chapter="7" src-slide="24" type="Theorem" item="7.23" src-filename="lec7.xml" md5="27368124ff49dae27ca58380923786ba" class="lcref" serial="">
+                  <ref environment="newcol" chapter_type="" label="OSIS" wbtag="ref" course="MATH 1030" chapter="7" slide="24" referrer-type="Proof" referrer-md5="f9fc5ff56eb5f407c8a7db507df4a3ba" src-course="MATH 1030" src-chapter="7" src-slide="23" type="Theorem" item="7.22" src-filename="lec7.xml" md5="27368124ff49dae27ca58380923786ba" class="lcref" serial="">
                     <title custom="true">One-Sided Inverse is Sufficient</title>
                   </ref>
                   <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> that $A$ is invertible, with:
@@ -992,22 +949,22 @@ A^{-1} =  J_k\cdots J_2 J_1.
                 </collapse>
               </newcol>
             </substatement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="2a1e8d857d4e4e20dc3c0ad724cb3653" course="MATH 1030" chapter="7" slide="25">
+            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="2a1e8d857d4e4e20dc3c0ad724cb3653" course="MATH 1030" chapter="7" slide="24">
               <newcol course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So for a square matrix, the properties of having an inverse and of having a trivial null space are one and the same. Cannot have one without the other. </paragraphs>
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="26" id="s26" slide="26" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices are Invertible">
-            <keywords slide="26" environ="slide" chapter="7" course="MATH 1030">
-              <keyword chapter="7" slide="26">Nonsingular Matrices and Unique Solutions</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="25" id="s25" slide="25" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices are Invertible">
+            <keywords slide="25" environ="slide" chapter="7" course="MATH 1030">
+              <keyword chapter="7" slide="25">Nonsingular Matrices and Unique Solutions</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="25" title="Nonsingular Matrices and Unique Solutions" md5="b25e99edb5cb21a0655d0d961da21e47" course="MATH 1030" chapter="7" slide="26" item="7.25">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" serial="" slide="26">Nonsingular Matrices and Unique Solutions</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="24" title="Nonsingular Matrices and Unique Solutions" md5="b25e99edb5cb21a0655d0d961da21e47" course="MATH 1030" chapter="7" slide="25" item="7.24">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" serial="" slide="25">Nonsingular Matrices and Unique Solutions</title>
               <label wbtag="label" name="NMUS" type="Theorem"/>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix. $A$ is a nonsingular matrix if and only if the system $\linearsystem{A}{\mathbf{b}}$ has a unique solution for every choice of the constant vector $\mathbf{b}$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="a139ccd2c16622d9b967c14637d1d11c" course="MATH 1030" chapter="7" slide="26" of="b25e99edb5cb21a0655d0d961da21e47" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="26" of-type="Theorem" of-item="7.25" of-src-filename="lec7.xml" ofmd5="b25e99edb5cb21a0655d0d961da21e47" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="a139ccd2c16622d9b967c14637d1d11c" course="MATH 1030" chapter="7" slide="25" of="b25e99edb5cb21a0655d0d961da21e47" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="25" of-type="Theorem" of-item="7.24" of-src-filename="lec7.xml" ofmd5="b25e99edb5cb21a0655d0d961da21e47" of-serial="">
               <of-title hidden="true">Nonsingular Matrices and Unique Solutions</of-title>
               <newline course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="substatement"/>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">($\Rightarrow$) </paragraphs>
@@ -1026,7 +983,7 @@ to be nonsingular. </paragraphs>
                 <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We assume that $A$ is nonsingular of size $n\times n$,
 so we know there is a sequence of row operations that will convert $A$
 into the identity matrix $I_{n}$ (Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="NMRRI" wbtag="ref" course="MATH 1030" chapter="7" slide="26" referrer-type="Proof" referrer-md5="a139ccd2c16622d9b967c14637d1d11c" src-course="MATH 1030" src-chapter="7" src-slide="20" type="Theorem" item="7.19" src-filename="lec7.xml" md5="63a0fa79dbb22ae7e60cd449cbea33cd" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="NMRRI" wbtag="ref" course="MATH 1030" chapter="7" slide="25" referrer-type="Proof" referrer-md5="a139ccd2c16622d9b967c14637d1d11c" src-course="MATH 1030" src-chapter="7" src-slide="19" type="Theorem" item="7.18" src-filename="lec7.xml" md5="63a0fa79dbb22ae7e60cd449cbea33cd" class="lcref" serial="">
                   <title custom="true">Nonsingular Matrices Row Reduce to the Identity Matrix</title>
                 </ref>
                 <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">).
@@ -1044,7 +1001,7 @@ and so we therefore know that the solution is unique. </paragraphs>
               </newcol>
             </substatement>
             <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Alternatively, </paragraphs>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="0a0ec02b65d2c45f88b41221a215a5c3" course="MATH 1030" chapter="7" slide="26" of="b25e99edb5cb21a0655d0d961da21e47" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="26" of-type="Theorem" of-item="7.25" of-src-filename="lec7.xml" ofmd5="b25e99edb5cb21a0655d0d961da21e47" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="0a0ec02b65d2c45f88b41221a215a5c3" course="MATH 1030" chapter="7" slide="25" of="b25e99edb5cb21a0655d0d961da21e47" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="25" of-type="Theorem" of-item="7.24" of-src-filename="lec7.xml" ofmd5="b25e99edb5cb21a0655d0d961da21e47" of-serial="">
               <of-title hidden="true">Nonsingular Matrices and Unique Solutions</of-title>
               <newcol course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose $A \mathbf{x} = \mathbf{b}$ has a unique solution for every vector $\mathbf{b}$. Then, in particular, the only solution to $A\mathbf{x} = \mathbf{0}$
@@ -1059,12 +1016,12 @@ So, $A\mathbf{x} = \mathbf{b}$ implies that the unique solution is $\mathbf{x} =
               </newcol>
             </substatement>
           </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="27" id="s27" slide="27" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices are Invertible">
-            <keywords slide="27" environ="slide" chapter="7" course="MATH 1030">
-              <keyword chapter="7" slide="27">Nonsingular Matrix Equivalences</keyword>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="26" id="s26" slide="26" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices are Invertible">
+            <keywords slide="26" environ="slide" chapter="7" course="MATH 1030">
+              <keyword chapter="7" slide="26">Nonsingular Matrix Equivalences</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="26" title="Nonsingular Matrix Equivalences" md5="1e1dd7239ec1903aea787f0fbd695b01" course="MATH 1030" chapter="7" slide="27" item="7.26">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" serial="" slide="27">Nonsingular Matrix Equivalences</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="25" title="Nonsingular Matrix Equivalences" md5="1e1dd7239ec1903aea787f0fbd695b01" course="MATH 1030" chapter="7" slide="26" item="7.25">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" serial="" slide="26">Nonsingular Matrix Equivalences</title>
               <comment course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="statement"> @label{NME3} </comment>
               <label wbtag="label" name="NME1" type="Theorem"/>
               <label wbtag="label" name="NMEInverse" type="Theorem"/>
@@ -1090,24 +1047,24 @@ ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$. </paragraphs>
                 </item>
               </enumerate>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="b822a77f2ec5def4e99d64371c71bc20" course="MATH 1030" chapter="7" slide="27" of="1e1dd7239ec1903aea787f0fbd695b01" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="27" of-type="Theorem" of-item="7.26" of-src-filename="lec7.xml" ofmd5="1e1dd7239ec1903aea787f0fbd695b01" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="b822a77f2ec5def4e99d64371c71bc20" course="MATH 1030" chapter="7" slide="26" of="1e1dd7239ec1903aea787f0fbd695b01" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="26" of-type="Theorem" of-item="7.25" of-src-filename="lec7.xml" ofmd5="1e1dd7239ec1903aea787f0fbd695b01" of-serial="">
               <of-title hidden="true">Nonsingular Matrix Equivalences</of-title>
               <newcol course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The statement that $A$ is nonsingular is equivalent to each of the subsequent statements by, in turn,
 theorems </paragraphs>
-                <ref environment="newcol" chapter_type="" label="NMRRI" wbtag="ref" course="MATH 1030" chapter="7" slide="27" referrer-type="Proof" referrer-md5="b822a77f2ec5def4e99d64371c71bc20" src-course="MATH 1030" src-chapter="7" src-slide="20" type="Theorem" item="7.19" src-filename="lec7.xml" md5="63a0fa79dbb22ae7e60cd449cbea33cd" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="NMRRI" wbtag="ref" course="MATH 1030" chapter="7" slide="26" referrer-type="Proof" referrer-md5="b822a77f2ec5def4e99d64371c71bc20" src-course="MATH 1030" src-chapter="7" src-slide="19" type="Theorem" item="7.18" src-filename="lec7.xml" md5="63a0fa79dbb22ae7e60cd449cbea33cd" class="lcref" serial="">
                   <title custom="true">Nonsingular Matrices Row Reduce to the Identity Matrix</title>
                 </ref>
                 <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, </paragraphs>
-                <ref environment="newcol" chapter_type="" label="NMTNS" wbtag="ref" course="MATH 1030" chapter="7" slide="27" referrer-type="Proof" referrer-md5="b822a77f2ec5def4e99d64371c71bc20" src-course="MATH 1030" src-chapter="7" src-slide="17" type="Definition" item="7.15" src-filename="lec7.xml" md5="5ce26d1ac670345bcd61500f3e4cc002" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="NMTNS" wbtag="ref" course="MATH 1030" chapter="7" slide="26" referrer-type="Proof" referrer-md5="b822a77f2ec5def4e99d64371c71bc20" src-course="MATH 1030" src-chapter="7" src-slide="16" type="Definition" item="7.14" src-filename="lec7.xml" md5="5ce26d1ac670345bcd61500f3e4cc002" class="lcref" serial="">
                   <title custom="true">Nonsingular Matrix</title>
                 </ref>
                 <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, </paragraphs>
-                <ref environment="newcol" chapter_type="" label="NMUS" wbtag="ref" course="MATH 1030" chapter="7" slide="27" referrer-type="Proof" referrer-md5="b822a77f2ec5def4e99d64371c71bc20" src-course="MATH 1030" src-chapter="7" src-slide="26" type="Theorem" item="7.25" src-filename="lec7.xml" md5="b25e99edb5cb21a0655d0d961da21e47" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="NMUS" wbtag="ref" course="MATH 1030" chapter="7" slide="26" referrer-type="Proof" referrer-md5="b822a77f2ec5def4e99d64371c71bc20" src-course="MATH 1030" src-chapter="7" src-slide="25" type="Theorem" item="7.24" src-filename="lec7.xml" md5="b25e99edb5cb21a0655d0d961da21e47" class="lcref" serial="">
                   <title custom="true">Nonsingular Matrices and Unique Solutions</title>
                 </ref>
                 <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, </paragraphs>
-                <ref environment="newcol" chapter_type="" label="NI" wbtag="ref" course="MATH 1030" chapter="7" slide="27" referrer-type="Proof" referrer-md5="b822a77f2ec5def4e99d64371c71bc20" src-course="MATH 1030" src-chapter="7" src-slide="25" type="Theorem" item="7.24" src-filename="lec7.xml" md5="d3dbea32c0efccc59935842aa77652cb" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="NI" wbtag="ref" course="MATH 1030" chapter="7" slide="26" referrer-type="Proof" referrer-md5="b822a77f2ec5def4e99d64371c71bc20" src-course="MATH 1030" src-chapter="7" src-slide="24" type="Theorem" item="7.23" src-filename="lec7.xml" md5="d3dbea32c0efccc59935842aa77652cb" class="lcref" serial="">
                   <title custom="true">Nonsingularity is Invertibility</title>
                 </ref>
                 <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. </paragraphs>
