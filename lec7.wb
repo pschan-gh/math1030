@@ -600,36 +600,6 @@ The contrapositive of this entire result is equally interesting. It says that $A
 @endcol
 @slide
 @thm
-@title{One-Sided Inverse is Sufficient}
-@label{OSIS}
-Suppose $A$ and $B$ are square matrices of size $n$ such that $AB=I_{n}$. Then $BA=I_{n}$.
-@end
-
-@proof
-The matrix $I_{n}$ is nonsingular. So by @ref{NPNT} $A$ is nonsingular.
-
-@newcol
-Hence, $A$ is row equivalent to the identity matrix $I_n$,
-which means there are elementary matrices $J_1, J_2, \ldots, J_k$ such that:
-\[
-J_k\cdots J_2 J_1 A = I_n.
-\]
-@col
-Hence, $AB = I_n$ implies that:
-\[
-\underbrace{J_k\cdots J_2 J_1 A}_{I_n} B = \underbrace{J_k\cdots J_2 J_1 I_n}_{J_k\cdots J_2 J_1}
-\]
-@col
-So, $B = J_k\cdots J_2 J_1$, and:
-\[
-BA = J_k\cdots J_2 J_1 A = I_n
-\]
-@qed
-@endcol
-@end
-
-@slide
-@thm
 @title{Nonsingularity is Invertibility}
 @label{NI}
 Suppose that $A$ is a square matrix. Then $A$ is nonsingular if and only if $A$ is invertible.
@@ -654,10 +624,27 @@ which means there are elementary matrices $J_1, J_2, \ldots, J_k$ such that:
 \[
 J_k\cdots J_2 J_1 A = I_n
 \]
+(__Exercise:__ Every elementary matrix $J$ is invertible.)
+
+Hence,
+\[
+A = J_1^{-1} J_2^{-1} \cdots J_k^{-1}
+\]
+@col
+Since, $A$ is a product of invertible matrices,
+it is itself invertible, with:
+\[
+A^{-1}
+=
+J_k\cdots J_2 J_1.
+\]
+(__Check__: $AA^{-1} = A^{-1} A = I_n$.)
+<!--
 It now follows from @ref{OSIS} that $A$ is invertible, with:
 \[
 A^{-1} =  J_k\cdots J_2 J_1.
 \]
+-->
 @qed
 @endcol
 @end
@@ -666,6 +653,41 @@ A^{-1} =  J_k\cdots J_2 J_1.
 So for a square matrix, the properties of having an inverse and of having a trivial null space are one and the same. Cannot have one without the other.
 @endcol
 @end
+@slide
+@corollary
+@title{One-Sided Inverse is Sufficient}
+@label{OSIS}
+Suppose $A$ and $B$ are square matrices of size $n$ such that $AB=I_{n}$. Then $BA=I_{n}$.
+@end
+
+@proof
+
+**Exercise.**
+@end
+<!--
+@proof
+The matrix $I_{n}$ is nonsingular. So by @ref{NPNT} $A$ is nonsingular.
+
+@newcol
+Hence, $A$ is row equivalent to the identity matrix $I_n$,
+which means there are elementary matrices $J_1, J_2, \ldots, J_k$ such that:
+\[
+J_k\cdots J_2 J_1 A = I_n.
+\]
+@col
+Hence, $AB = I_n$ implies that:
+\[
+\underbrace{J_k\cdots J_2 J_1 A}_{I_n} B = \underbrace{J_k\cdots J_2 J_1 I_n}_{J_k\cdots J_2 J_1}
+\]
+@col
+So, $B = J_k\cdots J_2 J_1$, and:
+\[
+BA = J_k\cdots J_2 J_1 A = I_n
+\]
+@qed
+@endcol
+@end
+-->
 @slide
 @thm
 @title{Nonsingular Matrices and Unique Solutions}

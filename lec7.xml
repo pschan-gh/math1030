@@ -11,6 +11,7 @@
       <keyword chapter="" slide="all">nonsingular</keyword>
       <keyword chapter="" slide="all">singular</keyword>
       <keyword chapter="" slide="all">identity matrix</keyword>
+      <keyword chapter="" slide="all">Check</keyword>
       <keyword chapter="" slide="all">Homogeneous System</keyword>
       <keyword chapter="" slide="all">Homogeneous System corresponding to system of linear equation</keyword>
       <keyword chapter="" slide="all">Homogeneous Systems are Consistent</keyword>
@@ -20,8 +21,8 @@
       <keyword chapter="" slide="all">Identity Matrix</keyword>
       <keyword chapter="" slide="all">Nonsingular Matrices Row Reduce to the Identity Matrix</keyword>
       <keyword chapter="" slide="all">Nonsingular Product has Nonsingular Terms</keyword>
-      <keyword chapter="" slide="all">One-Sided Inverse is Sufficient</keyword>
       <keyword chapter="" slide="all">Nonsingularity is Invertibility</keyword>
+      <keyword chapter="" slide="all">One-Sided Inverse is Sufficient</keyword>
       <keyword chapter="" slide="all">Nonsingular Matrices and Unique Solutions</keyword>
       <keyword chapter="" slide="all">Nonsingular Matrix Equivalences</keyword>
     </keywords>
@@ -45,6 +46,7 @@
         <keyword chapter="7" slide="all">nonsingular</keyword>
         <keyword chapter="7" slide="all">singular</keyword>
         <keyword chapter="7" slide="all">identity matrix</keyword>
+        <keyword chapter="7" slide="all">Check</keyword>
         <keyword chapter="7" slide="all">Homogeneous System</keyword>
         <keyword chapter="7" slide="all">Homogeneous System corresponding to system of linear equation</keyword>
         <keyword chapter="7" slide="all">Homogeneous Systems are Consistent</keyword>
@@ -54,8 +56,8 @@
         <keyword chapter="7" slide="all">Identity Matrix</keyword>
         <keyword chapter="7" slide="all">Nonsingular Matrices Row Reduce to the Identity Matrix</keyword>
         <keyword chapter="7" slide="all">Nonsingular Product has Nonsingular Terms</keyword>
-        <keyword chapter="7" slide="all">One-Sided Inverse is Sufficient</keyword>
         <keyword chapter="7" slide="all">Nonsingularity is Invertibility</keyword>
+        <keyword chapter="7" slide="all">One-Sided Inverse is Sufficient</keyword>
         <keyword chapter="7" slide="all">Nonsingular Matrices and Unique Solutions</keyword>
         <keyword chapter="7" slide="all">Nonsingular Matrix Equivalences</keyword>
       </keywords>
@@ -868,55 +870,15 @@ This contradicts $\mathbf{y} \neq \mathbf{0}$. Hence, $\mathbf{w} \neq \mathbf{0
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="23" id="s23" slide="23" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices are Invertible">
             <keywords slide="23" environ="slide" chapter="7" course="MATH 1030">
-              <keyword chapter="7" slide="23">One-Sided Inverse is Sufficient</keyword>
+              <keyword chapter="7" slide="23">Check</keyword>
+              <keyword chapter="7" slide="23">Nonsingularity is Invertibility</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="22" title="One-Sided Inverse is Sufficient" md5="27368124ff49dae27ca58380923786ba" course="MATH 1030" chapter="7" slide="23" item="7.22">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" serial="" slide="23">One-Sided Inverse is Sufficient</title>
-              <label wbtag="label" name="OSIS" type="Theorem"/>
-              <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ and $B$ are square matrices of size $n$ such that $AB=I_{n}$. Then $BA=I_{n}$. </paragraphs>
-            </statement>
-            <newline course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="a039e5a51a86cce3adb718c3da492567" course="MATH 1030" chapter="7" slide="23" of="27368124ff49dae27ca58380923786ba" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="23" of-type="Theorem" of-item="7.22" of-src-filename="lec7.xml" ofmd5="27368124ff49dae27ca58380923786ba" of-serial="">
-              <of-title hidden="true">One-Sided Inverse is Sufficient</of-title>
-              <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs"> The matrix $I_{n}$ is nonsingular. So by </paragraphs>
-              <ref environment="substatement" chapter_type="" label="NPNT" wbtag="ref" course="MATH 1030" chapter="7" slide="23" referrer-type="Proof" referrer-md5="a039e5a51a86cce3adb718c3da492567" src-course="MATH 1030" src-chapter="7" src-slide="22" type="Theorem" item="7.21" src-filename="lec7.xml" md5="4a6fa187252d4410af384bca4874b76e" class="lcref" serial="">
-                <title custom="true">Nonsingular Product has Nonsingular Terms</title>
-              </ref>
-              <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs"> $A$ is nonsingular.</paragraphs>
-              <newline course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="substatement"/>
-              <newcol course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence, $A$ is row equivalent to the identity matrix $I_n$,
-which means there are elementary matrices $J_1, J_2, \ldots, J_k$ such that:
-\[
-J_k\cdots J_2 J_1 A = I_n.
-\] </paragraphs>
-                <collapse course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence, $AB = I_n$ implies that:
-\[
-\underbrace{J_k\cdots J_2 J_1 A}_{I_n} B = \underbrace{J_k\cdots J_2 J_1 I_n}_{J_k\cdots J_2 J_1}
-\] </paragraphs>
-                  <collapse course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So, $B = J_k\cdots J_2 J_1$, and:
-\[
-BA = J_k\cdots J_2 J_1 A = I_n
-\] </paragraphs>
-                    <qed course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
-                  </collapse>
-                </collapse>
-              </newcol>
-            </substatement>
-            <newline course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
-          </slide>
-          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="24" id="s24" slide="24" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices are Invertible">
-            <keywords slide="24" environ="slide" chapter="7" course="MATH 1030">
-              <keyword chapter="7" slide="24">Nonsingularity is Invertibility</keyword>
-            </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="23" title="Nonsingularity is Invertibility" md5="d3dbea32c0efccc59935842aa77652cb" course="MATH 1030" chapter="7" slide="24" item="7.23">
-              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" serial="" slide="24">Nonsingularity is Invertibility</title>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="22" title="Nonsingularity is Invertibility" md5="d3dbea32c0efccc59935842aa77652cb" course="MATH 1030" chapter="7" slide="23" item="7.22">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" serial="" slide="23">Nonsingularity is Invertibility</title>
               <label wbtag="label" name="NI" type="Theorem"/>
               <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix. Then $A$ is nonsingular if and only if $A$ is invertible. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="f9fc5ff56eb5f407c8a7db507df4a3ba" course="MATH 1030" chapter="7" slide="24" of="d3dbea32c0efccc59935842aa77652cb" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="24" of-type="Theorem" of-item="7.23" of-src-filename="lec7.xml" ofmd5="d3dbea32c0efccc59935842aa77652cb" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="b59f989e90ccc313b0c03febdce44ccb" course="MATH 1030" chapter="7" slide="23" of="d3dbea32c0efccc59935842aa77652cb" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="23" of-type="Theorem" of-item="7.22" of-src-filename="lec7.xml" ofmd5="d3dbea32c0efccc59935842aa77652cb" of-serial="">
               <of-title hidden="true">Nonsingularity is Invertibility</of-title>
               <newcol course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> ($\Leftarrow$)
@@ -937,23 +899,79 @@ which means there are elementary matrices $J_1, J_2, \ldots, J_k$ such that:
 \[
 J_k\cdots J_2 J_1 A = I_n
 \]
-It now follows from </paragraphs>
-                  <ref environment="newcol" chapter_type="" label="OSIS" wbtag="ref" course="MATH 1030" chapter="7" slide="24" referrer-type="Proof" referrer-md5="f9fc5ff56eb5f407c8a7db507df4a3ba" src-course="MATH 1030" src-chapter="7" src-slide="23" type="Theorem" item="7.22" src-filename="lec7.xml" md5="27368124ff49dae27ca58380923786ba" class="lcref" serial="">
-                    <title custom="true">One-Sided Inverse is Sufficient</title>
-                  </ref>
-                  <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> that $A$ is invertible, with:
+(</paragraphs>
+                  <inline_keyword course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol">Exercise:</inline_keyword>
+                  <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Every elementary matrix $J$ is invertible.)</paragraphs>
+                  <newline course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
+                  <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Hence,
+\[
+A = J_1^{-1} J_2^{-1} \cdots J_k^{-1}
+\] </paragraphs>
+                  <collapse course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Since, $A$ is a product of invertible matrices,
+it is itself invertible, with:
+\[
+A^{-1}
+=
+J_k\cdots J_2 J_1.
+\]
+(</paragraphs>
+                    <inline_keyword course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol">Check</inline_keyword>
+                    <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: $AA^{-1} = A^{-1} A = I_n$.) </paragraphs>
+                    <comment course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol">
+It now follows from @ref{OSIS} that $A$ is invertible, with:
 \[
 A^{-1} =  J_k\cdots J_2 J_1.
-\] </paragraphs>
-                  <qed course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
+\]
+</comment>
+                    <qed course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
+                  </collapse>
                 </collapse>
               </newcol>
             </substatement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="2a1e8d857d4e4e20dc3c0ad724cb3653" course="MATH 1030" chapter="7" slide="24">
+            <substatement environment="substatement" chapter_type="Chapter" type="Remark" wbtag="remark" md5="2a1e8d857d4e4e20dc3c0ad724cb3653" course="MATH 1030" chapter="7" slide="23">
               <newcol course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> So for a square matrix, the properties of having an inverse and of having a trivial null space are one and the same. Cannot have one without the other. </paragraphs>
               </newcol>
             </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="24" id="s24" slide="24" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices are Invertible">
+            <keywords slide="24" environ="slide" chapter="7" course="MATH 1030">
+              <keyword chapter="7" slide="24">One-Sided Inverse is Sufficient</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="23" title="One-Sided Inverse is Sufficient" md5="27368124ff49dae27ca58380923786ba" course="MATH 1030" chapter="7" slide="24" item="7.23">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" serial="" slide="24">One-Sided Inverse is Sufficient</title>
+              <label wbtag="label" name="OSIS" type="Corollary"/>
+              <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ and $B$ are square matrices of size $n$ such that $AB=I_{n}$. Then $BA=I_{n}$. </paragraphs>
+            </statement>
+            <newline course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment=""/>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="ef8fb97d271d5d2e855498ac9a9b41b7" course="MATH 1030" chapter="7" slide="24" of="27368124ff49dae27ca58380923786ba" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="24" of-type="Corollary" of-item="7.23" of-src-filename="lec7.xml" ofmd5="27368124ff49dae27ca58380923786ba" of-serial="">
+              <of-title hidden="true">One-Sided Inverse is Sufficient</of-title>
+              <newline course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="substatement"/>
+              <strong xmlns="http://www.w3.org/1999/xhtml" environment="substatement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">Exercise.</paragraphs>
+              </strong>
+            </substatement>
+            <comment course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="">@proof
+The matrix $I_{n}$ is nonsingular. So by @ref{NPNT} $A$ is nonsingular.
+
+@newcol
+Hence, $A$ is row equivalent to the identity matrix $I_n$,
+which means there are elementary matrices $J_1, J_2, \ldots, J_k$ such that:
+\[
+J_k\cdots J_2 J_1 A = I_n.
+\]
+@col
+Hence, $AB = I_n$ implies that:
+\[
+\underbrace{J_k\cdots J_2 J_1 A}_{I_n} B = \underbrace{J_k\cdots J_2 J_1 I_n}_{J_k\cdots J_2 J_1}
+\]
+@col
+So, $B = J_k\cdots J_2 J_1$, and:
+\[
+BA = J_k\cdots J_2 J_1 A = I_n
+\]
+@qed@endcol@end</comment>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="25" id="s25" slide="25" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices are Invertible">
             <keywords slide="25" environ="slide" chapter="7" course="MATH 1030">
@@ -1064,7 +1082,7 @@ theorems </paragraphs>
                   <title custom="true">Nonsingular Matrices and Unique Solutions</title>
                 </ref>
                 <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, </paragraphs>
-                <ref environment="newcol" chapter_type="" label="NI" wbtag="ref" course="MATH 1030" chapter="7" slide="26" referrer-type="Proof" referrer-md5="b822a77f2ec5def4e99d64371c71bc20" src-course="MATH 1030" src-chapter="7" src-slide="24" type="Theorem" item="7.23" src-filename="lec7.xml" md5="d3dbea32c0efccc59935842aa77652cb" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="NI" wbtag="ref" course="MATH 1030" chapter="7" slide="26" referrer-type="Proof" referrer-md5="b822a77f2ec5def4e99d64371c71bc20" src-course="MATH 1030" src-chapter="7" src-slide="23" type="Theorem" item="7.22" src-filename="lec7.xml" md5="d3dbea32c0efccc59935842aa77652cb" class="lcref" serial="">
                   <title custom="true">Nonsingularity is Invertibility</title>
                 </ref>
                 <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. </paragraphs>
