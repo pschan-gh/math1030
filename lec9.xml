@@ -1,0 +1,1696 @@
+<?xml version="1.0"?>
+<document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
+  <course environment="" chapter_type="" type="Course" wbtag="course" title="MATH 1030">
+    <keywords slide="all" environ="course" chapter="" course="MATH 1030">
+      <keyword chapter="" slide="all">Euclidean $m$-space</keyword>
+      <keyword chapter="" slide="all">equal</keyword>
+      <keyword chapter="" slide="all">sum</keyword>
+      <keyword chapter="" slide="all">scalar multiple</keyword>
+      <keyword chapter="" slide="all">ACC</keyword>
+      <keyword chapter="" slide="all">SCC</keyword>
+      <keyword chapter="" slide="all">CC</keyword>
+      <keyword chapter="" slide="all">AAC</keyword>
+      <keyword chapter="" slide="all">ZC</keyword>
+      <keyword chapter="" slide="all">zero vector</keyword>
+      <keyword chapter="" slide="all">AIC</keyword>
+      <keyword chapter="" slide="all">SMAC</keyword>
+      <keyword chapter="" slide="all">DVAC</keyword>
+      <keyword chapter="" slide="all">DSAC</keyword>
+      <keyword chapter="" slide="all">OC</keyword>
+      <keyword chapter="" slide="all">identities</keyword>
+      <keyword chapter="" slide="all">consequence</keyword>
+      <keyword chapter="" slide="all">vector subtraction</keyword>
+      <keyword chapter="" slide="all">AAC</keyword>
+      <keyword chapter="" slide="all">vector addition</keyword>
+      <keyword chapter="" slide="all">scalar multiplication</keyword>
+      <keyword chapter="" slide="all">vector space</keyword>
+      <keyword chapter="" slide="all">AC</keyword>
+      <keyword chapter="" slide="all">SC</keyword>
+      <keyword chapter="" slide="all">C</keyword>
+      <keyword chapter="" slide="all">AA</keyword>
+      <keyword chapter="" slide="all">Z</keyword>
+      <keyword chapter="" slide="all">zero vector</keyword>
+      <keyword chapter="" slide="all">AI</keyword>
+      <keyword chapter="" slide="all">SMA</keyword>
+      <keyword chapter="" slide="all">DVA</keyword>
+      <keyword chapter="" slide="all">DSA</keyword>
+      <keyword chapter="" slide="all">O</keyword>
+      <keyword chapter="" slide="all">vectors</keyword>
+      <keyword chapter="" slide="all">column vector space</keyword>
+      <keyword chapter="" slide="all">Row vector space</keyword>
+      <keyword chapter="" slide="all">Matrices</keyword>
+      <keyword chapter="" slide="all">The vector space of polynomials, $P_{n}$</keyword>
+      <keyword chapter="" slide="all">The vector space of functions</keyword>
+      <keyword chapter="" slide="all">The crazy vector space</keyword>
+      <keyword chapter="" slide="all">subspace</keyword>
+      <keyword chapter="" slide="all">Alternate proof</keyword>
+      <keyword chapter="" slide="all">Vector Space of Column Vectors</keyword>
+      <keyword chapter="" slide="all">Column Vector Equality</keyword>
+      <keyword chapter="" slide="all">Column Vector Addition</keyword>
+      <keyword chapter="" slide="all">Column Vector Scalar Multiplication</keyword>
+      <keyword chapter="" slide="all">Vector Space Properties of Column Vectors</keyword>
+      <keyword chapter="" slide="all">Cancellation Law for Vector Addition</keyword>
+      <keyword chapter="" slide="all">Uniqueness of the zero vector</keyword>
+      <keyword chapter="" slide="all">Uniqueness of the additive inverse</keyword>
+    </keywords>
+    <title environment="title" chapter_type="" wbtag="course" scope="course" course="MATH 1030" chapter="" section="" subsection="" subsubsection="" serial="" slide="">MATH 1030</title>
+    <slides environment="" chapter_type="">
+      <slide environment="" chapter_type="" canon_num="1" scope="course" course="MATH 1030" title="MATH 1030" id="s1" slide="1" chapter="" section="" subsection="" subsubsection="" chapter_title="" section_title="">
+        <title environment="title" chapter_type="" wbtag="course" scope="course" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="1">MATH 1030</title>
+        <keywords slide="1" environ="slide" chapter="" course="MATH 1030"/>
+        <setchapter course="MATH 1030" chapter="" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="setchapter" argument="9"/>
+      </slide>
+    </slides>
+    <chapter environment="" chapter_type="Chapter" type="Chapter" wbtag="chapter" num="9" title="Vector space and subspace" course="MATH 1030" serial="9">
+      <keywords slide="all" environ="chapter" chapter="9" course="MATH 1030">
+        <keyword chapter="9" slide="all">Euclidean $m$-space</keyword>
+        <keyword chapter="9" slide="all">equal</keyword>
+        <keyword chapter="9" slide="all">sum</keyword>
+        <keyword chapter="9" slide="all">scalar multiple</keyword>
+        <keyword chapter="9" slide="all">ACC</keyword>
+        <keyword chapter="9" slide="all">SCC</keyword>
+        <keyword chapter="9" slide="all">CC</keyword>
+        <keyword chapter="9" slide="all">AAC</keyword>
+        <keyword chapter="9" slide="all">ZC</keyword>
+        <keyword chapter="9" slide="all">zero vector</keyword>
+        <keyword chapter="9" slide="all">AIC</keyword>
+        <keyword chapter="9" slide="all">SMAC</keyword>
+        <keyword chapter="9" slide="all">DVAC</keyword>
+        <keyword chapter="9" slide="all">DSAC</keyword>
+        <keyword chapter="9" slide="all">OC</keyword>
+        <keyword chapter="9" slide="all">identities</keyword>
+        <keyword chapter="9" slide="all">consequence</keyword>
+        <keyword chapter="9" slide="all">vector subtraction</keyword>
+        <keyword chapter="9" slide="all">AAC</keyword>
+        <keyword chapter="9" slide="all">vector addition</keyword>
+        <keyword chapter="9" slide="all">scalar multiplication</keyword>
+        <keyword chapter="9" slide="all">vector space</keyword>
+        <keyword chapter="9" slide="all">AC</keyword>
+        <keyword chapter="9" slide="all">SC</keyword>
+        <keyword chapter="9" slide="all">C</keyword>
+        <keyword chapter="9" slide="all">AA</keyword>
+        <keyword chapter="9" slide="all">Z</keyword>
+        <keyword chapter="9" slide="all">zero vector</keyword>
+        <keyword chapter="9" slide="all">AI</keyword>
+        <keyword chapter="9" slide="all">SMA</keyword>
+        <keyword chapter="9" slide="all">DVA</keyword>
+        <keyword chapter="9" slide="all">DSA</keyword>
+        <keyword chapter="9" slide="all">O</keyword>
+        <keyword chapter="9" slide="all">vectors</keyword>
+        <keyword chapter="9" slide="all">column vector space</keyword>
+        <keyword chapter="9" slide="all">Row vector space</keyword>
+        <keyword chapter="9" slide="all">Matrices</keyword>
+        <keyword chapter="9" slide="all">The vector space of polynomials, $P_{n}$</keyword>
+        <keyword chapter="9" slide="all">The vector space of functions</keyword>
+        <keyword chapter="9" slide="all">The crazy vector space</keyword>
+        <keyword chapter="9" slide="all">subspace</keyword>
+        <keyword chapter="9" slide="all">Alternate proof</keyword>
+        <keyword chapter="9" slide="all">Vector Space of Column Vectors</keyword>
+        <keyword chapter="9" slide="all">Column Vector Equality</keyword>
+        <keyword chapter="9" slide="all">Column Vector Addition</keyword>
+        <keyword chapter="9" slide="all">Column Vector Scalar Multiplication</keyword>
+        <keyword chapter="9" slide="all">Vector Space Properties of Column Vectors</keyword>
+        <keyword chapter="9" slide="all">Cancellation Law for Vector Addition</keyword>
+        <keyword chapter="9" slide="all">Uniqueness of the zero vector</keyword>
+        <keyword chapter="9" slide="all">Uniqueness of the additive inverse</keyword>
+      </keywords>
+      <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="MATH 1030" chapter="9" section="" subsection="" subsubsection="" serial="" slide="">Vector space and subspace</title>
+      <slides environment="" chapter_type="">
+        <slide environment="" chapter_type="Chapter" canon_num="2" scope="chapter" id="s2" slide="2" course="MATH 1030" chapter="9" section="" subsection="" subsubsection="" chapter_title="Vector space and subspace" section_title="">
+          <title environment="title" chapter_type="Chapter" wbtag="chapter" scope="chapter" course="" chapter="" section="" subsection="" subsubsection="" serial="" slide="2">Vector space and subspace</title>
+          <keywords slide="2" environ="slide" chapter="9" course="MATH 1030"/>
+          <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> The lecture is based on Beezer, A first course in Linear algebra. Ver 3.5 Downloadable at </paragraphs>
+          <href course="MATH 1030" chapter="9" chapter_type="" section="" subsection="" subsubsection="" environment="" src="http://linear.ups.edu/download.html" name="http://linear.ups.edu/download.html" wbtag="href" argument="http://linear.ups.edu/download.html"/>
+          <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> .</paragraphs>
+          <newline course="MATH 1030" chapter="9" chapter_type="" section="" subsection="" subsubsection="" environment=""/>
+          <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">The print version can be downloaded at </paragraphs>
+          <href course="MATH 1030" chapter="9" chapter_type="" section="" subsection="" subsubsection="" environment="" src="http://linear.ups.edu/download/fcla-3.50-print.pdf" name="http://linear.ups.edu/download/fcla-3.50-print.pdf" wbtag="href" argument="http://linear.ups.edu/download/fcla-3.50-print.pdf"/>
+          <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> .</paragraphs>
+          <newline course="MATH 1030" chapter="9" chapter_type="" section="" subsection="" subsubsection="" environment=""/>
+          <h5 xmlns="http://www.w3.org/1999/xhtml" class="notkw" environment="">
+            <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">Reference.</paragraphs>
+          </h5>
+          <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Beezer, Ver 3.5 Section VO (print version p57 - p63)Subsection VS, EVS (print version p197-203)
+Strang, Section 2.1 </paragraphs>
+          <p xmlns="http://www.w3.org/1999/xhtml" environment=""/>
+          <h5 xmlns="http://www.w3.org/1999/xhtml" class="notkw" environment="">
+            <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs">Exercise.</paragraphs>
+          </h5>
+          <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdfSection VO (p.28-31) All questions.C10-C15, T05-T07, T13, T17, T18, T30-T32 Section VS (p.75-77) Replace $\mathbb{C}$ (the set of complex numbers) by $\mathbb{R}$ (the set of real numbers) M11, M12, M13, M14, M15, M20. </paragraphs>
+        </slide>
+      </slides>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Vectors" course="MATH 1030" chapter="9" num="1" serial="9.1">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="9" section="1" subsection="" subsubsection="" serial="" slide="">
+          <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Vectors</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="3" scope="section" id="s3" slide="3" course="MATH 1030" chapter="9" section="1" subsection="" subsubsection="" chapter_title="Vector space and subspace" section_title="Vectors">
+            <keywords slide="3" environ="slide" chapter="9" course="MATH 1030">
+              <keyword chapter="9" slide="3">Euclidean $m$-space</keyword>
+              <keyword chapter="9" slide="3">equal</keyword>
+              <keyword chapter="9" slide="3">Vector Space of Column Vectors</keyword>
+              <keyword chapter="9" slide="3">Column Vector Equality</keyword>
+            </keywords>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="9" section="1" subsection="" subsubsection="" serial="" slide="3">
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Vectors</paragraphs>
+            </title>
+            <strong xmlns="http://www.w3.org/1999/xhtml" environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs">Notation</paragraphs>
+            </strong>
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="" wbtag="paragraphs">: ${\mathbb{R}}^{\hbox{}}$ is the set of real numbers.
+If $X$ is a set, $x\in X$ means $x$ is an element of the set $X$. </paragraphs>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="1" title="Vector Space of Column Vectors" md5="ed2520635384bfcda23171f437714d82" course="MATH 1030" chapter="9" slide="3" item="9.1">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="9" section="1" subsection="" subsubsection="" serial="" slide="3">Vector Space of Column Vectors</title>
+              <label wbtag="label" name="VSCV" type="Definition"/>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The vector space ${\mathbb{R}}^{m}$ is the set of all column vectors of size $m$ with entries from the set of real numbers, ${\mathbb{R}}^{\hbox{}}$. ${\mathbb{R}}^{m}$ is also called the </paragraphs>
+              <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">Euclidean $m$-space</inline_keyword>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">. </paragraphs>
+            </statement>
+            <newline course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment=""/>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="2" title="Column Vector Equality" md5="e9502bb0e28904f737732502e0b6239c" course="MATH 1030" chapter="9" slide="3" item="9.2">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="9" section="1" subsection="" subsubsection="" serial="" slide="3">Column Vector Equality</title>
+              <label wbtag="label" name="CVE" type="Definition"/>
+              <newcol course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose that $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$. Then $\mathbf{u}$ and $\mathbf{v}$ are </paragraphs>
+                <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol">equal</inline_keyword>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, written $\mathbf{u}=\mathbf{v}$ if
+\begin{align*}
+\displaystyle\left[\mathbf{u}\right]_{i}&amp;\displaystyle=\left[\mathbf{v}\right]_{i}&amp;\displaystyle 1\leq i\leq m
+\end{align*}
+That is,
+\begin{align*}
+\displaystyle \begin{bmatrix}u_{1}\\
+u_{2}\\
+\vdots\\
+u_{m}\end{bmatrix}=\begin{bmatrix}v_{1}\\
+v_{2}\\
+\vdots\\
+v_{m}\end{bmatrix}
+\end{align*}
+if
+\begin{align*}
+\displaystyle u_{i}&amp;\displaystyle=v_{i}&amp;\displaystyle 1\leq i\leq m.
+\end{align*} </paragraphs>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="4" id="s4" slide="4" course="MATH 1030" chapter="9" section="1" subsection="" subsubsection="" chapter_title="Vector space and subspace" section_title="Vectors">
+            <keywords slide="4" environ="slide" chapter="9" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="3" md5="3aab76972deef7f044a7ed47ac167040" course="MATH 1030" chapter="9" slide="4" item="9.3">
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The system of linear equations:
+\begin{align*}
+\displaystyle-7x_{1}-6x_{2}-12x_{3}&amp;\displaystyle=-33 \\
+\displaystyle 5x_{1}+5x_{2}+7x_{3}&amp;\displaystyle=24 \\
+\displaystyle x_{1}+4x_{3}&amp;\displaystyle=5
+\end{align*}
+can be rewritten as:</paragraphs>
+              <newline course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle \begin{bmatrix}-7x_{1}-6x_{2}-12x_{3}\\
+5x_{1}+5x_{2}+7x_{3}\\
+x_{1}+4x_{3}\end{bmatrix}=\begin{bmatrix}-33\\
+24\\
+5\end{bmatrix}.
+\end{align*} </paragraphs>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="5" id="s5" slide="5" course="MATH 1030" chapter="9" section="1" subsection="" subsubsection="" chapter_title="Vector space and subspace" section_title="Vectors">
+            <keywords slide="5" environ="slide" chapter="9" course="MATH 1030">
+              <keyword chapter="9" slide="5">sum</keyword>
+              <keyword chapter="9" slide="5">Column Vector Addition</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="4" title="Column Vector Addition" md5="d780f8189e25800a4fa8cb4ff807c9db" course="MATH 1030" chapter="9" slide="5" item="9.4">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="9" section="1" subsection="" subsubsection="" serial="" slide="5">Column Vector Addition</title>
+              <label wbtag="label" name="CVA" type="Definition"/>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$. The </paragraphs>
+              <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">sum</inline_keyword>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $\mathbf{u}$ and $\mathbf{v}$ is the vector $\mathbf{u}+\mathbf{v}$ defined by
+\begin{align*}
+\displaystyle\left[\mathbf{u}+\mathbf{v}\right]_{i}&amp;\displaystyle=\left[\mathbf{u}\right]_{i}+\left[\mathbf{v}\right]_{i}&amp;\displaystyle 1\leq i\leq m.
+\end{align*}
+That is
+\begin{align*}
+\displaystyle \begin{bmatrix}u_{1}\\
+u_{2}\\
+\vdots\\
+u_{m}\end{bmatrix}+\begin{bmatrix}v_{1}\\
+v_{2}\\
+\vdots\\
+v_{m}\end{bmatrix}=\begin{bmatrix}u_{1}+v_{1}\\
+u_{2}+v_{2}\\
+\vdots\\
+u_{m}+v_{m}\end{bmatrix}.
+\end{align*} </paragraphs>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="5" md5="d247fa0b9c3c4c0c33f718ca4d46c1dc" course="MATH 1030" chapter="9" slide="5" item="9.5">
+              <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Addition of two vectors in ${\mathbb{R}}^{4}$</paragraphs>
+              </strong>
+              <newline course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If
+\begin{align*}
+\displaystyle\mathbf{u}=\begin{bmatrix}2\\
+-3\\
+4\\
+2\end{bmatrix}&amp;
+\quad&amp;
+\displaystyle\mathbf{v}=\begin{bmatrix}-1\\
+5\\
+2\\
+-7\end{bmatrix}
+\end{align*}
+then
+\begin{align*}
+\displaystyle \mathbf{u}+\mathbf{v}=\begin{bmatrix}2\\
+-3\\
+4\\
+2\end{bmatrix}+\begin{bmatrix}-1\\
+5\\
+2\\
+-7\end{bmatrix}=\begin{bmatrix}2+(-1)\\
+-3+5\\
+4+2\\
+2+(-7)\end{bmatrix}=\begin{bmatrix}1\\
+2\\
+6\\
+-5\end{bmatrix}
+\end{align*} </paragraphs>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="6" id="s6" slide="6" course="MATH 1030" chapter="9" section="1" subsection="" subsubsection="" chapter_title="Vector space and subspace" section_title="Vectors">
+            <keywords slide="6" environ="slide" chapter="9" course="MATH 1030">
+              <keyword chapter="9" slide="6">scalar multiple</keyword>
+              <keyword chapter="9" slide="6">Column Vector Scalar Multiplication</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="6" title="Column Vector Scalar Multiplication" md5="42132c41cc6f41cddaa25d3db29375be" course="MATH 1030" chapter="9" slide="6" item="9.6">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="9" section="1" subsection="" subsubsection="" serial="" slide="6">Column Vector Scalar Multiplication</title>
+              <label wbtag="label" name="CVSM" type="Definition"/>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $\mathbf{u}\in{\mathbb{R}}^{m}$ and $\alpha\in{\mathbb{R}}^{\hbox{}}$, then the </paragraphs>
+              <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="statement">scalar multiple</inline_keyword>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $\mathbf{u}$ by $\alpha$ is the vector $\alpha\mathbf{u}$ defined by
+\begin{align*}
+\displaystyle\left[\alpha\mathbf{u}\right]_{i}&amp;\displaystyle=\alpha\left[\mathbf{u}\right]_{i}&amp;\displaystyle 1\leq i\leq m.
+\end{align*}
+That is
+\begin{align*}
+\displaystyle \alpha\begin{bmatrix}u_{1}\\
+u_{2}\\
+\vdots\\
+u_{m}\end{bmatrix}=\begin{bmatrix}\alpha u_{1}\\
+\alpha u_{2}\\
+\vdots\\
+\alpha u_{m}\end{bmatrix}.
+\end{align*} </paragraphs>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="7" md5="73d90cb1e2dd0fcbf371d4f7f8d7f280" course="MATH 1030" chapter="9" slide="6" item="9.7">
+              <newcol course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If
+\begin{align*}
+\displaystyle \mathbf{u}=\begin{bmatrix}3\\
+1\\
+-2\\
+4\\
+-1\end{bmatrix}
+\end{align*}
+and $\alpha=6$, then
+\begin{align*}
+\displaystyle \alpha\mathbf{u}=6\begin{bmatrix}3\\
+1\\
+-2\\
+4\\
+-1\end{bmatrix}=\begin{bmatrix}6(3)\\
+6(1)\\
+6(-2)\\
+6(4)\\
+6(-1)\end{bmatrix}=\begin{bmatrix}18\\
+6\\
+-12\\
+24\\
+-6\end{bmatrix}.
+\end{align*} </paragraphs>
+              </newcol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="7" id="s7" slide="7" course="MATH 1030" chapter="9" section="1" subsection="" subsubsection="" chapter_title="Vector space and subspace" section_title="Vectors">
+            <keywords slide="7" environ="slide" chapter="9" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="8" md5="662753b0ea5e94bb3ee61146b908d1c0" course="MATH 1030" chapter="9" slide="7" item="9.8">
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The system of linear equations
+\begin{align*}
+\displaystyle-7x_{1}-6x_{2}-12x_{3}&amp;\displaystyle=-33 \\
+\displaystyle 5x_{1}+5x_{2}+7x_{3}&amp;\displaystyle=24 \\
+\displaystyle x_{1}+4x_{3}&amp;\displaystyle=5
+\end{align*}
+can be written as:</paragraphs>
+              <newline course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="1" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle x_{1}\begin{bmatrix}-7\\
+5\\
+1\end{bmatrix}+x_{2}\begin{bmatrix}-6\\
+5\\
+0\end{bmatrix}+x_{3}\begin{bmatrix}-12\\
+7\\
+4\end{bmatrix}=\begin{bmatrix}-33\\
+24\\
+5\end{bmatrix}.
+\end{align*} </paragraphs>
+              </newcol>
+            </statement>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Vector Space Properties" course="MATH 1030" chapter="9" num="2" serial="9.2">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="9" section="2" subsection="" subsubsection="" serial="" slide="">
+          <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Vector Space Properties</paragraphs>
+        </title>
+        <label wbtag="label" name="VSP" type="Section"/>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="8" scope="section" id="s8" slide="8" course="MATH 1030" chapter="9" section="2" subsection="" subsubsection="" chapter_title="Vector space and subspace" section_title="Vector Space Properties">
+            <keywords slide="8" environ="slide" chapter="9" course="MATH 1030">
+              <keyword chapter="9" slide="8">ACC</keyword>
+              <keyword chapter="9" slide="8">SCC</keyword>
+              <keyword chapter="9" slide="8">CC</keyword>
+              <keyword chapter="9" slide="8">AAC</keyword>
+              <keyword chapter="9" slide="8">ZC</keyword>
+              <keyword chapter="9" slide="8">zero vector</keyword>
+              <keyword chapter="9" slide="8">AIC</keyword>
+              <keyword chapter="9" slide="8">SMAC</keyword>
+              <keyword chapter="9" slide="8">DVAC</keyword>
+              <keyword chapter="9" slide="8">DSAC</keyword>
+              <keyword chapter="9" slide="8">OC</keyword>
+              <keyword chapter="9" slide="8">identities</keyword>
+              <keyword chapter="9" slide="8">consequence</keyword>
+              <keyword chapter="9" slide="8">vector subtraction</keyword>
+              <keyword chapter="9" slide="8">AAC</keyword>
+              <keyword chapter="9" slide="8">Vector Space Properties of Column Vectors</keyword>
+            </keywords>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="9" section="2" subsection="" subsubsection="" serial="" slide="8">
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Vector Space Properties</paragraphs>
+            </title>
+            <strong xmlns="http://www.w3.org/1999/xhtml" environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">Warning</paragraphs>
+            </strong>
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">: Read the statements of Theorem </paragraphs>
+            <ref environment="" chapter_type="" label="VSPCV" wbtag="ref" course="MATH 1030" chapter="9" slide="8" undefined="true">
+              <title>UNDEFINED</title>
+            </ref>
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> and skip the rest of this section </paragraphs>
+            <strong xmlns="http://www.w3.org/1999/xhtml" environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">unless you are/going to be</paragraphs>
+            </strong>
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> a math major. The material skipped will not appear in the tests and the final exam.
+With definitions of vector addition and scalar multiplication we can state, and prove, several properties of each operation, and some properties that involve their interplay. We now collect ten of them here for later reference. </paragraphs>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="9" title="Vector Space Properties of Column Vectors" md5="0a8acc42b80db2bbd97164c96ed30f1d" course="MATH 1030" chapter="9" slide="8" item="9.9">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="9" section="2" subsection="" subsubsection="" serial="" slide="8">Vector Space Properties of Column Vectors</title>
+              <label wbtag="label" name="VSPCV" type="Theorem"/>
+              <label wbtag="label" name="ACC" type="Theorem"/>
+              <label wbtag="label" name="SCC" type="Theorem"/>
+              <label wbtag="label" name="CC" type="Theorem"/>
+              <label wbtag="label" name="AAC" type="Theorem"/>
+              <label wbtag="label" name="ZC" type="Theorem"/>
+              <label wbtag="label" name="AIC" type="Theorem"/>
+              <label wbtag="label" name="SMAC" type="Theorem"/>
+              <label wbtag="label" name="DVAC" type="Theorem"/>
+              <label wbtag="label" name="DSAC" type="Theorem"/>
+              <label wbtag="label" name="OC" type="Theorem"/>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that ${\mathbb{R}}^{m}$ is the set of column vectors of size $m$ with addition and scalar multiplication as defined in Definition </paragraphs>
+              <ref environment="statement" chapter_type="" label="CVA" wbtag="ref" course="MATH 1030" chapter="9" slide="8" referrer-type="Theorem" referrer-md5="0a8acc42b80db2bbd97164c96ed30f1d" undefined="true">
+                <title>UNDEFINED</title>
+              </ref>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> and Definition </paragraphs>
+              <ref environment="statement" chapter_type="" label="CVSM" wbtag="ref" course="MATH 1030" chapter="9" slide="8" referrer-type="Theorem" referrer-md5="0a8acc42b80db2bbd97164c96ed30f1d" undefined="true">
+                <title>UNDEFINED</title>
+              </ref>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> .
+Then: </paragraphs>
+              <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">ACC</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Additive Closure, Column Vectors</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">If $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$, then $\mathbf{u}+\mathbf{v}\in{\mathbb{R}}^{m}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">SCC</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Scalar Closure, Column Vectors</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in{\mathbb{R}}^{m}$, then $\alpha\mathbf{u}\in{\mathbb{R}}^{m}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">CC</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Commutativity, Column Vectors</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">If $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$, then $\mathbf{u}+\mathbf{v}=\mathbf{v}+\mathbf{u}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">AAC</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Additive Associativity, Column Vectors</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">If $\mathbf{u},\,\mathbf{v},\,\mathbf{w}\in{\mathbb{R}}^{m}$, then $\mathbf{u}+\left(\mathbf{v}+\mathbf{w}\right)=\left(\mathbf{u}+\mathbf{v}\right)+\mathbf{w}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">ZC</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Zero Vector, Column Vectors</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">There is a vector, $\mathbf{0}$, called the </paragraphs>
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">zero vector</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">, such that $\mathbf{u}+\mathbf{0}=\mathbf{u}$ for all $\mathbf{u}\in{\mathbb{R}}^{m}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">AIC</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Additive Inverses, Column Vectors</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">If $\mathbf{u}\in{\mathbb{R}}^{m}$, then there exists a vector $\mathbf{-u}\in{\mathbb{R}}^{m}$ so that $\mathbf{u}+(\mathbf{-u})=\mathbf{0}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">SMAC</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Scalar Multiplication Associativity, Column Vectors</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">If $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in{\mathbb{R}}^{m}$, then $\alpha(\beta\mathbf{u})=(\alpha\beta)\mathbf{u}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">DVAC</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Distributivity across Vector Addition, Column Vectors</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u},\,\mathbf{v}\in{\mathbb{R}}^{m}$, then $\alpha(\mathbf{u}+\mathbf{v})=\alpha\mathbf{u}+\alpha\mathbf{v}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">DSAC</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Distributivity across Scalar Addition, Column Vectors</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">If $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in{\mathbb{R}}^{m}$, then
+$(\alpha+\beta)\mathbf{u}=\alpha\mathbf{u}+\beta\mathbf{u}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement">OC</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">One, Column Vectors</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">If $\mathbf{u}\in{\mathbb{R}}^{m}$, then $1\mathbf{u}=\mathbf{u}$. </paragraphs>
+                </li>
+              </ol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="3d0928b18d1d534832fb3be242f2b2a8" course="MATH 1030" chapter="9" slide="8" of="0a8acc42b80db2bbd97164c96ed30f1d">
+              <newcol course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> While some of these properties seem very obvious, they all require proof. However, the proofs are not very interesting, and border on tedious.
+We will prove one version of distributivity very carefully, and you can test your proof-building skills on some of the others. We need to establish an equality, so we will do so by beginning with one side of the equality, apply various definitions and theorems (listed to the right of each step) to massage the expression from the left into the expression on the right. Here we go with a proof of </paragraphs>
+                <ref environment="newcol" chapter_type="" label="VS" wbtag="ref" course="MATH 1030" chapter="9" slide="8" referrer-type="Proof" referrer-md5="3d0928b18d1d534832fb3be242f2b2a8" undefined="true">
+                  <title>UNDEFINED</title>
+                </ref>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">{Property DSAC} in </paragraphs>
+                <ref environment="newcol" chapter_type="" label="VSPCV" wbtag="ref" course="MATH 1030" chapter="9" slide="8" referrer-type="Proof" referrer-md5="3d0928b18d1d534832fb3be242f2b2a8" undefined="true">
+                  <title>UNDEFINED</title>
+                </ref>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">.
+For $1\leq i\leq m$,
+\begin{align*}
+\displaystyle\left[(\alpha+\beta)\mathbf{u}\right]_{i}&amp;\displaystyle=(\alpha+\beta)\left[\mathbf{u}\right]_{i}&amp;{\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=https://raw.githubusercontent.com/pschan-gh/math1030/devel/lec9.xml&amp;query=(//lv:*[./lv:label/@name="CVSM"])[1]}{\mathrm{Column\;Vector\;Scalar\;Multiplication}}}\\
+&amp;\displaystyle=\alpha\left[\mathbf{u}\right]_{i}+\beta\left[\mathbf{u}\right]_{i} \\
+&amp;\displaystyle=\left[\alpha\mathbf{u}\right]_{i}+\left[\beta\mathbf{u}\right]_{i}&amp;{\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=https://raw.githubusercontent.com/pschan-gh/math1030/devel/lec9.xml&amp;query=(//lv:*[./lv:label/@name="CVSM"])[1]}{\mathrm{Column\;Vector\;Scalar\;Multiplication}}} \\
+&amp;\displaystyle=\left[\alpha\mathbf{u}+\beta\mathbf{u}\right]_{i}&amp;{\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=https://raw.githubusercontent.com/pschan-gh/math1030/devel/lec9.xml&amp;query=(//lv:*[./lv:label/@name="CVA"])[1]}{\mathrm{Column\;Vector\;Addition}}}
+\end{align*}
+Since the individual components of the vectors $(\alpha+\beta)\mathbf{u}$ and $\alpha\mathbf{u}+\beta\mathbf{u}$ are equal for all $i$, $1\leq i\leq m$, </paragraphs>
+                <ref environment="newcol" chapter_type="" label="CVE" wbtag="ref" course="MATH 1030" chapter="9" slide="8" referrer-type="Proof" referrer-md5="3d0928b18d1d534832fb3be242f2b2a8" undefined="true">
+                  <title>UNDEFINED</title>
+                </ref>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> tells us the vectors are equal. </paragraphs>
+                <qed course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Many of the conclusions of our theorems can be characterized as </paragraphs>
+            <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="">identities</inline_keyword>
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">, especially when we are establishing basic properties of operations such as those in this section. Most of the properties listed in Theorem </paragraphs>
+            <ref environment="" chapter_type="" label="VSPCV" wbtag="ref" course="MATH 1030" chapter="9" slide="8" undefined="true">
+              <title>UNDEFINED</title>
+            </ref>
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> are examples. So some advice about the style we use for proving identities is appropriate right now.
+Be careful with the notion of the vector $\mathbf{-u}$. This is a vector that we add to $\mathbf{u}$ so that the result is the particular vector $\mathbf{0}$. This is basically a property of vector addition. It happens that we can compute $\mathbf{-u}$ using the other operation, scalar multiplication. We can prove this directly by writing that
+\begin{align*}
+\displaystyle \left[\mathbf{-u}\right]_{i}=-\left[\mathbf{u}\right]_{i}=(-1)\left[\mathbf{u}\right]_{i}=\left[(-1)\mathbf{u}\right]_{i}
+\end{align*}
+We will see later how to derive this property as a </paragraphs>
+            <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="">consequence</inline_keyword>
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> of several of the ten properties listed in Theorem </paragraphs>
+            <ref environment="" chapter_type="" label="VSPCV" wbtag="ref" course="MATH 1030" chapter="9" slide="8" undefined="true">
+              <title>UNDEFINED</title>
+            </ref>
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">.
+Similarly, we will often write something you would immediately recognize as </paragraphs>
+            <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="">vector subtraction</inline_keyword>
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">. This could be placed on a firm theoretical foundation – as you can do yourself with exercise T30.
+A final note. </paragraphs>
+            <ref environment="" chapter_type="" label="VSPCV" wbtag="ref" course="MATH 1030" chapter="9" slide="8" undefined="true">
+              <title>UNDEFINED</title>
+            </ref>
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> Property </paragraphs>
+            <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="">AAC</inline_keyword>
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> implies that we do not have to be careful about how we </paragraphs>
+            <em xmlns="http://www.w3.org/1999/xhtml" environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs">parenthesize</paragraphs>
+            </em>
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="2" subsection="" subsubsection="" environment="" wbtag="paragraphs"> the addition of vectors. In other words, there is nothing to be gained by writing
+$\left(\mathbf{u}+\mathbf{v}\right)+\left(\mathbf{w}+\left(\mathbf{x}+\mathbf{y}\right)\right)$
+rather than
+$\mathbf{u}+\mathbf{v}+\mathbf{w}+\mathbf{x}+\mathbf{y}$, since we get the same result no matter which order we choose to perform the four additions. So we will not be careful about using parentheses this way. </paragraphs>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Vector Space" course="MATH 1030" chapter="9" num="3" serial="9.3">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="9" section="3" subsection="" subsubsection="" serial="" slide="">
+          <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Vector Space</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="9" scope="section" data-lecture-skip="true" id="s9" slide="9" course="MATH 1030" chapter="9" section="3" subsection="" subsubsection="" chapter_title="Vector space and subspace" section_title="Vector Space">
+            <keywords slide="9" environ="slide" chapter="9" course="MATH 1030">
+              <keyword chapter="9" slide="9">vector addition</keyword>
+              <keyword chapter="9" slide="9">scalar multiplication</keyword>
+              <keyword chapter="9" slide="9">vector space</keyword>
+              <keyword chapter="9" slide="9">AC</keyword>
+              <keyword chapter="9" slide="9">SC</keyword>
+              <keyword chapter="9" slide="9">C</keyword>
+              <keyword chapter="9" slide="9">AA</keyword>
+              <keyword chapter="9" slide="9">Z</keyword>
+              <keyword chapter="9" slide="9">zero vector</keyword>
+              <keyword chapter="9" slide="9">AI</keyword>
+              <keyword chapter="9" slide="9">SMA</keyword>
+              <keyword chapter="9" slide="9">DVA</keyword>
+              <keyword chapter="9" slide="9">DSA</keyword>
+              <keyword chapter="9" slide="9">O</keyword>
+              <keyword chapter="9" slide="9">vectors</keyword>
+            </keywords>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="9" section="3" subsection="" subsubsection="" serial="" slide="9">
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Vector Space</paragraphs>
+            </title>
+            <strong xmlns="http://www.w3.org/1999/xhtml" environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="" wbtag="paragraphs">For math major only. Non-math major can skip the rest of this section. The material will not appear in the midterms or final</paragraphs>
+            </strong>
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="" wbtag="paragraphs"> In this section we will give an abstract definition of vector space.</paragraphs>
+            <newline course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment=""/>
+            <strong xmlns="http://www.w3.org/1999/xhtml" environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="" wbtag="paragraphs">Why do we need the abstract definitions?</paragraphs>
+            </strong>
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="" wbtag="paragraphs"> A lot of different algebraic objects (e.g. polynomials, matrices, sequences, functions) share similar properties
+with the set of column vectors. We can use
+the common properties to derive similar results.
+we therefore don’t need to reproof and restate the results.</paragraphs>
+            <newline course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment=""/>
+            <strong xmlns="http://www.w3.org/1999/xhtml" environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="" wbtag="paragraphs">One stone, kill many birds</paragraphs>
+            </strong>
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="" wbtag="paragraphs">.</paragraphs>
+            <newline course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment=""/>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="10" md5="d93d66531cab0af47807184dc9090985" course="MATH 1030" chapter="9" slide="9" item="9.10">
+              <label wbtag="label" name="VS" type="Definition"/>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $V$ is a set upon which we have defined two operations:
+(1) </paragraphs>
+              <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">vector addition</inline_keyword>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">, which combines two elements of $V$ and is denoted by $+$,
+and (2) </paragraphs>
+              <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">scalar multiplication</inline_keyword>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">, which combines a real number with an element of $V$ and is denoted by juxtaposition.
+Then $V$, along with the two operations, is a </paragraphs>
+              <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">vector space</inline_keyword>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> over ${\mathbb{R}}^{\hbox{}}$ if the following ten properties hold. </paragraphs>
+              <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">AC</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Additive Closure</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">If $\mathbf{u},\,\mathbf{v}\in V$, then $\mathbf{u}+\mathbf{v}\in V$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">SC</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Scalar Closure</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in V$, then $\alpha\mathbf{u}\in V$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">C</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Commutativity</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">If $\mathbf{u},\,\mathbf{v}\in V$, then $\mathbf{u}+\mathbf{v}=\mathbf{v}+\mathbf{u}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">AA</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Additive Associativity</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">If $\mathbf{u},\,\mathbf{v},\,\mathbf{w}\in V$, then $\mathbf{u}+\left(\mathbf{v}+\mathbf{w}\right)=\left(\mathbf{u}+\mathbf{v}\right)+\mathbf{w}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">Z</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Zero Vector</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">There is a vector, $\mathbf{0}$, called the </paragraphs>
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">zero vector</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">, such that $\mathbf{u}+\mathbf{0}=\mathbf{u}$ for all $\mathbf{u}\in V$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">AI</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Additive Inverses</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">If $\mathbf{u}\in V$, then there exists a vector $\mathbf{-u}\in V$ so that $\mathbf{u}+(\mathbf{-u})=\mathbf{0}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">SMA</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Scalar Multiplication Associativity</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">If $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in V$, then $\alpha(\beta\mathbf{u})=(\alpha\beta)\mathbf{u}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">DVA</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Distributivity across Vector Addition</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">If $\alpha\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u},\,\mathbf{v}\in V$, then $\alpha(\mathbf{u}+\mathbf{v})=\alpha\mathbf{u}+\alpha\mathbf{v}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">DSA</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">Distributivity across Scalar Addition</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">If $\alpha,\,\beta\in{\mathbb{R}}^{\hbox{}}$ and $\mathbf{u}\in V$, then
+$(\alpha+\beta)\mathbf{u}=\alpha\mathbf{u}+\beta\mathbf{u}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <inline_keyword xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">O</inline_keyword>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> </paragraphs>
+                  <em environment="statement">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">One</paragraphs>
+                  </em>
+                  <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">If $\mathbf{u}\in V$, then $1\mathbf{u}=\mathbf{u}$. </paragraphs>
+                </li>
+              </ol>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The objects in $V$ are called </paragraphs>
+              <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">vectors</inline_keyword>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">, no matter what else they might really be, simply by virtue of being elements of a vector space. </paragraphs>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="10" data-lecture-skip="true" id="s10" slide="10" course="MATH 1030" chapter="9" section="3" subsection="" subsubsection="" chapter_title="Vector space and subspace" section_title="Vector Space">
+            <keywords slide="10" environ="slide" chapter="9" course="MATH 1030">
+              <keyword chapter="9" slide="10">column vector space</keyword>
+              <keyword chapter="9" slide="10">Row vector space</keyword>
+              <keyword chapter="9" slide="10">Matrices</keyword>
+              <keyword chapter="9" slide="10">The vector space of polynomials, $P_{n}$</keyword>
+              <keyword chapter="9" slide="10">The vector space of functions</keyword>
+              <keyword chapter="9" slide="10">The crazy vector space</keyword>
+            </keywords>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="11" md5="6f7fc76177337392f81341b639b55227" course="MATH 1030" chapter="9" slide="10" item="9.11">
+              <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">column vector space</inline_keyword>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The set of column vectors ${\mathbb{R}}^{n}$ is a vector space. </paragraphs>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="12" md5="5fbf4555431c0e4e292ed07476093271" course="MATH 1030" chapter="9" slide="10" item="9.12">
+              <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">Row vector space</inline_keyword>
+              <newline course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The set of row vector ($1\times n$ matrices), is a vector space with the following operations: </paragraphs>
+                <ul xmlns="http://www.w3.org/1999/xhtml" class="ltx_itemize" environment="newcol">
+                  <li class="ltx_item" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Vector addition: $[a_{1}\,a_{2}\,\ldots\,a_{n}]+[a_{1}\,b_{2}\,\ldots\,b_{n}]=[a_{1}+b_{1}\,a_{2}+b_{2}\,\ldots\,a_{n}+b_{n}]$ </paragraphs>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Scalar multiplication $\alpha[a_{1}\,a_{2}\,\ldots,a_{n}]=[\alpha a_{1}\,\alpha a_{2},\ldots,\alpha a_{n}]$ </paragraphs>
+                  </li>
+                </ul>
+              </newcol>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="13" md5="fb1ac45c60c8c59135e7173658dededc" course="MATH 1030" chapter="9" slide="10" item="9.13">
+              <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">Matrices</inline_keyword>
+              <newline course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The set of $m\times n$ matrices, denoted by $M_{mn}$, is a vector space with the following operations: </paragraphs>
+                <ul xmlns="http://www.w3.org/1999/xhtml" class="ltx_itemize" environment="newcol">
+                  <li class="ltx_item" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Vector addition:
+\begin{align*}
+\displaystyle \begin{bmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{m1}&amp;a_{m2}&amp;\cdots&amp;a_{mn}\end{bmatrix}+\begin{bmatrix}b_{11}&amp;b_{12}&amp;\cdots&amp;b_{1n}\\
+b_{21}&amp;b_{22}&amp;\cdots&amp;b_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+b_{m1}&amp;b_{m2}&amp;\cdots&amp;b_{mn}\end{bmatrix}=\begin{bmatrix}a_{11}+b_{11}&amp;a_{12}+b_{12}&amp;\cdots&amp;a_{1n}+b_{1n}\\
+a_{21}+b_{21}&amp;a_{22}+b_{22}&amp;\cdots&amp;a_{2n}+b_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{m1}+b_{m1}&amp;a_{m2}+b_{m2}&amp;\cdots&amp;a_{mn}+b_{mn}\end{bmatrix}
+\end{align*} </paragraphs>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Scalar multiplication
+\begin{align*}
+\displaystyle \alpha\begin{bmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{m1}&amp;a_{m2}&amp;\cdots&amp;a_{mn}\end{bmatrix}=\begin{bmatrix}\alpha a_{11}&amp;\alpha a_{12}&amp;\cdots&amp;\alpha a_{1n}\\
+\alpha a_{21}&amp;\alpha a_{22}&amp;\cdots&amp;\alpha a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+\alpha a_{m1}&amp;\alpha a_{m2}&amp;\cdots&amp;\alpha a_{mn}\end{bmatrix}
+\end{align*} </paragraphs>
+                  </li>
+                </ul>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Property Z: The zero vector is
+\begin{align*}
+\displaystyle \begin{bmatrix}0&amp;0&amp;\cdots&amp;0\\
+0&amp;0&amp;\cdots&amp;0\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+0&amp;0&amp;\cdots&amp;0\end{bmatrix}
+\end{align*}
+Property AI:The inverse of
+\begin{align*}
+\displaystyle \begin{bmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{m1}&amp;a_{m2}&amp;\cdots&amp;a_{mn}\end{bmatrix}
+\end{align*}
+is
+\begin{align*}
+\displaystyle \begin{bmatrix}-a_{11}&amp;-a_{12}&amp;\cdots&amp;-a_{1n}\\
+-a_{21}&amp;-a_{22}&amp;\cdots&amp;-a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+-a_{m1}&amp;-a_{m2}&amp;\cdots&amp;-a_{mn}\end{bmatrix}
+\end{align*}
+You can try proving all other properties. </paragraphs>
+              </newcol>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="14" md5="f883aad239baab284989ce780c336e70" course="MATH 1030" chapter="9" slide="10" item="9.14">
+              <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">The vector space of polynomials, $P_{n}$</inline_keyword>
+              <newline course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The set of all polynomials of degree $n$ or less in the variable $x$ with coefficients from ${\mathbb{R}}^{\hbox{}}$,
+denoted by $P_{n}$ is a vector space. </paragraphs>
+                <ul xmlns="http://www.w3.org/1999/xhtml" class="ltx_itemize" environment="newcol">
+                  <li class="ltx_item" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Vector Addition:
+\begin{align*}
+\displaystyle (a_{0}+a_{1}x+a_{2}x^{2}+\cdots+a_{n}x^{n})+(b_{0}+b_{1}x+b_{2}x^{2}+\cdots+b_{n}x^{n})
+\end{align*}
+\begin{align*}
+\displaystyle =(a_{0}+b_{0})+(a_{1}+b_{1})x+(a_{2}+b_{2})x^{2}+\cdots+(a_{n}+b_{n})x^{n}
+\end{align*} </paragraphs>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Scalar Multiplication:
+\begin{align*}
+\displaystyle \alpha(a_{0}+a_{1}x+a_{2}x^{2}+\cdots+a_{n}x^{n})=(\alpha a_{0})+(\alpha a_{1})x+(\alpha a_{2})x^{2}+\cdots+(\alpha a_{n})x^{n}
+\end{align*} </paragraphs>
+                  </li>
+                </ul>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> This set, with these operations, will fulfill the ten properties, though we will not work all the details here. However, we will make a few comments and prove one of the properties. First, the zero vector (property Z)
+is what you might expect, and you can check that it has the required property.
+\begin{align*}
+\displaystyle \mathbf{0}=0+0x+0x^{2}+\cdots+0x^{n}
+\end{align*}
+The additive inverse (Property AI) is also no surprise, though consider how we have chosen to write it.
+\begin{align*}
+\displaystyle -\left(a_{0}+a_{1}x+a_{2}x^{2}+\cdots+a_{n}x^{n}\right)=(-a_{0})+(-a_{1})x+(-a_{2})x^{2}+\cdots+(-a_{n})x^{n}
+\end{align*}
+Now let us prove the associativity of vector addition (Property AA). This is a bit tedious, though necessary. Throughout, the plus sign ($+$) does triple-duty. You might ask yourself what each plus sign represents as you work through this proof.
+\begin{align*}
+\displaystyle\mathbf{u}+&amp;\displaystyle(\mathbf{v}+\mathbf{w}) \\
+&amp;\displaystyle=(a_{0}+a_{1}x+\cdots+a_{n}x^{n})+\left((b_{0}+b_{1}x+\cdots+b_{n}x^{n})+(c_{0}+c_{1}x+\cdots+c_{n}x^{n})\right) \\
+&amp;\displaystyle=(a_{0}+a_{1}x+\cdots+a_{n}x^{n})+((b_{0}+c_{0})+(b_{1}+c_{1})x+\cdots+(b_{n}+c_{n})x^{n}) \\
+&amp;\displaystyle=(a_{0}+(b_{0}+c_{0}))+(a_{1}+(b_{1}+c_{1}))x+\cdots+(a_{n}+(b_{n}+c_{n}))x^{n} \\
+&amp;\displaystyle=((a_{0}+b_{0})+c_{0})+((a_{1}+b_{1})+c_{1})x+\cdots+((a_{n}+b_{n})+c_{n})x^{n} \\
+&amp;\displaystyle=((a_{0}+b_{0})+(a_{1}+b_{1})x+\cdots+(a_{n}+b_{n})x^{n})+(c_{0}+c_{1}x+\cdots+c_{n}x^{n}) \\
+&amp;\displaystyle=\left((a_{0}+a_{1}x+\cdots+a_{n}x^{n})+(b_{0}+b_{1}x+\cdots+b_{n}x^{n})\right)+(c_{0}+c_{1}x+\cdots+c_{n}x^{n}) \\
+&amp;\displaystyle=(\mathbf{u}+\mathbf{v})+\mathbf{w}
+\end{align*}
+You might try proving all the other properties. </paragraphs>
+              </newcol>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="15" md5="983c2a10bf41bbb953a79a564f728c9f" course="MATH 1030" chapter="9" slide="10" item="9.15">
+              <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">The vector space of functions</inline_keyword>
+              <newline course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $F$ be the set of functions for ${\mathbb{R}}^{\hbox{}}$ to ${\mathbb{R}}^{\hbox{}}$
+Equality: $f=g$ if and only if $f(x)=g(x)$ for all $x\in{\mathbb{R}}^{\hbox{}}$. </paragraphs>
+                <ul xmlns="http://www.w3.org/1999/xhtml" class="ltx_itemize" environment="newcol">
+                  <li class="ltx_item" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Vector Addition: $f+g$ is the function with outputs defined by $(f+g)(x)=f(x)+g(x)$. </paragraphs>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Scalar Multiplication: $\alpha f$ is the function with outputs defined by $(\alpha f)(x)=\alpha f(x)$. </paragraphs>
+                  </li>
+                </ul>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The zero vector is a function $z$ whose definition is $z(x)=0$ for every input $x\in{\mathbb{R}}^{\hbox{}}$.
+Try proving all the other properties. </paragraphs>
+              </newcol>
+            </statement>
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="16" md5="d42e1f71e783d39a4eb7cd177b028c5f" course="MATH 1030" chapter="9" slide="10" item="9.16">
+              <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">The crazy vector space</inline_keyword>
+              <newline course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
+              <newcol course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $C=\left\{\left.(x_{1},\,x_{2})\,\right|\,x_{1},\,x_{2}\in{\mathbb{R}}^{\hbox{}}\right\}$. </paragraphs>
+                <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="newcol">
+                  <li class="ltx_item" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Vector Addition: $(x_{1},\,x_{2})+(y_{1},\,y_{2})=(x_{1}+y_{1}+1,\,x_{2}+y_{2}+1)$. </paragraphs>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Scalar Multiplication: $\alpha(x_{1},\,x_{2})=(\alpha x_{1}+\alpha-1,\,\alpha x_{2}+\alpha-1)$. </paragraphs>
+                  </li>
+                </ol>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> I am free to define my set and my operations any way I please. They may not look natural, or even useful, but we will now verify that they provide us with another example of a vector space. We will check all it satisfies all the definition of vector spaces. </paragraphs>
+                <ul xmlns="http://www.w3.org/1999/xhtml" class="ltx_itemize" environment="newcol">
+                  <li class="ltx_item" environment="newcol">
+                    <strong environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Property AC, SC</paragraphs>
+                    </strong>
+                    <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">The result of each operation is a pair of complex numbers, so these two closure properties are fulfilled. </paragraphs>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <strong environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Property C</paragraphs>
+                    </strong>
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle\mathbf{u}+\mathbf{v}&amp;\displaystyle=(x_{1},\,x_{2})+(y_{1},\,y_{2})=(x_{1}+y_{1}+1,\,x_{2}+y_{2}+1) \\
+&amp;\displaystyle=(y_{1}+x_{1}+1,\,y_{2}+x_{2}+1)=(y_{1},\,y_{2})+(x_{1},\,x_{2}) \\
+&amp;\displaystyle=\mathbf{v}+\mathbf{u}
+\end{align*} </paragraphs>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <strong environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Property AA</paragraphs>
+                    </strong>
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle\mathbf{u}+(\mathbf{v}+\mathbf{w})&amp;\displaystyle=(x_{1},\,x_{2})+\left((y_{1},\,y_{2})+(z_{1},\,z_{2})\right) \\
+&amp;\displaystyle=(x_{1},\,x_{2})+(y_{1}+z_{1}+1,\,y_{2}+z_{2}+1) \\
+&amp;\displaystyle=(x_{1}+(y_{1}+z_{1}+1)+1,\,x_{2}+(y_{2}+z_{2}+1)+1) \\
+&amp;\displaystyle=(x_{1}+y_{1}+z_{1}+2,\,x_{2}+y_{2}+z_{2}+2) \\
+&amp;\displaystyle=((x_{1}+y_{1}+1)+z_{1}+1,\,(x_{2}+y_{2}+1)+z_{2}+1) \\
+&amp;\displaystyle=(x_{1}+y_{1}+1,\,x_{2}+y_{2}+1)+(z_{1},\,z_{2}) \\
+&amp;\displaystyle=\left((x_{1},\,x_{2})+(y_{1},\,y_{2})\right)+(z_{1},\,z_{2}) \\
+&amp;\displaystyle=\left(\mathbf{u}+\mathbf{v}\right)+\mathbf{w}
+\end{align*} </paragraphs>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <strong environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Property Z</paragraphs>
+                    </strong>
+                    <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">The zero vector is $\mathbf{0}=(-1,\,-1)$ (</paragraphs>
+                    <strong environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">not</paragraphs>
+                    </strong>
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $(0,0)$)
+\begin{align*}
+\displaystyle \mathbf{u}+\mathbf{0}=(x_{1},\,x_{2})+(-1,\,-1)=(x_{1}+(-1)+1,\,x_{2}+(-1)+1)=(x_{1},\,x_{2})=\mathbf{u}
+\end{align*} </paragraphs>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <strong environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Property AI</paragraphs>
+                    </strong>
+                    <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">For each vector, $\mathbf{u}$, we must locate an additive inverse, $\mathbf{-u}$. Here it is, $-(x_{1},\,x_{2})=(-x_{1}-2,\,-x_{2}-2)$. As odd as it may look, I hope you are withholding judgment. Check:
+\begin{align*}
+\displaystyle\mathbf{u}+(\mathbf{-u})&amp;\displaystyle=(x_{1},\,x_{2})+(-x_{1}-2,\,-x_{2}-2) \\
+&amp;\displaystyle=(x_{1}+(-x_{1}-2)+1,\,-x_{2}+(x_{2}-2)+1)=(-1,\,-1)=\mathbf{0}
+\end{align*} </paragraphs>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <strong environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Property SMA</paragraphs>
+                    </strong>
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle\alpha(\beta\mathbf{u})&amp;\displaystyle=\alpha(\beta(x_{1},\,x_{2})) \\
+&amp;\displaystyle=\alpha(\beta x_{1}+\beta-1,\,\beta x_{2}+\beta-1) \\
+&amp;\displaystyle=(\alpha(\beta x_{1}+\beta-1)+\alpha-1,\,\alpha(\beta x_{2}+\beta-1)+\alpha-1) \\
+&amp;\displaystyle=((\alpha\beta x_{1}+\alpha\beta-\alpha)+\alpha-1,\,(\alpha\beta x_{2}+\alpha\beta-\alpha)+\alpha-1) \\
+&amp;\displaystyle=(\alpha\beta x_{1}+\alpha\beta-1,\,\alpha\beta x_{2}+\alpha\beta-1) \\
+&amp;\displaystyle=(\alpha\beta)(x_{1},\,x_{2}) \\
+&amp;\displaystyle=(\alpha\beta)\mathbf{u}
+\end{align*} </paragraphs>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <strong environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Property DVA</paragraphs>
+                    </strong>
+                    <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">If you have hung on so far, here is where it gets even wilder. In the next two properties we mix and mash the two operations.
+\begin{align*}
+\displaystyle\alpha(\mathbf{u}&amp;\displaystyle+\mathbf{v}) \\
+&amp;\displaystyle=\alpha\left((x_{1},\,x_{2})+(y_{1},\,y_{2})\right) \\
+&amp;\displaystyle=\alpha(x_{1}+y_{1}+1,\,x_{2}+y_{2}+1) \\
+&amp;\displaystyle=(\alpha(x_{1}+y_{1}+1)+\alpha-1,\,\alpha(x_{2}+y_{2}+1)+\alpha-1) \\
+&amp;\displaystyle=(\alpha x_{1}+\alpha y_{1}+\alpha+\alpha-1,\,\alpha x_{2}+\alpha
+y_{2}+\alpha+\alpha-1) \\
+&amp;\displaystyle=(\alpha x_{1}+\alpha-1+\alpha y_{1}+\alpha-1+1,\,\alpha x_{2}+\alpha-1+\alpha y_{2}+\alpha-1+1) \\
+&amp;\displaystyle=((\alpha x_{1}+\alpha-1)+(\alpha y_{1}+\alpha-1)+1,\,(\alpha x_{2}+\alpha-1)+(\alpha y_{2}+\alpha-1)+1) \\
+&amp;\displaystyle=(\alpha x_{1}+\alpha-1,\,\alpha x_{2}+\alpha-1)+(\alpha y_{1}+\alpha-1,\,\alpha y_{2}+\alpha-1) \\
+&amp;\displaystyle=\alpha(x_{1},\,x_{2})+\alpha(y_{1},\,y_{2}) \\
+&amp;\displaystyle=\alpha\mathbf{u}+\alpha\mathbf{v}
+\end{align*} </paragraphs>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <strong environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Property DSA</paragraphs>
+                    </strong>
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle(\alpha&amp;\displaystyle+\beta)\mathbf{u} \\
+&amp;\displaystyle=(\alpha+\beta)(x_{1},\,x_{2}) \\
+&amp;\displaystyle=((\alpha+\beta)x_{1}+(\alpha+\beta)-1,\,(\alpha+\beta)x_{2}+(\alpha+\beta)-1) \\
+&amp;\displaystyle=(\alpha x_{1}+\beta x_{1}+\alpha+\beta-1,\,\alpha x_{2}+\beta x_{2}+\alpha+\beta-1) \\
+&amp;\displaystyle=(\alpha x_{1}+\alpha-1+\beta x_{1}+\beta-1+1,\,\alpha x_{2}+\alpha-1+\beta x_{2}+\beta-1+1) \\
+&amp;\displaystyle=((\alpha x_{1}+\alpha-1)+(\beta x_{1}+\beta-1)+1,\,(\alpha x_{2}+\alpha-1)+(\beta x_{2}+\beta-1)+1) \\
+&amp;\displaystyle=(\alpha x_{1}+\alpha-1,\,\alpha x_{2}+\alpha-1)+(\beta x_{1}+\beta-1,\,\beta x_{2}+\beta-1) \\
+&amp;\displaystyle=\alpha(x_{1},\,x_{2})+\beta(x_{1},\,x_{2}) \\
+&amp;\displaystyle=\alpha\mathbf{u}+\beta\mathbf{u}
+\end{align*} </paragraphs>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <strong environment="newcol">
+                      <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Property O</paragraphs>
+                    </strong>
+                    <newline xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">After all that, this one is easy, but no less pleasing.
+\begin{align*}
+\displaystyle 1\mathbf{u}=1(x_{1},\,x_{2})=(x_{1}+1-1,\,x_{2}+1-1)=(x_{1},\,x_{2})=\mathbf{u}
+\end{align*} </paragraphs>
+                  </li>
+                </ul>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> That is it, $C$ is a vector space, as crazy as that may seem.
+Notice that in the case of the zero vector and additive inverses, we only had to propose possibilities and then verify that they were the correct choices. You might try to discover how you would arrive at these choices, though you should understand why the process of discovering them is not a necessary component of the proof itself. </paragraphs>
+              </newcol>
+            </statement>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Basic Properties of Vector Spaces" course="MATH 1030" chapter="9" num="4" serial="9.4">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="9" section="4" subsection="" subsubsection="" serial="" slide="">
+          <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Basic Properties of Vector Spaces</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="11" scope="section" data-lecture-skip="true" id="s11" slide="11" course="MATH 1030" chapter="9" section="4" subsection="" subsubsection="" chapter_title="Vector space and subspace" section_title="Basic Properties of Vector Spaces">
+            <keywords slide="11" environ="slide" chapter="9" course="MATH 1030">
+              <keyword chapter="9" slide="11">Cancellation Law for Vector Addition</keyword>
+              <keyword chapter="9" slide="11">Uniqueness of the zero vector</keyword>
+              <keyword chapter="9" slide="11">Uniqueness of the additive inverse</keyword>
+            </keywords>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="9" section="4" subsection="" subsubsection="" serial="" slide="11">
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Basic Properties of Vector Spaces</paragraphs>
+            </title>
+            <strong xmlns="http://www.w3.org/1999/xhtml" environment="">
+              <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="" wbtag="paragraphs">For math major only. Non-math major can skip the rest of this section. The material will not appear in the midterms or final</paragraphs>
+            </strong>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="17" title="Cancellation Law for Vector Addition" md5="2b1f204349777edfc38112fb172335ca" course="MATH 1030" chapter="9" slide="11" item="9.17">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="9" section="4" subsection="" subsubsection="" serial="" slide="11">Cancellation Law for Vector Addition</title>
+              <label wbtag="label" name="cancell" type="Theorem"/>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> if $\mathbf{v}$, $\mathbf{u}$ and $\mathbf{w}$ are vectors in a vector space $V$ such that
+\begin{align*}
+\displaystyle \mathbf{v}+\mathbf{w}=\mathbf{u}+\mathbf{w},
+\end{align*}
+then $\mathbf{v}=\mathbf{u}$ </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="aea06d082c2dbddaf8335a84c478d563" course="MATH 1030" chapter="9" slide="11" of="2b1f204349777edfc38112fb172335ca">
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs"> By Property AI, there exists a vector $-\mathbf{w}$ such that $\mathbf{w}+(-\mathbf{w})=\mathbf{0}$.
+Thus,
+\begin{align*}
+\displaystyle (\mathbf{v}+\mathbf{w})+(-\mathbf{w})&amp;=(\mathbf{u}+\mathbf{w})+(-\mathbf{w})\\
+\displaystyle \mathbf{v}+(\mathbf{w}+(-\mathbf{w}))&amp;=\mathbf{u}+(\mathbf{w}+(-\mathbf{w}))&amp;{\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=content/math1030/lec9.xml&amp;query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;AA}}}\\
+\displaystyle \mathbf{v}+\mathbf{0}&amp;=\mathbf{u}+\mathbf{0}&amp;{\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=content/math1030/lec9.xml&amp;query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;AI}}}\\
+\displaystyle \mathbf{v}&amp;=\mathbf{u}&amp;{\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=content/math1030/lec9.xml&amp;query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;Z}}}
+\end{align*}</paragraphs>
+              <newline course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement"/>
+              <qed course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement"/>
+            </substatement>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="18" title="Uniqueness of the zero vector" md5="5e4619bb2ff193c8ec411fca8f5cbc04" course="MATH 1030" chapter="9" slide="11" item="9.18">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="9" section="4" subsection="" subsubsection="" serial="" slide="11">Uniqueness of the zero vector</title>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V$ be a vector space.
+The vector $\mathbf{0}$ described in Property Z is unique. </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="e805adab402a877473fcd5a79488c923" course="MATH 1030" chapter="9" slide="11" of="5e4619bb2ff193c8ec411fca8f5cbc04">
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs"> Suppose both $\mathbf{0}_{1}$ and $\mathbf{0}_{2}$ satisfy the property described in Property Z.
+Let $\mathbf{w}$ be an element in $V$.
+\begin{align*}
+\displaystyle \mathbf{0}_{1}+\mathbf{w}=\mathbf{w}=\mathbf{0}_{2}+\mathbf{w}\hskip 28.452756pt{\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=content/math1030/lec9.xml&amp;query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;Z}}}
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{0}_{1}=\mathbf{0}_{2}\hskip 28.452756pt{\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=content/math1030/lec9.xml&amp;query=(//lv:*[./lv:label/@name='cancell'])[1]}{\mathrm{by\;the\;previous\;theorem}}}
+\end{align*}</paragraphs>
+              <newline course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement"/>
+              <qed course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement"/>
+            </substatement>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="19" title="Uniqueness of the additive inverse" md5="3e28e357930ad49c22ea6235f5058352" course="MATH 1030" chapter="9" slide="11" item="9.19">
+              <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="9" section="4" subsection="" subsubsection="" serial="" slide="11">Uniqueness of the additive inverse</title>
+              <label wbtag="label" name="invunique" type="Theorem"/>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V$ be a vector space and $\mathbf{v},\mathbf{u},\mathbf{w}$ are vectors of $V$. If
+both $\mathbf{v}$ and $\mathbf{u}$ satisfies
+\begin{align*}
+\displaystyle \mathbf{v}+\mathbf{w}=\mathbf{0},
+\end{align*}
+\begin{align*}
+\displaystyle \mathbf{u}+\mathbf{w}=\mathbf{0},
+\end{align*}
+i.e., both $\mathbf{u}$ and $\mathbf{v}$ are additive inverse of $\mathbf{w}$ in Property AI, then
+\begin{align*}
+\displaystyle \mathbf{v}=\mathbf{u}.
+\end{align*}
+This shows that the additive inverse is unique. </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="ecd06f2821a216d7d3d231c09211c0f5" course="MATH 1030" chapter="9" slide="11" of="3e28e357930ad49c22ea6235f5058352">
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs"> \begin{align*}
+\displaystyle \mathbf{v}+\mathbf{w}=\mathbf{0}=\mathbf{u}+\mathbf{w}.
+\end{align*}
+By </paragraphs>
+              <ref environment="substatement" chapter_type="" label="cancell" wbtag="ref" course="MATH 1030" chapter="9" slide="11" referrer-type="Proof" referrer-md5="ecd06f2821a216d7d3d231c09211c0f5" undefined="true">
+                <title>UNDEFINED</title>
+              </ref>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">,
+\begin{align*}
+\displaystyle \mathbf{v}=\mathbf{u}.
+\end{align*}</paragraphs>
+              <newline course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement"/>
+              <qed course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement"/>
+            </substatement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="12" id="s12" slide="12" course="MATH 1030" chapter="9" section="4" subsection="" subsubsection="" chapter_title="Vector space and subspace" section_title="Basic Properties of Vector Spaces">
+            <keywords slide="12" environ="slide" chapter="9" course="MATH 1030"/>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="20" md5="1d82a47b16369aec09ebc36c7afbd598" course="MATH 1030" chapter="9" slide="12" item="9.20">
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V$ be a vector space, $\alpha$ a real number, $\mathbf{v}$ a vector in $V$. We have the following statement. </paragraphs>
+              <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $0\mathbf{v}=\mathbf{0}$ . </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $a\mathbf{0}=\mathbf{0}$. </paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> $(-\alpha)\mathbf{v}=-(\alpha\mathbf{v})=\alpha(-\mathbf{v})$. </paragraphs>
+                </li>
+              </ol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" data-lecture-skip="true" md5="323316df3e86a5ff6a6667c715879ccb" course="MATH 1030" chapter="9" slide="12" of="1d82a47b16369aec09ebc36c7afbd598">
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs"> </paragraphs>
+              <strong xmlns="http://www.w3.org/1999/xhtml" environment="substatement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">For math major only</paragraphs>
+              </strong>
+              <newcol course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="newcol">
+                  <li class="ltx_item" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle 0\mathbf{v}+0\mathbf{v}&amp;=(0+0)\mathbf{v} &amp; {\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=content/math1030/lec9.xml&amp;query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;DSA}}}\\
+\displaystyle 0\mathbf{v}+0\mathbf{v}=0\mathbf{v}&amp;=\mathbf{0}+0\mathbf{v} &amp; {\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=content/math1030/lec9.xml&amp;query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;Z}}}
+\end{align*}
+Hence,
+\[
+\displaystyle 0\mathbf{v}=\mathbf{0},
+\]
+by </paragraphs>
+                    <ref xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" environment="newcol" chapter_type="" label="cancell" wbtag="ref" course="MATH 1030" chapter="9" slide="12" referrer-type="Proof" referrer-md5="323316df3e86a5ff6a6667c715879ccb" undefined="true">
+                      <title>UNDEFINED</title>
+                    </ref>
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">. </paragraphs>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <br environment="newcol"/>
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle\alpha\mathbf{0}+a\mathbf{0}&amp;\displaystyle=\alpha(\mathbf{0}+\mathbf{0}) &amp; {\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=content/math1030/lec9.xml&amp;query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;DVA}}}\\
+&amp;\displaystyle=\alpha\mathbf{0} &amp; {\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=content/math1030/lec9.xml&amp;query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;Z}}} \\
+&amp;\displaystyle=\mathbf{0}+\alpha\mathbf{0} &amp; {\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=content/math1030/lec9.xml&amp;query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;Z}}}
+\end{align*}
+By </paragraphs>
+                    <ref xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" environment="newcol" chapter_type="" label="cancell" wbtag="ref" course="MATH 1030" chapter="9" slide="12" referrer-type="Proof" referrer-md5="323316df3e86a5ff6a6667c715879ccb" undefined="true">
+                      <title>UNDEFINED</title>
+                    </ref>
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">,
+\begin{align*}
+\displaystyle \alpha\mathbf{0}=\mathbf{0}
+\end{align*} </paragraphs>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \begin{align*}
+\displaystyle\alpha\mathbf{v}+(-\alpha)\mathbf{v}&amp;\displaystyle=(\alpha+(-\alpha))\mathbf{v}&amp;{\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=content/math1030/lec9.xml&amp;query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;DSA}}} \\
+&amp;\displaystyle=0\mathbf{v}&amp; \\
+&amp;\displaystyle=\mathbf{0}&amp;\text{item 1}
+\end{align*}
+By </paragraphs>
+                    <ref xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" environment="newcol" chapter_type="" label="VS" name="Property AI" wbtag="ref" course="MATH 1030" chapter="9" slide="12" referrer-type="Proof" referrer-md5="323316df3e86a5ff6a6667c715879ccb" undefined="true">
+                      <title>UNDEFINED</title>
+                    </ref>
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> and the uniqueness of the additive inverse (</paragraphs>
+                    <ref xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" environment="newcol" chapter_type="" label="invunique" wbtag="ref" course="MATH 1030" chapter="9" slide="12" referrer-type="Proof" referrer-md5="323316df3e86a5ff6a6667c715879ccb" undefined="true">
+                      <title>UNDEFINED</title>
+                    </ref>
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">),
+\begin{align*}
+\displaystyle (-\alpha)\mathbf{v}=-\alpha\mathbf{v}.
+\end{align*}
+Next
+\begin{align*}
+\displaystyle\alpha\mathbf{v}+\alpha(-\mathbf{v})&amp;\displaystyle=\alpha(\mathbf{v}+(-\mathbf{v})) &amp; {\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=content/math1030/lec9.xml&amp;query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;DVA}}} \\
+&amp;\displaystyle=\alpha\mathbf{0} &amp; {\href{https://www.math.cuhk.edu.hk/~pschan/cranach/?xml=content/math1030/lec9.xml&amp;query=(//lv:*[./lv:label/@name='VS'])[1]}{\mathrm{Property\;AI}}} \\
+&amp;\displaystyle=\mathbf{0} &amp; \text{item 2}
+\end{align*}
+By Property AI and the uniqueness of the additive inverse (</paragraphs>
+                    <ref xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" environment="newcol" chapter_type="" label="invunique" wbtag="ref" course="MATH 1030" chapter="9" slide="12" referrer-type="Proof" referrer-md5="323316df3e86a5ff6a6667c715879ccb" undefined="true">
+                      <title>UNDEFINED</title>
+                    </ref>
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">),
+\begin{align*}
+\displaystyle \alpha(-\mathbf{v})=-\alpha\mathbf{v}.
+\end{align*} </paragraphs>
+                  </li>
+                </ol>
+                <newline course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
+                <qed course="MATH 1030" chapter="9" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+          </slide>
+        </slides>
+      </section>
+      <section environment="" chapter_type="" type="Section" wbtag="section" title="Subspaces" course="MATH 1030" chapter="9" num="5" serial="9.5">
+        <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="9" section="5" subsection="" subsubsection="" serial="" slide="">
+          <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Subspaces</paragraphs>
+        </title>
+        <slides environment="" chapter_type="">
+          <slide environment="" chapter_type="Chapter" canon_num="13" scope="section" id="s13" slide="13" course="MATH 1030" chapter="9" section="5" subsection="" subsubsection="" chapter_title="Vector space and subspace" section_title="Subspaces">
+            <keywords slide="13" environ="slide" chapter="9" course="MATH 1030">
+              <keyword chapter="9" slide="13">subspace</keyword>
+            </keywords>
+            <title environment="title" chapter_type="Chapter" wbtag="title" scope="section" course="MATH 1030" chapter="9" section="5" subsection="" subsubsection="" serial="" slide="13">
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Subspaces</paragraphs>
+            </title>
+            <statement environment="statement" chapter_type="Chapter" type="Definition" wbtag="defn" num="21" md5="95be227d30910528e7e6b40b0e31633f" course="MATH 1030" chapter="9" slide="13" item="9.21">
+              <label wbtag="label" name="subdef" type="Definition"/>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V$ be vector space.
+A subset $W$ of $V$ is said to be a </paragraphs>
+              <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="statement">subspace</inline_keyword>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> of $V$ if: </paragraphs>
+              <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">$W$ is nonempty.</paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">For $\mathbf{v},\mathbf{w}\in W$, then $\mathbf{v}+\mathbf{w}\in W$.</paragraphs>
+                </li>
+                <li class="ltx_item" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">For $\alpha\in\mathbf{R}$, $\mathbf{v}\in W$, then $\alpha\mathbf{v}\in W$.</paragraphs>
+                </li>
+              </ol>
+            </statement>
+          </slide>
+          <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="14" id="s14" slide="14" course="MATH 1030" chapter="9" section="5" subsection="" subsubsection="" chapter_title="Vector space and subspace" section_title="Subspaces">
+            <keywords slide="14" environ="slide" chapter="9" course="MATH 1030"/>
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="" wbtag="paragraphs"> We will prove several theorem first before we give examples. </paragraphs>
+            <statement environment="statement" chapter_type="Chapter" type="Proposition" wbtag="prop" num="22" md5="6c3ef2e3357c762cd22b092e7656a753" course="MATH 1030" chapter="9" slide="14" item="9.22">
+              <label wbtag="label" name="0" type="Proposition"/>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V$ be a vector space and $W$ a subspace of $V$.
+Then $\mathbf{0}$
+is in $W$. </paragraphs>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="8ee94ddb9c3fe4862a53a06ddf5f733f" course="MATH 1030" chapter="9" slide="14" of="6c3ef2e3357c762cd22b092e7656a753">
+              <newcol course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By </paragraphs>
+                <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="MATH 1030" chapter="9" slide="14" referrer-type="Proof" referrer-md5="8ee94ddb9c3fe4862a53a06ddf5f733f" undefined="true">
+                  <title>UNDEFINED</title>
+                </ref>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, Condition 1, $W$ is nonempty. Let $\mathbf{w}\in W$.
+By </paragraphs>
+                <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="MATH 1030" chapter="9" slide="14" referrer-type="Proof" referrer-md5="8ee94ddb9c3fe4862a53a06ddf5f733f" undefined="true">
+                  <title>UNDEFINED</title>
+                </ref>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, Condition 3, with $\alpha=0$,
+$0\mathbf{w}\in W$.
+On the other hand, by </paragraphs>
+                <ref environment="newcol" chapter_type="" label="1d82a47b16369aec09ebc36c7afbd598" wbtag="ref" course="MATH 1030" chapter="9" slide="14" referrer-type="Proof" referrer-md5="8ee94ddb9c3fe4862a53a06ddf5f733f" undefined="true">
+                  <title>UNDEFINED</title>
+                </ref>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $0\mathbf{w} = \mathbf{0}$.
+Hence, the zero vector $\mathbf{0}$ lies in $W$. </paragraphs>
+                <qed course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+              </newcol>
+            </substatement>
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="23" md5="b97161010780aa4b703cb89b1294f822" course="MATH 1030" chapter="9" slide="14" item="9.23">
+              <label wbtag="label" name="subdef2" type="Theorem"/>
+              <newcol course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $V$ be a vector space
+and $W$ a subset of $V$,
+then $W$ is a subspace if and only if </paragraphs>
+                <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="newcol">
+                  <li class="ltx_item" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> $W$ is nonempty. </paragraphs>
+                  </li>
+                  <li class="ltx_item" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> For any $\alpha\in\mathbf{R}$, $\mathbf{v},\mathbf{w}\in W$, $\alpha\mathbf{v}+\mathbf{w}\in W$. </paragraphs>
+                  </li>
+                </ol>
+              </newcol>
+            </statement>
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="e541c09f219f5762cbb47cc224de7ce7" course="MATH 1030" chapter="9" slide="14" of="b97161010780aa4b703cb89b1294f822">
+              <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement"/>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">($\Rightarrow$) </paragraphs>
+              <newcol course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose $W$ is a subspace.</paragraphs>
+                <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">By </paragraphs>
+                <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="MATH 1030" chapter="9" slide="14" referrer-type="Proof" referrer-md5="e541c09f219f5762cbb47cc224de7ce7" undefined="true">
+                  <title>UNDEFINED</title>
+                </ref>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, Condition 1, $W$ is nonempty.</paragraphs>
+                <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Next, for $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{w}\in W$.
+By </paragraphs>
+                <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="MATH 1030" chapter="9" slide="14" referrer-type="Proof" referrer-md5="e541c09f219f5762cbb47cc224de7ce7" undefined="true">
+                  <title>UNDEFINED</title>
+                </ref>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, Condition 3, $\alpha\mathbf{v}\in W$.
+By </paragraphs>
+                <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="MATH 1030" chapter="9" slide="14" referrer-type="Proof" referrer-md5="e541c09f219f5762cbb47cc224de7ce7" undefined="true">
+                  <title>UNDEFINED</title>
+                </ref>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, Condition 2, $\alpha\mathbf{v}+\mathbf{w}\in W$. </paragraphs>
+              </newcol>
+              <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement"/>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">($\Leftarrow$) </paragraphs>
+              <newcol course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Suppose $W$ satisfies Conditions 1 and 2 of the theorem.</paragraphs>
+                <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">By Condition 1 of the theorem, </paragraphs>
+                <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="MATH 1030" chapter="9" slide="14" referrer-type="Proof" referrer-md5="e541c09f219f5762cbb47cc224de7ce7" undefined="true">
+                  <title>UNDEFINED</title>
+                </ref>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Condition 1 is true.</paragraphs>
+                <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Now we want to check </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="MATH 1030" chapter="9" slide="14" referrer-type="Proof" referrer-md5="e541c09f219f5762cbb47cc224de7ce7" undefined="true">
+                    <title>UNDEFINED</title>
+                  </ref>
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Condition 2.</paragraphs>
+                  <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Suppose $\mathbf{v},\mathbf{w}\in W$.
+In Condition 2 of the theorem, let $\alpha=1$, then $\mathbf{v}+\mathbf{w}=\alpha\mathbf{v}+\mathbf{w}\in W$.</paragraphs>
+                  <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                  <collapse course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Next we want to check </paragraphs>
+                    <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="MATH 1030" chapter="9" slide="14" referrer-type="Proof" referrer-md5="e541c09f219f5762cbb47cc224de7ce7" undefined="true">
+                      <title>UNDEFINED</title>
+                    </ref>
+                    <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Condition 3.</paragraphs>
+                    <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                    <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">First, since $W$ is nonempty, there exists some element $\mathbf{x}\in W$. Let $\mathbf{v}=\mathbf{w}=\mathbf{x}$ and $\alpha=-1$ in Condition 2 of the theorem. Then, $\mathbf{0} = (-1)\mathbf{w}+\mathbf{w} \in W.$</paragraphs>
+                    <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                    <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Now, for any $\mathbf{v}\in W$, $\alpha\in{\mathbb{R}}^{\hbox{}}$,
+let $\mathbf{w}=\mathbf{0} \in W$.
+Then, $\alpha\mathbf{v}=\alpha\mathbf{v}+\mathbf{w}\in W$, by Condition 2 of the theorem. </paragraphs>
+                    <qed course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="newcol"/>
+                  </collapse>
+                </collapse>
+              </newcol>
+            </substatement>
+          </slide>
+        </slides>
+        <subsection environment="" chapter_type="" type="Section" wbtag="subsection" title="Examples" course="MATH 1030" chapter="9" section="5" num="1" serial="9.5.1">
+          <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="MATH 1030" chapter="9" section="5" subsection="" subsubsection="" serial="9.5.1" slide="">
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Examples</paragraphs>
+          </title>
+          <slides environment="" chapter_type="">
+            <slide environment="" chapter_type="Chapter" canon_num="15" scope="subsection" id="s15" slide="15" course="MATH 1030" chapter="9" section="5" subsection="1" subsubsection="" chapter_title="Vector space and subspace" section_title="Subspaces">
+              <keywords slide="15" environ="slide" chapter="9" course="MATH 1030"/>
+              <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="MATH 1030" chapter="9" section="5" subsection="1" subsubsection="" serial="" slide="15">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="title" wbtag="paragraphs">Examples</paragraphs>
+              </title>
+              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="24" md5="73b514d3dd7ffb145f144b7d5e7cd2fe" course="MATH 1030" chapter="9" slide="15" item="9.24">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V = \mathbb{R}^3$.  Let:
+\[
+W = \left\{\left.\colvector{w_1\\0\\w_3} \;\right| \;w_1, w_3 \in \mathbb{R}\right\}.
+\]
+We now show that $W$ is a subspace of $V$:</paragraphs>
+                <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="statement"/>
+                <newcol course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
+                  <col_ol course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="col_ol" wbtag="col_ol">
+                    <col_li course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="col_ol" wbtag="col_li">
+                      <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="col_ol" wbtag="paragraphs"> Clearly, $\colvector{0\\0\\0}$ lies in $W$, hence $W$ is nonempty. </paragraphs>
+                    </col_li>
+                    <col_li course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="col_ol" wbtag="col_li">
+                      <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="col_ol" wbtag="paragraphs"> Given any $\vec{v}$ and $\vec{w}$ in $W$, by definition of $W$ we have:
+\[
+\vec{v} = \colvector{v_1\\0\\v_3},\quad \vec{w} = \colvector{w_1\\0\\w_3},
+\quad v_1,v_2,w_1,w_3 \in \mathbb{R}.
+\]
+Hence,
+\[
+\vec{v} + \vec{w} = \colvector{v_1 + w_1\\0 + 0\\v_3 + w_3}
+= \colvector{v_1 + w_1\\0\\v_3 + w_3} \in W.
+\] </paragraphs>
+                    </col_li>
+                    <col_li course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="col_ol" wbtag="col_li">
+                      <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="col_ol" wbtag="paragraphs"> Given any $\alpha \in \mathbb{R}$ and $\vec{w}$ in $W$, by definition of $W$ we have:
+\[
+\vec{w} = \colvector{w_1\\0\\w_3}, \quad w_1,w_3 \in \mathbb{R}.
+\]
+Hence,
+\[
+\alpha\vec{w} = \colvector{\alpha w_1\\\alpha \cdot 0\\\alpha w_3}
+= \colvector{\alpha w_1\\0\\\alpha w_3} \in W.
+\] </paragraphs>
+                    </col_li>
+                  </col_ol>
+                </newcol>
+              </statement>
+              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="25" md5="417d6ebec58e666568f284e1f28fcf2a" course="MATH 1030" chapter="9" slide="15" item="9.25">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs"> $V = \mathbb{R}^3$.
+\[
+W = \left\{\left.\colvector{x\\y\\z} \in \mathbb{R}^3 \,\right|\, x + 2y + 3z = 0
+\right\}
+\] </paragraphs>
+              </statement>
+              <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment=""/>
+            </slide>
+            <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="16" id="s16" slide="16" course="MATH 1030" chapter="9" section="5" subsection="1" subsubsection="" chapter_title="Vector space and subspace" section_title="Subspaces">
+              <keywords slide="16" environ="slide" chapter="9" course="MATH 1030"/>
+              <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="26" md5="2f7883d7d3895fb0931ca536f3cb54f8" course="MATH 1030" chapter="9" slide="16" item="9.26">
+                <label wbtag="label" name="thm:nullspacesubspace" type="Theorem"/>
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs"> Let $A\in M_{mn}$, then $W=\nsp{A}$ is a subspace of $\mathbb{R}^n$. </paragraphs>
+              </statement>
+              <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment=""/>
+              <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="a90d459ce88fc3df374b0558fba10dda" course="MATH 1030" chapter="9" slide="16" of="2f7883d7d3895fb0931ca536f3cb54f8">
+                <newcol course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Because $\vect 0 \in \nsp{A}$, so $W$ is nonempty.</paragraphs>
+                  <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol"/>
+                  <collapse course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> For $\alpha \in \mathbb{R}$, $\vect v, \vect w \in W$.
+Then
+\[ A \vect v = \vect 0, \qquad A \vect w = \vect 0. \] </paragraphs>
+                    <collapse course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Then
+\[ A(\alpha \vect v + \vect w) = \alpha A \vect v + A \vect w = \alpha \vect 0 + \vect 0 = \vect 0. \] </paragraphs>
+                      <collapse course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> So
+\[ \alpha \vect v + \vect w \in \nsp{A}. \]
+Thus by </paragraphs>
+                        <ref environment="newcol" chapter_type="" label="subdef2" wbtag="ref" course="MATH 1030" chapter="9" slide="16" referrer-type="Proof" referrer-md5="a90d459ce88fc3df374b0558fba10dda" undefined="true">
+                          <title>UNDEFINED</title>
+                        </ref>
+                        <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs">, $W=\nsp{A}$ is a subspace. </paragraphs>
+                        <qed course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol"/>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </newcol>
+              </substatement>
+              <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment=""/>
+            </slide>
+            <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="17" data-lecture-skip="true" id="s17" slide="17" course="MATH 1030" chapter="9" section="5" subsection="1" subsubsection="" chapter_title="Vector space and subspace" section_title="Subspaces">
+              <keywords slide="17" environ="slide" chapter="9" course="MATH 1030">
+                <keyword chapter="9" slide="17">Alternate proof</keyword>
+              </keywords>
+              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="27" md5="9acc0365c50ecab8e4c58c60b1de7253" course="MATH 1030" chapter="9" slide="17" item="9.27">
+                <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs">Skip for now, until you learn the definition of column space.</paragraphs>
+                </strong>
+                <newcol course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $A\in M_{mn}$, then $\mathcal{C}\!\left(A\right)$ is a subspace of ${\mathbb{R}}^{m}$. </paragraphs>
+                </newcol>
+              </statement>
+              <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="30bba05579c08718b46c1e2baf4c12d1" course="MATH 1030" chapter="9" slide="17" of="9acc0365c50ecab8e4c58c60b1de7253">
+                <newcol course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> $\mathcal{C}\!\left(A\right)=\left&lt;\{\mathbf{A}_{1},\ldots,\mathbf{A}_{n}\}\right&gt;$. So by the previous theorem, $\mathcal{C}\!\left(A\right)$ is a subspace of ${\mathbb{R}}^{m}$. </paragraphs>
+                  <inline_keyword course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol">Alternate proof</inline_keyword>
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs">: Suppose For $\alpha\in{\mathbb{R}}^{\hbox{}}$, $\mathbf{v},\mathbf{w}\in W=\mathcal{C}\!\left(A\right)$.
+Recall
+\begin{align*}
+\displaystyle \mathcal{C}\!\left(A\right)=\{A\mathbf{x}\,|\,x\in{\mathbb{R}}^{m}\}.
+\end{align*}
+Then there exist $\mathbf{x},\mathbf{y}$ such that $A\mathbf{x}=\mathbf{v}$, $A\mathbf{y}=\mathbf{w}$.
+\begin{align*}
+\displaystyle \alpha\mathbf{v}+\mathbf{w}=\alpha A\mathbf{x}+A\mathbf{y}=A(\alpha\mathbf{x}+\mathbf{y})\in\mathcal{C}\!\left(A\right).
+\end{align*}
+Thus by </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="subdef2" wbtag="ref" course="MATH 1030" chapter="9" slide="17" referrer-type="Proof" referrer-md5="30bba05579c08718b46c1e2baf4c12d1" undefined="true">
+                    <title>UNDEFINED</title>
+                  </ref>
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs">, $W$ is a subspace. </paragraphs>
+                  <qed course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol"/>
+                </newcol>
+              </substatement>
+              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="28" md5="6f615fc43622f3615143cdc497b510ce" course="MATH 1030" chapter="9" slide="17" item="9.28">
+                <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs">For math majors only</paragraphs>
+                </strong>
+                <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="statement"/>
+                <newcol course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $S_{n}$ be the set of symmetric matrices of $M_{nn}$.
+Then $S_{n}$ is a subspace of $M_{nn}$. Check that $W=S_{n}$ is a subspace: Because ${\cal O}\in W$, so $W$ is nonempty. Suppose $\alpha\in{\mathbb{R}}^{\hbox{}}$, $A,B\in W$. Then $A^{t}=A$, $B^{t}=B$.
+\begin{align*}
+\displaystyle (\alpha A+B)^{t}=\alpha A^{t}+B^{t}=\alpha A+B.
+\end{align*}
+Thus $\alpha A+B\in S_{n}$. Hence $S_{n}$ is a subspace by </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="subdef2" wbtag="ref" course="MATH 1030" chapter="9" slide="17" referrer-type="Example" referrer-md5="6f615fc43622f3615143cdc497b510ce" undefined="true">
+                    <title>UNDEFINED</title>
+                  </ref>
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs">. </paragraphs>
+                </newcol>
+              </statement>
+              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="29" md5="bacfda8fa4f6d8b39182c7f540ddc254" course="MATH 1030" chapter="9" slide="17" item="9.29">
+                <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs">For math majors only</paragraphs>
+                </strong>
+                <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="statement"/>
+                <newcol course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Let
+\begin{align*}
+\displaystyle F=\{f(x)\in P_{n}\,|\,f(1)=0\}.
+\end{align*}
+Then $F$ is a subspace of $P_{n}$ Because $0\in E$, so $E$ is nonempty. Suppose $\alpha\in{\mathbb{R}}^{\hbox{}}$, $f(x),g(x)\in E$. Then $f(1)=g(1)=0$.
+Let $h=\alpha f+g$. Then
+\begin{align*}
+\displaystyle h(1)=\alpha f(1)+g(1)=\alpha 0+0=0.
+\end{align*}
+So $h\in F$. Hence $F$ is a subspace by </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="subdef2" wbtag="ref" course="MATH 1030" chapter="9" slide="17" referrer-type="Example" referrer-md5="bacfda8fa4f6d8b39182c7f540ddc254" undefined="true">
+                    <title>UNDEFINED</title>
+                  </ref>
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs">. </paragraphs>
+                </newcol>
+              </statement>
+              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="30" md5="8d1200ff113d0ff0ce9841aeb1bcdc5d" course="MATH 1030" chapter="9" slide="17" item="9.30">
+                <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="statement" wbtag="paragraphs">For math majors only</paragraphs>
+                </strong>
+                <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="statement"/>
+                <newcol course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="1" subsubsection="" environment="newcol" wbtag="paragraphs"> Let
+\begin{align*}
+\displaystyle E=\{f(x)\in P_{n}\,|\,f(x)=f(-x)\}.
+\end{align*}
+Then $E$ is a subspace of $P_{n}$: Because $0\in E$, so $E$ is nonempty. Suppose $\alpha\in{\mathbb{R}}^{\hbox{}}$, $f(x),g(x)\in E$. Then $f(x)=f(-x)$, $g(x)=g(-x)$.
+Let $h=\alpha f+g$. Then
+\begin{align*}
+\displaystyle h(-x)=\alpha f(-x)+g(-x)=\alpha f(x)+g(x)=h(x).
+\end{align*}
+So $h\in E$. Hence $E$ is a subspace. </paragraphs>
+                </newcol>
+              </statement>
+            </slide>
+          </slides>
+        </subsection>
+        <subsection environment="" chapter_type="" type="Section" wbtag="subsection" title="Non-Examples" course="MATH 1030" chapter="9" section="5" num="2" serial="9.5.2">
+          <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="MATH 1030" chapter="9" section="5" subsection="" subsubsection="" serial="9.5.2" slide="">
+            <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="" subsubsection="" environment="title" wbtag="paragraphs">Non-Examples</paragraphs>
+          </title>
+          <slides environment="" chapter_type="">
+            <slide environment="" chapter_type="Chapter" canon_num="18" scope="subsection" id="s18" slide="18" course="MATH 1030" chapter="9" section="5" subsection="2" subsubsection="" chapter_title="Vector space and subspace" section_title="Subspaces">
+              <keywords slide="18" environ="slide" chapter="9" course="MATH 1030"/>
+              <title environment="title" chapter_type="Chapter" wbtag="title" scope="subsection" course="MATH 1030" chapter="9" section="5" subsection="2" subsubsection="" serial="" slide="18">
+                <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="title" wbtag="paragraphs">Non-Examples</paragraphs>
+              </title>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="" wbtag="paragraphs"> To show that $W$ is </paragraphs>
+              <strong xmlns="http://www.w3.org/1999/xhtml" environment="">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="" wbtag="paragraphs">not</paragraphs>
+              </strong>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="" wbtag="paragraphs"> a subspace of $V$, it suffices to show that it violates </paragraphs>
+              <ref environment="" chapter_type="" label="subdef" wbtag="ref" course="MATH 1030" chapter="9" slide="18" undefined="true">
+                <title>UNDEFINED</title>
+              </ref>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="" wbtag="paragraphs"> condition 1 or condition 2.
+This can be done by finding counter examples to either condition. Usually before checking those conditions, we quickly check if $\mathbf{0}_{V}\in W$
+(see </paragraphs>
+              <ref environment="" chapter_type="" label="0" wbtag="ref" course="MATH 1030" chapter="9" slide="18" undefined="true">
+                <title>UNDEFINED</title>
+              </ref>
+              <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="" wbtag="paragraphs">). </paragraphs>
+              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="31" md5="1d185691ef52b63d2a96fe14d92edd45" course="MATH 1030" chapter="9" slide="18" item="9.31">
+                <newcol course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> $V={\mathbb{R}}^{m}$, $W=\{\mathbf{v}\in V\,|\,[\mathbf{v}]_{1}=1\}$.</paragraphs>
+                  <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol"/>
+                  <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs">Method 1</paragraphs>
+                  </strong>
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> Obviously $\mathbf{0}$ is not in $W$. So by </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="0" wbtag="ref" course="MATH 1030" chapter="9" slide="18" referrer-type="Example" referrer-md5="1d185691ef52b63d2a96fe14d92edd45" undefined="true">
+                    <title>UNDEFINED</title>
+                  </ref>
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs">, $W$ is not a subspace.</paragraphs>
+                  <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol"/>
+                  <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs">Method 2</paragraphs>
+                  </strong>
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> For Suppose $\mathbf{v},\mathbf{w}\in W$.
+Then $[\mathbf{v}+\mathbf{w}]_{1}=[\mathbf{v}]_{1}+[\mathbf{w}]_{1}=2$.
+So $\mathbf{v}+\mathbf{w}\not\in W$. So $W$ violates </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="MATH 1030" chapter="9" slide="18" referrer-type="Example" referrer-md5="1d185691ef52b63d2a96fe14d92edd45" undefined="true">
+                    <title>UNDEFINED</title>
+                  </ref>
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> condition 1 and hence not a subspace. </paragraphs>
+                </newcol>
+              </statement>
+              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="32" md5="ec1c51d224a9092fb22c7e55f1fdb644" course="MATH 1030" chapter="9" slide="18" item="9.32">
+                <newcol course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> $V={\mathbb{R}}^{m}$, $W=\{\mathbf{v}\in V\,|\,\sum_{i=1}^{m}[\mathbf{v}]_{i}=1\}$.</paragraphs>
+                  <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol"/>
+                  <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs">Method 1</paragraphs>
+                  </strong>
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> (the easiest method) Obviously $\mathbf{0}$ is not in $W$. So by </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="0" wbtag="ref" course="MATH 1030" chapter="9" slide="18" referrer-type="Example" referrer-md5="ec1c51d224a9092fb22c7e55f1fdb644" undefined="true">
+                    <title>UNDEFINED</title>
+                  </ref>
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs">, $W$ is not a subspace.</paragraphs>
+                  <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol"/>
+                  <strong xmlns="http://www.w3.org/1999/xhtml" environment="newcol">
+                    <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs">Method 2</paragraphs>
+                  </strong>
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> We will find an explicit counter example, let
+\begin{align*}
+\displaystyle \mathbf{v}=\mathbf{w}=\begin{bmatrix}1\\
+0\\
+\vdots\\
+0\end{bmatrix}.
+\end{align*}
+Then both $\mathbf{v}$ and $\mathbf{w}$ are in $W$.
+\begin{align*}
+\displaystyle \mathbf{v}+\mathbf{w}=\begin{bmatrix}2\\
+0\\
+\vdots\\
+0\end{bmatrix}.
+\end{align*}
+Obvious $\mathbf{v}+\mathbf{w}\notin W$.
+Therefore $W$ violates </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="MATH 1030" chapter="9" slide="18" referrer-type="Example" referrer-md5="ec1c51d224a9092fb22c7e55f1fdb644" undefined="true">
+                    <title>UNDEFINED</title>
+                  </ref>
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> condition 1 and hence not a subspace. </paragraphs>
+                </newcol>
+              </statement>
+              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="33" md5="501d9a028bd6c983b9742a2e0963a5a9" course="MATH 1030" chapter="9" slide="18" item="9.33">
+                <newcol course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> $V=\mathbf{R}^{n}$, $W=\{\mathbf{v}\in V\,|\,[\mathbf{v}]_{1}\geq 0\}$. Let $\alpha=-1$ and
+\begin{align*}
+\displaystyle \mathbf{v}=\begin{bmatrix}1\\
+0\end{bmatrix}.
+\end{align*}
+Then $[\alpha\mathbf{v}]_{1}=\alpha[\mathbf{v}]_{1}=\alpha=-1&lt;0$.
+So $\alpha\mathbf{v}\notin W$.
+Thus $W$ violates </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="MATH 1030" chapter="9" slide="18" referrer-type="Example" referrer-md5="501d9a028bd6c983b9742a2e0963a5a9" undefined="true">
+                    <title>UNDEFINED</title>
+                  </ref>
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> condition 3 and hence not a subspace. </paragraphs>
+                </newcol>
+              </statement>
+              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="34" md5="b7f4b3912b6b8995ec46866afeb8393a" course="MATH 1030" chapter="9" slide="18" item="9.34">
+                <newcol course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> $V={\mathbb{R}}^{2}$,
+$W=\{\begin{bmatrix}v_{1}\\
+v_{2}\end{bmatrix}\in V\,|\,v_{1}v_{2}\geq 0\}$. Let $\mathbf{v}=\begin{bmatrix}1\\
+0\end{bmatrix}$ , $\mathbf{w}=\begin{bmatrix}0\\
+-1\end{bmatrix}\in W$.
+$\mathbf{v}+\mathbf{w}=\begin{bmatrix}1\\
+-1\end{bmatrix}$. Because
+$1\times(-1)=-1 &lt; 0$. So $\mathbf{v}+\mathbf{w}\notin W$.
+Thus $W$ violates </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="MATH 1030" chapter="9" slide="18" referrer-type="Example" referrer-md5="b7f4b3912b6b8995ec46866afeb8393a" undefined="true">
+                    <title>UNDEFINED</title>
+                  </ref>
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> condition 2 and hence not a subspace. In fact, we can show that $W$ satisfies </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="MATH 1030" chapter="9" slide="18" referrer-type="Example" referrer-md5="b7f4b3912b6b8995ec46866afeb8393a" undefined="true">
+                    <title>UNDEFINED</title>
+                  </ref>
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> condition 3 but fails condition 2. </paragraphs>
+                </newcol>
+              </statement>
+              <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="35" data-lecture-skip="true" md5="755d192e28718d235b3a8ae2fdea510f" course="MATH 1030" chapter="9" slide="18" item="9.35">
+                <strong xmlns="http://www.w3.org/1999/xhtml" environment="statement">
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="statement" wbtag="paragraphs">For math majors only</paragraphs>
+                </strong>
+                <newline course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="statement"/>
+                <newcol course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="newcol">
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> Let $V=P_{n}$. Let $G$ be the set of polynomial with degree exactly equal to $n$. Let $f(x)=x^{n}$, $g(x)=-x^{n}+1$. Both $f$ and $g$ have degree exactly equal to $n$.
+But
+\begin{align*}
+\displaystyle f(x)+g(x)=1
+\end{align*}
+is a polynomial with degree $0$. So $f+g$ is not in $G$. Thus $W$ violates </paragraphs>
+                  <ref environment="newcol" chapter_type="" label="subdef" wbtag="ref" course="MATH 1030" chapter="9" slide="18" referrer-type="Example" referrer-md5="755d192e28718d235b3a8ae2fdea510f" undefined="true">
+                    <title>UNDEFINED</title>
+                  </ref>
+                  <paragraphs course="MATH 1030" chapter="9" chapter_type="" section="5" subsection="2" subsubsection="" environment="newcol" wbtag="paragraphs"> condition 2 and hence not a subspace. </paragraphs>
+                </newcol>
+              </statement>
+            </slide>
+          </slides>
+        </subsection>
+      </section>
+    </chapter>
+  </course>
+</document>
