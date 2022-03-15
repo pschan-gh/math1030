@@ -444,6 +444,117 @@ Hence $\left\{ \mathbf{A}_{1},\mathbf{A}_{3},\mathbf{A}_{4} \right\}$ is a basis
 $\mathcal{C}(A)$.
 @endcol
 @end
+@section{Bases and Nonsingular Matrices}
+@thm
+@title{Column Space of a Nonsingular Matrix}
+Suppose $A$ is a square matrix of size $n$. Then $A$ is nonsingular if and only if $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$.
+@end
+@proof
+@newcol
+See @ref{thm:ANSRM}.
+@qed
+@endcol
+@end
+<!--
+@slide
+@thm
+Suppose that $A$ is a square matrix of size $m$.
+
+Then, the columns of $A$ is a basis for ${\mathbb{R}}^{m}$ if and only if $A$ is nonsingular.
+@end
+@proof
+@newcol
+This is a direct consequence of the theorem  @ref{NME2}:
+
+@col
+If columns of $A$ form a basis,
+then in particular they are linearly independent.
+So, item 5 of the theorem holds.
+
+It now follows from the theorem that item 1,
+namely that $A$ is nonsingular, also holds.
+
+@col
+Conversely, suppose $A$ is nonsingular.
+
+@col
+Then, by Item 6 of @ref{NME2} the columns of $A$ are linearly independent,
+and by Item 4 they span $\mathbb{R}^m$.
+Hence, the columns of $A$ is a basis for $\mathbb{R}^m$.
+@qed
+@endcol
+@end
+-->
+@slide
+Hence, we may rephrase @ref{NME2} as follows:
+@thm
+@title{Nonsingular Matrix Equivalences}
+@label{NME25}
+@newcol
+Suppose that $A$ is an $m\times m$ square matrix.
+The following are equivalent: <ol class="ltx_enumerate">
+<li class="ltx_item">
+@col
+$A$ is nonsingular. </li>
+<li class="ltx_item">
+@col
+$A$ row-reduces to the identity matrix. </li>
+<li class="ltx_item">
+@col
+The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$. </li>
+<li class="ltx_item">
+@col
+The linear system $\mathcal{LS}({A},{\mathbf{b}})$ has a unique solution for every possible choice of $\mathbf{b}$. </li>
+<li class="ltx_item">
+@col
+$A$ is invertible.
+</li>
+<li class="ltx_item">
+@col
+The columns of $A$ form a linearly independent set. </li>
+<li class="ltx_item">
+@col
+The columns space $\mathcal{C}(A)$ is equal to $\mathbb{R}^m$. </li>
+<li class="ltx_item">
+@col
+The columns of $A$ form a basis for $\mathbb{R}^m$. </li></ol>
+@endcol
+@end
+@slide
+@skip
+@eg
+Consider $S^{\prime}=\left\{\mathbf{v}_{1}=\begin{bmatrix}1\\
+0\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}1\\
+1\end{bmatrix}\right\}$.
+
+Let
+\begin{align*}
+\displaystyle A=[\mathbf{v}_{1}|\mathbf{v}_{2}]=\begin{bmatrix}1&1\\
+0&1\end{bmatrix}
+\end{align*}
+@newcol
+<strong>Exercise.</strong> The matrix $A$ is nonsingular.
+
+@col
+Hence, $S^{\prime}$ is a basis for ${\mathbb{R}}^{2}$.
+@endcol
+@end
+@slide
+@eg
+\begin{align*}
+\displaystyle A=\begin{bmatrix}-7&-6&-12\\
+5&5&7\\
+1&0&4\end{bmatrix}.
+\end{align*}
+@newcol
+It may be shown that $A$ is row equivalent to the $3\times 3$
+identity matrix.
+
+@col
+Hence $A$ is nonsingular,
+so the columns of $A$ form a basis for ${\mathbb{R}}^{3}$.
+@endcol
+@end
 @slide
 @eg
 Let
@@ -459,7 +570,6 @@ We can show that $A$ is nonsingular as $A\xrightarrow{\text{RREF}}I_{4}$.
 So $\mathcal{C}\left(A\right)={\mathbb{R}}^{4}$.
 @endcol
 @end
-
 @section{Row Space of a Matrix}
 <!--@slide@defn
 Let $n$ be a positive integer.
@@ -1119,117 +1229,6 @@ Then, a basis for $\mathrm{Span}\,S$ exists.
 
 @newcol
 In fact, there exists a subset $T$ of $S$ such that $T$ is a basis for $\mathrm{Span}\,S$ (see @ref{BCS}).
-@endcol
-@end
-@section{Bases and Nonsingular Matrices}
-@thm
-@title{Column Space of a Nonsingular Matrix}
-Suppose $A$ is a square matrix of size $n$. Then $A$ is nonsingular if and only if $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$.
-@end
-@proof
-@newcol
-See @ref{thm:ANSRM}.
-@qed
-@endcol
-@end
-<!--
-@slide
-@thm
-Suppose that $A$ is a square matrix of size $m$.
-
-Then, the columns of $A$ is a basis for ${\mathbb{R}}^{m}$ if and only if $A$ is nonsingular.
-@end
-@proof
-@newcol
-This is a direct consequence of the theorem  @ref{NME2}:
-
-@col
-If columns of $A$ form a basis,
-then in particular they are linearly independent.
-So, item 5 of the theorem holds.
-
-It now follows from the theorem that item 1,
-namely that $A$ is nonsingular, also holds.
-
-@col
-Conversely, suppose $A$ is nonsingular.
-
-@col
-Then, by Item 6 of @ref{NME2} the columns of $A$ are linearly independent,
-and by Item 4 they span $\mathbb{R}^m$.
-Hence, the columns of $A$ is a basis for $\mathbb{R}^m$.
-@qed
-@endcol
-@end
--->
-@slide
-Hence, we may rephrase @ref{NME2} as follows:
-@thm
-@title{Nonsingular Matrix Equivalences}
-@label{NME25}
-@newcol
-Suppose that $A$ is an $m\times m$ square matrix.
-The following are equivalent: <ol class="ltx_enumerate">
-<li class="ltx_item">
-@col
-$A$ is nonsingular. </li>
-<li class="ltx_item">
-@col
-$A$ row-reduces to the identity matrix. </li>
-<li class="ltx_item">
-@col
-The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\{\mathbf{0}\}$. </li>
-<li class="ltx_item">
-@col
-The linear system $\mathcal{LS}({A},{\mathbf{b}})$ has a unique solution for every possible choice of $\mathbf{b}$. </li>
-<li class="ltx_item">
-@col
-$A$ is invertible.
-</li>
-<li class="ltx_item">
-@col
-The columns of $A$ form a linearly independent set. </li>
-<li class="ltx_item">
-@col
-The columns space $\mathcal{C}(A)$ is equal to $\mathbb{R}^m$. </li>
-<li class="ltx_item">
-@col
-The columns of $A$ form a basis for $\mathbb{R}^m$. </li></ol>
-@endcol
-@end
-@slide
-@skip
-@eg
-Consider $S^{\prime}=\left\{\mathbf{v}_{1}=\begin{bmatrix}1\\
-0\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}1\\
-1\end{bmatrix}\right\}$.
-
-Let
-\begin{align*}
-\displaystyle A=[\mathbf{v}_{1}|\mathbf{v}_{2}]=\begin{bmatrix}1&1\\
-0&1\end{bmatrix}
-\end{align*}
-@newcol
-<strong>Exercise.</strong> The matrix $A$ is nonsingular.
-
-@col
-Hence, $S^{\prime}$ is a basis for ${\mathbb{R}}^{2}$.
-@endcol
-@end
-@slide
-@eg
-\begin{align*}
-\displaystyle A=\begin{bmatrix}-7&-6&-12\\
-5&5&7\\
-1&0&4\end{bmatrix}.
-\end{align*}
-@newcol
-It may be shown that $A$ is row equivalent to the $3\times 3$
-identity matrix.
-
-@col
-Hence $A$ is nonsingular,
-so the columns of $A$ form a basis for ${\mathbb{R}}^{3}$.
 @endcol
 @end
 @section{Bases of Null Spaces}
