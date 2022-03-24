@@ -13,16 +13,13 @@ Beezer, Ver 3.5 Chapter D (print version p261-282)
 <h5 class="notkw">Exercise.</h5> Exercises with solutions can be downloaded at
 @href{http://linear.ups.edu/download/fcla-3.50-solution-manual.pdf} (Replace $\mathbb{C}$ by ${\mathbb{R}}^{\hbox{}}$)Section DM p.98 - 101 all, Section PDM p.101-102 M30, T10, T15, T20
 
-@section{Definition of the determinant}
-
+@section{Definition of the Determinant}
+<!--
 The @keyword{determinant} is a function that take a square matrix as an input and
 produces a scalar as an output.
-
-@newcol
+-->
 Suppose $A$ is an $m\times n$ matrix. Then the @keyword{submatrix} $A(i|j)$ is the $(m-1)\times(n-1)$
 matrix obtained from $A$ by removing row $i$ and column $j$.
-@endcol
-@slide
 @eg
 Suppose
 \begin{align*}
@@ -561,115 +558,6 @@ Skip the proof. If you are interested, see Beezer p.274.
 @end
 @slide
 @thm
-@title{Determinant for Row or Column Multiples and Addition}
-@label{DRCMA}
-Suppose that $A$ is a square matrix. Let $B$ be the square matrix obtained from $A$ by multiplying a row by the scalar $\alpha$ and then adding it to another row, or by multiplying a column by the scalar $\alpha$ and then adding it to another column. Then $\det\left(B\right)=\det\left(A\right)$.
-@end
-@proof
-@newcol
-Suppose the row operation is $\alpha R_{i}+R_{j}$, expand along row $j$. For details, see Beezer p.275.
-@qed
-@endcol
-@end
-@slide
-@eg
-Suppose we want to compute the determinant of the $4\times 4$ matrix
-\begin{align*}
-\displaystyle A=\begin{bmatrix}2&0&2&3\\
-1&3&-1&1\\
--1&1&-1&2\\
-3&5&4&0\end{bmatrix}
-\end{align*}
-@newcol
-We will perform a sequence of row operations on this matrix, shooting for an upper triangular matrix, whose determinant will be simply the product of its diagonal entries. For each row operation, we will track the effect on the determinant via Theorem   @ref{DRCS} Theorem   @ref{DRCM} and Theorem   @ref{DRCMA}.
-\begin{align*}
-\displaystyle \begin{vmatrix}2&0&2&3\\
-1&3&-1&1\\
--1&1&-1&2\\
-3&5&4&0\end{vmatrix}
-\displaystyle &=-\begin{vmatrix}1&3&-1&1\\
-2&0&2&3\\
--1&1&-1&2\\
-3&5&4&0\end{vmatrix}\qquad(R_{1}\leftrightarrow R_{2})
-\\
-\\&=-\begin{vmatrix}1&3&-1&1\\
-0&-6&4&1\\
--1&1&-1&2\\
-3&5&4&0\end{vmatrix}\qquad(-2R_{1}+R_{2})
-\\
-\\&=-\begin{vmatrix}1&3&-1&1\\
-0&-6&4&1\\
-0&4&-2&3\\
-3&5&4&0\end{vmatrix}\qquad(1R_{1}+R_{3})
-\\
-\\&=-\begin{vmatrix}1&3&-1&1\\
-0&-6&4&1\\
-0&4&-2&3\\
-0&-4&7&-3\end{vmatrix}\qquad(-3R_{1}+R_{4})
-\\
-\\&=-\begin{vmatrix}1&3&-1&1\\
-0&-2&2&4\\
-0&4&-2&3\\
-0&-4&7&-3\end{vmatrix}\qquad(1R_{3}+R_{2})
-\\
-\\&=2\begin{vmatrix}1&3&-1&1\\
-0&1&-1&-2\\
-0&4&-2&3\\
-0&-4&7&-3\end{vmatrix}\qquad(-\frac{1}{2}R_{2})
-\\
-\\&=2\begin{vmatrix}1&3&-1&1\\
-0&1&-1&-2\\
-0&0&2&11\\
-0&-4&7&-3\end{vmatrix}\qquad(-4R_{2}+R_{3})
-\\
-\\&=2\begin{vmatrix}1&3&-1&1\\
-0&1&-1&-2\\
-0&0&2&11\\
-0&0&3&-11\end{vmatrix}\qquad(-4R_{2}+R_{4})
-\\
-\\&=2\begin{vmatrix}1&3&-1&1\\
-0&1&-1&-2\\
-0&0&2&11\\
-0&0&1&-22\end{vmatrix}\qquad(-1R_{3}+R_{4})
-\\
-\\&=2\begin{vmatrix}1&3&-1&1\\
-0&1&-1&-2\\
-0&0&0&55\\
-0&0&1&-22\end{vmatrix}\qquad(-2R_{4}+R_{3})
-\\
-\\&=-2\begin{vmatrix}1&3&-1&1\\
-0&1&-1&-2\\
-0&0&1&-22\\
-0&0&0&55\end{vmatrix}\qquad(R_{3}\leftrightarrow R_{4})
-\\
-\\&=-2\times 1\times 1\times 1\times 55=-110.
-\end{align*}
-@endcol
-@end
-@eg
-@skip
-Compute
-\begin{align*}
-\displaystyle \begin{vmatrix}1&a_{1}&a_{2}&a_{3}\\
-1&a_{1}+b_{1}&a_{2}&a_{3}\\
-1&a_{1}&a_{2}+b_{2}&a_{3}\\
-1&a_{1}&a_{2}&a_{3}+b_{3}.\end{vmatrix}
-\end{align*}
-@newcol
-The above is
-\begin{align*}
-\displaystyle \begin{vmatrix}1&a_{1}&a_{2}&a_{3}\\
-0&b_{1}&0&0\\
-0&0&b_{2}&0\\
-0&0&0&b_{3}\end{vmatrix}\qquad(-1R_{1}+R_{2},-1R_{1}+R_{3},-1R_{1}+R_{4})
-\end{align*}
-\begin{align*}
-\displaystyle =b_{1}b_{2}b_{3}\qquad(\text{upper triangular matrix})
-\end{align*}
-@endcol
-@end
-@slide
-@thm
 @label{thm:detsumrowcol}
 Let $\vect{A}_i$, $\vect{B}, \vect{C}$ be row vectors with $n$ components.
 Then:
@@ -783,6 +671,115 @@ a_{n1}&\cdots&a_{n,i-1}&c_{n}&a_{n,i+1}&\cdots&a_{nn}\end{vmatrix}
 @newcol
 Expand along row $i$ (or column $i$).
 @qed
+@endcol
+@end
+@slide
+@thm
+@title{Determinant for Row or Column Multiples and Addition}
+@label{DRCMA}
+Suppose that $A$ is a square matrix. Let $B$ be the square matrix obtained from $A$ by multiplying a row by the scalar $\alpha$ and then adding it to another row, or by multiplying a column by the scalar $\alpha$ and then adding it to another column. Then $\det\left(B\right)=\det\left(A\right)$.
+@end
+@proof
+@newcol
+Suppose the row operation is $\alpha R_{i}+R_{j}$, expand along row $j$. For details, see Beezer p.275.
+@qed
+@endcol
+@end
+@slide
+@eg
+Suppose we want to compute the determinant of the $4\times 4$ matrix
+\begin{align*}
+\displaystyle A=\begin{bmatrix}2&0&2&3\\
+1&3&-1&1\\
+-1&1&-1&2\\
+3&5&4&0\end{bmatrix}
+\end{align*}
+@newcol
+We will perform a sequence of row operations on this matrix, shooting for an upper triangular matrix, whose determinant will be simply the product of its diagonal entries. For each row operation, we will track the effect on the determinant via Theorem   @ref{DRCS} Theorem   @ref{DRCM} and Theorem   @ref{DRCMA}.
+\begin{align*}
+\displaystyle \begin{vmatrix}2&0&2&3\\
+1&3&-1&1\\
+-1&1&-1&2\\
+3&5&4&0\end{vmatrix}
+\displaystyle &=-\begin{vmatrix}1&3&-1&1\\
+2&0&2&3\\
+-1&1&-1&2\\
+3&5&4&0\end{vmatrix}\qquad(R_{1}\leftrightarrow R_{2})
+\\
+\\&=-\begin{vmatrix}1&3&-1&1\\
+0&-6&4&1\\
+-1&1&-1&2\\
+3&5&4&0\end{vmatrix}\qquad(-2R_{1}+R_{2})
+\\
+\\&=-\begin{vmatrix}1&3&-1&1\\
+0&-6&4&1\\
+0&4&-2&3\\
+3&5&4&0\end{vmatrix}\qquad(1R_{1}+R_{3})
+\\
+\\&=-\begin{vmatrix}1&3&-1&1\\
+0&-6&4&1\\
+0&4&-2&3\\
+0&-4&7&-3\end{vmatrix}\qquad(-3R_{1}+R_{4})
+\\
+\\&=-\begin{vmatrix}1&3&-1&1\\
+0&-2&2&4\\
+0&4&-2&3\\
+0&-4&7&-3\end{vmatrix}\qquad(1R_{3}+R_{2})
+\\
+\\&=2\begin{vmatrix}1&3&-1&1\\
+0&1&-1&-2\\
+0&4&-2&3\\
+0&-4&7&-3\end{vmatrix}\qquad(-\frac{1}{2}R_{2})
+\\
+\\&=2\begin{vmatrix}1&3&-1&1\\
+0&1&-1&-2\\
+0&0&2&11\\
+0&-4&7&-3\end{vmatrix}\qquad(-4R_{2}+R_{3})
+\\
+\\&=2\begin{vmatrix}1&3&-1&1\\
+0&1&-1&-2\\
+0&0&2&11\\
+0&0&3&-11\end{vmatrix}\qquad(-4R_{2}+R_{4})
+\\
+\\&=2\begin{vmatrix}1&3&-1&1\\
+0&1&-1&-2\\
+0&0&2&11\\
+0&0&1&-22\end{vmatrix}\qquad(-1R_{3}+R_{4})
+\\
+\\&=2\begin{vmatrix}1&3&-1&1\\
+0&1&-1&-2\\
+0&0&0&55\\
+0&0&1&-22\end{vmatrix}\qquad(-2R_{4}+R_{3})
+\\
+\\&=-2\begin{vmatrix}1&3&-1&1\\
+0&1&-1&-2\\
+0&0&1&-22\\
+0&0&0&55\end{vmatrix}\qquad(R_{3}\leftrightarrow R_{4})
+\\
+\\&=-2\times 1\times 1\times 1\times 55=-110.
+\end{align*}
+@endcol
+@end
+@eg
+@skip
+Compute
+\begin{align*}
+\displaystyle \begin{vmatrix}1&a_{1}&a_{2}&a_{3}\\
+1&a_{1}+b_{1}&a_{2}&a_{3}\\
+1&a_{1}&a_{2}+b_{2}&a_{3}\\
+1&a_{1}&a_{2}&a_{3}+b_{3}.\end{vmatrix}
+\end{align*}
+@newcol
+The above is
+\begin{align*}
+\displaystyle \begin{vmatrix}1&a_{1}&a_{2}&a_{3}\\
+0&b_{1}&0&0\\
+0&0&b_{2}&0\\
+0&0&0&b_{3}\end{vmatrix}\qquad(-1R_{1}+R_{2},-1R_{1}+R_{3},-1R_{1}+R_{4})
+\end{align*}
+\begin{align*}
+\displaystyle =b_{1}b_{2}b_{3}\qquad(\text{upper triangular matrix})
+\end{align*}
 @endcol
 @end
 @section{Examples}
@@ -1334,12 +1331,13 @@ Alternatively,
 A vector $\vect{x} = \colvec{x_1\\x_2\\\vdots\\x_n}$ is a solution to
 $A\vect{x} = \vect{b}$ if and only if:
 \[
-x_1 \vect{A}_1 + x_2 \vect{A}_2 + \cdots + x_n \vect{A}_n = \vec{b}.
+x_1 \vect{A}_1 + x_2 \vect{A}_2 + \cdots + x_n \vect{A}_n = \vect{b}.
 \]
 @col
 Let $k$ be any integer such that $1 \leq k \leq n$.
 Let $M_k$ be the matrix obtained from $A$ by replacing the column $\vect{A}_k$ with
 $\vect{b}$.
+
 @col
 Then:
 \[
