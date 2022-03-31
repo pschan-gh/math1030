@@ -1116,7 +1116,16 @@ We conclude that $A$ is nonsingular if and only if $\det(A) \neq 0$.
 @end
 @cor
 @newcol
-The columns of an $n \times n$ matrix $A$ are linearly independent if and only if $\det(A) \neq 0$.
+Let $A$ be an $n \times n$ matrix.
+The following statements are equivalent:
+@itemize
+@item
+$\det A \neq 0$.
+@item
+The columns of $A$ are linearly independent.
+@item
+The columns of $A$ form a basis of $\mathbb{R}^n$.
+@enditemize
 @endcol
 @end
 @slide
