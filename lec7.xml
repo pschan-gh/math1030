@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="MATH 1030">
     <keywords slide="all" environ="course" chapter="" course="MATH 1030">
@@ -12,6 +11,7 @@
       <keyword chapter="" slide="all">nonsingular</keyword>
       <keyword chapter="" slide="all">singular</keyword>
       <keyword chapter="" slide="all">identity matrix</keyword>
+      <keyword chapter="" slide="all">Check</keyword>
       <keyword chapter="" slide="all">Homogeneous System</keyword>
       <keyword chapter="" slide="all">Homogeneous System corresponding to system of linear equation</keyword>
       <keyword chapter="" slide="all">Homogeneous Systems are Consistent</keyword>
@@ -46,6 +46,7 @@
         <keyword chapter="7" slide="all">nonsingular</keyword>
         <keyword chapter="7" slide="all">singular</keyword>
         <keyword chapter="7" slide="all">identity matrix</keyword>
+        <keyword chapter="7" slide="all">Check</keyword>
         <keyword chapter="7" slide="all">Homogeneous System</keyword>
         <keyword chapter="7" slide="all">Homogeneous System corresponding to system of linear equation</keyword>
         <keyword chapter="7" slide="all">Homogeneous Systems are Consistent</keyword>
@@ -188,7 +189,7 @@ Then the system is consistent. In fact $\mathbf{0}$ is a solution, i.e $x_{1}=x_
             <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="5" md5="32b3ecdc95e88540db7a5574b1188401" course="MATH 1030" chapter="7" slide="6" item="7.5">
               <enumerate course="MATH 1030" chapter="7" chapter_type="" section="1" subsection="" subsubsection="" environment="enumerate" wbtag="enumerate">
                 <item course="MATH 1030" chapter="7" chapter_type="" section="1" subsection="" subsubsection="" environment="enumerate" wbtag="item">
-                  <br xmlns="http://www.w3.org/1999/xhtml" environment="enumerate"/>
+                  <br xmlns="http://www.w3.org/1999/xhtml" environment="enumerate" />
                   <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="1" subsection="" subsubsection="" environment="enumerate" wbtag="paragraphs"> \begin{align*}
 -7x_1 -6 x_2 - 12x_3 &amp;=0\\
 5x_1  + 5x_2 + 7x_3 &amp;=0\\
@@ -213,8 +214,7 @@ x_1 + x_2 &amp; =0
 The system is consistent. It has $n-r=3-2=1$ free variable. The solution set is
 \[S=\left\{\left.\begin{bmatrix}x_{1}\\
 x_{2}\\
-x_{3}\end{bmatrix}\,\right|\,x_{1}=-x_{3},\,x_{2}=x_{3}\right\}=\left\{\left.%
-\begin{bmatrix}-x_{3}\\
+x_{3}\end{bmatrix}\,\right|\,x_{1}=-x_{3},\,x_{2}=x_{3}\right\}=\left\{\left.\begin{bmatrix}-x_{3}\\
 x_{3}\\
 x_{3}\end{bmatrix}\,\right|\,x_{3}\text{ real number}\right\}\]
 Geometrically, these are points in three dimensions that lie on a line through the origin. </paragraphs>
@@ -870,6 +870,7 @@ This contradicts $\mathbf{y} \neq \mathbf{0}$. Hence, $\mathbf{w} \neq \mathbf{0
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="23" id="s23" slide="23" course="MATH 1030" chapter="7" section="6" subsection="" subsubsection="" chapter_title="Homogeneous Systems of Equations and Nonsingular Matrices" section_title="Nonsingular Matrices are Invertible">
             <keywords slide="23" environ="slide" chapter="7" course="MATH 1030">
+              <keyword chapter="7" slide="23">Check</keyword>
               <keyword chapter="7" slide="23">Nonsingularity is Invertibility</keyword>
             </keywords>
             <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="22" title="Nonsingularity is Invertibility" md5="d3dbea32c0efccc59935842aa77652cb" course="MATH 1030" chapter="7" slide="23" item="7.22">
@@ -898,7 +899,9 @@ which means there are elementary matrices $J_1, J_2, \ldots, J_k$ such that:
 \[
 J_k\cdots J_2 J_1 A = I_n
 \]
-(__Exercise:__ Every elementary matrix $J$ is invertible.)</paragraphs>
+(</paragraphs>
+                  <inline_keyword course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol">Exercise:</inline_keyword>
+                  <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Every elementary matrix $J$ is invertible.)</paragraphs>
                   <newline course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol"/>
                   <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Hence,
 \[
@@ -912,7 +915,9 @@ A^{-1}
 =
 J_k\cdots J_2 J_1.
 \]
-(__Check__: $AA^{-1} = A^{-1} A = I_n$.) </paragraphs>
+(</paragraphs>
+                    <inline_keyword course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol">Check</inline_keyword>
+                    <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">: $AA^{-1} = A^{-1} A = I_n$.) </paragraphs>
                     <comment course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="newcol">
 It now follows from @ref{OSIS} that $A$ is invertible, with:
 \[
@@ -943,7 +948,9 @@ A^{-1} =  J_k\cdots J_2 J_1.
             <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="ef8fb97d271d5d2e855498ac9a9b41b7" course="MATH 1030" chapter="7" slide="24" of="27368124ff49dae27ca58380923786ba" of-src-course="MATH 1030" of-src-chapter="7" of-src-slide="24" of-type="Corollary" of-item="7.23" of-src-filename="lec7.xml" ofmd5="27368124ff49dae27ca58380923786ba" of-serial="">
               <of-title hidden="true">One-Sided Inverse is Sufficient</of-title>
               <newline course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="substatement"/>
-              <paragraphs course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">**Exercise.** </paragraphs>
+              <strong xmlns="http://www.w3.org/1999/xhtml" environment="substatement">
+                <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="substatement" wbtag="paragraphs">Exercise.</paragraphs>
+              </strong>
             </substatement>
             <comment course="MATH 1030" chapter="7" chapter_type="" section="6" subsection="" subsubsection="" environment="">@proof
 The matrix $I_{n}$ is nonsingular. So by @ref{NPNT} $A$ is nonsingular.

@@ -459,7 +459,6 @@ Let $V$ be a subspace of ${\mathbb{R}}^{m}$.
 Suppose that $S$ is an orthogonal subset of $V$. Then $S$ is an orthogonal basis if and only if $\left< S\right>=V$.
 @endcol
 @end
-@newcol
 @cor
 @newcol
 Suppose that $S$ is an orthogonal subset of ${\mathbb{R}}^{m}$. Then $S$ is a basis of $\left< S\right>$.
@@ -480,7 +479,6 @@ This follows from @ref{o}.
 @qed
 @endcol
 @end
-@endcol
 @slide
 @eg
 <ol class="ltx_enumerate">
@@ -663,7 +661,7 @@ Moreover, the orthogonal basis can be further normalized to be an orthonormal ba
 @end
 @proof
 @newcol
-By Lecture 18 Theorem 8, there exists a basis $S=\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{k}\right\}$ for $V$.
+By @ref{basisexists2}, there exists a basis $S=\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{k}\right\}$ for $V$.
 Applying Gram-Schmidt orthogonalization process to $S$, we obtain an orthogonal set $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$.
 
 By Theorem   @ref{GSO}, $\left< S^{\prime}\right>=\left< S\right>=V$. By Theorem   @ref{checkob}, $S^{\prime}$ is an orthogonal basis. Normalizing $S^{\prime}$, we can also obtain an orthonormal basis.
