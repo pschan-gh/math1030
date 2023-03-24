@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <document xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach">
   <course environment="" chapter_type="" type="Course" wbtag="course" title="MATH 1030">
     <keywords slide="all" environ="course" chapter="" course="MATH 1030">
@@ -964,10 +965,13 @@ $\mathcal{R}\!\left(A\right)$ is column space $\mathcal{C}\left(A^t\right)$ of $
               <label wbtag="label" name="REMRS" type="Theorem"/>
               <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A$ and $B$ are row-equivalent matrices. Then $\mathcal{R}\!\left(A\right)=\mathcal{R}\!\left(B\right)$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="6b6bf8fa1bb4657f8febbd7044891e89" course="MATH 1030" chapter="13" slide="21" of="24bdd87be8932b1d94e873bafb302f30" of-src-course="MATH 1030" of-src-chapter="13" of-src-slide="21" of-type="Theorem" of-item="13.21" of-src-filename="lec13.xml" ofmd5="24bdd87be8932b1d94e873bafb302f30" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="0f19816db008003dc93faf9c397aa902" course="MATH 1030" chapter="13" slide="21" of="24bdd87be8932b1d94e873bafb302f30" of-src-course="MATH 1030" of-src-chapter="13" of-src-slide="21" of-type="Theorem" of-item="13.21" of-src-filename="lec13.xml" ofmd5="24bdd87be8932b1d94e873bafb302f30" of-serial="">
               <of-title hidden="true">Row-Equivalent Matrices have Equal Row Spaces</of-title>
               <newcol course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Observe that if $B$ is obtained from $A$ via a row operation of the type
+                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Write $A^t = [A^t_1 | A^t_2| \cdots | A^t_n]$, $B^t = [B^t_1 | B^t_2| \cdots | B^t_n]$.</paragraphs>
+                <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
+                <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Observe that if $B$ is obtained from $A$ via a row operation of the type
 $R_i \leftrightarrow R_j$,
 then the rows of $B$ are the same as the rows of $A$,
 and hence the columns of $B^t$ are still the same as the columns of $A^t$,
@@ -975,62 +979,77 @@ only with the order changed.  Hence,
 \[
 \mathcal{R}(B) = \mathcal{C}\left(B^t\right) = \mathcal{C}\left(A^t\right) = \mathcal{R}(A).
 \]</paragraphs>
-                <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
-                <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If $B$ is obtained from $A$ via a row operation of the type $\alpha R_i$ ($\alpha \neq 0$),
-then the $i$-th column of $B^t$ is equal to $\alpha$ times the $i$-th column of $A^t$,
-and the other columns remain the same as those of $A^t$ with the corresponding indices.</paragraphs>
-                  <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
-                  <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">In paricular, the $i$-th column of $B^t$ is a linear combination of the columns of $A^t$.</paragraphs>
                   <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
                   <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence, the columns of $B^t$ all lie in $\mathcal{C}(A^t)$, which in turn implies that:
-\[
+                    <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If $B$ is obtained from $A$ via a row operation of the type $\alpha R_i$ ($\alpha \neq 0$),
+then the $i$-th column of $B^t$ is equal to $\alpha$ times the $i$-th column of $A^t$,
+and the other columns remain the same as those of $A^t$ with the corresponding indices.</paragraphs>
+                    <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
+                    <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Hence, any vector $\vect{v} \in \mathcal{C}(B^t)$ has the form:
+\begin{align*}
+\vect{v} &amp;= \alpha_1 B^t_1 + \alpha_2 B^t_2 + \cdots + \alpha_i B^t_i + \cdots \alpha_n B^t_n\\
+&amp;= \alpha_1 A^t_1 + \alpha_2 A^t_2 + \cdots + \alpha_i \alpha A^t_i + \cdots \alpha_n A^t_n,
+\end{align*}
+which is a vector in $\mathrm{Span} \{A^t_1,\ldots, A^t_n\} = \mathcal{C}(A^t)$.</paragraphs>
+                    <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
+                    <comment course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"> In paricular, the $i$-th column of $B^t$ is a linear combination of the columns of $A^t$. </comment>
+                    <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence, </paragraphs>
+                      <comment course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"> Hence, the columns of $B^t$ all lie in $\mathcal{C}(A^t)$, which in turn implies that: </comment>
+                      <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \[
 \mathcal{R}(B) = \mathcal{C}\left(B^t\right) \subseteq \mathcal{C}\left(A^t\right) = \mathcal{R}(A).
 \] </paragraphs>
-                    <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                      <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> On the other hand, if $B$ is obtained from $A$ via $\alpha R_i$, then $A$ is obtained
+                      <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> On the other hand, if $B$ is obtained from $A$ via $\alpha R_i$, then $A$ is obtained
 from $B$ via $\left(\frac{1}{\alpha}\right) R_i$.  So, by the same argument as before we have:
 \[
 \mathcal{R}(A) = \mathcal{C}\left(A^t\right) \subseteq \mathcal{C}\left(B^t\right) = \mathcal{R}(B).
 \]
 Hence, $\mathcal{R}(B) = \mathcal{R}(A)$.</paragraphs>
-                      <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
-                      <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                        <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If $B$ is obtained from $A$ via a row operation of the type $\alpha R_i + R_j$,
+                        <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
+                        <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> If $B$ is obtained from $A$ via a row operation of the type $\alpha R_i + R_j$,
 then:
 \[
-\left[B^t\right]_j = \alpha\left[A^t\right]_i + \left[A^t\right]_j,
+B^t_j = \alpha A^t_i + A^t_j,
 \]
 and the other columns of $B^t$ remain the same as those of $A^t$
 with the corresponding indices.</paragraphs>
-                        <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
-                        <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">In paricular, the $i$-th column of $B^t$ is a linear combination of the columns of $A^t$.</paragraphs>
-                        <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
-                        <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                          <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence, the columns of $B^t$ all lie in $\mathcal{C}(A^t)$, which in turn implies that:
-\[
+                          <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
+                          <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Hence, any vector $\vect{v} \in \mathcal{C}(B^t)$ has the form:
+\begin{align*}
+\vect{v} &amp;= \alpha_1 B^t_1 + \alpha_2 B^t_2 + \cdots + \alpha_i B^t_i + \cdots + \alpha_j B^t_j + \cdots + \alpha_n B^t_n\\
+&amp;= \alpha_1 A^t_1 + \alpha_2 A^t_2 + \cdots + \alpha_i A^t_i + \cdots + \alpha_j\left( \alpha A^t_i +  A^t_j\right) + \cdots +  \alpha_n A^t_n\\
+&amp;= \alpha_1 A^t_1 + \alpha_2 A^t_2 + \cdots (\alpha_i + \alpha)A^t_i + \cdots +  \alpha_j A^t_j + \cdots \alpha_n A^t_n,
+\end{align*}
+which is a vector in $\mathrm{Span} \{A^t_1,\ldots, A^t_n\} = \mathcal{C}(A^t)$.</paragraphs>
+                          <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
+                          <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                            <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence, </paragraphs>
+                            <comment course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"> the columns of $B^t$ all lie in $\mathcal{C}(A^t)$, which in turn implies that: </comment>
+                            <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> \[
 \mathcal{R}(B) = \mathcal{C}\left(B^t\right) \subseteq \mathcal{C}\left(A^t\right) = \mathcal{R}(A).
 \] </paragraphs>
-                          <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                            <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> On the other hand, if $B$ is obtained from $A$ via $\alpha R_i + R_j$, then $A$ is obtained
+                            <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> On the other hand, if $B$ is obtained from $A$ via $\alpha R_i + R_j$, then $A$ is obtained
 from $B$ via $(-\alpha) R_i + R_j$.  So, by the same argument as before we have:
 \[
 \mathcal{R}(A) = \mathcal{C}\left(A^t\right) \subseteq \mathcal{C}(B^t) = \mathcal{R}(B).
 \]
 Hence, $\mathcal{R}(B) = \mathcal{R}(A)$.</paragraphs>
-                            <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
-                            <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We now see that the row space of a matrix remains unchanged after any application
-of a row operation.</paragraphs>
                               <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
-                              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Hence, $\mathcal{R}(B) = \mathcal{R}(A)$ if $B$ is row-equivalent to $A$,
+                              <collapse course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We now see that the row space of a matrix remains unchanged after any application
+of a row operation.</paragraphs>
+                                <newline course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol"/>
+                                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Hence, $\mathcal{R}(B) = \mathcal{R}(A)$ if $B$ is row-equivalent to $A$,
 since by the definition of row-equivalence (</paragraphs>
-                              <ref environment="newcol" chapter_type="" label="dacc247eacab6b0b430f64f7de449ebe" wbtag="ref" course="MATH 1030" chapter="13" slide="21" referrer-type="Proof" referrer-md5="6b6bf8fa1bb4657f8febbd7044891e89" src-course="MATH 1030" src-chapter="4" src-slide="10" type="Definition" item="4.15" src-filename="lec4.xml" md5="dacc247eacab6b0b430f64f7de449ebe" class="lcref" serial="">
-                                <title custom="true">Row-Equivalent Matrices</title>
-                              </ref>
-                              <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">) $B$ is obtained by $A$ via a series
+                                <ref environment="newcol" chapter_type="" label="dacc247eacab6b0b430f64f7de449ebe" wbtag="ref" course="MATH 1030" chapter="13" slide="21" referrer-type="Proof" referrer-md5="0f19816db008003dc93faf9c397aa902" src-course="MATH 1030" src-chapter="4" src-slide="10" type="Definition" item="4.15" src-filename="lec4.xml" md5="dacc247eacab6b0b430f64f7de449ebe" class="lcref" serial="">
+                                  <title custom="true">Row-Equivalent Matrices</title>
+                                </ref>
+                                <paragraphs course="MATH 1030" chapter="13" chapter_type="" section="4" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">) $B$ is obtained by $A$ via a series
 of row operations. </paragraphs>
+                              </collapse>
                             </collapse>
                           </collapse>
                         </collapse>

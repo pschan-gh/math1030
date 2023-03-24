@@ -706,6 +706,9 @@ Suppose $A$ and $B$ are row-equivalent matrices. Then $\mathcal{R}\!\left(A\righ
 @end
 @proof
 @newcol
+Write $A^t = [A^t_1 | A^t_2| \cdots | A^t_n]$, $B^t = [B^t_1 | B^t_2| \cdots | B^t_n]$.
+
+@col
 Observe that if $B$ is obtained from $A$ via a row operation of the type
 $R_i \leftrightarrow R_j$,
 then the rows of $B$ are the same as the rows of $A$,
@@ -720,10 +723,17 @@ If $B$ is obtained from $A$ via a row operation of the type $\alpha R_i$ ($\alph
 then the $i$-th column of $B^t$ is equal to $\alpha$ times the $i$-th column of $A^t$,
 and the other columns remain the same as those of $A^t$ with the corresponding indices.
 
-In paricular, the $i$-th column of $B^t$ is a linear combination of the columns of $A^t$.
+Hence, any vector $\vect{v} \in \mathcal{C}(B^t)$ has the form:
+\begin{align*}
+\vect{v} &= \alpha_1 B^t_1 + \alpha_2 B^t_2 + \cdots + \alpha_i B^t_i + \cdots \alpha_n B^t_n\\
+&= \alpha_1 A^t_1 + \alpha_2 A^t_2 + \cdots + \alpha_i \alpha A^t_i + \cdots \alpha_n A^t_n,
+\end{align*}
+which is a vector in $\mathrm{Span} \{A^t_1,\ldots, A^t_n\} = \mathcal{C}(A^t)$.
 
+<!-- In paricular, the $i$-th column of $B^t$ is a linear combination of the columns of $A^t$. -->
 @col
-Hence, the columns of $B^t$ all lie in $\mathcal{C}(A^t)$, which in turn implies that:
+Hence,
+<!-- Hence, the columns of $B^t$ all lie in $\mathcal{C}(A^t)$, which in turn implies that: -->
 \[
 \mathcal{R}(B) = \mathcal{C}\left(B^t\right) \subseteq \mathcal{C}\left(A^t\right) = \mathcal{R}(A).
 \]
@@ -739,15 +749,22 @@ Hence, $\mathcal{R}(B) = \mathcal{R}(A)$.
 If $B$ is obtained from $A$ via a row operation of the type $\alpha R_i + R_j$,
 then:
 \[
-\left[B^t\right]_j = \alpha\left[A^t\right]_i + \left[A^t\right]_j,
+B^t_j = \alpha A^t_i + A^t_j,
 \]
 and the other columns of $B^t$ remain the same as those of $A^t$
 with the corresponding indices.
 
-In paricular, the $i$-th column of $B^t$ is a linear combination of the columns of $A^t$.
+Hence, any vector $\vect{v} \in \mathcal{C}(B^t)$ has the form:
+\begin{align*}
+\vect{v} &= \alpha_1 B^t_1 + \alpha_2 B^t_2 + \cdots + \alpha_i B^t_i + \cdots + \alpha_j B^t_j + \cdots + \alpha_n B^t_n\\
+&= \alpha_1 A^t_1 + \alpha_2 A^t_2 + \cdots + \alpha_i A^t_i + \cdots + \alpha_j\left( \alpha A^t_i +  A^t_j\right) + \cdots +  \alpha_n A^t_n\\
+&= \alpha_1 A^t_1 + \alpha_2 A^t_2 + \cdots (\alpha_i + \alpha)A^t_i + \cdots +  \alpha_j A^t_j + \cdots \alpha_n A^t_n,
+\end{align*}
+which is a vector in $\mathrm{Span} \{A^t_1,\ldots, A^t_n\} = \mathcal{C}(A^t)$.
 
 @col
-Hence, the columns of $B^t$ all lie in $\mathcal{C}(A^t)$, which in turn implies that:
+Hence,
+<!-- the columns of $B^t$ all lie in $\mathcal{C}(A^t)$, which in turn implies that: -->
 \[
 \mathcal{R}(B) = \mathcal{C}\left(B^t\right) \subseteq \mathcal{C}\left(A^t\right) = \mathcal{R}(A).
 \]
