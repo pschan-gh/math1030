@@ -586,8 +586,8 @@ In total the basis will have $4$ vectors, so the column space of $A$ will have d
                     <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
                     <collapse course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                       <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By </paragraphs>
-                      <ref environment="newcol" chapter_type="" label="SSNS" wbtag="ref" course="MATH 1030" chapter="14" slide="14" referrer-type="Example" referrer-md5="6ad6ee4515f51f22c5f1fa3d6201cca4" src-course="MATH 1030" src-chapter="11" src-slide="16" type="Theorem" item="11.12" src-filename="lec11.xml" md5="b97fc03ed661ec578230fa1f3a73cd2e" class="lcref" serial="">
-                        <title>Theorem 11.12</title>
+                      <ref environment="newcol" chapter_type="" label="BNS" wbtag="ref" course="MATH 1030" chapter="14" slide="14" referrer-type="Example" referrer-md5="6ad6ee4515f51f22c5f1fa3d6201cca4" src-course="MATH 1030" src-chapter="13" src-slide="28" type="Theorem" item="13.28" src-filename="lec13.xml" md5="6dfd3e7f6f30112c829c04eecbe56d1b" class="lcref" serial="">
+                        <title custom="true">Basis for Null Spaces</title>
                       </ref>
                       <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, for each index in $F$, we can create a single basis vector.  In total the basis will have $3$ vectors, so the null space of $A$ will have dimension $3$ and we write $\nullity{A}=3$. In fact:</paragraphs>
                       <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="newcol"/>
@@ -638,12 +638,12 @@ So $\nullity{A}$ is the number of free variables $=n-r$. </paragraphs>
               </newcol>
             </substatement>
             <newline course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment=""/>
-            <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="19" title="Dimension Formula" md5="001f3522fc240347256c4cb7c8ae7acc" course="MATH 1030" chapter="14" slide="15" item="14.19">
+            <statement environment="statement" chapter_type="Chapter" type="Corollary" wbtag="cor" num="19" title="Dimension Formula" md5="42845e00ae8f7aee32014470cd8ed46f" course="MATH 1030" chapter="14" slide="15" item="14.19">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" serial="" slide="15">Rank-Nullity Theorem</title>
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" serial="" slide="15">Dimension Formula</title>
-              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A\in M_{mn}$, then
+              <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose $A\in M_{ml}$, then
 \begin{align*}
-\displaystyle r\left(A\right)+n\left(A\right)=n.
+\displaystyle r\left(A\right)+n\left(A\right)=l.
 \end{align*} </paragraphs>
             </statement>
           </slide>
@@ -768,7 +768,7 @@ Hence $r=r\left(A^{t}\right)$. This completes the proof. </paragraphs>
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="19" id="s19" slide="19" course="MATH 1030" chapter="14" section="2" subsection="" subsubsection="" chapter_title="Dimension Rank Nullity" section_title="Rank and nullity of a matrix">
             <keywords slide="19" environ="slide" chapter="14" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="23" md5="3c71a3421f3330a07ad9a54adecd0e2e" course="MATH 1030" chapter="14" slide="19" item="14.23">
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="23" md5="e4b6ec82713f6bb5cc044bf2c81c77ac" course="MATH 1030" chapter="14" slide="19" item="14.23">
               <paragraphs course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Suppose that $A$ is a square matrix of size $n$. The following are equivalent. </paragraphs>
               <ol xmlns="http://www.w3.org/1999/xhtml" class="ltx_enumerate" environment="statement">
                 <li class="ltx_item" environment="statement">
@@ -781,7 +781,7 @@ Hence $r=r\left(A^{t}\right)$. This completes the proof. </paragraphs>
                   <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\left\{\mathbf{0}\right\}$. </paragraphs>
                 </li>
                 <li class="ltx_item" environment="statement">
-                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The linear system $\mathcal{LS}({A},{\mathbf{b}})$ has a unique solution for every possible choice of $\mathbf{b}$. </paragraphs>
+                  <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The linear system $\mathcal{LS}({A},{\mathbf{b}})$ has a unique solution for every possible choice of $\mathbf{b} \in \mathbb{R}^n$. </paragraphs>
                 </li>
                 <li class="ltx_item" environment="statement">
                   <paragraphs xmlns="http://www.math.cuhk.edu.hk/~pschan/cranach" course="MATH 1030" chapter="14" chapter_type="" section="2" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> The columns of $A$ are a linearly independent set. </paragraphs>

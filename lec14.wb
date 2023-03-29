@@ -411,7 +411,7 @@ In fact $T=\{\vect{A}_1, \vect{A}_3, \vect{A}_4, \vect{A}_6\}$ is a basis for $\
 In total the basis will have $4$ vectors, so the column space of $A$ will have dimension $4$ and we write $\rank{A}=4$.
 
 @col
-By @ref{SSNS}, for each index in $F$, we can create a single basis vector.  In total the basis will have $3$ vectors, so the null space of $A$ will have dimension $3$ and we write $\nullity{A}=3$. In fact:
+By @ref{BNS}, for each index in $F$, we can create a single basis vector.  In total the basis will have $3$ vectors, so the null space of $A$ will have dimension $3$ and we write $\nullity{A}=3$. In fact:
 
 @col
 \[
@@ -445,9 +445,9 @@ So $\nullity{A}$ is the number of free variables $=n-r$.
 @cor
 @title{Rank-Nullity Theorem}
 @title{Dimension Formula}
-Suppose $A\in M_{mn}$, then
+Suppose $A\in M_{ml}$, then
 \begin{align*}
-\displaystyle r\left(A\right)+n\left(A\right)=n.
+\displaystyle r\left(A\right)+n\left(A\right)=l.
 \end{align*}
 @end
 @slide
@@ -550,7 +550,7 @@ Suppose that $A$ is a square matrix of size $n$. The following are equivalent. <
 <li class="ltx_item"> $A$ is nonsingular. </li>
 <li class="ltx_item"> $A$ row-reduces to the identity matrix. </li>
 <li class="ltx_item"> The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\left\{\mathbf{0}\right\}$. </li>
-<li class="ltx_item"> The linear system $\mathcal{LS}({A},{\mathbf{b}})$ has a unique solution for every possible choice of $\mathbf{b}$. </li>
+<li class="ltx_item"> The linear system $\mathcal{LS}({A},{\mathbf{b}})$ has a unique solution for every possible choice of $\mathbf{b} \in \mathbb{R}^n$. </li>
 <li class="ltx_item"> The columns of $A$ are a linearly independent set. </li>
 <li class="ltx_item"> $A$ is invertible. </li>
 <li class="ltx_item"> The column space of $A$ is ${\mathbb{R}}^{n}$, $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$. </li>
