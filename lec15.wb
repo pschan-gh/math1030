@@ -571,7 +571,7 @@ Then:
 \hline
 \vect{B} + \vect{C}\\
 \hline
-\vect{A}_{i-1}\\
+\vect{A}_{i+1}\\
 \hline
 \vdots\\
 \hline
@@ -587,7 +587,7 @@ Then:
 \hline
 \vect{B}\\
 \hline
-\vect{A}_{i-1}\\
+\vect{A}_{i+1}\\
 \hline
 \vdots\\
 \hline
@@ -603,7 +603,7 @@ Then:
 \hline
 \vect{C}\\
 \hline
-\vect{A}_{i-1}\\
+\vect{A}_{i+1}\\
 \hline
 \vdots\\
 \hline
@@ -681,7 +681,124 @@ Suppose that $A$ is a square matrix. Let $B$ be the square matrix obtained from 
 @end
 @proof
 @newcol
-Suppose the row operation is $\alpha R_{i}+R_{j}$, expand along row $j$. For details, see Beezer p.275.
+View $A$ as a collection of row vectors:
+\[
+A = 
+\colvector{
+\vect{A}_1\\
+\hline
+\vect{A}_2\\
+\hline
+\vdots\\
+\hline
+\vect{A}_n
+}
+\]
+Suppose the row operation is $\alpha R_{i}+R_{j}$.
+<!-- expand along row $j$. For details, see Beezer p.275. -->
+
+By @ref{thm:detsumrowcol} and @ref{DRCM}, we have:
+\begin{align*}
+\det B = \det \colvector{
+\vect{A}_1\\
+\hline
+\vdots\\
+\hline
+\vect{A}_i\\
+\hline
+\vdots\\
+\hline
+\alpha\vect{A}_i + \vect{A}_j\\
+\hline
+\vdots\\
+\hline
+\vect{A}_n
+}
+&=
+\det \colvector{
+\vect{A}_1\\
+\hline
+\vdots\\
+\hline
+\vect{A}_i\\
+\hline
+\vdots\\
+\hline
+\alpha\vect{A}_i\\
+\hline
+\vdots\\
+\hline
+\vect{A}_n
+}
++
+\det \colvector{
+\vect{A}_1\\
+\hline
+\vdots\\
+\hline
+\vect{A}_i\\
+\hline
+\vdots\\
+\hline
+\vect{A}_j\\
+\hline
+\vdots\\
+\hline
+\vect{A}_n
+}\\
+& =
+\alpha \det \colvector{
+\vect{A}_1\\
+\hline
+\vdots\\
+\hline
+\vect{A}_i\\
+\hline
+\vdots\\
+\hline
+\vect{A}_i\\
+\hline
+\vdots\\
+\hline
+\vect{A}_n
+}
++
+\det \colvector{
+\vect{A}_1\\
+\hline
+\vdots\\
+\hline
+\vect{A}_i\\
+\hline
+\vdots\\
+\hline
+\vect{A}_j\\
+\hline
+\vdots\\
+\hline
+\vect{A}_n
+}
+\end{align*}
+The first determinant on the right-hand side is equal to zero because the $i$-th and $j$-th rows of the corresponding matrix are the same.
+Hence:
+\[
+\det B = \det \colvector{
+\vect{A}_1\\
+\hline
+\vdots\\
+\hline
+\vect{A}_i\\
+\hline
+\vdots\\
+\hline
+\vect{A}_j\\
+\hline
+\vdots\\
+\hline
+\vect{A}_n 
+}
+= \det A
+\]
 @qed
 @endcol
 @end
