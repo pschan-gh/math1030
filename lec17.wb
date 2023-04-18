@@ -581,7 +581,9 @@ But what if $\mathbf{w}$ is not in $\left< S\right>$? Let’s compare the differ
 @label{perp}
 Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ be an orthogonal subset of ${\mathbb{R}}^{m}$ and let $\mathbf{w}\in{\mathbb{R}}^{m}$. Then, for each $i=1,\ldots,k$, the vector
 \begin{align*}
-\displaystyle \mathbf{v}=\mathbf{w}-\frac{\left< \mathbf{w},\mathbf{v}_{1}\right>}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left< \mathbf{w},\mathbf{v}_{k}\right>}{\|\mathbf{v}_{k}\|^{2}}\mathbf{v}_{k}
+\displaystyle \mathbf{v} 
+&= \vect{w} - \sum_{i = 1}^k \frac{\langle \vect{w}, \vect{v}_i \rangle}{\|\vect{v}_i\|^2}\vect{v}_i\\
+&=\mathbf{w}-\left(\frac{\left< \mathbf{w},\mathbf{v}_{1}\right>}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}+\cdots+\frac{\left< \mathbf{w},\mathbf{v}_{k}\right>}{\|\mathbf{v}_{k}\|^{2}}\mathbf{v}_{k}\right)
 \end{align*}
 is perpendicular to $\mathbf{v}_{i}$.
 @end
@@ -606,8 +608,11 @@ Hence $\mathbf{v}\perp\mathbf{v}_{i}$ for $i=1,\ldots,k$.
 @title{Gram-Schmidt Orthogonalization Process}
 @label{GSO}
 Let $S=\left\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{k}\right\}$ be a linearly independent subset of $V$.
-Let $\mathbf{v}_{1}=\mathbf{w}_{1}$ and set, recursively,\begin{align*}
-\displaystyle \mathbf{v}_{\ell}=\mathbf{w}_{\ell}-\frac{\left< \mathbf{w}_{\ell},\mathbf{v}_{1}\right>}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left< \mathbf{w}_{\ell},\mathbf{v}_{\ell-1}\right>}{\|\mathbf{v}_{\ell-1}\|^{2}}\mathbf{v}_{\ell-1}\,\,\text{ for $2\leq\ell\leq k$}.
+Let $\mathbf{v}_{1}=\mathbf{w}_{1}$ and set, recursively,
+\begin{align*}
+\displaystyle \mathbf{v}_{\ell}
+&= \vect{w}_l - \sum_{i = 1}^{l - 1} \frac{\langle \vect{w}_l, \vect{v}_i\rangle}{\|\vect{v}_i\|^2}\vect{v}_i
+\\&= \mathbf{w}_{\ell}-\frac{\left< \mathbf{w}_{\ell},\mathbf{v}_{1}\right>}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left< \mathbf{w}_{\ell},\mathbf{v}_{\ell-1}\right>}{\|\mathbf{v}_{\ell-1}\|^{2}}\mathbf{v}_{\ell-1},\,\,\text{ for $2\leq\ell\leq k$}.
 \end{align*}
 Then $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is an orthogonal set.
 
@@ -619,35 +624,51 @@ The process of obtaining $S^{\prime}$ by the above procedure is called the @keyw
 @end
 @proof
 @newcol
-We have $\left< \left\{\mathbf{w}_{1}\right\}\right>=\left< \left\{\mathbf{v}_{1}\right\}\right>$.
+We have $\mathrm{Span} \left\{\mathbf{w}_{1}\right\} = \mathrm{Span} \left\{\mathbf{v}_{1}\right\}$.
 We are going to add one vector at a time.
 
-Suppose that $\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}\right>=\left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}\right>$
+Suppose that 
+$\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}
+=
+\mathrm{Span}\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}$
 and that the set $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}$ is orthogonal.
 
-Observe that $\vect{v}_l$ is a linear combination of $\vect{v}_1, \cdots, \vect{v}_{l-1}$ and $\vect{w}_l$.
-Since $\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}\right>=\left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}\right>$, we have:
+@col
+Observe that $\vect{v}_l$ is a linear combination of $\vect{v}_1, \ldots, \vect{v}_{l-1}$ and $\vect{w}_l$.
+Since 
+$\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}
+=
+\mathrm{Span}\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}$,
+we have:
 \[
-\vect{v}_\ell \in \left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}, \vect{w}_\ell \right\}\right>.
+\vect{v}_\ell \in \mathrm{Span}\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}, \vect{w}_\ell \right\}.
 \]
+@col
 Hence,
 \[
-\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right> \subseteq \left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}\right>
+\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}
+\subseteq 
+\mathrm{Span}\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}
 \]
+@col
 Likewise, by the formula defining $\vect{v}_\ell$ we have:
 \[
-\vect{w}_\ell \in \left< \left\{\mathbf{v}_{1},\ldots, \vect{v}_\ell \right\}\right>.
+\vect{w}_\ell \in \mathrm{Span}\left\{\mathbf{v}_{1},\ldots, \vect{v}_\ell \right\}.
 \]
+@col
 Hence,
 \[
-\left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}\right> \subseteq
-\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right>.
+\mathrm{Span}\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}
+\subseteq
+\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}.
 \]
 It now follows that:
 \[
-\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right> =\left< \left\{\mathbf{w}_{1},\ldots, \mathbf{w}_{\ell}\right\}\right>.
+\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}
+=
+\mathrm{Span}\left\{\mathbf{w}_{1},\ldots, \mathbf{w}_{\ell}\right\}.
 \]
-
+@col
 By Theorem   @ref{perp}, $\mathbf{v}_{\ell}\perp\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}$. Thus $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}$ is orthogonal.
 Repeating the process for the incrementing $\ell$ reaches $\ell=k$, we complete the proof.
 @qed
@@ -722,8 +743,8 @@ Also
 0\end{bmatrix}.
 \end{align*}
 @col
-The set $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\right\}$ is an orthogonal basis of $\left< \left\{\mathbf{w}_{1},\mathbf{w}_{2},\mathbf{w}_{3}\right\}\right>$.
-To obtain an orthonormal basis of $\left< \left\{\mathbf{w}_{1},\mathbf{w}_{2},\mathbf{w}_{3}\right\}\right>$, we can normalized the vectors
+The set $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\right\}$ is an orthogonal basis of $\mathrm{Span}\!\left\{\mathbf{w}_{1},\mathbf{w}_{2},\mathbf{w}_{3}\right\}$.
+To obtain an orthonormal basis of $\mathrm{Span}\!\left\{\mathbf{w}_{1},\mathbf{w}_{2},\mathbf{w}_{3}\right\}$, we can normalized the vectors:
 \begin{align*}
 \displaystyle \mathbf{u}_{1}=\frac{\mathbf{v}_{1}}{\|\mathbf{v}_{1}\|}=\frac{1}{\sqrt{2}}\begin{bmatrix}1\\
 0\\

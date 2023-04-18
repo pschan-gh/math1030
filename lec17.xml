@@ -885,15 +885,17 @@ Normalizing it, we obtain an orthonormal basis
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="26" id="s26" slide="26" course="MATH 1030" chapter="17" section="3" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Gram-Schmidt Orthogonalization process">
             <keywords slide="26" environ="slide" chapter="17" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="26" md5="d4dcb9b1cdec9c946c5696df8ca4bb44" course="MATH 1030" chapter="17" slide="26" item="17.26">
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="26" md5="fec1f144bc6a1e297d590b9f540773c3" course="MATH 1030" chapter="17" slide="26" item="17.26">
               <label wbtag="label" name="perp" type="Theorem"/>
               <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ be an orthogonal subset of ${\mathbb{R}}^{m}$ and let $\mathbf{w}\in{\mathbb{R}}^{m}$. Then, for each $i=1,\ldots,k$, the vector
 \begin{align*}
-\displaystyle \mathbf{v}=\mathbf{w}-\frac{\left&lt; \mathbf{w},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left&lt; \mathbf{w},\mathbf{v}_{k}\right&gt;}{\|\mathbf{v}_{k}\|^{2}}\mathbf{v}_{k}
+\displaystyle \mathbf{v} 
+&amp;= \vect{w} - \sum_{i = 1}^k \frac{\langle \vect{w}, \vect{v}_i \rangle}{\|\vect{v}_i\|^2}\vect{v}_i\\
+&amp;=\mathbf{w}-\left(\frac{\left&lt; \mathbf{w},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}+\cdots+\frac{\left&lt; \mathbf{w},\mathbf{v}_{k}\right&gt;}{\|\mathbf{v}_{k}\|^{2}}\mathbf{v}_{k}\right)
 \end{align*}
 is perpendicular to $\mathbf{v}_{i}$. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="634a783ccbe613e84b2c561d03c7067e" course="MATH 1030" chapter="17" slide="26" of="d4dcb9b1cdec9c946c5696df8ca4bb44" of-src-course="MATH 1030" of-src-chapter="17" of-src-slide="26" of-type="Theorem" of-item="17.26" of-src-filename="lec17.xml" ofmd5="d4dcb9b1cdec9c946c5696df8ca4bb44" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="634a783ccbe613e84b2c561d03c7067e" course="MATH 1030" chapter="17" slide="26" of="fec1f144bc6a1e297d590b9f540773c3" of-src-course="MATH 1030" of-src-chapter="17" of-src-slide="26" of-type="Theorem" of-item="17.26" of-src-filename="lec17.xml" ofmd5="fec1f144bc6a1e297d590b9f540773c3" of-serial="">
               <of-title hidden="true">Theorem 17.26</of-title>
               <newcol course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> For $1\leq i\leq k$, we compute
@@ -918,12 +920,15 @@ is perpendicular to $\mathbf{v}_{i}$. </paragraphs>
               <keyword chapter="17" slide="27">Gram-Schmidt Orthogonalization Process</keyword>
               <keyword chapter="17" slide="27">Gram-Schmidt Orthogonalization Process</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="27" title="Gram-Schmidt Orthogonalization Process" md5="1ac60631cd34940ace2cea977cc5baad" course="MATH 1030" chapter="17" slide="27" item="17.27">
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="27" title="Gram-Schmidt Orthogonalization Process" md5="d34a49d6865ebccd17a8201608a1b250" course="MATH 1030" chapter="17" slide="27" item="17.27">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="17" section="3" subsection="" subsubsection="" serial="" slide="27">Gram-Schmidt Orthogonalization Process</title>
               <label wbtag="label" name="GSO" type="Theorem"/>
               <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $S=\left\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{k}\right\}$ be a linearly independent subset of $V$.
-Let $\mathbf{v}_{1}=\mathbf{w}_{1}$ and set, recursively,\begin{align*}
-\displaystyle \mathbf{v}_{\ell}=\mathbf{w}_{\ell}-\frac{\left&lt; \mathbf{w}_{\ell},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left&lt; \mathbf{w}_{\ell},\mathbf{v}_{\ell-1}\right&gt;}{\|\mathbf{v}_{\ell-1}\|^{2}}\mathbf{v}_{\ell-1}\,\,\text{ for $2\leq\ell\leq k$}.
+Let $\mathbf{v}_{1}=\mathbf{w}_{1}$ and set, recursively,
+\begin{align*}
+\displaystyle \mathbf{v}_{\ell}
+&amp;= \vect{w}_l - \sum_{i = 1}^{l - 1} \frac{\langle \vect{w}_l, \vect{v}_i\rangle}{\|\vect{v}_i\|^2}\vect{v}_i
+\\&amp;= \mathbf{w}_{\ell}-\frac{\left&lt; \mathbf{w}_{\ell},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left&lt; \mathbf{w}_{\ell},\mathbf{v}_{\ell-1}\right&gt;}{\|\mathbf{v}_{\ell-1}\|^{2}}\mathbf{v}_{\ell-1},\,\,\text{ for $2\leq\ell\leq k$}.
 \end{align*}
 Then $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is an orthogonal set.</paragraphs>
               <newline course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement"/>
@@ -935,45 +940,66 @@ In particular $\mathrm{Span}\, S = \mathrm{Span}\, S^{\prime}$.</paragraphs>
               <inline_keyword course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">Gram-Schmidt Orthogonalization Process</inline_keyword>
               <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="8e3815bff26f9baefe822ca38db2860a" course="MATH 1030" chapter="17" slide="27" of="1ac60631cd34940ace2cea977cc5baad" of-src-course="MATH 1030" of-src-chapter="17" of-src-slide="27" of-type="Theorem" of-item="17.27" of-src-filename="lec17.xml" ofmd5="1ac60631cd34940ace2cea977cc5baad" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="f6424e38701e3b9dfb92f83292596fe9" course="MATH 1030" chapter="17" slide="27" of="d34a49d6865ebccd17a8201608a1b250" of-src-course="MATH 1030" of-src-chapter="17" of-src-slide="27" of-type="Theorem" of-item="17.27" of-src-filename="lec17.xml" ofmd5="d34a49d6865ebccd17a8201608a1b250" of-serial="">
               <of-title hidden="true">Gram-Schmidt Orthogonalization Process</of-title>
               <newcol course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
-                <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We have $\left&lt; \left\{\mathbf{w}_{1}\right\}\right&gt;=\left&lt; \left\{\mathbf{v}_{1}\right\}\right&gt;$.
+                <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We have $\mathrm{Span} \left\{\mathbf{w}_{1}\right\} = \mathrm{Span} \left\{\mathbf{v}_{1}\right\}$.
 We are going to add one vector at a time.</paragraphs>
                 <newline course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
-                <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Suppose that $\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}\right&gt;=\left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}\right&gt;$
+                <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Suppose that 
+$\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}
+=
+\mathrm{Span}\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}$
 and that the set $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}$ is orthogonal.</paragraphs>
                 <newline course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
-                <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">Observe that $\vect{v}_l$ is a linear combination of $\vect{v}_1, \cdots, \vect{v}_{l-1}$ and $\vect{w}_l$.
-Since $\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}\right&gt;=\left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}\right&gt;$, we have:
+                <collapse course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                  <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Observe that $\vect{v}_l$ is a linear combination of $\vect{v}_1, \ldots, \vect{v}_{l-1}$ and $\vect{w}_l$.
+Since 
+$\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}
+=
+\mathrm{Span}\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}$,
+we have:
 \[
-\vect{v}_\ell \in \left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}, \vect{w}_\ell \right\}\right&gt;.
-\]
-Hence,
+\vect{v}_\ell \in \mathrm{Span}\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}, \vect{w}_\ell \right\}.
+\] </paragraphs>
+                  <collapse course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                    <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence,
 \[
-\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right&gt; \subseteq \left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}\right&gt;
-\]
-Likewise, by the formula defining $\vect{v}_\ell$ we have:
+\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}
+\subseteq 
+\mathrm{Span}\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}
+\] </paragraphs>
+                    <collapse course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                      <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Likewise, by the formula defining $\vect{v}_\ell$ we have:
 \[
-\vect{w}_\ell \in \left&lt; \left\{\mathbf{v}_{1},\ldots, \vect{v}_\ell \right\}\right&gt;.
-\]
-Hence,
+\vect{w}_\ell \in \mathrm{Span}\left\{\mathbf{v}_{1},\ldots, \vect{v}_\ell \right\}.
+\] </paragraphs>
+                      <collapse course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                        <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Hence,
 \[
-\left&lt; \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}\right&gt; \subseteq
-\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right&gt;.
+\mathrm{Span}\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}
+\subseteq
+\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}.
 \]
 It now follows that:
 \[
-\left&lt; \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right&gt; =\left&lt; \left\{\mathbf{w}_{1},\ldots, \mathbf{w}_{\ell}\right\}\right&gt;.
-\]</paragraphs>
-                <newline course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
-                <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">By Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="perp" wbtag="ref" course="MATH 1030" chapter="17" slide="27" referrer-type="Proof" referrer-md5="8e3815bff26f9baefe822ca38db2860a" src-course="MATH 1030" src-chapter="17" src-slide="26" type="Theorem" item="17.26" src-filename="lec17.xml" md5="d4dcb9b1cdec9c946c5696df8ca4bb44" class="lcref" serial="">
-                  <title>Theorem 17.26</title>
-                </ref>
-                <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $\mathbf{v}_{\ell}\perp\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}$. Thus $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}$ is orthogonal.
+\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}
+=
+\mathrm{Span}\left\{\mathbf{w}_{1},\ldots, \mathbf{w}_{\ell}\right\}.
+\] </paragraphs>
+                        <collapse course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
+                          <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By Theorem   </paragraphs>
+                          <ref environment="newcol" chapter_type="" label="perp" wbtag="ref" course="MATH 1030" chapter="17" slide="27" referrer-type="Proof" referrer-md5="f6424e38701e3b9dfb92f83292596fe9" src-course="MATH 1030" src-chapter="17" src-slide="26" type="Theorem" item="17.26" src-filename="lec17.xml" md5="fec1f144bc6a1e297d590b9f540773c3" class="lcref" serial="">
+                            <title>Theorem 17.26</title>
+                          </ref>
+                          <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $\mathbf{v}_{\ell}\perp\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}$. Thus $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}$ is orthogonal.
 Repeating the process for the incrementing $\ell$ reaches $\ell=k$, we complete the proof. </paragraphs>
-                <qed course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                          <qed course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
+                        </collapse>
+                      </collapse>
+                    </collapse>
+                  </collapse>
+                </collapse>
               </newcol>
             </substatement>
           </slide>
@@ -995,7 +1021,7 @@ Repeating the process for the incrementing $\ell$ reaches $\ell=k$, we complete 
 Applying Gram-Schmidt orthogonalization process to $S$, we obtain an orthogonal set $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$.</paragraphs>
                 <newline course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
                 <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">By Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="GSO" wbtag="ref" course="MATH 1030" chapter="17" slide="28" referrer-type="Proof" referrer-md5="505c812cb656b1e6c77ddd211ee80ddb" src-course="MATH 1030" src-chapter="17" src-slide="27" type="Theorem" item="17.27" src-filename="lec17.xml" md5="1ac60631cd34940ace2cea977cc5baad" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="GSO" wbtag="ref" course="MATH 1030" chapter="17" slide="28" referrer-type="Proof" referrer-md5="505c812cb656b1e6c77ddd211ee80ddb" src-course="MATH 1030" src-chapter="17" src-slide="27" type="Theorem" item="17.27" src-filename="lec17.xml" md5="d34a49d6865ebccd17a8201608a1b250" class="lcref" serial="">
                   <title custom="true">Gram-Schmidt Orthogonalization Process</title>
                 </ref>
                 <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $\left&lt; S^{\prime}\right&gt;=\left&lt; S\right&gt;=V$. By Theorem   </paragraphs>
@@ -1012,7 +1038,7 @@ Applying Gram-Schmidt orthogonalization process to $S$, we obtain an orthogonal 
           </slide>
           <slide environment="" chapter_type="Chapter" wbtag="slide" canon_num="29" id="s29" slide="29" course="MATH 1030" chapter="17" section="3" subsection="" subsubsection="" chapter_title="Inner Product" section_title="Gram-Schmidt Orthogonalization process">
             <keywords slide="29" environ="slide" chapter="17" course="MATH 1030"/>
-            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="29" md5="cd1eb044c3eb94e7bf83d64756e3a6e8" course="MATH 1030" chapter="17" slide="29" item="17.29">
+            <statement environment="statement" chapter_type="Chapter" type="Example" wbtag="eg" num="29" md5="532bbf3480d13da19733c15aea558c18" course="MATH 1030" chapter="17" slide="29" item="17.29">
               <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $V={\mathbb{R}}^{4}$ with the standard inner product. Let
 \begin{align*}
 \displaystyle \mathbf{w}_{1}=\begin{bmatrix}1\\
@@ -1062,8 +1088,8 @@ We can apply Gram-Schmidt orthogonalization process to this set of vectors. Take
 0\end{bmatrix}.
 \end{align*} </paragraphs>
                   <collapse course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                    <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The set $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\right\}$ is an orthogonal basis of $\left&lt; \left\{\mathbf{w}_{1},\mathbf{w}_{2},\mathbf{w}_{3}\right\}\right&gt;$.
-To obtain an orthonormal basis of $\left&lt; \left\{\mathbf{w}_{1},\mathbf{w}_{2},\mathbf{w}_{3}\right\}\right&gt;$, we can normalized the vectors
+                    <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> The set $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\right\}$ is an orthogonal basis of $\mathrm{Span}\!\left\{\mathbf{w}_{1},\mathbf{w}_{2},\mathbf{w}_{3}\right\}$.
+To obtain an orthonormal basis of $\mathrm{Span}\!\left\{\mathbf{w}_{1},\mathbf{w}_{2},\mathbf{w}_{3}\right\}$, we can normalized the vectors:
 \begin{align*}
 \displaystyle \mathbf{u}_{1}=\frac{\mathbf{v}_{1}}{\|\mathbf{v}_{1}\|}=\frac{1}{\sqrt{2}}\begin{bmatrix}1\\
 0\\
