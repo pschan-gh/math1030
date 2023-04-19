@@ -607,11 +607,11 @@ Hence $\mathbf{v}\perp\mathbf{v}_{i}$ for $i=1,\ldots,k$.
 @thm
 @title{Gram-Schmidt Orthogonalization Process}
 @label{GSO}
-Let $S=\left\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{k}\right\}$ be a linearly independent subset of $V$.
+Let $S=\left\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{k}\right\}$ be a linearly independent subset of $\mathbb{R}^m$.
 Let $\mathbf{v}_{1}=\mathbf{w}_{1}$ and set, recursively,
 \begin{align*}
 \displaystyle \mathbf{v}_{\ell}
-&= \vect{w}_l - \sum_{i = 1}^{l - 1} \frac{\langle \vect{w}_l, \vect{v}_i\rangle}{\|\vect{v}_i\|^2}\vect{v}_i
+&= \vect{w}_\ell - \sum_{i = 1}^{\ell - 1} \frac{\langle \vect{w}_\ell, \vect{v}_i\rangle}{\|\vect{v}_i\|^2}\vect{v}_i
 \\&= \mathbf{w}_{\ell}-\frac{\left< \mathbf{w}_{\ell},\mathbf{v}_{1}\right>}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left< \mathbf{w}_{\ell},\mathbf{v}_{\ell-1}\right>}{\|\mathbf{v}_{\ell-1}\|^{2}}\mathbf{v}_{\ell-1},\,\,\text{ for $2\leq\ell\leq k$}.
 \end{align*}
 Then $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is an orthogonal set.
@@ -634,7 +634,7 @@ $\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}
 and that the set $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}$ is orthogonal.
 
 @col
-Observe that $\vect{v}_l$ is a linear combination of $\vect{v}_1, \ldots, \vect{v}_{l-1}$ and $\vect{w}_l$.
+Observe that $\vect{v}_\ell$ is a linear combination of $\vect{v}_1, \ldots, \vect{v}_{l-1}$ and $\vect{w}_\ell$.
 Since 
 $\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}
 =
@@ -670,7 +670,7 @@ It now follows that:
 \]
 @col
 By Theorem   @ref{perp}, $\mathbf{v}_{\ell}\perp\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}$. Thus $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}$ is orthogonal.
-Repeating the process for the incrementing $\ell$ reaches $\ell=k$, we complete the proof.
+Repeating the process and incrementing $\ell$ until it reaches $\ell=k$, we complete the proof.
 @qed
 @endcol
 @end

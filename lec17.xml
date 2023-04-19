@@ -920,14 +920,14 @@ is perpendicular to $\mathbf{v}_{i}$. </paragraphs>
               <keyword chapter="17" slide="27">Gram-Schmidt Orthogonalization Process</keyword>
               <keyword chapter="17" slide="27">Gram-Schmidt Orthogonalization Process</keyword>
             </keywords>
-            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="27" title="Gram-Schmidt Orthogonalization Process" md5="d34a49d6865ebccd17a8201608a1b250" course="MATH 1030" chapter="17" slide="27" item="17.27">
+            <statement environment="statement" chapter_type="Chapter" type="Theorem" wbtag="thm" num="27" title="Gram-Schmidt Orthogonalization Process" md5="105e2b0fac195b50301743a5475dd8e6" course="MATH 1030" chapter="17" slide="27" item="17.27">
               <title environment="title" chapter_type="Chapter" wbtag="statement" scope="" course="MATH 1030" chapter="17" section="3" subsection="" subsubsection="" serial="" slide="27">Gram-Schmidt Orthogonalization Process</title>
               <label wbtag="label" name="GSO" type="Theorem"/>
-              <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $S=\left\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{k}\right\}$ be a linearly independent subset of $V$.
+              <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs"> Let $S=\left\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{k}\right\}$ be a linearly independent subset of $\mathbb{R}^m$.
 Let $\mathbf{v}_{1}=\mathbf{w}_{1}$ and set, recursively,
 \begin{align*}
 \displaystyle \mathbf{v}_{\ell}
-&amp;= \vect{w}_l - \sum_{i = 1}^{l - 1} \frac{\langle \vect{w}_l, \vect{v}_i\rangle}{\|\vect{v}_i\|^2}\vect{v}_i
+&amp;= \vect{w}_\ell - \sum_{i = 1}^{\ell - 1} \frac{\langle \vect{w}_\ell, \vect{v}_i\rangle}{\|\vect{v}_i\|^2}\vect{v}_i
 \\&amp;= \mathbf{w}_{\ell}-\frac{\left&lt; \mathbf{w}_{\ell},\mathbf{v}_{1}\right&gt;}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left&lt; \mathbf{w}_{\ell},\mathbf{v}_{\ell-1}\right&gt;}{\|\mathbf{v}_{\ell-1}\|^{2}}\mathbf{v}_{\ell-1},\,\,\text{ for $2\leq\ell\leq k$}.
 \end{align*}
 Then $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is an orthogonal set.</paragraphs>
@@ -940,7 +940,7 @@ In particular $\mathrm{Span}\, S = \mathrm{Span}\, S^{\prime}$.</paragraphs>
               <inline_keyword course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement">Gram-Schmidt Orthogonalization Process</inline_keyword>
               <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="statement" wbtag="paragraphs">. </paragraphs>
             </statement>
-            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="f6424e38701e3b9dfb92f83292596fe9" course="MATH 1030" chapter="17" slide="27" of="d34a49d6865ebccd17a8201608a1b250" of-src-course="MATH 1030" of-src-chapter="17" of-src-slide="27" of-type="Theorem" of-item="17.27" of-src-filename="lec17.xml" ofmd5="d34a49d6865ebccd17a8201608a1b250" of-serial="">
+            <substatement environment="substatement" chapter_type="Chapter" type="Proof" wbtag="proof" md5="36ac99e43205d122f05c6bdffc754f7f" course="MATH 1030" chapter="17" slide="27" of="105e2b0fac195b50301743a5475dd8e6" of-src-course="MATH 1030" of-src-chapter="17" of-src-slide="27" of-type="Theorem" of-item="17.27" of-src-filename="lec17.xml" ofmd5="105e2b0fac195b50301743a5475dd8e6" of-serial="">
               <of-title hidden="true">Gram-Schmidt Orthogonalization Process</of-title>
               <newcol course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="newcol">
                 <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> We have $\mathrm{Span} \left\{\mathbf{w}_{1}\right\} = \mathrm{Span} \left\{\mathbf{v}_{1}\right\}$.
@@ -953,7 +953,7 @@ $\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}
 and that the set $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}$ is orthogonal.</paragraphs>
                 <newline course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
                 <collapse course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
-                  <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Observe that $\vect{v}_l$ is a linear combination of $\vect{v}_1, \ldots, \vect{v}_{l-1}$ and $\vect{w}_l$.
+                  <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> Observe that $\vect{v}_\ell$ is a linear combination of $\vect{v}_1, \ldots, \vect{v}_{l-1}$ and $\vect{w}_\ell$.
 Since 
 $\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}
 =
@@ -989,11 +989,11 @@ It now follows that:
 \] </paragraphs>
                         <collapse course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="collapse">
                           <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs"> By Theorem   </paragraphs>
-                          <ref environment="newcol" chapter_type="" label="perp" wbtag="ref" course="MATH 1030" chapter="17" slide="27" referrer-type="Proof" referrer-md5="f6424e38701e3b9dfb92f83292596fe9" src-course="MATH 1030" src-chapter="17" src-slide="26" type="Theorem" item="17.26" src-filename="lec17.xml" md5="fec1f144bc6a1e297d590b9f540773c3" class="lcref" serial="">
+                          <ref environment="newcol" chapter_type="" label="perp" wbtag="ref" course="MATH 1030" chapter="17" slide="27" referrer-type="Proof" referrer-md5="36ac99e43205d122f05c6bdffc754f7f" src-course="MATH 1030" src-chapter="17" src-slide="26" type="Theorem" item="17.26" src-filename="lec17.xml" md5="fec1f144bc6a1e297d590b9f540773c3" class="lcref" serial="">
                             <title>Theorem 17.26</title>
                           </ref>
                           <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $\mathbf{v}_{\ell}\perp\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}$. Thus $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}$ is orthogonal.
-Repeating the process for the incrementing $\ell$ reaches $\ell=k$, we complete the proof. </paragraphs>
+Repeating the process and incrementing $\ell$ until it reaches $\ell=k$, we complete the proof. </paragraphs>
                           <qed course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
                         </collapse>
                       </collapse>
@@ -1021,7 +1021,7 @@ Repeating the process for the incrementing $\ell$ reaches $\ell=k$, we complete 
 Applying Gram-Schmidt orthogonalization process to $S$, we obtain an orthogonal set $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$.</paragraphs>
                 <newline course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol"/>
                 <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">By Theorem   </paragraphs>
-                <ref environment="newcol" chapter_type="" label="GSO" wbtag="ref" course="MATH 1030" chapter="17" slide="28" referrer-type="Proof" referrer-md5="505c812cb656b1e6c77ddd211ee80ddb" src-course="MATH 1030" src-chapter="17" src-slide="27" type="Theorem" item="17.27" src-filename="lec17.xml" md5="d34a49d6865ebccd17a8201608a1b250" class="lcref" serial="">
+                <ref environment="newcol" chapter_type="" label="GSO" wbtag="ref" course="MATH 1030" chapter="17" slide="28" referrer-type="Proof" referrer-md5="505c812cb656b1e6c77ddd211ee80ddb" src-course="MATH 1030" src-chapter="17" src-slide="27" type="Theorem" item="17.27" src-filename="lec17.xml" md5="105e2b0fac195b50301743a5475dd8e6" class="lcref" serial="">
                   <title custom="true">Gram-Schmidt Orthogonalization Process</title>
                 </ref>
                 <paragraphs course="MATH 1030" chapter="17" chapter_type="" section="3" subsection="" subsubsection="" environment="newcol" wbtag="paragraphs">, $\left&lt; S^{\prime}\right&gt;=\left&lt; S\right&gt;=V$. By Theorem   </paragraphs>
