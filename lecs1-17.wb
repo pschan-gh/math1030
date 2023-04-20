@@ -3567,7 +3567,7 @@ B'\vec{v} = JA'\vec{v} = J\vec{a} = \vec{b},
 which implies that $\vec{v}$ is also a solution to $\mathcal{LS}(B', \vec{b})$.
 
 @col
-Conversely, by @ref{thm:elemmatrixinvertiable} the matrix $J$ is invertible, hence,
+Conversely, by @ref{thm:elemmatrixinvertiable}, and the fact that the product of invertible matrices is invertible, the matrix $J$ is invertible. Hence,
 \[
 A' = J^{-1} B'
 \quad
@@ -4700,6 +4700,7 @@ Beezer, Ver 3.5 Section MISLE, Section MINM (print version p149 - p161)
 
 <h5 class="notkw">Exercise.</h5> Exercises with solutions can be downloaded at http://linear.ups.edu/download/fcla-3.50-solution-manual.pdfSection MISLE (p60-64), all. Section MINM C20, C40, M10, M11, M15, M80, T25.
 @section{Inverse of a Matrix}
+@skip
 Recall the definition of @keyword{invertibility} of a square matrix:
 @ref{def:matrixinverse}
 
@@ -4707,9 +4708,11 @@ Recall also that the inverse of a matrix $A$, if it exists, is unique, and is de
 
 Note that not all matrices are invertible.
 @section{Solution Inverse}
+@skip
 @label{SI}
 The inverse of a square matrix, and solutions to linear systems with square coefficient matrices, are intimately connected.
 @slide
+@skip
 @eg
 \begin{align*}
 \displaystyle-7x_{1}-6x_{2}-12x_{3}&\displaystyle=-33 \\
@@ -4777,6 +4780,7 @@ The first has no solutions, while the second has infinitely many solutions. For 
 
 @endcol
 @slide
+@skip
 @eg
 @title{A matrix without an inverse} Consider the matrix:
 \begin{align*}
@@ -4813,6 +4817,7 @@ So the assumption of $A$’s inverse leads to a logical inconsistency (the syste
 Let us look at one more matrix inverse before we embark on a more systematic study.
 @endcol
 @slide
+@skip
 @eg
 @title{Matrix Inverse}
 <strong>1.</strong> \begin{align*}
@@ -7961,10 +7966,10 @@ we obtain
 \end{array}\right].
 \end{align*}
 @col
-If $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$, then the last column is not a pivot column and the above is an RREF. In this case, $\mathbf{v}\in\mathrm{Span}\,S$.
+If $9v_{1}-16v_{2}+v_{3}+4v_{4}=0$, then the above matrix is an RREF, and the last column is not a pivot column. In this case, $\mathbf{v}\in\mathrm{Span}\,S$.
 
 @col
-If instead $9v_{1}-16v_{2}+v_{3}+4v_{4}\neq 0$, then the above matrix is not an RREF. Hence, the corresponding system of linear equations is inconsistent
+If instead $9v_{1}-16v_{2}+v_{3}+4v_{4}\neq 0$, then the linear system corresponding to the augmented matrix is inconsistent,
 and thus $\mathbf{v}\not\in\mathrm{Span}\,S$.
 
 @col
@@ -9059,7 +9064,7 @@ We will now specialize to sets of $n$ vectors in ${\mathbb{R}}^{n}$.
 
 Do the columns of the matrix
 \begin{align*}
-\displaystyle \begin{bmatrix}1&-1&2\\
+\displaystyle A = \begin{bmatrix}1&-1&2\\
 2&1&1\\
 1&1&0\end{bmatrix}
 \end{align*}
@@ -9087,7 +9092,7 @@ form a linearly independent or dependent set?
 @end
 @sol
 @newcol
-We can show that $B$ is nonsingular. According to the definition of nonsingular matrices, the homogeneous system $\mathcal{LS}({A},{\mathbf{0}})$ has a unique solution. So, by Theorem @ref{LIVHS}, the columns of $B$ form a linearly independent set.
+We can show that $B$ is nonsingular. According to the definition of nonsingular matrices, the homogeneous system $\mathcal{LS}({B},{\mathbf{0}})$ has a unique solution. So, by Theorem @ref{LIVHS}, the columns of $B$ form a linearly independent set.
 @qed
 @endcol
 @end
@@ -10103,6 +10108,9 @@ Suppose $A$ and $B$ are row-equivalent matrices. Then $\mathcal{R}\!\left(A\righ
 @end
 @proof
 @newcol
+Write $A^t = [A^t_1 | A^t_2| \cdots | A^t_n]$, $B^t = [B^t_1 | B^t_2| \cdots | B^t_n]$.
+
+@col
 Observe that if $B$ is obtained from $A$ via a row operation of the type
 $R_i \leftrightarrow R_j$,
 then the rows of $B$ are the same as the rows of $A$,
@@ -10117,10 +10125,17 @@ If $B$ is obtained from $A$ via a row operation of the type $\alpha R_i$ ($\alph
 then the $i$-th column of $B^t$ is equal to $\alpha$ times the $i$-th column of $A^t$,
 and the other columns remain the same as those of $A^t$ with the corresponding indices.
 
-In paricular, the $i$-th column of $B^t$ is a linear combination of the columns of $A^t$.
+Hence, any vector $\vect{v} \in \mathcal{C}(B^t)$ has the form:
+\begin{align*}
+\vect{v} &= \alpha_1 B^t_1 + \alpha_2 B^t_2 + \cdots + \alpha_i B^t_i + \cdots \alpha_n B^t_n\\
+&= \alpha_1 A^t_1 + \alpha_2 A^t_2 + \cdots + \alpha_i \alpha A^t_i + \cdots \alpha_n A^t_n,
+\end{align*}
+which is a vector in $\mathrm{Span} \{A^t_1,\ldots, A^t_n\} = \mathcal{C}(A^t)$.
 
+<!-- In paricular, the $i$-th column of $B^t$ is a linear combination of the columns of $A^t$. -->
 @col
-Hence, the columns of $B^t$ all lie in $\mathcal{C}(A^t)$, which in turn implies that:
+Hence,
+<!-- Hence, the columns of $B^t$ all lie in $\mathcal{C}(A^t)$, which in turn implies that: -->
 \[
 \mathcal{R}(B) = \mathcal{C}\left(B^t\right) \subseteq \mathcal{C}\left(A^t\right) = \mathcal{R}(A).
 \]
@@ -10136,15 +10151,22 @@ Hence, $\mathcal{R}(B) = \mathcal{R}(A)$.
 If $B$ is obtained from $A$ via a row operation of the type $\alpha R_i + R_j$,
 then:
 \[
-\left[B^t\right]_j = \alpha\left[A^t\right]_i + \left[A^t\right]_j,
+B^t_j = \alpha A^t_i + A^t_j,
 \]
 and the other columns of $B^t$ remain the same as those of $A^t$
 with the corresponding indices.
 
-In paricular, the $i$-th column of $B^t$ is a linear combination of the columns of $A^t$.
+Hence, any vector $\vect{v} \in \mathcal{C}(B^t)$ has the form:
+\begin{align*}
+\vect{v} &= \alpha_1 B^t_1 + \alpha_2 B^t_2 + \cdots + \alpha_i B^t_i + \cdots + \alpha_j B^t_j + \cdots + \alpha_n B^t_n\\
+&= \alpha_1 A^t_1 + \alpha_2 A^t_2 + \cdots + \alpha_i A^t_i + \cdots + \alpha_j\left( \alpha A^t_i +  A^t_j\right) + \cdots +  \alpha_n A^t_n\\
+&= \alpha_1 A^t_1 + \alpha_2 A^t_2 + \cdots (\alpha_i + \alpha)A^t_i + \cdots +  \alpha_j A^t_j + \cdots \alpha_n A^t_n,
+\end{align*}
+which is a vector in $\mathrm{Span} \{A^t_1,\ldots, A^t_n\} = \mathcal{C}(A^t)$.
 
 @col
-Hence, the columns of $B^t$ all lie in $\mathcal{C}(A^t)$, which in turn implies that:
+Hence,
+<!-- the columns of $B^t$ all lie in $\mathcal{C}(A^t)$, which in turn implies that: -->
 \[
 \mathcal{R}(B) = \mathcal{C}\left(B^t\right) \subseteq \mathcal{C}\left(A^t\right) = \mathcal{R}(A).
 \]
@@ -11261,7 +11283,7 @@ In fact $T=\{\vect{A}_1, \vect{A}_3, \vect{A}_4, \vect{A}_6\}$ is a basis for $\
 In total the basis will have $4$ vectors, so the column space of $A$ will have dimension $4$ and we write $\rank{A}=4$.
 
 @col
-By @ref{SSNS}, for each index in $F$, we can create a single basis vector.  In total the basis will have $3$ vectors, so the null space of $A$ will have dimension $3$ and we write $\nullity{A}=3$. In fact:
+By @ref{BNS}, for each index in $F$, we can create a single basis vector.  In total the basis will have $3$ vectors, so the null space of $A$ will have dimension $3$ and we write $\nullity{A}=3$. In fact:
 
 @col
 \[
@@ -11287,7 +11309,7 @@ Let $D=\{d_1, \ldots, d_r\}$ be the indexes of the pivot columns of $B$.
 By @ref{BCS}, $\{\vect{A}_{d_1}, \ldots, \vect{A}_{d_r}\}$ is a basis for $\csp{A}$.
 So $\rank{A}=r$.
 
-By @ref{SSNS}, each free variable corresponding to a single basis vector for the null space.
+By @ref{BNS}, each free variable corresponding to a single basis vector for the null space.
 So $\nullity{A}$ is the number of free variables $=n-r$.
 @endcol
 @end
@@ -11295,9 +11317,9 @@ So $\nullity{A}$ is the number of free variables $=n-r$.
 @cor
 @title{Rank-Nullity Theorem}
 @title{Dimension Formula}
-Suppose $A\in M_{mn}$, then
+Suppose $A\in M_{ml}$, then
 \begin{align*}
-\displaystyle r\left(A\right)+n\left(A\right)=n.
+\displaystyle r\left(A\right)+n\left(A\right)=l.
 \end{align*}
 @end
 @slide
@@ -11400,7 +11422,7 @@ Suppose that $A$ is a square matrix of size $n$. The following are equivalent. <
 <li class="ltx_item"> $A$ is nonsingular. </li>
 <li class="ltx_item"> $A$ row-reduces to the identity matrix. </li>
 <li class="ltx_item"> The null space of $A$ contains only the zero vector, ${\mathcal{N}}\!\left(A\right)=\left\{\mathbf{0}\right\}$. </li>
-<li class="ltx_item"> The linear system $\mathcal{LS}({A},{\mathbf{b}})$ has a unique solution for every possible choice of $\mathbf{b}$. </li>
+<li class="ltx_item"> The linear system $\mathcal{LS}({A},{\mathbf{b}})$ has a unique solution for every possible choice of $\mathbf{b} \in \mathbb{R}^n$. </li>
 <li class="ltx_item"> The columns of $A$ are a linearly independent set. </li>
 <li class="ltx_item"> $A$ is invertible. </li>
 <li class="ltx_item"> The column space of $A$ is ${\mathbb{R}}^{n}$, $\mathcal{C}\left(A\right)={\mathbb{R}}^{n}$. </li>
@@ -11981,7 +12003,7 @@ Then:
 \hline
 \vect{B} + \vect{C}\\
 \hline
-\vect{A}_{i-1}\\
+\vect{A}_{i+1}\\
 \hline
 \vdots\\
 \hline
@@ -11997,7 +12019,7 @@ Then:
 \hline
 \vect{B}\\
 \hline
-\vect{A}_{i-1}\\
+\vect{A}_{i+1}\\
 \hline
 \vdots\\
 \hline
@@ -12013,7 +12035,7 @@ Then:
 \hline
 \vect{C}\\
 \hline
-\vect{A}_{i-1}\\
+\vect{A}_{i+1}\\
 \hline
 \vdots\\
 \hline
@@ -12091,7 +12113,124 @@ Suppose that $A$ is a square matrix. Let $B$ be the square matrix obtained from 
 @end
 @proof
 @newcol
-Suppose the row operation is $\alpha R_{i}+R_{j}$, expand along row $j$. For details, see Beezer p.275.
+View $A$ as a collection of row vectors:
+\[
+A = 
+\colvector{
+\vect{A}_1\\
+\hline
+\vect{A}_2\\
+\hline
+\vdots\\
+\hline
+\vect{A}_n
+}
+\]
+Suppose the row operation is $\alpha R_{i}+R_{j}$.
+<!-- expand along row $j$. For details, see Beezer p.275. -->
+
+By @ref{thm:detsumrowcol} and @ref{DRCM}, we have:
+\begin{align*}
+\det B = \det \colvector{
+\vect{A}_1\\
+\hline
+\vdots\\
+\hline
+\vect{A}_i\\
+\hline
+\vdots\\
+\hline
+\alpha\vect{A}_i + \vect{A}_j\\
+\hline
+\vdots\\
+\hline
+\vect{A}_n
+}
+&=
+\det \colvector{
+\vect{A}_1\\
+\hline
+\vdots\\
+\hline
+\vect{A}_i\\
+\hline
+\vdots\\
+\hline
+\alpha\vect{A}_i\\
+\hline
+\vdots\\
+\hline
+\vect{A}_n
+}
++
+\det \colvector{
+\vect{A}_1\\
+\hline
+\vdots\\
+\hline
+\vect{A}_i\\
+\hline
+\vdots\\
+\hline
+\vect{A}_j\\
+\hline
+\vdots\\
+\hline
+\vect{A}_n
+}\\
+& =
+\alpha \det \colvector{
+\vect{A}_1\\
+\hline
+\vdots\\
+\hline
+\vect{A}_i\\
+\hline
+\vdots\\
+\hline
+\vect{A}_i\\
+\hline
+\vdots\\
+\hline
+\vect{A}_n
+}
++
+\det \colvector{
+\vect{A}_1\\
+\hline
+\vdots\\
+\hline
+\vect{A}_i\\
+\hline
+\vdots\\
+\hline
+\vect{A}_j\\
+\hline
+\vdots\\
+\hline
+\vect{A}_n
+}
+\end{align*}
+The first determinant on the right-hand side is equal to zero because the $i$-th and $j$-th rows of the corresponding matrix are the same.
+Hence:
+\[
+\det B = \det \colvector{
+\vect{A}_1\\
+\hline
+\vdots\\
+\hline
+\vect{A}_i\\
+\hline
+\vdots\\
+\hline
+\vect{A}_j\\
+\hline
+\vdots\\
+\hline
+\vect{A}_n 
+}
+= \det A
+\]
 @qed
 @endcol
 @end
@@ -13808,7 +13947,7 @@ to be $p_{F}\left(x\right)=-(x-3)(x+1)^{2}$. Being written in factored form, we 
 \end{align*}
 @newcol
 We will now take each eigenvalue in turn and compute its eigenspace. To do this, we row-reduce the matrix
-$F-\lambda I_{3}$ in order to find all solutions to the homogeneous system $F-\lambda I_{3}\mathbf{x}=\mathbf{0}$. We then express the eigenspace ${\mathcal{E}}_{F}\left(\lambda\right)$ as the nullspace of $F-\lambda I_{3}$. Then we can write the nullspace as the span of a basis.
+$F-\lambda I_{3}$ in order to find all solutions to the homogeneous system $\left(F-\lambda I_{3}\right)\mathbf{x}=\mathbf{0}$. We then express the eigenspace ${\mathcal{E}}_{F}\left(\lambda\right)$ as the nullspace of $F-\lambda I_{3}$. Then we can write the nullspace as the span of a basis.
 
 @col
 \begin{align*}
@@ -15833,7 +15972,9 @@ But what if $\mathbf{w}$ is not in $\left< S\right>$? Let’s compare the differ
 @label{perp}
 Let $S=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ be an orthogonal subset of ${\mathbb{R}}^{m}$ and let $\mathbf{w}\in{\mathbb{R}}^{m}$. Then, for each $i=1,\ldots,k$, the vector
 \begin{align*}
-\displaystyle \mathbf{v}=\mathbf{w}-\frac{\left< \mathbf{w},\mathbf{v}_{1}\right>}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left< \mathbf{w},\mathbf{v}_{k}\right>}{\|\mathbf{v}_{k}\|^{2}}\mathbf{v}_{k}
+\displaystyle \mathbf{v} 
+&= \vect{w} - \sum_{i = 1}^k \frac{\langle \vect{w}, \vect{v}_i \rangle}{\|\vect{v}_i\|^2}\vect{v}_i\\
+&=\mathbf{w}-\left(\frac{\left< \mathbf{w},\mathbf{v}_{1}\right>}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}+\cdots+\frac{\left< \mathbf{w},\mathbf{v}_{k}\right>}{\|\mathbf{v}_{k}\|^{2}}\mathbf{v}_{k}\right)
 \end{align*}
 is perpendicular to $\mathbf{v}_{i}$.
 @end
@@ -15857,9 +15998,12 @@ Hence $\mathbf{v}\perp\mathbf{v}_{i}$ for $i=1,\ldots,k$.
 @thm
 @title{Gram-Schmidt Orthogonalization Process}
 @label{GSO}
-Let $S=\left\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{k}\right\}$ be a linearly independent subset of $V$.
-Let $\mathbf{v}_{1}=\mathbf{w}_{1}$ and set, recursively,\begin{align*}
-\displaystyle \mathbf{v}_{\ell}=\mathbf{w}_{\ell}-\frac{\left< \mathbf{w}_{\ell},\mathbf{v}_{1}\right>}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left< \mathbf{w}_{\ell},\mathbf{v}_{\ell-1}\right>}{\|\mathbf{v}_{\ell-1}\|^{2}}\mathbf{v}_{\ell-1}\,\,\text{ for $2\leq\ell\leq k$}.
+Let $S=\left\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{k}\right\}$ be a linearly independent subset of $\mathbb{R}^m$.
+Let $\mathbf{v}_{1}=\mathbf{w}_{1}$ and set, recursively,
+\begin{align*}
+\displaystyle \mathbf{v}_{\ell}
+&= \vect{w}_\ell - \sum_{i = 1}^{\ell - 1} \frac{\langle \vect{w}_\ell, \vect{v}_i\rangle}{\|\vect{v}_i\|^2}\vect{v}_i
+\\&= \mathbf{w}_{\ell}-\frac{\left< \mathbf{w}_{\ell},\mathbf{v}_{1}\right>}{\|\mathbf{v}_{1}\|^{2}}\mathbf{v}_{1}-\cdots-\frac{\left< \mathbf{w}_{\ell},\mathbf{v}_{\ell-1}\right>}{\|\mathbf{v}_{\ell-1}\|^{2}}\mathbf{v}_{\ell-1},\,\,\text{ for $2\leq\ell\leq k$}.
 \end{align*}
 Then $S^{\prime}=\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{k}\right\}$ is an orthogonal set.
 
@@ -15871,37 +16015,53 @@ The process of obtaining $S^{\prime}$ by the above procedure is called the @keyw
 @end
 @proof
 @newcol
-We have $\left< \left\{\mathbf{w}_{1}\right\}\right>=\left< \left\{\mathbf{v}_{1}\right\}\right>$.
+We have $\mathrm{Span} \left\{\mathbf{w}_{1}\right\} = \mathrm{Span} \left\{\mathbf{v}_{1}\right\}$.
 We are going to add one vector at a time.
 
-Suppose that $\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}\right>=\left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}\right>$
+Suppose that 
+$\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}
+=
+\mathrm{Span}\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}$
 and that the set $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}$ is orthogonal.
 
-Observe that $\vect{v}_l$ is a linear combination of $\vect{v}_1, \cdots, \vect{v}_{l-1}$ and $\vect{w}_l$.
-Since $\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}\right>=\left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}\right>$, we have:
+@col
+Observe that $\vect{v}_\ell$ is a linear combination of $\vect{v}_1, \ldots, \vect{v}_{l-1}$ and $\vect{w}_\ell$.
+Since 
+$\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}\right\}
+=
+\mathrm{Span}\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}\right\}$,
+we have:
 \[
-\vect{v}_\ell \in \left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}, \vect{w}_\ell \right\}\right>.
+\vect{v}_\ell \in \mathrm{Span}\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell-1}, \vect{w}_\ell \right\}.
 \]
+@col
 Hence,
 \[
-\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right> \subseteq \left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}\right>
+\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}
+\subseteq 
+\mathrm{Span}\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}
 \]
+@col
 Likewise, by the formula defining $\vect{v}_\ell$ we have:
 \[
-\vect{w}_\ell \in \left< \left\{\mathbf{v}_{1},\ldots, \vect{v}_\ell \right\}\right>.
+\vect{w}_\ell \in \mathrm{Span}\left\{\mathbf{v}_{1},\ldots, \vect{v}_\ell \right\}.
 \]
+@col
 Hence,
 \[
-\left< \left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}\right> \subseteq
-\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right>.
+\mathrm{Span}\left\{\mathbf{w}_{1},\ldots,\mathbf{w}_{\ell}\right\}
+\subseteq
+\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}.
 \]
 It now follows that:
 \[
-\left< \left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}\right> =\left< \left\{\mathbf{w}_{1},\ldots, \mathbf{w}_{\ell}\right\}\right>.
+\mathrm{Span}\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}
+=
+\mathrm{Span}\left\{\mathbf{w}_{1},\ldots, \mathbf{w}_{\ell}\right\}.
 \]
-
+@col
 By Theorem   @ref{perp}, $\mathbf{v}_{\ell}\perp\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell-1}$. Thus $\left\{\mathbf{v}_{1},\ldots,\mathbf{v}_{\ell}\right\}$ is orthogonal.
-Repeating the process for the incrementing $\ell$ reaches $\ell=k$, we complete the proof.
+Repeating the process and incrementing $\ell$ until it reaches $\ell=k$, we complete the proof.
 @qed
 @endcol
 @end
@@ -15974,8 +16134,8 @@ Also
 0\end{bmatrix}.
 \end{align*}
 @col
-The set $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\right\}$ is an orthogonal basis of $\left< \left\{\mathbf{w}_{1},\mathbf{w}_{2},\mathbf{w}_{3}\right\}\right>$.
-To obtain an orthonormal basis of $\left< \left\{\mathbf{w}_{1},\mathbf{w}_{2},\mathbf{w}_{3}\right\}\right>$, we can normalized the vectors
+The set $\left\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3}\right\}$ is an orthogonal basis of $\mathrm{Span}\!\left\{\mathbf{w}_{1},\mathbf{w}_{2},\mathbf{w}_{3}\right\}$.
+To obtain an orthonormal basis of $\mathrm{Span}\!\left\{\mathbf{w}_{1},\mathbf{w}_{2},\mathbf{w}_{3}\right\}$, we can normalized the vectors:
 \begin{align*}
 \displaystyle \mathbf{u}_{1}=\frac{\mathbf{v}_{1}}{\|\mathbf{v}_{1}\|}=\frac{1}{\sqrt{2}}\begin{bmatrix}1\\
 0\\
